@@ -1130,6 +1130,10 @@ header .text_transform h3 {
   #position {
     padding-top: 10px;
   }
+
+  #contact form textarea {
+    height: 100px;
+  }
 } 
 
 @media screen and (max-width: 380px) {
