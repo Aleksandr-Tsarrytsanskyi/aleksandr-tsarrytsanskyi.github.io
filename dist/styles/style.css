@@ -1126,6 +1126,12 @@ header .text_transform h3 {
   }
 } 
 
+@media screen and (max-width: 375px) {
+  #position {
+    padding-top: 10px;
+  }
+} 
+
 @media screen and (max-width: 380px) {
   #contacts p, #contacts a {
     font-size: 150%;
