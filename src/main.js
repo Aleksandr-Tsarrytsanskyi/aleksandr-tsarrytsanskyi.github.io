@@ -559,7 +559,7 @@ function init() {
     span1.classList.remove("icon1");
     span3.classList.remove("icon3");
     icon_menu.style.display = "block"
-    enableScroll();
+    
   });
   feedback.addEventListener("click", function () {
     position.classList.add("show_form");
@@ -567,7 +567,7 @@ function init() {
     topmenu.classList.remove("show_topmenu");
     
     icon_menu.style.display = "none"
-    disableScroll();
+    
   });
 
   function disableScroll() {

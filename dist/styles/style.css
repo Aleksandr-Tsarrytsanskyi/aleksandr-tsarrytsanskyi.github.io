@@ -10,7 +10,9 @@ body {
   margin: 0;
 }
 
-
+.show_icon_menu {
+  display: block !important;
+}
 #send_contact_form {
   background: rgba(25, 154, 214, 0.3);
   position: absolute;
