@@ -1,0 +1,7 @@
+header {
+    background: url("/images/bg_main.jpg") no-repeat center;
+}
+
+header .bg_top {
+    background: none;
+}
