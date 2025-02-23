@@ -790,6 +790,10 @@ function init() {
         contacForm.reset();
         formSentSuccessfully();
         senndCotactForm.classList.add("show_contact_form")
+        icon_menu.style.display = "block"
+        span1.classList.remove("icon1")
+        span2.classList.remove("hide_icons")
+        span3.classList.remove("icon3")
         setTimeout(() => {
           senndCotactForm.classList.remove("show_contact_form")
         }, 1500)
