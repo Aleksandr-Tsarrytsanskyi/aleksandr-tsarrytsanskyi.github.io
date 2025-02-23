@@ -453,6 +453,7 @@ function init() {
   const distributorH4 = document.querySelector("#aboutus .distributor h4");
   const feedback = document.querySelector("#feedback");
   const position = document.querySelector("#position");
+  const padding = document.querySelector("#aboutus .table .row .cell:nth-child(1)");
   const close_form = document.querySelector("#close_form");
   const languageColor = document.querySelector("header .english");
   const images_lang = document.querySelector("header #language");
@@ -559,7 +560,7 @@ function init() {
     span1.classList.remove("icon1");
     span3.classList.remove("icon3");
     icon_menu.style.display = "block"
-    enableScroll();
+   
   });
   feedback.addEventListener("click", function () {
     position.classList.add("show_form");
@@ -567,7 +568,7 @@ function init() {
     topmenu.classList.remove("show_topmenu");
     
     icon_menu.style.display = "none"
-    disableScroll();
+    
   });
 
   function disableScroll() {
@@ -606,7 +607,10 @@ function init() {
     removeClassList(images_lang, "hide");
     addImageLenguage(images_lang, "show");
   });
-
+  function changesTextContent() {
+    distributorH4.classList.add("");
+    padding.classList.add("");
+  }
   function checkPagePathName() {
     switch (currentPathName) {
       case "/index.html":
@@ -730,7 +734,6 @@ function init() {
   const contacForm = document.querySelector("#contact_form")
   let elements = contacForm.elements
   let {  email, phone, companyname, message} = elements
-  console.log(message.value);
   
   async function usersApi(data) {
     let responce = await fetch("/sendMail/sendmail.php", {
