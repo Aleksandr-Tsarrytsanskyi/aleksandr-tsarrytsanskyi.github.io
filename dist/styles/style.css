@@ -10,6 +10,11 @@ body {
   margin: 0;
 }
 
+.aboutus_text {
+  margin: auto !important;
+  padding-left: 0 !important;
+}
+
 .distributor_h4 {
   text-align: center;
 }
@@ -319,7 +324,7 @@ span {
 }
 
 .white {
-  color: #fff;
+  opacity: 1 !important;
 }
 
 #main .bg_mision {

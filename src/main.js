@@ -462,6 +462,8 @@ function init() {
  const span1 = document.querySelector("#menu_icon span:nth-child(1)");
  const span2 = document.querySelector("#menu_icon span:nth-child(2)");
  const span3 = document.querySelector("#menu_icon span:nth-child(3)");
+ const text = document.querySelectorAll("#aboutus .table .row .cell");
+ const hovertopMneu = document.querySelector("header .hover_lng");
  const body = document.body
  const topmenu = document.querySelector(".topmenu");
  const senndCotactForm = document.querySelector("#send_contact_form");
@@ -599,12 +601,15 @@ function init() {
     languageColor.classList.add("red");
     lastchild.classList.add("show_anime");
     addImageLenguage(images_lang, "hide");
+    hovertopMneu.classList.add("show")
   });
   lastchild.addEventListener("mouseout", function (event) {
     removeClassList(languageColor, "red");
     lastchild.classList.remove("show_anime");
     languageColor.classList.add("white");
-    removeClassList(images_lang, "hide");
+    languageColor.classList.remove("red");
+    hovertopMneu.classList.remove("show")
+    images_lang.classList.remove("hide")
     addImageLenguage(images_lang, "show");
   });
   function changesTextContent() {
@@ -697,6 +702,13 @@ function init() {
   function showElement(element) {
     element.hidden = false;
   }
+
+  function chengeTextContent() {
+    text.forEach(text => {
+
+      text.classList.add("aboutus_text")
+    })
+  }
   function changesAboutUs() {
     langButtons.forEach((btn) => {
       btn.addEventListener("click", (event) => {
@@ -708,15 +720,18 @@ function init() {
           changeLang();
           if (btn.dataset.btn == "ua") {
             hideElement(ua);
+            chengeTextContent()
           } else {
             showElement(ua);
           }
           if (btn.dataset.btn == "de") {
+            chengeTextContent()
             hideElement(de);
           } else {
             showElement(de);
           }
           if (btn.dataset.btn == "pl") {
+            chengeTextContent()
             hideElement(pl);
           } else {
             showElement(pl);
