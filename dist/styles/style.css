@@ -1143,6 +1143,10 @@ header .text_transform h3 {
     margin-top: 200px;
   }
 
+  #aboutus .table .row .cell:nth-child(1) {
+    padding-right: 0 !important;
+  }
+
   #aboutus .distributor .position {
     background-color: #1c1c1c;
     height: 811px;
