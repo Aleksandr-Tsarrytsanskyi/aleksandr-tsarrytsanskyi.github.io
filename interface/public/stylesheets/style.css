@@ -955,6 +955,7 @@ header .grid .cell:nth-child(1) {
 
   .tabs_texte_show .border {
     width: auto;
+    margin-left: 0px;
   }
 
   .checkbox_real {
