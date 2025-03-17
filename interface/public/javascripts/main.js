@@ -45,14 +45,16 @@ document.addEventListener("DOMContentLoaded" ,function() {
     function showFond() {
         links.forEach(links => {
             links.addEventListener("click", function(event) {
-                event.preventDefault();;
+                event.preventDefault();
+                document.body.style.padding = "0px"
                 fond.classList.remove("hide_fond")
                 fond.classList.add("show_fond")
             })
         })
         img.forEach(links => {
             links.addEventListener("click", function(event) {
-                event.preventDefault();;
+                event.preventDefault();
+                document.body.style.padding = "20px 0 0"
                 existant.classList.remove("existant_hide")
                 existant.classList.add("existant_show")
             })
@@ -60,13 +62,15 @@ document.addEventListener("DOMContentLoaded" ,function() {
 
         itemsImage.forEach(links => {
             links.addEventListener("click", function(event) {
-                event.preventDefault();;
+                event.preventDefault();
+                  document.body.style.padding = "0px"
                 imagesWindow.classList.remove("imagesWindow_hide");
                 imagesWindow.classList.add("imagesWindow_show");
             })
         })
        
         images.addEventListener("click", function(event) {
+            document.body.style.padding = "20px 0 0"
                 imagesWindow.classList.add("imagesWindow_hide");
                 imagesWindow.classList.remove("imagesWindow_show");
             })

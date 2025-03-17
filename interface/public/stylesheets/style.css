@@ -225,7 +225,7 @@ header .grid .cell:nth-child(1) {
   height: 100%;
   transition: all 1s;
   opacity: 0;
-  transform: translate(0%, -105%);
+  transform: translate(0%, -100%);
 }
 
 #fond_position {
@@ -271,12 +271,12 @@ header .grid .cell:nth-child(1) {
 
 .show_fond {
   opacity: 1 !important;
-  transform: translate(0%, -5%) !important;
+  transform: translate(0%, 0%) !important;
 }
 
 .hide_fond {
   opacity: 0 !important;
-  transform: translate(0%, -105%) !important;
+  transform: translate(0%, -100%) !important;
 }
 
 .tabs_tissus {
@@ -407,22 +407,33 @@ header .grid .cell:nth-child(1) {
   width: 100%;
   height: 100%;
   transition: all 1s;
-  transform: translate(0%, -105%);
+  transform: translate(0%, -100%);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 201px;
+  justify-content: center;
+  width: 852px;
+  background-color: #fff;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    margin: 44px auto;
 }
 
 #existant .close {
-  margin: 10px 24px -38px 0px;
+  margin: 10px -133px -38px 0px;
   cursor: pointer;
   position: relative;
   float: right;
 }
 
 .existant_hide {
-  transform: translate(0%, -105%) !important;
+  transform: translate(0%, -100%) !important;
 }
 
 .existant_show {
-  transform: translate(0%, -5%) !important;
+  transform: translate(0%, 0%) !important;
 }
 
 /* #formPreviem {
@@ -441,7 +452,6 @@ header .grid .cell:nth-child(1) {
 
 #existant_position {
   width: 852px;
-  
   margin: 200px auto;
   background-color: #fff;
   padding-bottom: 30px;
@@ -916,6 +926,17 @@ header .grid .cell:nth-child(1) {
     width: 170px;
   }
 
+  .police {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .police1 {
+    display: block;
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+
   .tabs_texte_show .color .cell:nth-child(2),
   .tabs_texte_show .color .cell:nth-child(5) {
     margin-top: -30px;
@@ -1081,6 +1102,16 @@ header .grid .cell:nth-child(1) {
     }
   }
 
+  @media screen and (max-width: 520px) {
+    .wrapper {
+      width: 310px !important;
+    }
+
+    #existant .close {
+      margin: 6px -17px -38px 0px !important;
+    }
+  }
+
   @media screen and (max-width: 630px) {
     header .grid {
       grid-template-columns: 292px;
@@ -1177,6 +1208,7 @@ header .grid .cell:nth-child(1) {
     }
 
     .wrapper {
+      width: 500px;
       display: grid;
       grid-template-columns: 200px;
       justify-content: center;
@@ -1184,6 +1216,10 @@ header .grid .cell:nth-child(1) {
 
     .file_priviem {
       padding-left: 0;
+    }
+
+    #existant .close {
+      margin: 10px -51px -38px 0px;
     }
   }
   @media screen and (max-width: 535px) {
@@ -1194,6 +1230,7 @@ header .grid .cell:nth-child(1) {
     .wrapper {
       grid-template-columns: 200px;
     }
+
   }
   /* .burger_menu {
     position: relative;
