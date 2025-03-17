@@ -204,6 +204,7 @@ header .grid .cell:nth-child(1) {
   display: block;
   background-color: #24345c;
   text-align: center;
+  font-family: "Open Sans Regular";
   width: 180px;
   height: 40px;
   color: #fff;
