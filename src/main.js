@@ -463,6 +463,7 @@ function init() {
  const span2 = document.querySelector("#menu_icon span:nth-child(2)");
  const span3 = document.querySelector("#menu_icon span:nth-child(3)");
  const text = document.querySelectorAll("#aboutus .table .row .cell");
+ const topmenuLi = document.querySelectorAll("header .topmenu li");
  const hovertopMneu = document.querySelector("header .hover_lng");
  const body = document.body
  const topmenu = document.querySelector(".topmenu");
@@ -612,6 +613,20 @@ function init() {
     images_lang.classList.remove("hide")
     addImageLenguage(images_lang, "show");
   });
+  // topmenuLi.forEach(li => {
+  //   li.addEventListener("mouseout" ,function(e) {
+  //     if(e.target.classList.contains("hover")) {
+  //       console.log("OK");
+  //     }
+  //     removeClassList(languageColor, "red");
+  //     lastchild.classList.remove("show_anime");
+  //     languageColor.classList.add("white");
+  //     languageColor.classList.remove("red");
+  //     hovertopMneu.classList.remove("show")
+  //     images_lang.classList.remove("hide")
+  //     addImageLenguage(images_lang, "show");
+  //   })
+  // })
   function changesTextContent() {
     distributorH4.classList.add("");
     padding.classList.add("");
@@ -778,7 +793,7 @@ function init() {
       let errorMessage = getmessage();
       let error = 0;
       error = errorEmail + errorPhone + errorCompany + errorMessage
-   
+      
       getemail(errorEmail);
       getphone(errorPhone);
       getcompany(errorCompany);
