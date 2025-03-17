@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded" ,function() {
     const noneLink = document.querySelectorAll(".file_item .file_input");
     const images = document.querySelector("#imagesWindow_poistion .close");
     const imagesWindow = document.querySelector("#imagesWindow");
+    const tissus = document.querySelector(".tabs_tissus");
     const itemsImage = document.querySelectorAll(".tabsl_item_border");
     
     // file_button.addEventListener("click", function(event) {
@@ -81,6 +82,7 @@ document.addEventListener("DOMContentLoaded" ,function() {
         removeInputValue.addEventListener("click", function() {
             inputValue.value = ""
         })
+       
     }
     function hideFond() {
         closeFond.addEventListener("click", function() {

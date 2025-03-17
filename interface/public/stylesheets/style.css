@@ -297,6 +297,18 @@ header .grid .cell:nth-child(1) {
   text-align: center;
 }
 
+.tabs_tissus img {
+  border: 2px solid #fff;
+}
+
+.tabs_tissus img:hover {
+  border: 2px solid #24345c;
+}
+
+.item_img_active.atcive_img {
+  border: 2px solid #24345c;
+}
+
 .tabs_tissus p {
   font-family: "Open Sans Regular";
   font-size: 18px;
