@@ -34,7 +34,12 @@ document.addEventListener("DOMContentLoaded" ,function() {
         })
     })
     
-
+    datele.addEventListener("click", function() {
+        hide_material.style.display ="none"
+    })
+    materials.addEventListener("click", function() {
+        hide_material.style.display ="block"
+    })
     
     // baseLink.forEach(item => {
     //     item.addEventListener("click", function(event) {
