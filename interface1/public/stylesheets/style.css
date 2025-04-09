@@ -187,7 +187,14 @@ body {
       grid-template-columns: 370px 1000px;
 }
 
+#tab_2 .tile .cell:nth-child(1) {
+  overflow: auto;
+  height: 500px;
+}
 
+.man_anime {
+  display: none;
+}
 
 #tab_3 .cell:nth-child(1) {
   margin-top: 20px;
@@ -370,6 +377,7 @@ body {
   overflow: auto;
   height: 300px;
   width: 170px;
+  margin-left: 10px;
 }
 
 #footer .style ul li {
@@ -444,6 +452,7 @@ body {
   text-decoration: none;
 }
 
+
 .monument1 ul {
   list-style: none;
   margin:  0;
@@ -506,6 +515,7 @@ body {
   transform: translate(-100%, 0%);
   transition: all 0.3s;
   overflow: auto;
+  z-index: 300;
   height: 600px;
   width: 315px;
 }
@@ -532,13 +542,16 @@ float: right;
  margin-right: 30px;
  margin-top: -20px;
  cursor: pointer;
- 
-  
+}
+
+#tab_4 .monument_grid .cell:nth-child(1) {
+  overflow: auto;
+  height: 210px;
 }
 
 .modal .position {
   position: absolute;
-  z-index: 200;
+  z-index: 400;
   background: rgba(247, 247, 247);
   height: 100%;
   width: 30px;
@@ -628,6 +641,68 @@ float: right;
 .footer_m_top1 {
   margin-top: 40px !important;
 }
+
+.details_color {
+  background-color: #f2f2f2;
+}
+
+.hide_material {
+  display: none;
+}
+
+.hide_material_show {
+  display: block;
+}
+
+.text_color {
+  color: #e41010 !important;
+  background-color: #333;
+}
+
+.style_color {
+  color: #fff !important;
+}
+
+.rect .text.active_manu_item {
+  color: #353336 !important;
+  background: url("../images/mark_06.png") no-repeat top 50% right 0%;
+  padding-right: 20px;
+  width: 120px;
+  display: block;
+}
+
+.rect .text1 {
+  width: 60px !important;
+}
+
+
+.rect .text2 {
+  width: 50px !important;
+}
+
+.rect .text3 {
+  width: 95px !important;
+}
+
+
+.border_img {
+  border: 2px solid #101010;
+}
+
+.footer_color {
+  background-color: #fff;
+ 
+}
+
+.footer_size {
+  margin-top: 70px !important;
+}
+
+.footer_style {
+  margin-top: 70px !important;
+}
+
+
 
 
 

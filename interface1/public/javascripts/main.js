@@ -17,31 +17,46 @@ document.addEventListener("DOMContentLoaded" ,function() {
     const datele = document.querySelector(".monument1 .datele");
     const hide_material = document.querySelector(".hide_material");
     const materials = document.querySelector(".materials");
-    const rect = document.querySelectorAll(".monument1 .text");
+    const text = document.querySelectorAll(".monument1 .text");
     const materials1 = document.querySelectorAll(".monument1 .active_materials");
     const rotateImage = document.querySelector(".modal_show img");
     const footer = document.querySelector("#footer");
-
-    footer.classList.add("footer_m_top")
+    const lonks = document.querySelectorAll("#footer .style ul li a");
+    const sizes = document.querySelectorAll("#footer .size ul li a");
+    const footer_size = document.querySelector("#footer .size");
+    const footer_style = document.querySelector("#footer .style");
+    changeBottomMenu();
+   function changeBottomMenu() {
+    footer_size.classList.add("footer_size");
+    footer_style.classList.add("footer_style")
+   }
    
-
-    rect.forEach(item => {
-        item.addEventListener("click", function(event) {
-            item.classList.add("color10")
-           event.target.closest(".text").classList.add("color_modalssdgs")
-           if(event.target) {
-            item.classList.remove("color_modalssdgs")
-           }
-          
+    text.forEach(item => {
+        item.addEventListener("click", function(e) {
+            if(!item.classList.contains("active_manu_item")) {
+                console.log(item);
+                
+                // item.innerHTML = "<span>" + item +"</span>"
+                
+                text.forEach(item => {
+                    item.classList.remove("active_manu_item")
+                    item.parentElement.previousElementSibling.firstElementChild.classList.remove("border_img")
+                })
+                
+                item.classList.add("active_manu_item")
+                item.parentElement.previousElementSibling.firstElementChild.classList.add("border_img")
+                
+            } 
         })
     })
-    
+
+   
+   
     datele.addEventListener("click", function() {
-        hide_material.style.display ="none"
+        hide_material.classList.toggle("hide_material_show")
+        datele.classList.toggle("details_color")
     })
-    materials.addEventListener("click", function() {
-        hide_material.style.display ="block"
-    })
+   
     
     // baseLink.forEach(item => {
     //     item.addEventListener("click", function(event) {
@@ -69,9 +84,24 @@ document.addEventListener("DOMContentLoaded" ,function() {
         item3.classList.toggle("item3_active")
         if(!item3.classList.contains("item3_active")) {
             tab5.style.opacity = "0"
+            lonks.forEach(elem => {
+                
+                elem.parentElement.classList.remove("footer_color")
+            })
+            sizes.forEach(elem => {
+                
+                elem.parentElement.classList.remove("footer_color")
+            })
         }
         else {
-             tab5.style.opacity = "1"
+            tab5.style.opacity = "1"
+            lonks.forEach(elem => {
+                elem.parentElement.classList.add("footer_color")
+            })
+            sizes.forEach(elem => {
+                console.log( elem.parentElement );
+               elem.parentElement.classList.add("footer_color")
+           })
         }
     })
 
@@ -94,6 +124,7 @@ document.addEventListener("DOMContentLoaded" ,function() {
         item.addEventListener("click", function(event) {
             event.target.classList.toggle("stl");
             event.target.classList.toggle("monument_up");
+            event.target.classList.remove("man_anime");
             item.nextElementSibling.classList.toggle("Monument")
             
         })
