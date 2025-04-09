@@ -646,8 +646,23 @@ float: right;
   background-color: #f2f2f2;
 }
 
+.meterials_color1 {
+  background-color: #f2f2f2;
+}
+
 .hide_material {
   display: none;
+}
+
+.pedestal {
+  display: none;
+  margin-top: 30px;
+}
+
+
+
+.pedestal_show {
+  display: block !important;
 }
 
 .hide_material_show {
@@ -700,6 +715,14 @@ float: right;
 
 .footer_style {
   margin-top: 70px !important;
+}
+
+.group {
+  display: none;
+}
+
+.group_show {
+  display: block !important; 
 }
 
 

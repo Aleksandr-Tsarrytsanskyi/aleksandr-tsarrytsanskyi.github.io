@@ -25,17 +25,28 @@ document.addEventListener("DOMContentLoaded" ,function() {
     const sizes = document.querySelectorAll("#footer .size ul li a");
     const footer_size = document.querySelector("#footer .size");
     const footer_style = document.querySelector("#footer .style");
+    const pedestal = document.querySelector(".pedestal");
+    const mansurovsky = document.querySelector(".mansurovsky");
+    const group = document.querySelector(".group");
+    const gabbro = document.querySelector(".gabbro");
     changeBottomMenu();
    function changeBottomMenu() {
     footer_size.classList.add("footer_size");
     footer_style.classList.add("footer_style")
    }
-   
+   gabbro.addEventListener("click",function() {
+    group.classList.remove("group_show");
+    pedestal.classList.add("pedestal_show");
+   })
+   mansurovsky.addEventListener("click",function() {
+    group.classList.add("group_show");
+    pedestal.classList.remove("pedestal_show");
+   })
+
     text.forEach(item => {
         item.addEventListener("click", function(e) {
             if(!item.classList.contains("active_manu_item")) {
                 console.log(item);
-                
                 // item.innerHTML = "<span>" + item +"</span>"
                 
                 text.forEach(item => {
@@ -53,8 +64,19 @@ document.addEventListener("DOMContentLoaded" ,function() {
    
    
     datele.addEventListener("click", function() {
-        hide_material.classList.toggle("hide_material_show")
-        datele.classList.toggle("details_color")
+        hide_material.classList.add("hide_material_show")
+        datele.classList.add("details_color")
+        materials.classList.remove("meterials_color1")
+        pedestal.classList.remove("pedestal_show")
+    })
+
+    materials.addEventListener("click", function() {
+     
+        datele.classList.remove("details_color")
+        materials.classList.add("meterials_color1")
+        pedestal.classList.add("pedestal_show")
+    
+        
     })
    
     
@@ -145,6 +167,7 @@ document.addEventListener("DOMContentLoaded" ,function() {
     })
 
     modal.addEventListener("click", function() {
+        document.querySelector(".text1").click();
         monument1.classList.toggle("show_monument1")
         rotateImage.classList.toggle("modal_show_img_rotate")
     })
