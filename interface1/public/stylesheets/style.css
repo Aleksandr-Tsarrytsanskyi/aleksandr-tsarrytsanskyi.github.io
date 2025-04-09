@@ -546,7 +546,7 @@ float: right;
 
 #tab_4 .monument_grid .cell:nth-child(1) {
   overflow: auto;
-  height: 210px;
+  height: 310px;
 }
 
 .modal .position {
