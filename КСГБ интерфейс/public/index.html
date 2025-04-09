@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
+    <script type="module" src="./javascripts/main.js"></script>
+    <script type="module" src="./javascripts/tabs.js"></script>
+    <meta name="description" content="" />
+    <meta name="keywords" content="interface" />
+    <title>КСГБ интерфейс</title>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="position">
+        <div class="modal_show">
+          <div class="cell">
+            <img src="./images/stl_down_11.png" alt="Image">
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="monument1">
+      <div class="position">
+        <h3>Памятник</h3>
+        <a href="#" class="active">Один материал все детали</a>
+        <div class="clear"></div>
+        <a href="#" class="active">Разный материал<br>
+          стела, плита, постамент</a>
+          <div class="clear"></div>
+        <a href="#" class="stella hide top">Стела</a>
+        <div class="content">
+          <ul>
+            <li>
+              <img src="./images/img4.png" alt="Image">
+            </li>
+            <li>
+              <a href="#" class="tabs_navs_btn none" type="button" data-tab="#tab_1">Габбро</a>
+            </li>
+          </ul>
+          <div class="clear"></div>
+          <ul>
+            <li>
+              <img src="./images/img5.png" alt="Image">
+            </li>
+            <li>
+              <a href="#">Винга</a>
+            </li>
+          </ul>
+          <div class="clear"></div>
+          <ul>
+            <li>
+              <img src="./images/img6.png" alt="Image">
+            </li>
+            <li>
+              <a href="#">Дымовский</a>
+            </li>
+          </ul>
+          <div class="clear"></div>
+          <ul>
+            <li>
+              <img src="./images/img7.png" alt="Image">
+            </li>
+            <li>
+              <a href="#">Мансуровский</a>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="border"></div>
+        <a href="#" class="stella hide">Плита</a>
+        <div class="border"></div>
+        <a href="#" class="stella hide">Постамент</a>
+        <div class="border"></div>
+        <a href="#" class="stella hide">Столбики</a>
+        <div class="border"></div>
+        <a href="#" class="stella hide">Входная группа</a>
+        <div class="border"></div>
+    </div>    
+    </div>
+    <div id="container">
+      <header>
+        <div class="tabs_navs">
+          <button class="tabs_navs_btn" type="button" data-tab="#tab_1">
+            Цоколь
+          </button>
+          <button class="tabs_navs_btn" type="button" data-tab="#tab_2">
+            Плитка
+          </button>
+          <button class="tabs_navs_btn" type="button" data-tab="#tab_3">
+            Ограда
+          </button>
+          <button class="tabs_navs_btn" type="button" data-tab="#tab_4">
+            Памятник
+          </button>
+        </div>
+      </header>
+      <div class="tabs_content">
+        <div class="tabs_item" id="tab_1">
+          <div class="grid">
+            <div class="style">
+              <a href="#" class="style1 tabs_navs_btn" type="button" data-tab="#tab_1">200х220 Основание стиль1 180х120х15</a>
+              <a href="#" class="style1 tabs_navs_btn" type="button" data-tab="#tab_1"
+                >200х220 Основание стиль1 цоколь без<br />
+                плитки 180х120х15</a
+              >
+            </div>
+            <div class="cell">
+              <img src="./images/icon2_03.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="tabs_item" id="tab_2">
+          <div class="tile">
+            <div class="cell">
+              <div class="border"></div>
+              <a href="#" class="active_link stl" >Плитка-стиль 17 SLOTTED 180х90х2</a>
+              <div class="content top">
+                  <figure class="tabs_navs_btn" data-tab="#tab_2">
+                    <img src="./images/style1_03.png" alt="Image" />
+                  </figure>
+                <p>200х200 Плитка стиль1 200х200х2</p>
+                <figure class="tabs_navs_btn" type="button" data-tab="#tab_2">
+                  <img src="./images/style2_07.png" alt="Image" />
+                  <!-- <img src="./images/plitka_mark_07.png" alt="Mark" class="mark"> -->
+                </figure>
+                <p>200х200 Плитка стиль1 200х200х2</p>
+                <figure class="tabs_navs_btn" type="button" data-tab="#tab_2">
+                  <img src="./images/style3_10.png" alt="Image" />
+                </figure>
+                <p>200х200 Плитка стиль1 200х200х2</p>
+              </div>
+              <div class="border"></div>
+              <a href="#" class="last_stl stl">Плитка-стиль 17 SLOTTED 180х90х2</a>
+              <div class="content top">
+                <figure class="tabs_navs_btn" data-tab="#tab_2">
+                  <img src="./images/style1_03.png" alt="Image" />
+                </figure>
+                <p>200х200 Плитка стиль1 200х200х2</p>
+                <figure  class="tabs_navs_btn" data-tab="#tab_2">
+                  <img src="./images/style2_07.png" alt="Image" />
+                </figure>
+                <p>200х200 Плитка стиль1 200х200х2</p>
+                <figure class="tabs_navs_btn" data-tab="#tab_2">
+                  <img src="./images/style3_10.png" alt="Image" />
+                </figure>
+                <p>200х200 Плитка стиль1 200х200х2</p>
+              </div>
+              <div class="border"></div>
+            </div>
+            <div class="cell">
+              <img src="./images/icon2_03.png" alt="Image">
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs_item" id="tab_3">
+          <div class="fence">
+            <div class="cell">
+              <a href="#" class="tabs_navs_btn" type="button" data-tab="#tab_3">200х220 Ограда стиль1 196х204х57</a>
+              <a href="#" class="tabs_navs_btn" type="button" data-tab="#tab_3">200х220 Ограда стиль1 196х204х57</a>
+              <a href="#" class="tabs_navs_btn" type="button" data-tab="#tab_3">200х220 Ограда стиль1 196х204х57</a>
+            </div>
+            <div class="cell">
+              <img src="./images/icon2_03.png" alt="Image">
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs_item" id="tab_4">
+          <div class="monument_grid">
+            <div class="cell">
+              <div class="border"></div>
+              <a href="#" class="active_link stl">Памятник 1</a>
+              <div class="Monument">
+                <a href="#" class=" tabs_navs_btn" type="button" data-tab="#tab_4">Памятник центр постамент <br> SLOTTED 119X60×115</a>
+                <a href="#" class="tabs_navs_btn" type="button" data-tab="#tab_4">Памятник центр постамент <br> SLOTTED 119X60×115</a>
+              </div>
+              <div class="border"></div>
+              <a href="#" class="active_link stl">Памятник 2</a>
+              <div class="Monument">
+                <a href="#" class=" tabs_navs_btn" type="button" data-tab="#tab_4">Памятник центр постамент <br> SLOTTED 119X60×115</a>
+                <a href="#" class=" tabs_navs_btn" type="button" data-tab="#tab_4">Памятник центр постамент <br> SLOTTED 119X60×115</a>
+              </div>
+              <div class="border"></div>
+              <a href="#" class="active_link stl">Памятник 3</a>
+              <div class="Monument">
+                <a href="#" class=" tabs_navs_btn" type="button" data-tab="#tab_4">Памятник центр постамент <br> SLOTTED 119X60×115</a>
+                <a href="#" class=" tabs_navs_btn" type="button" data-tab="#tab_4">Памятник центр постамент <br> SLOTTED 119X60×115</a>
+              </div>
+              <div class="border"></div>
+            </div>  
+            <div class="cell">
+              <img src="./images/icon2_03.png" alt="Image">
+            </div>
+          </div>  
+        </div>
+        <div class="tabs_item" id="tab_5">
+          <img src="./images/img1_03.png" alt="Image">
+        </div>
+      </div>
+     <footer id="footer">
+      <div class="grid">
+        <div class="cell">
+          <div class="content">
+            <div class="cell item_size item1 item">
+              <div class="size">
+                <ul>
+                  <li>
+                    <a href="#"></a>
+                  </li>
+                  <li>
+                    <a href="#">210x300</a>
+                  </li>
+                  <li>
+                    <a href="#">150x200</a>
+                  </li>
+                  <li>
+                    <a href="#">150x240</a>
+                  </li>
+                  <li>
+                    <a href="#">180x220</a>
+                  </li>
+                  <li>
+                    <a href="#">180x240</a>
+                  </li>
+                  <li>
+                    <a href="#">200x200</a>
+                  </li>
+                  <li>
+                    <a href="#">200x250</a>
+                  </li>
+                </ul>
+              </div>  
+              <a href="#" class="item1_size">Размер участка</a>
+            </div>
+            <div class="cell item2 item">
+              <div class="style">
+                <ul>
+                  <li>
+                    <a href="#"></a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 3 двойной</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 4</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 5</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 6</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 7</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 8</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 9</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 10</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 11</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 12</a>
+                  </li>
+                  <li>
+                    <a href="#">Стиль 13</a>
+                  </li>
+                </ul>
+              </div>
+              <a href="#">Выбрать стиль</a>
+            </div>
+            <div class="cell item3 item"  data-tab="#tab_5">
+              <a href="#" data-tab="#tab_5" class="tabs_navs_btn">Фон окружение</a>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <ul>
+            <li>
+              <a href="#" class="first">Копировать ссылку</a>
+            </li>
+            <li>
+              <a href="#" class="last">Копировать ссылку без редактирования</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+     </footer>
+    </div>
+  </body>
+</html>

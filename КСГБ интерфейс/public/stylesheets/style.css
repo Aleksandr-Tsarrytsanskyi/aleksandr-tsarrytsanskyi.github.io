@@ -1,0 +1,591 @@
+body {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 20px 0 0;
+  margin: 0;
+  padding: 20px 0px 0px 40px;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "Inter-Regula";
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+.tabs_navs .tabs_navs_btn {
+  font-size: 120%;
+  font-family: "Inter-Medium";
+  color: #404040;
+  background-color: #f7f6f6;
+  border: none;
+  width: 155px;
+  height: 35px;
+  cursor: pointer;
+  
+}
+
+.tabs_navs .tabs_navs_btn:hover {
+  background-color: #101010;
+  color: #fff;
+}
+
+.tabs_navs_btn.active  {
+  background-color: #e6e8ef;
+}
+
+.tabs_item {
+  display: none;
+}
+.tabs_item.active {
+  display: block;
+}
+
+#tab_1 a {
+  display: block;
+  color: #3b3b3d;
+  font-family: "Inter-Regula";
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+#tab_1 a.active {
+  background-color: #f2f2f2;
+  padding: 10px 20px 10px 15px;
+}
+
+.base {
+  background-color: #f2f2f2;
+  padding: 10px 20px 10px 15px;
+}
+
+#tab_1 .style {
+  margin-top: 20px;
+}
+
+#tab_1 .grid {
+  display: grid;
+  grid-template-columns: 370px 1000px;
+}
+
+#tab_1 img {
+  margin-top: 100px;
+}
+
+#tab_1 .active, #tab_3 .active, #tab_4 .active {
+  background: url("../images/mark_06.png") no-repeat right 7% top 50% ;
+  background-color: #f2f2f2;
+}
+
+#tab_2 .active {
+  background: url("../images/plitka_mark_07.png") no-repeat right 7% top 90% ;
+}
+
+.item3_active {
+  background-color: #e6e8ef;
+}
+
+#tab_2 p {
+  font-family: "Inter-Regula";
+  color: #777777;
+  font-size: 12px;
+}
+
+#tab_2 figure {
+  background-color: #f7f6f6;
+  width: 225px;
+  padding: 40px 0px 40px 0px;
+  margin: 0;
+  cursor: pointer;
+}
+
+#tab_2 figure img {
+  display: block;
+  margin: auto;
+}
+
+#tab_2 .content {
+  margin-top: 40px;
+  overflow: auto;
+  height: 650px;
+  width: 250px;
+}
+
+#tab_2 .border {
+  border-bottom: 1px solid #414141;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 285px;
+}
+
+#tab_2 a {
+  display: block;
+    color: #3b3b3d;
+    font-family: "Inter-Regula";
+    text-decoration: none;
+    font-size: 14px;
+    width: 310px;
+  }
+  
+  #tab_2 .stl {
+    background: url("../images/stl_down_11.png") no-repeat top 50% right 10%;
+}
+
+.link_up {
+  background: url("../images/stl_up_03.png") no-repeat top 50% right 10% !important;
+}
+
+
+#tab_2  .active {
+  background-color: #e6e8ef;
+}
+
+#tab_2 a:hover {
+  text-decoration: underline;
+}
+
+#tab_2 .mark {
+  margin: 5px 17px 0px 0px;
+  float: right;
+}
+
+
+#tab_2 .content {
+  display: none;
+}
+
+#tab_2 .top {
+  margin-top: 40px;
+}
+
+#tab_3 a.active {
+  background-color: #f2f2f2;
+    padding: 10px 20px 10px 15px;
+}
+
+#tab_3 a {
+  display: block;
+    color: #3b3b3d;
+    font-family: "Inter-Regula";
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+#tab_2 .tile ,#tab_3 .fence, #tab_4 .monument_grid {
+  display: grid;
+      grid-template-columns: 370px 1000px;
+}
+
+
+
+#tab_3 .cell:nth-child(1) {
+  margin-top: 20px;
+}
+
+#tab_2 img, #tab_3 img  {
+  margin-top: 100px;
+}
+
+#tab_3 a,  #tab_1 a{
+  padding: 10px 20px 10px 15px;
+}
+
+#tab_3 a {
+  width: 310px;
+}
+
+#tab_3 a:hover, #tab_1 a:hover {
+ 
+  background-color: #f2f2f2;
+  padding: 10px 20px 10px 15px;
+}
+
+#tab_4 .active_link {
+  color: #3c3635;
+  font-family: "Inter-Medium";
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#tab_4 .border {
+  border-bottom: 1px solid #414141;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 285px;
+}
+
+#tab_4 a {
+  display: block;
+  color: #3b3b3d;
+  font-family: "Inter-Regula";
+  text-decoration: none;
+  padding: 10px 20px 10px 15px;
+}
+
+.monument_up {
+  background: url("../images/stl_up_03.png") no-repeat top 50% right 25% !important;
+}
+
+#tab_4 .active:hover {
+  
+  background-color: #f2f2f2;
+  padding: 10px 20px 10px 15px;
+ 
+}
+
+#tab_4  .Monument {
+  display: none !important;
+}
+
+#tab_4 .stl {
+  background: url("../images/stl_down_11.png") no-repeat top 50% right 25%;
+}
+
+#tab_4 .active_link {
+  background: url("../images/stl_down_11.png") no-repeat top 50% right 25%;
+}
+
+#tab_4 img {
+  margin-top: 100px;
+}
+
+#tab_4 .monument_grid {
+  margin-top: 0px;
+}
+
+#tab_5 img{
+  margin-top: 100px;
+}
+
+#tab_5 .tabs_navs_btn {
+  cursor: pointer;
+  display: block;
+  
+}
+
+#footer a {
+  text-decoration: none;
+  color: #3c3937;
+  font-size: 14px;
+}
+
+#footer .content {
+  display: grid;
+  grid-template-columns: 170px 170px 170px;
+  grid-gap: 0px 20px;
+}
+
+#footer .content  .cell:nth-child(1) a {
+  display: block;
+  background: url("../images/icon1_11.png") no-repeat left ;
+  margin-left: 15px;
+  padding-left: 25px;
+}
+
+#footer .content  .cell:nth-child(2) a {
+  display: block;
+  background: url("../images/icon12_03.png") no-repeat left;
+  margin-left: 15px;
+  padding-left: 25px;
+}
+
+#footer .content  .cell:nth-child(3) a {
+  display: block;
+  background: url("../images/icon3_14.png") no-repeat left;
+  margin-left: 15px;
+  padding-left: 25px;
+}
+
+#footer .item {
+  cursor: pointer;
+  text-align: center;
+  line-height: 43px;
+  height: 43px;
+
+}
+
+#footer .item a {
+  color: #4b3d48;
+  font-size: 14px;
+}
+
+#footer .item:hover {
+  background-color: #e6e8ef;
+}
+
+#footer .grid {
+  display: grid;
+  grid-template-columns: 540px 720px;
+  grid-gap: 0px 200px;
+  margin-top: 40px;
+}
+
+#footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footer ul li {
+  float: left;
+  margin-left: 60px;
+}
+
+#footer ul li a {
+  font-family: "Inter-Regula";
+  text-align: center;
+  display: block;
+  background-color: #f6f6f6;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 20px;
+}
+
+#footer ul li a:hover {
+  text-decoration: underline;
+}
+
+#footer ul .first {
+  width: 245px;
+}
+
+#footer ul .last {
+  width: 350px;
+}
+
+#footer .style {
+  position: absolute;
+  margin-top: -480px;
+  overflow: auto;
+  height: 470px;
+  width: 170px;
+}
+
+#footer .style ul li {
+  float: none;
+  margin: -5px 0 0 0 ;
+  padding-left: 5px;
+}
+
+#footer .style ul li a {
+  background: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left;
+}
+
+#footer .style ul li a:hover {
+  text-decoration: none;
+}
+
+#footer .style ul li:hover {
+  text-decoration: none;
+  background-color: #f7f7f7;
+  width: 150px;
+  
+}
+
+#footer .size ul li a {
+  text-decoration: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left;
+}
+
+#footer .size ul li:hover {
+  text-decoration: none;
+  background-color: #f7f7f7;
+  width: 150px;
+}
+
+#footer .style {
+  display: none;
+}
+
+.style_show {
+  display: block !important;
+}
+
+.monument1 h3 {
+  color: #353336;
+  font-size: 22px;
+}
+
+.monument1 .stella{
+  color: #525251 !important;
+  font-family: "Inter-Medium" !important;
+  font-size: 24px !important;
+  font-weight: 500;
+  width: 320px;
+  display: inline-block;
+  padding-left: 0px !important;
+}
+
+.monument1 .hide {
+  background: url("../images/stl_down_11.png") no-repeat top 50% right 14%;
+
+}
+
+.monument1 a {
+  color: #999999 !important;
+  font-family: "Inter-Regula" !important;
+  font-size: 16px !important;
+  text-decoration: none;
+}
+
+.monument1 ul {
+  list-style: none;
+  margin:  0;
+  padding: 0;
+}
+
+.monument1 ul:nth-child(1) {
+  margin-top: 20px;
+}
+
+.monument1 ul li {
+  float: left;
+  margin-bottom: 10px;
+}
+
+.monument1 ul img {
+  margin-right: 10px;
+  margin-top: 0px !important;
+}
+
+.clear {
+  clear: both;
+}
+
+.monument1 .active {
+  text-align: center;
+  display: inline-block;
+  width: 250px;
+  padding: 10px 20px 10px 15px;
+}
+
+.monument1 .active:hover {
+  display: inline-block;
+  background-color: #f2f2f2;
+  padding: 10px 20px 10px 15px;
+  width: 250px;
+}
+
+#tab_4 .monument_grid {
+  grid-template-columns: 370px 1000px;
+}
+
+.monument1 .content {
+  display: none;
+}
+
+.monument1 {
+  position: relative;
+  float: right;
+  margin-top: 147px;
+}
+
+.monument1 .position {
+  position: absolute;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 300px;
+  opacity: 0;
+  transform: translate(-100%, 0%);
+  transition: all 0.3s;
+  overflow: auto;
+  height: 600px;
+  width: 315px;
+}
+
+.monument1 .border {
+  border-bottom: 1px solid #414141;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 285px;
+}
+
+
+.show_monument1 {
+  opacity: 1 !important;
+  transform: translate(-110%, 0%) !important;
+}
+
+.monument1 .top {
+  margin-top: 30px;
+}
+
+.modal {
+float: right;
+ margin-right: 30px;
+ margin-top: -20px;
+ cursor: pointer;
+ 
+  
+}
+
+.modal .position {
+  position: absolute;
+  z-index: 200;
+  background: rgba(247, 247, 247);
+  height: 100%;
+  width: 30px;
+ 
+}
+
+.modal_show {
+  margin-top: 450px;
+}
+
+.modal_show img {
+  margin-left: 10px;
+}
+
+
+#footer .item_size li {
+  float: none;
+  margin-left: 0px;
+}
+
+#footer .item_size li a {
+  background: none !important;
+}
+
+
+#footer .size {
+  position: absolute;
+  margin-top: -310px;
+  overflow: auto;
+  display: none;
+  height: 300px;
+  margin-left: 20px;
+}
+
+.size_show {
+  display: block !important;
+}
+
+#tab_4 .tabs_navs_btn.active {
+  width: 250px;
+}
+
+.monument1 .none {
+  
+}
+
+
+
+
+
