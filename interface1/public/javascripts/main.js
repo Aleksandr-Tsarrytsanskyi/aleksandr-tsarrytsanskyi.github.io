@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded" ,function() {
     const rect = document.querySelectorAll(".monument1 .text");
     const materials1 = document.querySelectorAll(".monument1 .active_materials");
     const rotateImage = document.querySelector(".modal_show img");
+    const footer = document.querySelector("#footer");
 
+    footer.classList.add("footer_m_top")
    
 
     rect.forEach(item => {

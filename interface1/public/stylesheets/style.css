@@ -25,7 +25,7 @@ body {
 
 
 .tabs_navs .tabs_navs_btn {
-  font-size: 120%;
+  font-size: 100%;
   font-family: "Inter-Medium";
   color: #404040;
   background-color: #f7f6f6;
@@ -366,9 +366,9 @@ body {
 
 #footer .style {
   position: absolute;
-  margin-top: -480px;
+  margin-top: -340px;
   overflow: auto;
-  height: 470px;
+  height: 300px;
   width: 170px;
 }
 
@@ -419,13 +419,13 @@ body {
 
 .monument1 h3 {
   color: #353336;
-  font-size: 22px;
+  font-size: 16px;
 }
 
 .monument1 .stella{
   color: #525251 !important;
   font-family: "Inter-Medium" !important;
-  font-size: 24px !important;
+  font-size: 16px !important;
   font-weight: 500;
   width: 320px;
   display: inline-block;
@@ -570,10 +570,11 @@ float: right;
 
 #footer .size {
   position: absolute;
-  margin-top: -310px;
+  margin-top: -245px;
   overflow: auto;
   display: none;
-  height: 300px;
+  height: 200px;
+  width: 170px;
   margin-left: 20px;
 }
 
@@ -619,6 +620,14 @@ float: right;
   background: url("../images/mark_06.png") no-repeat right;
 }
 
+
+.footer_m_top {
+  margin-top: 400px;
+}
+
+.footer_m_top1 {
+  margin-top: 40px !important;
+}
 
 
 
