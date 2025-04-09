@@ -709,13 +709,9 @@ float: right;
  
 }
 
-.footer_size {
-  margin-top: 70px !important;
-}
 
-.footer_style {
-  margin-top: 70px !important;
-}
+
+
 
 .group {
   display: none;
@@ -723,6 +719,12 @@ float: right;
 
 .group_show {
   display: block !important; 
+}
+
+#footer {
+  position: fixed;
+  margin-top: 80px;
+  top: 80%;
 }
 
 
