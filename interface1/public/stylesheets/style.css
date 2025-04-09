@@ -553,6 +553,10 @@ float: right;
   margin-left: 10px;
 }
 
+.modal_show_img_rotate {
+  transform: rotate(-180deg);
+  transition: all 0.s;
+}
 
 #footer .item_size li {
   float: none;
@@ -581,9 +585,40 @@ float: right;
   width: 250px;
 }
 
-.monument1 .none {
-  
+.monument1  .active_materials .tabs_navs_btn.active {
+  background-color: #f2f2f2;
 }
+.materials_hide {
+  display: none;
+}
+
+.materials_show {
+  display: block !important;
+}
+
+.monument1 .active_materials a {
+  display: block;
+  text-align: center;
+  padding: 10px 20px 10px 15px;
+}
+
+.monument1 .active_materials .tabs_navs_btn {
+  width: 230px;
+}
+
+.color_modalssdgs {
+  color: red !important;
+  background-color: #101010;
+}
+
+.color10 {
+  color: red;
+}
+
+.stl_right_mem {
+  background: url("../images/mark_06.png") no-repeat right;
+}
+
 
 
 

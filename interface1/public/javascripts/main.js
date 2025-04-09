@@ -14,8 +14,25 @@ document.addEventListener("DOMContentLoaded" ,function() {
     const plitkaActive = document.querySelector("#tab_2 figure");
     const item3 = document.querySelector(".item3");
     const tab5 = document.querySelector("#tab_5");
+    const datele = document.querySelector(".monument1 .datele");
+    const hide_material = document.querySelector(".hide_material");
+    const materials = document.querySelector(".materials");
+    const rect = document.querySelectorAll(".monument1 .text");
+    const materials1 = document.querySelectorAll(".monument1 .active_materials");
+    const rotateImage = document.querySelector(".modal_show img");
 
-    
+   
+
+    rect.forEach(item => {
+        item.addEventListener("click", function(event) {
+            item.classList.add("color10")
+           event.target.closest(".text").classList.add("color_modalssdgs")
+           if(event.target) {
+            item.classList.remove("color_modalssdgs")
+           }
+          
+        })
+    })
     
 
     
@@ -29,6 +46,16 @@ document.addEventListener("DOMContentLoaded" ,function() {
     //        }
 
     //     })
+    // })
+    // materials.addEventListener("click", function() {
+    //     hide_material.classList.add("materials_show")
+    //     hide_material.classList.remove("materials_hide")
+    //     materials.classList.add("item3_active")
+    // })
+    // datele.addEventListener("click", function() {
+    //     hide_material.classList.add("materials_hide")
+    //     hide_material.classList.remove("materials_show")
+    //     datele.classList.add("item3_active")
     // })
 
     item3.addEventListener("click", function() {
@@ -81,6 +108,7 @@ document.addEventListener("DOMContentLoaded" ,function() {
 
     modal.addEventListener("click", function() {
         monument1.classList.toggle("show_monument1")
+        rotateImage.classList.toggle("modal_show_img_rotate")
     })
 
 })
