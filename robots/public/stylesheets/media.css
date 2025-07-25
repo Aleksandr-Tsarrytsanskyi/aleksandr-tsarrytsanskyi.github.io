@@ -135,6 +135,8 @@
   #lang {
           left: 2px;
         top: 4px;
+        position: relative;
+        z-index: 200;
   }
 
   .feedback {
@@ -208,9 +210,13 @@
   }
 
   .container .header {
-    grid-template-columns: 179px 100px 140px !important;
+    grid-template-columns: 179px 126px 23px 50px!important;
+    justify-content: start;
+    margin-left: 10px;
   }
 
+
+    
   .container header {
     width: 550px !important;
   }
@@ -359,9 +365,22 @@
 
 @media screen and (max-width: 590px) {
   .container .header {
-    grid-template-columns: 179px 50px 140px !important;
+    grid-template-columns: 179px !important;
+    justify-content: center;
+    grid-gap: 10px 0px ;
   }
 
+  .container header {
+    height: 133px;
+  }
+
+
+  #lang {
+            left: 60px;
+        top: -3px;
+        position: relative;
+        z-index: 200;
+  }
   .container header {
     width: 420px !important;
   }
@@ -414,7 +433,7 @@
 
   .container header {
     width: 326px !important;
-    height: 90px;
+    height: 165px;
   }
 
   .mobile_block2 {
