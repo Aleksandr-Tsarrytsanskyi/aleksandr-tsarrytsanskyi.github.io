@@ -376,7 +376,7 @@
 
 
   #lang {
-            left: 60px;
+            left: 80px;
         top: -3px;
         position: relative;
         z-index: 200;
@@ -387,6 +387,13 @@
 
   .container button {
     left: 2px;
+    font-size: 14px;
+    width: 180px;
+  }
+
+  .container .header {
+    margin-left: 0px;
+    grid-template-columns: 195px;
   }
 
   .mobile_block2 h1 {
