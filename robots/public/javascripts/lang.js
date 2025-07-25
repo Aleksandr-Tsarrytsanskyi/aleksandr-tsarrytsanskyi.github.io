@@ -693,6 +693,23 @@ document.addEventListener("DOMContentLoaded", function () {
       en: "Tariffs",
       uz: "Tariflar",
     },
+
+     text120: {
+      ru: "Продавайте чаще автоматически 24/7/365",
+      en: "deliver more often automatically 24/7/365",
+      uz: "24/7/365 avtomatik ravishda tez-tez soting",
+    },
+    text121: {
+      ru: "без ограничений на  сообщения  используя передовые Ai-технологии и внутреннюю систему управления  бронированиями  с первым легким запуском от 3 дней",
+      en: "unlimited messagingusing advanced AI technology and internalbooking management system with first easy launch from 3 days",
+      uz: "cheksiz xabar almashishilg'or AI texnologiyasidan foydalanish va ichkibron qilishni boshqarish tizimi 3 kundan boshlab birinchi oson ishga tushirish bilan",
+    },
+
+       text122: {
+      ru: "Бесплатная демонстрация",
+      en: "Tariffs",
+      uz: "Bepul demo",
+    },
   };
   const langButtons = document.querySelectorAll("[data-btn]");
   const currentPathName = window.location.pathname;
