@@ -427,6 +427,10 @@
 }
 
 @media screen and (max-width: 460px) {
+  .container button {
+    font-size: 12px;
+  }
+
   .container .header {
     grid-template-columns: 179px !important;
   }
