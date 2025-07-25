@@ -210,7 +210,7 @@
   }
 
   .container .header {
-    grid-template-columns: 179px 126px 23px 50px!important;
+    grid-template-columns: 186px 126px 23px 50px!important;
     justify-content: start;
     margin-left: 10px;
   }
