@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       uz: "Ariza yuboring",
     },
     text1: {
-      ru: "Продавайте чаще автоматически 24/7/365",
+      ru: "Продавайте <span>чаще</span> автоматически 24/7/365",
       en: "deliver more often automatically 24/7/365",
       uz: "24/7/365 avtomatik ravishda tez-tez soting",
     },
@@ -714,6 +714,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const langButtons = document.querySelectorAll("[data-btn]");
   const currentPathName = window.location.pathname;
   const lang = document.querySelectorAll("#lang");
+  // const langlink = document.querySelectorAll("юmobile_lang");
   let currentLang = "ru";
   let currentTexts = {};
   console.log(lang);
@@ -722,6 +723,13 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", (event) => {
       currentLang = item.value;
 
+      changeLang();
+    });
+  });
+
+    langButtons.forEach((item) => {
+    item.addEventListener("click", (event) => {
+    currentLang = event.target.dataset.btn;
       changeLang();
     });
   });

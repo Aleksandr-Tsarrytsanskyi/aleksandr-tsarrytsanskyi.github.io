@@ -191,6 +191,15 @@
 }
 
 @media screen and (max-width: 980px) {
+  #lang {
+    display: none;
+  }
+
+  .mobile_lang {
+    display: block;
+    color: white;
+  }
+
   .mobile_block2 .cell:nth-child(1) {
     display: block !important;
   }
