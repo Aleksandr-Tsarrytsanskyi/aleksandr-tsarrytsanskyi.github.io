@@ -1006,6 +1006,59 @@ article p {
    text-align: center;
 }
 
+.influence {
+  display: grid;
+  grid-template-columns: 342px;
+  justify-content: center;
+  grid-gap: 20px 0px;
+}
+
+.influence__cell {
+  background-color: #f7f7f6;
+  border-radius: 20px;
+  border: 1px solid #f3f3f2;
+  height: 100px;
+  padding-left: 20px;
+}
+
+.influence__cell:nth-child(1) {
+  background: none;
+  border: none;
+  height: auto;
+}
+
+.influence__cell:nth-child(4) {
+  height: 150px;
+}
+
+.influence__item {
+  display: grid;
+  grid-template-columns: 58px 279px;
+  grid-gap: 0px 20px;
+  margin-top: 11px;
+}
+
+.influence h2 {
+   font-family: "Montserrat ExtraBold";
+   font-size: 20pt;
+   margin-top: 30px;
+   margin-bottom: 20px;
+}
+
+.influence h2 span {
+  color: #9ade24;
+}
+
+.influence__item__text {
+  font-family: "Montserrat ExtraBold" !important;
+  font-size: 16pt !important;
+  margin-bottom: 10px;
+}
+
+.influence__item p {
+  font-family: "Montserrat Medium";
+  font-size: 11pt;
+}
 }
 
 @media screen and (min-width: 390px) {
