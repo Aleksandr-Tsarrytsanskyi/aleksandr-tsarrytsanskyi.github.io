@@ -67,7 +67,7 @@ ul {
 
   .header_title_top {
     display: grid;
-    grid-template-columns: 150px 159px;
+    grid-template-columns: 150px 170px;
     justify-content: center;
     grid-gap: 0px 20px;
   }
