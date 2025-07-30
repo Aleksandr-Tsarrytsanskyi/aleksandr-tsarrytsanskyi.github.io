@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./public/javascripts/main.js" type="module" defer></script>
     <link
       rel="icon"
       type="image/png"
@@ -31,6 +30,13 @@
       type="text/css"
       href="./public/stylesheets/fonts.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./public/javascripts/main.js" type="module"></script>
+    <script src="./public/javascripts/slider.js" type="module"></script>
     <meta name="apple-mobile-web-app-title" content="MyWebSite" />
     <meta
       name="description"
@@ -60,7 +66,9 @@
           <div class="header_title_top__cell cell">
             <p>
               Старт
-              <span><span class="header_title_top__date">7</span> Липня</span>
+              <span
+                ><span class="header_title_top__date date">7</span> Липня</span
+              >
             </p>
           </div>
           <div class="header_title_top__cell cell">
@@ -76,40 +84,42 @@
         <div class="header__subtittle">
           <p>від Сокуренка Віталія - психолог <br />та професійний відеограф</p>
         </div>
-       <div class="header__h1">
-         <h1>ПСИХОЛОГІЯ СТРАХУ <span>КАМЕРИ</span></h1>
-         <div class="header__bgtext">
-          <p><span>Люди платять тим, кого бачать.</span><br />Досить ховатися!</p>
+        <div class="header__h1">
+          <h1>ПСИХОЛОГІЯ СТРАХУ <span>КАМЕРИ</span></h1>
+          <div class="header__bgtext">
+            <p>
+              <span>Люди платять тим, кого бачать.</span><br />Досить ховатися!
+            </p>
+          </div>
         </div>
-       </div>
         <div class="content">
           <div class="content__image">
             <img src="./public/images/headerImg.png" alt="Image" />
           </div>
           <div class="content__position">
-           <div class="content__position_bg">
-             <div class="content__bonus">
-              <div class="content__bonus__cell">
+            <div class="content__position_bg">
+              <div class="content__bonus">
+                <div class="content__bonus__cell">
                   <p class="content__size">БОНУСИ</p>
-                <p class="content_text">Уроки по:</p>
-                <ul>
+                  <p class="content_text">Уроки по:</p>
+                  <ul>
                     <li>
-                    <p>світлу</p>
+                      <p>світлу</p>
                     </li>
                     <li>
-                    <p>зйомці</p>
+                      <p>зйомці</p>
                     </li>
                     <li>
-                    <p>робота зі звуком</p>
+                      <p>робота зі звуком</p>
                     </li>
                     <li>
-                    <p>сценарій</p>
+                      <p>сценарій</p>
                     </li>
-                </ul>
+                  </ul>
+                </div>
               </div>
             </div>
-           </div>
-           <div class="clear"></div>
+            <div class="clear"></div>
             <div class="content__video">
               <p>
                 <span>Відео - твій новий дохід.</span> <br />Це твій шанс
@@ -128,9 +138,16 @@
                   </div>
                 </div>
               </div>
-               <p class="content__price__subtittle">Гарантія - повернення коштів!</p>
+              <p class="content__price__subtittle">
+                Гарантія - повернення коштів!
+              </p>
               <div class="content__cell width">
-                <a href="https://hutko.org/uk/" target="_blank" class="content__grid__join">Приєднатись</a>
+                <a
+                  href="https://hutko.org/uk/"
+                  target="_blank"
+                  class="content__grid__join"
+                  >Приєднатись</a
+                >
                 <div class="content__grid__discount">
                   <p>-81%</p>
                 </div>
@@ -142,75 +159,114 @@
     </header>
     <section class="marathon">
       <div class="marathon__cell">
-        <h2>ДЛЯ КОГО <br><span class="marathon__text">цей</span> <span class="marathon_col">марафон?</span></h2>
+        <h2>
+          ДЛЯ КОГО <br /><span class="marathon__text">цей</span>
+          <span class="marathon_col">марафон?</span>
+        </h2>
       </div>
       <div class="marathon__cell">
-        <p class="left">Для тих, <span>хто боїться <br> знімати себе</span></p>
+        <p class="left">
+          Для тих,
+          <span
+            >хто боїться <br />
+            знімати себе</span
+          >
+        </p>
       </div>
       <div class="marathon__cell">
-        <p class="right"><span>Для експертів, блогерів, </span><br>митців, психологів</p>
+        <p class="right">
+          <span>Для експертів, блогерів, </span><br />митців, психологів
+        </p>
       </div>
       <div class="marathon__cell">
-        <p class="left"><span>Для чоловіків і жінок,</span> <br>які втомились бути в тіні</p>
+        <p class="left">
+          <span>Для чоловіків і жінок,</span> <br />які втомились бути в тіні
+        </p>
       </div>
       <div class="marathon__cell">
-        <p class="right">Для тих, хто хоче вести <br><span>соцмережі без фальші</span></p>
+        <p class="right">
+          Для тих, хто хоче вести <br /><span>соцмережі без фальші</span>
+        </p>
       </div>
       <div class="marathon__cell">
-        <p class="left">Для підприємців, які знають: <br><span>особистість = продажі</span></p>
+        <p class="left">
+          Для підприємців, які знають: <br /><span>особистість = продажі</span>
+        </p>
       </div>
     </section>
     <section class="change">
-        <div class="change__cell">
-          <h2><span class="change__col">ЩО</span> <span class="change__h2">ЗМІНИТЬСЯ</span> <br>ЗА 7 ДНІВ?</h2>
-        </div>
+      <div class="change__cell">
+        <h2>
+          <span class="change__col">ЩО</span>
+          <span class="change__h2">ЗМІНИТЬСЯ</span> <br />ЗА 7 ДНІВ?
+        </h2>
+      </div>
       <div class="change__cell">
         <div class="change_item">
           <div class="change_content">
-            <img src="./public/images/icon1.png" alt="Icon"/>
+            <img src="./public/images/icon1.png" alt="Icon" />
           </div>
           <div class="change_content">
-            <p>Ти перетвориш <span>сторіс і Reels</span> на <br>інструмент, який працює на тебе. <br>Не просто контент - а спосіб гов-<br>орити з людьми й продавати.</p>
+            <p>
+              Ти перетвориш <span>сторіс і Reels</span> на <br />інструмент,
+              який працює на тебе. <br />Не просто контент - а спосіб гов-<br />орити
+              з людьми й продавати.
+            </p>
           </div>
         </div>
       </div>
       <div class="change__cell">
         <div class="change_item">
           <div class="change_content">
-            <img src="./public/images/icon2.png" alt="Icon"/>
+            <img src="./public/images/icon2.png" alt="Icon" />
           </div>
           <div class="change_content">
-            <p>Ти знімеш <span class="change__text">перші відео,</span> які <br>змінять твоє ставлення до себе. <br>І побачиш: бути собою - це <br>нормально і вигідно.</p>
-          </div>
-        </div>
-      </div>
-      <div class="change__cell">
-        <div class="change_item">
-          <div class="change_content">
-            <img src="./public/images/icon3.png" alt="Icon"/>
-          </div>
-          <div class="change_content">
-            <p>Ти <span>заміниш самокритику</span> - на<br> самопідтримку!<br> І це запустить нову енергію в тіло, <br>в справу, у твоє життя.</p>
+            <p>
+              Ти знімеш <span class="change__text">перші відео,</span> які
+              <br />змінять твоє ставлення до себе. <br />І побачиш: бути собою
+              - це <br />нормально і вигідно.
+            </p>
           </div>
         </div>
       </div>
       <div class="change__cell">
         <div class="change_item">
           <div class="change_content">
-            <img src="./public/images/icon4.png" alt="Icon"/>
+            <img src="./public/images/icon3.png" alt="Icon" />
           </div>
           <div class="change_content">
-            <p>У тебе <span>з’явиться навичка,</span> яка: <br>Продає твій продукт <br>Поглиблює стосунки <br>Піднімає твою цінність у світі</p>
+            <p>
+              Ти <span>заміниш самокритику</span> - на<br />
+              самопідтримку!<br />
+              І це запустить нову енергію в тіло, <br />в справу, у твоє життя.
+            </p>
           </div>
         </div>
       </div>
       <div class="change__cell">
         <div class="change_item">
           <div class="change_content">
-            <img src="./public/images/icon5.png" alt="Icon"/>
+            <img src="./public/images/icon4.png" alt="Icon" />
           </div>
           <div class="change_content">
-            <p>Ти більше не будеш грати того, <br>ким ти не є. <br>Бути собою - це твоя <br>справжня сила!</p>
+            <p>
+              У тебе <span>з’явиться навичка,</span> яка: <br />Продає твій
+              продукт <br />Поглиблює стосунки <br />Піднімає твою цінність у
+              світі
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="change__cell">
+        <div class="change_item">
+          <div class="change_content">
+            <img src="./public/images/icon5.png" alt="Icon" />
+          </div>
+          <div class="change_content">
+            <p>
+              Ти більше не будеш грати того, <br />ким ти не є. <br />Бути собою
+              - це твоя <br />справжня сила!
+            </p>
           </div>
         </div>
       </div>
@@ -219,63 +275,107 @@
       <div class="guarantee__cell">
         <h2>ГАРАНТІЇ</h2>
         <div class="guarantee__text_content">
-          <p>Якщо після проходження <br>марафону не відбудеться <br>змін і результатів</p>
-          <p class="guarantee__size">повернемо кошти <br>без зайвих питань!</p>
+          <p>
+            Якщо після проходження <br />марафону не відбудеться <br />змін і
+            результатів
+          </p>
+          <p class="guarantee__size">
+            повернемо кошти <br />без зайвих питань!
+          </p>
         </div>
       </div>
     </section>
     <section class="whoam">
       <div class="whoam__cell">
-        <h2>ХТО Я <br>ТА ПРО ЩО, <br><span>ЦЕЙ МАРАФОН?</span></h2>
+        <h2>ХТО Я <br />ТА ПРО ЩО, <br /><span>ЦЕЙ МАРАФОН?</span></h2>
         <div class="whoam__item">
           <div class="whoam__item__cell">
-            <img src="./public/images/photo1.png" alt="Изображение">
+            <img src="./public/images/photo1.png" alt="Изображение" />
           </div>
           <div class="whoam__item__cell">
-            <img src="./public/images/photo2.png" alt="Изображение">
+            <img src="./public/images/photo2.png" alt="Изображение" />
           </div>
         </div>
         <p class="whoam__col">Сокуренко Віталій</p>
-        <p class="whoam__m">Практикуючий психолог і професійний <br>відеомейкер.</p>
+        <p class="whoam__m">
+          Практикуючий психолог і професійний <br />відеомейкер.
+        </p>
         <div class="whoam__item1">
           <div class="whoam__item1__cell">
             <p class="whoam__text">10років</p>
-            <p>досвіду в <br>зйомках</p>
+            <p>досвіду в <br />зйомках</p>
           </div>
           <div class="whoam__item1__cell">
             <p class="whoam__text">Освіта</p>
-              <p>Практичний <br>психолог</p>
+            <p>Практичний <br />психолог</p>
           </div>
           <div class="whoam__item1__cell">
             <p class="whoam__text">500+</p>
-              <p>Людям <br>допоміг <br>проявитись</p>
+            <p>Людям <br />допоміг <br />проявитись</p>
           </div>
         </div>
         <p class="whoam__text1">бренди з якими працював:</p>
         <div class="whoam__item2">
           <div class="whoam__item2__cell">
-            <img src="./public/images/brand1.png" alt="Brand"/>
+            <img src="./public/images/brand1.png" alt="Brand" />
           </div>
           <div class="whoam__item2__cell">
-            <img src="./public/images/brand2.png" class="whoam__text1_brand2" alt="Brand"/>
+            <img
+              src="./public/images/brand2.png"
+              class="whoam__text1_brand2"
+              alt="Brand"
+            />
           </div>
           <div class="whoam__item2__cell">
-            <img src="./public/images/brand3.png" alt="Brand"/>
+            <img src="./public/images/brand3.png" alt="Brand" />
           </div>
           <div class="whoam__item2__cell">
-            <img src="./public/images/brand4.png" class="whoam__text1_brand4" alt="Brand"/>
+            <img
+              src="./public/images/brand4.png"
+              class="whoam__text1_brand4"
+              alt="Brand"
+            />
           </div>
           <div class="whoam__item2__cell">
-            <img src="./public/images/brand5.png" alt="Brand"/>
+            <img src="./public/images/brand5.png" alt="Brand" />
           </div>
         </div>
         <article class="article">
-          <p><span>Привіт!</span><br>Якщо ти тут, то я тебе розумію, тому що <br>весь час був по той бік камери, <br>допомагав іншим проявлятись, але сам ховався.</p>
-        <p>Я знав, як правильно виставити світло, <br>налаштувати звук, створити ідеальну <br>картинку <span>але не знав, як дозволити собі <br>просто бути в кадрі.</span></p>
-        <p>В якийсь момент я відчув: якщо я не почну <br>проявляти себе - я зраджу собі.<br>2 роки тому я почав досліджувати <br>психологію страху камери.<br>Чому тіло стискається? <br>Чому голос тремтить? <br>Чому мені соромно бути собою?</p>
-        <p>В результаті допоміг собі і <span>створив цей <br>курс</span> і вже сотні людей пройшли через <br>нього в форматі марафон. <br>Вийшли з тіні. <span>Запустили свої послуги.</span> <br>І, що найважливіше - відчули себе <br>справжніми у кадрі.</p>
-        <p>Хтось записав <span>перший Reels у житті</span> <br>Хтось заробив <span>перші 10 000 грн</span> на своїх знаннях <br>А хтось уперше відчув гордість за себе на камеру</p>
-        <p>📌 І це не просто про камеру.<br>Це - про життя. Бо коли ти дозволяєш собі <br>проявитись, рухається все: <br><span>бізнес, стосунки, енергія, прибуток.</span></p>
+          <p>
+            <span>Привіт!</span><br />Якщо ти тут, то я тебе розумію, тому що
+            <br />весь час був по той бік камери, <br />допомагав іншим
+            проявлятись, але сам ховався.
+          </p>
+          <p>
+            Я знав, як правильно виставити світло, <br />налаштувати звук,
+            створити ідеальну <br />картинку
+            <span
+              >але не знав, як дозволити собі <br />просто бути в кадрі.</span
+            >
+          </p>
+          <p>
+            В якийсь момент я відчув: якщо я не почну <br />проявляти себе - я
+            зраджу собі.<br />2 роки тому я почав досліджувати <br />психологію
+            страху камери.<br />Чому тіло стискається? <br />Чому голос
+            тремтить? <br />Чому мені соромно бути собою?
+          </p>
+          <p>
+            В результаті допоміг собі і <span>створив цей <br />курс</span> і
+            вже сотні людей пройшли через <br />нього в форматі марафон.
+            <br />Вийшли з тіні. <span>Запустили свої послуги.</span> <br />І,
+            що найважливіше - відчули себе <br />справжніми у кадрі.
+          </p>
+          <p>
+            Хтось записав <span>перший Reels у житті</span> <br />Хтось заробив
+            <span>перші 10 000 грн</span> на своїх знаннях <br />А хтось уперше
+            відчув гордість за себе на камеру
+          </p>
+          <p>
+            📌 І це не просто про камеру.<br />Це - про життя. Бо коли ти
+            дозволяєш собі <br />проявитись, рухається все: <br /><span
+              >бізнес, стосунки, енергія, прибуток.</span
+            >
+          </p>
         </article>
       </div>
     </section>
@@ -286,172 +386,278 @@
       <div class="courses__cell">
         <div class="courses_item">
           <div class="courses__item__cell">
-            <img src="./public/images/icon6.png" alt="Icon" class="courses__day"/>
+            <img
+              src="./public/images/icon6.png"
+              alt="Icon"
+              class="courses__day"
+            />
           </div>
           <div class="courses__item__cell">
             <p class="courses_text">день 1</p>
           </div>
-        </div>  
-          <p>Чому насправді камера так лякає? <br>Розуміння природи цього страху <br>Зміна реакцій страху перед камерою</p>
-          <img src="./public/images/icon7.png" alt="Icon" class="courses__icon"/>
-            <div class="courses__bg">
-              <div class="courses__item1">
-                <div class="courses__item1__cell">
-                  <img src="./public/images/icon8.png" alt="Icon" />
-                </div>
-                <div class="courses__item1__cell">
-                  <p class="courses_bold">Результат:</p>
-                </div>
-              </div>
-              <p>ти зрозумієш природу свого страху<br> перед камерою і він перестане на тебе <br>впливати як раніше. Запишемо перше<br> відео.</p>
+        </div>
+        <p>
+          Чому насправді камера так лякає? <br />Розуміння природи цього страху
+          <br />Зміна реакцій страху перед камерою
+        </p>
+        <img src="./public/images/icon7.png" alt="Icon" class="courses__icon" />
+        <div class="courses__bg">
+          <div class="courses__item1">
+            <div class="courses__item1__cell">
+              <img src="./public/images/icon8.png" alt="Icon" />
             </div>
-            <img src="./public/images/image6.png" alt="Image" class="courses__image"/>
+            <div class="courses__item1__cell">
+              <p class="courses_bold">Результат:</p>
+            </div>
+          </div>
+          <p>
+            ти зрозумієш природу свого страху<br />
+            перед камерою і він перестане на тебе <br />впливати як раніше.
+            Запишемо перше<br />
+            відео.
+          </p>
+        </div>
+        <img
+          src="./public/images/image6.png"
+          alt="Image"
+          class="courses__image"
+        />
       </div>
       <div class="courses__cell">
-       <div class="courses_item">
+        <div class="courses_item">
           <div class="courses__item__cell">
-            <img src="./public/images/icon6.png" alt="Icon" class="courses__day"/>
+            <img
+              src="./public/images/icon6.png"
+              alt="Icon"
+              class="courses__day"
+            />
           </div>
           <div class="courses__item__cell">
             <p class="courses_text">день 2</p>
           </div>
-        </div>  
-          <p>Чому не подобається своє відображення? <br>Коли ми не приймаємо себе у кадрі? <br>Робота з тілом і самооцінкою</p>
-          <img src="./public/images/icon7.png" alt="Icon" class="courses__icon"/>
-            <div class="courses__bg">
-              <div class="courses__item1">
-                <div class="courses__item1__cell">
-                  <img src="./public/images/icon8.png" alt="Icon" />
-                </div>
-                <div class="courses__item1__cell">
-                  <p class="courses_bold">Результат:</p>
-                </div>
-              </div>
-              <p>Перестанеш дивитись на себе з осудом,<br> знайдеш підтримку у власному тілі <br>та побачиш у собі силу, яка притягує - <br>замість ховатись, почнеш проявлятись <br>з прийняттям.</p>
+        </div>
+        <p>
+          Чому не подобається своє відображення? <br />Коли ми не приймаємо себе
+          у кадрі? <br />Робота з тілом і самооцінкою
+        </p>
+        <img src="./public/images/icon7.png" alt="Icon" class="courses__icon" />
+        <div class="courses__bg">
+          <div class="courses__item1">
+            <div class="courses__item1__cell">
+              <img src="./public/images/icon8.png" alt="Icon" />
             </div>
-            <img src="./public/images/image6.png" alt="Image" class="courses__image"/>
+            <div class="courses__item1__cell">
+              <p class="courses_bold">Результат:</p>
+            </div>
+          </div>
+          <p>
+            Перестанеш дивитись на себе з осудом,<br />
+            знайдеш підтримку у власному тілі <br />та побачиш у собі силу, яка
+            притягує - <br />замість ховатись, почнеш проявлятись <br />з
+            прийняттям.
+          </p>
+        </div>
+        <img
+          src="./public/images/image6.png"
+          alt="Image"
+          class="courses__image"
+        />
       </div>
       <div class="courses__cell">
         <div class="courses_item">
           <div class="courses__item__cell">
-            <img src="./public/images/icon6.png" alt="Icon" class="courses__day"/>
+            <img
+              src="./public/images/icon6.png"
+              alt="Icon"
+              class="courses__day"
+            />
           </div>
           <div class="courses__item__cell">
             <p class="courses_text">день 3</p>
           </div>
-        </div>  
-          <p>Страх бути нецікавою людиною без лайків <br>Не потребуєш лайки - ти даєш живий досвід <br>Практика: “Мій відео монолог правди”</p>
-          <img src="./public/images/icon7.png" alt="Icon" class="courses__icon"/>
-            <div class="courses__bg">
-              <div class="courses__item1">
-                <div class="courses__item1__cell">
-                  <img src="./public/images/icon8.png" alt="Icon" />
-                </div>
-                <div class="courses__item1__cell">
-                  <p class="courses_bold">Результат:</p>
-                </div>
-              </div>
-              <p>Ти перестанеш міряти свою цінність реак-<br>ціями інших, відчуєш силу свого голосу та <br>почнеш говорити не щоб <br>сподобатись - а щоб бути справжньою <br>і почутою.</p>
+        </div>
+        <p>
+          Страх бути нецікавою людиною без лайків <br />Не потребуєш лайки - ти
+          даєш живий досвід <br />Практика: “Мій відео монолог правди”
+        </p>
+        <img src="./public/images/icon7.png" alt="Icon" class="courses__icon" />
+        <div class="courses__bg">
+          <div class="courses__item1">
+            <div class="courses__item1__cell">
+              <img src="./public/images/icon8.png" alt="Icon" />
             </div>
-            <img src="./public/images/image6.png" alt="Image" class="courses__image"/>
+            <div class="courses__item1__cell">
+              <p class="courses_bold">Результат:</p>
+            </div>
+          </div>
+          <p>
+            Ти перестанеш міряти свою цінність реак-<br />ціями інших, відчуєш
+            силу свого голосу та <br />почнеш говорити не щоб <br />сподобатись
+            - а щоб бути справжньою <br />і почутою.
+          </p>
+        </div>
+        <img
+          src="./public/images/image6.png"
+          alt="Image"
+          class="courses__image"
+        />
       </div>
       <div class="courses__cell">
         <div class="courses_item">
           <div class="courses__item__cell">
-            <img src="./public/images/icon6.png" alt="Icon" class="courses__day"/>
+            <img
+              src="./public/images/icon6.png"
+              alt="Icon"
+              class="courses__day"
+            />
           </div>
           <div class="courses__item__cell">
             <p class="courses_text">день 4</p>
           </div>
-        </div>  
-          <p>Чому страшно говорити на камеру?<br>Твій стан формує силу твого слова <br>Практика: як писати прості сценарії <br>для Reels</p>
-          <img src="./public/images/icon7.png" alt="Icon" class="courses__icon"/>
-            <div class="courses__bg">
-              <div class="courses__item1">
-                <div class="courses__item1__cell">
-                  <img src="./public/images/icon8.png" alt="Icon" />
-                </div>
-                <div class="courses__item1__cell">
-                  <p class="courses_bold">Результат:</p>
-                </div>
-              </div>
-              <p>Ти знімеш з голосу внутрішні заборони, <br>відчуєш себе впевненіше перед <br>камерою і зможеш говорити щиро, живо, <br>без страху осуду. </p>
+        </div>
+        <p>
+          Чому страшно говорити на камеру?<br />Твій стан формує силу твого
+          слова <br />Практика: як писати прості сценарії <br />для Reels
+        </p>
+        <img src="./public/images/icon7.png" alt="Icon" class="courses__icon" />
+        <div class="courses__bg">
+          <div class="courses__item1">
+            <div class="courses__item1__cell">
+              <img src="./public/images/icon8.png" alt="Icon" />
             </div>
-            <img src="./public/images/image6.png" alt="Image" class="courses__image"/>
+            <div class="courses__item1__cell">
+              <p class="courses_bold">Результат:</p>
+            </div>
+          </div>
+          <p>
+            Ти знімеш з голосу внутрішні заборони, <br />відчуєш себе впевненіше
+            перед <br />камерою і зможеш говорити щиро, живо, <br />без страху
+            осуду.
+          </p>
+        </div>
+        <img
+          src="./public/images/image6.png"
+          alt="Image"
+          class="courses__image"
+        />
       </div>
       <div class="courses__cell">
         <div class="courses_item">
           <div class="courses__item__cell">
-            <img src="./public/images/icon6.png" alt="Icon" class="courses__day"/>
+            <img
+              src="./public/images/icon6.png"
+              alt="Icon"
+              class="courses__day"
+            />
           </div>
           <div class="courses__item__cell">
             <p class="courses_text">день 5</p>
           </div>
-        </div>  
-          <p>Як дозволити собі бути проявленим?<br>Голос внутрішнього критика <br>Практика Ритуал дозволу бути неідеальною </p>
-          <img src="./public/images/icon7.png" alt="Icon" class="courses__icon"/>
-            <div class="courses__bg">
-              <div class="courses__item1">
-                <div class="courses__item1__cell">
-                  <img src="./public/images/icon8.png" alt="Icon" />
-                </div>
-                <div class="courses__item1__cell">
-                  <p class="courses_bold">Результат:</p>
-                </div>
-              </div>
-              <p>Можна плутатись, забути текст, забути <br>мову, але якщо в тобі є присутність, <br>дозвіл, тепло - ти вже несеш енергію, яка <br>притягує.</p>
+        </div>
+        <p>
+          Як дозволити собі бути проявленим?<br />Голос внутрішнього критика
+          <br />Практика Ритуал дозволу бути неідеальною
+        </p>
+        <img src="./public/images/icon7.png" alt="Icon" class="courses__icon" />
+        <div class="courses__bg">
+          <div class="courses__item1">
+            <div class="courses__item1__cell">
+              <img src="./public/images/icon8.png" alt="Icon" />
             </div>
-            <img src="./public/images/image6.png" alt="Image" class="courses__image"/>
-      </div>
-      <div class="courses__cell">
-       <div class="courses_item">
-          <div class="courses__item__cell">
-            <img src="./public/images/icon6.png" alt="Icon" class="courses__day"/>
-          </div>
-          <div class="courses__item__cell">
-            <p class="courses_text">день 6</p>
-          </div>
-        </div>  
-        <p>Що таке синдром самозванця?<br>Мене  не достатньо і що з цим робити <br>Практика «Вихід з тіні»</p>
-      
-      
-    <img src="./public/images/icon7.png" alt="Icon" class="courses__icon"/>
-            <div class="courses__bg">
-              <div class="courses__item1">
-                <div class="courses__item1__cell">
-                  <img src="./public/images/icon8.png" alt="Icon" />
-                </div>
-                <div class="courses__item1__cell">
-                  <p class="courses_bold">Результат:</p>
-                </div>
-              </div>
-              <p>ти зрозумієш: що твій досвід і <br>проявленність - це вже цінність яка <br>може монетизуватися зараз. Побачиш <br>свої точки внутрішньої опори</p>
+            <div class="courses__item1__cell">
+              <p class="courses_bold">Результат:</p>
             </div>
-            <img src="./public/images/image6.png" alt="Image" class="courses__image"/>
+          </div>
+          <p>
+            Можна плутатись, забути текст, забути <br />мову, але якщо в тобі є
+            присутність, <br />дозвіл, тепло - ти вже несеш енергію, яка
+            <br />притягує.
+          </p>
+        </div>
+        <img
+          src="./public/images/image6.png"
+          alt="Image"
+          class="courses__image"
+        />
       </div>
       <div class="courses__cell">
         <div class="courses_item">
           <div class="courses__item__cell">
-            <img src="./public/images/icon6.png" alt="Icon" class="courses__day"/>
+            <img
+              src="./public/images/icon6.png"
+              alt="Icon"
+              class="courses__day"
+            />
+          </div>
+          <div class="courses__item__cell">
+            <p class="courses_text">день 6</p>
+          </div>
+        </div>
+        <p>
+          Що таке синдром самозванця?<br />Мене не достатньо і що з цим робити
+          <br />Практика «Вихід з тіні»
+        </p>
+
+        <img src="./public/images/icon7.png" alt="Icon" class="courses__icon" />
+        <div class="courses__bg">
+          <div class="courses__item1">
+            <div class="courses__item1__cell">
+              <img src="./public/images/icon8.png" alt="Icon" />
+            </div>
+            <div class="courses__item1__cell">
+              <p class="courses_bold">Результат:</p>
+            </div>
+          </div>
+          <p>
+            ти зрозумієш: що твій досвід і <br />проявленність - це вже цінність
+            яка <br />може монетизуватися зараз. Побачиш <br />свої точки
+            внутрішньої опори
+          </p>
+        </div>
+        <img
+          src="./public/images/image6.png"
+          alt="Image"
+          class="courses__image"
+        />
+      </div>
+      <div class="courses__cell">
+        <div class="courses_item">
+          <div class="courses__item__cell">
+            <img
+              src="./public/images/icon6.png"
+              alt="Icon"
+              class="courses__day"
+            />
           </div>
           <div class="courses__item__cell">
             <p class="courses_text">день 7</p>
           </div>
-        </div>  
-          <p>Перший відео, Reels, сторіс з новою тобою<br>Як знайти свій формат? <br>Безпечні умови для публікації</p>
-          <img src="./public/images/icon7.png" alt="Icon" class="courses__icon"/>
-            <div class="courses__bg">
-              <div class="courses__item1">
-                <div class="courses__item1__cell">
-                  <img src="./public/images/icon8.png" alt="Icon" />
-                </div>
-                <div class="courses__item1__cell">
-                  <p class="courses_bold">Результат:</p>
-                </div>
-              </div>
-              <p>Ти зробиш свій перший крок, в якому <br>чесно покажеш себе світові, вийдеш із <br>тіні страху - і відчуєш силу бути справж-<br>ньою, побаченою, почутою.</p>
+        </div>
+        <p>
+          Перший відео, Reels, сторіс з новою тобою<br />Як знайти свій формат?
+          <br />Безпечні умови для публікації
+        </p>
+        <img src="./public/images/icon7.png" alt="Icon" class="courses__icon" />
+        <div class="courses__bg">
+          <div class="courses__item1">
+            <div class="courses__item1__cell">
+              <img src="./public/images/icon8.png" alt="Icon" />
             </div>
-            <img src="./public/images/image6.png" alt="Image" class="courses__image"/>
+            <div class="courses__item1__cell">
+              <p class="courses_bold">Результат:</p>
+            </div>
+          </div>
+          <p>
+            Ти зробиш свій перший крок, в якому <br />чесно покажеш себе
+            світові, вийдеш із <br />тіні страху - і відчуєш силу бути
+            справж-<br />ньою, побаченою, почутою.
+          </p>
+        </div>
+        <img
+          src="./public/images/image6.png"
+          alt="Image"
+          class="courses__image"
+        />
       </div>
     </section>
     <section class="bonuses">
@@ -459,10 +665,10 @@
         <h2>БОНУСИ</h2>
         <ul>
           <li>
-            <p>Як поставити світло вдома без <br>обладнання?</p>
+            <p>Як поставити світло вдома без <br />обладнання?</p>
           </li>
           <li>
-            <p>Як обрати ракурс, щоб виглядати <br>живо й природно?</p>
+            <p>Як обрати ракурс, щоб виглядати <br />живо й природно?</p>
           </li>
           <li>
             <p>Вибір музики під твою емоцію</p>
@@ -471,7 +677,9 @@
             <p>Сервіс для покращення голосу</p>
           </li>
           <li>
-            <p>Базовий монтаж та кольорокорекція <br>відео просто з телефону</p>
+            <p>
+              Базовий монтаж та кольорокорекція <br />відео просто з телефону
+            </p>
           </li>
           <li>
             <p>Як підготуватись до зйомки</p>
@@ -483,9 +691,9 @@
       <div class="price__cell">
         <div class="price__content">
           <div class="price__content__cell">
-            <h2><span>ПІДВИЩЕННЯ ЦІНИ</span> <br>ЧЕРЕЗ</h2>
+            <h2><span>ПІДВИЩЕННЯ ЦІНИ</span> <br />ЧЕРЕЗ</h2>
             <div class="price__content__bg">
-              <p>початок <span>7</span> липня</p>
+              <p>початок <span class="date">7</span> липня</p>
             </div>
             <script src="//megatimer.ru/get/8c68798e8a8c3bf4110503e56dd68f07.js"></script>
             <div class="price__item__discount">
@@ -496,11 +704,97 @@
                 <p class="discount">3690грн</p>
               </div>
             </div>
-            <a href="https://hutko.org/uk/" target="_blank" class="price__join">приєднатись</a>
+            <a href="https://hutko.org/uk/" target="_blank" class="price__join"
+              >приєднатись</a
+            >
             <div class="price__block">
               <p>-81%</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="services__cell">
+        <h2>🧠 ЩО ТИ ОТРИМАЄШ ПІСЛЯ ОПЛАТИ:</h2>
+      </div>
+      <div class="services__cell">
+        <div class="services_item">
+          <div class="services_item__cell">
+            <img src="./public/images/icon11.png" alt="Icon" />
+          </div>
+          <div class="services_item__cell">
+            <p>7 психологічних відео блоків</p>
+          </div>
+        </div>
+      </div>
+      <div class="services__cell">
+        <div class="services_item">
+          <div class="services_item__cell">
+            <img src="./public/images/icon12.png" alt="Icon" />
+          </div>
+          <div class="services_item__cell">
+            <p>Практичні вправи на кожен день</p>
+          </div>
+        </div>
+      </div>
+      <div class="services__cell">
+        <div class="services_item">
+          <div class="services_item__cell">
+            <img src="./public/images/icon13.png" alt="Icon" />
+          </div>
+          <div class="services_item__cell">
+            <p>Уроки-бонуси зі світла, монтажу...</p>
+          </div>
+        </div>
+      </div>
+      <div class="services__cell">
+        <div class="services_item">
+          <div class="services_item__cell">
+            <img src="./public/images/icon14.png" alt="Icon" />
+          </div>
+          <div class="services_item__cell">
+            <p>AI cервіс для покращеня голосу</p>
+          </div>
+        </div>
+      </div>
+      <div class="services__cell">
+        <div class="services_item">
+          <div class="services_item__cell">
+            <img src="./public/images/icon15.png" alt="Icon" />
+          </div>
+          <div class="services_item__cell">
+            <p>Схему по створеню сценарія</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <p>а головне <span>зміни,</span> які відбудуться <span> в середині тебе</span></p>
+      <div class="slider">
+        <h2>ВІДГУКИ ПРО МАРАФОН</h2>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./public/images/img_slide1.png" alt="Image" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/images/img_slide1.png" alt="Image" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/images/img_slide1.png" alt="Image" />
+            </div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
         </div>
       </div>
     </section>
