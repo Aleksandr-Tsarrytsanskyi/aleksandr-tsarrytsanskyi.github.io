@@ -69,7 +69,7 @@ ul {
     display: grid;
     grid-template-columns: 150px 159px;
     justify-content: center;
-    grid-gap: 0px 27px;
+    grid-gap: 0px 20px;
   }
 
   .header_title_top__cell p {
