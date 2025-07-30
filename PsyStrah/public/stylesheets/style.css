@@ -302,7 +302,7 @@ ul {
 border: 1px solid #aa8c79;
 font-size: 18pt;
 border-radius: 30px;
-margin-top: 40px;
+margin-top: 20px;
   font-family: "Montserrat Bold";
 
 }
@@ -342,7 +342,7 @@ margin-top: 40px;
   background-color: #fff;
   border-radius: 20px;
  position: relative;
- top: -10px;
+ top: -15px;
   grid-gap: 20px 0px;
   position: relative;
   z-index: 10;
