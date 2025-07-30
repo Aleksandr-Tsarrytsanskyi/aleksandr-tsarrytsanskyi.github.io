@@ -69,7 +69,7 @@ ul {
     display: grid;
     grid-template-columns: 150px 159px;
     justify-content: center;
-    grid-gap: 0px 35px;
+    grid-gap: 0px 27px;
   }
 
   .header_title_top__cell p {
@@ -341,7 +341,7 @@ margin-top: 40px;
   justify-content: center;
   background-color: #fff;
   border-radius: 20px;
-  margin-top: -50px;
+  margin-top: -17px;
   grid-gap: 20px 0px;
   position: relative;
   z-index: 10;
@@ -436,7 +436,7 @@ margin-top: 40px;
 
 .change_item {
   display: grid;
-  grid-template-columns: 50px 261px;
+  grid-template-columns: 50px 275px;
   justify-content: center;
   margin-top: 13px;
   grid-gap: 0px 5px;
