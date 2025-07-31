@@ -726,12 +726,12 @@ ul {
   .courses__image {
     position: relative;
     top: 6px;
-    left: -20px;
-    max-width: 340px;
+   left: -14px;
+        max-width: 329px;
   }
   .bonuses {
     display: grid;
-    grid-template-columns: 342px;
+    grid-template-columns: 304px;
     justify-content: center;
     background: url("../images/bg_bonus.png") no-repeat center;
     height: 320px;
@@ -1040,7 +1040,7 @@ ul {
 
   .influence__item {
     display: grid;
-    grid-template-columns: 58px 279px;
+    grid-template-columns: 58px 221px;
     grid-gap: 0px 20px;
     margin-top: 11px;
   }
@@ -1246,6 +1246,10 @@ ul {
 
   .footer_pos {
     position: relative;
+  }
+
+  .reviews {
+    display: none;
   }
 }
 
