@@ -1132,7 +1132,7 @@ ul {
     background-image: url("../images/bg_footer.png");
     background-repeat: no-repeat;
     padding-top: 20px;
-    height: 1661px;
+    
   }
 
   .footer .content {
@@ -1188,12 +1188,14 @@ ul {
 
   .footer__join {
     background-color: #c9c9c9;
-    position: relative;
-    height: 82px;
+    position: absolute;
+    height: 92px;
     z-index: 100;
+    width: 100%;
     padding-top: 10px;
-
     margin-bottom: 20px;
+    top: 0px;
+    border-bottom: 10px solid #020100;
   }
 
   .footer__join a {
@@ -1240,6 +1242,10 @@ ul {
     display: grid;
     grid-template-columns: 360px;
     justify-content: center;
+  }
+
+  .footer_pos {
+    position: relative;
   }
 }
 
