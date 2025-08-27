@@ -149,7 +149,10 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(chekbox.nextSibling.nextSibling);
         chekbox.addEventListener("click", function (e) {
           // chekbox.checked = false;
-
+           listSocialCheckbox.forEach(checkbox => {
+          checkbox.checked = false
+          })
+        e.target.checked = true
           if (e.target) {
             console.log("OK");
             inputSpecLabel.forEach((label) => {
@@ -176,13 +179,18 @@ document.addEventListener("DOMContentLoaded", function () {
     listCheckbox.forEach((chekbox) => {
       console.log(chekbox.nextSibling.nextSibling);
       chekbox.addEventListener("click", function (e) {
-        chekbox.checked = false;
-
+        // chekbox.checked = false;
+        listCheckbox.forEach(checkbox => {
+          checkbox.checked = false
+        })
+        e.target.checked = true
         if (e.target) {
           console.log("OK");
-
-          inputConnectionLabel.innerHTML =
+          inputConnectionLabel.forEach(checkbox => {
+             checkbox.innerHTML =
             e.target.nextSibling.nextSibling.innerHTML;
+          })
+         
         }
         // listConnection.forEach(list => {
         //   list.classList.add("list_hoidden");

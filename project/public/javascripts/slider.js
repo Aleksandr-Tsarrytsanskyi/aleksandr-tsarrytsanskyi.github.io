@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // If we need pagination
   breakpoints: {
             // Для экранов шириной до 768px
-            // 935: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 15
-            // },
+            767: {
+                slidesPerView: 1,
+                spaceBetween: 15
+            },
             // // Для экранов шириной до 320px
             // 320: {
             //     slidesPerView: 1,

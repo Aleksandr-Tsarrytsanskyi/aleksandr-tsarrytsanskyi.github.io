@@ -113,15 +113,15 @@ document.addEventListener("DOMContentLoaded", function () {
    const listSocial = document.querySelectorAll(".list_menu");
    const inputSpec = document.querySelectorAll(".show_connect");
    const inputSpecLabel = document.querySelectorAll(".show_connect label");
-    const inputConnection = document.querySelector(".feedback .connection");
-    const inputConnectionLabel = document.querySelector(
-      ".feedback .connection label"
-    );
+   const inputConnection = document.querySelectorAll(".connection2");
+     const inputConnectionLabel = document.querySelectorAll(
+    ".connection_label2"
+  );
      const listCheckbox = document.querySelectorAll(
     ".feedback .menu2 input[type= 'checkbox']"
   );
     const policy = document.querySelector(".checkbox_style");
-    const listConnection = document.querySelector(".feedback .menu2");
+  const listConnection = document.querySelectorAll(".list_menu2");
     policy.addEventListener("click", function (e) {
       if (e.target.checked) {
         e.target.style.opacity = "1";
@@ -143,7 +143,11 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(chekbox.nextSibling.nextSibling);
         chekbox.addEventListener("click", function (e) {
           // chekbox.checked = false;
+            listSocialCheckbox.forEach(checkbox => {
+                checkbox.checked = false
+            })
 
+            e.target.checked = true
           if (e.target) {
             console.log("OK");
             inputSpecLabel.forEach((label) => {
@@ -158,26 +162,38 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-    inputConnection.addEventListener("click", function () {
-      listConnection.classList.toggle("list2_show");
-      listConnection.classList.remove("list_hoidden");
-      console.log("click");
+   inputConnection.forEach(item => {
+   item.disabled = false;
+  })
+    inputConnection.forEach(item => {
+    item.addEventListener("click", function () {
+      listConnection.forEach(list => {
+        list.classList.toggle("list2_show");
+        list.classList.remove("list_hoidden");
+      })
+    
+    console.log("click");
 
-      listCheckbox.forEach((chekbox) => {
-        console.log(chekbox.nextSibling.nextSibling);
-        chekbox.addEventListener("click", function (e) {
-          chekbox.checked = false;
+    listCheckbox.forEach((chekbox) => {
+      console.log(chekbox.nextSibling.nextSibling);
+      chekbox.addEventListener("click", function (e) {
+        // chekbox.checked = false;
 
-          if (e.target) {
-            console.log("OK");
+        if (e.target) {
+          console.log("OK");
 
-            inputConnectionLabel.innerHTML =
-              e.target.nextSibling.nextSibling.innerHTML;
-          }
-          listConnection.classList.add("list_hoidden");
-        });
+           inputConnectionLabel.forEach(checkbox => {
+             checkbox.innerHTML =
+            e.target.nextSibling.nextSibling.innerHTML;
+          })
+        }
+        // listConnection.forEach(list => {
+        //   list.classList.add("list_hoidden");
+        // })
       });
     });
+  });
+  })
   }
 
    function modalController({ modal, btnOpen, btnClose, time = 300 }) {
