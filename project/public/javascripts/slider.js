@@ -157,5 +157,29 @@ document.addEventListener("DOMContentLoaded", function() {
     },
   });
 
+  resizableSwiper("(min-width: 935px)", ".slider1", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    clickable: true
+  },
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    // pagination: {
+    //   el: ".swiperslider-pagination",
+    //   clickable: true,
+    // },
+    breakpoints: {
+      1200: {
+        spaceBetween: 20,
+      },
+    },
+  });
+
 
 })

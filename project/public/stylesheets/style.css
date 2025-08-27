@@ -884,7 +884,7 @@ a:focus {
   justify-content: center;
   grid-template-columns: 910px;
   position: relative;
-  top: 290px;
+  top: -36px;
 }
 
 .specialists h2 {
@@ -2102,7 +2102,7 @@ font-family: "Nunito Light";
 
 .specialists .none {
   position: relative;
-  top: -340px;
+  top: -5px;
   text-align: center;
 }
 

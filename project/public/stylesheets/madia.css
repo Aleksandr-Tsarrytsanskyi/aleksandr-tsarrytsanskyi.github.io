@@ -805,6 +805,12 @@
     grid-template-columns: 293px !important;
     height: 420px !important;
   }
+
+  .specialists .none {
+    top: -340px !important;
+  }
+
+  
 }
 
 @media screen and (max-width: 430px) {
