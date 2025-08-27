@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  function isMobileBurgerMenu() {
+  
+  
+    function isMobileBurgerMenu() {
     const menuLinks = document.querySelectorAll(".header__link[data-goto]");
     const isMobile = {
       Android: function () {

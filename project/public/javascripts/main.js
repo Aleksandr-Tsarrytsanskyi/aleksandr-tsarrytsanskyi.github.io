@@ -98,7 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const header = document.querySelector(".professionals__postion");
    const slider = document.querySelector(".specialists .swiper") 
-
+   
+  
   if (window.innerWidth > 935) {
     slider.classList.remove("slider")
     slider.classList.add("slider1")

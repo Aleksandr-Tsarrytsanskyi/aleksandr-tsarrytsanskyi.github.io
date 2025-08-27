@@ -861,7 +861,7 @@ a:focus {
 }
 
 .swiper {
-  width: 910px;
+  width: 926px;
   height: 500px;
 }
 
@@ -882,7 +882,7 @@ a:focus {
 .specialists {
   display: grid;
   justify-content: center;
-  grid-template-columns: 910px;
+  grid-template-columns: 974px;
   position: relative;
   top: -36px;
 }
@@ -2105,4 +2105,13 @@ font-family: "Nunito Light";
   top: -5px;
   text-align: center;
 }
+
+.swiper-button-prev {
+  left: 17px !important;
+}
+
+.swiper-button-next {
+ right: 2px !important;
+}
+
 

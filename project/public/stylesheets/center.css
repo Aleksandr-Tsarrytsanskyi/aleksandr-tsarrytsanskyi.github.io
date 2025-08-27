@@ -2,7 +2,10 @@
     border-radius:  0 !important;
 }
 
-
+.center_slider .swiper {
+  width: 300px !important;
+  height: 500px !important;
+}
 
 @media screen and (max-width: 1150px)  {
     .analysis__text {
