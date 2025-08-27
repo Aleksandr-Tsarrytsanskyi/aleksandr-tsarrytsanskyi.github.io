@@ -75,9 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const listSocialCheckbox = document.querySelectorAll(
     ".list_menu input[type= 'checkbox']"
   );
-      const modals = document.querySelector(".modal_window1");
-      const modal2 = document.querySelector(".modal2");
-      const h1Main = document.querySelector(".professionals h1");
+  const modals = document.querySelector(".modal_window1");
+  const modal2 = document.querySelector(".modal2");
+  const h1Main = document.querySelector(".professionals h1");
   const listCheckbox = document.querySelectorAll(
     ".feedback .menu2 input[type= 'checkbox']"
   );
@@ -87,9 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const inputSpec = document.querySelectorAll(".show_connect");
   const inputSpecLabel = document.querySelectorAll(".show_connect label");
   const inputConnection = document.querySelectorAll(".connection2");
-  const inputConnectionLabel = document.querySelectorAll(
-    ".connection_label2"
-  );
+  const inputConnectionLabel = document.querySelectorAll(".connection_label2");
   console.log(inputSpec);
 
   const policy = document.querySelector(".checkbox_style");
@@ -99,8 +97,13 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log(policy);
 
   const header = document.querySelector(".professionals__postion");
+   const slider = document.querySelector(".specialists .swiper") 
+
+ 
+ 
   if (window.innerWidth < 440) {
-    h1Main.innerHTML = "Человечные <br>профессионалыв <br>области <br>психического <br>здоровья"
+    h1Main.innerHTML =
+      "Человечные <br>профессионалыв <br>области <br>психического <br>здоровья";
     console.log("440");
 
     header.style.top = "440px !important";
@@ -111,29 +114,29 @@ document.addEventListener("DOMContentLoaded", function () {
     text.innerHTML =
       "Поведение ребёнка:<br> агрессивность, замкнутость, <br>неумение выражать эмоции";
   }
-  popaplink.forEach(link => {
-    link.addEventListener("click", function(e) {
-  e.preventDefault();
-})
-  })
+  popaplink.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+    });
+  });
 
-  modals.addEventListener("click", function() {
+  modals.addEventListener("click", function () {
     modal2.style.cssText = `
         display: flex;
         visibility: hidden;
         opacity: 0;
         transition: opacity 0.5ms ease-in-out;
     `;
-  })
+  });
 
   policy.addEventListener("click", function (e) {
     if (e.target.checked) {
       e.target.style.opacity = "1";
     }
   });
-  inputConnection.forEach(item => {
-   item.disabled = false;
-  })
+  inputConnection.forEach((item) => {
+    item.disabled = false;
+  });
   inputSpec.forEach((item) => {
     item.disabled = false;
   });
@@ -149,10 +152,10 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(chekbox.nextSibling.nextSibling);
         chekbox.addEventListener("click", function (e) {
           // chekbox.checked = false;
-           listSocialCheckbox.forEach(checkbox => {
-          checkbox.checked = false
-          })
-        e.target.checked = true
+          listSocialCheckbox.forEach((checkbox) => {
+            checkbox.checked = false;
+          });
+          e.target.checked = true;
           if (e.target) {
             console.log("OK");
             inputSpecLabel.forEach((label) => {
@@ -167,38 +170,36 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-  inputConnection.forEach(item => {
+  inputConnection.forEach((item) => {
     item.addEventListener("click", function () {
-      listConnection.forEach(list => {
+      listConnection.forEach((list) => {
         list.classList.toggle("list2_show");
         list.classList.remove("list_hoidden");
-      })
-    
-    console.log("click");
+      });
 
-    listCheckbox.forEach((chekbox) => {
-      console.log(chekbox.nextSibling.nextSibling);
-      chekbox.addEventListener("click", function (e) {
-        // chekbox.checked = false;
-        listCheckbox.forEach(checkbox => {
-          checkbox.checked = false
-        })
-        e.target.checked = true
-        if (e.target) {
-          console.log("OK");
-          inputConnectionLabel.forEach(checkbox => {
-             checkbox.innerHTML =
-            e.target.nextSibling.nextSibling.innerHTML;
-          })
-         
-        }
-        // listConnection.forEach(list => {
-        //   list.classList.add("list_hoidden");
-        // })
+      console.log("click");
+
+      listCheckbox.forEach((chekbox) => {
+        console.log(chekbox.nextSibling.nextSibling);
+        chekbox.addEventListener("click", function (e) {
+          // chekbox.checked = false;
+          listCheckbox.forEach((checkbox) => {
+            checkbox.checked = false;
+          });
+          e.target.checked = true;
+          if (e.target) {
+            console.log("OK");
+            inputConnectionLabel.forEach((checkbox) => {
+              checkbox.innerHTML = e.target.nextSibling.nextSibling.innerHTML;
+            });
+          }
+          // listConnection.forEach(list => {
+          //   list.classList.add("list_hoidden");
+          // })
+        });
       });
     });
   });
-  })
 
   function getCheckboxFeedBack() {
     const checkboxes = document.querySelectorAll('input[name="relations"]');
@@ -221,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttonElements = document.querySelectorAll(btnOpen);
     const modalElem = document.querySelector(modal);
     console.log(modal);
-    
+
     modalElem.style.cssText = `
         display: flex;
         visibility: hidden;
@@ -256,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
-modalController({
+  modalController({
     modal: ".modal1",
     btnOpen: ".modal_window1",
     btnClose: ".modal__close",

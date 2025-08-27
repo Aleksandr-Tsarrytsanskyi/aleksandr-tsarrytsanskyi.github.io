@@ -883,6 +883,8 @@ a:focus {
   display: grid;
   justify-content: center;
   grid-template-columns: 910px;
+  position: relative;
+  top: 290px;
 }
 
 .specialists h2 {
@@ -1363,9 +1365,9 @@ color: #f7f6ef;
   justify-content: center;
 }
 
-.swiper-container {
+/* .swiper-container {
   width: 100%;
-}
+} */
 
 .footer .article {
   background: url("../images/blog.png") no-repeat center right 0%;
@@ -2097,3 +2099,10 @@ font-family: "Nunito Light";
   font-size: 120%;
   color: #fff;
 }
+
+.specialists .none {
+  position: relative;
+  top: -340px;
+  text-align: center;
+}
+

@@ -482,10 +482,6 @@
     bottom: 98px !important;
   }
 
-  .swiper-container {
-    width: 50% !important; /* Изменить ширину контейнера */
-  }
-
   .bg_footer {
     border-radius: 0px !important;
   }
@@ -804,6 +800,11 @@
     left: 14px !important;
   }
 
+  .specialists {
+    top: 325px !important;
+    grid-template-columns: 293px !important;
+    height: 420px !important;
+  }
 }
 
 @media screen and (max-width: 430px) {
