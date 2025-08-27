@@ -110,9 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const listSocialCheckbox = document.querySelectorAll(
       ".feedback .menu input[type= 'checkbox']"
     );
-    const listSocial = document.querySelector(".feedback .menu");
-    const inputSpec = document.querySelector(".feedback .spec");
-    const inputSpecLabel = document.querySelector(".feedback .spec label");
+   const listSocial = document.querySelectorAll(".list_menu");
+   const inputSpec = document.querySelectorAll(".show_connect");
+   const inputSpecLabel = document.querySelectorAll(".show_connect label");
     const inputConnection = document.querySelector(".feedback .connection");
     const inputConnectionLabel = document.querySelector(
       ".feedback .connection label"
@@ -127,29 +127,37 @@ document.addEventListener("DOMContentLoaded", function () {
         e.target.style.opacity = "1";
       }
     });
-    inputSpec.disabled = false;
     inputConnection.disabled = false;
-    inputSpec.addEventListener("click", function () {
-      listSocial.classList.remove("list_hoidden");
-      listSocial.classList.toggle("list_show");
+    inputSpec.forEach((item) => {
+    item.disabled = false;
+  });
+  inputSpec.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      listSocial.forEach((menu) => {
+        menu.classList.remove("list_hoidden");
+        menu.classList.toggle("list_show");
+      });
       console.log("click");
 
       listSocialCheckbox.forEach((chekbox) => {
         console.log(chekbox.nextSibling.nextSibling);
         chekbox.addEventListener("click", function (e) {
-          chekbox.checked = false;
+          // chekbox.checked = false;
 
           if (e.target) {
             console.log("OK");
-
-            inputSpecLabel.innerHTML =
-              e.target.nextSibling.nextSibling.innerHTML;
+            inputSpecLabel.forEach((label) => {
+              label.innerHTML = e.target.nextSibling.nextSibling.innerHTML;
+            });
           }
-          listSocial.classList.add("list_hoidden");
+          // listSocial.forEach(label => {
+          //   label.classList.add("list_hoidden");
+
+          // })
         });
       });
     });
-
+  });
     inputConnection.addEventListener("click", function () {
       listConnection.classList.toggle("list2_show");
       listConnection.classList.remove("list_hoidden");

@@ -601,6 +601,7 @@ a:focus {
   font-size: 18px;
   position: relative;
   top: -4px;
+  cursor: pointer;
 }
 
 .list_show {

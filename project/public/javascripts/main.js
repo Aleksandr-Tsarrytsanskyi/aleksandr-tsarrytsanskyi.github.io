@@ -83,16 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   console.log(listSocialCheckbox);
 
-  const listConnection = document.querySelector(".feedback .menu2");
+  const listConnection = document.querySelectorAll(".list_menu2");
   const inputSpec = document.querySelectorAll(".show_connect");
   const inputSpecLabel = document.querySelectorAll(".show_connect label");
-  const inputConnection = document.querySelector(".feedback .connection");
-  const inputConnectionLabel = document.querySelector(
-    ".feedback .connection label"
+  const inputConnection = document.querySelectorAll(".connection2");
+  const inputConnectionLabel = document.querySelectorAll(
+    ".connection_label2"
   );
   console.log(inputSpec);
 
   const policy = document.querySelector(".checkbox_style");
+  const popaplink = document.querySelectorAll(".formats__classes");
   const h2 = document.querySelector(".work h2");
   const text = document.querySelector(".work__text_content");
   console.log(policy);
@@ -110,6 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
     text.innerHTML =
       "Поведение ребёнка:<br> агрессивность, замкнутость, <br>неумение выражать эмоции";
   }
+  popaplink.forEach(link => {
+    link.addEventListener("click", function(e) {
+  e.preventDefault();
+})
+  })
 
   modals.addEventListener("click", function() {
     modal2.style.cssText = `
@@ -125,10 +131,12 @@ document.addEventListener("DOMContentLoaded", function () {
       e.target.style.opacity = "1";
     }
   });
+  inputConnection.forEach(item => {
+   item.disabled = false;
+  })
   inputSpec.forEach((item) => {
     item.disabled = false;
   });
-  inputConnection.disabled = false;
   inputSpec.forEach((item) => {
     item.addEventListener("click", function (e) {
       listSocial.forEach((menu) => {
@@ -156,10 +164,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-
-  inputConnection.addEventListener("click", function () {
-    listConnection.classList.toggle("list2_show");
-    listConnection.classList.remove("list_hoidden");
+  inputConnection.forEach(item => {
+    item.addEventListener("click", function () {
+      listConnection.forEach(list => {
+        list.classList.toggle("list2_show");
+        list.classList.remove("list_hoidden");
+      })
+    
     console.log("click");
 
     listCheckbox.forEach((chekbox) => {
@@ -173,10 +184,14 @@ document.addEventListener("DOMContentLoaded", function () {
           inputConnectionLabel.innerHTML =
             e.target.nextSibling.nextSibling.innerHTML;
         }
-        listConnection.classList.add("list_hoidden");
+        // listConnection.forEach(list => {
+        //   list.classList.add("list_hoidden");
+        // })
       });
     });
   });
+  })
+
   function getCheckboxFeedBack() {
     const checkboxes = document.querySelectorAll('input[name="relations"]');
     checkboxes.forEach((checkbox) => {
