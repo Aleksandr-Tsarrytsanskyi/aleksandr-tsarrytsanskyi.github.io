@@ -40,11 +40,57 @@ p {
 }
 
 ul {
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
 }
 
+
+
 @media screen and (min-width: 360px) {
+
+.timer {
+        display: grid;
+         grid-template-columns: 52px 87px 76px;
+          justify-content: center;
+          grid-gap: 0px 38px
+    }
+    .timer p, .timer span {
+         font-family: "Montserrat regular";
+    }
+    
+    .timer p {
+        font-size: 58pt;
+         text-align: center;
+    }
+    
+    .timer span {
+        color: #ae988e;
+        font-size: 13pt;
+        text-align: center;
+        display: block;
+    }
+
+  .privacy_policy {
+    display: grid;
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
+
+ 
+
+
+  .privacy_policy p {
+    font-family: "Montserrat regular";
+    margin-top: 20px;
+    font-size: 14pt;
+    width: 300px;
+    word-break: break-all;
+  }
+
+  .privacy_policy h2 {
+    font-family: "Montserrat Bold";
+    font-size: 17pt;
+  }
   .header__title__bg {
     background: url("../images/header_icon.png") no-repeat;
     height: 12px;
@@ -202,6 +248,7 @@ ul {
   .header .content__bonus li p {
     font-size: 12pt;
     font-family: "Montserrat regular";
+    margin-bottom: 0px;
   }
 
   .header .content__bonus {
@@ -215,6 +262,7 @@ ul {
 
   .header .content__bonus ul li {
     color: #634d3d;
+    line-height: 19px;
   }
 
   .content__position_bg {
@@ -272,7 +320,7 @@ ul {
 
   .header .content__price {
     display: grid;
-    grid-template-columns: 160px 65px;
+    grid-template-columns: 170px 65px;
     grid-gap: 0px 20px;
   }
 
@@ -715,6 +763,7 @@ ul {
     top: 20px;
     left: -49px;
     float: right;
+    z-index: 20;
   }
 
   .courses__day {

@@ -1,0 +1,116 @@
+.bg_footer {
+    border-radius:  0 !important;
+}
+
+
+
+@media screen and (max-width: 1150px)  {
+    .analysis__text {
+   margin-bottom: 5px !important;
+   font-size: 18px !important;
+  }
+
+   .feedback input {
+    float: none !important;
+    width: 281px !important;
+    height: 45px !important;
+    margin-bottom: 10px;
+    margin-left: 0px !important;
+    color: #22222359 !important;
+    font-size: 14px !important;
+  }
+
+  .feedback .spec,
+  .feedback .connection {
+    float: none !important;
+    width: 281px !important;
+    height: 45px !important;
+    margin-left: 0px !important;
+  }
+
+  .feedback .spec label,
+  .feedback .connection label {
+    font-size: 15px !important;
+  }
+
+  .feedback {
+    grid-template-columns: 301px !important;
+  }
+
+  .feedback__user {
+    width: 301px !important;
+  }
+
+  .feedback h2 {
+    font-size: 18px !important;
+    color: #f7f6ef !important;
+    margin-left: 0px !important;
+  }
+
+  .feedback p {
+    color: #f7f6ef !important;
+    font-size: 15px !important;
+    margin-left: 0px !important;
+  }
+
+  .feedback .center {
+    padding-left: 20px !important;
+  }
+
+  .feedback .cell {
+    height: 535px !important;
+    padding-top: 10px !important;
+    background-color: #879b6a !important;
+  }
+
+  .feedback .center .cell {
+    background: none !important;
+  }
+
+  .feedback .none_br {
+    display: none;
+  }
+
+  .feedback input[type="submit"] {
+    left: 0 !important;
+  }
+
+  .feedback .m_top {
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .feedback .menu input[type="checkbox"],
+  .feedback .menu2 input[type="checkbox"] {
+    width: 20px !important;
+    height: 20px !important;
+    padding-left: 10px;
+  }
+
+  .feedback .menu,
+  .feedback .menu2 {
+    width: 281px !important;
+    padding-left: 10px;
+  }
+
+  .feedback .menu {
+    top: 346px !important;
+    left: 11px !important;
+  }
+
+  .feedback .menu2 {
+    top: 403px !important;
+    left: 11px !important;
+  }
+
+  .footer {
+    top: -200px !important;
+    position: relative;
+  }
+
+  .marquee_wrapper__inner {
+    top: -100px !important;
+  }
+}
+
+ 

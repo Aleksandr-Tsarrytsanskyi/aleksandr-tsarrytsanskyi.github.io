@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheets/madia.css" type="text/css" />
+
+    <link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
+
+    <link rel="stylesheet" href="./stylesheets/center.css" type="text/css" />
+    <!-- <link
+      rel="stylesheet"
+      href="./stylesheets/style/normalize.css"
+      type="text/css"
+    /> -->
+    <link rel="stylesheet" href="./stylesheets/font.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./javascripts/center.js"></script>
+    <script type="module" src="./javascripts/slider.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+<div class="modal_feedback modal1 modal">
+      <div class="modal_feedback__cell modal_main">
+        <div class="modal_feedback__center">
+          <div class="cell">
+            <p class="modal__close">X</p>
+            <h2>Мы свяжемся с вами, поможем со всем разобраться и подберем подходящего специалиста</h2>
+            <form action="#" method="POST">
+              <p>
+                <input type="text" name="name" placeholder="Имя" value="" class="modal_input">
+              </p>
+               <p>
+                <input type="text" name="phone" placeholder="Телефон" value="" class="modal_input">
+              </p>
+               <p>
+                <input type="text" name="mail" placeholder="E-mail" value="" class="modal_input">
+              </p>
+              <div class="clear"></div>
+              <div class="connection show_connect">
+                <label>Удобный способ связи</label>
+                <div class="connection__icon"></div>
+              </div>
+                <div class="menu list_menu">
+                    <input type="checkbox" name="relations" value="option1" id="checkbox1">
+                    <label class="up" for="checkbox1">Обратный звонок</label>
+                    <br>
+                    <input type="checkbox" name="relations" value="option2"id="checkbox2">
+                    <label for="checkbox2">Watsapp</label>
+                     <br>
+                    <input type="checkbox" name="relations" value="option3" id="checkbox3">
+                    <label for="checkbox3">Telegram</label>
+                  </div>
+              <div class="radio">
+                <input type="checkbox" class="radio_input" name="service" id="radio_feedback">
+                <label class="text modal_feedback_label" for="radio_feedback">Свяжусь самостоятельно</label>
+              </div>
+               <div class="clear"></div>
+              <div class="modal_feedback__checkbox">
+                <input type="checkbox" name="" id="checkbox_item">
+                <label class="checkbox_text_item2" for="checkbox_item">Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a> и <a href="#">политикой использования cookie</a></label>
+              </div>
+              <p>
+                <input type="submit" name="send" value="Отправить заявку">
+              </p>
+            </form>
+            <p class="none">Мы свяжемся с вами в течении часа. При возникновении <br>срочных вопросов, пожаоуйста, свяжитесь с нами</p>
+          </div>
+        </div>
+      </div>
+    </div>
+       <div class="modal_more modal2 modal">
+      <div class="modal_more_cell modal_main">
+        <div class="modal_more__center">
+          <div class="cell">
+            <p class="modal__close">X</p>
+              <h2>Выберите своего специалиста</h2>
+              <p>На первой сессии вы расскажете о себе и своей проблеме, познакомитесь с психоаналитиком и особенностями метода. Если почувствуете, что специалист не подходит вам, можно назначить встречу-знакомство с другим — тоже со скидкой 40%. </p>
+              <button type="button" class="modal_window1">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu_icon">
+      <span></span>
+    </div>
+    <header class="header">
+      <div class="bg_header">
+        <div class="cell">
+          <nav class="header__logo">
+            <ul>
+              <li>
+                <a href="./index.html">
+                  <svg
+                    width="50"
+                    height="40"
+                    viewBox="0 0 50 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M34.9097 0.159277C32.5331 0.592993 29.5081 2.92648 26.7163 6.47961C24.7495 8.983 22.9721 10.9111 22.2515 11.3229C21.6537 11.6644 20.7071 11.7266 15.7116 11.7519C10.256 11.7795 9.79514 11.8155 8.72228 12.2997C6.69398 13.2155 4.9809 15.3384 4.41476 17.638C4.16547 18.6506 4.05993 18.7714 3.22331 19.0018C2.00391 19.3376 0.538246 20.7198 0.240967 21.8141C0.101413 22.3281 0.00565813 26.1486 0.00682301 31.1442C0.00915279 39.9653 -0.134826 39.6676 0.790561 39.8499C1.68613 40.0262 2.09896 40.5084 2.09896 37.8353C2.09896 36.1739 2.19611 35.1913 2.37854 35.0047C2.78368 34.5903 43.5832 34.5903 43.9883 35.0047C44.1668 35.1873 44.2679 36.1157 44.2679 37.5729C44.2679 40.0058 44.3618 39.8918 45.1986 39.8918C46.1462 39.8918 46.3845 40.6778 46.4241 28.7242L46.4626 17.2043L47.1645 16.5485C47.5506 16.1877 47.9375 15.8927 48.0244 15.8927C48.1113 15.8927 48.4198 15.4904 48.7101 14.999C49.327 13.9538 49.6206 10.4805 49.1784 9.45842C48.5083 7.90991 47.2763 6.6886 45.9502 6.25798C45.6714 6.16743 45.2506 5.54879 44.8911 4.7009C44.1127 2.86523 43.0045 1.64249 41.3212 0.762189C40.1579 0.154034 39.6671 0.0427463 37.9775 0.00485579C36.8883 -0.0194513 35.5077 0.0498952 34.9097 0.159277ZM34.1865 2.8862C32.7166 3.50461 30.1881 5.62933 29.033 7.21716C27.6352 9.13838 24.623 12.6786 24.1389 12.9694C23.8696 13.1309 22.9807 13.4801 22.1635 13.7455C20.8439 14.1738 20.0839 14.226 15.3801 14.2102C10.6455 14.1945 10.0109 14.2386 9.40654 14.6256C8.0774 15.4768 7.22447 16.2258 7.22447 16.5416C7.22447 16.7181 7.05579 17.1261 6.84937 17.4481C5.97431 18.8143 5.29961 18.7611 22.6525 18.6944L38.5599 18.6332L38.7153 14.8203C38.8011 12.7232 38.9439 10.5785 39.0331 10.0542C39.25 8.7802 40.4301 7.23122 41.6469 6.62306C42.2554 6.31899 42.6368 5.96654 42.6361 5.70821C42.6347 4.94921 41.7254 3.74172 40.6115 3.01918C39.6144 2.37242 39.3402 2.30974 37.5241 2.31498C35.9688 2.31927 35.2361 2.44462 34.1865 2.8862ZM42.6813 8.73922C41.2909 9.625 41.2392 9.9927 41.2392 18.9937V27.1147L40.6672 27.6995L40.0955 28.2845H21.3385C-0.00971985 28.2845 2.13228 28.0374 2.13228 30.501C2.13228 31.3968 2.25249 31.9821 2.48547 32.2204C2.79533 32.5373 5.17893 32.5805 21.9806 32.5719C32.5088 32.5666 41.8077 32.498 42.6447 32.4196L44.167 32.2769L44.1486 24.2636C44.1386 19.8561 44.1887 15.8788 44.26 15.4253C44.3716 14.7133 44.5002 14.5772 45.1986 14.4311C46.1112 14.2403 47.0522 13.2692 47.0862 12.4835C47.1866 10.1547 46.9709 9.30662 46.1704 8.88315C44.9829 8.25498 43.5352 8.1954 42.6813 8.73922ZM3.64896 21.2305C3.15598 21.387 2.64762 21.7075 2.51925 21.9423C2.24644 22.441 2.17398 25.5812 2.42956 25.8424C2.63341 26.0514 36.7977 26.2163 37.9272 26.014L38.6925 25.8767L38.6261 23.4465L38.5599 21.0162L21.5526 20.981C8.92824 20.9545 4.31435 21.0188 3.64896 21.2305Z"
+                      fill="#F7F6EF"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <p>
+                  Центр психоанализа <br />
+                  и психологии детства
+                </p>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="cell">
+          <nav class="header__menu">
+            <ul class="header__body">
+              <li>
+                <a href="#" class="header__link" data-goto=".page_section1"
+                  >С чем можем помочь?</a
+                >
+              </li>
+              <li>
+                <a href="#" class="header__link" data-goto=".page_section2"
+                  >Форматы работы</a
+                >
+              </li>
+              <li>
+                <a href="./center.html" class="header__link" data-goto=".page_section3"
+                  >Наши специалисты</a
+                >
+              </li>
+              <li>
+                <a href="#" class="header__link" data-goto=".page_section4"
+                  >О центре</a
+                >
+              </li>
+              <li>
+                <a href="#" class="header__link" data-goto=".page_section5"
+                  >Наши ценности</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="our_center">
+        <div class="our_center__postion">
+          <div class="our_center__cell">
+            <h1>Наш центр <span class="our_center__none">—</span></h1>
+            <p>
+              небольшое профессиональное сообщество <br />активно практикующих
+              психоаналитиков.
+            </p>
+            <p>
+              У каждого из них — своя специализация <br />и свой круг научных
+              интересов.
+            </p>
+          </div>
+          <div class="our_center__cell">
+            <button type="button" class="modal_window1">Выбрать специалиста</button>
+          </div>
+        </div>
+      </section>
+      <section class="analysis page_section1">
+        <article class="analysis__article">
+          <h2>Почему стоит выбрать психоанализ</h2>
+          <div class="analysis__cell">
+            <p class="analysis__text">Работа в безопасном <br />пространстве</p>
+            <p>
+              Психоанализ отличается от других <br />психологических практик
+              этикой. <br />Аналитик не навязывает своих взглядов <br />и не
+              предлагает готовых решений.
+            </p>
+            <p>
+              Он создаёт безопасное пространство <br />и становится проводником
+              на пути <br />исследования глубин психики.
+            </p>
+            <p>
+              Его задача — помочь вам пройти заново <br />те места, где
+              образовался психический <br />конфликт, лежащий в основе проблемы.
+            </p>
+          </div>
+          <div class="analysis__cell">
+            <p class="analysis__text">Результаты сохраняются <br />навсегда</p>
+            <p>
+              Мы не работаем с точечной проблемой, <br />а исследуем психику
+              целиком, погружаясь <br />в глубинные психические механизмы.
+            </p>
+            <p>
+              Психоанализ помогает переписать заново <br />вашу индивидуальную
+              историю <br />и перестроить психику так, чтобы избавить <br />от
+              травматических элементов.
+            </p>
+            <p>
+              Результаты работы с психоаналитиком <br />сохраняются навсегда,
+              без откатов.
+            </p>
+          </div>
+          <div class="analysis__cell">
+            <p class="analysis__text">
+              Исследование себя <br />и своих отношений
+              <br class="analysis__text_none" />с миром
+            </p>
+            <p>
+              Каждый человек уникален и достоин быть <br />понятым во всех своих
+              проявлениях, <br />без осуждения и критики.
+            </p>
+            <p>
+              Человек осознаёт свое существование в мире <br />только через
+              отношения с другим человеком
+            </p>
+            <p>
+              Психоаналитическая работа строится на <br />исследовании ваших
+              отношений с людьми <br />и отношений с аналитиком.
+            </p>
+          </div>
+          <div class="analysis__cell width">
+            <img src="./images/border_center.png" alt="Border" />
+          </div>
+        </article>
+      </section>
+      <section class="practice">
+        <h2>Как выбрать специалиста</h2>
+        <div class="practice__cell practice__item1">
+          <p>имеют высшее <br />психологическое <br />образование</p>
+        </div>
+        <div class="practice__cell practice__item2">
+          <img src="./images/centr/img_cen1.png" alt="image" />
+        </div>
+        <div class="practice__cell practice__item3">
+          <p>находятся <br />в непрерывной <br />личной терапии</p>
+        </div>
+        <div class="practice__cell practice__item4">
+          <p>
+            3-6 раз в год посещают учебные<br />
+            семинары
+          </p>
+        </div>
+        <div class="practice__cell practice__item5">
+          <p>ведут практику <br />под наблюдением <br />супервизора</p>
+        </div>
+        <div class="practice__cell practice__item6">
+          <img src="./images/centr/img_cen2.png" alt="image" />
+        </div>
+      </section>
+      <section class="slider page_section3">
+        <!-- Slider main container -->
+        <div class="swiper swiper1">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="cell non_m">
+                <img src="./images/img_spec1.png" alt="Image" class="img" />
+                <p class="specialists__text1">София</p>
+                <p class="specialists__text2">
+                  Психоаналитик, детский <br />и подростковый психоаналитик
+                </p>
+                <p class="specialists__text3">
+                  Очно в Санкт-Петербурге <br />Онлайн
+                </p>
+                <img src="./images/glaz.png" alt="Image" class="img_center" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="cell">
+                <img src="./images/img_spec2.png" alt="Image" class="img" />
+                <p class="specialists__text1">Валентина</p>
+                <p class="specialists__text2">Психолог-психоаналитик</p>
+                <p class="specialists__text3">
+                  Очно в Санкт-Петербурге <br />Онлайн
+                </p>
+                <img src="./images/glaz.png" alt="Image" class="img_center" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="cell">
+                <img src="./images/img_spec3.png" alt="Image" class="img" />
+                <p class="specialists__text1">Анастасия</p>
+                <p class="specialists__text2">
+                  Психоаналитик, клинический<br />
+                  психолог
+                </p>
+                <p class="specialists__text3">
+                  Очно в Челябинске <br />
+                  Онлайн
+                </p>
+                <img src="./images/glaz.png" alt="Image" class="img_center" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="cell">
+                <img src="./images/img_spec3.png" alt="Image" class="img" />
+                <p class="specialists__text1">Марина</p>
+                <p class="specialists__text2">Психоаналитик</p>
+                <p class="specialists__text3">
+                  Очно в Челябинске <br />
+                  Онлайн
+                </p>
+                <img src="./images/glaz.png" alt="Image" class="img_center" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="cell">
+                <img src="./images/img_spec3.png" alt="Image" class="img" />
+                <p class="specialists__text1">Олеся</p>
+                <p class="specialists__text2">Очно в Белграде</p>
+                <p class="specialists__text3">
+                  Очно в Челябинске <br />
+                  Онлайн
+                </p>
+                <img src="./images/glaz.png" alt="Image" class="img_center" />
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev">
+            <img src="./images/slide_left.png" alt="Image" />
+          </div>
+          <div class="swiper-button-next">
+            <img src="./images/slide_tight.png" alt="Image" />
+          </div>
+
+          <!-- If we need scrollbar -->
+        </div>
+      </section>
+      <section class="session page_section4">
+        <div class="session__cell">
+          <h2>Записывайтесь <br />на знакомство <br />со специалистом</h2>
+          <div class="session__image">
+            <img src="./images/centr/mobile_img.png" alt="image" />
+          </div>
+          <p>
+            Первая индивидуальная <br class="session_br_none" />сессия — со
+            скидкой 40%
+          </p>
+          <button type="button" class="modal_window1">Записаться</button>
+        </div>
+        <div class="session__cell">
+          <img src="./images/centr/img_cen3.png" alt="" class="session__none" />
+        </div>
+      </section>
+      <section class="feedback feedback__top_pos page_section2">
+        <div class="cell">
+          <div class="center">
+            <div class="cell">
+              <h2>Если у вас остались вопросы, оставьте свои контакты</h2>
+              <p>
+                Мы свяжемся с вами, поможем со всем разобраться и подберем
+                подходящего специалиста
+              </p>
+              <from action="#" method="POST" class="feedback__user">
+                <div>
+                  <input
+                    type="text"
+                    name="name"
+                    value=""
+                    placeholder="Имя"
+                    class="name"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    name="phoe"
+                    value=""
+                    placeholder="Телефон"
+                    class="phone"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    name="mail"
+                    value=""
+                    placeholder="E-mail"
+                    class="mail"
+                  />
+                </div>
+                <br class="none_br" />
+                <br class="none_br" />
+                <div class="m_top spec">
+                  <label>Специалисты</label>
+                  <div class="active pos1"></div>
+                </div>
+                <div class="menu">
+                  <input type="checkbox" name="" id="checkbox1" />
+                  <label class="up" for="checkbox1">Обратный звонок</label>
+                  <br />
+                  <input type="checkbox" name="" id="checkbox2" />
+                  <label for="checkbox2">Watsapp</label>
+                  <br />
+                  <input type="checkbox" name="" id="checkbox3" />
+                  <label for="checkbox3">Telegram</label>
+                </div>
+                <div class="m_top connection">
+                  <label>Удобный способ связи</label>
+                  <div class="active pos2"></div>
+                </div>
+                <div class="menu2">
+                  <input type="checkbox" name="" />
+                  <label>София</label>
+                  <br />
+                  <input type="checkbox" name="" />
+                  <label>Валентина</label>
+                  <br />
+                  <input type="checkbox" name="" />
+                  <label>Марина</label>
+                  <br />
+                  <input type="checkbox" name="" />
+                  <label>Лариса</label>
+                  <br />
+                  <input type="checkbox" name="" />
+                  <label>Не могу выбрать</label>
+                </div>
+                <div class="checkbox_pos">
+                  <input
+                    type="checkbox"
+                    value=""
+                    placeholder="E-mail"
+                    class="checkbox_style"
+                    id="label2"
+                  />
+                  <label for="label2" class="checkbox_pos_text"
+                    >Нажимая на кнопку, вы соглашаетесь с
+                    <a href="">политикой конфиденциальности</a> и
+                    <a href="#">политикой использования cookie</a></label
+                  >
+                </div>
+                <input type="submit" value="Отправить" />
+                <div></div>
+              </from>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="questions page_section5">
+        <h2>Частые вопросы</h2>
+        <div class="questions__cell">
+          <button class="acardion" type="button">
+            Действительно ли,<br class="questions_br" />
+            психоанализ — это долго<br class="questions_br" />
+            и дорого?
+          </button>
+          <div class="questions__content">
+            <p>
+              Принято считать, что в наше время есть более быстрые методы, чем
+              психоанализ. Но краткосрочные методы нацелены на решение
+              конкретной проблемы, которую человек способен осознавать и
+              рационально подходить к её решению. Даже самая краткосрочная
+              работа — когнитивно-поведенческая терапия — длится от 16 сеансов.
+              Это четыре месяца и тот срок, за который в психоанализе происходят
+              первые изменения.
+            </p>
+            <p>
+              Психоанализ — это долгосрочная работа, но сроки зависят от желания
+              человека углубляться в особенности своей душевной жизни. Иногда
+              достаточно нескольких месяцев, чтобы разобраться с конкретным
+              запросом, а иногда анализ длится годами и обнаруживает всё новые и
+              новые грани и элементы психического.
+            </p>
+          </div>
+          <button class="acardion" type="button">
+            Нужна ли работа<br class="questions_br" />
+            с психоаналитиком, если <br class="questions_br" />у меня нет
+            <br class="questions_br1" />проблем <br class="questions_br" />в
+            отношениях с родителями?
+          </button>
+          <div class="questions__content">
+            <p>
+              Принято считать, что в наше время есть более быстрые методы, чем
+              психоанализ. Но краткосрочные методы нацелены на решение
+              конкретной проблемы, которую человек способен осознавать и
+              рационально подходить к её решению. Даже самая краткосрочная
+              работа — когнитивно-поведенческая терапия — длится от 16 сеансов.
+              Это четыре месяца и тот срок, за который в психоанализе происходят
+              первые изменения.
+            </p>
+            <p>
+              Психоанализ — это долгосрочная работа, но сроки зависят от желания
+              человека углубляться в особенности своей душевной жизни. Иногда
+              достаточно нескольких месяцев, чтобы разобраться с конкретным
+              запросом, а иногда анализ длится годами и обнаруживает всё новые и
+              новые грани и элементы психического.
+            </p>
+          </div>
+          <button class="acardion" type="button">
+            Что более эффективно — <br class="questions_br" />очные или
+            онлайн-сессии?
+          </button>
+          <div class="questions__content">
+            <p>
+              Принято считать, что в наше время есть более быстрые методы, чем
+              психоанализ. Но краткосрочные методы нацелены на решение
+              конкретной проблемы, которую человек способен осознавать и
+              рационально подходить к её решению. Даже самая краткосрочная
+              работа — когнитивно-поведенческая терапия — длится от 16 сеансов.
+              Это четыре месяца и тот срок, за который в психоанализе происходят
+              первые изменения.
+            </p>
+            <p>
+              Психоанализ — это долгосрочная работа, но сроки зависят от желания
+              человека углубляться в особенности своей душевной жизни. Иногда
+              достаточно нескольких месяцев, чтобы разобраться с конкретным
+              запросом, а иногда анализ длится годами и обнаруживает всё новые и
+              новые грани и элементы психического.
+            </p>
+          </div>
+          <button class="acardion" type="button">
+            Как выбрать специалиста?
+          </button>
+          <div class="questions__content">
+            <p>
+              Принято считать, что в наше время есть более быстрые методы, чем
+              психоанализ. Но краткосрочные методы нацелены на решение
+              конкретной проблемы, которую человек способен осознавать и
+              рационально подходить к её решению. Даже самая краткосрочная
+              работа — когнитивно-поведенческая терапия — длится от 16 сеансов.
+              Это четыре месяца и тот срок, за который в психоанализе происходят
+              первые изменения.
+            </p>
+            <p>
+              Психоанализ — это долгосрочная работа, но сроки зависят от желания
+              человека углубляться в особенности своей душевной жизни. Иногда
+              достаточно нескольких месяцев, чтобы разобраться с конкретным
+              запросом, а иногда анализ длится годами и обнаруживает всё новые и
+              новые грани и элементы психического.
+            </p>
+          </div>
+          <button class="acardion" type="button">
+            Как понять, что есть <br class="questions_br" />результат от
+            психоанализа?
+          </button>
+          <div class="questions__content">
+            <p>
+              Принято считать, что в наше время есть более быстрые методы, чем
+              психоанализ. Но краткосрочные методы нацелены на решение
+              конкретной проблемы, которую человек способен осознавать и
+              рационально подходить к её решению. Даже самая краткосрочная
+              работа — когнитивно-поведенческая терапия — длится от 16 сеансов.
+              Это четыре месяца и тот срок, за который в психоанализе происходят
+              первые изменения.
+            </p>
+            <p>
+              Психоанализ — это долгосрочная работа, но сроки зависят от желания
+              человека углубляться в особенности своей душевной жизни. Иногда
+              достаточно нескольких месяцев, чтобы разобраться с конкретным
+              запросом, а иногда анализ длится годами и обнаруживает всё новые и
+              новые грани и элементы психического.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="marquee_wrapper">
+        <div
+          class="marquee_wrapper_container"
+          data-speed="30"
+          data-direction="left"
+        >
+          <div class="mergue__track">
+            <div class="marquee_wrapper__inner">
+              <ul class="card">
+                <li>
+                  <img src="./images/li_image.png" alt="Image" />
+                </li>
+                <li>
+                  <p>безопасность пациентов</p>
+                </li>
+                <li>
+                  <img src="./images/li_image.png" alt="Image" />
+                </li>
+                <li>
+                  <p>научный подход</p>
+                </li>
+                <li>
+                  <img src="./images/li_image.png" alt="Image" />
+                </li>
+                <li>
+                  <p>честность и прозрачность</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="bg_footer bg_footer_none">
+      <footer class="footer">
+        <div class="cell">
+          <h2>Блог</h2>
+          <a href="#" class="article"
+            >Полезные статьи и информация о наших мероприятиях</a
+          >
+          <h2 class="footer__top">Записаться на прием</h2>
+          <p class="footer__m">
+            Свяжитесь с нами, мы поможем подобрать <br />специалиста и назначим
+            время первой сессии.
+          </p>
+          <p>Написать в WhatsApp <br />Написать в Telegram</p>
+          <a class="phone" href="tel:7(929)1113738">+7 (929) 111-37-38</a>
+          <p>Ответим на ваше сообщение в будни с 11 до 20 (по СПб).</p>
+          <div class="contact">
+            <h2>Читайте нас в соц. сетях</h2>
+            <p>
+              Публикуем полезные материалы, знакомим с командой, разбираем
+              интересные кейсы.
+            </p>
+            <a href="#">
+              <svg
+                width="30"
+                class="none"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.8845 0.0598835C9.18772 0.426489 5.07203 2.85919 2.42377 6.83406C1.93395 7.56924 1.22349 8.97991 0.897818 9.86371C0.039267 12.1941 -0.222075 15.0165 0.194174 17.4631C0.940812 21.8511 3.51455 25.6096 7.34017 27.8986C12.2168 30.8166 18.4657 30.686 23.2052 27.5671C28.5713 24.036 31.1021 17.5653 29.5471 11.353C28.1321 5.70013 23.4922 1.33466 17.7794 0.281501C16.9445 0.127604 15.4446 -0.0153469 14.8399 0.00132851C14.6648 0.00616566 14.2348 0.0325154 13.8845 0.0598835ZM20.4451 9.18568C20.0091 9.28668 19.5132 9.48736 14.8081 11.4675C8.35515 14.183 6.46123 14.9976 6.20339 15.1681C5.71115 15.4936 5.68205 15.954 6.13753 16.2099C6.27034 16.2845 7.00723 16.5352 7.77501 16.7671C9.13905 17.1792 9.18415 17.1882 9.74511 17.1606C10.1286 17.1417 10.4147 17.0901 10.607 17.0051C10.8886 16.8806 14.2683 14.6531 16.446 13.1567C17.6 12.3637 17.8295 12.2695 17.9021 12.5588C17.9246 12.6485 17.9049 12.7643 17.8556 12.832C17.8084 12.8967 16.6994 13.9935 15.391 15.2694C14.0825 16.5453 12.9719 17.6668 12.9228 17.7616C12.7987 18.0013 12.8113 18.2839 12.9589 18.573C13.0622 18.7753 13.3128 18.9703 14.3762 19.6766C15.0867 20.1484 16.1839 20.8859 16.8145 21.3155C18.125 22.2081 18.458 22.3797 18.9876 22.435C19.3335 22.4711 19.3835 22.46 19.5657 22.3068C20.0603 21.891 20.3382 20.7026 21.1151 15.681C21.8052 11.22 21.9604 9.83456 21.8025 9.54515C21.5927 9.16066 21.1077 9.03223 20.4451 9.18568Z"
+                  fill="#F7F6EF"
+                />
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                width="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.5527 0.0359863C13.3977 0.0500771 12.9063 0.123208 12.4607 0.198523C6.20866 1.25512 1.30309 6.15709 0.193095 12.457C0.00591161 13.5193 -0.0584084 15.484 0.059171 16.5487C0.568658 21.163 2.99563 25.0913 6.93204 27.6733C8.25394 28.5403 10.3598 29.3918 11.9676 29.7094C13.1007 29.9331 13.8001 30 15.0091 30C17.4008 30 19.4625 29.5265 21.5839 28.49C26.2003 26.2344 29.3063 21.8418 29.9303 16.6861C30.0232 15.9182 30.0232 14.0685 29.9303 13.3006C29.7257 11.6104 29.2234 9.89896 28.4945 8.40949C26.2158 3.75228 21.7573 0.626389 16.582 0.0575452C15.9864 -0.0079769 14.1772 -0.0207995 13.5527 0.0359863ZM5.50284 10.5574C5.25753 10.6559 5.19561 10.9114 5.27733 11.4878C5.63133 13.984 7.5534 17.6191 9.4806 19.4373C11.1819 21.0424 13.0613 21.8683 14.6996 21.7309C15.3651 21.6751 15.6033 21.551 15.6977 21.2107C15.738 21.0655 15.7712 20.3502 15.7714 19.621C15.7717 18.8428 15.8019 18.2391 15.8448 18.1591C15.9015 18.0531 15.9937 18.0228 16.2594 18.0228C16.8696 18.0228 17.6336 18.6551 18.7706 20.1011C19.7079 21.293 19.9164 21.5238 20.1612 21.6399C20.4999 21.8007 22.6479 21.8114 22.9526 21.6538C23.5948 21.3217 23.1805 20.3854 21.4343 18.2235C20.404 16.9479 20.2806 16.765 20.2806 16.5146C20.2806 16.3542 20.4804 15.9941 21.0274 15.1689C23.0738 12.0818 23.6016 10.8449 22.9912 10.5668C22.7029 10.4355 20.5376 10.456 20.2492 10.5929C20.0637 10.6809 19.9219 10.8836 19.4989 11.6655C18.6109 13.3069 17.5301 14.9325 16.9967 15.4292C16.6012 15.7974 16.2087 15.8594 15.9448 15.5954L15.7718 15.4225L15.7714 13.288C15.7711 11.0842 15.73 10.6832 15.4916 10.5556C15.4113 10.5125 14.608 10.4843 13.4673 10.4843C11.8697 10.4843 11.5519 10.5013 11.4197 10.594C11.1955 10.751 11.2165 11.0829 11.4753 11.4706C11.9372 12.1627 11.9676 12.3419 11.9676 14.3665C11.9676 15.4959 11.9396 16.2527 11.8947 16.3366C11.8474 16.4249 11.7472 16.4729 11.6103 16.4729C10.991 16.4729 9.87166 14.5669 9.00563 12.0381C8.58153 10.7996 8.53799 10.7109 8.29262 10.584C8.06965 10.4686 5.77801 10.4468 5.50284 10.5574Z"
+                  fill="#F7F6EF"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="cell">
+          <h2>Как нас найти</h2>
+          <p>
+            Принимаем в больших светлых кабинетах в Московском <br />районе
+            Санкт-Петербурга рядом с метро «Электросила».<br />
+            Также наши специалисты работают в Челябинске, <br />Перми, Сочи и
+            Белграде.
+          </p>
+          <p class="footer__text">
+            Онлайн мы работаем <br />с клиентами по всему миру.
+          </p>
+          <div class="footer__item">
+            <div class="footer__item__cell">
+              <img src="./images/img_footer1.png" alt="image" />
+            </div>
+            <div class="footer__item__cell">
+              <img src="./images/img_footer2.png" alt="image" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,22 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
   const start = document.querySelectorAll(".date");
-  const hours = document.querySelector(
-    "#timer-text-8c68798e8a8c3bf4110503e56dd68f07-hours"
-  );
-  const minutes = document.querySelector(
-    "#timer-text-8c68798e8a8c3bf4110503e56dd68f07-minutes"
-  );
+
   let date = new Date(); // Текущая дата
   // const data = document.querySelector("#date").innerHTML = date
   date.setDate(date.getDate() + 2); // Добавляем один день
   let arr = date.getDate(); // Выводим измененную дату
 
+
+   const hoursElement = document.querySelector(".timer .hours ");
+  const mintsElement = document.querySelector(".timer .minuts");
+  const secondsElement = document.querySelector(".timer .seconds");
+
+    let hours = 1,
+     mints = 36,
+     second = 10,
+     mileseconds = 0
+    setInterval(srartTimer, 10)
+    
+    function srartTimer() {
+     mileseconds++
+      if(mileseconds > 99) {
+        second--
+        secondsElement.innerText =  second
+        mileseconds = 0
+      }
+        if(second < 9) {
+            secondsElement.innerText = "0" + second
+        }
+         if(second < 9) {
+            secondsElement.innerText =  second
+        }
+        if (second < 1) {
+          console.log("OK");
+          
+            mints--
+           mintsElement.innerText =  mints
+           second = 60
+           secondsElement.innerText =   second
+        }
+
+        if(mints < 9) {
+          mintsElement.innerText + mintsElement
+        }
+
+        if(mints > 9) {
+          mintsElement.innerText + mintsElement
+        }
+
+        if(mints < 1) {
+          hours--
+             hoursElement.innerText =  "0" + hoursElement
+          mints = 60
+           mintsElement.innerText + mintsElement
+        }
+    }
+
+
   function changeDate() {
     start.forEach((date) => {
       date.innerHTML = arr;
     });
-    hours.innerHTML = "годин";
-    minutes.innerHTML = "хвилин";
+    
   }
 
   function TimeCount() {
