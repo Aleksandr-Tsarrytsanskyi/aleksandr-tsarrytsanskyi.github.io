@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".center_slider .swiper") 
+   
   
+  if (window.innerWidth > 935) {
+    slider.classList.remove("center")
+    slider.classList.add("slider3")
+  }
   
     function isMobileBurgerMenu() {
     const menuLinks = document.querySelectorAll(".header__link[data-goto]");
