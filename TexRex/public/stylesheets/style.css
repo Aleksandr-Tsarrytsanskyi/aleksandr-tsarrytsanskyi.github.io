@@ -99,22 +99,7 @@ p {
     margin-top: 20px;
 }
 
-.header .cell:nth-child(1) {
- background: url(../images/bg_logo.png) no-repeat center;
-    width: 272px;
-    height: 102px;
-    left: 63px;
-    position: relative;
-    top: -17px;
-}
 
-
-
-.header .cell:nth-child(1) > nav {
-    position: relative;
-    left: 100px;
-    top: 20px;
-}
 
 .header .cell:nth-child(3) {
   margin-left: 507px;
