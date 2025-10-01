@@ -97,7 +97,7 @@ p {
     justify-content: center;
     
     height: 81px;
-    background: url("../images/bg_logo.png") no-repeat left -3% bottom 77%;
+    background: url("../images/bg_logo.png") no-repeat left -10% bottom 105%;
 }
 
 .header .cell:first-child > nav {
