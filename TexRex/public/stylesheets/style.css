@@ -990,9 +990,14 @@ cursor: pointer;
 
 .menu {
   display: grid;
-  grid-template-columns: 1600px;
-  justify-content: center;
+  grid-template-columns: 600px;
   margin-top: 150px;
+  margin-bottom: 70px;
+}
+
+.width_menu {
+  width: 1600px;
+  margin: auto;
 }
 
 .menu li {
@@ -1011,7 +1016,683 @@ color: #fff;
   color: #d29440;
 }
 
+.mySwiperMain, .mySwiperThumbs {
+  width: 1008px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
+.mySwiperThumbs .swiper-slide  {
+  cursor: pointer;
+}
+
+.description .swiper-slide-thumb-active:after {
+   content: ''; /* Обязательно для псевдоэлементов */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
+  opacity: 1; /* Полная непрозрачность затемнения */
+  pointer-events: none; /* Чтобы не мешал кликам */
+  z-index: 10; /* Убедитесь, что он поверх миниатюры */
+}
+
+.description__item {
+  display: grid;
+  grid-template-columns: 1008px 522px;
+  grid-gap: 0px 64px;
+  justify-content: center;
+}
+
+.description__title {
+  font-size: 16px;
+line-height: 150%;
+font-family: "Roboto Regular";
+color: rgba(255, 255, 255, 0.5);
+}
+
+.description__subtitle {
+  font-size: 40px;
+   font-family: "Roboto Medium";
+line-height: 135%;
+color: #fff;
+margin-top: 10px;
+margin-bottom: 30px;
+}
+
+.description__reviews {
+  display: grid;
+  grid-template-columns: 120px 89px;
+  align-items: center;
+  margin-bottom: 10px;
+  grid-gap: 0px 10px;
+}
+
+.description__reviews p {
+  color: #d29440;
+  font-size: 18px;
+line-height: 150%;
+font-family: "Roboto Medium";
+}
+
+.description__text {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Regular";
+  color: rgba(255, 255, 255, 0.5);;
+}
+
+.description__gram {
+  display: grid;
+  grid-template-columns: 114px 91px;
+  grid-gap: 0px 10px;
+  margin-top: 20px;
+}
+
+.description__gram .cell {
+  height: 59px;
+}
+
+.description__gram .cell:first-child {
+border-radius: 1000px;
+background-color: #d29440;
+width: 114px;
+height: 59px;
+max-height: 59px;
+}
+
+.description__gram .cell:first-child > p{
+  color: #fff;
+}
+
+.description__gram .cell:last-child > p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.description__gram .cell:last-child {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+border-radius: 1000px;
+
+width: 91px;
+height: 59px;
+max-height: 59px
+}
+
+.description__gram p {
+  font-size: 18px;
+line-height: 150%;
+text-align: center;
+line-height: 59px;
+}
+
+.description_price {
+  display: grid;
+  grid-template-columns: 116px 57px 56px;
+  grid-gap: 0px 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.description_price .price {
+  font-size: 36px;
+line-height: 135%;
+font-family: "Roboto Medium";
+color: #fff;
+}
+
+.description_price .discount {
+font-size: 18px;
+line-height: 150%;
+ font-family: "Roboto Regular";
+ color: rgba(255, 255, 255, 0.5);
+}
+
+.description_price .percent {
+  width: 56px;
+  height: 39px;
+  background-color: #d29440;
+  border-radius: 2px;
+}
+
+.description_price .percent p {
+  font-size: 18px;
+line-height: 150%;
+font-family: "Roboto Regular";
+color: #fff;
+text-align: center;
+line-height: 39px;
+}
+
+.description__quantity {
+  display: grid;
+  grid-template-columns: 59px 10px 59px;
+  justify-items: center;
+  grid-gap: 0px 200px;
+  background-color:  rgba(255, 255, 255, 0.05);;
+}
+
+.description__quantity button {
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+
+
+}
+
+.description__quantity .cell {
+  height: 59px;
+}
+
+.description__quantity .counter {
+  font-size: 18px;
+line-height: 150%;
+  font-family: "Roboto Regular";
+}
+
+.description__addcart button {
+  border-radius: 2px;
+width: 380px;
+height: 59px;
+max-height: 59px;
+font-size: 18px;
+font-family: "Roboto Medium";
+border: none;
+background: #d29440;
+color: #fff;
+cursor: pointer;
+}
+
+.description__addcart {
+  display: grid;
+  grid-template-columns: 391px 59px 59px;
+  grid-gap: 0px 5px;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.description__addcart .cell:nth-child(2), .description__addcart .cell:nth-child(3) {
+  border-radius: 2px;
+width: 59px;
+height: 61px;
+
+background-color: #d29440;
+text-align: center;
+line-height: 59px;
+}
+
+.description__addcart .cell:nth-child(2) > a {
+  margin-top: 13px;
+  display: block;
+}
+
+.description__addcart .cell:nth-child(3) > a {
+  margin-top: 8px;
+  display: block;
+} 
+
+.description__stock {
+  font-size: 18px;
+line-height: 150%;
+font-family: "Roboto Regular";
+background: url("../images/TEA/stock.png") no-repeat right 37%;
+width: 256px;
+line-height: 36px;
+color: rgba(255, 255, 255, 0.5);
+}
+
+.instructions_btn, .description__delivery {
+  font-size: 18px;
+line-height: 150%;
+border: none;
+background: none;
+background-image: url("../images/TEA/btn_click.png");
+background-repeat: no-repeat;
+background-position: right;
+width: 502px;
+color: #fff;
+text-align: left;
+cursor: pointer;
+margin-bottom: 50px;
+}
+
+.description__tabs_content  {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all;
+}
+
+.description__tabs_content.active {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.description__delivery_content ul li {
+  float: left;
+  margin-right: 10px;
+}
+
+.description__delivery_content p {
+  font-size: 18px;
+line-height: 150%;
+ font-family: "Roboto Regular";
+ position: relative;
+ top: 15px;
+
+
+}
+
+.clear {
+  clear: both;
+}
+
+.tabs_nav_btn.active {
+  color: #d29440;
+  border-bottom: 1px solid #d29440;
+}
+
+
+.description__tabs ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+.description__tabs ul li:first-child {
+    margin-left: 0px;
+}
+
+.description__tabs button {
+  background: none;
+  border: none;
+  font-size: 18px;
+line-height: 150%;
+  font-family: "Roboto Medium";
+  color: #fff;
+  width: 530px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.characteristics {
+  display: grid;
+  grid-template-columns: 217px 348px;
+  width: 1600px;
+  margin: auto;
+  grid-gap: 0px 229px;
+  margin-top: 40px;
+}
+
+.characteristics h2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 24px;
+line-height: 150%;
+ font-family: "Roboto Regular";
+ color: #fff;
+ margin-bottom: 30px;
+}
+
+.characteristics .left li {
+  margin-bottom: 30px;
+}
+
+.characteristics .left li p {
+  font-size: 18px;
+line-height: 150%;
+color: rgba(255, 255, 255, 0.5);
+  font-family: "Roboto Regular";
+}
+
+.characteristics .right p {
+    font-size: 18px;
+line-height: 150%;
+font-family: "Roboto Regular";
+}
+
+.characteristics .right li {
+  margin-bottom: 30px;
+}
+
+/* .characteristics .bottom {
+  margin-bottom: 31px !important;
+}
+
+
+
+.characteristics .top {
+  margin-bottom: 25px !important;
+} */
+
+.characteristics .left_bottom {
+  margin-bottom: 160px !important;
+}
+
+.description_content_about {
+  width: 1600px;
+  margin: auto;
+ 
+}
+
+.description_content_about h2 {
+  font-size: 24px;
+line-height: 150%;
+font-family: "Roboto Regular";
+color: #fff;
+margin-bottom: 20PX;
+}
+
+.description_content_about .width p {
+  font-size: 18px;
+line-height: 150%;
+color: rgba(255, 255, 255, 0.5);
+font-family: "Roboto Medium";
+}
+
+.description_content_about .width {
+  width: 790px;
+  margin-bottom: 60px;
+}
+
+.description_content_about .video {
+  display: grid;
+  grid-template-columns: 924px 790px;
+  justify-content: center;
+}
+
+.video_title {
+  border-radius: 2px;
+background-color: #d29440;
+width: 170px;
+height: 39px;
+text-align: center;
+}
+
+
+.video_title p {
+  font-size: 18px;
+line-height: 150%;
+  font-family: "Roboto Regular";
+  line-height: 39px;
+}
+
+.video h2 {
+  font-size: 120px;
+line-height: 135%;
+font-family: "Roboto Medium";
+color: #fff;
+}
+
+.video a {
+  border-radius: 2px;
+display: block;
+width: 152px;
+height: 59px;
+padding-left: 20px;
+max-height: 59px;
+text-align: left;
+line-height: 59px;
+color: #fff;
+background-color: #d29440;
+background-image: url("../images/TEA/Vector.png");
+background-repeat: no-repeat;
+background-position: 109px 22px;
+}
+
+.video .cell:last-child {
+  position: relative;
+  left: -100px;
+  top: 100px;
+}
+
+.description__user_reviews select {
+  background: black;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding-right: 10px;
+  margin-top: 40px;
+  font-family: "Roboto Regular";
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:  100px 100px;
+  width: 1600px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: end
+}
+
+.description__user_reviews .grid p {
+  font-size: 18px;
+line-height: 150%;
+color: rgba(255, 255, 255, 0.5);
+  font-family: "Roboto Regular";
+}
+
+.description__user_reviews .star button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.5);;
+border-radius: 1000px;
+padding: 16px 18px;
+max-height: 59px;
+color: rgba(255, 255, 255, 0.5);
+}
+
+.description__user_reviews .star {
+  display: grid;
+  grid-template-columns: 68px 90px 100px 100px 100px 100px;
+  width: 1600px;
+  margin: auto;
+  margin-bottom: 40px;
+
+}
+
+.description__user_reviews .all {
+    background: #d29440 !important;
+}
+
+.description__user_reviews .star button:hover {
+  background: #d29440 !important;
+}
+
+.description__user_reviews .user_profile {
+  display: grid;
+  grid-template-columns: 64px 200px;
+  grid-gap: 0px 10px;
+  align-items: center;
+ margin-bottom: 10px;
+}
+
+.user_profile .name {
+font-size: 24px;
+line-height: 150%;
+font-family: "Roboto Medium";
+}
+
+.user_width {
+  width: 1600px;
+  margin: auto;
+}
+
+
+.user .data {
+  display: grid;
+  grid-template-columns: 119px 231px;
+  grid-gap: 0px 10px;
+  margin-bottom: 15px;
+}
+
+
+.user .data p {
+  font-size: 18px;
+line-height: 150%;
+font-family: "Roboto Regular";
+}
+
+.user__text {
+  font-size: 18px;
+line-height: 150%;
+color:  rgba(255, 255, 255, 0.5);
+ font-family: "Roboto Medium";
+}
+
+.user {
+  width: 1140px;
+}
+
+.description__user_reviews {
+  display: grid;
+  grid-template-columns: 1140px 390px;
+  justify-content: center;
+  grid-gap: 0px 67px;
+}
+
+.description__user_reviews .title {
+  font-size: 120px;
+
+color: #fff;
+ font-family: "Roboto Medium";
+}
+
+.description__user_reviews sub {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  top: -15px
+}
+
+.description__user_reviews .stars {
+  display: grid;
+  grid-template-columns: 120px 90px;
+  grid-gap: 0px 10px;
+}
+
+.description__user_reviews .stars p {
+  font-size: 18px;
+line-height: 150%;
+ font-family: "Roboto Regular";
+ color: rgba(255, 255, 255, 0.5);
+}
+
+.grade__content {
+  display: grid;
+  grid-template-columns: 10px 24px 250px 100px;
+  align-items: center;
+  grid-gap: 0px 5px;
+}
+
+.grade__content .cell:first-child > p {
+  font-size: 18px;
+line-height: 150%;
+  font-family: "Roboto Regular";
+}
+
+.grade__content .cell:nth-child(4) > p {
+  font-size: 18px;
+    font-family: "Roboto Regular";
+line-height: 150%;
+color: rgba(255, 255, 255, 0.5);
+}
+
+.grade__content .cell:nth-child(3) {
+  height: 6px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 240px;
+}
+
+.grade {
+  margin-top: 20px;
+}
+
+
+.grade .width1 {
+  height: 6px;
+  border-radius: 2px;
+  width: 50px;
+  background-color: #d29440;
+}
+
+.grade .width2 {
+    height: 6px;
+  border-radius: 2px;
+  width: 150px;
+  background-color: #d29440;
+}
+
+.user {
+  margin-bottom: 40px;
+}
+
+.grade_btn {
+  border-radius: 2px;
+width: 375px;
+height: 59px;
+max-height: 59px;
+background: #d29440;
+border: none;
+font-family: "Roboto Medium";
+text-align: center;
+color: #fff;
+font-size: 18px;
+cursor: pointer;
+margin-top: 20px;
+}
+
+.delete_reviews {
+  border: none;
+  background: none;
+  color: #fff;
+   font-family: "Roboto Regular";
+   font-size: 18px;
+   position: relative;
+  left: -211px;
+    top: 46px;
+}
+
+/* .description__user_reviews .cell:last-child {
+  position: relative;
+  top: -100px;
+} */
+
+.top_grade_rew {
+  margin-top: 150px;
+}
+
+.recommend_slider  {
+  width: 1588px;
+}
+
+.recommend_slider_title {
+font-size: 160px !important;
+line-height: 135% !important;
+font-family: "Roboto Bold";
+color: rgba(255, 255, 255, 0.05);
+}
+
+.description__item .swiper-navigation{
+   position: relative;
+    top: -180px;
+    z-index: 500;
+    left: 10px;
+}
+
+
+.description__item .swiperNext {
+  position: relative;
+  left: 90%;
+}
 
 
 

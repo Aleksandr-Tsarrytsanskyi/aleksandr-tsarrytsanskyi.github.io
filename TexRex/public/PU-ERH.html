@@ -190,33 +190,35 @@
       </div>
     </header>
     <main>
-      <section class="menu">
-        <div class="cell">
-          <nav>
-            <ul>
-              <li>
-                <a href="#">ГЛАВНАЯ</a>
-              </li>
-              <li>
-                <p>/</p>
-              </li>
-              <li>
-                <a href="#">КАТАЛОГ</a>
-              </li>
-              <li>
-                <p>/</p>
-              </li>
-              <li>
-                <a href="#" class="active">ЧАЙ ПУЭР ОТ ТАРАСА ПУШКА</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <section class="width_menu">
+        <div class="menu">
+          <div class="cell">
+            <nav>
+              <ul>
+                <li>
+                  <a href="#">ГЛАВНАЯ</a>
+                </li>
+                <li>
+                  <p>/</p>
+                </li>
+                <li>
+                  <a href="#">КАТАЛОГ</a>
+                </li>
+                <li>
+                  <p>/</p>
+                </li>
+                <li>
+                  <a href="#" class="active">ЧАЙ ПУЭР ОТ ТАРАСА ПУШКА</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          </div>
       </section>
       <section class="description">
-        <div class="description item">
+        <div class="description__item">
           <div class="cell">
-            <div class="swiper slider_description">
+            <div class="swiper mySwiperMain">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -273,7 +275,7 @@
               <!-- If we need pagination -->
             </div>
              
-            <div class=" swiper recommend_slider_min slider_description_min">
+            <div class=" swiper  mySwiperThumbs">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -354,7 +356,7 @@
               подходит для снятия нервного напряжения после напряжённого дня,
               помогая восстановить силы простым и натуральным способом.
             </p>
-            <div class="gram">
+            <div class="description__gram">
               <div class="cell">
                 <p>25 грамм</p>
               </div>
@@ -375,16 +377,24 @@
                 </div>
               </div>
             </div>
-            <div class="quantity">
+            <div class="description__quantity">
               <div class="cell">
-                <button type="button">-</button>
+                <button type="button">
+                  <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M28.5 15.5H4.5V17.5H28.5V15.5Z" fill="white" />
+</svg>
+                </button>
               </div>
               <div class="cell">
                 \
                 <p class="counter">0</p>
               </div>
               <div class="cell">
-                <button type="button">+</button>
+                <button type="button">
+                  <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M28.5 15.5H17.5V4.5H15.5V15.5H4.5V17.5H15.5V28.5H17.5V17.5H28.5V15.5Z" fill="white" />
+</svg>
+                </button>
               </div>
             </div>
             <div class="description__addcart">
@@ -419,6 +429,7 @@
                   <p>Доставка по всей территории РФ</p>
                 </li>
               </ul>
+              <div class="clear"></div>>
               <ul>
                 <li>
                   <img src="./images/TEA/Screenshot_20_06.png" alt="Image" />
@@ -427,6 +438,7 @@
                   <p>Самовывоз из магазина — бесплатно</p>
                 </li>
               </ul>
+              <div class="clear"></div>>
               <ul>
                 <li>
                   <img src="./images/TEA/Screenshot_20_08.png" alt="Image" />
@@ -442,22 +454,24 @@
           <div class="cell">
             <ul>
               <li>
-                <button type="button">ОПИСАНИЕ</button>
+                <button type="button" class="tabs_nav_btn">ОПИСАНИЕ</button>
               </li>
               <li>
-                <button type="button" class="active">ХАРАКТЕРИСТИКИ</button>
+                <button type="button"  class="tabs_nav_btn active"class="active">ХАРАКТЕРИСТИКИ</button>
               </li>
               <li>
-                <button type="button">ОТЗЫВЫ</button>
+                <button type="button" class="tabs_nav_btn">ОТЗЫВЫ</button>
               </li>
             </ul>
           </div>
         </div>
+        <div class="clear"></div>
         <div class="content_tabs">
           <div class="cell">
-            <div class="description__tabs_content characteristics">
+            <div class="description__tabs_content characteristics active">
+              <h2>Характеристики чай пуэра от ТАРАСА ПУШКА</h2>
               <div class="cell">
-                <ul>
+                <ul class="left">
                   <li>
                     <p>ТИП</p>
                   </li>
@@ -494,11 +508,11 @@
                     <p>ТЕМПЕРАТУРА ВОДЫ</p>
                   </li>
                   <div class="border"></div>
-                  <li>
+                  <li class="left_bottom">
                     <p>ПОЛЕЗНЫЕ СВОЙСТВА</p>
                   </li>
                   <div class="border"></div>
-                  <li>
+                  <li >
                     <p>ГОД ПРЕССОВКИ</p>
                   </li>
                   <div class="border"></div>
@@ -517,7 +531,7 @@
                 </ul>
               </div>
               <div class="cell">
-                <ul>
+                <ul class="right">
                   <li>
                     <p>УЛУН</p>
                   </li>
@@ -533,7 +547,7 @@
                   <li>
                     <p>ПРОДОЛЬНАЯ</p>
                   </li>
-                  <li>
+                  <li class="bottom pos1" >
                     <p>МЕТОДОМ ПРОЛИВА</p>
                   </li>
                   <li>
@@ -545,7 +559,7 @@
                   <li>
                     <p>80-95 °C</p>
                   </li>
-                  <li>
+                  <li class="top">
                     <p>АНТИМИКРОБНЫЙ ЭФФЕКТ;</p>
                     <br />
                     <p>УКРЕПЛЕНИЕ ИММУНИТЕТА;</p>
@@ -569,7 +583,7 @@
                 </ul>
               </div>
             </div>
-            <div class="description__tabs_content description_content">
+            <div class="description__tabs_content description_content_about">
               <div class="cell">
                 <h2>Особенности чай пуэра от ТАРАС ПУШКА</h2>
                 <div class="width">
@@ -633,7 +647,8 @@
                     <p class="number_reviews">5 ОТЗЫВОВ</p>
                   </div>
                 </div>
-                <div class="star">
+               <div class="user_width">
+                 <div class="star">
                   <div class="cell">
                     <button type="button" class="all">Все</button>
                   </div>
@@ -670,7 +685,7 @@
                       <p>Написан <span>12 дек, 2025 16:38</span></p>
                     </div>
                   </div>
-                  <p>
+                  <p class="user__text">
                     Заполнив эти данные, вам не придется каждый раз вводить
                     информацию о вас, о адресе доставке — все это можно будет
                     указать по нажатию одной кнопки.
@@ -693,7 +708,7 @@
                       <p>Написан <span>12 дек, 2025 16:38</span></p>
                     </div>
                   </div>
-                  <p>
+                  <p class="user__text">
                     Заполнив эти данные, вам не придется каждый раз вводить
                     информацию о вас, о адресе доставке — все это можно будет
                     указать по нажатию одной кнопки.
@@ -716,7 +731,7 @@
                       <p>Написан <span>12 дек, 2025 16:38</span></p>
                     </div>
                   </div>
-                  <p>
+                  <p class="user__text">
                     Заполнив эти данные, вам не придется каждый раз вводить
                     информацию о вас, о адресе доставке — все это можно будет
                     указать по нажатию одной кнопки.
@@ -739,7 +754,7 @@
                       <p>Написан <span>12 дек, 2025 16:38</span></p>
                     </div>
                   </div>
-                  <p>
+                  <p class="user__text">
                     Заполнив эти данные, вам не придется каждый раз вводить
                     информацию о вас, о адресе доставке — все это можно будет
                     указать по нажатию одной кнопки.
@@ -762,114 +777,117 @@
                       <p>Написан <span>12 дек, 2025 16:38</span></p>
                     </div>
                   </div>
-                  <p>
+                  <p class="user__text">
                     Заполнив эти данные, вам не придется каждый раз вводить
                     информацию о вас, о адресе доставке — все это можно будет
                     указать по нажатию одной кнопки.
                   </p>
                 </div>
+               </div>
               </div>
               <div class="cell">
-                <button type="button">УДАЛИТЬ ОТЗЫВ</button>
-                <p class="title">5.0 <sub>/5</sub></p>
-                <div class="stars">
-                  <div class="cell">
-                    <img src="./images/TEA/reviews.png" alt="Image" />
+                <div class="top_grade_rew">
+                  <button type="button" class="delete_reviews">УДАЛИТЬ ОТЗЫВ</button>
+                  <p class="title">5.0<sub>/5</sub></p>
+                  <div class="stars">
+                    <div class="cell">
+                      <img src="./images/TEA/reviews.png" alt="Image" />
+                    </div>
+                    <div class="cell">
+                      <p>5 отзывов</p>
+                    </div>
                   </div>
-                  <div class="cell">
-                    <p>5 отзывов</p>
+                  <div class="grade">
+                    <div class="cell">
+                      <div class="grade__content">
+                        <div class="cell">
+                          <p>5</p>
+                        </div>
+                        <div class="cell">
+                          <img src="./images/TEA/StarIcon.png" alt="Image" />
+                        </div>
+                        <div class="cell">
+                          <div class="width1"></div>
+                        </div>
+                        <div class="cell">
+                          <p>1 отзыв</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell">
+                      <div class="grade__content">
+                        <div class="cell">
+                          <p>4</p>
+                        </div>
+                        <div class="cell">
+                          <img src="./images/TEA/StarIcon.png" alt="Image" />
+                        </div>
+                        <div class="cell">
+                          <div class="width2"></div>
+                        </div>
+                        <div class="cell">
+                          <p>4 отзыва</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell">
+                      <div class="grade__content">
+                        <div class="cell">
+                          <p>3</p>
+                        </div>
+                        <div class="cell">
+                          <img
+                            src="./images/TEA/StarIcon_shadow.png"
+                            alt="Image"
+                          />
+                        </div>
+                        <div class="cell">
+                          <div class="width"></div>
+                        </div>
+                        <div class="cell">
+                          <p>0 отзывов</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell">
+                      <div class="grade__content">
+                        <div class="cell">
+                          <p>2</p>
+                        </div>
+                        <div class="cell">
+                          <img
+                            src="./images/TEA/StarIcon_shadow.png"
+                            alt="Image"
+                          />
+                        </div>
+                        <div class="cell">
+                          <div class="width"></div>
+                        </div>
+                        <div class="cell">
+                          <p>0 отзывов</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell">
+                      <div class="grade__content">
+                        <div class="cell">
+                          <p>1</p>
+                        </div>
+                        <div class="cell">
+                          <img src="./images/TEA/StarIcon_shadow.png" alt="Image" />
+                        </div>
+                        <div class="cell">
+                          <div class="width"></div>
+                        </div>
+                        <div class="cell">
+                          <p>0 отзывов</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="grade_btn">ОСТАВИТЬ ОТЗЫВ</button>
                   </div>
                 </div>
-                <div class="grade">
-                  <div class="cell">
-                    <div class="grade__content">
-                      <div class="cell">
-                        <p>5</p>
-                      </div>
-                      <div class="cell">
-                        <img src="./images/TEA/StarIcon.png" alt="Image" />
-                      </div>
-                      <div class="cell">
-                        <div class="width"></div>
-                      </div>
-                      <div class="cell">
-                        <p>1 отзыв</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cell">
-                    <div class="grade__content">
-                      <div class="cell">
-                        <p>4</p>
-                      </div>
-                      <div class="cell">
-                        <img src="./images/TEA/StarIcon.png" alt="Image" />
-                      </div>
-                      <div class="cell">
-                        <div class="width"></div>
-                      </div>
-                      <div class="cell">
-                        <p>4 отзыва</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cell">
-                    <div class="grade__content">
-                      <div class="cell">
-                        <p>3</p>
-                      </div>
-                      <div class="cell">
-                        <img
-                          src="./images/TEA/StarIcon_shadow.png"
-                          alt="Image"
-                        />
-                      </div>
-                      <div class="cell">
-                        <div class="width"></div>
-                      </div>
-                      <div class="cell">
-                        <p>0 отзывов</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cell">
-                    <div class="grade__content">
-                      <div class="cell">
-                        <p>2</p>
-                      </div>
-                      <div class="cell">
-                        <img
-                          src="./images/TEA/StarIcon_shadow.png"
-                          alt="Image"
-                        />
-                      </div>
-                      <div class="cell">
-                        <div class="width"></div>
-                      </div>
-                      <div class="cell">
-                        <p>0 отзывов</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cell">
-                    <div class="grade__content">
-                      <div class="cell">
-                        <p>1</p>
-                      </div>
-                      <div class="cell">
-                        <img src="./images/TEA/StarIcon.png" alt="Image" />
-                      </div>
-                      <div class="cell">
-                        <div class="width"></div>
-                      </div>
-                      <div class="cell">
-                        <p>0 отзывов</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button type="button">ОСТАВИТЬ ОТЗЫВ</button>
-              </div>
             </div>
           </div>
         </div>
@@ -879,6 +897,7 @@
             <button class="swiperNext1"></button>
           </div>
           <div class="swiper recommend_slider">
+            <h2 class="recommend_slider_title">РЕКОМЕНДУЕМ</h2>
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
