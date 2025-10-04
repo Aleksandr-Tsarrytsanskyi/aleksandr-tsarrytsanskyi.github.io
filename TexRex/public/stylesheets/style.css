@@ -397,6 +397,11 @@ text-align: center;
   cursor: pointer;
 }
 
+.products__header svg.active {
+  fill: #d29440;
+
+}
+
 .products__header svg:hover {
   fill: #d29440;
 }
@@ -1402,7 +1407,7 @@ font-family: "Roboto Medium";
 
 .description_content_about .video {
   display: grid;
-  grid-template-columns: 924px 790px;
+  grid-template-columns: 811px 790px;
   justify-content: center;
 }
 
@@ -1694,5 +1699,276 @@ color: rgba(255, 255, 255, 0.05);
   left: 90%;
 }
 
+.description__addcart button:hover {
+      background: #eba749;
+}
 
+.description__addcart .cell:nth-child(2):hover, .description__addcart .cell:nth-child(3):hover {
+    background: #eba749;
+}
+
+.description__quantity .minus {
+  background-image: url("../images/TEA/minus.svg");
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 3px;
+  margin-top: 17px;
+ 
+}
+
+.description__quantity .plus {
+  background-image: url("../images/TEA/plus.svg");
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 23px;
+  margin-top: 9px;
+ 
+}
+
+.besket__toptitle {
+  font-size: 160px;
+line-height: 135%;
+font-family: "Roboto Medium";
+color: rgba(255, 255, 255, 0.05);
+grid-column-start: 1;
+grid-column-end: 3;
+}
+
+.besket {
+    display: grid;
+    grid-template-columns: 1058px 522px;
+    width: 1600px;
+    margin: auto;
+}
+
+.besket__products {
+    display: grid;
+    grid-template-columns: 80px 245px 431px 200px;
+}
+
+
+
+.besket__products .bg {
+  border-radius: 2px;
+width: 222px;
+height: 222px;
+min-width: 157px;
+max-width: 236px;
+min-height: 157px;
+max-height: 236px;
+background-color: rgba(255, 255, 255, 0.05);
+}
+
+.besket__title {
+  font-size: 16px;
+line-height: 150%;
+font-family: "Roboto Regular";
+color: rgba(255, 255, 255, 0.5);
+}
+
+.besket__subtitle {
+  font-size: 24px;
+line-height: 150%;
+font-family: "Roboto Medium";
+color: #fff;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.besket__price {
+  display: grid;
+  grid-template-columns: 117px 58px 57px;
+  grid-gap: 0px 20px;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.besket .price {
+  font-size: 36px;
+  font-family: "Roboto Medium";
+  color: #fff;
+line-height: 135%;
+}
+
+.besket  .discount {
+  font-size: 18px;
+line-height: 150%;
+  font-family: "Roboto Regular";
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.besket .percent {
+  font-size: 18px;
+line-height: 39px;
+font-family: "Roboto Regular";
+color: #fff;
+}
+
+.besket__price .cell:last-child {
+  border-radius: 2px;
+  background-color: #d29440;
+width: 56px;
+height: 39px;
+text-align: center;
+}
+
+.besket__gram {
+  font-size: 16px;
+line-height: 150%;
+font-size: 16px;
+line-height: 150%;
+color: rgba(255, 255, 255, 0.5);
+}
+
+.besket__quantity {
+  display: grid;
+  grid-template-columns: 59px 82px 59px;
+  justify-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  height: 59px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.besket__quantity button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.besket__quantity .minus {
+    background: url("../images/besket/minus.svg") no-repeat center;
+}
+
+.besket__quantity .plus {
+    background: url("../images/besket/plus.svg") no-repeat center;
+}
+
+.clear_product li {
+  float: left;
+  margin-left: 20px;
+}
+
+.clear_product {
+  float: right;
+      position: relative;
+    left: 28px;
+}
+
+.clear_product  p {
+  font-size: 18px;
+line-height: 150%;
+color: rgba(255, 255, 255, 0.5);
+ font-family: "Roboto Regular";
+}
+
+.clear_product button {
+  background: none;
+  border: none;
+  font-size: 18px;
+line-height: 150%;
+ font-family: "Roboto Medium";
+ color: #fff;
+}
+
+.besket__item {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  margin-bottom: 20px;
+  grid-gap: 0px 246px;
+}
+
+.besket__item p {
+  margin-bottom: 10px;
+}
+
+.besket__item .cell:first-child > p{
+  font-size: 18px;
+line-height: 150%;
+font-family: "Roboto Regular";
+color: rgba(255, 255, 255, 0.5);
+}
+
+.besket__item .cell:last-child > p {
+  font-size: 18px;
+line-height: 150%;
+  font-family: "Roboto Regular";
+}
+
+.besket__item .text {
+  color: #d29440;
+}
+
+
+.besket  .total_price {
+  font-size: 24px;
+line-height: 150%;
+font-family: "Roboto Regular";
+text-align: right;
+}
+
+.besket  .total_price span {
+  font-size: 40px;
+  font-family: "Roboto Medium";
+}
+
+.besket  .total_price sub {
+    font-size: 40px;
+    position: relative;
+    top: -5px;
+}
+
+.bg_title_price {
+  border-radius: 2px;
+  padding: 20px 20px;
+width: 502px;
+height: 417px;
+background-color:  rgba(255, 255, 255, 0.05);
+margin-top: 40px;
+}
+
+.promo_code .promo {
+  font-size: 18px;
+line-height: 150%;
+color: rgba(255, 255, 255, 0.5);
+font-family: "Roboto Regular";
+border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+padding-bottom: 10px;
+margin-top: 50px;
+}
+
+.besket .order {
+  display: block;
+  border-radius: 2px;
+padding: 16px 18px;
+width: 466px;
+height: 59px;
+max-height: 59px;
+background-color: #d29440;
+  font-family: "Roboto Medium";
+  color: #fff;
+  font-size: 18px;
+  background-image: url("../images/TEA/Vector.png");
+  background-repeat: no-repeat;
+  background-position: 353px 36px;
+  text-align: center;
+  line-height: 59px;
+  margin-top: 50px;
+}
+
+.besket .besket__pos {
+  position: relative;
+  top: -63px;
+}
+
+.besket__products {
+  margin-bottom: 40px;
+}
+
+.besket__products .remove {
+  position: relative;
+  top: 100px;
+  cursor: pointer;
+}
 

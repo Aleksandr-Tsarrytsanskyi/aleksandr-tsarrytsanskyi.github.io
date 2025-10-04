@@ -1,0 +1,63 @@
+.products {
+    display: grid;
+    grid-template-columns: 388px 388px 388px 388px;
+    justify-content: center;
+    grid-gap: 90px 10px;
+justify-items: stretch
+}
+
+.products .favorites__title {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: 160px;
+line-height: 135%;
+color: rgba(255, 255, 255, 0.05);
+  font-family: "Roboto Medium";
+  text-align: left;
+}
+
+.favorites_filtr select {
+    background: black;
+    border: none;
+    color: #fff;
+     font-family: "Roboto Regular";
+     font-size: 18px;
+line-height: 150%;
+outline: none;
+padding-right: 10px;
+}
+
+.favorites_filtr p {
+    font-size: 18px;
+line-height: 150%;
+ font-family: "Roboto Regular";
+ color:  rgba(255, 255, 255, 0.5);
+}
+
+.favorites_filtr button {
+    font-size: 18px;
+line-height: 150%;
+color: #fff;
+font-family: "Roboto Regular";
+background: none;
+border: none;
+cursor: pointer;
+
+}
+
+
+.favorites_filtr {
+width: 1600px;
+margin: auto;
+display: grid;
+grid-template-columns: 200px 300px;
+justify-content: space-between;
+grid-column-start: 1;
+grid-column-end: 5;
+}
+
+.favorites_filtr ul li {
+    float: left;
+    margin-left: 20px;
+}
+

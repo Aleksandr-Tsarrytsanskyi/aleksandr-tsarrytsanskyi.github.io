@@ -117,7 +117,7 @@
                 </button>
               </li>
               <li>
-                <a href="#">
+                <a href="./favorites.html">
                   <svg
                     width="33"
                     height="32"
@@ -147,7 +147,7 @@
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="./besket.html">
                   <svg
                     width="33"
                     height="32"
@@ -340,7 +340,7 @@
               <button class="swiperNext"></button>
             </div> -->
           </div>
-          <div class="cell">
+          <div class="cell basket">
             <p class="description__title">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
             <h2 class="description__subtitle">Чай пуэр от ТАРАС ПУШКА</h2>
             <div class="description__reviews">
@@ -366,10 +366,10 @@
             </div>
             <div class="description_price">
               <div class="cell">
-                <p class="price">2 800₽</p>
+                <p class="price" data-price=""><span>2 800</span>₽</p>
               </div>
               <div class="cell">
-                <p class="discount">2 800₽</p>
+                <p class="discount"><span>2 800</span>₽</p>
               </div>
               <div class="cell">
                 <div class="percent">
@@ -379,21 +379,17 @@
             </div>
             <div class="description__quantity">
               <div class="cell">
-                <button type="button">
-                  <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M28.5 15.5H4.5V17.5H28.5V15.5Z" fill="white" />
-</svg>
+                <button type="button" class="minus" disabled>
+
                 </button>
               </div>
               <div class="cell">
                 \
-                <p class="counter">0</p>
+                <p class="counter">1</p>
               </div>
               <div class="cell">
-                <button type="button">
-                  <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M28.5 15.5H17.5V4.5H15.5V15.5H4.5V17.5H15.5V28.5H17.5V17.5H28.5V15.5Z" fill="white" />
-</svg>
+                <button type="button"class="plus">
+
                 </button>
               </div>
             </div>
@@ -454,13 +450,13 @@
           <div class="cell">
             <ul>
               <li>
-                <button type="button" class="tabs_nav_btn">ОПИСАНИЕ</button>
+                <button type="button" class="tabs_nav_btn" data-tab="#tab1" > ОПИСАНИЕ</button>
               </li>
               <li>
-                <button type="button"  class="tabs_nav_btn active"class="active">ХАРАКТЕРИСТИКИ</button>
+                <button type="button"  class="tabs_nav_btn active" data-tab="#tab2" class="active">ХАРАКТЕРИСТИКИ</button>
               </li>
               <li>
-                <button type="button" class="tabs_nav_btn">ОТЗЫВЫ</button>
+                <button type="button" class="tabs_nav_btn" data-tab="#tab3" >ОТЗЫВЫ</button>
               </li>
             </ul>
           </div>
@@ -468,7 +464,7 @@
         <div class="clear"></div>
         <div class="content_tabs">
           <div class="cell">
-            <div class="description__tabs_content characteristics active">
+            <div class="description__tabs_content characteristics active" id="tab2">
               <h2>Характеристики чай пуэра от ТАРАСА ПУШКА</h2>
               <div class="cell">
                 <ul class="left">
@@ -583,7 +579,7 @@
                 </ul>
               </div>
             </div>
-            <div class="description__tabs_content description_content_about">
+            <div class="description__tabs_content description_content_about" id="tab1">
               <div class="cell">
                 <h2>Особенности чай пуэра от ТАРАС ПУШКА</h2>
                 <div class="width">
@@ -632,7 +628,7 @@
                 </div>
               </div>
             </div>
-            <div class="description__tabs_content description__user_reviews">
+            <div class="description__tabs_content description__user_reviews" id="tab3">
               <div class="cell">
                 <div class="grid">
                   <div class="cell">

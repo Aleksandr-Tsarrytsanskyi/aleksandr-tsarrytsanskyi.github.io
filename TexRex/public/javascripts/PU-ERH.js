@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 
-     const resizableSwiper1 = (
+function swiperSliders() {
+       const resizableSwiper1 = (
     breakpoint,
     swiperClass,
     swiperSettings,
@@ -69,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   
-var swiperThumbs = new Swiper(".mySwiperThumbs", {
+let swiperThumbs = new Swiper(".mySwiperThumbs", {
        loop: true,
        spaceBetween: 10,
        slidesPerView: 7, // Количество отображаемых миниатюр
@@ -78,7 +79,7 @@ var swiperThumbs = new Swiper(".mySwiperThumbs", {
    });
 
    // Инициализация основного слайдера
-   var swiperMain = new Swiper(".mySwiperMain", {
+   let swiperMain = new Swiper(".mySwiperMain", {
        loop: true,
        spaceBetween: 10,
       slidesPerView: 1,
@@ -96,6 +97,99 @@ var swiperThumbs = new Swiper(".mySwiperThumbs", {
       swiperNext.addEventListener("click", () => {
         swiperMain.slideNext();
       });
+}
+swiperSliders()
+
+function tabsProduct() {
+  const tabsbtn = document.querySelectorAll(".description__tabs .tabs_nav_btn");
+  const tabsItem = document.querySelectorAll(".description__tabs_content");
+
+  tabsbtn.forEach(tabs => {
+    tabs.addEventListener("click", function() {
+      const currentBtn = tabs;
+      const tabId = currentBtn.getAttribute("data-tab")
+      const currentTab = document.querySelector(tabId)
+      tabsItem.forEach(item => {
+         item.classList.remove("active")
+      })
+
+      tabsbtn.forEach(item => {
+         item.classList.remove("active")
+      })
+      currentBtn.classList.add("active")
+      currentTab.classList.add("active")
+    })
+  })
+}
+tabsProduct();
+
+function cartData() {
+  const cart = document.querySelector(".description__item .basket")
+
+  
+  cart.addEventListener("click", function(event) {
+      if(!event.target.matches(".minus, .plus")) {
+        return;
+      }
+      console.log(event.target);
+      
+      let currentItems, minusBtn;
+
+      if(event.target.matches(".minus") || event.target.matches(".plus")) {
+        const counter = event.target.closest(".description__quantity");
+        console.log(counter);
+        
+        currentItems = counter.querySelector(".counter");
+
+        minusBtn = counter.querySelector(".minus")
+        console.log(minusBtn);
+        
+      }
+
+
+      if(event.target.matches(".plus")) {
+        currentItems.textContent = ++currentItems.textContent
+        minusBtn.removeAttribute("disabled");
+        conculateTotalCartValue();
+      }
+
+      if(event.target.matches(".minus")) {
+        if(parseInt(currentItems.textContent) > 2) {
+          currentItems.textContent = --currentItems.textContent
+        }
+        else if(parseInt(currentItems.textContent) === 2) {
+              currentItems.textContent = --currentItems.textContent
+                minusBtn.setAttribute('disabled', 'disabled');
+            }
+             conculateTotalCartValue();
+      }
+    })
+
+     const conculateTotalCartValue = () => {
+    const cartItems = document.querySelector(".description__item .basket")
+    const cartTotalPrice = document.querySelector(".description_price .price span")
+
+    let totalCartValue = 0
+
+  
+      const itemCount = document.querySelector(".description__quantity .counter");
+
+      const itemPrice = localStorage.getItem("priceproducts")
+
+      const itemTotalPrice = parseInt(itemCount.textContent) * parseInt(itemPrice.split(" ").join(""))
+      console.log(itemTotalPrice);
+
+    //  itemPrice.textContent = formatter.format(itemTotalPrice);
+
+      totalCartValue += itemTotalPrice
+      
+   
+
+    cartTotalPrice.textContent = totalCartValue;
+  }
+}
+
+cartData();
 
   // let swiper2;
   //     const resizableSwiper2 = (
