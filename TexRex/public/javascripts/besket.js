@@ -70,33 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   
-let swiperThumbs = new Swiper(".mySwiperThumbs", {
-       loop: true,
-       spaceBetween: 10,
-       slidesPerView: 7, // Количество отображаемых миниатюр
-       freeMode: true,
-       watchSlidesProgress: true,
-   });
 
-   // Инициализация основного слайдера
-   let swiperMain = new Swiper(".mySwiperMain", {
-       loop: true,
-       spaceBetween: 10,
-      slidesPerView: 1,
-       thumbs: {
-           swiper: swiperThumbs, // Связываем основной слайдер с миниатюрами
-       },
-   });
-
-      const swiperPrev = document.querySelector(".swiperPrev");
-      const swiperNext = document.querySelector(".swiperNext");
-
-      swiperPrev.addEventListener("click", () => {
-        swiperMain.slidePrev();
-      });
-      swiperNext.addEventListener("click", () => {
-        swiperMain.slideNext();
-      });
 }
 swiperSliders()
   
