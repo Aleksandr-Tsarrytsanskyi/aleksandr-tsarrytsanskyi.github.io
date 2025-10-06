@@ -1,0 +1,181 @@
+.trearex h1 {
+  font-size: 160px;
+  font-family: "Roboto Medium";
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.05);
+}
+
+.trearex__top_item {
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 1600px;
+  height: 720px;
+}
+
+.trearex__header {
+  display: grid;
+  grid-template-columns: 388px 522px;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.trearex__header .cell:first-child {
+  background-color: rgba(255, 255, 255, 0.05);
+  height: 388px;
+}
+
+.trearex__header h2 {
+  font-size: 40px;
+  line-height: 135%;
+  color: #fff;
+  margin-top: 20px;
+}
+
+h2 {
+  font-family: "Roboto Medium";
+}
+
+.trearex__header p {
+  font-size: 18px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Roboto Regular";
+}
+
+.trearex {
+  width: 1600px;
+  margin: auto;
+}
+
+.trearex_content {
+  display: grid;
+  grid-template-columns: 514px 790px;
+  justify-content: space-evenly;
+  position: relative;
+  top: -220px;
+  align-items: center;
+}
+
+.trearex_content p {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Regular";
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.trearex_content img {
+  margin-bottom: 80px;
+}
+
+.trearex_content_pos {
+  margin-top: 220px;
+}
+
+.trearex__article {
+  display: grid;
+  grid-template-columns: 790px 522px;
+  justify-content: space-between;
+}
+
+.trearex__article h2 {
+  font-size: 40px;
+  line-height: 135%;
+  color: #fff;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-bottom: 50px;
+}
+
+.trearex__article p {
+  font-size: 18px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Roboto Regular";
+}
+
+.trearex__article .text {
+  margin-top: 60px;
+}
+
+.madia .swiper-navigation {
+  position: relative;
+  left: 95%;
+  width: 94px;
+  margin-bottom: 40px;
+}
+
+.madia {
+  margin-top: 80px;
+}
+
+.madia h2 {
+  font-size: 160px;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.05);
+  position: relative;
+  top: 60px;
+}
+
+.map svg {
+  width: 1600px;
+  margin-top: 20px;
+}
+
+.madia p {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Regular";
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 40px;
+}
+
+.madia p a {
+  color: #fff;
+  font-family: "Roboto Medium";
+}
+
+.map__content {
+    display: grid;
+    grid-template-columns: 656px 388px;
+    justify-content: space-between;
+    position: relative;
+    top: -223px;
+}
+
+.map__content h2 {
+  font-size: 40px;
+  line-height: 135%;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.map__content p {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.map__content a {
+    background-image: url("../images/footer_network.png");
+    background-repeat: no-repeat;
+    background-position: 325px 6px;
+    font-size: 18px;
+line-height: 150%;
+font-family: "Roboto Regular";
+color: #fff;
+display: block;
+text-align: right;
+width: 310px;
+padding-right: 40px;
+margin-bottom: 30px;
+}
+
+.about {
+    margin: -230px auto;
+}
+ 
+.footer {
+    margin-top: 0px;
+}
+
