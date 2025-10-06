@@ -290,6 +290,7 @@ input:focus .adres_radio {
   line-height: 150%;
   color: #fff;
   font-family: "Roboto Regular";
+  cursor: pointer;
 }
 
 .payment__card {
