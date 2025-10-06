@@ -1,0 +1,505 @@
+#payment {
+  display: grid;
+  grid-template-columns: 1147px 454px;
+
+  width: 1600px;
+  margin: auto;
+}
+
+.payment__data {
+  font-size: 160px;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: "Roboto Medium";
+}
+
+#payment input[type="text"] {
+  float: left;
+}
+
+.payment__phone {
+  display: grid;
+  grid-template-columns: 62px 449px 496px;
+  grid-gap: 0px 10px;
+  align-items: center;
+}
+
+#payment input[type="email"],
+#payment input[type="text"] {
+  width: 496px;
+  height: 59px;
+  background-color: #0a0a0a;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  padding-left: 20px;
+  font-family: "Roboto Medium";
+  margin-right: 10px;
+}
+
+#payment input[type="text"] {
+  margin-bottom: 10px;
+}
+
+#payment input[type="email"] {
+  margin-right: 0px !important;
+}
+
+#payment input[type="tel"] {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  width: 427px;
+  height: 59px;
+  background-color: #0a0a0a;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  padding-left: 20px;
+  font-family: "Roboto Medium";
+}
+
+.payment__phone p {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Medium";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  top: 17px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+}
+
+.payment__phone .cell:first-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  height: 59px;
+}
+
+.payment__surname {
+  width: 1026px !important;
+}
+
+.payment .checkbox_policy {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Regular";
+  color: #fff;
+}
+
+.payment .checkbox_policy a {
+  color: #d29440;
+}
+
+.payment .m_top {
+  margin-top: 20px;
+}
+
+.custom_ckeckbox {
+  display: inline-block;
+  background-color: #0a0a0a;
+  border-radius: 2px;
+  border: 1px solid #fff;
+  width: 20px;
+  height: 20px;
+  vertical-align: sub;
+  margin-right: 10px;
+  position: relative;
+}
+
+.custom_ckeckbox::before {
+  background-image: url("../images/besket/ckeckbox.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in;
+}
+
+.payment__policy:checked + .custom_ckeckbox::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.payment__policy {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.checkbox_policy {
+  cursor: pointer;
+}
+
+.payment__delivery {
+  font-size: 160px;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: "Roboto Medium";
+  margin-bottom: 40px;
+  display: block;
+  margin-top: 100px;
+}
+
+.payment .save {
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff;
+  font-family: "Roboto Regular";
+}
+
+.payment .adress {
+  font-size: 24px;
+  line-height: 150%;
+  color: #fff;
+  font-family: "Roboto Regular";
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+.adres_radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #0a0a0a;
+  border: 1px solid #fff;
+  vertical-align: sub;
+  border-radius: 50%;
+  margin-right: 5px;
+  position: relative;
+}
+
+.adres_radio::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in;
+}
+
+.payment__adress:checked + .adres_radio::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.payment .save {
+  cursor: pointer;
+}
+
+.payment__adress {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+input:focus .adres_radio {
+  display: none;
+}
+
+.payment__del {
+  display: grid;
+  grid-template-columns: 948px 93px;
+  margin-top: 30px;
+}
+
+.payment__del .none {
+  margin-top: 0px;
+}
+
+.street_label {
+  cursor: pointer;
+  margin-bottom: 30px;
+  display: block;
+  font-size: 24px;
+  line-height: 150%;
+  color: #fff;
+  margin-top: 30px;
+  position: relative;
+}
+
+.payment__del .text1 {
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  position: relative;
+  top: -25px;
+  left: 35px;
+}
+
+.payment__del p {
+  font-size: 16px;
+  line-height: 150%;
+  color: #d29440;
+  font-family: "Roboto Regular";
+}
+
+.payment__del .free_pos {
+  position: relative;
+  top: 100px;
+}
+
+.payment__order_data {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Regular";
+}
+
+.payment .border {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.payment__text {
+  font-size: 160px;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: "Roboto Medium";
+  margin-top: 80px;
+  display: block;
+}
+
+.payment__card_text {
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff;
+  font-family: "Roboto Regular";
+  display: block;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.payment__card_label {
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff;
+  font-family: "Roboto Regular";
+}
+
+.payment__card {
+  font-size: 24px;
+  font-family: "Roboto Regular";
+  margin-bottom: 40px;
+  position: relative;
+  left: 33px;
+  top: 5px;
+}
+
+.payment__card_details {
+  background: url("../images/besket/card.png") no-repeat center;
+  height: 510px;
+  width: 906px;
+  margin-top: 50px;
+}
+
+.payment .number_card {
+  width: 81px;
+  background-color: #0a0a0a;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-left: 30px;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  height: 59px;
+}
+
+.payment__number {
+  display: grid;
+  grid-template-columns: 81px 81px 81px 81px;
+  grid-gap: 0px 44px;
+  background-color: #0a0a0a;
+  margin-bottom: 110px;
+  position: relative;
+  top: 50px;
+  left: 30px;
+  width: 200px;
+}
+
+.payment__card_action {
+  display: grid;
+  grid-template-columns: 500px 155px;
+  margin-left: 40px;
+  margin-top: 70px;
+}
+
+.payment__text2 {
+  font-size: 18px;
+  font-family: "Roboto Regular";
+  line-height: 150%;
+  color: #fff;
+}
+
+.payment__month {
+  display: grid;
+  grid-template-columns: 34px 7px 56px;
+  align-items: center;
+  grid-gap: 0px 10px;
+}
+.payment__month input {
+  background-color: #0a0a0a;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 56px;
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  height: 59px;
+  color: #fff;
+  font-family: "Roboto Regular";
+  font-size: 18px;
+}
+
+.payment__card_details .user {
+  width: 615px !important;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.payment__card_details .cvv {
+  width: 112px;
+  height: 59px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-family: "Roboto Regular";
+  outline: none;
+  font-size: 18px;
+  background-color: #0a0a0a;
+  padding-left: 30px;
+}
+
+.payment__cvv {
+  float: right;
+  position: relative;
+  top: 5px;
+  left: -35px;
+}
+
+.payment__comment_title {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Regular";
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  margin-top: 60px;
+}
+
+.payment__comment {
+  width: 900px;
+  height: 200px;
+  background-color: #0a0a0a;
+  border-left: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-family: "Roboto Medium";
+  font-size: 18px;
+  padding-left: 20px;
+  outline: none;
+}
+
+.payment .bg {
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 492px;
+  height: 437px;
+  padding: 0px 30px;
+  margin-top: 50px;
+}
+
+.payment__order {
+  display: grid;
+  grid-template-columns: 223px 58px;
+  justify-content: center;
+  grid-gap: 0px 177px;
+  margin-top: 30px;
+}
+
+.payment__order .cell:first-child > p {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Regular";
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.payment__order p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Regular";
+}
+
+.payment__order .text {
+  color: #d29440;
+}
+
+.payment__total_price {
+  font-family: "Roboto Medium";
+  font-size: 24px;
+  line-height: 150%;
+  text-align: right;
+  position: relative;
+  left: -30px;
+  margin-top: 30px;
+}
+
+.payment__total_price span,
+.payment__total_price sub {
+  font-size: 40px;
+}
+
+.payment__total_price sub {
+  position: relative;
+  top: -5px;
+}
+
+.payment__code {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 10px;
+}
+
+.payment__code .text {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Regular";
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.payment .submit {
+  background-image: url("../images/besket/submit.png");
+  background-repeat: no-repeat;
+  background-position: 325px 22px;
+  border-radius: 2px;
+  background-color: #d29440;
+  width: 458px;
+  height: 59px;
+  max-height: 59px;
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Medium";
+  color: #fff;
+  margin-top: 50px;
+  cursor: pointer;
+}

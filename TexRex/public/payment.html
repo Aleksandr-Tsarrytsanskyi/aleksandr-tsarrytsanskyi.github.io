@@ -3,17 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./stylesheets/style.css" />
-          <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
-     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-         <script type="module" src="./javascripts/besket.js"></script>
-    <title>Корзина</title>
+     <link rel="stylesheet" href="./stylesheets/style.css" />
+     <link rel="stylesheet" href="./stylesheets/payment.css" />
+    <title>Document</title>
 </head>
 <body>
-    <header>
+      <header>
       <div class="header">
         <div class="cell">
           <nav>
@@ -116,7 +111,7 @@
                 </button>
               </li>
               <li>
-                <a href="#">
+                <a href="./favorites.html">
                   <svg
                     width="33"
                     height="32"
@@ -189,7 +184,7 @@
       </div>
     </header>
     <main>
-         <section class="width_menu">
+            <section class="width_menu">
         <div class="menu">
           <div class="cell">
             <nav>
@@ -201,703 +196,224 @@
                   <p>/</p>
                 </li>
                 <li>
-                  <a href="#" class="active">КАРЗИНА</a>
+                  <a href="#">КОРЗИНА</a>
                 </li>
-               
+                <li>
+                  <p>/</p>
+                </li>
+                <li>
+                  <a href="#" class="active">ОФОРМЛЕНИЕ ЗАКАЗА</a>
+                </li>
               </ul>
             </nav>
           </div>
           </div>
       </section>
-        <section class="besket">
-            <h2 class="besket__toptitle">КОРЗИНА</h2>
-            <div class="cell">
-                <div class="besket__products">
-                    <div class="cell">
-                        <img src="./images/TEA/remove_product.png" class="remove" alt="Image">
+      <section class="payment">
+        <div class="cell">
+            
+            <form action="#" method="POST" id="payment">
+                <div class="cell">
+                    <label class="payment__data">ДАННЫЕ</label>
+                  <div class="payment__data_user">
+                      <div>
+                        <input type="text" name="lastname" vlau="" placeholder="ИМЯ" class="payment__lastname">
                     </div>
-                    <div class="cell bg">
-                        <img src="./images/besket/product_image1.png" alt="Image">
+                      <div>
+                        <input type="text" name="firstname" vlau="" placeholder="ФАМИЛИЯ" class="payment__firstname">
                     </div>
-                    <div class="cell">
-                        <p class="besket__title">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
-                        <h2 class="besket__subtitle">Чай пуэр от ТАРАСА ПУШКА</h2>
-                       <p class="besket__gram">25 грамм</p>
-                        <Div class="besket__price">
-                            <div class="cell">
-                                  <p class="price"><span>2 800</span>₽</p>
-                            </div>
-                            <div class="cell">
-                                <p class="discount">2 800₽</p>
-                            </div>
-                            <div class="cell">
-                                <p class="percent">-14%</p>
-                            </div>
-                        </Div>
+                    <div class="clear"></div>
+                     <div>
+                        <input type="text" name="surname" vlau="" placeholder="ОТЧЕСТВО" class="payment__surname">
                     </div>
-                    <div class="cell">
-                        <div class="besket__quantity">
-                            <div class="cell">
-                                <button type="button" class="minus">-</button>
-                            </div>
-                            <div class="cell">
-                                <p class="counter">1</p>
-                            </div>
-                            <div class="cell">
-                                  <button type="button" class="plus">+</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <div class="besket__products">
-                    <div class="cell">
-                        <img src="./images/TEA/remove_product.png" class="remove" alt="Image">
-                    </div>
-                    <div class="cell bg">
-                        <img src="./images/besket/product_image1.png" alt="Image">
-                    </div>
-                    <div class="cell">
-                        <p class="besket__title">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
-                        <h2 class="besket__subtitle">Чай пуэр от ТАРАСА ПУШКА</h2>
-                       <p class="besket__gram">25 грамм</p>
-                        <Div class="besket__price">
-                            <div class="cell">
-                                 <p class="price"><span>2 800</span>₽</p>
-                            </div>
-                            <div class="cell">
-                                <p class="discount">2 800₽</p>
-                            </div>
-                            <div class="cell">
-                                <p class="percent">-14%</p>
-                            </div>
-                        </Div>
-                    </div>
-                    <div class="cell">
-                        <div class="besket__quantity">
-                            <div class="cell">
-                                <button type="button" disabled class="minus">-</button>
-                            </div>
-                            <div class="cell">
-                                <p class="counter">1</p>
-                            </div>
-                            <div class="cell">
-                                  <button type="button" class="plus">+</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <div class="besket__products">
-                    <div class="cell">
-                        <img src="./images/TEA/remove_product.png" class="remove" alt="Image">
-                    </div>
-                    <div class="cell bg">
-                        <img src="./images/besket/product_image1.png" alt="Image">
-                    </div>
-                    <div class="cell">
-                        <p class="besket__title">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
-                        <h2 class="besket__subtitle">Чай пуэр от ТАРАСА ПУШКА</h2>
-                       <p class="besket__gram">25 грамм</p>
-                        <Div class="besket__price">
-                            <div class="cell">
-                                <p class="price"><span>2 800</span>₽</p>
-                            </div>
-                            <div class="cell">
-                                <p class="discount">2 800₽</p>
-                            </div>
-                            <div class="cell">
-                                <p class="percent">-14%</p>
-                            </div>
-                        </Div>
-                    </div>
-                    <div class="cell">
-                        <div class="besket__quantity">
-                            <div class="cell">
-                                <button type="button" class="minus">-</button>
-                            </div>
-                            <div class="cell">
-                                <p class="counter">1</p>
-                            </div>
-                            <div class="cell">
-                                  <button type="button" class="plus">+</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cell besket__pos">
-                <ul class="clear_product">
-                    <li>
-                        <p>3 ТОВАРА</p>
-                    </li>
-                    <li>
-                        <button type="button">ОЧИСТИТЬ ВСЕ</button>>
-                    </li>
-                </ul>
-                <div class="clear"></div>
-                <div class="bg_title_price">
-                    <div class="besket__item">
+                       <div class="clear"></div>
+                    <div class="payment__phone">
                         <div class="cell">
-                            <p >СТОИМОСТЬ ТОВАРОВ</p>
+                            <p>+7</p>
+                        </div>
+                        <div class="cell">
+                             
+                        <input type="tel" name="phone" vlau="" placeholder="__.__._._" class="payment__phone">
+                    
+                        </div>
+                        <div class="cell">
+                             <input type="email" name="mail" vlau="" placeholder="ЭЛ. ПОЧТА" class="payment__mail">
+                        </div>
+                    </div>
+                     
+                     <div class="clear"></div>
+                    <div class="m_top">
+                        <label class="checkbox_policy">
+                        <input type="checkbox" name="policy"   class="payment__policy">
+                        <span class="custom_ckeckbox"></span>
+                       Я даю согласие на обработку персональных данных в <br>условиях <a href="#">Политики обработки персональных данных</a>
+                    </label>
+                    </div>
+                  </div>
+                    <label class="payment__delivery">ДОСТАВКА</label>
+                     <div>
+                        <label  class="save">
+                        <input type="radio" name="adress" vlau=""   class="payment__adress">
+                        <span class="adres_radio"></span>
+                        Сохраненный адрес
+                        </label>
+                        <p class="adress">г. Минск, ул. Карбышева, д. 58/4, кв. 157</p>
+                    </div>
+                     <div>
+                        <input type="text" name="city" vlau="" placeholder="ГОРОД, НАСЕЛЕННЫЙ ПУНКТ" class="payment__city">
+                    </div>
+                    <div>
+                        <input type="text" name="street" vlau="" placeholder="ГОРОД, НАСЕЛЕННЫЙ ПУНКТ" class="payment__street">
+                    </div>
+                     <div>
+                        <input type="text" name="home" vlau="" placeholder="ДОМ" class="payment__home">
+                    </div>
+                      <div>
+                        <input type="text" name="apartment" vlau="" placeholder="КВАРТИРА / КОМНАТА" class="payment__apartment">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="payment__del">
+                        <div class="cell">
+                            <div class="border">  
+                                <label class="street_label none">
+                                 <input type="radio" name="pickup"  class="payment__adress ">
+                                <span class="adres_radio"></span>
+                                 Самовывоз 
+                            </label>
+                            <span class="text1">ПВЗ, магазины</span>
+                            </div>
+                            <div>
+                                <label class="street_label">
+                                 <input type="radio" name="pickup"  class="payment__adress ">
+                                <span class="adres_radio"></span>
+                                 Курьер
+                            </label>
+                            <span class="text1">Служба доставки</span>
+                            </div>
+                            </div>
+                        <div class="cell">
+                            <p class="free">БЕСПЛАТНО</p>
+                            <p class="free free_pos">БЕСПЛАТНО</p>
+                        </div>
+                    </div>
+                    <p class="payment__order_data">Заказ прибудет <span>21 мая</span></p>
+                    <label class="payment__text">ОПЛАТА</label>
+                     <div>
+                         <label class="payment__card_label">
+                        <input type="radio" name="payments" class="payment__adress">
+                          <span class="adres_radio"></span>
+                       Сохраненный способ оплаты
+                    </label>
+                        
+                        <p class="payment__card">МИР, ***** **** **** 3460, DENIS SAVELYEV</p>
+                    </div>
+                      <div>
+                         <label class="payment__card_text">
+                        <input type="radio" name="card" class="payment__adress">
+                         <span class="adres_radio"></span>
+                       МИР
+                    </label>
+                        
+                    </div>
+                     <div>
+                         <label class="payment__card_text">
+                        <input type="radio" name="card" class="payment__adress">
+                         <span class="adres_radio"></span>
+                       VISA
+                    </label>
+                        
+                    </div>
+                     <div>
+                        <label class="payment__card_text">
+                        <input type="radio" name="card" class="payment__adress">
+                         <span class="adres_radio"></span>
+                       Master Card
+                    </label>
+                        
+                    </div>
+                    <div class="payment__card_details">
+                        <div class="payment__number">
+                            <div class="cell">   
+                            <input type="number" name="number_card" placeholder="XXXX" class="number_card">
+                            </div>
+                            <div class="cell">   
+                            <input type="number" name="number_card" placeholder="XXXX" class="number_card">
+                            </div>
+                            <div class="cell">   
+                            <input type="number" name="number_card" placeholder="XXXX" class="number_card">
+                            </div>
+                            <div class="cell">   
+                            <input type="number" name="number_card" placeholder="XXXX" class="number_card">
+                            </div>
+                        </div>
+                        <div class="payment__card_action">
+                            <div class="cell">
+                                <img src="./images/besket/world.png" alt="World">
+                            </div>
+                            <div class="cell">
+                                <label class="payment__text2">Действует до</label>
+                                <div class="payment__month">
+                                    <div class="cell">
+                                         <input type="number" name="month" placeholder="ММ" class="month">
+                                    </div>
+                                    <div class="cell">
+                                        <p>/</p>
+                                    </div>
+                                    <div class="cell">
+                                          <input type="number" name="year" placeholder="ГГ" class="year">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div>
+                                    <input type="text" name="user" placeholder="ИМЯ ВЛАДЕЛЬЦА КАРТЫ" class="user">
+                                </div>
+                                <div class="clear"></div>
+                                <div class="payment__cvv">
+                                     <input type="number" name="cvv" placeholder="CVC/CVV" class="cvv">
+                                </div>
+                                <div class="clear"></div>
+        
+                        <br>
+                        
+                    </div>
+                    <label class="payment__comment_title">КОММЕНТАРИЙ К ЗАКАЗУ</label>
+                    <br>
+                    <textarea name="payment__comment" class="payment__comment">
+
+                        </textarea>
+                </div>
+                <div class="cell bg">
+                    <div class="payment__order">
+                        <div class="cell">
+                            <p>СТОИМОСТЬ ТОВАРОВ</p>
                             <p>СКИДКА</p>
-                            <p>ПЕРСОНАЛЬНАЯ</p>
+                            <p>ПЕРСОНАЛЬНАЯ СКИДКА</p>
                         </div>
-                        <div class="cell">
-                            <p class="price_products">2 800₽</p>
+                        <div class="cell payment__order_price">
+                            <p>2 800₽</p>
                             <p class="text">2 800₽</p>
                             <p class="text">2 800₽</p>
                         </div>
                     </div>
-                    <p class="total_price">Итого: <span>2 800</span><sub>₽</sub></p>
-                    <div class="promo_code">
+                    <p class="payment__total_price">Итого: <span>2 800</span><sub>₽</sub></p>
+                    <div class="payment__code">
                         <div class="cell">
-                            <p class="promo">ПРОМОКОД</p>
+                            <p class="text">ПРОМОКОД</p>
                         </div>
                         <div class="cell">
-                            <p class="code"></p>
+                            <p class="promo_code"></p>
                         </div>
                     </div>
-                    <a href="./payment.html" class="order">ОФОРМИТЬ ЗАКАЗ</a>
+                    <input type="submit" name="send" value="ОПЛАТИТЬ ЗАКАЗ" class="submit">
                 </div>
-            </div>
-        </section>
-         <div class="products">
-          <div class="swiper-navigation">
-            <button class="swiperPrev1"></button>
-            <button class="swiperNext1"></button>
-          </div>
-          <div class="swiper recommend_slider">
-            <h2 class="recommend_slider_title">РЕКОМЕНДУЕМ</h2>
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="cell">
-                  <div class="products_cart products_cart_hit">
-                    <div class="products__header products_hit">
-                      <div class="cell">
-                        <div class="hit">
-                          <p>ХИТ</p>
-                        </div>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="59"
-                          height="59"
-                          viewBox="0 0 59 59"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M34.9978 18.8334C33.8722 18.8511 32.7711 19.1693 31.8058 19.7559C30.8405 20.3424 30.0451 21.1765 29.5 22.174C28.9549 21.1765 28.1595 20.3424 27.1942 19.7559C26.2289 19.1693 25.1278 18.8511 24.0022 18.8334C22.2079 18.9123 20.5173 19.7073 19.2999 21.0445C18.0825 22.3817 17.4371 24.1526 17.5048 25.9702C17.5048 32.8286 28.4564 40.7499 28.9222 41.086L29.5 41.5L30.0778 41.086C30.5436 40.7519 41.4952 32.8286 41.4952 25.9702C41.5629 24.1526 40.9175 22.3817 39.7001 21.0445C38.4827 19.7073 36.7921 18.9123 34.9978 18.8334ZM29.5 39.0077C26.2483 36.5478 19.504 30.5043 19.504 25.9702C19.4357 24.6893 19.8703 23.433 20.7129 22.4754C21.5556 21.5177 22.738 20.9363 24.0022 20.858C25.2665 20.9363 26.4489 21.5177 27.2915 22.4754C28.1342 23.433 28.5687 24.6893 28.5004 25.9702H30.4996C30.4313 24.6893 30.8658 23.433 31.7085 22.4754C32.5511 21.5177 33.7335 20.9363 34.9978 20.858C36.262 20.9363 37.4444 21.5177 38.2871 22.4754C39.1297 23.433 39.5643 24.6893 39.496 25.9702C39.496 30.5063 32.7517 36.5478 29.5 39.0077Z"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <img src="./images/product2.png" alt="Изображение" />
-                      </div>
-                    </div>
-                    <div class="products__gram">
-                      <div class="cell active">
-                        <p>25 грамм</p>
-                      </div>
-                      <div class="cell">
-                        <p>1 блин</p>
-                      </div>
-                    </div>
-                    <div class="products__reviews">
-                      <div class="cell">
-                        <p>4.7</p>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="120"
-                          height="25"
-                          viewBox="0 0 120 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17.5716 20.5L12.0004 16.4776L6.42914 20.5L8.56825 14.0039L3 10.0071H9.87469L12.0004 3.5L14.1261 10.0071H21L15.4325 14.0039L17.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M41.5716 20.5L36.0004 16.4776L30.4291 20.5L32.5682 14.0039L27 10.0071H33.8747L36.0004 3.5L38.1261 10.0071H45L39.4325 14.0039L41.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M65.5716 20.5L60.0004 16.4776L54.4291 20.5L56.5682 14.0039L51 10.0071H57.8747L60.0004 3.5L62.1261 10.0071H69L63.4325 14.0039L65.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M89.5716 20.5L84.0004 16.4776L78.4291 20.5L80.5682 14.0039L75 10.0071H81.8747L84.0004 3.5L86.1261 10.0071H93L87.4325 14.0039L89.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M113.572 20.5L108 16.4776L102.429 20.5L104.568 14.0039L99 10.0071H105.875L108 3.5L110.126 10.0071H117L111.432 14.0039L113.572 20.5ZM108 14.6584L110.73 16.6293L109.685 13.4454L112.43 11.473H109.037L108 8.29861L106.963 11.473H103.57L106.318 13.4454L105.273 16.6293L108 14.6584Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <p class="products_number_reviews">3 отзыва</p>
-                      </div>
-                    </div>
-                    <p class="products__name">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
-                    <h2>Чай пуэр от ТАРАСА ПУШКА</h2>
-                    <div class="products_price">
-                      <div class="cell">
-                        <p class="price">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="discount">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="percent">-14%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="cell">
-                  <div class="products_cart products_cart_hit">
-                    <div class="products__header products_hit">
-                      <div class="cell">
-                        <div class="hit">
-                          <p>ХИТ</p>
-                        </div>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="59"
-                          height="59"
-                          viewBox="0 0 59 59"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M34.9978 18.8334C33.8722 18.8511 32.7711 19.1693 31.8058 19.7559C30.8405 20.3424 30.0451 21.1765 29.5 22.174C28.9549 21.1765 28.1595 20.3424 27.1942 19.7559C26.2289 19.1693 25.1278 18.8511 24.0022 18.8334C22.2079 18.9123 20.5173 19.7073 19.2999 21.0445C18.0825 22.3817 17.4371 24.1526 17.5048 25.9702C17.5048 32.8286 28.4564 40.7499 28.9222 41.086L29.5 41.5L30.0778 41.086C30.5436 40.7519 41.4952 32.8286 41.4952 25.9702C41.5629 24.1526 40.9175 22.3817 39.7001 21.0445C38.4827 19.7073 36.7921 18.9123 34.9978 18.8334ZM29.5 39.0077C26.2483 36.5478 19.504 30.5043 19.504 25.9702C19.4357 24.6893 19.8703 23.433 20.7129 22.4754C21.5556 21.5177 22.738 20.9363 24.0022 20.858C25.2665 20.9363 26.4489 21.5177 27.2915 22.4754C28.1342 23.433 28.5687 24.6893 28.5004 25.9702H30.4996C30.4313 24.6893 30.8658 23.433 31.7085 22.4754C32.5511 21.5177 33.7335 20.9363 34.9978 20.858C36.262 20.9363 37.4444 21.5177 38.2871 22.4754C39.1297 23.433 39.5643 24.6893 39.496 25.9702C39.496 30.5063 32.7517 36.5478 29.5 39.0077Z"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <img src="./images/product2.png" alt="Изображение" />
-                      </div>
-                    </div>
-                    <div class="products__gram">
-                      <div class="cell active">
-                        <p>25 грамм</p>
-                      </div>
-                      <div class="cell">
-                        <p>1 блин</p>
-                      </div>
-                    </div>
-                    <div class="products__reviews">
-                      <div class="cell">
-                        <p>4.7</p>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="120"
-                          height="25"
-                          viewBox="0 0 120 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17.5716 20.5L12.0004 16.4776L6.42914 20.5L8.56825 14.0039L3 10.0071H9.87469L12.0004 3.5L14.1261 10.0071H21L15.4325 14.0039L17.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M41.5716 20.5L36.0004 16.4776L30.4291 20.5L32.5682 14.0039L27 10.0071H33.8747L36.0004 3.5L38.1261 10.0071H45L39.4325 14.0039L41.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M65.5716 20.5L60.0004 16.4776L54.4291 20.5L56.5682 14.0039L51 10.0071H57.8747L60.0004 3.5L62.1261 10.0071H69L63.4325 14.0039L65.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M89.5716 20.5L84.0004 16.4776L78.4291 20.5L80.5682 14.0039L75 10.0071H81.8747L84.0004 3.5L86.1261 10.0071H93L87.4325 14.0039L89.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M113.572 20.5L108 16.4776L102.429 20.5L104.568 14.0039L99 10.0071H105.875L108 3.5L110.126 10.0071H117L111.432 14.0039L113.572 20.5ZM108 14.6584L110.73 16.6293L109.685 13.4454L112.43 11.473H109.037L108 8.29861L106.963 11.473H103.57L106.318 13.4454L105.273 16.6293L108 14.6584Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <p class="products_number_reviews">3 отзыва</p>
-                      </div>
-                    </div>
-                    <p class="products__name">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
-                    <h2>Чай пуэр от ТАРАСА ПУШКА</h2>
-                    <div class="products_price">
-                      <div class="cell">
-                        <p class="price">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="discount">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="percent">-14%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="cell">
-                  <div class="products_cart products_cart_hit">
-                    <div class="products__header products_hit">
-                      <div class="cell">
-                        <div class="hit">
-                          <p>ХИТ</p>
-                        </div>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="59"
-                          height="59"
-                          viewBox="0 0 59 59"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M34.9978 18.8334C33.8722 18.8511 32.7711 19.1693 31.8058 19.7559C30.8405 20.3424 30.0451 21.1765 29.5 22.174C28.9549 21.1765 28.1595 20.3424 27.1942 19.7559C26.2289 19.1693 25.1278 18.8511 24.0022 18.8334C22.2079 18.9123 20.5173 19.7073 19.2999 21.0445C18.0825 22.3817 17.4371 24.1526 17.5048 25.9702C17.5048 32.8286 28.4564 40.7499 28.9222 41.086L29.5 41.5L30.0778 41.086C30.5436 40.7519 41.4952 32.8286 41.4952 25.9702C41.5629 24.1526 40.9175 22.3817 39.7001 21.0445C38.4827 19.7073 36.7921 18.9123 34.9978 18.8334ZM29.5 39.0077C26.2483 36.5478 19.504 30.5043 19.504 25.9702C19.4357 24.6893 19.8703 23.433 20.7129 22.4754C21.5556 21.5177 22.738 20.9363 24.0022 20.858C25.2665 20.9363 26.4489 21.5177 27.2915 22.4754C28.1342 23.433 28.5687 24.6893 28.5004 25.9702H30.4996C30.4313 24.6893 30.8658 23.433 31.7085 22.4754C32.5511 21.5177 33.7335 20.9363 34.9978 20.858C36.262 20.9363 37.4444 21.5177 38.2871 22.4754C39.1297 23.433 39.5643 24.6893 39.496 25.9702C39.496 30.5063 32.7517 36.5478 29.5 39.0077Z"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <img src="./images/product2.png" alt="Изображение" />
-                      </div>
-                    </div>
-                    <div class="products__gram">
-                      <div class="cell active">
-                        <p>25 грамм</p>
-                      </div>
-                      <div class="cell">
-                        <p>1 блин</p>
-                      </div>
-                    </div>
-                    <div class="products__reviews">
-                      <div class="cell">
-                        <p>4.7</p>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="120"
-                          height="25"
-                          viewBox="0 0 120 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17.5716 20.5L12.0004 16.4776L6.42914 20.5L8.56825 14.0039L3 10.0071H9.87469L12.0004 3.5L14.1261 10.0071H21L15.4325 14.0039L17.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M41.5716 20.5L36.0004 16.4776L30.4291 20.5L32.5682 14.0039L27 10.0071H33.8747L36.0004 3.5L38.1261 10.0071H45L39.4325 14.0039L41.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M65.5716 20.5L60.0004 16.4776L54.4291 20.5L56.5682 14.0039L51 10.0071H57.8747L60.0004 3.5L62.1261 10.0071H69L63.4325 14.0039L65.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M89.5716 20.5L84.0004 16.4776L78.4291 20.5L80.5682 14.0039L75 10.0071H81.8747L84.0004 3.5L86.1261 10.0071H93L87.4325 14.0039L89.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M113.572 20.5L108 16.4776L102.429 20.5L104.568 14.0039L99 10.0071H105.875L108 3.5L110.126 10.0071H117L111.432 14.0039L113.572 20.5ZM108 14.6584L110.73 16.6293L109.685 13.4454L112.43 11.473H109.037L108 8.29861L106.963 11.473H103.57L106.318 13.4454L105.273 16.6293L108 14.6584Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <p class="products_number_reviews">3 отзыва</p>
-                      </div>
-                    </div>
-                    <p class="products__name">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
-                    <h2>Чай пуэр от ТАРАСА ПУШКА</h2>
-                    <div class="products_price">
-                      <div class="cell">
-                        <p class="price">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="discount">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="percent">-14%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="cell">
-                  <div class="products_cart products_cart_hit">
-                    <div class="products__header products_hit">
-                      <div class="cell">
-                        <div class="hit">
-                          <p>ХИТ</p>
-                        </div>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="59"
-                          height="59"
-                          viewBox="0 0 59 59"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M34.9978 18.8334C33.8722 18.8511 32.7711 19.1693 31.8058 19.7559C30.8405 20.3424 30.0451 21.1765 29.5 22.174C28.9549 21.1765 28.1595 20.3424 27.1942 19.7559C26.2289 19.1693 25.1278 18.8511 24.0022 18.8334C22.2079 18.9123 20.5173 19.7073 19.2999 21.0445C18.0825 22.3817 17.4371 24.1526 17.5048 25.9702C17.5048 32.8286 28.4564 40.7499 28.9222 41.086L29.5 41.5L30.0778 41.086C30.5436 40.7519 41.4952 32.8286 41.4952 25.9702C41.5629 24.1526 40.9175 22.3817 39.7001 21.0445C38.4827 19.7073 36.7921 18.9123 34.9978 18.8334ZM29.5 39.0077C26.2483 36.5478 19.504 30.5043 19.504 25.9702C19.4357 24.6893 19.8703 23.433 20.7129 22.4754C21.5556 21.5177 22.738 20.9363 24.0022 20.858C25.2665 20.9363 26.4489 21.5177 27.2915 22.4754C28.1342 23.433 28.5687 24.6893 28.5004 25.9702H30.4996C30.4313 24.6893 30.8658 23.433 31.7085 22.4754C32.5511 21.5177 33.7335 20.9363 34.9978 20.858C36.262 20.9363 37.4444 21.5177 38.2871 22.4754C39.1297 23.433 39.5643 24.6893 39.496 25.9702C39.496 30.5063 32.7517 36.5478 29.5 39.0077Z"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <img src="./images/product2.png" alt="Изображение" />
-                      </div>
-                    </div>
-                    <div class="products__gram">
-                      <div class="cell active">
-                        <p>25 грамм</p>
-                      </div>
-                      <div class="cell">
-                        <p>1 блин</p>
-                      </div>
-                    </div>
-                    <div class="products__reviews">
-                      <div class="cell">
-                        <p>4.7</p>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="120"
-                          height="25"
-                          viewBox="0 0 120 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17.5716 20.5L12.0004 16.4776L6.42914 20.5L8.56825 14.0039L3 10.0071H9.87469L12.0004 3.5L14.1261 10.0071H21L15.4325 14.0039L17.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M41.5716 20.5L36.0004 16.4776L30.4291 20.5L32.5682 14.0039L27 10.0071H33.8747L36.0004 3.5L38.1261 10.0071H45L39.4325 14.0039L41.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M65.5716 20.5L60.0004 16.4776L54.4291 20.5L56.5682 14.0039L51 10.0071H57.8747L60.0004 3.5L62.1261 10.0071H69L63.4325 14.0039L65.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M89.5716 20.5L84.0004 16.4776L78.4291 20.5L80.5682 14.0039L75 10.0071H81.8747L84.0004 3.5L86.1261 10.0071H93L87.4325 14.0039L89.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M113.572 20.5L108 16.4776L102.429 20.5L104.568 14.0039L99 10.0071H105.875L108 3.5L110.126 10.0071H117L111.432 14.0039L113.572 20.5ZM108 14.6584L110.73 16.6293L109.685 13.4454L112.43 11.473H109.037L108 8.29861L106.963 11.473H103.57L106.318 13.4454L105.273 16.6293L108 14.6584Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <p class="products_number_reviews">3 отзыва</p>
-                      </div>
-                    </div>
-                    <p class="products__name">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
-                    <h2>Чай пуэр от ТАРАСА ПУШКА</h2>
-                    <div class="products_price">
-                      <div class="cell">
-                        <p class="price">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="discount">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="percent">-14%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="cell">
-                  <div class="products_cart products_cart_hit">
-                    <div class="products__header products_hit">
-                      <div class="cell">
-                        <div class="hit">
-                          <p>ХИТ</p>
-                        </div>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="59"
-                          height="59"
-                          viewBox="0 0 59 59"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M34.9978 18.8334C33.8722 18.8511 32.7711 19.1693 31.8058 19.7559C30.8405 20.3424 30.0451 21.1765 29.5 22.174C28.9549 21.1765 28.1595 20.3424 27.1942 19.7559C26.2289 19.1693 25.1278 18.8511 24.0022 18.8334C22.2079 18.9123 20.5173 19.7073 19.2999 21.0445C18.0825 22.3817 17.4371 24.1526 17.5048 25.9702C17.5048 32.8286 28.4564 40.7499 28.9222 41.086L29.5 41.5L30.0778 41.086C30.5436 40.7519 41.4952 32.8286 41.4952 25.9702C41.5629 24.1526 40.9175 22.3817 39.7001 21.0445C38.4827 19.7073 36.7921 18.9123 34.9978 18.8334ZM29.5 39.0077C26.2483 36.5478 19.504 30.5043 19.504 25.9702C19.4357 24.6893 19.8703 23.433 20.7129 22.4754C21.5556 21.5177 22.738 20.9363 24.0022 20.858C25.2665 20.9363 26.4489 21.5177 27.2915 22.4754C28.1342 23.433 28.5687 24.6893 28.5004 25.9702H30.4996C30.4313 24.6893 30.8658 23.433 31.7085 22.4754C32.5511 21.5177 33.7335 20.9363 34.9978 20.858C36.262 20.9363 37.4444 21.5177 38.2871 22.4754C39.1297 23.433 39.5643 24.6893 39.496 25.9702C39.496 30.5063 32.7517 36.5478 29.5 39.0077Z"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <img src="./images/product2.png" alt="Изображение" />
-                      </div>
-                    </div>
-                    <div class="products__gram">
-                      <div class="cell active">
-                        <p>25 грамм</p>
-                      </div>
-                      <div class="cell">
-                        <p>1 блин</p>
-                      </div>
-                    </div>
-                    <div class="products__reviews">
-                      <div class="cell">
-                        <p>4.7</p>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="120"
-                          height="25"
-                          viewBox="0 0 120 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17.5716 20.5L12.0004 16.4776L6.42914 20.5L8.56825 14.0039L3 10.0071H9.87469L12.0004 3.5L14.1261 10.0071H21L15.4325 14.0039L17.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M41.5716 20.5L36.0004 16.4776L30.4291 20.5L32.5682 14.0039L27 10.0071H33.8747L36.0004 3.5L38.1261 10.0071H45L39.4325 14.0039L41.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M65.5716 20.5L60.0004 16.4776L54.4291 20.5L56.5682 14.0039L51 10.0071H57.8747L60.0004 3.5L62.1261 10.0071H69L63.4325 14.0039L65.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M89.5716 20.5L84.0004 16.4776L78.4291 20.5L80.5682 14.0039L75 10.0071H81.8747L84.0004 3.5L86.1261 10.0071H93L87.4325 14.0039L89.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M113.572 20.5L108 16.4776L102.429 20.5L104.568 14.0039L99 10.0071H105.875L108 3.5L110.126 10.0071H117L111.432 14.0039L113.572 20.5ZM108 14.6584L110.73 16.6293L109.685 13.4454L112.43 11.473H109.037L108 8.29861L106.963 11.473H103.57L106.318 13.4454L105.273 16.6293L108 14.6584Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <p class="products_number_reviews">3 отзыва</p>
-                      </div>
-                    </div>
-                    <p class="products__name">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
-                    <h2>Чай пуэр от ТАРАСА ПУШКА</h2>
-                    <div class="products_price">
-                      <div class="cell">
-                        <p class="price">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="discount">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="percent">-14%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="cell">
-                  <div class="products_cart products_cart_hit">
-                    <div class="products__header products_hit">
-                      <div class="cell">
-                        <div class="hit">
-                          <p>ХИТ</p>
-                        </div>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="59"
-                          height="59"
-                          viewBox="0 0 59 59"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M34.9978 18.8334C33.8722 18.8511 32.7711 19.1693 31.8058 19.7559C30.8405 20.3424 30.0451 21.1765 29.5 22.174C28.9549 21.1765 28.1595 20.3424 27.1942 19.7559C26.2289 19.1693 25.1278 18.8511 24.0022 18.8334C22.2079 18.9123 20.5173 19.7073 19.2999 21.0445C18.0825 22.3817 17.4371 24.1526 17.5048 25.9702C17.5048 32.8286 28.4564 40.7499 28.9222 41.086L29.5 41.5L30.0778 41.086C30.5436 40.7519 41.4952 32.8286 41.4952 25.9702C41.5629 24.1526 40.9175 22.3817 39.7001 21.0445C38.4827 19.7073 36.7921 18.9123 34.9978 18.8334ZM29.5 39.0077C26.2483 36.5478 19.504 30.5043 19.504 25.9702C19.4357 24.6893 19.8703 23.433 20.7129 22.4754C21.5556 21.5177 22.738 20.9363 24.0022 20.858C25.2665 20.9363 26.4489 21.5177 27.2915 22.4754C28.1342 23.433 28.5687 24.6893 28.5004 25.9702H30.4996C30.4313 24.6893 30.8658 23.433 31.7085 22.4754C32.5511 21.5177 33.7335 20.9363 34.9978 20.858C36.262 20.9363 37.4444 21.5177 38.2871 22.4754C39.1297 23.433 39.5643 24.6893 39.496 25.9702C39.496 30.5063 32.7517 36.5478 29.5 39.0077Z"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <img src="./images/product2.png" alt="Изображение" />
-                      </div>
-                    </div>
-                    <div class="products__gram">
-                      <div class="cell active">
-                        <p>25 грамм</p>
-                      </div>
-                      <div class="cell">
-                        <p>1 блин</p>
-                      </div>
-                    </div>
-                    <div class="products__reviews">
-                      <div class="cell">
-                        <p>4.7</p>
-                      </div>
-                      <div class="cell">
-                        <svg
-                          width="120"
-                          height="25"
-                          viewBox="0 0 120 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17.5716 20.5L12.0004 16.4776L6.42914 20.5L8.56825 14.0039L3 10.0071H9.87469L12.0004 3.5L14.1261 10.0071H21L15.4325 14.0039L17.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M41.5716 20.5L36.0004 16.4776L30.4291 20.5L32.5682 14.0039L27 10.0071H33.8747L36.0004 3.5L38.1261 10.0071H45L39.4325 14.0039L41.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M65.5716 20.5L60.0004 16.4776L54.4291 20.5L56.5682 14.0039L51 10.0071H57.8747L60.0004 3.5L62.1261 10.0071H69L63.4325 14.0039L65.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M89.5716 20.5L84.0004 16.4776L78.4291 20.5L80.5682 14.0039L75 10.0071H81.8747L84.0004 3.5L86.1261 10.0071H93L87.4325 14.0039L89.5716 20.5Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M113.572 20.5L108 16.4776L102.429 20.5L104.568 14.0039L99 10.0071H105.875L108 3.5L110.126 10.0071H117L111.432 14.0039L113.572 20.5ZM108 14.6584L110.73 16.6293L109.685 13.4454L112.43 11.473H109.037L108 8.29861L106.963 11.473H103.57L106.318 13.4454L105.273 16.6293L108 14.6584Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="cell">
-                        <p class="products_number_reviews">3 отзыва</p>
-                      </div>
-                    </div>
-                    <p class="products__name">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
-                    <h2>Чай пуэр от ТАРАСА ПУШКА</h2>
-                    <div class="products_price">
-                      <div class="cell">
-                        <p class="price">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="discount">2 800₽</p>
-                      </div>
-                      <div class="cell">
-                        <p class="percent">-14%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- If we need pagination -->
-          </div>
+            </form>
         </div>
+        <div class="cell"></div>
+      </section>  
     </main>
-     <footer class="footer">
+    <footer class="footer">
       <div class="cell">
         <a href="./index.html">
           <svg
@@ -1010,5 +526,6 @@
         <button type="button" class="footer__up">НАВЕРХ</button>
       </div>
     </footer>
+    
 </body>
 </html>
