@@ -995,7 +995,7 @@ cursor: pointer;
 
 .menu {
   display: grid;
-  grid-template-columns: 600px;
+  grid-template-columns: 640px;
   margin-top: 150px;
   margin-bottom: 70px;
 }
@@ -1979,6 +1979,102 @@ background-color: #d29440;
   justify-content: center;
 }
 
+.paid {
+  width: 1600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1600px;
+  position: relative;
+  height: 600px;
+}
+
+.paid__number_order {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 2px;
+padding: 8px 12px;
+width: 166px;
+
+}
+
+.paid__number_order  p {
+  text-align: center;
+  font-size: 16px;
+line-height: 150%;
+color: rgba(255, 255, 255, 0.5);
+font-family: "Roboto Regular";
+}
+
+
+.paid h1 {
+  font-size: 120px;
+line-height: 135%;
+color: #fff;
+font-family: "Roboto Medium";
+}
+
+.paid__text {
+  font-size: 18px;
+line-height: 150%;
+color:  rgba(255, 255, 255, 0.5);
+font-family: "Roboto Regular";
+width: 764px;
+}
+
+.paid__track {
+    border-radius: 2px;
+    background-image: url(../images/besket/submit.png);
+    background-repeat: no-repeat;
+    background-position: 199px 21px;
+    width: 225px;
+    height: 59px;
+    max-height: 59px;
+    border: none;
+    background-color: #d29440;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Roboto Medium";
+    margin-top: 20px;
+    text-align: left;
+    line-height: 59px;
+    display: block;
+    padding-left: 18px;
+}
+
+.paid_back_catalog {
+  color: #fff;
+  font-size: 18px;
+  font-family: "Roboto Regular";
+  background-image: url("../images/comparison/arrow_left.png");
+  background-repeat: no-repeat;
+  background-position: 3px 5px;
+    display: block;
+    width: 200px;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+.paid__accaunt {
+  background: url("../images/accaunt.png") no-repeat right;
+font-size: 18px;
+  font-family: "Roboto Regular";
+  color: #d29440;
+  display: block;
+    width: 206px;
+    position: relative;
+    top: 10px
+}
+
+.paid__item {
+  display: grid;
+  grid-template-columns: 238px 244px;
+  align-items: center;
+  grid-gap: 0px 30px;
+  
+}
 
 
 

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./stylesheets/style.css" />
     <link rel="stylesheet" href="./stylesheets/profile.css" />
-     <script type="module" src="./javascripts/profile.js"></script>
+    <link rel="stylesheet" href="./stylesheets/payment.css" />
+    <script type="module" src="./javascripts/profile.js"></script>
     <title>Профиль</title>
   </head>
   <body>
@@ -126,7 +127,7 @@
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="./somparison.html">
                   <svg
                     width="33"
                     height="32"
@@ -185,6 +186,27 @@
       </div>
     </header>
     <main>
+             <section class="width_menu">
+        <div class="menu">
+          <div class="cell">
+            <nav>
+              <ul>
+                <li>
+                  <a href="./index.html">ГЛАВНАЯ</a>
+                </li>
+                <li>
+                  <p>/</p>
+                </li>
+               
+               
+                <li>
+                  <a href="#" class="active">Профиль</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          </div>
+      </section>
       <section class="profile">
         <h2 class="profile__title">ПРОФИЛЬ</h2>
         <div class="profile__item">
@@ -192,19 +214,21 @@
             <div class="profile__user">
               <div class="cell">
                 <img src="./images/profile/Profilepicture.png" alt="image" />
-                <br>
+                <br />
               </div>
               <div class="cell">
                 <p class="profile__user_name">Денис Савельев</p>
                 <p class="profile__user_discount">Персональная скидка — 5%</p>
                 <button type="button" class="profile__log_out">
                   ВЫЙТИ ИЗ АККАУНТА
-                </button>  
-            </div>
+                </button>
+              </div>
             </div>
           </div>
           <div class="cell top">
-            <p class="profile__user_text">Поделись промокодом — получи персональную скидку 5%</p>
+            <p class="profile__user_text">
+              Поделись промокодом — получи персональную скидку 5%
+            </p>
             <div class="profile__promo_code">
               <div class="cell">
                 <p class="textToCopy">Z49GDGD95JGDL4</p>
@@ -213,38 +237,43 @@
                 <button type="button" class="clipboard"></button>
               </div>
             </div>
+            <p class="save_textcopy">скопирован</p>
           </div>
         </div>
         <div class="profile__tabs">
           <ul>
             <li>
-              <button type="button" class="profile__tabs_btn active">ЗАКАЗЫ</button>
+              <button type="button" class="profile__tabs_btn active" data-tab="#tab1">
+                ЗАКАЗЫ
+              </button>
             </li>
             <li>
-              <button type="button" class="profile__tabs_btn">ДАННЫЕ</button>
+              <button type="button" class="profile__tabs_btn" data-tab="#tab2">ДАННЫЕ</button>
             </li>
             <li>
-              <button type="button" class="profile__tabs_btn">МОИ ОТЗЫВЫ</button>
+              <button type="button" class="profile__tabs_btn" data-tab="#tab3">
+                МОИ ОТЗЫВЫ
+              </button>
             </li>
           </ul>
         </div>
         <div class="clear"></div>
-        <div class="profile__content_tabs profile__content_tabs_order">
+        <div id="tab1" class="profile__content_tabs profile__content_tabs_order active">
           <div class="profile__filtr_item">
             <div class="cell">
               <select class="profile_filtr" name="filtr">
-            <option value="">СНАЧАЛА НОВЫЕ</option>
-            <option value="">СНАЧАЛА НОВЫЕ</option>
-            <option value="">СНАЧАЛА НОВЫЕ</option>
-            <option value="">СНАЧАЛА НОВЫЕ</option>
-          </select>
+                <option value="">СНАЧАЛА НОВЫЕ</option>
+                <option value="">СНАЧАЛА НОВЫЕ</option>
+                <option value="">СНАЧАЛА НОВЫЕ</option>
+                <option value="">СНАЧАЛА НОВЫЕ</option>
+              </select>
             </div>
             <div class="cell">
               <p>3 ЗАКАЗА</p>
             </div>
           </div>
           <div class="clear"></div>
-          
+
           <div class="profile___new_order">
             <button type="button" class="profile_acardion">
               Заказ №55948095 <span class="profile__finished">Завершен</span>
@@ -294,11 +323,10 @@
                   <span>Доставлено в ПВЗ</span>
                 </div>
               </div>
-               <p class="title_text1">3 товара</p>
+              <p class="title_text1">3 товара</p>
               <div class="profile_product_order besket">
                 <div class="cell">
                   <div class="besket__products">
-                 
                     <div class="cell bg">
                       <img
                         src="./images/besket/product_image1.png"
@@ -321,10 +349,8 @@
                         </div>
                       </div>
                     </div>
-                    
                   </div>
                   <div class="besket__products">
-                   
                     <div class="cell bg">
                       <img
                         src="./images/besket/product_image1.png"
@@ -347,10 +373,8 @@
                         </div>
                       </div>
                     </div>
-                   
                   </div>
                   <div class="besket__products">
-                  
                     <div class="cell bg">
                       <img
                         src="./images/besket/product_image1.png"
@@ -373,35 +397,38 @@
                         </div>
                       </div>
                     </div>
-                   
                   </div>
                 </div>
                 <div class="cell">
-                    <p class="profile__quantity">1шт</p>
-                    <p class="profile__quantity">1шт</p>
-                    <p class="profile__quantity">1шт</p>
+                  <p class="profile__quantity">1шт</p>
+                  <p class="profile__quantity">1шт</p>
+                  <p class="profile__quantity">1шт</p>
                 </div>
               </div>
               <div class="profile__total_price">
                 <div class="profile__discount_header">
-                    <div class="cell">
-                        <p>СТОИМОСТЬ ТОВАРОВ</p>
-                        <p>СКИДКА</p>
-                        <p>ПЕРСОНАЛЬНАЯ СКИДКА</p>
-                    </div>
-                    <div class="cell">
-                        <p class="price_product">2 800₽</p>
-                        <p class="text profile__discount">-2 800₽</p>
-                        <p class="text profile__personal_discount">-2 800₽</p>
-                    </div>
+                  <div class="cell">
+                    <p>СТОИМОСТЬ ТОВАРОВ</p>
+                    <p>СКИДКА</p>
+                    <p>ПЕРСОНАЛЬНАЯ СКИДКА</p>
+                  </div>
+                  <div class="cell">
+                    <p class="price_product">2 800₽</p>
+                    <p class="text profile__discount">-2 800₽</p>
+                    <p class="text profile__personal_discount">-2 800₽</p>
+                  </div>
                 </div>
                 <p class="promo_none">Промокод не был применен</p>
                 <p class="total_price">Итого: <span>2 800</span><sub>₽</sub></p>
               </div>
               <div class="clear"></div>
               <div class="profile__repeat_order">
-                <button type="button" class="profile__repeat_order_btn">ПОВТОРИТЬ ЗАКАЗ</button>
-                <button type="button" class="profile__repeat_cancel_order">ОТМЕНИТЬ ЗАКАЗ</button>
+                <button type="button" class="profile__repeat_order_btn">
+                  ПОВТОРИТЬ ЗАКАЗ
+                </button>
+                <button type="button" class="profile__repeat_cancel_order">
+                  ОТМЕНИТЬ ЗАКАЗ
+                </button>
               </div>
             </div>
           </div>
@@ -454,11 +481,10 @@
                   <span>Доставлено в ПВЗ</span>
                 </div>
               </div>
-               <p class="title_text1">3 товара</p>
+              <p class="title_text1">3 товара</p>
               <div class="profile_product_order besket">
                 <div class="cell">
                   <div class="besket__products">
-                 
                     <div class="cell bg">
                       <img
                         src="./images/besket/product_image1.png"
@@ -481,10 +507,8 @@
                         </div>
                       </div>
                     </div>
-                    
                   </div>
                   <div class="besket__products">
-                   
                     <div class="cell bg">
                       <img
                         src="./images/besket/product_image1.png"
@@ -507,10 +531,8 @@
                         </div>
                       </div>
                     </div>
-                   
                   </div>
                   <div class="besket__products">
-                  
                     <div class="cell bg">
                       <img
                         src="./images/besket/product_image1.png"
@@ -533,35 +555,38 @@
                         </div>
                       </div>
                     </div>
-                   
                   </div>
                 </div>
                 <div class="cell">
-                    <p class="profile__quantity">1шт</p>
-                    <p class="profile__quantity">1шт</p>
-                    <p class="profile__quantity">1шт</p>
+                  <p class="profile__quantity">1шт</p>
+                  <p class="profile__quantity">1шт</p>
+                  <p class="profile__quantity">1шт</p>
                 </div>
               </div>
               <div class="profile__total_price">
                 <div class="profile__discount_header">
-                    <div class="cell">
-                        <p>СТОИМОСТЬ ТОВАРОВ</p>
-                        <p>СКИДКА</p>
-                        <p>ПЕРСОНАЛЬНАЯ СКИДКА</p>
-                    </div>
-                    <div class="cell">
-                        <p class="price_product">2 800₽</p>
-                        <p class="text profile__discount">-2 800₽</p>
-                        <p class="text profile__personal_discount">-2 800₽</p>
-                    </div>
+                  <div class="cell">
+                    <p>СТОИМОСТЬ ТОВАРОВ</p>
+                    <p>СКИДКА</p>
+                    <p>ПЕРСОНАЛЬНАЯ СКИДКА</p>
+                  </div>
+                  <div class="cell">
+                    <p class="price_product">2 800₽</p>
+                    <p class="text profile__discount">-2 800₽</p>
+                    <p class="text profile__personal_discount">-2 800₽</p>
+                  </div>
                 </div>
                 <p class="promo_none">Промокод не был применен</p>
                 <p class="total_price">Итого: <span>2 800</span><sub>₽</sub></p>
               </div>
               <div class="clear"></div>
               <div class="profile__repeat_order">
-                <button type="button" class="profile__repeat_order_btn">ПОВТОРИТЬ ЗАКАЗ</button>
-                <button type="button" class="profile__repeat_cancel_order">ОТМЕНИТЬ ЗАКАЗ</button>
+                <button type="button" class="profile__repeat_order_btn">
+                  ПОВТОРИТЬ ЗАКАЗ
+                </button>
+                <button type="button" class="profile__repeat_cancel_order">
+                  ОТМЕНИТЬ ЗАКАЗ
+                </button>
               </div>
             </div>
           </div>
@@ -618,7 +643,6 @@
               <div class="profile_product_order besket">
                 <div class="cell">
                   <div class="besket__products">
-                 
                     <div class="cell bg">
                       <img
                         src="./images/besket/product_image1.png"
@@ -641,10 +665,8 @@
                         </div>
                       </div>
                     </div>
-                    
                   </div>
                   <div class="besket__products">
-                   
                     <div class="cell bg">
                       <img
                         src="./images/besket/product_image1.png"
@@ -667,10 +689,8 @@
                         </div>
                       </div>
                     </div>
-                   
                   </div>
                   <div class="besket__products">
-                  
                     <div class="cell bg">
                       <img
                         src="./images/besket/product_image1.png"
@@ -693,41 +713,285 @@
                         </div>
                       </div>
                     </div>
-                   
                   </div>
                 </div>
                 <div class="cell">
-                    <p class="profile__quantity">1шт</p>
-                    <p class="profile__quantity">1шт</p>
-                    <p class="profile__quantity">1шт</p>
+                  <p class="profile__quantity">1шт</p>
+                  <p class="profile__quantity">1шт</p>
+                  <p class="profile__quantity">1шт</p>
                 </div>
               </div>
               <div class="profile__total_price">
                 <div class="profile__discount_header">
-                    <div class="cell">
-                        <p>СТОИМОСТЬ ТОВАРОВ</p>
-                        <p>СКИДКА</p>
-                        <p>ПЕРСОНАЛЬНАЯ СКИДКА</p>
-                    </div>
-                    <div class="cell">
-                        <p class="price_product">2 800₽</p>
-                        <p class="text profile__discount">-2 800₽</p>
-                        <p class="text profile__personal_discount">-2 800₽</p>
-                    </div>
+                  <div class="cell">
+                    <p>СТОИМОСТЬ ТОВАРОВ</p>
+                    <p>СКИДКА</p>
+                    <p>ПЕРСОНАЛЬНАЯ СКИДКА</p>
+                  </div>
+                  <div class="cell">
+                    <p class="price_product">2 800₽</p>
+                    <p class="text profile__discount">-2 800₽</p>
+                    <p class="text profile__personal_discount">-2 800₽</p>
+                  </div>
                 </div>
                 <p class="promo_none">Промокод не был применен</p>
                 <p class="total_price">Итого: <span>2 800</span><sub>₽</sub></p>
               </div>
               <div class="clear"></div>
               <div class="profile__repeat_order">
-                <button type="button" class="profile__repeat_order_btn">ПОВТОРИТЬ ЗАКАЗ</button>
-                <button type="button" class="profile__repeat_cancel_order">ОТМЕНИТЬ ЗАКАЗ</button>
+                <button type="button" class="profile__repeat_order_btn">
+                  ПОВТОРИТЬ ЗАКАЗ
+                </button>
+                <button type="button" class="profile__repeat_cancel_order">
+                  ОТМЕНИТЬ ЗАКАЗ
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="profile__content_tabs"></div>
-        <div class="profile__content_tabs"></div>
+        <div id="tab2" class="profile__content_tabs content_tabs_data" >
+          <div class="payment">
+        <div class="cell">
+            
+            <form action="#" method="POST" id="payment">
+                <div class="cell">
+                  <p class="payment_title">Заполнив эти данные, вам не придется каждый раз вводить информацию о вас, о адресе доставке — <br>все это можно будет указать по нажатию одной кнопки.</p>
+                    <label class="payment__data">Личные данные</label>
+                  <div class="payment__data_user">
+                      <div>
+                        <input type="text" name="lastname" vlau="" placeholder="ИМЯ" class="payment__lastname">
+                    </div>
+                      <div>
+                        <input type="text" name="firstname" vlau="" placeholder="ФАМИЛИЯ" class="payment__firstname">
+                    </div>
+                    <div class="clear"></div>
+                     <div>
+                        <input type="text" name="surname" vlau="" placeholder="ОТЧЕСТВО" class="payment__surname">
+                    </div>
+                       <div class="clear"></div>
+                   
+                     
+                     <div class="clear"></div>
+                   
+                  </div>
+                    <label class="payment__delivery">Данные о доставке</label>
+                 
+                     <div>
+                        <input type="text" name="city" vlau="" placeholder="ГОРОД, НАСЕЛЕННЫЙ ПУНКТ" class="payment__city">
+                    </div>
+                    <div>
+                        <input type="text" name="street" vlau="" placeholder="УЛИЦА" class="payment__street">
+                    </div>
+                     <div>
+                        <input type="text" name="home" vlau="" placeholder="ДОМ" class="payment__home">
+                    </div>
+                      <div>
+                        <input type="text" name="apartment" vlau="" placeholder="КВАРТИРА / КОМНАТА" class="payment__apartment">
+                    </div>
+                    <div class="clear"></div>
+                    
+                   
+                    <label class="payment__text">Способ оплаты</label>
+                     
+                      <div>
+                         <label class="payment__card_text">
+                        <input type="radio" name="card" class="payment__adress">
+                         <span class="adres_radio"></span>
+                       МИР
+                    </label>
+                        
+                    </div>
+                     <div>
+                         <label class="payment__card_text">
+                        <input type="radio" name="card" class="payment__adress">
+                         <span class="adres_radio"></span>
+                       VISA
+                    </label>
+                        
+                    </div>
+                     <div>
+                        <label class="payment__card_text">
+                        <input type="radio" name="card" class="payment__adress">
+                         <span class="adres_radio"></span>
+                       Master Card
+                    </label>
+                        
+                    </div>
+                    <div class="payment__card_details">
+                        <div class="payment__number">
+                            <div class="cell">   
+                            <input type="number" name="number_card" placeholder="XXXX" class="number_card">
+                            </div>
+                            <div class="cell">   
+                            <input type="number" name="number_card" placeholder="XXXX" class="number_card">
+                            </div>
+                            <div class="cell">   
+                            <input type="number" name="number_card" placeholder="XXXX" class="number_card">
+                            </div>
+                            <div class="cell">   
+                            <input type="number" name="number_card" placeholder="XXXX" class="number_card">
+                            </div>
+                        </div>
+                        <div class="payment__card_action">
+                            <div class="cell">
+                                <img src="./images/besket/world.png" alt="World">
+                            </div>
+                            <div class="cell">
+                                <label class="payment__text2">Действует до</label>
+                                <div class="payment__month">
+                                    <div class="cell">
+                                         <input type="number" name="month" placeholder="ММ" class="month">
+                                    </div>
+                                    <div class="cell">
+                                        <p>/</p>
+                                    </div>
+                                    <div class="cell">
+                                          <input type="number" name="year" placeholder="ГГ" class="year">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div>
+                                    <input type="text" name="user" placeholder="ИМЯ ВЛАДЕЛЬЦА КАРТЫ" class="user">
+                                </div>
+                                <div class="clear"></div>
+                                <div class="payment__cvv">
+                                     <input type="number" name="cvv" placeholder="CVC/CVV" class="cvv">
+                                </div>
+                                <div class="clear"></div>
+        
+                        <br>
+                        
+                    </div>
+                
+                </div>
+                <div class="cell">
+                    <div class="save_data_user">
+                      <button type="button" class="save_data save_privete">СОХРАНИТЬ</button>
+                    <button type="button" class="save_data save_delivery">СОХРАНИТЬ</button>
+                    <button type="button" class="save_data save_payment botoom">СОХРАНИТЬ</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="cell"></div>
+      </div>
+        </div>
+        <div id="tab3" class="profile__content_tabs profile__content_tabs_myreviews">
+          <div class="filtr_myreviews">
+            <div class="cell">
+                <select class="list_filtr_reviews" name="listreviews">
+                      <option value="">СНАЧАЛА НОВЫЕ</option>
+                      <option value="">СНАЧАЛА НОВЫЕ</option>
+                      <option value="">СНАЧАЛА НОВЫЕ</option>
+                      <option value="">СНАЧАЛА НОВЫЕ</option>
+                </select>
+            </div>
+            <div class="cell">
+              <div class="filtr_myreviews_rught">
+                <div class="cell">
+                  <p class="filtr_myreviews_quantity">3 ОТЗЫВА</p>
+            
+                </div>
+                <div class="cell">
+                    <button type="button" class="clear_myreviews">УДАЛИТЬ ВСЕ</button>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          <div class="myreviews">
+            <div class="cell">
+              <div class="myreviews__title">
+                <div class="cell">
+                  <img src="./images/profile/Stars.png">
+                </div>
+                <div class="cell">
+                  <p>Написан 12 дек, 2025 16:38</p>
+                </div>
+              </div>
+              <p class="myreviews__text_reviews">Заполнив эти данные, вам не придется каждый раз вводить информацию о вас, о адресе доставке — все это можно будет указать по нажатию одной кнопки.</p>
+              <div class="myreviews__product">
+                <div class="cell">
+                  <img src="./images/profile/Productimage1.png" alt="image">
+                  <div class="myreviews__discount">
+                    <p>-14%</p>
+                  </div>
+                </div>
+                <div class="cell">
+                  <p class="myreviews__product_title">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
+                  <h2 class="myreviews__product_subtitle">Чай пуэр от ТАРАСА ПУШКА</h2>
+                  <p class="myreviews__product_title_gram">25 грамм</p>
+                  <p><span class="myreviews__product_price">2 800</span><sub>₽</sub> <span class="myreviews__product_text"> 2 800</span><span class="myreviews__product_currency">₽</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="cell">
+              <button type="button" class="delete_reviews_btn">УДАЛИТЬ ОТЗЫВ</button>
+            </div>
+          </div>
+          <div class="myreviews">
+            <div class="cell">
+              <div class="myreviews__title">
+                <div class="cell">
+                  <img src="./images/profile/Stars.png">
+                </div>
+                <div class="cell">
+                  <p>Написан 12 дек, 2025 16:38</p>
+                </div>
+              </div>
+              <p class="myreviews__text_reviews">Заполнив эти данные, вам не придется каждый раз вводить информацию о вас, о адресе доставке — все это можно будет указать по нажатию одной кнопки.</p>
+              <div class="myreviews__product">
+                <div class="cell">
+                  <img src="./images/profile/Productimage1.png" alt="image">
+                  <div class="myreviews__discount">
+                    <p>-14%</p>
+                  </div>
+                </div>
+                <div class="cell">
+                  <p class="myreviews__product_title">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
+                  <h2 class="myreviews__product_subtitle">Чай пуэр от ТАРАСА ПУШКА</h2>
+                  <p class="myreviews__product_title_gram">25 грамм</p>
+                  <p><span class="myreviews__product_price">2 800</span><sub>₽</sub> <span class="myreviews__product_text"> 2 800</span><span class="myreviews__product_currency">₽</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="cell">
+              <button type="button" class="delete_reviews_btn">УДАЛИТЬ ОТЗЫВ</button>
+            </div>
+          </div>
+          <div class="myreviews">
+            <div class="cell">
+              <div class="myreviews__title">
+                <div class="cell">
+                  <img src="./images/profile/Stars.png">
+                </div>
+                <div class="cell">
+                  <p>Написан 12 дек, 2025 16:38</p>
+                </div>
+              </div>
+              <p class="myreviews__text_reviews">Заполнив эти данные, вам не придется каждый раз вводить информацию о вас, о адресе доставке — все это можно будет указать по нажатию одной кнопки.</p>
+              <div class="myreviews__product">
+                <div class="cell">
+                  <img src="./images/profile/Productimage1.png" alt="image">
+                  <div class="myreviews__discount">
+                    <p>-14%</p>
+                  </div>
+                </div>
+                <div class="cell">
+                  <p class="myreviews__product_title">ЧАЙ ПУЭР — ШОКОЛАДНЫЕ НОТЫ</p>
+                  <h2 class="myreviews__product_subtitle">Чай пуэр от ТАРАСА ПУШКА</h2>
+                  <p class="myreviews__product_title_gram">25 грамм</p>
+                  <p><span class="myreviews__product_price">2 800</span><sub>₽</sub> <span class="myreviews__product_text"> 2 800</span><span class="myreviews__product_currency">₽</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="cell">
+              <button type="button" class="delete_reviews_btn">УДАЛИТЬ ОТЗЫВ</button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
