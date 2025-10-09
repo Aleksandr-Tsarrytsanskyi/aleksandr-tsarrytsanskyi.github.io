@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
+function addProductsCart() {
+  const removeBesket = document.querySelector(".modal_besket_remove")
+const modalBesket = document.querySelector(".modal_besket")
+const addBesket = document.querySelector(".description__addcart button")
 
+addBesket.addEventListener("click", function() {
+modalBesket.classList.add("modal_besket_show")
+})
+
+removeBesket.addEventListener("click", function() {
+modalBesket.classList.remove("modal_besket_show")
+})
+}
+addProductsCart();
 
 function swiperSliders() {
        const resizableSwiper1 = (

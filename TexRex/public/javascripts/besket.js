@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-   
+const removeproduct = document.querySelectorAll(".besket__products");
+const modalRemoveproduct = document.querySelector(".modal_remove_product");
+   removeproduct.forEach(product => {
+    product.addEventListener("click", function(e) {
+      e.target.closest(".besket__products .remove").parentElement.parentElement.remove();
+      if(e.target.closest(".besket__products .remove")) {
+        modalRemoveproduct.classList.add("modal_remove_product_show")
+      }
+    })
+   })
   function swiperSliders() {
        const resizableSwiper1 = (
     breakpoint,

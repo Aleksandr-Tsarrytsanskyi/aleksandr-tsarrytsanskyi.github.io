@@ -172,4 +172,10 @@ margin-bottom: 20px;
      font-family: "Roboto Regular" !important;
 }
 
+.comparison h1 {
+    font-size: 160px;
+line-height: 135%;
+color: rgba(255, 255, 255, 0.05);
+}
+
 
