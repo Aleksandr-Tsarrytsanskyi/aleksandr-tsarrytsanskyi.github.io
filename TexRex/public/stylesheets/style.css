@@ -1473,6 +1473,7 @@ h2 {
   margin-top: 40px;
   font-family: "Roboto Regular";
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .grid {
@@ -1513,6 +1514,7 @@ h2 {
 
 .description__user_reviews .all {
   background: #d29440 !important;
+  color: #fff !important;
 }
 
 .description__user_reviews .star button:hover {
@@ -1669,6 +1671,7 @@ h2 {
   position: relative;
   left: -211px;
   top: 46px;
+  cursor: pointer;
 }
 
 /* .description__user_reviews .cell:last-child {
@@ -3429,6 +3432,148 @@ position: absolute;
 
 .description__user_reviews .star button {
   width: 114px;
-height: 59px;
+height: 39px;
 font-size: 18px;
+}
+
+.modal_review_simple {
+  position: relative;
+  font-size: 40px;
+  display: inline-block;
+}
+
+.modal_review_simple::before {
+  content: "☆☆☆☆☆";
+  display: block;
+   color: #eba749;
+}
+
+.modal_review_simple_rating {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.modal_review_item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal_review_simple_rating_lable {
+  flex: 0 0 20%;
+  height: 100%;
+  cursor: pointer;
+ 
+}
+
+.modal_review_simple_rating_lable::before {
+  content: "★";
+  display: block;
+
+  transition: 0.3s all;
+}
+
+.modal_review_simple_rating_lable:hover, .modal_review_simple_rating_lable:hover ~ .modal_review_simple_rating_lable,
+.modal_review_simple_rating_lable:checked ~ .modal_review_simple_rating_lable:hover {
+  color: #eba749;
+}
+
+.modal_review_item:checked, .modal_review_item:checked ~ .modal_review_simple_rating_lable {
+  color: #eba749;
+}
+
+.modal_review {
+  position: fixed;
+  right: 0;
+  background-color: #0a0a0a;
+  width: 685px;
+  z-index: 500;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.3s all;
+  transform: translate(0%, -50%);
+}
+
+.modal_review_title {
+  font-size: 40px;
+line-height: 135%;
+color: #fff;
+margin-top: 40px;
+}
+
+.modal_review_subtitle {
+  font-size: 18px;
+line-height: 150%;
+font-family: "Roboto Regular";
+color: rgba(255, 255, 255, 0.5);
+margin-top: 10px;
+}
+
+.modal_review_main {
+padding: 64px 87px;
+width: 471px;
+}
+
+.modal_review_grid {
+  display: grid;
+  grid-template-columns: 69px 240px;
+  align-items: center;
+  grid-gap: 0px 20px;
+}
+
+.modal_review_rating_text {
+  font-size: 120px;
+line-height: 135%;
+color: #fff;
+font-family: "Roboto Medium";
+}
+
+.modal_review_result {
+  font-size: 18px;
+line-height: 150%;
+color:  rgba(255, 255, 255, 0.5);
+font-family: "Roboto Regular";
+margin-top: 10px;
+}
+
+.modal_review textarea {
+width: 471px;
+  height: 200px;
+  outline: none;
+  padding-left: 20px;
+  background-color: #0a0a0a;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Roboto Regular";
+}
+
+.modal_review_comm {
+  font-size: 18px;
+line-height: 150%;
+color: rgba(255, 255, 255, 0.5);
+margin-bottom: 20px;
+}
+
+.modal_review input[type="submit"] {
+  border-radius: 2px;
+
+width: 481px;
+height: 59px;
+max-height: 59px;
+background-color: #d29440;
+color: #fff;
+ font-family: "Roboto Regular";
+ font-size: 18px;
+ cursor: pointer;
 }

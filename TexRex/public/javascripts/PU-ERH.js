@@ -1,9 +1,40 @@
+import { modalController } from "./modal/modal.js";
 document.addEventListener("DOMContentLoaded", function() {
+modalController({
+  modal: ".modal_review",
+  btnOpen: ".rewiues",
+  btnClose: ".modal__close",
+  time: "300",
+});
+
 function addProductsCart() {
   const removeBesket = document.querySelector(".modal_besket_remove")
 const modalBesket = document.querySelector(".modal_besket")
 const addBesket = document.querySelector(".description__addcart button")
+const ratingItem = document.querySelectorAll(".modal_review_item")
+const ratingText = document.querySelector(".modal_review_rating_text")
+const ratingResult = document.querySelector(".modal_review_result")
+ratingItem.forEach(rating => {
+  rating.addEventListener("click", function(event) {
+    if(rating.checked) {
+      let result = rating.value
+      ratingText.textContent = rating.value
+      console.log(event.target.value == 3);
+      
+    }
 
+      if(event.target.value == 3) {
+    ratingResult.textContent = "нормально"
+    }
+       if(event.target.value <= 2) {
+    ratingResult.textContent = "Плохо"
+    }
+
+      if(event.target.value > 3) {
+    ratingResult.textContent = "Отлично"
+    }
+  })
+})
 addBesket.addEventListener("click", function() {
 modalBesket.classList.add("modal_besket_show")
 })
