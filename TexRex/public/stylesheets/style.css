@@ -277,7 +277,7 @@ p {
 
 .products_slider {
   width: 1588px;
-  height: 860px;
+  height: 880px;
 }
 .products {
   margin: 0;
@@ -350,6 +350,7 @@ p {
   font-size: 16px;
   line-height: 150%;
   margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .products h2 {
@@ -358,6 +359,7 @@ p {
   font-weight: normal;
   margin: 0;
   line-height: 150%;
+  margin-bottom: 10px;
 }
 
 .products .price {
@@ -509,7 +511,7 @@ p {
 
 .watch_slider {
   width: 1588px;
-  height: 860px;
+  height: 880px;
 }
 
 .categories {
@@ -1665,6 +1667,7 @@ h2 {
 
 .recommend_slider {
   width: 1588px;
+  height: 880px;
 }
 
 .recommend_slider_title {
@@ -3293,6 +3296,74 @@ color: #ff1212;
   color: #ff1212;
 }
 
+.modal_favorites_reject:hover {
+ color: #ff1212; 
+}
+
+.modal_favorites_cookies_accepted:hover {
+  background-color: #fff;
+  color: #d29440;
+      background-image: url("../images/active_right_aarow.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: 256px 13px !important;
+}
+
+.modal_comparison_remove_product a:hover {
+  background-color: #fff;
+  color: #d29440;
+}
+
+.modal_comparison_remove_product a:hover {
+   background-color: #fff;
+  color: #d29440;
+}
+
+.modal_besket_remove:hover {
+  color: #ff1212;
+}
+
+.modal_besket_add:hover {
+  background-color: #fff;
+  color: #eba749;
+      background-image: url("../images/active_right.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: 206px 13px !important;
+}
+ 
+.coockie_item_right .reject:hover {
+  color: #f22e23;
+}
+
+.coockie_item_right .cookies_accepted:hover {
+  background-color: #fff;
+  color: #eba749;
+}
+
+.clear_product button:hover {
+  color: #f22e23;
+}
+
+.besket__quantity button:hover {
+  transform: scale(1.2);
+}
+
+.products h2 {
+  color: #fff;
+}
+
+.recommend_slider_title {
+  color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.slider_header__item a {
+position: absolute;
+    z-index: 500;
+}
+
+
+.slider_header__item a:hover {
+    color: red;
+}
 
 
 
