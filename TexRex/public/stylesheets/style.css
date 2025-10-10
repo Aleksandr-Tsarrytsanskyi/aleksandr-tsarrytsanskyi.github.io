@@ -1504,10 +1504,11 @@ h2 {
 
 .description__user_reviews .star {
   display: grid;
-  grid-template-columns: 68px 90px 100px 100px 100px 100px;
+  grid-template-columns: 114px 114px 114px 114px 114px 114px;
   width: 1600px;
   margin: auto;
   margin-bottom: 40px;
+  grid-gap: 0px 50px;
 }
 
 .description__user_reviews .all {
@@ -3424,4 +3425,10 @@ position: absolute;
 
 .description_acradion:hover {
   color: #eba749;
+}
+
+.description__user_reviews .star button {
+  width: 114px;
+height: 59px;
+font-size: 18px;
 }
