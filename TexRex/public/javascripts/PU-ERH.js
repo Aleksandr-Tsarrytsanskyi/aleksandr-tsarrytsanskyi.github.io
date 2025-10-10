@@ -213,7 +213,7 @@ function changeAcardion() {
   acardion.forEach(el => {
     el.addEventListener("click", function(e) {
       console.log(e.target);
-      
+      el.classList.toggle("active")
       let content = el.nextElementSibling 
       console.log(content);
       

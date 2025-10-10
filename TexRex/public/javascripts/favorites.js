@@ -1,9 +1,22 @@
-//  let productsfavorites = []
-// let arr =[]
 
 
 
-// document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
+    const favorites = document.querySelectorAll(".products__header svg")
+
+favorites.forEach(el => {
+    el.addEventListener('click', function(event) {
+        el.classList.toggle("active")
+    })
+})
+
+
+
+
+
+
+
+
 //     localStorage.setItem("id", "")
 //     localStorage.setItem("item", "")
 //     const favorites = document.querySelectorAll(".products_cart")
@@ -44,4 +57,4 @@
 //     localStorage.removeItem("item", item)
 //     }
    
-// })
+})

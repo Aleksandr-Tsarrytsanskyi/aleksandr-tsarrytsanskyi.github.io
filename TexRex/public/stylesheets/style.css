@@ -391,6 +391,20 @@ p {
 .products__header svg {
   fill: white;
   cursor: pointer;
+  /* stroke: #eba749;
+  stroke-width: 10px; */
+
+}
+
+.products__header svg.active {
+   stroke: #eba749;
+  stroke-width: 10px;
+  width: 59px;
+  height: 59px;
+      position: relative;
+    top: 0px;
+    left: 0px;
+ 
 }
 
 .products__header svg.active {
@@ -2240,7 +2254,7 @@ h2 {
 }
 
 .modal_back {
-  background: url("../images/modal_back.png") no-repeat;
+  background: url("../images/modal_back.png") no-repeat !important;
   width: 33px;
   height: 33px;
   border: none;
@@ -3365,7 +3379,49 @@ position: absolute;
     color: red;
 }
 
+.topmenu__link.active {
+  color: #eba749 !important;
+}
+
+.header .right-menu svg.active {
+  fill: #d29440;
+}
+
+.filled-element {
+      background-color: lightgreen; /* Fills the element with light green */
+    }
 
 
+.products__gram .cell {
+  width: 85px !important;
+  height: 37px !important;
+}
 
+.products__gram .cell p{
+  font-size: 14px !important;
+}
+.products_cart:hover .products__reviews p {
+  color: #d29440 !important;
+}
 
+.description__gram .cell{
+  width: 114px !important;
+    height: 59px !important;
+}
+
+.description__user_reviews select:hover {
+  color: #d29440;
+}
+
+.description__user_reviews select {cursor: pointer;}
+
+.description_acradion.active {
+      background-image: url("../images/active_acardionpng.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    color: #d29440;
+}
+
+.description_acradion:hover {
+  color: #eba749;
+}
