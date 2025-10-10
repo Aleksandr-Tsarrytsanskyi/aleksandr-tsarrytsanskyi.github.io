@@ -292,14 +292,13 @@ p {
 .products__header .hit {
   border-radius: 0 0 2px 2px;
   background: #d29440;
-  padding: 16px 8px;
   width: 56px;
   height: 72px;
   text-align: center;
 }
 
 .products__header .hit p {
-  line-height: 95px;
+  line-height: 85px;
 }
 
 .products__gram .active {
@@ -465,7 +464,7 @@ p {
 
 .products__header img {
   position: relative;
-  top: -50px;
+  top: -28px;
   left: 25px;
 }
 
