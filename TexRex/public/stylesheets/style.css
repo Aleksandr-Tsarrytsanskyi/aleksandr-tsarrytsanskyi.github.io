@@ -214,6 +214,7 @@ p {
   bottom: 30px;
   left: 0;
   margin-left: 10px;
+  z-index: 300;
 }
 
 .slider_header__border {
@@ -502,7 +503,7 @@ p {
 .products__tiitle {
   font-size: 160px !important;
   line-height: 135% !important;
-  font-family: "Roboto Medium" !important;
+  font-family: "Roboto Regular" !important;
   color: rgba(255, 255, 255, 0.05) !important;
 }
 
@@ -637,10 +638,11 @@ p {
 
 .blog {
   display: grid;
-  grid-template-columns: 1192px;
+  grid-template-columns: 1192px 388px;
   justify-content: center;
   position: relative;
   margin-top: 60px;
+  grid-gap: 0px 10px;
 }
 
 .blog h2 {
@@ -648,6 +650,8 @@ p {
   line-height: 135%;
   color: rgba(255, 255, 255, 0.05);
   font-family: "Roboto Regular";
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .blog__title {
@@ -835,7 +839,12 @@ h2 {
 }
 
 .networks__link .cell:hover {
-  border: 1px solid #fff;
+  background-color: #d29440;
+}
+
+.networks__link .cell:hover a {
+  color: #fff;
+  background: url("../images/Arrow_white.png") no-repeat right -2% bottom;
 }
 
 .networks__link a:hover {
@@ -936,7 +945,7 @@ h2 {
 }
 
 .footer .mail:hover {
-  background-color: rgba(210, 148, 64, 0.25);
+  background-color: #d29440
 }
 
 .footer__up {
@@ -957,7 +966,7 @@ h2 {
 }
 
 .footer__up:hover {
-  background-color: rgba(210, 148, 64, 0.25);
+  background-color: #d29440;
 }
 
 .header .logo:hover {
@@ -1152,6 +1161,8 @@ h2 {
   justify-items: center;
   grid-gap: 0px 200px;
   background-color: rgba(255, 255, 255, 0.05);
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .description__quantity button {
@@ -1161,16 +1172,25 @@ h2 {
   cursor: pointer;
   position: relative;
   top: 10px;
+  font-family: "Roboto Medium";
+  padding: 0;
+  transition: 0.3s all;
 }
+
+.description__quantity button:hover  {
+  transform: scale(1.2);
+}
+
+
 
 .description__quantity .cell {
   height: 59px;
 }
 
 .description__quantity .counter {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 150%;
-  font-family: "Roboto Regular";
+ font-family: "Roboto Regular";
 }
 
 .description__addcart button {
@@ -1240,6 +1260,7 @@ h2 {
   text-align: left;
   cursor: pointer;
   margin-bottom: 50px;
+  padding: 0;
 }
 
 .description__tabs_content {
@@ -1679,14 +1700,14 @@ h2 {
   background-repeat: no-repeat;
   width: 25px;
   height: 3px;
-  margin-top: 17px;
+  margin-top: 21px;
 }
 
 .description__quantity .plus {
   background-image: url("../images/TEA/plus.svg");
   background-repeat: no-repeat;
-  width: 14px;
-  height: 23px;
+  width: 26px;
+  height: 26px;
   margin-top: 9px;
 }
 
@@ -2242,6 +2263,7 @@ h2 {
   display: grid;
   grid-template-columns: 733px 404px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .modal_besket_container {
@@ -3072,3 +3094,207 @@ line-height: 150%;
   background-color: #fff;
   border-radius: 5px;
 }
+
+
+.swiper-navigation .prev_hover:hover {
+  background-image: url("../images/hover_arrow.png");
+  background-repeat: no-repeat;
+}
+
+.swiper-navigation .next_hover:hover {
+   background-image: url("../images/hover_arrowm_right.png");
+  background-repeat: no-repeat;
+}
+
+.products_cart:hover .products__name {
+  color: #d29440;
+}
+
+.products_cart:hover >  h2 {
+    color: #d29440;
+}
+
+.products_cart:hover .price {
+  color: #d29440;
+}
+
+.products_cart:hover .discount {
+  color: #d29440;
+}
+
+.categories__item:hover p {
+   color: #d29440;
+}
+
+.event .more:hover {
+  background: #fff;
+  background-image: url("../images/arow_active_btn.png") ;
+  background-repeat: no-repeat;
+  color: #0a0a0a;
+  background-position: 140px 12px;
+}
+
+.blog a:hover {
+  background: url("../images/accaunt.png") no-repeat right 1% bottom 46% !important;
+  color: #d29440;
+}
+
+.networks__header a:hover {
+  background: url("../images/accaunt.png") no-repeat right 0% bottom 47%;
+    color: #d29440;
+}
+
+.footer_top a:hover {
+background: url("../images/accaunt.png") no-repeat right -3% bottom 50%;
+}
+
+.filtr .right button:hover {
+  color: #f22e23;
+}
+
+.filtr select:hover {
+color: #eba749;
+}
+
+.description__addcart button:hover {
+  background-color: #fff;
+  color: #d29440;
+}
+
+.currentItems_active {
+  color: #d29440;
+}
+
+.description__delivery_content {
+  position: relative;
+}
+
+/* .description__delivery_content .vector1 {
+  background-image: url("../images/vector/bg_vector.svg"), url("../images/vector/Vector_icon.svg"), url("../images/vector/vector2.svg");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+} */
+
+.vector_border {
+  z-index: 500;
+  
+}
+
+.vector_icon {
+    top: 20px;
+    left: 15px;
+}
+
+.description__delivery_content .vector3 .vector_icon {
+ top: 21px;
+    left: 18px;
+}
+
+.description__delivery_content .vector2 .vector_icon {
+   top: 20px;
+    left: 17px;
+}
+
+.description__delivery_content .vector1 {
+  position: relative;
+}
+
+.description__delivery_content .vector2 {
+   position: relative;
+}
+
+.description__delivery_content .vector3 {
+  position: relative;
+}
+
+.description__delivery_content .vector1 svg {
+  position: absolute;
+}
+
+.description__delivery_content .vector2 svg , .description__delivery_content .vector3 svg {
+  position: absolute;
+}
+
+.description__delivery_content p {
+  margin-left: 70px;
+}
+
+.description__delivery_content li {
+  margin-bottom: 50px;
+}
+
+.video a:hover {
+  background-color: #fff;
+  color: #d29440;
+  background-image: url("../images/accaunt.png");
+  background-repeat: no-repeat;
+  background-position: 110px 13px;
+}
+
+.grade_btn:hover {
+  background-color: #fff;
+  color: #d29440;
+}
+
+.instructions_btn {
+  margin-top: 30px;
+}
+
+.description_acradion_content {
+   transition: 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.favorites_filtr button:hover {
+  color: #ff1212;
+}
+
+.favorites_filtr select:hover {
+  color: #d29440;
+}
+
+.favorites_filtr select {
+  cursor: pointer;
+}
+
+.comparison__item button:hover {
+color: #ff1212;
+}
+
+.comparison__back_catalog:hover {
+  background-color: #fff;
+  color: #eba749;
+      background-image: url("../images/active_back.png");
+    background-repeat: no-repeat;
+    background-position: 21px 16px;
+}
+
+.comparison__content button:hover {
+  background-color: #fff;
+  color: #d29440;
+}
+
+.result_search_btn:hover {
+  background: #fff;
+  color: #eba749;
+      background-image: url('../images/active_right.png');
+    background-repeat: no-repeat;
+    background-position: 885px 15px;
+}
+
+.modal_catalog_filtr input[type='submit']:hover {
+  background: #fff;
+  color: #d29440;
+}
+
+.modal_catalog_filtr .reset:hover {
+  color: #ff1212;
+}
+
+
+
+
+
+

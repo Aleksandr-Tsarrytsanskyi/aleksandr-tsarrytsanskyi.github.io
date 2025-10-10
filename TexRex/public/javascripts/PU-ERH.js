@@ -162,14 +162,17 @@ function cartData() {
 
       if(event.target.matches(".plus")) {
         currentItems.textContent = ++currentItems.textContent
+        
         minusBtn.removeAttribute("disabled");
         conculateTotalCartValue();
       }
 
       if(event.target.matches(".minus")) {
         if(parseInt(currentItems.textContent) > 2) {
-          currentItems.textContent = --currentItems.textContent
+          currentItems.textContent = --currentItems.textContent;
+           currentItems.classList.remove("currentItems_active")
         }
+       
         else if(parseInt(currentItems.textContent) === 2) {
               currentItems.textContent = --currentItems.textContent
                 minusBtn.setAttribute('disabled', 'disabled');
@@ -201,6 +204,39 @@ function cartData() {
     cartTotalPrice.textContent = totalCartValue;
   }
 }
+
+function changeAcardion() {
+   const acardion = document.querySelectorAll(".description_acradion");
+  console.log(acardion);
+  
+  const content = document.querySelectorAll(".content");
+  acardion.forEach(el => {
+    el.addEventListener("click", function(e) {
+      console.log(e.target);
+      
+      let content = el.nextElementSibling 
+      console.log(content);
+      
+      console.log(content.style.maxHeight);
+      
+      if(content.style.maxHeight) {
+        console.log("11111");
+        
+        document.querySelectorAll(".description_acradion_content").forEach(el => {
+          el.style.maxHeight = null
+        })
+      }
+      else {
+        document.querySelectorAll(".description_acradion_content").forEach(el => {
+          el.style.maxHeight = null
+          content.style.maxHeight = content.scrollHeight + "px"
+        })
+      }
+    })
+  })
+}
+
+changeAcardion();
 
 cartData();
 

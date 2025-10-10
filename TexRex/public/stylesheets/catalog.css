@@ -31,13 +31,21 @@ color: #fff;
 cursor: pointer;
 background-image: url("../images/products_arrow_down.png");
 background-repeat: no-repeat;
-background-position:  56% 17px;
+background-position:  56% 18px;
 width: 1600px;
 background-color: #d29440;
 height: 59px;
 margin-top: 100px;
 
 
+}
+
+.api_products button:hover {
+    background: #fff;
+    color: #d29440;
+    background-image: url("../images/Arrow_bottom.png");
+    background-position:  56% 14px;
+    background-repeat: no-repeat;
 }
 
 .navigation {
@@ -139,5 +147,18 @@ color: rgba(255, 255, 255, 0.5);
 
 .filtr_btn {
     width: 150px;
-    background: url("../images/filtr.png") no-repeat left 1% bottom !important;
+    background: url("../images/filtr.png") no-repeat left !important;
 }
+
+.filtr_btn:hover {
+  color: #d29440;
+     background: url("../images/filtr_icon_03.png") no-repeat left !important;
+}
+
+
+
+.filtr .left {
+    position: relative;
+}
+
+
