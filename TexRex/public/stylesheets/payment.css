@@ -420,6 +420,8 @@ input:focus .adres_radio {
   font-size: 18px;
   padding-left: 20px;
   outline: none;
+  position: relative;
+  z-index: 300;
 }
 
 .payment .bg {

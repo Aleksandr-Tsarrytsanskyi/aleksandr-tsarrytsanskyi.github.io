@@ -36,6 +36,8 @@ width: 1600px;
 background-color: #d29440;
 height: 59px;
 margin-top: 100px;
+position: relative;
+z-index: 300;
 
 
 }
@@ -159,6 +161,10 @@ color: rgba(255, 255, 255, 0.5);
 
 .filtr .left {
     position: relative;
+}
+
+footer {
+    margin-top: -100px;
 }
 
 

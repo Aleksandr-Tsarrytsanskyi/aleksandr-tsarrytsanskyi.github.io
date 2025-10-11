@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   favorites.forEach((el) => {
     el.addEventListener("click", function (event) {
+        event.preventDefault()
       el.classList.toggle("active");
     });
   });
