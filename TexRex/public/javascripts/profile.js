@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const profiLelogOut = document.querySelector(".profile__log_out");
   const modalLogOut = document.querySelector(".modal_log_out");
   const dontsOut = document.querySelector(".modal_log_out_right .no");
-  const saveData  = document.querySelectorAll(".save_data");
-  const modalsaveData  = document.querySelector(".modal_save_date");
+  const saveData = document.querySelectorAll(".save_data");
+  const modalsaveData = document.querySelector(".modal_save_date");
 
   profiLelogOut.addEventListener("click", function () {
     modalLogOut.classList.add("modal_log_out_show");
@@ -12,15 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
   dontsOut.addEventListener("click", function () {
     modalLogOut.classList.remove("modal_log_out_show");
   });
-saveData.forEach(save => {
-  save.addEventListener("click", function() {
-    modalsaveData.classList.add("modal_save_date_show")
-    setTimeout(() => {
- modalsaveData.classList.remove("modal_save_date_show")
-    }, 5000)
-  })
-})
-   
+  saveData.forEach((save) => {
+    save.addEventListener("click", function () {
+      modalsaveData.classList.add("modal_save_date_show");
+      setTimeout(() => {
+        modalsaveData.classList.remove("modal_save_date_show");
+      }, 5000);
+    });
+  });
 
   function tabsProduct() {
     const tabsbtn = document.querySelectorAll(".profile__tabs_btn");

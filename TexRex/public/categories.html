@@ -9,6 +9,182 @@
     <title>Document</title>
 </head>
 <body>
+   <div class="modal madal1">
+      <div class="modal_main">
+        <h2 class="modal_tittle">Добро пожаловать в TeaRex!</h2>
+        <p class="modal_subtittle">
+          Мы - чайное сообщество и интернет-магазин одновременно! Наша цель -
+          сделать максимально легким и удобным процесс покупку чая, разнообразив
+          ваш опыт событиями и вовлеченностью в жизнь TeaRex.
+        </p>
+        <div class="modal_container">
+          <button type="button" class="madal1_account_login modal_window2">
+            УЖЕ ЕСТЬ АККАУНТ
+          </button>
+          <br />
+          <button type="button" class="madal1_registration modal_window3">
+            НЕТ АККАУНТА
+          </button>
+          <p class="madal1__text">
+            При входе и регистрации я даю согласие на обработку своих
+            персональных данных в соответствии с политикой обработки
+            персональных данных
+          </p>
+        </div>
+        <button class="modal__close"></button>
+      </div>
+    </div>
+    <div class="modal madal2">
+      <div class="modal_main">
+        <h2 class="modal_tittle">Войти в аккаунт</h2>
+        <p class="modal_subtittle">Укажите данные для входа в ваш аккаунт</p>
+        <div class="modal_container">
+          <form action="#" method="post" class="login_account">
+            <div>
+              <input
+                type="email"
+                name="mail"
+                value=""
+                class="mail"
+                placeholder="ЭЛ. ПОЧТА"
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                name="password"
+                value=""
+                class="password"
+                placeholder="ПАРОЛЬ"
+              />
+            </div>
+            <div>
+              <button type="button" class="password_btn forgot modal_window4">
+                Я ЗАБЫЛ ПАРОЛЬ
+              </button>
+            </div>
+            <button type="submit" class="madal1_account_login">
+              ВОЙТИ В АККАУНТ
+            </button>
+          </form>
+          <br />
+
+          <p class="madal1__text">
+            При входе и регистрации я даю согласие на обработку своих
+            персональных данных в соответствии с политикой обработки
+            персональных данных
+          </p>
+        </div>
+        <button class="modal_back"></button>
+        <button class="modal__close"></button>
+      </div>
+    </div>
+    <div class="modal madal3">
+      <div class="modal_main">
+        <h2 class="modal_tittle">Создать аккаунт</h2>
+        <p class="modal_subtittle">Укажите данные для входа в ваш аккаунт</p>
+        <div class="modal_container">
+          <form action="#" method="post" class="login_account">
+            <div>
+              <input
+                type="email"
+                name="mail"
+                value=""
+                class="mail"
+                placeholder="ЭЛ. ПОЧТА"
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                name="password"
+                value=""
+                class="password"
+                placeholder="ПАРОЛЬ"
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                name="repeatpassword"
+                value=""
+                class="password"
+                placeholder="ПОВТОРНЫЙ ПАРОЛЬ"
+              />
+            </div>
+            <div>
+              <button type="button" class="password_btn modal_window2 btn">
+                У МЕНЯ ЕСТЬ АККАУНТ
+              </button>
+            </div>
+            <button type="submit" class="madal1_account_login">
+              СОЗДАТЬ АККАУНТ
+            </button>
+          </form>
+          <br />
+
+          <p class="madal1__text">
+            При входе и регистрации я даю согласие на обработку своих
+            персональных данных в соответствии с политикой обработки
+            персональных данных
+          </p>
+        </div>
+        <button class="modal_back"></button>
+        <button class="modal__close"></button>
+      </div>
+    </div>
+    <div class="modal madal4">
+      <div class="modal_main">
+        <h2 class="modal_tittle">Восстановить пароль</h2>
+        <p class="modal_subtittle">
+          Укажите свою электронную почту, чтобы мы могли туда прислать код с
+          восстановлением
+        </p>
+        <div class="modal_container">
+          <form action="#" method="post" class="login_account">
+            <div>
+              <input
+                type="email"
+                name="mail"
+                value=""
+                class="mail"
+                placeholder="ЭЛ. ПОЧТА"
+              />
+            </div>
+
+            <div>
+              <button type="button" class="password_btn modal_window2 back_btn">
+                Я ВСПОМНИЛ ПАРОЛЬ
+              </button>
+            </div>
+            <button type="submit" class="madal1_account_login modal_window5">
+              ОТПРАВИТЬ КОД
+            </button>
+          </form>
+          <br />
+
+          <p class="madal1__text">
+            При входе и регистрации я даю согласие на обработку своих
+            персональных данных в соответствии с политикой обработки
+            персональных данных
+          </p>
+        </div>
+        <button class="modal_back"></button>
+        <button class="modal__close"></button>
+      </div>
+    </div>
+    <div class="modal madal5">
+      <div class="modal_main">
+        <h2 class="modal_tittle">Мы отправили код восстановления</h2>
+        <p class="modal_subtittle">
+          Проверьте вашу почту. Если там пусто, возможно, код находится в папке
+          спам
+        </p>
+
+        <button class="modal_back"></button>
+        <button class="modal__close"></button>
+      </div>
+    </div>
   <div class="modal_search">
       <div class="modal_search_main">
         <div class="modal_search_container">
@@ -1159,7 +1335,7 @@
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" class="modal_window1">
                   <svg
                     width="33"
                     height="32"

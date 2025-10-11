@@ -35,10 +35,10 @@ modalController({
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const modalBack = document.querySelector(".madal4 .back_btn");
   const modal4 = document.querySelector(".madal4");
   const modal3Btn = document.querySelector(".madal3 .btn");
   const modal3 = document.querySelector(".madal3");
+  const modalBack = document.querySelector(".madal4 .back_btn");
   const modalClose = document.querySelectorAll(".modal__close");
   const modal = document.querySelectorAll(".modal");
   const modalform = document.querySelectorAll(".login_account");
