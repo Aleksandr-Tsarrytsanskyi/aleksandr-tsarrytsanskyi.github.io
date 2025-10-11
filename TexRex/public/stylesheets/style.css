@@ -3071,6 +3071,7 @@ height: 16px;
 
 .modal_catalog_filtr button.active {
   background: #d29440;
+  color: #fff;
 }
 
 .modal_catalog_filtr button:hover {
