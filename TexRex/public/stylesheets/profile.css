@@ -107,6 +107,7 @@
   font-size: 18px;
   line-height: 150%;
   font-family: "Roboto Medium";
+  padding-bottom: 20px;
 }
 
 .profile__tabs button.active {
@@ -146,7 +147,7 @@
 }
 
 .profile_acardion {
-  background: url("../images/profile/btn_order.png") no-repeat right;
+  background: url("../images/btn_acardion.png") no-repeat right;
   background-position: right;
   text-align: left;
   width: 1600px;
@@ -159,6 +160,7 @@
   position: relative;
   cursor: pointer;
   padding: 0;
+  z-index: 300;
 }
 
 .profile_acardion span {
@@ -277,7 +279,7 @@ margin-top: 40px;
 }
 
 footer {
-    margin-top: 110px !important;
+    margin-top: -150px !important;
 }
 
 .profile__total_price {
@@ -382,6 +384,7 @@ background-image: url("../images/profile/cancel_order.png");
     height: 0;
     opacity: 0;
     transition: 0.3s all;
+    overflow: hidden;
 }
 
 .profile__content_tabs.active {
@@ -602,5 +605,23 @@ line-height: 150%;
   font-family: "Roboto Regular";
   cursor: pointer;
   margin-top: 100px;
+}
+
+.save_data:hover {
+  background-color: #fff;
+  color: #d29440;
+}
+
+.profile_acardion.active {
+  color: #d29440;
+  background: url("../images/acardion_active.png") no-repeat right !important;
+}
+
+.profile_filtr:hover {
+  color: #d29440;
+}
+
+.profile__item .clipboard:hover {
+background: url("../images/active_copy_text.png") no-repeat  center !important;
 }
 

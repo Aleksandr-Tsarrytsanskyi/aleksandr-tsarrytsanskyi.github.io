@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const dontsOut = document.querySelector(".modal_log_out_right .no");
   const saveData = document.querySelectorAll(".save_data");
   const modalsaveData = document.querySelector(".modal_save_date");
+  const copyText = document.querySelector(".profile__item .clipboard");
+
+  // copyText.addEventListener("click", function() {
+  //   copyText.classList.toggle("active")
+  // })
 
   profiLelogOut.addEventListener("click", function () {
     modalLogOut.classList.add("modal_log_out_show");
@@ -43,10 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   tabsProduct();
-
+  //Аккардеон
   btn.forEach((el) => {
     el.addEventListener("click", function (e) {
-      console.log(e.target);
+      // btn.forEach(el => {
+      //   el.classList.remove("active")
+      // })
+      e.target.classList.toggle("active")
       el.classList.toggle("btn_active_tabs");
       let content = el.nextElementSibling.nextElementSibling;
       console.log(content);

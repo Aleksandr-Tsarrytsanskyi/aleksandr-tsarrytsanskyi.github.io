@@ -541,6 +541,7 @@ p {
   height: 440px;
   position: relative;
   cursor: pointer;
+  z-index: 300;
 }
 
 .categories__item:hover {
@@ -3703,4 +3704,33 @@ align-items: center;
 .mySwiperThumbs {
   margin-top: 10px;
 }
- 
+
+.promo_code input {
+  width: 500px;
+  height: 59px;
+  background-color: rgba(79, 71, 71, 0.05);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid  rgba(255, 255, 255, 0.05);
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.myreviews .delete_reviews_btn:hover {
+  color: #eba749;
+}
+
+.filtr_myreviews .clear_myreviews:hover {
+  color: #f22e23;
+}
+
+.filtr_myreviews select:hover {
+  color: #eba749;
+}
+
+.menu li a:hover {
+  color: #d29440;
+}

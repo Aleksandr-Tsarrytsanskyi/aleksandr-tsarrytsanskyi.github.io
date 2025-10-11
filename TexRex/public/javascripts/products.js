@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let reviews = product.children[2].innerHTML;
         let hit = product.children[0].children[0].firstElementChild.innerHTML;
         let title = product.children[3].textContent;
+        let img = product.children[0].firstElementChild.children[2].firstElementChild.src;
         let subtitle = product.children[4].textContent;
         let price =
           product.children[5].children[0].firstElementChild.children[0]
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
           product.children[5].children[1].firstElementChild.textContent;
         let procent =
           product.children[5].children[2].firstElementChild.textContent;
-        console.log(title);
+        console.log(img);
 
         let storageTitle = localStorage.setItem("title", title);
         let storageSubTitle = localStorage.setItem("subtitle", subtitle);
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let storagPrice = localStorage.setItem("price", price);
         let storagDiskount = localStorage.setItem("diskount", diskount);
         let storagDiskountProcent = localStorage.setItem("procent", procent);
+        let storagImage = localStorage.setItem("img", img);
       });
     });
   }

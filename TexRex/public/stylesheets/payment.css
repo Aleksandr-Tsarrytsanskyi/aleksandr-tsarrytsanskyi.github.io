@@ -422,6 +422,8 @@ input:focus .adres_radio {
   outline: none;
   position: relative;
   z-index: 300;
+  margin-top: 40px;
+  padding-top: 20px;
 }
 
 .payment .bg {
