@@ -1,4 +1,4 @@
-@media screen and (max-width: 1630px) {
+@media screen and (max-width: 1680px) {
   .menu_icon {
     z-index: 700;
     display: block;
@@ -97,4 +97,28 @@ ease 0s;
         bottom: 50%;
         transform: rotate(45deg) translate(0px, 50%);
     } 
+
+    .header .logo {
+      left: 50px;
+    }
+
+    .slider_header .swiper-pagination-bullet {
+      width: 240px;
+    }
+
+    .products_slider {
+      width: 257px !important;
+    }
+
+    .products .swiper-slide {
+      width: 257px !important;
+    }
+
+    .products_cart {
+      width: 257px;
+    }
+
+    .products {
+      grid-template-columns: 257px;
+    }
 }

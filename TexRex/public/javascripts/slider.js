@@ -161,11 +161,56 @@ document.addEventListener("DOMContentLoaded", function () {
     //   clickable: true,
     // },
     breakpoints: {
-      1200: {
+      778: {
         spaceBetween: 20,
+        slidesPerView: 1,
       },
     },
   });
+  //   resizableSwiper1("(max-width: 1680px)", ".products_slider_mobile", {
+  //   loop: true,
+  //   spaceBetween: 10,
+  //   slidesPerView: 1,
+  //   freeMode: true,
+  //   //      pagination: {
+  //   //     el: '.swiper-pagination',
+  //   //     clickable: true
+  //   //   },
+  //   //   navigation: {
+  //   //   nextEl: '.swiper-button-next',
+  //   //   prevEl: '.swiper-button-prev',
+  //   //   clickable: true
+  //   // },
+  //   // autoplay: {
+  //   //     delay: 5000,
+  //   //   },
+  //   // pagination: {
+  //   //   el: ".swiperslider-pagination",
+  //   //   clickable: true,
+  //   // },
+  //   breakpoints: {
+  //     1680: {
+  //       spaceBetween: 20,
+  //       slidesPerView: 1,
+  //     },
+  //   },
+  // });
+
+
+
+  const products_slider = document.querySelector(".products_slider")
+  function changeMatchMedia() {
+    
+  if(window.innerWidth <= 1680) {
+    console.log("OK");
+    
+    products_slider.classList.remove("products_slider");
+    products_slider.classList.add("products_slider_mobile");
+  }
+
+}
+
+
 
   const resizableSwiper2 = (
     breakpoint,
