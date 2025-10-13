@@ -3642,7 +3642,7 @@ footer {
 
 .footer_item {
   position: relative;
-  top: 769px;
+  top: 771px;
   z-index: 301;
 }
 
@@ -3768,4 +3768,19 @@ align-items: center;
 
      .footer .phone:hover {
       color: #fff;
+     }
+
+
+     .footer_metta {
+      width: 100%;
+      background-color: #d29440;
+      height: 45px;
+      text-align: center;
+      line-height: 45px;
+      font-size: 14px;
+      font-family: "Roboto Regular";
+     }
+
+     .mobile_topmenu {
+      display: none;
      }

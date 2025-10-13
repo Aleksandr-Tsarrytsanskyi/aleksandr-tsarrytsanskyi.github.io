@@ -1,4 +1,8 @@
 @media screen and (max-width: 1680px) {
+  .footer_item {
+    top: 775px;
+  }
+  
   .menu_icon {
     z-index: 700;
     display: block;
@@ -304,6 +308,25 @@
   left: -177px;
 }
 
+.footer__up {
+  position: relative;
+  left: -109px;
+}
+
+.footer_bottom {
+  margin-top: 130px;
+  padding-bottom: 0px;
+  width: 824px !important;
+}
+
+.bg_item_networks {
+  height: 88px;
+}
+
+.footer {
+  padding-top: 0px;
+}
+
 .footer .phone {
   margin-top: 0px;
 }
@@ -382,8 +405,8 @@
 }
 
 .slider_header__item a {
-  width: 207px;
-  height: 52px;
+  width: 187px;
+  height: 53px;
   line-height: 52px;
   font-size: 16px;
 }
@@ -661,7 +684,103 @@ background-color: #d29440;
      background: url("/public/images/Arrow_white.png") no-repeat right -2% bottom 45%;
 }
 
+.footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 
+.footer input[type="email"] {
+  width: 227px;
+}
+
+.footer .mail {
+  width: 179px;
+  height: 52px;
+  line-height: 52px;
+}
+
+.footer_top_logo {
+  grid-template-columns: 162px 289px 182px;
+  grid-gap: 0px;
+}
+
+.footer_center {
+  width: 640px;
+}
+
+.footer .phone {
+  font-size: 36px;
+}
+.footer nav a {
+  font-size: 16px;
+}
+
+.footer__up {
+  width: 254px;
+  padding: 0;
+  font-size: 16px;
+  background-image: url("/public/images/mobile_up.png");
+    background-repeat: no-repeat;
+    background-position: 175px 19px;
+}
+
+.footer_bottom {
+  width: 614px !important;
+  grid-template-columns: 416px 193px;
+  margin-top: 147px;
+  padding-bottom: 10px;
+}
+
+.footer_bottom a {
+  font-size: 12px;
+}
+.footer_cart svg {
+  width: 32px;
+  height: 32px;
+}
+
+.header_container {
+  width: 600px;
+}
+
+.bg_header {
+  left: -79px;
+}
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .mobile_topmenu {
+    display: block;
+  }
+
+  .mobile_none {
+    display: none;
+  }
+
+  .mobile_topmenu ul {
+    float: left;
+  }
+
+  .name_navbar li{
+   margin-left: 10px !important;
+   margin-bottom: 40px !important;
+   margin-top: 5px;
+  }
+
+  .name_navbar a {
+    font-size: 16px;
+    color: #fff;
+  }
+
+    .name_navbar a:hover {
+      color: #d29440;
+    }
+
+    .name_navbar a:hover .header .right-menu svg {
+      fill: #d29440;
+    }
 }
 
 
