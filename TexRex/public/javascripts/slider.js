@@ -165,6 +165,11 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 20,
         slidesPerView: 4,
       },
+
+       320: {
+        spaceBetween: 20,
+        slidesPerView: 2,
+      },
     },
   });
   //   resizableSwiper1("(max-width: 1680px)", ".products_slider_mobile", {
@@ -296,6 +301,10 @@ document.addEventListener("DOMContentLoaded", function () {
       1680: {
         spaceBetween: 20,
          slidesPerView: 4,
+      },
+       320: {
+        spaceBetween: 20,
+         slidesPerView: 2,
       },
     },
   });
