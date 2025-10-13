@@ -45,6 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const cancelCoockie = document.querySelector(".coockie .reject");
   const cookiesAccepted = document.querySelector(".coockie .cookies_accepted");
   const coockie = document.querySelector(".coockie");
+  const eventText = document.querySelectorAll(".event .text");
+
+if(window.innerWidth <= 960) {
+  eventText.forEach(text => {
+    text.textContent = "Чай, который помогает расслабиться и спокойнее спать. Он отлично подходит для снятия нервного напряжения после напряжённого дня, помогая восс..."
+
+  })
+}
 
   cancelCoockie.addEventListener("click", function () {
     coockie.classList.add("coockie_hide");

@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
   resizableSwiper1("(max-width: 9020px)", ".products_slider", {
     loop: true,
     spaceBetween: 10,
-    slidesPerView: 4,
+    slidesPerView: 3,
     freeMode: true,
     //      pagination: {
     //     el: '.swiper-pagination',
@@ -161,9 +161,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //   clickable: true,
     // },
     breakpoints: {
-      778: {
+      1680: {
         spaceBetween: 20,
-        slidesPerView: 1,
+        slidesPerView: 4,
       },
     },
   });
@@ -196,7 +196,29 @@ document.addEventListener("DOMContentLoaded", function () {
   //   },
   // });
 
+// const swiper2 = new Swiper('.products_slider_mobile', {
+//   // Optional parameters
+//   loop: true,
+//     spaceBetween: 10,
+//     slidesPerView: 1,
+//     freeMode: true,
 
+//   // If we need pagination
+//   // pagination: {
+//   //   el: '.swiper-pagination',
+//   // },
+
+//   // // Navigation arrows
+//   // navigation: {
+//   //   nextEl: '.swiper-button-next',
+//   //   prevEl: '.swiper-button-prev',
+//   // },
+
+//   // // And if we need scrollbar
+//   // scrollbar: {
+//   //   el: '.swiper-scrollbar',
+//   // },
+// });
 
   const products_slider = document.querySelector(".products_slider")
   function changeMatchMedia() {
@@ -252,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
   resizableSwiper2("(max-width: 9020px)", ".watch_slider", {
     loop: true,
     spaceBetween: 10,
-    slidesPerView: 4,
+    slidesPerView: 3,
     freeMode: true,
     //      pagination: {
     //     el: '.swiper-pagination',
@@ -271,8 +293,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //   clickable: true,
     // },
     breakpoints: {
-      1200: {
+      1680: {
         spaceBetween: 20,
+         slidesPerView: 4,
       },
     },
   });

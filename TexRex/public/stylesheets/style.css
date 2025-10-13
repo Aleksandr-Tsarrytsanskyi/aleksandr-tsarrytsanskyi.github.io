@@ -852,7 +852,7 @@ h2 {
   transform: scale(1);
   transition: transform 0.3s ease;
   padding-right: 30px;
-  background: url("../images/network_link.png") no-repeat right bottom 47%;
+  background: url("../images/network_link.png") no-repeat right bottom 55%;
 }
 
 .networks__link .cell:hover {
@@ -874,11 +874,30 @@ h2 {
   border: 1px solid #d29440;
 }
 
-.footer {
-  display: grid;
+.footer_top_logo {
+ display: grid;
   grid-template-columns: 920px 390px 265px;
   justify-content: center;
-  grid-gap: 0px 10px;
+}
+
+.footer_center {
+   display: grid;
+  grid-template-columns: 920px 390px 265px;
+  justify-content: center;
+}
+
+.footer_center .cell:last-child {
+  position: relative;
+  top: -125px;
+}
+
+
+
+.footer {
+  /* display: grid;
+  grid-template-columns: 920px 390px 265px;
+  justify-content: center;
+  grid-gap: 0px 10px; */
   position: relative;
   z-index: 302;
 
@@ -910,7 +929,7 @@ h2 {
 }
 
 .footer nav {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .footer nav a {
@@ -935,7 +954,8 @@ h2 {
 }
 
 .footer_top {
-  margin-top: 78px !important;
+  margin-top: 0px !important;
+  float: right;
 }
 
 .footer_top a {
@@ -958,6 +978,7 @@ h2 {
   text-align: center;
   position: relative;
   top: 35px;
+  float: right;
 }
 
 .footer .mail:hover {
@@ -975,7 +996,7 @@ h2 {
   font-size: 18px;
   background-image: url("../images/footer_arow_top.png");
   background-repeat: no-repeat;
-
+  float: right;
   border: none;
   background-position: 185px 17px;
   cursor: pointer;
@@ -3639,7 +3660,7 @@ footer {
 .bg_item_networks {
   background-color: #0a0a0a;
   width: 100%;
-  height: 155px;
+  height: 200px;
   position: relative;
   z-index: 300;
 }
@@ -3657,8 +3678,9 @@ footer {
 align-items: center;
   width: 1600px;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 95px;
   padding-bottom: 20px;
+  width: 1600px !important;
 }
 
 .footer_bottom li {
@@ -3688,7 +3710,7 @@ align-items: center;
 }
 
 .footer input[type='email'] {
-  width: 380px;
+  width: 380px !important;
   height: 59px;
   background-color: #0a0a0a;
   
@@ -3735,3 +3757,15 @@ align-items: center;
 .menu li a:hover {
   color: #d29440;
 }
+
+.networks__link .cell {
+      transform: scale(1);
+    }
+
+     .networks__link .cell:hover {
+       transform: scale(1.1);
+     }
+
+     .footer .phone:hover {
+      color: #fff;
+     }
