@@ -1082,6 +1082,18 @@
   .header .topmenu .topmenu__link {
     font-size: 16px;
   }
+
+  .header .topmenu li {
+    margin-bottom: 25px;
+  }
+
+  .name_navbar li {
+    margin-bottom: 35px !important;
+  }
+
+  .header .topmenu ul {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
