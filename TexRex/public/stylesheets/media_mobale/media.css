@@ -1552,4 +1552,12 @@
     .slider_header__item a {
       line-height: 53px;
     }
+
+    .event_slider .swiper-slide {
+      width: 310px !important;
+    }
+
+    .about__header {
+      margin-top: 0px;
+    }
 }
