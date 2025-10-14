@@ -1577,3 +1577,11 @@
       margin-top: 0px;
     }
 }
+
+@media screen and (max-width: 380px)  {
+.about h2 {
+  font-size: 47px;
+  width: 347px;
+}
+}
+
