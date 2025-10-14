@@ -1124,7 +1124,7 @@
   .slider_header__item a {
     background-color: #d29440 !important;
     width: 182px;
-    background: url("../public/images/mobile_arrow.png") no-repeat right 19%
+    background: url("/public/images/mobile_arrow.png") no-repeat right 19%
       bottom 51%;
   }
 
@@ -1486,8 +1486,8 @@
     }
 
     .footer .mail {
-      left: 55px;
-      width: 332px;
+      left: 16px;
+      width: 284px;
       font-size: 14px;
       line-height: 52px;
     }
