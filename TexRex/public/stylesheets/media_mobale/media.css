@@ -1365,7 +1365,7 @@
 
   .about h2 {
     font-size: 49px;
-    width: 350px;
+    width: 348px;
     top: 76%;
   }
 
@@ -1439,12 +1439,12 @@
   }
 
   .networks__link {
-    grid-template-columns: 113px 113px 113px;
+    grid-template-columns: 107px 107px 107px;
     margin-top: 40px;
   }
 
     .networks__link .cell {
-      height: 113px;
+      height: 107px;
     }
 
     .networks__link  a {
@@ -1535,5 +1535,17 @@
 
     .event_slider .swiper-slide {
       width: 310px;
+    }
+
+    .footer_top_logo .cell:first-child {
+      left: -40px;
+    }
+
+    .bg_item_networks {
+      height: 39px;
+    }
+
+    .slider_header__item a {
+      line-height: 53px;
     }
 }
