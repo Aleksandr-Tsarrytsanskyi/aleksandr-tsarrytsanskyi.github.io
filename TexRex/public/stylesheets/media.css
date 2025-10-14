@@ -1124,7 +1124,7 @@
   .slider_header__item a {
     background-color: #d29440 !important;
     width: 182px;
-    background: url("/public/images/mobile_arrow.png") no-repeat right 19%
+    background: url("../images/mobile_arrow.png") no-repeat right 19%
       bottom 51%;
   }
 
