@@ -1,6 +1,26 @@
 @media screen and (max-width: 1680px) {
+ 
+  .navigation {
+    grid-template-columns: 850px;
+  }
+
+  .filtr_title {
+    font-size: 80px;
+  }
+
+  .filtr {
+    margin-top: 20px;
+  }
+.width_filtr {
+  width: 831px;
+}
+
   .footer_item {
     top: 775px;
+  }
+
+  .header .topmenu ul {
+    margin-top: 60px;
   }
 
   .header .topmenu {
@@ -381,6 +401,9 @@
 }
 
 @media screen and (max-width: 960px) {
+  
+
+  
   .header .cell:nth-child(3) {
     margin-left: 0;
   }
@@ -1197,7 +1220,7 @@
   }
 
   .products_cart_hit .products_price .cell:last-child {
-    top: -276px;
+    top: -257px;
     left: 9px;
     width: 39px;
     height: 26px;
@@ -1214,8 +1237,8 @@
   }
 
   .products_price .cell:last-child {
-    top: -270px;
-    left: 6px;
+    top: -253px;
+    left: 7px;
   }
 
   .products__header svg {

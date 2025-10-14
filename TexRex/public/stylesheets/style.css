@@ -3788,3 +3788,10 @@ align-items: center;
      .slider_header__item .mobile_img {
       display: none;
      }
+
+     .filtr_title {
+      font-size: 160px ; 
+    line-height: 135% ;
+     font-family: "Roboto Medium" ;
+     color: rgba(255, 255, 255, 0.05);
+     }

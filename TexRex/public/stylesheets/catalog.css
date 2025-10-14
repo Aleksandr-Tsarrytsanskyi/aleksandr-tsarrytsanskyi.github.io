@@ -7,6 +7,7 @@
     grid-template-columns: 388px 388px 388px 388px !important;
     justify-content: center;
     grid-gap: 90px 10px;
+    justify-items: center
 }
 
 .api_products {
@@ -167,4 +168,235 @@ footer {
     margin-top: -100px;
 }
 
+@media screen and (max-width: 1680px) {
+     .products {
+    grid-template-columns: 257px 257px 257px !important;
+    grid-gap: 100px 22px;
+  }
+
+  .api_products {
+    grid-template-columns: 792PX;
+  }
+
+  .api_products button {
+    width: 792PX;
+    background-position: 61% 18px;
+  }
+
+  .api_products button:hover {
+    background-position: 61% 15px;
+  }
+
+}
+
+@media screen and (max-width: 960px) {
+footer {
+    margin-top: -250px;
+}
+
+       .products {
+    grid-template-columns: 196px 196px 196px !important;
+    grid-gap: 30px 10px;
+  }
+
+  .products > .cell{
+    height: 585px;
+  }
+
+  .navigation {
+    grid-template-columns: 650px !important;
+    margin-top: 100px;
+    margin-bottom: 85px;
+  }
+
+  .width_filtr {
+    width: 620px !important;
+  }
+
+  .filtr_btn {
+    font-size: 16px;
+  }
+
+  .filtr select, .filtr p , .filtr button{
+    font-size: 16px;
+  }
+
+  .filtr .left {
+    float: none;
+  }
+
+  .filtr .left li {
+    float: none;
+    margin: 0px 0 30px 0;
+  }
+
+  .filtr {
+    display: grid;
+    grid-template-columns: 200px 300px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .api_products button {
+    margin-top: 0px;
+    width: 611px;
+    font-size: 16px;
+    background-position: 63% 18px;
+  }
+
+   .api_products button:hover {
+    background-position: 64% 14px ;
+   }
+
+  .api_products {
+    grid-template-columns: 611px;
+  }
+
+
+}
+
+   @media (hover: none) {
+      .api_products button:hover {
+        /* Отменить эффект на сенсорных экранах */
+        
+         background-image:initial
+      }
+    }
+
+@media screen and (max-width: 768px) {
+     .api_products button:not(.no-hover):hover {
+          background-image:initial
+     }
+
+    .api_products button {
+        background-position: 69% 21px !important;
+        background-image: url("../images/mobile_arrow_bottom.png");
+    }
+
+   
+
+    .navigation {
+        grid-template-columns: 420px !important;
+    }
+
+    .filtr_title {
+        font-size: 48px !important;
+    }
+
+    .width_filtr {
+        width: 398px !important;
+    }
+
+    .filtr .right li {
+        float: none;
+    }
+
+    .filtr {
+        grid-template-columns: 188px 221px;
+    }
+
+    .products {
+        grid-template-columns:  201px 201px !important;
+        grid-gap: 30px 0px;
+    }
+
+    .filtr .right button {
+        margin-top: 25px;
+    }
+
+    .api_products button {
+        width: 394px;
+        background-position: 69% 18px;
+    }
+
+    .api_products button:hover {
+        background-position: 70% 14px;
+    }
+
+    .api_products {
+        grid-template-columns: 394px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+        .products {
+            grid-template-columns: 154px 154px !important;
+            grid-gap: 0px 10px;
+        }
+
+        .products > .cell {
+            height: 477px;
+        }
+        .navigation {
+            grid-template-columns: 334px !important;
+        }
+
+        .navigation a {
+            font-size: 14px;
+        }
+
+        .filtr_title {
+            font-size: 35px !important;
+        }
+
+        .filtr button {
+            font-size: 14px;
+            height: 26px;
+            width: 130px;
+        }
+
+        .filtr select, .filtr p, .filtr .right button {
+            font-size: 14px;
+        }
+
+        .filtr {
+            grid-template-columns: 324px;
+        }
+
+        .width_filtr {
+            width: 324px !important;
+        }
+
+        .filtr .right li {
+            float: left;
+            margin-left: 90px;
+        }
+
+        .filtr .right li:first-child {
+             margin-left: 0px;
+        }
+
+        .filtr .right button {
+            margin-top: 2px;
+        }
+
+        .filtr option {
+            font-size: 14px;
+        }
+        .filtr .right {
+            left: 0;
+        }
+
+        .api_products button {
+            width: 310px;
+            background-position: 74% 22px !important;
+        }
+
+        .api_products {
+            grid-template-columns: 310px;
+        }
+
+        footer {
+            margin-top: -308px;
+        }
+
+        .products__header .cell:last-child {
+            width: 178px !important;
+        }
+
+        .products__header {
+            grid-template-columns: 8px 58px !important;
+        }
+    }
 
