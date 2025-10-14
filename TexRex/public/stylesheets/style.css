@@ -3784,3 +3784,7 @@ align-items: center;
      .mobile_topmenu {
       display: none;
      }
+
+     .slider_header__item .mobile_img {
+      display: none;
+     }

@@ -46,6 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const cookiesAccepted = document.querySelector(".coockie .cookies_accepted");
   const coockie = document.querySelector(".coockie");
   const eventText = document.querySelectorAll(".event .text");
+  const blogtext = document.querySelector(".blog__text");
+
+  if(window.innerWidth = 480) {
+    blogtext.textContent = "В блоге я делюсь мыслями о простых вещах, которые помогают чувствовать себя лучше каждый день. Рассказываю..."
+  }
 
 if(window.innerWidth <= 960) {
   eventText.forEach(text => {
