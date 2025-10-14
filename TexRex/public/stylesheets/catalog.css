@@ -4,7 +4,7 @@
 
 .products {
     display: grid;
-    grid-template-columns: 388px 388px 388px 388px;
+    grid-template-columns: 388px 388px 388px 388px !important;
     justify-content: center;
     grid-gap: 90px 10px;
 }
