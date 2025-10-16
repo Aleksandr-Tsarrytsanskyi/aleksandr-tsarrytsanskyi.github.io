@@ -1,0 +1,9 @@
+footer {
+    margin-top: -340px;
+}
+
+@media screen and (max-width: 1680px) {
+    footer {
+    margin-top: -340px !important;
+}
+}

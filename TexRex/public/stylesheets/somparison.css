@@ -66,7 +66,7 @@ color:  rgba(255, 255, 255, 0.5);
 }
 
 .comparison__content li  {
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
 .comparison__content_col p {
@@ -74,11 +74,11 @@ color:  rgba(255, 255, 255, 0.5);
 }
 
 .comparison__content .item_text {
-    height: 690px;
+    height: 814px;
 }
 
 .comparison__content .text2 {
-    margin-bottom: 55px;
+    margin-bottom: 109px;
     margin-top: 68px;
 }
 
@@ -109,15 +109,15 @@ top: -8px;
 }
 
 .comparison__content .text3 {
-    margin-bottom: 67px;
+    margin-bottom: 96px;
 }
 
 .comparison__content .text4 {
-    margin-bottom: 262px;
+    margin-bottom: 290px;
 }
 
 .comparison__content .text5 {
-    margin-bottom: 90px;
+    margin-bottom: 127px;
 }
 
 .comparison__content_pos p {
@@ -159,6 +159,11 @@ margin-bottom: 20px;
 
 .comparison__content_remove {
     cursor: pointer;
+    fill: white;
+}
+
+.comparison__content_remove:hover {
+    fill: #d29440;
 }
 
 .comparison__content_title {
@@ -182,5 +187,11 @@ footer {
     margin-top: -150px;
 }
 
+
+@media screen and (max-width: 1680px) {
+    footer {
+        margin-top: -340px !important;
+    }
+}
 
 

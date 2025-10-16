@@ -200,7 +200,7 @@
 
 .progress_bar {
   display: grid;
-  grid-template-columns: 36px 470px 12px 470px 12px 570px 36px;
+  grid-template-columns: 36px 470px 12px 470px 12px 565px 36px;
   align-items: center;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -221,7 +221,7 @@
 
 .profile .delivery {
     display: grid;
-    grid-template-columns:503px 482px 461px 161px;
+    grid-template-columns:503px 482px 451px 161px;
 }
 
 .profile .delivery  .cell:last-child {

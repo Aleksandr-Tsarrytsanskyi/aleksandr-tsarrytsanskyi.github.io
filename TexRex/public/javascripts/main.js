@@ -48,8 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const eventText = document.querySelectorAll(".event .text");
   const blogtext = document.querySelector(".blog__text");
 
-  if(window.innerWidth = 480) {
+  if(window.innerWidth <= 480) {
     blogtext.textContent = "В блоге я делюсь мыслями о простых вещах, которые помогают чувствовать себя лучше каждый день. Рассказываю..."
+  }
+
+    if(window.innerWidth >= 480) {
+    blogtext.textContent = "В блоге я делюсь мыслями о простых вещах, которые помогают чувствовать себя лучше каждый день. Рассказываю о привычках, помогающих восстановить энергию и обрести внутренний баланс."
   }
 
 if(window.innerWidth <= 960) {
@@ -57,6 +61,15 @@ if(window.innerWidth <= 960) {
     text.textContent = "Чай, который помогает расслабиться и спокойнее спать. Он отлично подходит для снятия нервного напряжения после напряжённого дня, помогая восс..."
 
   })
+  
+}
+
+if(window.innerWidth >= 960) {
+  eventText.forEach(text => {
+    text.textContent = "Тёплая атмосфера и живое общение в самом сердце столицы. Эта встреча станет возможностью обменяться идеями, вдохновиться новыми мыслями и провести время в кругу единомышленников. Неформальная обстановка поможет чувствовать себя свободно и открыто, а новые знакомства могут перерасти в долгосрочные связи."
+
+  })
+  
 }
 
   cancelCoockie.addEventListener("click", function () {

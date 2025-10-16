@@ -165,7 +165,7 @@ color: rgba(255, 255, 255, 0.5);
 }
 
 footer {
-    margin-top: -100px;
+    margin-top: -100px !important;
 }
 
 @media screen and (max-width: 1680px) {
@@ -191,7 +191,7 @@ footer {
 
 @media screen and (max-width: 960px) {
 footer {
-    margin-top: -250px;
+    margin-top: -250px !important;
 }
 
        .products {
@@ -322,7 +322,7 @@ footer {
 @media screen and (max-width: 480px) {
         .products {
             grid-template-columns: 154px 154px !important;
-            grid-gap: 0px 10px;
+            grid-gap: 0px 7px;
         }
 
         .products > .cell {
@@ -388,7 +388,7 @@ footer {
         }
 
         footer {
-            margin-top: -308px;
+            margin-top: -308px !important;
         }
 
         .products__header .cell:last-child {

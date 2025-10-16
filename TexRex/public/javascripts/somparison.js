@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalClose = document.querySelectorAll(".modal__close");
   const modal = document.querySelectorAll(".modal");
   const modalform = document.querySelectorAll(".login_account");
+  const modalbesket  = document.querySelector(".modal_besket ");
 
   modalform.forEach((submit) => {
     submit.addEventListener("submit", function (e) {
@@ -87,6 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
       ".comparison__content_remove"
     ).parentElement;
     eventTarget.remove();
+
+    if( event.target.closest(".comparison__content_remove")) {
+      modalbesket.classList.remove("modal_besket_show")
+    }
     modalRemoveProduct.classList.add("modal_comparison_remove_product_show");
   });
 
@@ -101,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
   clearbtn.addEventListener("click", function () {
     clearProduct.forEach((product) => {
       product.remove();
+      modalbesket.classList.remove("modal_besket_show")
     });
   });
 

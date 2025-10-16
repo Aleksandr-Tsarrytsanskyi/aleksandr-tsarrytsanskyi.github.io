@@ -507,4 +507,17 @@ input:focus .adres_radio {
   color: #fff;
   margin-top: 50px;
   cursor: pointer;
+  border: none;
 }
+
+.payment .submit:hover {
+   background-image: url("../images/active_right.png");
+  background-repeat: no-repeat;
+    background-position: 325px 13px;
+  background-color: #fff;
+  color: #d29440;
+}
+
+footer {
+        margin-top: -340px !important;
+    }

@@ -311,6 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
     acardion.forEach((el) => {
       el.addEventListener("click", function (e) {
         console.log(e.target);
+       
         el.classList.toggle("active");
         let content = el.nextElementSibling;
         console.log(content);
@@ -324,6 +325,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .querySelectorAll(".description_acradion_content")
             .forEach((el) => {
               el.style.maxHeight = null;
+              
             });
         } else {
           document
@@ -331,6 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .forEach((el) => {
               el.style.maxHeight = null;
               content.style.maxHeight = content.scrollHeight + "px";
+             
             });
         }
       });

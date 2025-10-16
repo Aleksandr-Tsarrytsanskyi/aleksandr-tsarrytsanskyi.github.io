@@ -43,6 +43,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalClose = document.querySelectorAll(".modal__close");
   const modal = document.querySelectorAll(".modal");
   const modalform = document.querySelectorAll(".login_account");
+  const productbesketSvg = document.querySelectorAll(".product_besket svg");
+
+  productbesketSvg.forEach(btn => {
+    btn.addEventListener("click", function(event) {
+      event.preventDefault();
+    })
+  })
 
   modalform.forEach((submit) => {
     submit.addEventListener("submit", function (e) {
