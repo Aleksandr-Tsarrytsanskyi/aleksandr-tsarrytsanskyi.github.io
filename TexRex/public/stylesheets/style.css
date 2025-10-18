@@ -1537,6 +1537,7 @@ h2 {
 }
 
 .video a {
+  font-size: 18px;
   border-radius: 2px;
   display: block;
   width: 152px;
@@ -1549,7 +1550,7 @@ h2 {
   background-color: #d29440;
   background-image: url("../images/TEA/Vector.png");
   background-repeat: no-repeat;
-  background-position: 109px 22px;
+  background-position: 125px 22px;
 }
 
 .video .cell:last-child {
@@ -3451,7 +3452,7 @@ height: 16px;
   color: #d29440;
   background-image: url("../images/accaunt.png");
   background-repeat: no-repeat;
-  background-position: 110px 13px;
+  background-position: 120px 13px;
 }
 
 .grade_btn:hover {
@@ -4139,6 +4140,28 @@ margin-top: 80px;
 background-repeat: no-repeat;
 }
 
+
+.header .right-menu svg.active {
+  fill: #d29440;
+}
+
+.description__user_reviews .delete_reviews.mobile {
+  display: none;
+}
+
+.description__user_reviews .delete_reviews.none {
+  display: block;
+}
+
+.description h3 {
+    font-size: 160px;
+    color: rgba(255, 255, 255, 0.05);
+    font-family: "Roboto Medium";
+    font-weight: normal;
+    margin-bottom: 20px;
+  } 
+
+  
 
 
 

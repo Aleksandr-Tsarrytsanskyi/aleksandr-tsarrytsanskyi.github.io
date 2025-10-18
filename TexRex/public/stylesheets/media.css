@@ -1,5 +1,146 @@
 @media screen and (max-width: 1680px) {
  
+  .width_menu {
+    width: 800px;
+  }
+
+  .description h3 {
+    font-size: 80px;
+  }
+
+
+  .description__user_reviews .star {
+    width: 800px;
+  }
+
+    .description .products {
+      margin-top: 90px;
+    }
+
+    .description__tabs {
+      margin-top: 20px;
+    }
+
+   .description .products .recommend_slider_title {
+    font-size: 80px !important;
+   }
+
+  .description__item {
+    grid-template-columns: 800px;
+  }
+
+  .mySwiperMain .description__cart img {
+    max-width: 800px;
+  }
+
+  .mySwiperMain, .mySwiperThumbs {
+    width: 800px;
+  }
+
+  .description__item .swiperNext {
+    left: 87.5%;
+  }
+  
+  .description__quantity {
+    justify-content: space-between
+  }
+
+  .description__addcart {
+    grid-template-columns: 671px 59px 59px;
+  }
+
+  .description__addcart button {
+    width: 659px;
+  }
+
+  .description__tabs {
+    grid-template-columns: 800px;
+  }
+
+  .description__tabs button {
+    width: 248px;
+  }
+
+  .characteristics {
+    width: 800px;
+  }
+
+  .instructions_btn, .description__delivery {
+    width: 795px;
+  }
+
+  .characteristics {
+    grid-gap: 0px 233px;
+  }
+
+  .description_content_about {
+    width: 800px;
+  }
+  
+  .description_content_about .video img {
+    width: 481px;
+    height: 269px;
+}
+
+.description_content_about .video {
+  grid-template-columns: 481px 320px;
+}
+
+.video h2 {
+  font-size: 53px;
+}
+
+.video .cell:last-child {
+  top: 41px;
+}
+
+.description__user_reviews > .cell:last-child {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.description__user_reviews {
+  grid-template-columns: 800px;
+  margin-top: -100px;
+}
+
+.description__user_reviews .delete_reviews.none {
+  display: none;
+}
+
+.description__user_reviews .delete_reviews.mobile {
+  display: block;
+  position: relative;
+  left: 80%;
+}
+
+.description .recommend_slider {
+  width: 821px;
+} 
+
+.description__tabs {
+  position: relative;
+  z-index: 300;
+}
+
+.user_width {
+  width: 800px;
+}
+
+.description__user_reviews .user {
+  width: 800px;
+}
+
+.description__user_reviews .grid {
+  width: 800px;
+}
+
+
+
+.top_grade_rew {
+position: relative;
+}
+
   footer {
     margin-top: -435px;
   }
@@ -403,7 +544,172 @@
 }
 
 @media screen and (max-width: 960px) {
+
+  .description__user_reviews select, .description__user_reviews .grid p {
+    font-size: 16px;
+  }
+
+  .grade__content .cell:nth-child(4) > p {
+    font-size: 16px;
+  }
+
+  .description__user_reviews {
+    grid-template-columns: 606px;
+  }
+
+  .description__user_reviews .title {
+    font-size: 60px;
+  }
+
+  .description__user_reviews sub {
+    font-size: 36px;
+  }
+
+  .description_content_about .video {
+    grid-template-columns: 402px 204px !important;
+  }
+
+  .video .cell:last-child {
+           top: 22px;
+        left: -92px;
+        width: 286px;
+  }
+
+  .video_title p {
+    font-size: 14px;
+  }
+
+  .video h2 {
+    font-size: 48px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .description_content_about .video {
+    grid-template-columns: 481px 320px;
+  }
+
+  .description_content_about .video img {
+    width: 402px;
+    height: 225px;
+  }
+
+  .description_content_about h2 {
+    font-size: 18px;
+  }
+
+  .description_content_about .width p {
+    font-size: 16px;
+  }
+
+  .description_content_about .width, .description_content_about {
+    width: 606px;
+  }
+
+  .characteristics {
+    width: 606px;
+    grid-gap: 0px 75px;
+  }
+
+  .description__gram {
+    grid-template-columns: 106px 91px;
+  }
+
+  .description__addcart button, .description__stock, .instructions_btn, .description__delivery, .description__tabs button{
+    font-size: 16px;
+  }
+
+  .characteristics h2 {
+    font-size: 18px;
+  }
+
+  .characteristics .left li p , .characteristics .right p{
+    font-size: 16px;
+  }
+
+  .description_price .discount {
+    text-decoration: line-through;
+  }
+
+  .description__gram .cell:last-child {
+    width: 102px !important;
+    height: 48px !important;
+  }
+
+  .description__gram .cell {
+    width: 106px !important;
+    height: 52px !important;
+  }
+
+  .description__gram p {
+    font-size: 14px;
+    line-height: 52px;
+  }
+
+  .description__text {
+    font-size: 14px;
+  }
+
+  .description__reviews p {
+    font-size: 14px;
+  }
+
+  .description__subtitle {
+    font-size: 36px;
+  }
+
+  .description__title {
+    font-size: 14px;
+  }
+
+  .description__tabs button {
+    width: 183px;
+  }
+
+  .description__tabs {
+    grid-template-columns: 606px;
+  }
+
+  .instructions_btn, .description__delivery {
+    width: 606px;
+  }
+
+  .description__addcart button {
+    width: 465px;
+  }
+
+  .description__addcart {
+    grid-template-columns: 477px 59px 59px;
+  }
+
+  .description__item {
+    grid-template-columns: 606px;
+  }
+
+  .description__item .swiperNext {
+    left: 63.5%;
+  }
+
+  .mySwiperMain, .mySwiperThumbs {
+    width: 606px;
+  }
+
+  .mySwiperMain .description__cart img {
+    max-width: 608px;
+  }
+
+    .description .swiper-navigation {
+      right: -11px !important;
+    }
   
+  .description .recommend_slider {
+    width: 611px;
+  }
+
+  .description .products {
+    grid-template-columns: 607px;
+  }
+
   .product_besket {
     opacity: 1;
     visibility: visible;
@@ -789,9 +1095,32 @@
   .bg_header {
     left: -79px;
   }
+
+  .description h3 {
+    font-size: 60px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+
+  .description h3 {
+    font-size: 41px;
+    margin-bottom: 20px;
+  }
+
+  .description .swiper-navigation {
+    left: 16px !important;
+        top: 52px;
+  }
+
+    .description .recommend_slider {
+    width: 396px;
+  }
+
+  .description .products {
+    grid-template-columns: 396px;
+  }
+
   .mobile_topmenu {
     display: block;
   }
@@ -1143,6 +1472,14 @@
 }
 
 @media screen and (max-width: 480px) {
+  .description .recommend_slider {
+    width: 312px;
+  }
+
+  .description .products {
+    grid-template-columns: 312px;
+  }
+
   .slider_header__item .mobile_img {
     display: block;
   }
@@ -1266,8 +1603,7 @@
   }
 
   .products__header svg.active {
-    stroke: #eba749;
-    stroke-width: 10px;
+   
     width: 38px;
     height: 38px;
     position: relative;
@@ -1634,6 +1970,16 @@
 
     footer {
       margin-top: -395px;
+    }
+
+    .product_besket svg{
+      width: 24px;
+      height: 24px;
+    }
+
+    .product_besket {
+          bottom: 11px;
+        right: 5px;
     }
 }
 

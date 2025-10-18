@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     resizableSwiper1("(max-width: 9020px)", ".recommend_slider", {
       loop: true,
       spaceBetween: 10,
-      slidesPerView: 4,
+    
       freeMode: true,
       // pagination: {
       //   el: ".swiper-pagination",
@@ -175,8 +175,17 @@ document.addEventListener("DOMContentLoaded", function () {
       //   clickable: true,
       // },
       breakpoints: {
-        1200: {
+        1680: {
           spaceBetween: 20,
+            slidesPerView: 4,
+        },
+         768: {
+          spaceBetween: 20,
+            slidesPerView: 3,
+        },
+         320: {
+          spaceBetween: 20,
+            slidesPerView: 2,
         },
       },
     });
