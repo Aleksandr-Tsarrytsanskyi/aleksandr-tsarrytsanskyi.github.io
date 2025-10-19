@@ -97,7 +97,7 @@ p {
   justify-content: center;
   position: fixed;
   top: 0;
-  z-index: 302;
+  z-index: 304;
   width: 100%;
   background-color: #0a0a0a;
   height: 100px;
@@ -3478,6 +3478,9 @@ height: 16px;
   color: #d29440;
 }
 
+  .stars_slider {
+    display: none !important;
+  }
 .favorites_filtr select {
   cursor: pointer;
 }

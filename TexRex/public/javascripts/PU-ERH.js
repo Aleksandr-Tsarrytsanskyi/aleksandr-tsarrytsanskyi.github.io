@@ -190,6 +190,37 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
 
+
+      resizableSwiper1("(max-width: 768px)", ".stars_slider", {
+      loop: true,
+      spaceBetween: 10,
+     slidesPerView: 1,
+      freeMode: true,
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+      //   navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      //   clickable: true
+      // },
+      // autoplay: {
+      //     delay: 5000,
+      //   },
+      // pagination: {
+      //   el: ".swiperslider-pagination",
+      //   clickable: true,
+      // },
+      // breakpoints: {
+       
+      //    320: {
+      //     spaceBetween: 20,
+      //       slidesPerView: 1,
+      //   },
+      // },
+    });
+
     let swiperThumbs = new Swiper(".mySwiperThumbs", {
       loop: true,
       spaceBetween: 10,

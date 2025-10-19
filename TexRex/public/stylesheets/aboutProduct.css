@@ -7,3 +7,21 @@ footer {
     margin-top: -340px !important;
 }
 }
+
+@media screen and (max-width: 960px)  {
+        footer {
+    margin-top: -320px !important;
+}
+
+.recommend_slider {
+    height: 650px;
+}
+
+
+}
+
+@media screen and (max-width: 480px)  {
+    footer {
+    margin-top: -465px !important;
+}
+}
