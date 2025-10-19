@@ -2505,6 +2505,7 @@ height: 175px;
 
      .menu {
       grid-template-columns: 312px;
+      margin-bottom: 40px;
      }
 
      .description__item > .cell:first-child {
@@ -2513,6 +2514,10 @@ height: 175px;
 
      .instructions_btn, .description__delivery {
       width: 312px;
+     }
+
+     .menu li {
+      margin-right: 4px;
      }
      
 }
