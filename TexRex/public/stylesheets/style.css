@@ -2050,6 +2050,7 @@ h2 {
   line-height: 150%;
   font-family: "Roboto Medium";
   color: #fff;
+  cursor: pointer;
 }
 
 .besket__item {
@@ -4075,6 +4076,7 @@ position: fixed;
 .payment .bg_item  {
   background-color:  rgba(255, 255, 255, 0.05);
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 .comparison__content_text {
@@ -4166,6 +4168,10 @@ background-repeat: no-repeat;
     font-weight: normal;
     margin-bottom: 20px;
   } 
+
+  .remove_besket_product {
+    display: none;
+  }
 
 
 

@@ -164,7 +164,6 @@
   line-height: 150%;
   color: #fff;
   font-family: "Roboto Regular";
-  margin-bottom: 20px;
   margin-left: 25px;
 }
 
@@ -296,7 +295,7 @@ input:focus .adres_radio {
 .payment__card {
   font-size: 24px;
   font-family: "Roboto Regular";
-  margin-bottom: 40px;
+  margin-bottom: 5px;
   position: relative;
   left: 33px;
   top: 5px;
@@ -521,3 +520,92 @@ input:focus .adres_radio {
 footer {
         margin-top: -340px !important;
     }
+
+
+    @media screen and (max-width: 1680px) {
+      #payment {
+        grid-template-columns: 800px;
+        width: 800px;
+      }
+
+      .payment__data {
+        font-size: 80px;
+      }
+
+       #payment input[type="text"] {
+        width: 368px;
+      }
+
+      .payment__surname {
+        width: 771px !important;
+      }
+
+      .payment__phone {
+        grid-template-columns: 62px 449px;
+      }
+
+      #payment input[type="email"] {
+         width: 772px;
+      }
+
+      #payment input[type="tel"] {
+        width: 704px;
+      }
+
+      .payment__delivery, .payment__text {
+        font-size: 80px;
+      }
+
+      .payment__del {
+        grid-template-columns: 692px 93px;
+      }
+
+      .payment__card_details {
+        max-width: 800px;
+        width: 800px;
+        background-size: 800px 451px;
+      }
+
+      .payment__card_details input[type='text'] {
+        width: 483px !important;
+      }
+
+      .payment__card_action {
+        grid-template-columns: 417px 155px;
+      }
+
+      .payment__comment {
+        width: 778px;
+      }
+
+      .payment__cvv {
+        left: -25px;
+      }
+
+      .payment .bg {
+        width: 740px;
+        position: relative;
+        z-index: 300;
+      }
+
+      .payment__order {
+        justify-content: space-between;
+      }
+
+      .payment__total_price {
+        left: 6px;
+      }
+
+      .payment .submit {
+        width: 729px;
+        background-position: 460px 22px;
+      }
+
+      .payment .submit:hover {
+         background-position: 460px 13px;
+      }
+    }
+
+        @media screen and (max-width: 960px) {
+            
+        }

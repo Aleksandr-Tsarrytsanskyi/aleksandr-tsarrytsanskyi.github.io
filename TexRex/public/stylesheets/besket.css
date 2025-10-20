@@ -1,3 +1,442 @@
-    footer {
-        margin-top: -340px;
+footer {
+  margin-top: -340px;
+}
+
+@media screen and (max-width: 1680px) {
+
+  .besket {
+    grid-template-columns: 800px !important;
+    width: 800px;
+  }
+
+  .besket__toptitle {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    font-size: 80px;
+  }
+
+  .besket__products {
+    grid-template-columns: 40px 213px 346px 200px;
+  }
+
+  .besket__products .bg {
+    width: 194px;
+    height: 194px;
+  }
+
+  .besket__subtitle {
+    width: 234px;
+  }
+
+  .besket__price {
+    margin-top: 9px;
+  }
+
+  .besket .besket__pos {
+    position: static;
+  }
+
+  .besket {
+    position: relative;
+  }
+
+  .clear_product {
+    position: absolute;
+    top: 6%;
+    left: 65%;
+  }
+
+  .bg_title_price {
+    width: 760px;
+  }
+
+  .besket__item {
+    grid-gap: 0px 0px;
+    justify-content: space-between;
+  }
+
+  .besket__item .cell:last-child > p {
+    text-align: right;
+  }
+
+  .promo_code input {
+    width: 760px;
+  }
+
+  .besket .order {
+    width: 723px;
+    background-position: 250px 38px;
+  }
+
+  .besket .order:hover {
+    background-position: 245px 28px;
+  }
+
+  .recommend_slider {
+    width: 827px;
+  }
+
+  .recommend_slider_title {
+    font-size: 80px !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .besket__toptitle {
+    font-size: 60px;
+  }
+
+  .besket {
+    width: 608px;
+    grid-template-columns: 608px !important;
+  }
+
+  .clear_product {
+    position: absolute;
+    top: 2%;
+    left: 62%;
+    width: 251px;
+  }
+
+  .clear_product p, .clear_product button {
+    font-size: 16px;
+  }
+
+  .besket__title {
+    font-size: 14px;
+    overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 150px;
+  }
+
+  .besket__subtitle {
+    font-size: 18px;
+    width: 147px;
+  }
+
+  .besket__products {
+    grid-template-columns: 40px 173px 205px 191px;
+  }
+
+  .besket__products .bg {
+    width: 157px;
+    height: 157px;
+  }
+
+  .besket__quantity {
+    grid-template-columns: 59px 72px 59px;
+  }
+
+  .besket .price {
+    font-size: 28px;
+  }
+
+  .besket__products .none {
+    top: 70px;
+  }
+
+  .besket__price {
+    margin-top: 0px;
+  }
+
+  .besket__price {
+    grid-template-columns: 91px 58px 57px;
+  }
+
+  .besket__price .cell:last-child {
+    width: 47px;
+    height: 33px;
+    position: absolute;
+    left: 8%;
+    bottom: 15px;
+  }
+
+  .besket__products {
+    position: relative;
+  }
+
+  .besket .percent {
+    font-size: 14px;
+    line-height: 33px;
+  }
+
+  .bg_title_price {
+    width: 574px;
+  }
+
+  .besket .order {
+    width: 574px;
+    background-position: 150px 38px;
+    padding: 16px 0px 16px 0px;
+  }
+
+  .besket .order:hover {
+     background-position: 150px 28px;
+  }
+
+ 
+
+  .promo_code input {
+    width: 572px;
+  }
+
+  .width_menu {
+    width: 608px !important;
+  }
+
+  .recommend_slider {
+    width: 608px;
+    height: 670px;
+  }
+
+  .recommend_slider_title {
+    font-size: 60px !important;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+    .besket__toptitle {
+        font-size: 48px;
+        margin-bottom: 60px;
     }
+
+    .besket {
+        width: 432px;
+        grid-template-columns: 432px !important;
+    }
+
+        .clear_product {
+        position: absolute;
+        top: 5%;
+        left: 42%;
+        width: 251px;
+        
+    }
+
+    .besket__products {
+        grid-template-columns: 0px 180px 205px;
+    }
+
+    .besket__products .bg {
+        width: 133px;
+        height: 133px;
+    }
+
+    .besket__products > .cell:last-child {
+        width: 432px;
+    }
+
+    .besket__title {
+        width: 240px;
+    }
+
+    .besket__subtitle {
+        width: 250px;
+    }
+
+    .besket__products .none {
+        display: none;
+    }
+
+    .besket__price {
+        margin-top: 25px;
+    }
+
+    .besket__price .cell:last-child {
+        left: 2%;
+        bottom: 129px;
+    }
+
+    .besket__quantity {
+        justify-content: space-between;
+        margin-top: 15px;
+
+
+    }
+
+    .bg_title_price {
+        width: 391px;
+    }
+
+    .besket__item .cell:first-child > p, .besket__item .cell:last-child > p , .promo_code input{
+        font-size: 16px;
+    }
+
+    .remove_besket_product {
+        display: block;
+        font-size: 16px;
+line-height: 150%;
+font-family: "Roboto Regular";
+margin-top: 20px;
+margin-left: 10px;
+color: #fff;
+    }
+
+    .besket__products .remove {
+        top: 0;
+        border: none;
+        background: none;
+    }
+
+    .promo_code input {
+        width: 391px;
+    }
+
+    .besket .order {
+        width: 391px;
+        background-position: 80px 38px;
+        padding: 16px 0px 16px 0px;
+    }
+
+    .besket .order:hover {
+        background-position: 80px 28px;
+    }
+
+    .remove_besket_product:hover {
+        color: #ff1212;
+    }
+
+    .width_menu {
+        width: 432px !important;
+    }
+
+    .recommend_slider_title {
+        font-size: 32px !important;
+    }
+
+    .recommend_slider {
+        width: 396px;
+        height: 610px;
+    }
+
+    .products .swiper-navigation {
+        top: 51px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .besket__toptitle {
+        font-size: 36px;
+    }
+
+    .clear_product p, .clear_product button {
+        font-size: 14px;
+    }
+
+    .besket {
+        width: 312px;
+        grid-template-columns: 312px !important;
+    }
+
+    .besket__products .bg {
+        width: 131px;
+        height: 131px;
+      min-height: 131px;
+    max-height: 131px;
+    min-width: 131px;
+    max-width: 131px;
+    }
+
+    .besket__products .bg img {
+          width: 131px;
+        height: 131px;
+    }
+
+    .besket__products {
+        grid-template-columns: 0px 148px 164px;
+    }
+
+    .clear_product  {
+        top: 4%;
+        left: 31%;
+        width: 227px;
+    }
+
+    .besket__title {
+        font-size: 12px;
+        width: 168px;
+    }
+
+    .besket__subtitle {
+        font-size: 16px;
+        width: 173px;
+    }
+
+    .besket__price {
+        margin-top: 0px;
+    }
+
+    .besket .price {
+        font-size: 18px !important;
+    }
+
+    .besket__gram {
+        font-size: 14px;
+    }
+
+    .besket__price {
+        grid-template-columns: 60px 58px 57px;
+    }
+
+    .besket__products > .cell:last-child {
+        width: 312px;
+    }
+
+    .width_menu {
+        width: 312px !important;
+    }
+
+    .bg_title_price {
+        width: 272px;
+    }
+
+    .besket__item .cell:first-child > p, .besket__item .cell:last-child > p, .promo_code input {
+        font-size: 14px;
+    }
+
+    .besket__item {
+        grid-template-columns: 173px 100px;
+    }
+
+    .besket .total_price {
+        font-size: 16px;
+    }
+
+    .besket .total_price span, .besket .total_price sub {
+        font-size: 18px;
+    }
+
+    .promo_code input {
+        width: 270px;
+    }
+
+    .besket .order {
+        width: 233px;
+        height: 52px;
+        font-size: 16px;
+        background-position: 200px 35px;
+        line-height: 52px;
+        text-align: left;
+        padding-left: 40px;
+    }
+
+    .besket .order:hover {
+         background-position: 200px 25px;
+    }
+
+    .bg_title_price {
+        height: 370px;
+    }
+
+    .recommend_slider {
+        width: 312px;
+        height: 500px;
+    }
+
+    .recommend_slider_title {
+        font-size: 30px !important;
+    }
+}
