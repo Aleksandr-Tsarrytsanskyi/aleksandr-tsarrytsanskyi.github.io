@@ -55,6 +55,89 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.querySelectorAll(".modal");
   const modalform = document.querySelectorAll(".login_account");
   const modalbesket  = document.querySelector(".modal_besket ");
+  const favorBtn  = document.querySelectorAll(".comparison__content button ");
+
+  function swiper() {
+      const resizableSwiper = (
+    breakpoint,
+    swiperClass,
+    swiperSettings,
+    callback
+  ) => {
+    let swiper;
+
+    breakpoint = window.matchMedia(breakpoint);
+
+    const enableSwiper = function (className, settings) {
+      swiper = new Swiper(className, settings);
+     
+    };
+
+    const checker = function () {
+      if (breakpoint.matches) {
+        return enableSwiper(swiperClass, swiperSettings);
+      } else {
+        if (swiper !== undefined) swiper.destroy(true, true);
+        return;
+      }
+    };
+
+    breakpoint.addEventListener("change", checker);
+    checker();
+  };
+
+  const someFunc = (instance) => {
+    if (instance) {
+      instance.on("slideChange", function (e) {
+        console.log("*** mySwiper.activeIndex", instance.activeIndex);
+      });
+    }
+  };
+
+  resizableSwiper("(max-width: 768px)", ".somparison_slider_product", {
+    loop: true,
+    spaceBetween: 10,
+   
+    slidesPerView: 1.1,
+    freeMode: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    //   navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    //   clickable: true
+    // },
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    // pagination: {
+    //   el: ".swiperslider-pagination",
+    //   clickable: true,
+    // },
+    // breakpoints: {
+    //   1200: {
+    //     spaceBetween: 20,
+    //   },
+    // },
+  });
+  }
+  swiper();
+
+  if(window.innerWidth <= 960) {
+    favorBtn.forEach(btn => {
+      btn.innerHTML = ""
+
+    })
+  }
+
+  if(window.innerWidth > 960) {
+    favorBtn.forEach(btn => {
+      btn.innerHTML = "ДОБАВИТЬ В КОРЗИНУ"
+
+    })
+  }
 
   modalform.forEach((submit) => {
     submit.addEventListener("submit", function (e) {

@@ -101,6 +101,7 @@ p {
   width: 100%;
   background-color: #0a0a0a;
   height: 100px;
+ 
   /* background: url("../images/bg_logo.png") no-repeat left -10% bottom 105%; */
 }
 
@@ -1075,6 +1076,7 @@ h2 {
   fill: #d29440;
   position: relative;
   z-index: 200;
+  top: 20px;
 }
 
 .menu {
@@ -3786,7 +3788,7 @@ height: 16px;
     height: 120px;
     position: absolute;
     top: 0px;
-    left: -551px;
+    left: -940px;
   
 }
 

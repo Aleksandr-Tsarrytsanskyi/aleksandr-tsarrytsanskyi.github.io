@@ -1,6 +1,16 @@
 @media screen and (max-width: 1680px) {
 
- 
+  .comparison {
+    width: 800px;
+  }
+
+  .comparison h1 {
+    font-size: 80px;
+  }
+
+ .bg_header {
+  left: -540px;
+ }
   
 
  .top_grade_rew {
@@ -1159,9 +1169,17 @@ position: relative;
   .slider_header .swiper-pagination-bullet {
     width: 200px !important;
   }
+
+   .bg_header {
+  left: -430px;
+ }
 }
 
 @media screen and (max-width: 768px) {
+
+    .bg_header {
+  left: -360px;
+ }
 
   .slider_header .swiper-pagination-bullet {
     width: 140px !important;
@@ -2547,6 +2565,10 @@ height: 175px;
      .slider_header .swiper-pagination-bullet {
       width: 100px !important;
      }
+
+        .bg_header {
+  left: -270px;
+ }
      
 }
 
