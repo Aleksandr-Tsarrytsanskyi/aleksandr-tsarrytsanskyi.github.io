@@ -2323,7 +2323,7 @@ h2 {
 .madal5 .modal_main {
   padding: 64px 87px;
   width: 524px;
-  min-height: 952px;
+ height: 100%;
   float: right;
   background-color: #0a0a0a;
   
@@ -4192,6 +4192,41 @@ background-repeat: no-repeat;
     font-size: 16px;
     font-family: "Roboto Regular";
   }
+
+    .description__addcart svg {
+      fill: white
+    }
+
+  .description__addcart svg:hover{
+    fill: #d29440;
+  }
+
+  .description__addcart .cell:nth-child(2):hover, .description__addcart .cell:nth-child(3):hover {
+    background-color: #fff;
+  }
+
+  .description__addcart .cell:nth-child(2):hover .description__addcart_active, .description__addcart .cell:nth-child(3):hover .description__addcart_active {
+    fill: #d29440;
+  }
+
+
+  .modal button:hover {
+    background-color: #fff;
+    color: #d29440
+  }
+
+
+  .madal1_registration:hover {
+    background: none !important;
+    color: #d29440;
+  }
+
+  .modal .password_btn:hover {
+    background: none;
+    color: #fff;
+  }
+
+  
 
   
   

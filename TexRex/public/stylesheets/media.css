@@ -2576,3 +2576,127 @@ height: 175px;
 }
 }
 
+
+@media screen and (max-width: 1290px)  {
+  .madal1 .modal_main, .madal2 .modal_main, .madal3 .modal_main, .madal4 .modal_main, .madal5 .modal_main {
+    padding: 64px 40px;
+  
+  }
+
+  .modal_back {
+    right: 562px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .madal1 .modal_main, .madal2 .modal_main, .madal3 .modal_main, .madal4 .modal_main, .madal5 .modal_main {
+    padding: 64px 20px;
+    width: 392px;
+  }
+
+  .madal1 .modal_tittle, .madal2 .modal_tittle, .madal3 .modal_tittle, .madal4 .modal_tittle, .madal5 .modal_tittle {
+    font-size: 24px;
+  }
+
+  .madal1 .modal_subtittle, .madal2 .modal_subtittle, .madal3 .modal_subtittle, .madal4 .modal_subtittle, .madal5 .modal_subtittle {
+    font-size: 16px;
+  }
+
+  .modal button {
+    width: 385px;
+  }
+
+  .madal2 input[type="email"], .madal2 input[type="password"], .madal3 input[type="email"], .madal3 input[type="password"], .madal4 input[type="email"] {
+    width: 370px;
+  }
+
+  .modal_back {
+    right: -317px;
+    z-index: 300;
+  }
+
+  .madal2 .madal1__text, .madal3 .madal1__text, .madal4 .madal1__text {
+    width: 400px;
+    margin-top: 20px;
+  }
+
+  .madal2 .madal1_account_login, .madal3 .madal1_account_login, .madal4 .madal1_account_login {
+    bottom: 179px;
+  }
+
+  .modal button {
+    font-size: 16px;
+  }
+
+  .password_btn {
+    margin-left: 0px;
+    font-size: 14px !important;
+  }
+
+  .madal1__text {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .madal1 .modal_main, .madal2 .modal_main, .madal3 .modal_main, .madal4 .modal_main, .madal5 .modal_main {
+    width: 272px;
+  }
+
+  .modal button {
+    width: 263px;
+  }
+
+  .madal2 input[type="email"], .madal2 input[type="password"], .madal3 input[type="email"], .madal3 input[type="password"], .madal4 input[type="email"] {
+    width: 250px;
+  }
+
+  .madal2 .madal1__text, .madal3 .madal1__text, .madal4 .madal1__text {
+    width: 290px;
+    font-size: 12px;
+  }
+
+  .madal1__text {
+    width: 290px;
+  }
+
+  .madal1 .modal_subtittle, .madal2 .modal_subtittle, .madal3 .modal_subtittle, .madal4 .modal_subtittle, .madal5 .modal_subtittle {
+    font-size: 14px;
+  }
+
+  .madal1__text {
+    font-size: 12px;
+   
+  }
+
+  .modal_back {
+    right: -200px;
+  }
+
+  .madal2 .madal1_account_login, .madal3 .madal1_account_login, .madal4 .madal1_account_login {
+    bottom: 228px;
+  }
+
+  .modal button {
+    font-size: 14px;
+  }
+
+  .login_account {
+    margin-top: 20px;
+  }
+
+  .login_account {
+    margin-top: 20px;
+  }
+
+  .modal input {
+    margin-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-height: 667px) {
+  
+}
+

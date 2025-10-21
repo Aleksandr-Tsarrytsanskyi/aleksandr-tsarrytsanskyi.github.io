@@ -1259,4 +1259,73 @@ display: none;
   .progress_bar .cell:nth-child(2), .progress_bar .cell:nth-child(4) {
     width: 220px;
   }
+
+  .profile .save_mobile {
+    width: 312px;
+  }
+
+  .payment__number {
+    width: 289px !important;
+  }
+
+  .payment__cvv {
+    left: -21px !important;
+  }
+
+  .profile__user {
+    grid-template-columns: 100px 196px;
+  }
+
+  .myreviews__product_title {
+    width: 150px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+  }
+
+  .myreviews__product_subtitle {
+     width: 150px;
+        
+  }
+
+  .myreviews__product_subtitle {
+    font-size: 16px;
+  }
+
+  .myreviews__product_title, .myreviews__product_title_gram {
+    font-size: 12px;
+  }
+
+  .myreviews__product_subtitle {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .myreviews__product_title_gram {
+    margin-bottom: 5px;
+  }
+
+  .myreviews__title .cell:last-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+   .myreviews__title {
+    grid-template-columns: 220px;
+    grid-gap: 5px 0px;
+   }
+
+   .myreviews__title img {
+    width: 120px;
+    height: 24px;
+   }
+
+   .filtr_myreviews {
+    margin-bottom: 0px;
+   }
+
+   .myreviews__text_reviews {
+    width: 300px;
+    font-size: 14px;
+   }
 }
