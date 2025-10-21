@@ -11,6 +11,64 @@ document.addEventListener("DOMContentLoaded", function () {
   //   copyText.classList.toggle("active")
   // })
 
+  function swiper() {
+      const resizableSwiper3 = (
+    breakpoint,
+    swiperClass,
+    swiperSettings,
+    callback
+  ) => {
+    let swiper3;
+
+    breakpoint = window.matchMedia(breakpoint);
+
+    const enableSwiper = function (className, settings) {
+      swiper3 = new Swiper(className, settings);
+   
+    };
+    const checker = function () {
+      if (breakpoint.matches) {
+        return enableSwiper(swiperClass, swiperSettings);
+      } else {
+        if (swiper3 !== undefined) swiper3.destroy(true, true);
+        return;
+      }
+    };
+    breakpoint.addEventListener("change", checker);
+    checker();
+  };
+
+  resizableSwiper3("(max-width: 9020px)", ".profile_slider", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 1,
+    freeMode: true,
+    
+    //      pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true
+    //   },
+    //   navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    //   clickable: true
+    // },
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    // pagination: {
+    //   el: ".swiperslider-pagination",
+    //   clickable: true,
+    // },
+    breakpoints: {
+      1200: {
+        spaceBetween: 20,
+      },
+    },
+  });
+  }
+  swiper();
+
   profiLelogOut.addEventListener("click", function () {
     modalLogOut.classList.add("modal_log_out_show");
   });

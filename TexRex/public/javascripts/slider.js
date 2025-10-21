@@ -142,7 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
   resizableSwiper1("(max-width: 9020px)", ".products_slider", {
     loop: true,
     spaceBetween: 10,
-    slidesPerView: 3,
     freeMode: true,
     //      pagination: {
     //     el: '.swiper-pagination',
@@ -164,6 +163,16 @@ document.addEventListener("DOMContentLoaded", function () {
       1680: {
         spaceBetween: 20,
         slidesPerView: 4,
+      },
+
+       768: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+
+       480: {
+        spaceBetween: 20,
+        slidesPerView: 2,
       },
 
        320: {
@@ -279,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
   resizableSwiper2("(max-width: 9020px)", ".watch_slider", {
     loop: true,
     spaceBetween: 10,
-    slidesPerView: 3,
+    
     freeMode: true,
     //      pagination: {
     //     el: '.swiper-pagination',
@@ -302,6 +311,15 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 20,
          slidesPerView: 4,
       },
+       768: {
+        spaceBetween: 20,
+         slidesPerView: 3,
+      },
+       480: {
+        spaceBetween: 20,
+         slidesPerView: 2,
+      },
+
        320: {
         spaceBetween: 20,
          slidesPerView: 2,
@@ -349,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
   resizableSwiper3("(max-width: 9020px)", ".event_slider", {
     loop: true,
     spaceBetween: 10,
-    slidesPerView: 1,
+    slidesPerView: 1.2,
     freeMode: true,
     //      pagination: {
     //     el: '.swiper-pagination',

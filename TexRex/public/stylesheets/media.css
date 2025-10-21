@@ -345,12 +345,17 @@ position: relative;
   }
 
   .event_slider {
-    width: 822px;
+    width: 120% !important;
+  }
+  .event {
+    width: 800px;
+    margin: auto;
+    overflow: visible;
   }
 
-  .event_slider .swiper-slide {
-    width: 822px !important;
-  }
+
+
+  
 
   .event__content {
     grid-template-columns: 281px 514px;
@@ -996,13 +1001,11 @@ position: relative;
   }
 
   .event_slider {
-    width: 653px;
+    width: 100%;
     height: 490px;
   }
 
-  .event_slider .swiper-slide {
-    width: 653px !important;
-  }
+  
 
   .blog__text {
     font-size: 16px;
@@ -1503,7 +1506,7 @@ position: relative;
   }
 
   .products_slider {
-    width: 404px !important;
+    width: 397px !important;
     height: 630px;
   }
 
@@ -1549,13 +1552,11 @@ position: relative;
   }
 
   .event_slider {
-    width: 441px;
+    width: 120% !important;
     height: 575px;
   }
 
-  .event_slider .swiper-slide {
-    width: 441px !important;
-  }
+  
 
   .event__content {
     grid-template-columns: 263px;
@@ -1860,7 +1861,7 @@ position: relative;
   }
 
   .watch_slider {
-    width: 320px !important;
+    width: 316px !important;
     height: 525px;
   }
 
@@ -2024,7 +2025,7 @@ position: relative;
   }
 
   .event_slider {
-    width: 310px;
+    width: 100%;
   }
 
   .event_pos {
@@ -2250,9 +2251,7 @@ position: relative;
       width: 310px;
     }
 
-    .event_slider .swiper-slide {
-      width: 310px;
-    }
+    
 
     .footer_top_logo .cell:first-child {
       left: -40px;
@@ -2266,9 +2265,7 @@ position: relative;
       line-height: 53px;
     }
 
-    .event_slider .swiper-slide {
-      width: 310px !important;
-    }
+    
 
     .about__header {
       margin-top: 0px;
