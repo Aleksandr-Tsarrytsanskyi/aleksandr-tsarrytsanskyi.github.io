@@ -2618,12 +2618,11 @@ height: 175px;
 
   .madal2 .madal1__text, .madal3 .madal1__text, .madal4 .madal1__text {
     width: 400px;
-    margin-top: 20px;
   }
 
-  .madal2 .madal1_account_login, .madal3 .madal1_account_login, .madal4 .madal1_account_login {
+  /* .madal2 .madal1_account_login, .madal3 .madal1_account_login, .madal4 .madal1_account_login {
     bottom: 179px;
-  }
+  } */
 
   .modal button {
     font-size: 16px;
@@ -2674,9 +2673,9 @@ height: 175px;
     right: -200px;
   }
 
-  .madal2 .madal1_account_login, .madal3 .madal1_account_login, .madal4 .madal1_account_login {
+  /* .madal2 .madal1_account_login, .madal3 .madal1_account_login, .madal4 .madal1_account_login {
     bottom: 228px;
-  }
+  } */
 
   .modal button {
     font-size: 14px;

@@ -2430,18 +2430,17 @@ h2 {
   cursor: pointer;
 }
 
-.madal2 .madal1_account_login,
+/* .madal2 .madal1_account_login,
 .madal3 .madal1_account_login,
 .madal4 .madal1_account_login {
   position: absolute;
   bottom: 172px;
-}
+} */
 
 .madal2 .madal1__text,
 .madal3 .madal1__text,
 .madal4 .madal1__text {
-  position: absolute;
-  bottom: 125px;
+  
   width: 524px;
 }
 
