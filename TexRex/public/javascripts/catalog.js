@@ -110,9 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   filtrbtn.addEventListener("click", function () {
     filtr.classList.add("modal_filtr_show");
-    setTimeout(() => {
-      filtr.classList.remove("modal_filtr_show");
-    }, 5000);
+    // setTimeout(() => {
+    //   filtr.classList.remove("modal_filtr_show");
+    // }, 5000);
   });
   function rangeSlider() {
     var slider = document.getElementById("range_slider");

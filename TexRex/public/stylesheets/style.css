@@ -819,7 +819,7 @@ transform: scale(1.1);
   display: grid;
   grid-template-columns: 1543px;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 230px;
 }
 
 .about_content p {
@@ -2482,6 +2482,7 @@ h2 {
   display: grid;
   grid-template-columns: 733px 497px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .coockie {
@@ -2663,17 +2664,28 @@ h2 {
   visibility: visible !important;
 }
 
+.modal_log_out_right .no:hover {
+  color: #d29440;
+}
+
+.modal_log_out_right .yes:hover {
+  background-color: #fff;
+  color: #d29440;
+}
+
 .modal_remove_product {
   width: 100%;
   margin: auto;
   opacity: 0;
   visibility: hidden;
   transition: 0.1s all;
+  position: relative;
+  z-index: 300;
 }
 
 .modal_remove_product_main {
   position: fixed;
-  bottom: 20px;
+  bottom: 0px;
   z-index: 300;
   width: 100%;
   padding: 10px;
@@ -2697,6 +2709,11 @@ h2 {
   font-size: 18px;
   text-align: center;
   line-height: 59px;
+}
+
+.modal_remove_product a:hover {
+  background-color: #fff;
+  color: #d29440;
 }
 
 .modal_remove_product_container {
@@ -2816,6 +2833,7 @@ h2 {
   width: 100%;
   padding: 10px;
   background-color: #0a0a0a;
+  z-index: 300;
 }
 
 .modal_comparison_remove_product {
@@ -3518,6 +3536,7 @@ height: 16px;
 
 .modal_catalog_filtr .reset:hover {
   color: #ff1212;
+  background: none;
 }
 
 .modal_favorites_reject:hover {
