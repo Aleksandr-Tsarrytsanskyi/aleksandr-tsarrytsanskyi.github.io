@@ -215,6 +215,10 @@ footer {
     .products__header .cell:last-child {
         width: 173px !important;
     }
+
+    .products > .cell {
+        height: 440px;
+    }
 }
 
 
