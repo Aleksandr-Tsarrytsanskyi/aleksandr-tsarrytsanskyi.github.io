@@ -606,7 +606,7 @@ transform: scale(1.1);
   bottom: 10px;
 }
 .categories .cell {
-  transition: transform 0.3s ease-in-out;
+  transition:  0.3s ease-in-out;
   box-sizing: border-box;
 }
 
@@ -3023,7 +3023,7 @@ input[type="number"] {
 }
 
 .categories_search {
-  grid-template-columns: 388px 388px 388px 388px;
+  grid-template-columns: repeat(4, 1fr) !important;
 }
 
 .products_search .price span,

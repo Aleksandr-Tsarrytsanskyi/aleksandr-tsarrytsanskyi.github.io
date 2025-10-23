@@ -21,7 +21,7 @@
   }
 
   .categories_search {
-    grid-template-columns: 148px 148px 148px 148px !important;
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 
   .products_search {
@@ -1470,7 +1470,7 @@ position: relative;
   }
 
   .categories_search {
-    grid-template-columns: 151px 151px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .modal_search input {
@@ -3075,8 +3075,12 @@ height: 175px;
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
+  .categories .categories_title {
+    left: 120px;
+  }
+
   .categories .animate_text {
-    width: 320px;
+    width: 300px;
     font-size: 14px;
   }
 
