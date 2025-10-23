@@ -16,9 +16,36 @@
     <script type="module" src="./javascripts/search.js"></script>
     <script type="module" src="./javascripts/modal/aboutProduct.js"></script>
        <script type="module" src="./javascripts/mobile/ismobile.js"></script>
+       <script type="module" src="./javascripts/modal/favorites.js"></script>
+       <script type="module" src="./javascripts/about.js"></script>
     <title>Чай пуэр от ТАРАС ПУШКА</title>
   </head>
   <body>
+     <div class="modal_favorites">
+      <div class="modal_favorites_main">
+        <div class="modal_favorites_container">
+          <div class="cell">
+            <p>Вы добавили товар в избранное</p>
+          </div>
+          <div class="cell">
+            <div class="modal_favorites_right">
+              <div class="cell">
+                <button type="button" class="modal_favorites_reject">
+                  УБРАТЬ ИЗ ИЗБРАННОГО
+                </button>
+              </div>
+              <div class="cell">
+                <a
+                  href="./favorites.html"
+                  class="modal_favorites_cookies_accepted"
+                  >СМОТРЕТЬ В ИЗБРАННОМ</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal_hit">
       <div class="modal_hit_main">
         <div class="modal_hit_container">
@@ -1241,35 +1268,41 @@
           </div>
           <div class="result_search">
             <h2 class="result_search_title">4 СХОЖИЕ КАТЕГОРИИ</h2>
+            <div class="categories_content">
             <div class="categories categories_search">
               <div class="cell">
                 <a href="#">
                   <div class="categories__item">
-                    <p>Черный чай</p>
+                    <p class="categories_title">Черный чай</p>
+                      <p class="animate_text">Чай, который помогает расслабиться и спокойнее спать. Он отлично подходит для снятия нервного напряжения после напряжённого дня, помогая восстановить силы простым и натуральным способом.</p>
                   </div>
                 </a>
               </div>
               <div class="cell">
                 <a href="#">
                   <div class="categories__item">
-                    <p>Красный чай</p>
+                    <p class="categories_title">Красный чай</p>
+                      <p class="animate_text">Чай, который помогает расслабиться и спокойнее спать. Он отлично подходит для снятия нервного напряжения после напряжённого дня, помогая восстановить силы простым и натуральным способом.</p>
                   </div>
                 </a>
               </div>
               <div class="cell">
                 <a href="#">
                   <div class="categories__item">
-                    <p>Зеленый чай</p>
+                    <p class="categories_title">Зеленый чай</p>
+                      <p class="animate_text">Чай, который помогает расслабиться и спокойнее спать. Он отлично подходит для снятия нервного напряжения после напряжённого дня, помогая восстановить силы простым и натуральным способом.</p>
                   </div>
                 </a>
               </div>
               <div class="cell">
                 <a href="#">
                   <div class="categories__item">
-                    <p>Габа чай</p>
+                    <p class="categories_title">Габа чай</p>
+                      <p class="animate_text">Чай, который помогает расслабиться и спокойнее спать. Он отлично подходит для снятия нервного напряжения после напряжённого дня, помогая восстановить силы простым и натуральным способом.</p>
                   </div>
                 </a>
               </div>
+            </div>
             </div>
             <div class="products_search">
               <h2 class="products_search_title">18 ТОВАРОВ НАЙДЕНО</h2>
@@ -2166,7 +2199,7 @@
                 </a>
               </div>
               <div class="cell">
-                <a href="#">
+                <a href="./somparison.html">
                  <svg class="description__addcart_active" width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06375 0.707031L13.414 4.14193V1.6862H15.25V4.8151L23.5143 7.85286L23.6015 7.88542V9.78385L23.4231 9.71745L21.9661 9.18229L25.3242 16.3906H25.8567L25.9817 16.3971C26.6001 16.4658 27.0901 17.0348 26.9388 17.6862V17.6914L26.9231 17.7487L26.9218 17.7526C26.7643 18.2784 26.3232 19.5653 25.4414 20.7982L25.2591 21.0443C24.3091 22.2775 22.8356 23.4727 20.7044 23.6172L20.2695 23.6315C18.0556 23.6313 16.4888 22.5183 15.4492 21.3008L15.2486 21.056C14.5268 20.1428 14.0555 19.169 13.7773 18.4753L13.5612 17.8867L13.5234 17.7721C13.2929 17.0494 13.8758 16.3907 14.5833 16.3906H15.1106L18.9804 8.08463L8.52599 4.24479L11.8841 11.4531H12.4166C13.0921 11.4531 13.6613 12.0539 13.5 12.7487L13.4987 12.7526L13.483 12.8112L13.4817 12.8151C13.3242 13.341 12.8832 14.6278 12.0013 15.8607L11.819 16.1068C10.8691 17.3398 9.39626 18.535 7.26558 18.6797L6.83068 18.694C4.61679 18.694 3.05005 17.5807 2.01037 16.3633L1.80855 16.1185C0.845981 14.9007 0.33113 13.5739 0.122349 12.9492L0.0845883 12.8346C-0.146032 12.1119 0.43579 11.4533 1.14318 11.4531H1.67183L5.54032 3.14714L3.97131 2.57161L3.88407 2.54036V0.640625L4.06375 0.707031ZM2.19396 13.2279C2.43417 13.768 2.78363 14.4287 3.26818 15.0417L3.5937 15.4232C4.38934 16.2843 5.43873 16.9192 6.83068 16.9193L7.12365 16.9102C8.55904 16.8151 9.59206 16.0259 10.3463 15.0469L10.5364 14.7865C10.9121 14.2488 11.1883 13.6929 11.3854 13.2279H2.19396ZM3.68615 11.4531H9.86974L6.7773 4.8138L3.68615 11.4531ZM16.916 16.5235H23.5188L20.2174 9.43683L16.916 16.5235ZM16.6029 20.0616C16.0512 19.3636 15.6698 18.6084 15.4275 18.0317H25.0271C24.7969 18.6079 24.4304 19.3652 23.8913 20.0651C23.0705 21.1306 21.9137 21.9906 20.2699 21.9906C18.6253 21.9905 17.4475 21.1298 16.6029 20.0616Z"  />
 </svg>

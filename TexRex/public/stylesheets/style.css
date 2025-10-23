@@ -2655,13 +2655,17 @@ h2 {
   color: #fff;
 }
 
-
+.description__addcart_favirites {
+  width: 59px !important;
+  padding: 0;
+  height: 61px !important;
+}
 
 .modal_besket_main {
   position: fixed;
   bottom: 0px;
   width: 100%;
-  z-index: 300;
+  z-index: 400;
   padding: 10px;
   background-color: #0a0a0a;
 }
@@ -3024,6 +3028,10 @@ input[type="number"] {
 
 .categories_search {
   grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.coockie_main {
+  z-index: 300;
 }
 
 .products_search .price span,
