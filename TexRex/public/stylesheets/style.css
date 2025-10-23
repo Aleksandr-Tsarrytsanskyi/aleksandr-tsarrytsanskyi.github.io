@@ -4192,19 +4192,28 @@ background-repeat: no-repeat;
 
 
  .event_slider  {
-    width: 117%;
+    width: 100%;
     
   }
 
   /* .event_slider  .swiper-slide {
     width: 90%;
   } */
-  .event {
+  /* .event {
     width: 1580px;
     margin: auto;
     overflow: hidden;
     
+  } */
+
+  .event_title_h {
+    width: 1680px;
+    margin: auto;
   }
+
+    .event_title_h h2 {
+      margin-left: 40px;
+    }
 
   .besket__products_quantity_text {
     font-size: 16px;
