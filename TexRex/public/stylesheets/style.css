@@ -4206,6 +4206,11 @@ background-repeat: no-repeat;
     
   } */
 
+  .products_search h2 {
+    color: #fff;
+    font-family: "Roboto Regular";
+  }
+
   .event_title_h {
     width: 1680px;
     margin: auto;
