@@ -4191,7 +4191,7 @@ background-repeat: no-repeat;
   }
 
 
- .event_slider .swiper-slide {
+ .event_slider  {
     width: 117%;
     
   }
