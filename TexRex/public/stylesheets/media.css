@@ -2454,7 +2454,7 @@ position: relative;
     }
 
     .footer_top_logo {
-      grid-template-columns: 295px;
+      grid-template-columns: 300px;
       justify-content: normal
     }
 
