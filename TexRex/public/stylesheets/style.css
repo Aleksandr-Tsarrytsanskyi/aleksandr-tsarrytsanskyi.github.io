@@ -564,10 +564,12 @@ transform: scale(1.1);
 
 .categories {
   display: grid;
-  grid-template-columns: 307px 307px 307px 307px 307px;
+  grid-template-columns: repeat(5, 1fr) !important;
   justify-content: center;
   grid-gap: 10px;
   transition: 0.5s ease-in;
+  position: relative;
+  z-index: 300;
 }
 
 .categories__item {
@@ -602,8 +604,49 @@ transform: scale(1.1);
   font-family: "Roboto Regular";
   position: absolute;
   bottom: 10px;
+}
+.categories .cell {
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box;
+}
 
-  writing-mode: sideways-lr;
+.categories .cell:hover {
+   transform: scale(1.05);
+   width: 500px;
+}
+
+.categories .cell:hover .animate_text {
+  overflow: visible;
+  opacity: 1;
+  left: 20px;
+}
+
+.categories .animate_text {
+   overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+   transform: translate(0%, -10%);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.categories_content {
+  width: 1680px;
+  margin: auto;
+}
+
+.categories .cell:hover .categories_title {
+    writing-mode: lr;
+    bottom: 140px;
+    left: 20px;
+}
+
+.categories .categories_title {
+   writing-mode: sideways-lr;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .categories {
@@ -3364,9 +3407,7 @@ height: 16px;
 
 
 
-.categories__item:hover p {
-  color: #d29440;
-}
+
 
 .event .more:hover {
   background: #fff;
