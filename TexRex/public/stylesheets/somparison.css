@@ -160,6 +160,8 @@ margin-bottom: 20px;
 .comparison__content_remove {
     cursor: pointer;
     fill: white;
+    position: relative;
+    left: 104px;
 }
 
 .comparison__content_remove:hover {
@@ -177,10 +179,11 @@ margin-bottom: 20px;
      font-family: "Roboto Regular" !important;
 }
 
-.comparison h1 {
+.comparison h2 {
     font-size: 160px;
 line-height: 135%;
 color: rgba(255, 255, 255, 0.05);
+font-family: "Roboto Regular";
 }
 
 footer {
@@ -189,6 +192,10 @@ footer {
 
 
 @media screen and (max-width: 1680px) {
+    .comparison h2 {
+        font-size: 80px;
+    }
+
     footer {
         margin-top: -340px !important;
     }
@@ -269,7 +276,7 @@ footer {
         height: 52px;
     }
 
-    .comparison h1 {
+    .comparison h2 {
         font-size: 60px !important;
     }
 
@@ -313,7 +320,7 @@ footer {
         margin-right: 0px !important;
        }
 
-    .comparison h1 {
+    .comparison h2 {
         font-size: 48px !important;
     }
 
@@ -383,7 +390,7 @@ footer {
 }
 
 @media screen and (max-width: 480px)  {
-    .comparison h1 {
+    .comparison h2 {
         font-size: 36px !important;
     }
 
