@@ -47,6 +47,12 @@ const modalRemoveproduct = document.querySelector(".modal_remove_product");
   const modalClose = document.querySelectorAll(".modal__close");
   const modal = document.querySelectorAll(".modal");
   const modalform = document.querySelectorAll(".login_account");
+  const clearproduct = document.querySelector(".clear_product button");
+  const modalclear = document.querySelector(".modal_comparison_clear");
+
+  clearproduct.addEventListener("click", function() {
+modalclear.classList.add("modal_comparison_remove_product_show")
+  })
 
   modalform.forEach((submit) => {
     submit.addEventListener("submit", function (e) {

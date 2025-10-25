@@ -110,11 +110,12 @@ p {
 }
 
 .header .topmenu {
-  margin-top: 36px;
+  margin-top: 42px;
 }
 
 .header .cell:nth-child(3) {
-  margin-left: 507px;
+     margin-left: 334px;
+    margin-right: 100px;
 }
 
 .header .topmenu ul {
@@ -123,7 +124,7 @@ p {
 
 .header .topmenu li {
   float: left;
-  margin-left: 30px;
+  margin-left: 62px;
 }
 
 .header .topmenu .topmenu__link {
@@ -141,6 +142,7 @@ p {
 
 .header .right-menu {
   margin-top: 36px;
+  position: relative;
 
 }
 
@@ -311,7 +313,7 @@ p {
 
 .products__gram .active {
   border-radius: 1000px;
-  padding: 8px 12px;
+
   width: 85px;
   height: 37px;
   max-height: 59px;
@@ -334,8 +336,8 @@ p {
 .products__gram .cell:last-child {
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 1000px;
-  padding: 8px 12px;
-  width: 67px;
+  
+  width: 67px !important;
   height: 37px;
   max-height: 59px;
   text-align: center;
@@ -452,7 +454,7 @@ p {
 .products__gram {
   display: grid;
   grid-template-columns: 85px 67px;
-  grid-gap: 0px 35px;
+  grid-gap: 0px 5px;
   margin-top: 10px;
 }
 
@@ -959,9 +961,7 @@ h2 {
   background: url("../images/Arrow_white.png") no-repeat right -2% bottom;
 }
 
-.networks__link a:hover {
-  transform: scale(1.5);
-}
+
 
 .networks__link .cell {
   height: 522px;
@@ -1021,7 +1021,7 @@ h2 {
   line-height: 135%;
   color: #d29440;
   font-family: "Roboto Bold";
-  margin-top: 60px;
+  margin-top: 20px;
   display: block;
 }
 
@@ -1068,13 +1068,13 @@ h2 {
   max-height: 59px;
   font-size: 18px;
   line-height: 59px;
-  font-family: "Roboto Medium";
+  font-family: "Roboto Regular";
   color: #fff;
   background-color: rgba(255, 255, 255, 0.05);
   display: block;
   text-align: center;
   position: relative;
-  top: 35px;
+  top: 80px;
   float: right;
 }
 
@@ -1254,7 +1254,7 @@ h2 {
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 1000px;
 
-  width: 91px;
+  width: 91px !important;
   height: 59px;
   max-height: 59px;
 }
@@ -1335,7 +1335,7 @@ h2 {
 }
 
 .description__quantity .counter {
-  font-size: 22px;
+  font-size: 16px;
   line-height: 150%;
   font-family: "Roboto Regular";
 }
@@ -1406,7 +1406,7 @@ h2 {
   color: #fff;
   text-align: left;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 0;
   margin-top: 10px !important;
 }
@@ -1416,7 +1416,7 @@ h2 {
 }
 
 .description__instructions_content p {
-  color: #fff;
+  color:   rgba(255, 255, 255, 0.5);
   font-family: "Roboto Regular";
   font-size: 18px;
 }
@@ -1549,7 +1549,7 @@ h2 {
   font-size: 18px;
   line-height: 150%;
   color: rgba(255, 255, 255, 0.5);
-  font-family: "Roboto Medium";
+  font-family: "Roboto Regular";
 }
 
 .description_content_about .width {
@@ -2522,14 +2522,14 @@ h2 {
 .modal_favorites_container {
   display: grid;
   grid-template-columns: 733px 425px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .modal_besket_container {
   display: grid;
   grid-template-columns: 733px 497px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -2549,7 +2549,7 @@ h2 {
   margin: auto;
   opacity: 0;
   overflow: hidden;
-  transition: 0.3s all;
+  transition: 0.1s all;
 }
 
 .coockie_main,
@@ -2675,10 +2675,34 @@ h2 {
   background-color: #0a0a0a;
 }
 
+.besket_counter {
+  position: absolute;
+  z-index: 300;
+  background-color: #d29440;
+  width:30px;
+  height: 30px;
+  border-radius: 1000px;
+  top: -17px;
+    right: 66px;
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.besket_counter_show {
+  opacity: 1 !important;
+}
+
+.besket_counter p {
+  text-align: center;
+  line-height: 30px;
+  font-family: "Roboto Regular";
+  font-size: 16px;
+}
+
 .modal_besket {
   opacity: 0;
   visibility: hidden;
-  transition: 0.5s all;
+  transition: 0.1s all;
 }
 
 .modal_besket_show {
@@ -2706,7 +2730,7 @@ h2 {
   z-index: 300;
   width: 100%;
   background-color: #0a0a0a;
-  padding-left: 10px;
+ 
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -2773,6 +2797,13 @@ h2 {
   grid-template-columns: 254px 234px;
   justify-content: space-between;
   align-items: center;
+  width: 1680px;
+  margin: auto;
+}
+
+.modal_filtr_container {
+  display: grid;
+  justify-content: center;
 }
 
 .modal_remove_product_show {
@@ -2865,7 +2896,7 @@ h2 {
   z-index: 500;
   width: 100%;
   background-color: #0a0a0a;
-  padding: 10px;
+  padding: 10px 0px;
 }
 
 .modal_save_date p {
@@ -2901,6 +2932,13 @@ h2 {
   grid-template-columns: 300px 255px;
   justify-content: space-between;
   align-items: center;
+  width: 1680px;
+  margin: auto;
+}
+
+.modal_save_date_container {
+  display: grid;
+  justify-content: center;
 }
 
 .modal_comparison_remove_product p {
@@ -3541,6 +3579,7 @@ height: 16px;
   transition: 0.3s ease-in-out;
   max-height: 0;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .favorites_filtr button:hover {
@@ -4032,9 +4071,7 @@ align-items: center;
       transition: 0.5s all;
     }
 
-     .networks__link .cell:hover {
-       transform: scale(1.1);
-     }
+    
 
      
 
@@ -4103,7 +4140,7 @@ align-items: center;
 
      input:hover::placeholder {
       color: #fff;
-      font-size: 19px;
+      
      }
 
      .categories_animate {

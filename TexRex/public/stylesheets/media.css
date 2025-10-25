@@ -1120,7 +1120,7 @@ position: relative;
   }
 
   .products__gram {
-    grid-gap: 0px 15px;
+    grid-gap: 0px 5px;
   }
 
   .products__reviews {
@@ -2164,11 +2164,16 @@ position: relative;
     margin-top: 20px;
   }
 
+  .footer input[type="email"] {
+    width: 251px !important;
+  }
+
   .footer .mail {
     font-size: 16px;
     position: relative;
     left: 285px;
     width: 272px;
+    top: 13px;
   }
 
   .header .topmenu .topmenu__link {

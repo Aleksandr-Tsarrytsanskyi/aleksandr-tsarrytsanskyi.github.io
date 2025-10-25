@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalform = document.querySelectorAll(".login_account");
   const productbesketSvg = document.querySelectorAll(".product_besket svg");
 
+
+
   productbesketSvg.forEach(btn => {
     btn.addEventListener("click", function(event) {
       event.preventDefault();
@@ -84,6 +86,31 @@ document.addEventListener("DOMContentLoaded", function () {
       el.classList.toggle("active");
     });
   });
+
+    function countBeskekProduct() {
+       const counterProduct = document.querySelector(".besket_counter .counter");
+      const addBesket = document.querySelectorAll(".product_besket .product_besket_cell:first-child > svg");
+      const besketCounter = document.querySelector(".besket_counter");
+      const removeProduct = document.querySelector(".modal_besket_remove");
+   
+      let counter = 0;
+        
+      addBesket.forEach(addProduct => {
+        addProduct.addEventListener("click", function() {
+          counter++;
+          besketCounter.classList.add("besket_counter_show")
+          counterProduct.textContent = counter
+          
+         
+        })
+      })
+
+      removeProduct.addEventListener("click", function() {
+        counter--;
+        counterProduct.textContent = counter
+      })
+    }
+  countBeskekProduct();
 
   //     localStorage.setItem("id", "")
   //     localStorage.setItem("item", "")

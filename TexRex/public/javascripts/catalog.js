@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     slider.noUiSlider.on("update", function (values, handle) {
       inputs[handle].value = Math.round(values[handle]);
+      inputs[handle].focus();
     });
     const setRangeSlider = (i, value) => {
       let arr = [null, null];
