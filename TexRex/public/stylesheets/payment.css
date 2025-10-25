@@ -407,22 +407,23 @@ input:focus .adres_radio {
 
 .payment__comment {
   width: 900px;
-  height: 200px;
+  height: 35px;
   background-color: #0a0a0a;
   border-left: none;
   border-right: none;
   border-left: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: none;
   color: #fff;
   font-family: "Roboto Medium";
   font-size: 18px;
   padding-left: 20px;
+
   outline: none;
   position: relative;
   z-index: 300;
   margin-top: 40px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .payment .bg {
@@ -512,7 +513,7 @@ input:focus .adres_radio {
 .payment .submit:hover {
   background-image: url("../images/active_right.png");
   background-repeat: no-repeat;
-  background-position: 325px 13px;
+  background-position: 325px;
   background-color: #fff;
   color: #d29440;
 }
@@ -820,10 +821,11 @@ footer {
   .payment .submit {
     width: 358px;
     background-position: 265px 22px;
+    transition: 0.3s ease-in;
   }
 
   .payment .submit:hover {
-    background-position: 265px 13px;
+    background-position: 265px;
   }
 
   .payment__card {
@@ -925,7 +927,7 @@ input:hover::placeholder {
 .payment__comment {
   width: 288px;
   margin-top: 0px;
-  height: 100px;
+  height: 35px;
 }
 
 .payment__order .cell:first-child > p, .payment__order p, .payment__code .text {

@@ -8,6 +8,27 @@ document.addEventListener("DOMContentLoaded", function() {
      const addBasket = document.querySelectorAll(".product_besket .product_besket_cell:first-child > svg");
      const modalbesket  = document.querySelector(".modal_besket ");
      const removemodalBesket = document.querySelector(".modal_besket_remove");
+//      const button = document.querySelectorAll('.categories .cell');
+// const container = document.querySelectorAll('.categories');
+// button.forEach(el => {
+//   el.addEventListener("mouseover", function() {
+//     container.forEach(cat => {
+//       cat.classList.add('expanded');
+
+//     })
+//   })
+// })
+
+// button.forEach(el => {
+//   el.addEventListener("mouseleave", function() {
+//     container.forEach(cat => {
+//       cat.classList.remove('expanded');
+//       console.log("safasfasfasf");
+      
+//     })
+//   })
+// })
+
     console.log(addBasket);
     
     
@@ -32,7 +53,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   addBasket.forEach((btn) => {
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click", function (event) {
+      btn.classList.toggle("active")
       modalbesket.classList.add("modal_besket_show");
     });
   })

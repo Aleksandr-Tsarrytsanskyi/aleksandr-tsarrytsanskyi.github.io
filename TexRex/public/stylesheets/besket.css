@@ -64,12 +64,12 @@ footer {
   }
 
   .besket .order {
-    width: 723px;
-    background-position: 250px 38px;
+    width: 760px;
+    background-position: 470px 22px;
   }
 
   .besket .order:hover {
-    background-position: 245px 28px;
+    background-position: 470px;
   }
 
   .recommend_slider {
@@ -167,12 +167,12 @@ footer {
 
   .besket .order {
     width: 574px;
-    background-position: 150px 38px;
-    padding: 16px 0px 16px 0px;
+    background-position: 380px 22px;
+    
   }
 
   .besket .order:hover {
-     background-position: 150px 28px;
+     background-position: 380px;
   }
 
  
@@ -286,12 +286,12 @@ color: #fff;
 
     .besket .order {
         width: 391px;
-        background-position: 80px 38px;
-        padding: 16px 0px 16px 0px;
+        background-position: 290px 22px;
+        
     }
 
     .besket .order:hover {
-        background-position: 80px 28px;
+        background-position: 290px;
     }
 
     .remove_besket_product:hover {
@@ -417,14 +417,14 @@ color: #fff;
         width: 233px;
         height: 52px;
         font-size: 16px;
-        background-position: 200px 35px;
+        background-position: 200px 18px;
         line-height: 52px;
         text-align: left;
         padding-left: 40px;
     }
 
     .besket .order:hover {
-         background-position: 200px 25px;
+         background-position: 200px;
     }
 
     .bg_title_price {

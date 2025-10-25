@@ -505,6 +505,33 @@ p {
   transition: 0.3s ease-in;
 }
 
+.besket__products:hover .besket__title {
+  color: #d29440;
+}
+
+.besket__products:hover .besket__subtitle {
+  color: #d29440;
+}
+
+.besket__products:hover .besket__gram {
+  color: #d29440;
+}
+.besket__products:hover .price {
+  color: #d29440;
+}
+
+.besket__products:hover .discount {
+  color: #d29440;
+}
+
+.besket__products img {
+  transform: scale(1);
+}
+
+.besket__products:hover  img{
+  transform: scale(1.1);
+}
+
 .product_besket {
   opacity: 0;
   visibility: hidden;
@@ -586,13 +613,30 @@ transform: scale(1.1);
 }
 
 .categories {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr) !important;
-  justify-content: center;
-  grid-gap: 10px;
-  transition: 0.5s ease-in;
+  display: flex;
+  /* grid-template-columns:  repeat(5, 1fr) !important; */
+justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  /* grid-gap: 10px; */
+ 
   position: relative;
   z-index: 300;
+  /* overflow: hidden; */
+  /* transition:  grid-template-columns 0.5s all; */
+   
+}
+
+
+.categories .cell {
+  margin: 5px;
+  flex-grow: 1;
+  width: 340px;
+  transition:flex-grow 0.3s ease-in-out ;
+}
+
+.categories .cell:hover {
+  flex-grow: 15;
 }
 
 .categories__item {
@@ -610,9 +654,8 @@ transform: scale(1.1);
 
 
 
-.categories h2 {
-  grid-column-start: 1;
-  grid-column-end: 6;
+.categories_content h2 {
+  
   font-size: 160px;
   line-height: 135%;
   color: rgba(255, 255, 255, 0.05);
@@ -626,14 +669,45 @@ transform: scale(1.1);
   position: absolute;
   bottom: 10px;
 }
-.categories .cell {
+/* .categories .categories__item {
+  width: 340px;
   transition: width 0.3s ease-in-out;
+} */
+
+/* .categories .categories__item:hover {
+    
+   width: 500px;
+} */
+
+/* .categories .cell {
+  transition: all 0.5s;
 }
 
 .categories .cell:hover {
-    
-   width: 500px;
+  width: 500px;
+} */
+
+/* :where(.cell):hover {
+ 
+  width: 500px;
+  transition: width 300ms;
+} */
+
+/* #grid:has(.left:hover) {
+  grid-template-columns: 2fr 0.5fr 0.5fr;
 }
+
+#grid:has(.center:hover) {
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+#grid:has(.right:hover) {
+  grid-template-columns: 0.5fr 0.5fr 2fr;
+} */
+
+
+/* .categories.expanded {
+        grid-template-columns: repeat(2, 500px) !important; 
+    } */
 
 
 
@@ -653,7 +727,7 @@ transform: scale(1.1);
    overflow: hidden;
   position: absolute;
   bottom: 0;
-  width: 400px;
+  width: 500px;
    transform: translate(0%, -10%);
   font-size: 16px;
   color: rgba(255, 255, 255, 0.5);
@@ -1699,9 +1773,9 @@ h2 {
   background-color: #fff;
 }
 
-.product_besket svg:hover path{
+/* .product_besket svg:hover path{
   fill: #d29440 !important;
-}
+} */
 
 
 .products__gram .cell:hover > p {
@@ -2048,12 +2122,14 @@ h2 {
 
 .besket__quantity {
   display: grid;
-  grid-template-columns: 59px 82px 59px;
+  grid-template-columns: 59px 62px 59px;
   justify-items: center;
   background-color: rgba(255, 255, 255, 0.05);
   height: 59px;
   align-items: center;
   margin-top: 50px;
+  width: 180px;
+  padding: 0px 10px;
 }
 
 .besket__quantity button {
@@ -2171,7 +2247,7 @@ h2 {
   border-radius: 2px;
   padding: 20px 20px;
   width: 502px;
-  height: 417px;
+  height: 390px;
   background-color: rgba(255, 255, 255, 0.05);
   margin-top: 40px;
 }
@@ -2189,8 +2265,8 @@ h2 {
 .besket .order {
   display: block;
   border-radius: 2px;
-  padding: 16px 36px 16px 0px;
-  width: 466px;
+
+  width: 505px;
   height: 59px;
   max-height: 59px;
   background-color: #d29440;
@@ -2199,7 +2275,7 @@ h2 {
   font-size: 18px;
   background-image: url("../images/TEA/Vector.png");
   background-repeat: no-repeat;
-  background-position: 328px 38px;
+  background-position: 340px 22px;
   text-align: center;
   line-height: 59px;
   margin-top: 50px;
@@ -2210,7 +2286,7 @@ h2 {
   color: #d29440;
   background-image: url("../images/active_right.png");
   background-repeat: no-repeat;
-  background-position: 328px 29px;
+  background-position: 340px;
 }
 
 .besket .besket__pos {
@@ -3094,9 +3170,6 @@ input[type="number"] {
   grid-template-columns: repeat(4, 1fr) !important;
 }
 
-.coockie_main {
-  z-index: 300;
-}
 
 .products_search .price span,
 .products_search .price {
@@ -3700,9 +3773,7 @@ height: 16px;
   color: #f22e23;
 }
 
-.besket__quantity button:hover {
-  transform: scale(1.2);
-}
+
 
 .products h2 {
   color: #fff;
@@ -4182,6 +4253,22 @@ button {
     opacity: 0;
  transition:  1s ease-out;
  transform: scale(1.2) !important;
+  }
+.product_besket svg {
+  padding: 20px;
+  position: relative;
+  top: -20px;
+  z-index: 300;
+}
+
+  .product_besket svg.active {
+   
+    background-color: #d29440;
+    fill: #fff !important;
+    width: 25px;
+    height: 24px;
+    border-radius: 1000px;
+    padding: 20px;
   }
 
 .splash {
