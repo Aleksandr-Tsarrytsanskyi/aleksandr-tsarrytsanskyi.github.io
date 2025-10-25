@@ -51,7 +51,7 @@
 
    .event_title_h {
     width: 800px;
-    margin: auto;
+    margin: 30px auto;
   }
 
   .coockie_container h2 {
@@ -458,7 +458,7 @@ position: relative;
   }
   .event h2 {
     font-size: 80px;
-    margin-left: 20px;
+    
   }
 
   .event_pos {
@@ -688,7 +688,7 @@ position: relative;
 
     .event_title_h {
     width: 608px;
-    margin: auto;
+    margin: 30px auto;
   } 
 
    .coockie_container {
@@ -1483,7 +1483,7 @@ position: relative;
 
      .event_title_h {
     width: 432px;
-    margin: auto;
+    margin: 40px auto;
   } 
 
   .coockie_item_right .cell:last-child {
@@ -1970,6 +1970,10 @@ position: relative;
     height: 575px;
   }
 
+  .event_title_h {
+    grid-template-columns: 327px 100px;
+  }
+
   
 
   .event__content {
@@ -2239,8 +2243,12 @@ position: relative;
 
      .event_title_h {
     width: 312px;
-    margin: auto;
+    margin: 40px auto;
   } 
+
+  .event_title_h {
+    grid-template-columns: 211px 100px;
+  }
 
   .modal_comparison_remove_product_container, .modal_comparison_remove_product a {
     width: 312px;

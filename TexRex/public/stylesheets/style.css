@@ -585,9 +585,7 @@ transform: scale(1.1);
 
 
 
-.categories__item:hover {
-  background-color: rgba(58, 56, 56, 0.05);
-}
+
 
 .categories h2 {
   grid-column-start: 1;
@@ -606,14 +604,21 @@ transform: scale(1.1);
   bottom: 10px;
 }
 .categories .cell {
-  transition:  0.3s ease-in-out;
-  box-sizing: border-box;
+  transition: width 0.3s ease-in-out;
 }
 
 .categories .cell:hover {
-   transform: scale(1.05);
+    
    width: 500px;
 }
+
+
+
+.event_slider .swiper-wrapper {
+  justify-content: center;
+}
+
+
 
 .categories .cell:hover .animate_text {
   overflow: visible;
@@ -2418,7 +2423,7 @@ h2 {
   position: fixed;
   inset: 0;
   background-color: rgb(0, 0, 0, 0.5);
-  z-index: 500;
+  z-index: 501;
   cursor: pointer;
   /* padding: 20px; */
   overflow-y: auto;
@@ -4262,12 +4267,20 @@ background-repeat: no-repeat;
 
   .event_title_h {
     width: 1680px;
-    margin: auto;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 500px 100px;
+    justify-content: space-between;
+    align-items: center;
+    
   }
 
-    .event_title_h h2 {
-      margin-left: 40px;
-    }
+  .event .swiper-navigation {
+    position: relative;
+    top: 50px;
+  }
+
+    
 
   .besket__products_quantity_text {
     font-size: 16px;

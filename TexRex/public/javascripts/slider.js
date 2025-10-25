@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
   resizableSwiper3("(max-width: 9020px)", ".event_slider", {
     loop: true,
     spaceBetween: 10,
-    slidesPerView: 1.2,
+    
     freeMode: true,
     //      pagination: {
     //     el: '.swiper-pagination',
@@ -386,8 +386,28 @@ document.addEventListener("DOMContentLoaded", function () {
     //   clickable: true,
     // },
     breakpoints: {
-      1200: {
+      1680: {
         spaceBetween: 20,
+        slidesPerView: 1.2,
+      },
+
+       960: {
+        spaceBetween: 20,
+        slidesPerView: 1.4,
+      },
+       768: {
+        spaceBetween: 40,
+        slidesPerView: 1.2,
+      },
+
+       480: {
+        spaceBetween: 60,
+        slidesPerView: 1.2,
+      },
+
+         320: {
+        spaceBetween: 20,
+        slidesPerView: 1.2,
       },
     },
   });
