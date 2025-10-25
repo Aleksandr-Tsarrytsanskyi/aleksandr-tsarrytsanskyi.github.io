@@ -162,22 +162,22 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       1680: {
         spaceBetween: 20,
-        slidesPerView: 4,
+        slidesPerView: 4.2,
       },
 
        768: {
         spaceBetween: 20,
-        slidesPerView: 3,
+        slidesPerView: 3.2,
       },
 
        480: {
         spaceBetween: 20,
-        slidesPerView: 2,
+        slidesPerView: 2.2,
       },
 
        320: {
         spaceBetween: 20,
-        slidesPerView: 2,
+        slidesPerView: 2.2,
       },
     },
   });
@@ -309,20 +309,20 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       1680: {
         spaceBetween: 20,
-         slidesPerView: 4,
+         slidesPerView: 4.2,
       },
        768: {
         spaceBetween: 20,
-         slidesPerView: 3,
+         slidesPerView: 3.2,
       },
        480: {
         spaceBetween: 20,
-         slidesPerView: 2,
+         slidesPerView: 2.2,
       },
 
        320: {
         spaceBetween: 20,
-         slidesPerView: 2,
+         slidesPerView: 2.2,
       },
     },
   });
