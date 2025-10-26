@@ -18,6 +18,7 @@
        <script type="module" src="./javascripts/mobile/ismobile.js"></script>
        <script type="module" src="./javascripts/modal/favorites.js"></script>
        <script type="module" src="./javascripts/about.js"></script>
+       <script type="module" src="./javascripts/favorites.js"></script>
     <title>Чай пуэр от ТАРАС ПУШКА</title>
   </head>
   <body>
@@ -1699,10 +1700,10 @@
                 <p class="modal_review_result">Нормально</p>
               </div>
             </div>
-            <p class="modal_review_comm">РАССКАЖИТЕ О ТОВАРЕ</p>
+            
             <form action="#" method="Post">
               <div>
-                <textarea> </textarea>
+                <textarea placeholder="РАССКАЖИТЕ О ТОВАРЕ"> </textarea>
               </div>
               <div>
                 <input type="submit" name="send" value="ОСТАВИТЬ ОТЗЫВ" />
@@ -1946,6 +1947,9 @@
                 </li>
                 <li class="mobile_none">
                   <a href="./besket.html">
+                    <div class="besket_counter">
+                      <p><span class="counter">0</span>+</p>
+                    </div>
                     <svg
                       width="33"
                       height="32"

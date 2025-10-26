@@ -97,9 +97,22 @@ document.addEventListener("DOMContentLoaded", function () {
         
       addBesket.forEach(addProduct => {
         addProduct.addEventListener("click", function() {
-          counter++;
           besketCounter.classList.add("besket_counter_show")
-          counterProduct.textContent = counter
+          
+          if(addProduct.classList.contains("active")) {
+            counter++;
+            counterProduct.textContent = counter
+
+          }
+
+            if(!addProduct.classList.contains("active")) {
+            counter--;
+            counterProduct.textContent = counter
+
+          }
+          if(counter < 0) {
+            counter = 0
+          }
           
          
         })

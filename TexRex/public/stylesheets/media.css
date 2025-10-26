@@ -229,7 +229,7 @@
 }
 
 .description .recommend_slider {
-  width: 821px;
+  width: 860px;
 } 
 
 .description__tabs {
@@ -663,6 +663,41 @@ position: relative;
 
 @media screen and (max-width: 960px) {
 
+  .besket_counter {
+    width: 20px;
+    height: 20px;
+    top: -12px;
+    right: 63px;
+
+  }
+
+  .besket_counter p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .product_besket_cell:before {
+    width: 40px;
+    height: 40px;
+    top: -2px;
+  }
+
+  .product_besket svg {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .product_besket svg.active {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .products_cart_hit .product_besket {
+    grid-template-columns: 50px 50px;
+  }
+
   .modal_hit_link {
     width: 608px;
   }
@@ -1002,7 +1037,7 @@ position: relative;
     }
   
   .description .recommend_slider {
-    width: 611px;
+    width: 630px;
   }
 
   .description .products {
@@ -1835,7 +1870,7 @@ position: relative;
   
 
     .description .recommend_slider {
-    width: 396px;
+    width: 425px;
   }
 
   .description .products {
@@ -2205,6 +2240,32 @@ position: relative;
 
 @media screen and (max-width: 480px) {
 
+  .products_cart_hit .product_besket {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .product_besket_cell:before {
+    width: 40px;
+    height: 40px;
+    top: -2px;
+  }
+
+  .product_besket svg {
+    padding: 10px !important;
+    width: 20px !important;
+    height: 20px !important;
+    top: -20px !important;
+  }
+
+  .product_besket svg.active {
+    padding: 10px !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+
+
   .modal_hit_main {
     padding-top: 40px;
   }
@@ -2266,7 +2327,7 @@ position: relative;
   }
   
   .description .recommend_slider {
-    width: 308px;
+    width: 335px;
   }
 
   .description .products {
@@ -2274,7 +2335,7 @@ position: relative;
   }
 
   .description .products {
-    grid-template-columns: 312px;
+    grid-template-columns: 322px;
   }
 
   .slider_header__item .mobile_img {
