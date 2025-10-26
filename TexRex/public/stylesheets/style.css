@@ -3954,6 +3954,10 @@ height: 16px;
   margin-top: 10px;
 }
 
+.modal_review textarea:placeholder {
+  color: red;
+}
+
 .modal_review textarea {
   width: 471px;
   height: 200px;
