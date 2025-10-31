@@ -34,6 +34,56 @@ document.addEventListener("DOMContentLoaded", function () {
     time: "300",
   });
 
+ function countBeskekProduct() {
+       const counterProduct = document.querySelector(".besket_counter .counter");
+      const addBesket = document.querySelectorAll(".product_besket .product_besket_cell:first-child > svg");
+      const besketCounter = document.querySelector(".besket_counter");
+      const removeProduct = document.querySelector(".modal_besket_remove");
+   
+      let counter = 0;
+        
+      addBesket.forEach(addProduct => {
+        addProduct.addEventListener("click", function() {
+          besketCounter.classList.add("besket_counter_show")
+          console.log(counter);
+          
+          if(!addProduct.classList.contains("active")) {
+            counter++;
+            counterProduct.textContent = counter;
+            console.log("OK");
+            
+
+          }
+
+           else if(addProduct.classList.contains("active")) {
+            counter--;
+            counterProduct.textContent = counter
+
+          }
+        //  else if(counter <= 0) {
+        //     counter = 0
+        //   }
+          
+          if(counter <= 0) {
+            counter = 0
+            besketCounter.classList.remove("besket_counter_show")
+          }
+          
+         
+        })
+      })
+
+      removeProduct.addEventListener("click", function() {
+        counter--;
+        counterProduct.textContent = counter;
+        if(counter == 0) {
+            besketCounter.classList.remove("besket_counter_show")
+          }
+      })
+    }
+
+ countBeskekProduct();
+
   const filtr = document.querySelector(".modal_filtr");
   const filtrbtn = document.querySelector(".filtr .right button");
   const modalfiltr = document.querySelector(".modal_catalog_filtr");
@@ -133,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slider.noUiSlider.on("update", function (values, handle) {
       inputs[handle].value = Math.round(values[handle]);
       inputs[handle].focus();
+     
     });
     const setRangeSlider = (i, value) => {
       let arr = [null, null];
@@ -142,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     inputs.forEach((el, index) => {
       el.addEventListener("change", (e) => {
+    
         setRangeSlider(index, e.currentTarget.value);
       });
     });

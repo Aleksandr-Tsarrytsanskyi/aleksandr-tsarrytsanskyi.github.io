@@ -263,6 +263,7 @@ input:focus .adres_radio {
 
 .payment .border {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  width: 1050px;
 }
 
 .payment__text {
@@ -306,6 +307,8 @@ input:focus .adres_radio {
   height: 510px;
   width: 906px;
   margin-top: 50px;
+  position: relative;
+  z-index: 300;
 }
 
 .payment .number_card {
@@ -438,7 +441,7 @@ input:focus .adres_radio {
   display: grid;
   grid-template-columns: 223px 62px;
   justify-content: center;
-  grid-gap: 0px 177px;
+  grid-gap: 0px 210px;
   margin-top: 30px;
 }
 
@@ -460,14 +463,19 @@ input:focus .adres_radio {
   color: #d29440;
 }
 
+.payment__order_price .left_text {
+  margin-left: 5px;
+}
+
 .payment__total_price {
   font-family: "Roboto Medium";
   font-size: 24px;
   line-height: 150%;
   text-align: right;
   position: relative;
-  left: -30px;
-  margin-top: 30px;
+  left: 0px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .payment__total_price span,
@@ -498,7 +506,7 @@ input:focus .adres_radio {
   background-position: 325px 22px;
   border-radius: 2px;
   background-color: #d29440;
-  width: 458px;
+  width: 480px;
   height: 59px;
   max-height: 59px;
   font-size: 18px;

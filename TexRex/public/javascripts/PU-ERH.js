@@ -1,4 +1,6 @@
 import { modalController } from "./modal/modal.js";
+import { countBeskekProduct } from "./besket/besketCounter.js";
+countBeskekProduct();
 document.addEventListener("DOMContentLoaded", function () {
   modalController({
     modal: ".modal_review",

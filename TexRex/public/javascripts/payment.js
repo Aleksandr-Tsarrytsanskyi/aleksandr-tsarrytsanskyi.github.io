@@ -41,6 +41,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalClose = document.querySelectorAll(".modal__close");
   const modal = document.querySelectorAll(".modal");
   const modalform = document.querySelectorAll(".login_account");
+  const inputs = document.querySelectorAll(".payment .number_card");
+  const paymentInputs = document.querySelectorAll(".payment__month input");
+  const cvvInput = document.querySelector(".payment__card_details .cvv");
+
+  cvvInput.addEventListener("input", function () {
+    this.value = this.value.substr(0, 3);
+  });
+  inputs.forEach((input, index) => {
+    console.log(index);
+
+    paymentInputs.forEach((input) => {
+      input.addEventListener("input", function (e) {
+        this.value = this.value.substr(0, 2);
+        if (this.value.length === 2) {
+          this.blur();
+
+          e.target.parentElement.nextElementSibling.nextElementSibling.firstElementChild.focus();
+        }
+      });
+    });
+
+    input.addEventListener("input", function (e) {
+      this.value = this.value.substr(0, 4);
+      if (this.value.length === 4) {
+        this.blur();
+        e.target.parentElement.nextElementSibling.firstElementChild.focus();
+      }
+    });
+  });
 
   modalform.forEach((submit) => {
     submit.addEventListener("submit", function (e) {

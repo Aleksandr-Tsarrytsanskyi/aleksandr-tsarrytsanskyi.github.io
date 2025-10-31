@@ -1,5 +1,7 @@
 import { modalController } from "./modal/modal.js";
+import { countBeskekProduct } from "./besket/besketCounter.js";
 
+countBeskekProduct();
 modalController({
   modal: ".madal1",
   btnOpen: ".modal_window1",

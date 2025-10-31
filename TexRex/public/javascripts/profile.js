@@ -7,6 +7,48 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalsaveData = document.querySelector(".modal_save_date");
   const copyText = document.querySelector(".profile__item .clipboard");
 
+  
+  const inputs = document.querySelectorAll('.payment .number_card');
+  const paymentInputs = document.querySelectorAll('.payment__month input');
+  const cvvInput = document.querySelector('.payment__card_details .cvv');
+
+  cvvInput.addEventListener("input", function() {
+       this.value = this.value.substr(0, 3)
+  })
+
+  paymentInputs.forEach(input => {
+    input.addEventListener("input", function(e) {
+       this.value = this.value.substr(0, 2)
+          if (this.value.length === 2) {
+             this.blur();
+             
+              e.target.parentElement.nextElementSibling.nextElementSibling .firstElementChild.focus();
+          }
+    })
+  })
+  
+  inputs.forEach((input, index) => {
+    console.log(index);
+    
+    
+    input.addEventListener("input", function(e) {
+        this.value = this.value.substr(0, 4)
+        if (this.value.length === 4) {
+        this.blur();
+     e.target.parentElement.nextElementSibling.firstElementChild.focus();
+       
+        
+    }
+    })
+  })
+
+//    inputs[0].addEventListener("input", function() {
+//     if (this.value.length === 4) {
+//         this.blur();
+//         inputs[1].focus();
+//     }
+//  })
+
   // copyText.addEventListener("click", function() {
   //   copyText.classList.toggle("active")
   // })

@@ -6,8 +6,52 @@ document.addEventListener("DOMContentLoaded", function() {
     const deletelFavorites = document.querySelector(".modal_favorites_reject")
     // const clearbtn = document.querySelector(".comparison__item button");
      const addBasket = document.querySelectorAll(".product_besket .product_besket_cell:first-child > svg");
+     const addBasketFav = document.querySelectorAll(".product_besket .product_besket_cell:last-child > svg");
      const modalbesket  = document.querySelector(".modal_besket ");
      const removemodalBesket = document.querySelector(".modal_besket_remove");
+     const onsale  = document.querySelectorAll(".onsale ");
+     const gramBtn  = document.querySelectorAll(".products__gram ");
+     const productsprice  = document.querySelectorAll(".products .price ");
+
+  gramBtn.forEach(btn => {
+    btn.addEventListener("click", function(e) {
+     const children = btn.children
+     
+   Array.from(children).forEach(child => {
+      child.classList.remove("active")
+      // if(child.firstElementChild.textContent === "1 блин") {
+      //   console.log("OK");
+        
+      // }
+      
+      // Perform actions on each child element
+    });
+      
+     e.target.closest(".cell").classList.add("active");
+     
+      if(e.target.closest(".cell").firstElementChild.textContent == "1 блин") {
+       productsprice.forEach(price => {
+        price.textContent = "3 000₽"
+       })
+       
+        
+      }
+
+      if(e.target.closest(".cell").firstElementChild.textContent == "25 грамм") {
+       productsprice.forEach(price => {
+        price.textContent = "2 800₽"
+       })
+       
+        
+      }
+      
+     
+    })
+  })
+
+     onsale.forEach(hit => {
+      hit.parentElement.parentElement.children[4].classList.add("products_price_onsale")
+     })
 //      const button = document.querySelectorAll('.categories .cell');
 // const container = document.querySelectorAll('.categories');
 // button.forEach(el => {
@@ -56,6 +100,13 @@ document.addEventListener("DOMContentLoaded", function() {
     btn.addEventListener("click", function (event) {
       btn.classList.toggle("active")
       modalbesket.classList.add("modal_besket_show");
+    });
+  })
+
+   addBasketFav.forEach((btn) => {
+    btn.addEventListener("click", function (event) {
+      btn.classList.toggle("active")
+     
     });
   })
 })
