@@ -3853,14 +3853,17 @@ height: 16px;
 }
 
 .description_acradion.active {
-  background-image: url("../images/active_acardionpng.png");
-  background-repeat: no-repeat;
-  background-position: right;
+  background-image: url("../images/active_acardionpng.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: right !important;
   color: #d29440;
 }
 
 .description_acradion:hover {
   color: #eba749;
+  background-image: url("../images/Vector_active_h.png");
+  background-repeat: no-repeat;
+  background-position: 779px 10px;
       
 }
 

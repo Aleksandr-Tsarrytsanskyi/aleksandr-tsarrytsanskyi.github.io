@@ -353,15 +353,16 @@ document.addEventListener("DOMContentLoaded", function () {
     acardion.forEach((el) => {
       el.addEventListener("click", function (e) {
         console.log(e.target);
+       acardion.forEach(el => {
+        el.classList.remove("active");
+       })
+        e.target.classList.toggle("active");
        
-        el.classList.toggle("active");
         let content = el.nextElementSibling;
-        console.log(content);
-
-        console.log(content.style.maxHeight);
+       
 
         if (content.style.maxHeight) {
-          console.log("11111");
+          
 
           document
             .querySelectorAll(".description_acradion_content")
