@@ -133,26 +133,26 @@ document.addEventListener("DOMContentLoaded", function () {
       breakpoints: {
         1680: {
           spaceBetween: 10,
-          slidesPerView: 4,
+          slidesPerView: 4.2,
         },
 
         960: {
           spaceBetween: 10,
-          slidesPerView: 3,
+          slidesPerView: 3.2,
         },
 
           768: {
           spaceBetween: 10,
-          slidesPerView: 2,
+          slidesPerView: 2.2,
         },
            480: {
           spaceBetween: 10,
-          slidesPerView: 2,
+          slidesPerView: 2.2,
         },
 
             320: {
           spaceBetween: 10,
-          slidesPerView: 2,
+          slidesPerView: 2.2,
         },
       },
     });

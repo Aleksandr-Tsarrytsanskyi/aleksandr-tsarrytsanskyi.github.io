@@ -231,7 +231,7 @@ p {
   position: absolute;
   bottom: 30px;
   left: 0;
-  margin-left: 163px;
+  margin-left: 130px;
   z-index: 300;
 }
 
@@ -294,8 +294,10 @@ p {
 }
 
 .products_slider {
-  width: 1618px;
+  width: 100%;
   height: 880px;
+  margin-left: 130px !important;
+ 
 }
 .products {
   margin: 0;
@@ -594,11 +596,18 @@ transform: scale(1.1);
   height: 33px;
 }
 
-.products .swiper-navigation {
+.products {
   position: relative;
-  top: 180px;
-  right: -17px;
-  float: right;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.products .swiper-navigation {
+  position: absolute;
+     top: 123px;
+    right: 159px;
+ 
   z-index: 200;
 }
 
@@ -606,12 +615,7 @@ transform: scale(1.1);
   width: 388px !important;
 }
 
-.products {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1580px;
-  justify-items: end;
-}
+
 
 .slider_header {
   margin-top: 101px;
@@ -631,8 +635,11 @@ transform: scale(1.1);
 }
 
 .watch_slider {
-  width: 1618px;
+  width: 100%;
+ 
   height: 880px;
+  margin-left: 130px !important;
+
 }
 
 .categories {
@@ -1967,8 +1974,9 @@ h2 {
 }
 
 .recommend_slider {
-  width: 1618px;
+  width: 100%;
   height: 880px;
+  margin-left: 140px !important;
 }
 
 .recommend_slider_title {
@@ -3413,10 +3421,10 @@ height: 16px;
 
 .toogle:checked + .move::before {
   transform: translateX(27px);
-  border: 11px solid #d29440;
-  background-color: #fff;
-  width: 10px;
-  height: 10px;
+  
+  background-color: #d29440;
+  width: 32px;
+  height: 32px;
 }
 
 .filters_price {
@@ -3882,6 +3890,11 @@ height: 16px;
   content: "☆☆☆☆☆";
   display: block;
   color: #eba749;
+}
+
+
+.description__addcart svg:target  .cell {
+  background-color: red;
 }
 
 .modal_review_simple_rating {
@@ -4555,6 +4568,15 @@ background-repeat: no-repeat;
     color: #d29440
   }
 
+
+  .media_slider  {
+    width: 100%;
+    margin-left: 140px !important;
+  }
+
+  .media_slider  .swiper-slide {
+    width: 388px !important;
+  }
 
   .madal1_registration:hover {
     background: none !important;

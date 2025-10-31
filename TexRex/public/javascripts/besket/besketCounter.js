@@ -21,11 +21,15 @@
             counterProduct.textContent = counter
 
           }
-         else if(counter <= 0) {
+          if(counter <= 0) {
             counter = 0
+            
           }
           
           if(counter == 0) {
+             addBesket.forEach(el => {
+                el.classList.remove("active")
+            })
             besketCounter.classList.remove("besket_counter_show")
           }
           

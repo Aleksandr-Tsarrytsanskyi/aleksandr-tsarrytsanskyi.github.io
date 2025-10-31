@@ -356,22 +356,22 @@ document.addEventListener("DOMContentLoaded", function () {
        acardion.forEach(el => {
         el.classList.remove("active");
        })
-        e.target.classList.toggle("active");
-       
-        let content = el.nextElementSibling;
-       
-
-        if (content.style.maxHeight) {
+      
+      let content = el.nextElementSibling;
+      
+      
+      if (content.style.maxHeight) {
+        e.target.classList.remove("active");
+        
+        document
+        .querySelectorAll(".description_acradion_content")
+        .forEach((el) => {
+          el.style.maxHeight = null;
           
-
-          document
-            .querySelectorAll(".description_acradion_content")
-            .forEach((el) => {
-              el.style.maxHeight = null;
-              
-            });
-        } else {
-          document
+        });
+      } else {
+        e.target.classList.add("active");
+        document
             .querySelectorAll(".description_acradion_content")
             .forEach((el) => {
               el.style.maxHeight = null;

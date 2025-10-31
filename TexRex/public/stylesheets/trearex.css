@@ -98,15 +98,23 @@ h2 {
   margin-top: 60px;
 }
 
+.map {
+  width: 1600px;
+  margin: auto;
+}
+
 .madia .swiper-navigation {
   position: relative;
-  left: 95%;
+  left: 85%;
+  
   width: 94px;
   margin-bottom: 40px;
 }
 
 .madia {
-  margin-top: 80px;
+margin: 80px auto;
+  width: 100%;
+  overflow: hidden;
 }
 
 .madia h2 {
@@ -115,6 +123,7 @@ h2 {
   color: rgba(255, 255, 255, 0.05);
   position: relative;
   top: 60px;
+  margin-left: 140px;
 }
 
 .map svg {
@@ -128,6 +137,7 @@ h2 {
   font-family: "Roboto Regular";
   color: rgba(255, 255, 255, 0.5);
   margin-top: 40px;
+  margin-left: 140px;
 }
 
 .madia p a {
