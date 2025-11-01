@@ -5,16 +5,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const modalFavorites = document.querySelector(".modal_favorites")
     const deletelFavorites = document.querySelector(".modal_favorites_reject")
     // const clearbtn = document.querySelector(".comparison__item button");
-     const addBasket = document.querySelectorAll(".product_besket .product_besket_cell:first-child > svg");
+     const addBasket = document.querySelectorAll(".product_besket .product_besket_cell .add_besket_product");
      const addBasketFav = document.querySelectorAll(".product_besket .product_besket_cell:last-child > svg");
      const modalbesket  = document.querySelector(".modal_besket ");
      const removemodalBesket = document.querySelector(".modal_besket_remove");
      const onsale  = document.querySelectorAll(".onsale ");
      const gramBtn  = document.querySelectorAll(".products__gram ");
      const productsprice  = document.querySelectorAll(".products .price ");
-
+     const addSomparison  = document.querySelectorAll(".product_besket .add_semparison_product ");
+  addSomparison.forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      btn.classList.toggle("active")
+    })
+  })
   gramBtn.forEach(btn => {
     btn.addEventListener("click", function(e) {
+      e.preventDefault();
      const children = btn.children
      
    Array.from(children).forEach(child => {
@@ -98,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   addBasket.forEach((btn) => {
     btn.addEventListener("click", function (event) {
+      event.preventDefault();
       btn.classList.toggle("active")
       modalbesket.classList.add("modal_besket_show");
     });

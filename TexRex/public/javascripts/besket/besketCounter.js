@@ -1,14 +1,15 @@
  export function countBeskekProduct() {
        const counterProduct = document.querySelector(".besket_counter .counter");
-      const addBesket = document.querySelectorAll(".product_besket .product_besket_cell:first-child > svg");
+      const addBesket = document.querySelectorAll(".product_besket .product_besket_cell .add_besket_product");
       const besketCounter = document.querySelector(".besket_counter");
       const removeProduct = document.querySelector(".modal_besket_remove");
    
       let counter = 0;
       
       addBesket.forEach(addProduct => {
-        addProduct.addEventListener("click", function() {
-          besketCounter.classList.add("besket_counter_show")
+        addProduct.addEventListener("click", function(e) {
+            e.preventDefault();
+           besketCounter.classList.add("besket_counter_show")
           
           if(!addProduct.classList.contains("active")) {
             counter++;
@@ -27,9 +28,7 @@
           }
           
           if(counter == 0) {
-             addBesket.forEach(el => {
-                el.classList.remove("active")
-            })
+            
             besketCounter.classList.remove("besket_counter_show")
           }
           

@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: true,
     spaceBetween: 10,
     freeMode: true,
+    loopedSlides:1,
     //      pagination: {
     //     el: '.swiper-pagination',
     //     clickable: true

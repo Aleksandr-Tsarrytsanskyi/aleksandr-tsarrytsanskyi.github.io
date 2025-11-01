@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     time: "300",
   });
 
-  const favorites = document.querySelectorAll(".products__header .cell:nth-child(2) svg");
+  const favorites = document.querySelectorAll(".products__header .add_favorites_product");
   const modal4 = document.querySelector(".madal4");
   const modal3Btn = document.querySelector(".madal3 .btn");
   const modal3 = document.querySelector(".madal3");
