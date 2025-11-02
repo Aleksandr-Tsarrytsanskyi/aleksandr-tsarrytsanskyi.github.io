@@ -4529,15 +4529,15 @@ button {
 
 
 
-.splash .svg_z {
+.splash .svg_z1 {
   width: 100% !important;
   height: 100% !important;
   transition: all 2s;
 }
 
-/* .container {
+.container {
   display: none;
-} */
+}
 
 .description__user_reviews .star .cell:nth-child(2) > button {
   padding: 16px 24px;
