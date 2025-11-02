@@ -1,5 +1,14 @@
+@media screen and (max-width: 520px)  {
+ .products__header .add_favorites_product {
+    left: 20px !important;
+  }
+}
 @media screen and (max-width: 1680px) {
     
+  .products__header .add_favorites_product {
+    left: 30px;
+  }
+
   .products__nav_top_slider {
     width: 800px;
   }
@@ -13,7 +22,8 @@
   }
 
         .product_besket {
-            right: 87px;
+            right: 13px;
+            bottom: 30px;
         }
     .products_price .cell:last-child {
         padding: 0;
@@ -682,6 +692,27 @@ position: relative;
 }
 
 @media screen and (max-width: 960px) {
+
+  .products__header .add_favorites_product {
+     background-position: 8px 10px !important;
+    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.1233 4C15.2791 4.0133 14.4534 4.25195 13.7294 4.69187C13.0054 5.13178 12.4089 5.75737 12 6.50547C11.5911 5.75737 10.9946 5.13178 10.2706 4.69187C9.54665 4.25195 8.72086 4.0133 7.87666 4C6.53091 4.05921 5.263 4.65541 4.34992 5.65834C3.43685 6.66127 2.95284 7.98941 3.00363 9.3526C3.00363 14.4964 11.2173 20.4374 11.5667 20.6895L12 21L12.4333 20.6895C12.7827 20.4389 20.9964 14.4964 20.9964 9.3526C21.0472 7.98941 20.5632 6.66127 19.6501 5.65834C18.737 4.65541 17.4691 4.05921 16.1233 4ZM12 19.1308C9.56123 17.2858 4.50302 12.7532 4.50302 9.3526C4.45178 8.39195 4.77769 7.44975 5.40968 6.73149C6.04167 6.01324 6.92847 5.57719 7.87666 5.51847C8.82486 5.57719 9.71165 6.01324 10.3436 6.73149C10.9756 7.44975 11.3016 8.39195 11.2503 9.3526H12.7497C12.6984 8.39195 13.0244 7.44975 13.6564 6.73149C14.2883 6.01324 15.1751 5.57719 16.1233 5.51847C17.0715 5.57719 17.9583 6.01324 18.5903 6.73149C19.2223 7.44975 19.5482 8.39195 19.497 9.3526C19.497 12.7547 14.4388 17.2858 12 19.1308Z' fill='white' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+  }
+
+  .products__header .add_favorites_product:hover {
+        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.1233 4C15.2791 4.0133 14.4534 4.25195 13.7294 4.69187C13.0054 5.13178 12.4089 5.75737 12 6.50547C11.5911 5.75737 10.9946 5.13178 10.2706 4.69187C9.54665 4.25195 8.72086 4.0133 7.87666 4C6.53091 4.05921 5.263 4.65541 4.34992 5.65834C3.43685 6.66127 2.95284 7.98941 3.00363 9.3526C3.00363 14.4964 11.2173 20.4374 11.5667 20.6895L12 21L12.4333 20.6895C12.7827 20.4389 20.9964 14.4964 20.9964 9.3526C21.0472 7.98941 20.5632 6.66127 19.6501 5.65834C18.737 4.65541 17.4691 4.05921 16.1233 4ZM12 19.1308C9.56123 17.2858 4.50302 12.7532 4.50302 9.3526C4.45178 8.39195 4.77769 7.44975 5.40968 6.73149C6.04167 6.01324 6.92847 5.57719 7.87666 5.51847C8.82486 5.57719 9.71165 6.01324 10.3436 6.73149C10.9756 7.44975 11.3016 8.39195 11.2503 9.3526H12.7497C12.6984 8.39195 13.0244 7.44975 13.6564 6.73149C14.2883 6.01324 15.1751 5.57719 16.1233 5.51847C17.0715 5.57719 17.9583 6.01324 18.5903 6.73149C19.2223 7.44975 19.5482 8.39195 19.497 9.3526C19.497 12.7547 14.4388 17.2858 12 19.1308Z' fill='orange' /%3E%3C/svg%3E");
+     background-repeat: no-repeat;
+      background-position: 8px 10px;
+  }
+
+  .products__header .add_favorites_product.active {
+    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.1233 4C15.2791 4.0133 14.4534 4.25195 13.7294 4.69187C13.0054 5.13178 12.4089 5.75737 12 6.50547C11.5911 5.75737 10.9946 5.13178 10.2706 4.69187C9.54665 4.25195 8.72086 4.0133 7.87666 4C6.53091 4.05921 5.263 4.65541 4.34992 5.65834C3.43685 6.66127 2.95284 7.98941 3.00363 9.3526C3.00363 14.4964 11.2173 20.4374 11.5667 20.6895L12 21L12.4333 20.6895C12.7827 20.4389 20.9964 14.4964 20.9964 9.3526C21.0472 7.98941 20.5632 6.66127 19.6501 5.65834C18.737 4.65541 17.4691 4.05921 16.1233 4Z' fill='white' /%3E%3C/svg%3E");
+        width: 30px;
+        height: 40px;
+         background-repeat: no-repeat;
+         background-color: #d29440;
+         background-position: 8px 10px;
+  }
 
   .products__nav_top_slider {
     width: 608px;
@@ -2012,6 +2043,10 @@ position: relative;
     font-size: 20px;
   }
 
+  .products__nav_top_slider {
+    width: 432px;
+  }
+
   .slider_header__item a {
     width: 155px;
     font-size: 14px;
@@ -2549,13 +2584,25 @@ position: relative;
     left: 0px;
   }
 
+   .products__nav_top_slider {
+    width: 312px;
+  } 
+
+  .products__header .hit {
+    top: 2px;
+  }
+
   .products__gram .cell {
     width: 67px !important;
-    height: 34px !important;
+    height: 30px !important;
+  }
+
+  .products__header .add_favorites_product {
+    left: 0px !important;
   }
 
   .products__gram {
-    grid-template-columns: 67px 69px;
+    grid-template-columns: 71px 69px;
     grid-gap: 0px 5px;
     position: relative;
     left: 5px;
@@ -2915,6 +2962,10 @@ position: relative;
     .product_besket svg{
       width: 24px;
       height: 24px;
+    }
+
+    .products__gram .cell p {
+        line-height: 30px;
     }
 
     .product_besket {

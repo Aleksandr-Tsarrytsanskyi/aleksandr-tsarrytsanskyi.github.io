@@ -497,7 +497,8 @@ cursor: pointer;
 background-position:12px 12px;
 position: relative;
 z-index: 300;
-transition: all 0.3s all;
+transition: all 0.3s;
+left: 30px;
 
 }
 
@@ -513,7 +514,7 @@ background-position:12px 12px;
 background-position:12px 12px;
 border-radius: 0px 0px 5px 5px;
 background-repeat: no-repeat;
-transition: all 0.3s all;
+transition: all 0.3s;
 }
 
 .product_besket .add_besket_product.active {
@@ -4421,8 +4422,8 @@ align-items: center;
       grid-template-columns: 70px 70px;
       position: absolute;
       grid-gap: 0px 0px;
-         bottom: 73px;
-    right: 80px;
+         bottom: 20px;
+    right: 13px;
      }
 
      .product_besket_cell  {
