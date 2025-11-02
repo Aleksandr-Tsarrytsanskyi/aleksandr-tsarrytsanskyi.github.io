@@ -767,6 +767,10 @@ position: relative;
     margin-right: 0px !important;
   }
 
+  .description_acradion:hover {
+    background-position: 590px 10px;
+  }
+
   .besket_counter {
     width: 20px;
     height: 20px;
@@ -1764,6 +1768,10 @@ position: relative;
     left: -50px;
   }
 
+  .description_acradion:hover {
+    background-position: 415px 10px;
+  }
+
   .menu li a {
     font-size: 12px;
   }
@@ -2658,6 +2666,10 @@ position: relative;
     font-size: 12px;
     width: 145px;
     margin-top: 10px;
+  }
+
+  .description_acradion:hover {
+    background-position: 295px 10px;
   }
 
   .products h2 {
