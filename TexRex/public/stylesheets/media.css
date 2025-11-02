@@ -2770,6 +2770,10 @@ position: relative;
     height: 425px;
   }
 
+  .event h2 {
+    margin-left: 15px;
+  }
+
   .products_cart:hover .products__header img{
 transform: none;
 }
