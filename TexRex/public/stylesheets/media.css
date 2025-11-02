@@ -2510,7 +2510,7 @@ position: relative;
 
   .products_slider {
    
-    height: 525px;
+    height: 500px;
   }
 
   .products__header .hit {
@@ -2528,7 +2528,7 @@ position: relative;
 
   .watch_slider {
     
-    height: 525px;
+    height: 460px;
   }
 
   .products_cart .products_hit {
@@ -2959,7 +2959,7 @@ position: relative;
     
 
     .footer_top_logo .cell:first-child {
-      left: -14px;
+      left: -17px;
     }
 
     .bg_item_networks {
