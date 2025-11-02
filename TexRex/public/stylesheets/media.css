@@ -1466,7 +1466,7 @@ position: relative;
   .footer .mail {
     width: 179px;
     height: 52px;
-    line-height: 52px;
+    line-height: 53px;
   }
 
   .footer_top_logo {
@@ -2816,7 +2816,7 @@ position: relative;
       left: 5px;
       width: 284px;
       font-size: 14px;
-      line-height: 52px;
+      line-height: 53px;
     }
 
     .footer_top_logo .cell:first-child > a {
