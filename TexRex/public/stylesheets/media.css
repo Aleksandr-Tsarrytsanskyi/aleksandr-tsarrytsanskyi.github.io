@@ -2543,8 +2543,12 @@ position: relative;
     left: 13px !important;
   }
 
+  .products .swiper-slide {
+    margin-left: -135px;
+  }
+
   .products .swiper-navigation {
-    top: 50px;
+    top: 4px;
     left: 3px;
   }
 
@@ -2587,6 +2591,10 @@ position: relative;
    .products__nav_top_slider {
     width: 312px;
   } 
+
+  .products__nav_top_slider {
+    grid-template-columns: 2fr 1fr;
+  }
 
   .products__header .hit {
     top: 2px;
