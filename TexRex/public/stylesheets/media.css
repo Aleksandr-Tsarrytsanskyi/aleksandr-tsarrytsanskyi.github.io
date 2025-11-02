@@ -1410,7 +1410,7 @@ position: relative;
   .about__bg {
     width: 565px;
     top: -47px;
-    left: 5%;
+    left: 4%;
   }
 
   .about__blog {
@@ -3110,7 +3110,7 @@ transform: none;
 
      .characteristics {
       width: 312px;
-      grid-template-columns: 160px 152px;
+      grid-template-columns: 167px 145px;
       grid-gap: 0px 0px;
      }
 
