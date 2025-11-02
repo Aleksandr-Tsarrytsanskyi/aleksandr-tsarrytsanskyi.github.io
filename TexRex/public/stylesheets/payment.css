@@ -849,7 +849,7 @@ footer {
 
   #payment {
     width: 312px;
-    grid-template-columns: 312px;
+    grid-template-columns: 312px !important;
   }
 
   #payment input[type="text"] {
