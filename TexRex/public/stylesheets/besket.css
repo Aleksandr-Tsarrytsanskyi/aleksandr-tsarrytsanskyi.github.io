@@ -72,9 +72,7 @@ footer {
     background-position: 470px;
   }
 
-  .recommend_slider {
-    width: 860px;
-  }
+ 
 
   .recommend_slider_title {
     font-size: 80px !important;
@@ -186,7 +184,7 @@ footer {
   }
 
   .recommend_slider {
-    width: 630px;
+    
     height: 670px;
   }
 
@@ -307,7 +305,7 @@ color: #fff;
     }
 
     .recommend_slider {
-        width: 416px;
+       
         height: 610px;
     }
 
@@ -432,7 +430,7 @@ color: #fff;
     }
 
     .recommend_slider {
-        width: 330px;
+        
         height: 500px;
     }
 
