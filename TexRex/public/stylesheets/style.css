@@ -4729,7 +4729,7 @@ background-repeat: no-repeat;
   }
 
   .media_slider  .swiper-slide {
-   
+   width: 388px !important;
    
     margin-right: 20px !important;
   }

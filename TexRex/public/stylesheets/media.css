@@ -5,6 +5,27 @@
 }
 @media screen and (max-width: 1680px) {
     
+.map {
+  width: 800px;
+}
+
+  .media_slider .swiper-slide {
+    width: 257px !important;
+    margin-right: 10px !important;
+  }
+
+  .trearex__nav_top_slider {
+    width: 800px;
+  }
+
+  .media_slider .item {
+    width: 257px !important;
+  }
+
+  .media_slider .swiper-slide img {
+    width: 257px;
+  }
+
   .besket__title {
     margin-top: 0px;
   }
@@ -1206,6 +1227,10 @@ position: relative;
     font-size: 24px;
   }
 
+  .map {
+  width: 608px;
+}
+
   .slider_header__item a {
     width: 187px;
     height: 53px;
@@ -2264,6 +2289,10 @@ position: relative;
     display: none;
   }
 
+    .map {
+  width: 432px;
+}
+
   .networks__link {
     grid-template-columns: 136px 136px 136px;
     grid-gap: 0px 5px;
@@ -3140,6 +3169,10 @@ transform: none;
           top: 12px !important;
     left: 11px !important; 
      }
+     
+         .map {
+  width: 312px;
+}
 
      .description__delivery_content li {
       margin-bottom: 30px;
@@ -3309,7 +3342,7 @@ height: 175px;
      }
 
      .menu {
-      grid-template-columns: 312px;
+      grid-template-columns: 320px;
       margin-bottom: 40px;
      }
 
