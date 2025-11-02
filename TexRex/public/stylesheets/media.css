@@ -2770,6 +2770,10 @@ position: relative;
     height: 410px;
   }
 
+  .products_cart:hover .products__header img{
+transform: none;
+}
+
   .about__header svg,
   .about__bg {
     width: 311px;

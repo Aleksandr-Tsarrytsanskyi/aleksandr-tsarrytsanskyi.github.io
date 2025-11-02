@@ -1092,6 +1092,7 @@ transform: scale(1.1);
   position: absolute;
   top: -119px;
   left: 10%;
+  z-index: 200;
 }
 
 .about .tarasimage {
@@ -4233,7 +4234,7 @@ footer {
 
   width: 100%; /* Ширина 90% от родительского элемента */
   height: 100%; /* Высота 80% от родительского элемента */
-  /* object-fit: cover; */
+  object-fit: cover;
   z-index: 200;
 }
 
@@ -4536,9 +4537,7 @@ button {
 }
 
 
-.about__header svg {
-  display: none;
-}
+
 
 .container {
   display: none;
