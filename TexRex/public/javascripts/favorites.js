@@ -44,7 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.querySelectorAll(".modal");
   const modalform = document.querySelectorAll(".login_account");
   const productbesketSvg = document.querySelectorAll(".product_besket svg");
+  const modalfavorites = document.querySelector(".modal_favorites");
+  const modalfavoritesRemove = document.querySelector(".modal_favorites_reject");
 
+
+  modalfavoritesRemove.addEventListener("click", function() {
+    modalfavorites.classList.remove("modal_besket_show")
+  })
 
 
   productbesketSvg.forEach(btn => {
@@ -84,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("click", function (event) {
         event.preventDefault()
       el.classList.toggle("active");
+      modalfavorites.classList.add("modal_besket_show")
     });
   });
 
