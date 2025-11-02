@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const modalFavorites = document.querySelector(".modal_favorites")
   const besketaddfavorites = document.querySelector(
-    ".description__addcart .cell:nth-child(2)  svg"
+    ".description_add_product"
   );
   const favoritesLink = document.querySelector(
     ".description__addcart .cell:nth-child(2)  a"

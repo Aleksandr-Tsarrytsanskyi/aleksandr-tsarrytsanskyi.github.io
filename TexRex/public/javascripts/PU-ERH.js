@@ -57,7 +57,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalClose = document.querySelectorAll(".modal__close");
     const modal = document.querySelectorAll(".modal");
     const modalform = document.querySelectorAll(".login_account");
+    const gram = document.querySelectorAll(".description__gram .cell");
+    const addProduct = document.querySelector(".description_add_product");
+    const addFvorites = document.querySelector(".description_add_fav");
 
+      addFvorites.addEventListener("click", function(e) {
+      addFvorites.classList.toggle("active")
+    })
+
+    addProduct.addEventListener("click", function(e) {
+      addProduct.classList.toggle("active")
+    })
+    gram.forEach(btn => {
+      btn.addEventListener("click", function(e) {
+        console.log("asfasf");
+        gram.forEach(el => {
+          el.classList.remove("active")
+        })
+        btn.classList.add("active")
+      })
+    })
     modalform.forEach((submit) => {
       submit.addEventListener("submit", function (e) {
         e.preventDefault();
