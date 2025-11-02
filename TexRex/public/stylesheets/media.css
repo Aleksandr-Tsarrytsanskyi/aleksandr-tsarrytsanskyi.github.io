@@ -3179,6 +3179,10 @@ height: 175px;
       font-size: 31px;
      }
 
+     .bg_header {
+      left: -251px !important;
+     }
+
      .description .products .swiper-navigation {
       left: 45px;
         top: 4px !important;
