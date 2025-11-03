@@ -2989,6 +2989,7 @@ transform: none;
         width: 42px;
         display: block;
         left: 20%;
+        padding-right: 26px;
     }
 
     .networks__link  a:hover {
