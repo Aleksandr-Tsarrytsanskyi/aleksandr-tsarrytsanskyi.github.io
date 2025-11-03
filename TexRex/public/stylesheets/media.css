@@ -2968,6 +2968,7 @@ transform: none;
   .networks__link {
     grid-template-columns: 107px 107px 107px;
     margin-top: 40px;
+    top: 27px;
   }
 
     .networks__link .cell {
@@ -3076,7 +3077,7 @@ transform: none;
     }
 
     .bg_item_networks {
-      height: 39px;
+      height: 30px;
     }
 
     .slider_header__item a {
