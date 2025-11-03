@@ -502,6 +502,11 @@ transition: all 0.3s;
 
 }
 
+.favorites_filtr {
+  position: relative;
+  z-index: 300;
+}
+
 .categories_content_title {
   position: relative;
   top: 50px;

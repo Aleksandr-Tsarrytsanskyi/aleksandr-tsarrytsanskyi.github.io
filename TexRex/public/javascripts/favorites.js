@@ -46,6 +46,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const productbesketSvg = document.querySelectorAll(".product_besket svg");
   const modalfavorites = document.querySelector(".modal_favorites");
   const modalfavoritesRemove = document.querySelector(".modal_favorites_reject");
+  const products = document.querySelectorAll(".products > .cell");
+  const removeProducts = document.querySelector(".favorites_filtr button");
+ removeProducts.addEventListener("click", function() {
+   products.forEach(ptoduct => {
+    ptoduct.remove()
+
+  })
+  
+ })
+ 
 
 
   modalfavoritesRemove.addEventListener("click", function() {

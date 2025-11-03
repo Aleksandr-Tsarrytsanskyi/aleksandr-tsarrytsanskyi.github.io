@@ -51,6 +51,14 @@ const modalRemoveproduct = document.querySelector(".modal_remove_product");
   const modalform = document.querySelectorAll(".login_account");
   const clearproduct = document.querySelector(".clear_product button");
   const modalclear = document.querySelector(".modal_comparison_clear");
+  const clearProducts = document.querySelector(".clear_product button");
+  const besketProducts = document.querySelectorAll(".besket > .cell");
+
+  clearProducts.addEventListener("click", function() {
+    besketProducts.forEach(product => {
+      product.remove();
+    })
+  })
 
   clearproduct.addEventListener("click", function() {
 modalclear.classList.add("modal_comparison_remove_product_show")
