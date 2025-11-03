@@ -2969,6 +2969,15 @@ transform: none;
     top: 27px;
   }
 
+
+  .filtr .right button {
+    top: -4px;
+  }
+
+  .networks__link a {
+    font-size: 12px !important;
+  }
+
     .networks__link .cell {
       height: 107px;
     }
@@ -2977,7 +2986,7 @@ transform: none;
               overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        width: 40px;
+        width: 42px;
         display: block;
         left: 20%;
     }
