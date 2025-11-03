@@ -1207,6 +1207,10 @@ position: relative;
     height: 50px;
   }
 
+  .trearex__nav_top_slider {
+    width: 608px;
+  }
+
   .product_besket svg {
     margin-top: 15px;
   }
@@ -1642,6 +1646,10 @@ position: relative;
   width: 432px;
   margin: auto;
 }
+
+  .media_slider .swiper-slide, .media_slider .item, .media_slider .swiper-slide img {
+    width: 211px !important;
+  }
 
   .modal_hit_link {
     width: 432px;
@@ -2515,6 +2523,10 @@ position: relative;
 
   .description .products {
     grid-template-columns: 322px;
+  }
+
+    .media_slider .swiper-slide, .media_slider .item, .media_slider .swiper-slide img {
+    width: 151px !important;
   }
 
   .slider_header__item .mobile_img {

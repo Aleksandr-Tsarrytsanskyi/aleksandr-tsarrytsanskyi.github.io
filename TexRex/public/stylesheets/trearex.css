@@ -146,7 +146,7 @@ margin-bottom: 80px;
   font-family: "Roboto Regular";
   color: rgba(255, 255, 255, 0.5);
   margin-top: 40px;
-  margin-left: 140px;
+  margin-left: 10px;
 }
 
 .madia p a {
@@ -261,7 +261,8 @@ margin-bottom: 30px;
   }
 
   .madia .swiper-navigation {
-    left: 89%;
+    left: 75%;
+    top: 100px;
   }
 
   .map svg {
@@ -345,8 +346,9 @@ margin-bottom: 30px;
   }
 
   .madia .swiper-navigation {
-    left: 87%;
-    top: 20px;
+            left: -2%;
+        top: 100px;
+
   }
 
   .map svg {
@@ -401,6 +403,11 @@ margin-bottom: 30px;
     grid-template-columns: 432px;
   }
 
+
+  .madia {
+    margin: 0 auto;
+  }
+
   .trearex__article h2 {
     font-size: 25px;
   }
@@ -414,11 +421,15 @@ margin-bottom: 30px;
   }
 
   .madia .swiper-navigation {
-    left: 81%;
+    left: 19%;
   }
 
   .map svg {
     width: 432px;
+  }
+
+  .trearex__nav_top_slider {
+    width: 432px !important;
   }
 
   .map {
@@ -467,6 +478,10 @@ margin-bottom: 30px;
     top: -248px;
   }
 
+  .trearex__nav_top_slider {
+    width: 312px !important;
+  }
+
   .trearex_content {
     top: 0;
     grid-template-columns: 83px;
@@ -491,8 +506,12 @@ margin-bottom: 30px;
   }
 
   .madia .swiper-navigation {
-    left: 75%;
-    top: 35px;
+left: 14%;
+        top: 112px;
+  }
+
+  .madia p {
+    font-size: 16px;
   }
 
   .map svg {
