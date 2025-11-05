@@ -1,3 +1,12 @@
+  const onsale  = document.querySelectorAll(".onsale");
+
+     onsale.forEach(hit => {
+     let res = hit.parentElement.parentElement.parentElement.children[5].classList.add("products_price_onsale");
+     let text = hit.parentElement.parentElement.parentElement.children[5].children[0].children[0].classList.add("products_price_onsale_text");
+     console.log(res)
+     });
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const addfavorites = document.querySelectorAll(".products__header .cell:nth-child(2) > svg")
     const besketaddfavorites = document.querySelector(".description__addcart .cell:nth-child(2)  svg")
