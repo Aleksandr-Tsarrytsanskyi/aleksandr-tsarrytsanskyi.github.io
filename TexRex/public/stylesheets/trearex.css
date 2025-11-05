@@ -1,4 +1,4 @@
-.trearex h1 {
+.tearex_title h1 {
   font-size: 160px;
   font-family: "Roboto Medium";
   line-height: 135%;
@@ -8,8 +8,13 @@
 
 .trearex__top_item {
   background-color: rgba(255, 255, 255, 0.05);
-  width: 1600px;
+ width: 100% !important;
   height: 720px;
+}
+
+.tearex_title {
+  width: 1600px;
+  margin: auto;
 }
 
 .trearex__header {
@@ -228,6 +233,14 @@ margin-bottom: 30px;
     top: -122px;
   }
 
+  .tearex_title {
+    width: 800px;
+  }
+
+   .tearex_title h1 {
+    font-size: 80px;
+   }
+
   .trearex_content img {
     max-width: 167px;
     
@@ -341,6 +354,14 @@ margin-bottom: 30px;
     font-size: 16px;
   }
 
+  .tearex_title {
+    width: 608px;
+  }
+
+   .tearex_title h1 {
+    font-size: 60px;
+   }
+
   .madia h2 {
     font-size: 60px;
   }
@@ -416,6 +437,14 @@ margin-bottom: 30px;
     width: 296px;
   }
 
+   .tearex_title {
+    width: 432px;
+  }
+
+   .tearex_title h1 {
+    font-size: 48px;
+   }
+
   .madia h2 {
     font-size: 40px;
   }
@@ -486,6 +515,14 @@ margin-bottom: 30px;
     top: 0;
     grid-template-columns: 83px;
   }
+
+   .tearex_title {
+    width: 312px;
+  }
+
+   .tearex_title h1 {
+    font-size: 36px;
+   }
 
   .trearex__article {
     margin-top: 30px;

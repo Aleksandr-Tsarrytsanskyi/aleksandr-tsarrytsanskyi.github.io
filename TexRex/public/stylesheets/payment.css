@@ -500,13 +500,17 @@ input:focus .adres_radio {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.payment__code {
+  margin-top: 40px;
+}
+
 .payment .submit {
   background-image: url("../images/besket/submit.png");
   background-repeat: no-repeat;
   background-position: 325px 22px;
   border-radius: 2px;
   background-color: #d29440;
-  width: 480px;
+  width: 478px;
   height: 59px;
   max-height: 59px;
   font-size: 18px;

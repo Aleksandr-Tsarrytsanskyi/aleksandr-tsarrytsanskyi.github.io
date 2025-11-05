@@ -18,7 +18,7 @@
 
 
 .products__header .add_favorites_product {
-    left: 0;
+    left: -10px;
 }
 
 .api_products .cell {
