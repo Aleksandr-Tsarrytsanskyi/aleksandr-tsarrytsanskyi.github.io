@@ -79,6 +79,7 @@
 
 .profile_acardion:hover .profile__finished {
   color: #d29440;
+  transition: 0.3s ease-in;
 }
 
 .profile__promo_code {
