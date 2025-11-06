@@ -1,7 +1,5 @@
 @media screen and (max-width: 520px)  {
- .products__header .add_favorites_product {
-    left: 20px !important;
-  }
+ 
 }
 @media screen and (max-width: 1680px) {
     
@@ -2791,7 +2789,7 @@ position: relative;
   }
 
   .products__header .add_favorites_product {
-    left: 0px !important;
+    left: 0px;
   }
 
   .products__gram {
