@@ -1345,3 +1345,39 @@ display: none;
     font-size: 14px;
    }
 }
+
+
+
+
+
+
+
+.products__header .width {
+      width: 300px;
+      height: 300px;
+       position: relative;
+  }
+
+.products_price del {
+         color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.products_price ins {
+            font-family: "Roboto Medium";
+    font-size: 30px;
+    line-height: 135%;
+      grid-column: 1;
+  grid-row: 1;
+  text-decoration:auto;
+}
+
+.products_price .price {
+    display: grid;
+    grid-template-columns: 130px 65px;
+    align-items: center;
+}
+.product_type_simple {
+    display: none;
+}
