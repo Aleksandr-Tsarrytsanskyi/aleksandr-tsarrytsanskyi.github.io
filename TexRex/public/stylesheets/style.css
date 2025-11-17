@@ -4622,6 +4622,7 @@ button {
   } */
 
 .splash {
+  
       position: fixed;
       top: 0;
       left: 0;
@@ -4632,9 +4633,9 @@ button {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      font-family: sans-serif;
+      font-family: sans-serif; 
       opacity: 1;
-      transition: all 1s;
+       transition:  1s ease-out;
 }
 
 .splash svg {

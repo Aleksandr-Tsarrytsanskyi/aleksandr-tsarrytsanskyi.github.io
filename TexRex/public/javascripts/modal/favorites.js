@@ -45,21 +45,21 @@ document.addEventListener("DOMContentLoaded", function() {
       
      e.target.closest(".cell").classList.add("active");
      
-      if(e.target.closest(".cell").firstElementChild.textContent == "1 блин") {
-       productsprice.forEach(price => {
-        price.textContent = "3 000₽"
-       })
+      // if(e.target.closest(".cell").firstElementChild.textContent == "1 блин") {
+      //  productsprice.forEach(price => {
+      //   price.textContent = "3 000₽"
+      //  })
        
         
-      }
+      // }
 
-      if(e.target.closest(".cell").firstElementChild.textContent == "25 грамм") {
-       productsprice.forEach(price => {
-        price.textContent = "2 800₽"
-       })
+      // if(e.target.closest(".cell").firstElementChild.textContent == "25 грамм") {
+      //  productsprice.forEach(price => {
+      //   price.textContent = "2 800₽"
+      //  })
        
         
-      }
+      // }
       
      
     })
