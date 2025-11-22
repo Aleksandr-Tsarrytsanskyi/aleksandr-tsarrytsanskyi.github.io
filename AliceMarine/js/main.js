@@ -337,7 +337,7 @@ if (isMobile.any()) {
 
   
     const menuLinks = document.querySelectorAll(
-      ".header .header__link[data-goto]"
+      " .header__link[data-goto]"
     );
 
     
@@ -346,7 +346,7 @@ if (isMobile.any()) {
 
     if (menuLinks.length > 0) {
       menuLinks.forEach((menuLink) => {
-        console.log(menuLink);
+        
 
         menuLink.addEventListener("click", function (e) {
      
@@ -356,15 +356,18 @@ if (isMobile.any()) {
           if (
             menuLink.dataset.goto &&
             document.querySelector(menuLink.dataset.goto)
-          ) {
+            
+          )  {
+            
             const gotoBlock = document.querySelector(menuLink.dataset.goto);
             const gotoBlockValue =
-              gotoBlock.getBoundingClientRect().top +
-              pageYOffset -
-              document.querySelector("header").offsetHeight;
-
+            gotoBlock.getBoundingClientRect().top +
+            pageYOffset -
+            document.querySelector("header").offsetHeight;
+            
+            console.dir(e.target)
             window.scrollTo({
-              top: gotoBlockValue,
+              top: gotoBlockValue + 700,
               behavior: "smooth",
             });
             e.preventDefault();
