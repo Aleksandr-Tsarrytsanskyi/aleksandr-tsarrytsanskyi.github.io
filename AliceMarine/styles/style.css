@@ -44,7 +44,8 @@ h1 {
 }
 .header {
   position: relative;
-  height: 981px;
+  height: 1233px;
+  overflow: hidden;
 }
 
 .header__content {
@@ -71,7 +72,8 @@ h1 {
   float: right;
   background-color: #efefef;
   border-radius: 40px;
-
+  position: relative;
+  z-index: 200;
   height: 70px;
   line-height: 30px;
   margin: 30px auto;
@@ -143,11 +145,16 @@ h1 {
 
 .manufactory {
   max-width: 1885px;
-  margin: 0px auto;
-  background-image: url("../images/bg_main.png");
+  margin: -127px auto;
+  background-image: url("../images/svg/image_bg.png");
   background-repeat: no-repeat;
   background-position: 0px -170px;
   overflow: hidden;
+}
+
+.header__bg {
+  width: 1900px;
+  margin: auto;
 }
 
 .manufactory__content {
@@ -1001,7 +1008,11 @@ h1 {
   }
 
   .header {
-    height: 787px;
+    height: 873px;
+  }
+
+  .idea__item {
+    margin-top: 170px;
   }
 
   .manufactory__content {
@@ -1239,14 +1250,22 @@ h2 {
 }
 
 .parallax {
-  min-height: 100vh;
-  min-height: 100vh;
+  min-height: 910px;
+  
+}
+
+.manufactory_img .parallax {
+  min-height: 1130px;
+}
+
+.header__banner .parallax {
+   min-height: 860px;
 }
 
 .manufactory .parallax {
   position: relative;
   top: 140px;
-  min-height: 117vh;
+  /* min-height: 117vh; */
 }
 
 .parallax__body {
