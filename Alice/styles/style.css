@@ -1087,7 +1087,7 @@ grid-template-columns: 630px 600px;
 }
 
   .idea__item {
-    margin-top: 70px;
+    margin-top: -50px;
   }
 
  .manufactory__content .cell:first-child {
@@ -1615,6 +1615,7 @@ h2 {
   position: relative;
   top: 100px;
   left: 40px;
+  z-index: 300;
   
 }
 
@@ -1654,16 +1655,19 @@ h2 {
 .target .images_parallax__center {
   background: url("../image/target/img6.png") no-repeat top;
   height: 587px;
+  
 }
 
 .target .images_parallax__left {
   background: url("../image/target/img4.png") no-repeat left;
   height: 520px;
+  z-index: 300;
 }
 
 .target .images_parallax__right {
   background: url('../image/target/img5.png') no-repeat right;
   height: 587px;
+  z-index: 300;
 
  
 }
