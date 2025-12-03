@@ -395,7 +395,7 @@ if (isMobile.any()) {
             
             console.dir(e.target)
             window.scrollTo({
-              top: gotoBlockValue + 1000,
+              top: gotoBlockValue + 700,
               behavior: "smooth",
             });
             e.preventDefault();

@@ -147,11 +147,12 @@ h1 {
 
 .manufactory {
   max-width: 1885px;
-  margin: -127px auto;
+  margin: -140px auto;
   background-image: url("../image/bg_m.png");
   background-repeat: no-repeat;
   background-position: 150px -370px;
   overflow: hidden;
+  padding-bottom: 100px;
 }
 
 .header__bg {
@@ -227,7 +228,7 @@ h1 {
 
 .idea {
   max-width: 1885px;
-  margin: 95px auto;
+  margin: -50px auto;
   overflow: hidden;
 }
 .footer__content svg {
