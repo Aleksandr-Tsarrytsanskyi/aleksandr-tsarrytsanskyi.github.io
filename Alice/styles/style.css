@@ -1327,7 +1327,7 @@ grid-template-columns: 630px 600px;
   }
 
   .footer__item .cell:last-child {
-    background-position: -17px 96px;
+    background-position: 14px 96px;
   }
 
   .manufactory__content .cell:last-child,
