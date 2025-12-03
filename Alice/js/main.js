@@ -267,20 +267,38 @@ if (isMobile.any()) {
         ".target .images_parallax__center"
       );
       const parallaxSLot = document.querySelector(
-        ".target .images_parallax__slot2"
+        ".target .images_parallax__slot1"
       );
       const parallaxSLot2 = document.querySelector(
-        ".target .images_parallax__an1"
+        ".target .images_parallax__slot2"
       );
       const parallaxRight = document.querySelector(
         ".target .images_parallax__right"
       );
 
-      const forparallaxCenter = -280;
-      const forparallaxLeft = -100;
-      const forparallaxRight = -280;
-      const forparallaxSlot = -80;
-      const forparallaxSlot2 = -280;
+       const parallaxany = document.querySelector(
+        ".target .images_parallax__an2"
+      );
+
+        const parallaxBg = document.querySelector(
+        ".target .images_parallax__bg"
+      );
+         const parallaxany1 = document.querySelector(
+        ".target .images_parallax__an1"
+      );
+
+      // const forparallaxCenter = 40;
+      // const forparallaxLeft = 20;
+      // const forparallaxRight = 10;
+
+      const forparallaxCenter = 100;
+      const forparallaxLeft = 50;
+      const forparallaxRight = 100;
+      const forparallaxSlot = 100;
+      const forparallaxSlot2 = 100;
+      const forparallaxAny = 100;
+      const forparallaxbg = 100;
+      const forparallaxAny1 = 100;
 
       // const forparallaxCenter = 40;
       // const forparallaxLeft = 20;
@@ -311,12 +329,22 @@ if (isMobile.any()) {
         parallaxRight.style.cssText = `transform: translate(${
           posiionX / forparallaxRight
         }%, ${positionY / forparallaxRight}%);`;
-        parallaxSLot.style.cssText = `transform: translate(${
+         parallaxSLot.style.cssText = `transform: translate(${
           posiionX / forparallaxSlot
         }%, ${positionY / forparallaxSlot}%);`;
-        parallaxSLot2.style.cssText = `transform: translate(${
+         parallaxSLot2.style.cssText = `transform: translate(${
           posiionX / forparallaxSlot2
         }%, ${positionY / forparallaxSlot2}%);`;
+         parallaxany.style.cssText = `transform: translate(${
+          posiionX / forparallaxAny
+        }%, ${positionY / forparallaxAny}%);`;
+         parallaxBg.style.cssText = `transform: translate(${
+          posiionX / forparallaxbg
+        }%, ${positionY / forparallaxbg}%);`;
+          parallaxany1.style.cssText = `transform: translate(${
+          posiionX / forparallaxAny1
+        }%, ${positionY / forparallaxAny1}%);`;
+       
         requestAnimationFrame(setMouseParallaxStyle);
       }
 
