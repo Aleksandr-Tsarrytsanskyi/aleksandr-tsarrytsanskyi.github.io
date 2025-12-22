@@ -4,25 +4,25 @@ document.addEventListener("DOMContentLoaded", function() {
     
        
 
-        function splashScreen() {
-            const splashScreen = document.querySelector('.splash');
-        const content = document.querySelector('.container');
+      //   function splashScreen() {
+      //       const splashScreen = document.querySelector('.splash');
+      //   const content = document.querySelector('.container');
 
-      // Анимация для скрытия splash screen
+      // // Анимация для скрытия splash screen
       
-         splashScreen.classList.add("splashScreen_show")
+      //    splashScreen.classList.add("splashScreen_show")
        
     
 
-      // Показываем контент после завершения анимации
-      splashScreen.addEventListener('transitionend', function() {
+      // // Показываем контент после завершения анимации
+      // splashScreen.addEventListener('transitionend', function() {
      
-          splashScreen.remove(); // Удаляем splash screen
+      //     splashScreen.remove(); // Удаляем splash screen
         
-        content.style.display = 'block'; // Показываем контент
-      }, { once: true });
-        }
+      //   content.style.display = 'block'; // Показываем контент
+      // }, { once: true });
+      //   }
 
-        splashScreen();
+      //   splashScreen();
     
 })
