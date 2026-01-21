@@ -1,0 +1,17 @@
+.swiper-slide img {
+    width: 150px;
+    height: 200px;
+    
+}
+.swiper-slide {
+    transition: transform 0.5s ease;
+    padding: 40px 0;
+}
+.swiper-slide-active {
+    transform: scale(1.1) !important;
+}
+
+.swiper {
+    width: 500px;
+    height: 500px;
+}

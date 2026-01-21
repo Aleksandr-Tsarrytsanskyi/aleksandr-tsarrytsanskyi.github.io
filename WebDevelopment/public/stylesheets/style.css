@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+.swiper-scrollbar-drag {
+  background: #3e82da !important;
+  width: 200px !important;
+}
+
+.clients {
+  width: 100% !important;
+    height: 300px !important;
+}
+
+.clients .swiper-slide {
+  transition: transform 0.5s ease;
+    padding: 40px 0 !important;
+}
+
+.clients .swiper-slide-active {
+  transform: scale(1.1) !important; /* Увеличиваем на 20% */
+}
+
+.clients .swiper-slide img  {
+    width: 148px;
+    height: 168px;
+    
+}
+
+.laravel .swiper-scrollbar-drag {
+  width: 400px !important;
+}
+
+.accordion-content {
+  max-height: 0; /* Изначально скрыт */
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out; /* Плавная анимация */
+  padding: 0 10px;
+}
+.accordion-content.open {
+  opacity: 1;
+  max-height: 500px; /* Большое значение, чтобы вместить контент. Анимируется от 0 до этого значения */
+  padding: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 3px; /* Ширина полосы */
+}
+
+::-webkit-scrollbar-track {
+  background: #515151; /* Цвет фона трека */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3e82da; /* Цвет бегунка */
+  
+}
+
+.move:before  {
+    content: "";
+    background-image: url("../images/Laravel/checkbox.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in;
+}
+
+.input_checkbox:checked + .move:before {
+      transform: translate(-50%, -50%) scale(1) !important;
+}
+
+
+
+
+
+
+/* Пример использования min-height: он не анимируется, но не даст блоку стать меньше 200px */
