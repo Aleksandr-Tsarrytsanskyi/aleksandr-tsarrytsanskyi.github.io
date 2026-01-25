@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded",function() {
  
   loop: true,
    spaceBetween: 10,
-    slidesPerView: 8,
+    slidesPerView: "auto",
 
   // If we need pagination
   // pagination: {
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded",function() {
     //     nextEl: '.swiper-button-next',
     //     prevEl: '.swiper-button-prev',
     // }
-});
+    });
 
 
 const swiperPrev = document.querySelector(".swiperPrev");

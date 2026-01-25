@@ -104,7 +104,7 @@
                 <li class="float-left mr-6">
                   <a
                     class="h-7.5 w-16.25 pb-1 block text-base font-jakarta font-normal text-white-200 hover:relative -top-1 hover:text-white-100 hover:text-lg hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
-                    href="./services.html"
+                    href="/services.html"
                     >Services</a
                   >
                 </li>
@@ -138,7 +138,7 @@
                 </li>
                 <li class="float-left">
                   <a
-                    class="h-7.5 w-21.5 pb-1 block text-base font-jakarta font-normal text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-lg hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
+                    class="h-7.5 w-21.5 pb-1 block text-lg font-jakarta font-normal text-white-200 hover:relative -top-0.5 relative -top-0.5 hover:text-white-100 hover:text-lg hover:border-b-2 border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
                     href="./ContactUs.html"
                     >Contact Us</a
                   >
@@ -146,15 +146,27 @@
               </ul>
             </nav>
           </div>
-          <div>
-            <select
-              name="lang"
-              class="mt-4 text-base bg-black text-white-100 outline-none cursor-pointer hover:text-blue transition ease-in duration-300 border-none"
-            >
-              <option value="" class="cursor-pointer">EN</option>
-              <option value="" class="cursor-pointer">EN</option>
-              <option value="" class="cursor-pointer">EN</option>
-            </select>
+          <div class="relative">
+            <div x-data="{ open: false, selected: 'EN' }">
+              <button @click="open = !open"
+                type="button"
+                name="dropdown"
+                class=" grid grid-cols-[25px_10px] items-center justify-between text-left w-[25px] h-[56px] font-poppins font-normal text-lg text-white-300"
+              >
+              
+                <span x-text="selected"></span> <!-- Отображение выбранного значения -->
+                <span x-show="open"> <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.39878 5.10377C8.59291 5.29815 8.90835 5.29883 9.10332 5.10528C9.28057 4.92932 9.29725 4.65342 9.15296 4.45867L9.10484 4.40286L5.10336 0.396234C4.92635 0.218991 4.64862 0.202867 4.45328 0.34787L4.39733 0.396205L0.395188 4.40283C0.201036 4.5972 0.201689 4.91168 0.396647 5.10525C0.573882 5.28122 0.850686 5.29668 1.04542 5.152L1.1012 5.1038L4.75053 1.45079L8.39878 5.10377Z" fill="#DEDEDE" stroke="#DEDEDE" stroke-width="0.5"/>
+                  </svg></span><span x-show="!open"> <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.39878 0.396234C8.59291 0.201848 8.90835 0.20117 9.10332 0.394721C9.28057 0.570677 9.29725 0.846578 9.15296 1.04133L9.10484 1.09714L5.10336 5.10377C4.92635 5.28101 4.64862 5.29713 4.45328 5.15213L4.39733 5.1038L0.395188 1.09717C0.201036 0.902803 0.201689 0.588317 0.396647 0.39475C0.573882 0.21878 0.850686 0.203321 1.04542 0.347998L1.1012 0.396205L4.75053 4.04921L8.39878 0.396234Z" fill="#DEDEDE" stroke="#DEDEDE" stroke-width="0.5"/>
+                  </svg></span> <!-- Стрелки -->
+              </button>
+                 <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] w-[30px]  px-5 pb-5">
+                  <p @click="selected = 'EN'; open = false;" class="mb-2 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer" >EN</a>
+                  <p @click="selected = 'EN'; open = false;" class=" font-poppins font-normal text-base text-[#cac5c5] cursor-pointer">EN</a>
+                    <div class="border-b border-solid border-[#d9d9d9]" ></div>
+                  </div>
+            </div>
           </div>
           <div>
             <button

@@ -5,25 +5,19 @@
   width: 200px !important;
 }
 
-.clients {
-  width: 100% !important;
-    height: 300px !important;
-}
+
 
 .clients .swiper-slide {
   transition: transform 0.5s ease;
-    padding: 40px 0 !important;
+  padding: 40px 0 !important;
+  margin-right: 50px !important;
 }
 
 .clients .swiper-slide-active {
   transform: scale(1.1) !important; /* Увеличиваем на 20% */
 }
 
-.clients .swiper-slide img  {
-    width: 148px;
-    height: 168px;
-    
-}
+
 
 .laravel .swiper-scrollbar-drag {
   width: 400px !important;
@@ -73,6 +67,40 @@
 .input_checkbox:checked + .move:before {
       transform: translate(-50%, -50%) scale(1) !important;
 }
+
+
+
+.image-container {
+    position: relative; /* Пример, чтобы изображения были друг над другом */
+    cursor: pointer;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.3; /* Начальная прозрачность */
+    transition: opacity 0.3s ease; /* Плавный переход */
+}
+
+.image-container img.visible {
+    opacity: 1; /* Полная прозрачность при наведении */
+}
+
+.image-container img.hidden {
+    opacity: 0.3; /* Возврат к начальной прозрачности */
+}
+
+
+svg{
+    transition: all 0.3s ease-in;
+}
+
+
+
+
 
 
 
