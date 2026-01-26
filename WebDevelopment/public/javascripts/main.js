@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded",function() {
     //     nextEl: '.swiper-button-next',
     //     prevEl: '.swiper-button-prev',
     // }
+
+    
     });
 
 

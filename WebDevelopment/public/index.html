@@ -63,13 +63,13 @@
   </head>
   <body class="bg-black text-white-100 text-base">
     
-    <div class="pc:max-w-[1350px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+    <div class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
       <div
-        class="tablet:bg-[url('./images/banner.png')] mobile:bg-[url('./images/mobile/banner_mobile.png')]  pc:h-[803px]  mobile:h-full mobile:max-w-full tablet:max-w-[608px] mobile:max-w-[300px]  bg-cover bg-center"
+        class="tablet:bg-[url('./images/banner.png')] mobile:bg-[url('./images/mobile/banner_mobile.png')]  pc:h-[803px]  mobile:h-full mobile:max-w-full pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px]  bg-cover bg-center"
       >
         <header class="mt-9 py-4">
           <div
-            class="grid pc:grid-cols-[84px_925px_41px_107px] pc:gap-16  justify-center tablet:grid-cols-[442px_0px_128px_35px] mobile:grid-cols-[113px_0px_153px_35px] tablet:items-normal mobile:items-center tablet:gap-0"
+            class="grid pc:grid-cols-[84px_535px_41px_107px] pc:gap-16  justify-center tablet:grid-cols-[442px_0px_128px_35px] mobile:grid-cols-[113px_0px_153px_35px] tablet:items-normal mobile:items-center tablet:gap-0"
           >
             <div>
               <nav>
@@ -162,7 +162,7 @@
               <button @click="open = !open" x-bind:style="isHovered ? 'color: #3e82da;' : 'color: white;' "
                 type="button"
                 name="dropdown" 
-                class=" grid grid-cols-[25px_10px] items-center justify-between text-left w-[25px] h-[56px] font-poppins font-normal text-lg text-white-300 transition-colors duration-300  ease-in" 
+                class=" grid grid-cols-[25px_10px] mt-3 items-center justify-between text-left w-[25px] h-[56px] font-poppins font-normal text-lg text-white-300 transition-colors duration-300  ease-in" 
               >
               
                 <span x-text="selected"></span> <!-- Отображение выбранного значения -->
@@ -544,7 +544,7 @@
     </div>
     <main >
       <section class="w-full pc:mt-[0px] tablet:mt-[30px] mobile:mt-[40px] bg-[#222]/50 tablet:py-25 mobile:py-20 " >
-        <div class="grid pc:grid-cols-[396px_752px] tablet:grid-cols-[213px_360px] mobile:grid-cols-[300px] justify-between pc:max-w-[1350px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+        <div class="grid pc:grid-cols-[396px_532px] tablet:grid-cols-[213px_360px] mobile:grid-cols-[300px] justify-between pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
           <div>
             <div class="grid pc:grid-cols-[187px_194px] tablet:grid-cols-[145px_145px] mobile:grid-cols-[176px_176px] gap-x-2.5">
               <div>
@@ -664,14 +664,14 @@
           </div>
         </div>
       </section>
-      <section class="pc:mt-30 tablet:mt-10 mobile:mt-10 tablet:mb-30 mobile:mb-20 pc:max-w-[1350px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+      <section class="pc:mt-30 tablet:mt-10 mobile:mt-10 tablet:mb-30 mobile:mb-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <h2
           class="tablet:mb-11 mobile:mb-7 text-center font-poppins font-light pc:text-2xl mobile:text-[24px] leading-[131%]"
         >
           Some of our Clients
         </h2>
         <div
-          class="grid pc:grid-cols-[167px_164px_103px_134px_105px] tablet:grid-cols-[104px_102px_64px_83px_65px] mobile:grid-cols-[59px_93px_59px] justify-center pc:gap-x-[170px] tablet:gap-x-12 mobile:gap-x-10"
+          class="grid pc:grid-cols-[167px_164px_103px_134px_105px] tablet:grid-cols-[104px_102px_64px_83px_65px] mobile:grid-cols-[59px_93px_59px] justify-center pc:gap-x-18 tablet:gap-x-12 mobile:gap-x-10"
         >
           <div>
             <svg class="pc:w-[168px] pc:h-[74px] tablet:w-[104px] tablet:h-[46px] mobile:w-[59px] mobile:h-[42px]"
@@ -835,13 +835,13 @@
           </div>
         </div>
       </section>
-      <section class="pc:max-w-[1350px] tablet:max-w-[608px] mobile:max-w-[375px] mx-auto">
+      <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[375px] mx-auto">
        
             <div
-              class="grid pc:grid-cols-[675px_675px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px] tablet:mt-[100px] mobile:mt-[60px]  left-0 w-full h-full justify-center"
+              class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px] tablet:mt-[100px] mobile:mt-[60px]  left-0 w-full h-full justify-center"
             >
         
-            <div class="relative pc:h-[416px] tablet:h-[237px] mobile:h-[232px]" >
+            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]" >
               <a href="#">
                 <div class="absolute top-0">
                 <img src="./images/clients_image.png"  alt="Image" />
@@ -897,7 +897,7 @@
               </a>
             </div>
 
-            <div class="relative pc:h-[416px] tablet:h-[237px] mobile:h-[232px]">
+            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
               <a href="./laraveldevelopment.html">
                 <div class="absolute top-0">
                 <img src="./images/clients_image1.png" alt="Image" />
@@ -919,7 +919,7 @@
               </a>
             </div>
 
-            <div class="relative pc:h-[416px] tablet:h-[237px] mobile:h-[232px]"  >
+            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]"  >
               <a href="#">
                 <div class="absolute top-0">
                 <img src="./images/clients_image2.png" alt="Image" />
@@ -940,7 +940,7 @@
               </div>
               </a>
             </div>
-            <div class="relative pc:h-[416px] tablet:h-[237px] mobile:h-[232px]" >
+            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]" >
               <a href="#">
                 <div class="absolute top-0">
                 <img src="./images/clients_image3.png" alt="Image" />
@@ -961,7 +961,7 @@
               </div>
               </a>
             </div>
-            <div class="relative pc:h-[416px] tablet:h-[237px] mobile:h-[232px]">
+            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
               <a href="#">
                 <div class="absolute top-0">
                 <img src="./images/clients_image4.png" alt="Image" />
@@ -982,7 +982,7 @@
               </div>
               </a>
             </div>
-            <div class="relative pc:h-[416px] tablet:h-[237px] mobile:h-[232px]">
+            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
               <a href="#">
                   <div class="absolute top-0">
                 <img src="./images/clients_image5.png" alt="Image" />
@@ -1006,7 +1006,7 @@
         
             </div>
       </section>
-      <section class="tablet:mt-30 mobile:mt-20 pc:max-w-[1350px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+      <section class="tablet:mt-30 mobile:mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <h2 class="font-poppins font-light pc:text-2xl mobile:text-[24px] mb-1 text-center">
           Interested in Our Services?
         </h2>
@@ -1015,12 +1015,12 @@
         </p>
         <form action="#" method="post" class="mt-5">
           <div
-            class="grid pc:grid-cols-[319px_308px_225px] tablet:grid-cols-[163px_178px_154px] mobile:grid-cols-[300px] pc:gap-x-[250px] tablet:gap-x-[42px] justify-center"
+            class="grid pc:grid-cols-[319px_308px_215px] tablet:grid-cols-[163px_178px_154px] mobile:grid-cols-[300px] pc:gap-x-[50px] tablet:gap-x-[42px] justify-center"
           >
             <div>
               <input
                 type="email"
-                class="pc:w-[419px] pc:h-[50px] mobile:h-[52px] tablet:mb-0 mobile:mb-5 tablet:w-[163px] mobile:w-[300px] tablet:h-[52px] placeholder-white-300 font-poppins font-light pc:text-lg mobile:text-sm border-b-2 border-solid border-white-300 focus:outline-none"
+                class="pc:w-[319px] pc:h-[50px] mobile:h-[52px] tablet:mb-0 mobile:mb-5 tablet:w-[163px] mobile:w-[300px] tablet:h-[52px] placeholder-white-300 font-poppins font-light pc:text-lg mobile:text-sm border-b-2 border-solid border-white-300 focus:outline-none"
                 name="mail"
                 value=""
                 placeholder="Your Email *"
@@ -1031,7 +1031,7 @@
               <button @click="open = !open"
                 type="button"
                 name="dropdown"
-                class=" grid pc:grid-cols-[250px_10px] tablet:mb-0 mobile:mb-5 tablet:grid-cols-[168px_10px] mobile:grid-cols-[290px_10px] items-center justify-between text-left pc:w-[408px] pc:h-[50px] tablet:w-[178px] mobile:w-[300px] mobile:h-[52px] font-poppins font-light pc:text-lg mobile:text-sm text-white-300 border-b-2 border-solid border-white-300"
+                class=" grid pc:grid-cols-[250px_10px] tablet:mb-0 mobile:mb-5 tablet:grid-cols-[168px_10px] mobile:grid-cols-[290px_10px] items-center justify-between text-left pc:w-[308px] pc:h-[50px] tablet:w-[178px] mobile:w-[300px] mobile:h-[52px] font-poppins font-light pc:text-lg mobile:text-sm text-white-300 border-b-2 border-solid border-white-300"
               >
               
                 <span x-text="selected"></span> <!-- Отображение выбранного значения -->
@@ -1041,7 +1041,7 @@
                   <path d="M8.39878 0.396234C8.59291 0.201848 8.90835 0.20117 9.10332 0.394721C9.28057 0.570677 9.29725 0.846578 9.15296 1.04133L9.10484 1.09714L5.10336 5.10377C4.92635 5.28101 4.64862 5.29713 4.45328 5.15213L4.39733 5.1038L0.395188 1.09717C0.201036 0.902803 0.201689 0.588317 0.396647 0.39475C0.573882 0.21878 0.850686 0.203321 1.04542 0.347998L1.1012 0.396205L4.75053 4.04921L8.39878 0.396234Z" fill="#DEDEDE" stroke="#DEDEDE" stroke-width="0.5"/>
                   </svg></span> <!-- Стрелки -->
               </button>
-                 <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute top-[40px] left-[-20px] pc:w-[428px] tablet:w-[208px] mobile:w-[320px] bg-black px-5 pb-5">
+                 <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute top-[40px] left-[-20px] pc:w-[328px] tablet:w-[208px] mobile:w-[320px] bg-black px-5 pb-5">
                   <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in" >Custom Web Development</a>
                   <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">Laravel Development</a>
                   <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">Mobile Development</a>
@@ -1066,7 +1066,7 @@
         </form>
         
       </section>
-      <section class="tablet:mt-30 mobile:mt-10 pc:max-w-[1350px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+      <section class="tablet:mt-30 mobile:mt-10 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <div
           class="grid pc:grid-cols-[363px_350px] tablet:grid-cols-[263px_250px] mobile:grid-cols-[273px] tablet:justify-between mobile:justify-center items-center mb-5"
         >
@@ -1081,11 +1081,11 @@
             </p>
           </div>
         </div>
-        <div class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[268px_268px] justify-between">
+        <div class="grid pc:grid-cols-[455px_462px] tablet:grid-cols-[268px_268px] justify-between">
           <div>
             <img src="./images/exporttise_image.png" alt="image" />
             <div
-              class="relative top-[-80px] pc:left-[125px] tablet:left-[20px] pc:w-[480px] tablet:w-[258px] pc:h-[280px] tablet:h-[250px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
+              class="relative top-[-80px] pc:left-[90px] tablet:left-[20px] pc:w-[365px] tablet:w-[258px] pc:h-[280px] tablet:h-[250px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
             >
               <h2 class="mb-5 mt-5 font-poppins font-semibold pc:text-xl mobile:text-sm">
                 E-commerce Excellence
@@ -1109,7 +1109,7 @@
           <div>
             <img src="./images/exporttise_image1.png" alt="image" />
             <div
-              class="relative top-[-80px] pc:left-[132px] tablet:left-[20px] pc:w-[470px] pc:h-[260px] tablet:h-[230px] tablet:w-[258px]  pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue  border-b-4 border-solid transition-all duration-300 ease-in"
+              class="relative top-[-80px] pc:left-[97px] tablet:left-[20px] pc:w-[365px] pc:h-[260px] tablet:h-[230px] tablet:w-[258px]  pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue  border-b-4 border-solid transition-all duration-300 ease-in"
             >
               <h2 class="mb-5 mt-5 font-poppins font-semibold pc:text-xl mobile:text-sm">
                 Affiliate Platform Specialists
@@ -1131,19 +1131,19 @@
           </div>
         </div>
       </section>
-      <section class="pc:max-w-[1350px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+      <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <h2 class="mb-3 font-poppins font-light pc:text-2xl tablet:text-[24px] mobile:text-[23px]">
           Why Choose Webparadox
         </h2>
-        <p class="mt-0 mb-10 font-poppins mobile:text-center tablet:text-normal font-light pc:text-lg mobile:text-sm text-white-300">
+        <p class="mt-0 mb-10 font-poppins mobile:text-center tablet:text-left font-light pc:text-lg mobile:text-sm text-white-300">
           Numbers and facts that speak for themselves
         </p>
-        <div class="grid pc:grid-cols-[360px_941px] tablet:grid-cols-[258px_326px] mobile:grid-cols-[300px] justify-between">
-          <div class="col-start-1 row-start-2">
+        <div class="grid pc:grid-cols-[360px_541px] tablet:grid-cols-[258px_326px] mobile:grid-cols-[300px] justify-between">
+          <div class="mobile:col-start-1 mobile:row-start-2 tablet:col-start-1 tablet:row-start-1">
             <img src="./images/paradox_image.png" class="mobile:max-w-[214px] tablet:max-w-[360px]" alt="Image" />
           </div>
           <div>
-            <div class="grid pc:grid-cols-[41px_875px] tablet:grid-cols-[41px_263px] mobile:grid-cols-[41px_235px] justify-between">
+            <div class="grid pc:grid-cols-[41px_475px] tablet:grid-cols-[41px_263px] mobile:grid-cols-[41px_235px] justify-between">
               <div>
                 <img src="./images/icon_paradox.svg" alt="Image" />
               </div>
@@ -1254,20 +1254,20 @@
           </div>
         </div>
       </section>
-      <section class="mt-10 pc:max-w-[1350px] tablet:max-w-[608px] mx-auto">
-        <div class="grid pc:grid-cols-[385px_300px] tablet:grid-cols-[385px_220px] justify-between items-center">
+      <section class="tablet:mt-10 mobile:mt-[-290px] pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+        <div class="grid pc:grid-cols-[385px_310px] tablet:grid-cols-[385px_220px] tablet:justify-between mobile:justify-center items-center">
           <div>
-            <h2 class="mb-2 font-poppins font-light pc:text-2xl tablet:text-[24px]">
+            <h2 class="mb-2 font-poppins  font-light pc:text-2xl mobile:text-[24px]">
               Industries We Serve
             </h2>
           </div>
           <div>
-            <p class="font-poppins text-right font-light pc:text-lg tablet:text-sm text-white-300">
+            <p class="font-poppins text-right font-light  pc:text-lg mobile:text-sm text-white-300">
               Deep expertise across multiple sectors
             </p>
           </div>
         </div>
-        <div class="grid pc:grid-cols-[335px_335px_335px_335px] tablet:grid-cols-[153px_153px_153px_153px] justify-center mt-10">
+        <div class="grid pc:grid-cols-[241px_241px_241px_241px] mobile:grid-cols-[148px_148px] tablet:grid-cols-[153px_153px_153px_153px] justify-center mt-10">
           <div
             class="h-[130px] border-l-2 border-l-black border-b-2 border-solid border-[#7a7a7a] hover:border-blue hover:border-l-blue transition-colors duration-300 ease-in"
           >
@@ -1288,7 +1288,7 @@
             </h2>
           </div>
           <div
-            class="h-[130px] border-l-2 border-b-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
+            class="h-[130px] tablet:border-l-2 mobile:border-l-0 border-b-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
               class="text-center mt-[40px] font-poppins font-light pc:text-lg tablet:text-sm text-white-300 leading-[140%] pc:hover:text-[20px] transition-[font-size] duration-300  ease-in"
@@ -1306,7 +1306,7 @@
             </h2>
           </div>
           <div
-            class="h-[130px] border-b-2 border-b-black border-l-2 border-l-black border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
+            class="h-[130px] border-b-2 mobile:border-b-[#7a7a7a] tablet:border-b-black border-l-2 border-l-black border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
               class="text-center mt-[40px] font-poppins font-light pc:text-lg tablet:text-sm text-white-300 leading-[140%] pc:hover:text-[20px] transition-[font-size] duration-300  ease-in"
@@ -1315,7 +1315,7 @@
             </h2>
           </div>
           <div
-            class="h-[130px] border-b-2 border-b-black border-l-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
+            class="h-[130px] border-b-2 mobile:border-b-[#7a7a7a] tablet:border-b-black border-l-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
               class="text-center mt-[40px] font-poppins font-light pc:text-lg tablet:text-sm text-white-300 leading-[140%] pc:hover:text-[20px] transition-[font-size] duration-300  ease-in"
@@ -1324,7 +1324,7 @@
             </h2>
           </div>
           <div
-            class="h-[130px] border-b-2 border-b-black border-l-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
+            class="h-[130px] border-b-2 border-b-black tablet:border-l-2 mobile:border-l-0 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
               class="text-center mt-[40px] font-poppins font-light pc:text-lg tablet:text-sm text-white-300 leading-[140%] pc:hover:text-[20px] transition-[font-size] duration-300  ease-in"
@@ -1343,21 +1343,21 @@
           </div>
         </div>
       </section>
-      <section class="mt-20 pc:max-w-[1350px] tablet:max-w-[608px] mx-auto">
-        <div class="grid pc:grid-cols-[447px_259px] tablet:grid-cols-[427px_190px] justify-between items-center">
+      <section class="mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+        <div class="grid pc:grid-cols-[447px_242px] tablet:grid-cols-[427px_190px] tablet:justify-between mobile:justify:center items-center">
           <div>
-            <h2 class="font-poppins font-light pc:text-2xl tablet:text-[24px]">
+            <h2 class="font-poppins mobile:text-center tablet:text-left font-light pc:text-2xl mobile:text-[24px]">
               Featured Case Studies
             </h2>
           </div>
           <div>
-            <p class="font-poppins font-light pc:text-lg tablet:text-sm text-white-300">
+            <p class="font-poppins font-light mobile:text-center tablet:text-right pc:text-lg mobile:text-sm text-white-300">
               Real results for real businesses
             </p>
           </div>
         </div>
         <div
-          class="grid pc:grid-cols-[294px_294px_294px] tablet:grid-cols-[294px_294px] justify-center mt-10 pc:gap-x-[230px] tablet:gap-x-[20px]"
+          class="grid pc:grid-cols-[294px_294px_294px] tablet:grid-cols-[294px_294px] justify-center mt-10 mobile:gap-y-8 tablet:gap-y-0 pc:gap-x-10 tablet:gap-x-[20px]"
         >
           <div>
             <img src="./images/studies_image.png" alt="Image" />
@@ -1456,17 +1456,17 @@
           </div>
         </div>
       </section>
-      <section class="mt-20 pc:max-w-[1350px] tablet:max-w-[608px] mx-auto">
-        <div class="grid pc:grid-cols-[320px_790px] tablet:grid-cols-[608px]  pc:justify-between tablet:justify-center">
-          <div class="pc:block tablet:grid tablet:grid-cols-[195px_344px] tablet:items-center tablet:gap-x-[60px] tablet:justify-center">
+      <section class="mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+        <div class="grid pc:grid-cols-[320px_590px] tablet:grid-cols-[608px]  mobile:grid-cols-[300px] pc:justify-between tablet:justify-center">
+          <div class="pc:block tablet:grid tablet:grid-cols-[195px_344px] mobile:grid-cols-[195px_300px] tablet:items-center tablet:gap-x-[60px] tablet:justify-center">
            <div>
-             <h2 class="mb-3 pc:mt-0 tablet:mt-[50px] font-poppins font-light pc:text-2xl tablet:text-[24px]">Our Approach</h2>
-            <p class="font-poppins font-light pc:text-lg tablet:text-sm text-white-300">
+             <h2 class="mb-3 pc:mt-0 mobile:text-center tablet:text-left tablet:mt-[50px] font-poppins font-light pc:text-2xl mobile:text-[24px]">Our Approach</h2>
+            <p class="font-poppins mobile:text-center tablet:text-left font-light pc:text-lg mobile:text-sm text-white-300">
               How we ensure project success
             </p>
            </div>
             <div >
-              <p class="mt-20 font-poppins font-light pc:text-lg tablet:text-sm  text-white-300">
+              <p class="tablet:mt-20 mobile:text-center tablet:text-right mobile:mt-3 font-poppins font-light pc:text-lg tablet:text-sm  text-white-300">
               We don't just write code – we architect solutions. Every project
               begins with understanding your business goals and translating them
               into technical requirements. Our agile methodology ensures
@@ -1477,7 +1477,7 @@
           <div class="mt-5 h-[400px]" x-data="{ openIndex: null }">
           <button
             type="button"
-            class="grid pc:grid-cols-[60px_710px_21px] tablet:grid-cols-[70px_500px_21px] items-center mb-3 text-left pc:w-[790px] tablet:w-[590px] font-poppins font-medium pc:text-[20px] tablet:text-[16px] pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[60px_510px_21px] tablet:grid-cols-[70px_500px_21px] mobile:grid-cols-[70px_210px_21px] items-center mb-3 text-left mobile:w-[300px] pc:w-[590px] tablet:w-[590px] font-poppins font-medium pc:text-[20px] tablet:text-[16px] pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 1 ? null : 1"
           >
           <span><svg width="48" height="35" viewBox="0 0 48 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1535,7 +1535,7 @@
           </div>
            <button
             type="button"
-            class="grid pc:grid-cols-[70px_700px_21px] tablet:grid-cols-[70px_500px_21px] items-center mb-3 text-left pc:w-[790px] tablet:w-[590px] font-poppins font-medium pc:text-[20px] tablet:text-[16px] pb-3 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[70px_500px_21px] tablet:grid-cols-[70px_500px_21px] mobile:grid-cols-[70px_210px_21px] items-center mb-3 text-left mobile:w-[300px] pc:w-[590px] tablet:w-[590px] font-poppins font-medium pc:text-[20px] tablet:text-[16px] pb-3 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 2? null : 2"
           >
           <span>
@@ -1595,7 +1595,7 @@
           </div>
             <button
             type="button"
-            class="grid pc:grid-cols-[70px_700px_21px] tablet:grid-cols-[70px_500px_21px] items-center mb-3 text-left pc:w-[790px] tablet:w-[590px] font-poppins font-medium pc:text-[20px] tablet:text-[16px] pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[70px_500px_21px] tablet:grid-cols-[70px_500px_21px] items-center mb-3 text-left mobile:w-[300px] pc:w-[590px] mobile:grid-cols-[70px_210px_21px] tablet:w-[590px] font-poppins font-medium pc:text-[20px] tablet:text-[16px] pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 3? null : 3"
           >
           <span>
@@ -1656,7 +1656,7 @@
           </div>
            <button
             type="button"
-            class="grid pc:grid-cols-[70px_700px_21px] tablet:grid-cols-[70px_500px_21px] items-center mb-3 text-left pc:w-[790px] tablet:w-[590px] font-medium pc:text-[20px] tablet:text-[16px] text-[20px] pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[70px_500px_21px] tablet:grid-cols-[70px_500px_21px] mobile:grid-cols-[70px_210px_21px] items-center mb-3 text-left mobile:w-[300px] pc:w-[590px] tablet:w-[590px] font-medium pc:text-[20px] tablet:text-[16px] text-[20px] pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 4? null : 4"
           >
           <span>
@@ -1713,34 +1713,28 @@
             <p class="font-poppins font-light pc:text-base tablet:text-sm text-white-300">
               Security is baked into every layer – from secure coding practices to regular penetration testing. We follow OWASP guidelines, implement multi-factor authentication, and ensure all data is encrypted at rest and in transit.
             </p>
-          </div>
-         
-          
-          
-          
-         
-         
+          </div>      
         </div>
         </div>
       </section>
       <section class="relative mt-20  bg-[#222] w-full">
-        <div class="pc:max-w-[1350px] tablet-max-w-[608px] mx-auto">
+        <div class="pc:max-w-[960px] tablet-max-w-[608px] mobile:max-w-[300px] mx-auto">
           <div>
             <div
-              class="grid pc:grid-cols-[450px_375px] tablet:grid-cols-[450px] pc:justify-between tablet:justify-center pc:justify-items-normal tablet:justify-items-center items-center  h-[237px]"
+              class="grid pc:grid-cols-[450px_375px] tablet:grid-cols-[450px] mobile:grid-cols-[300px] pc:justify-between tablet:justify-center pc:justify-items-normal tablet:justify-items-center items-center  h-[237px]"
             >
               <div>
-                <p class="mb-4 font-poppins font-light pc:text-lg tablet:text-sm text-white-300">
+                <p class="mb-4 font-poppins mobile:text-center tablet:text-left font-light pc:text-lg mobile:text-sm text-white-300">
                   Let's discuss how we can help grow your business
                 </p>
-                <h2 class="font-poppins tablet:text-center pc:text-left font-light pc:text-2xl tablet:text-[24px]">
+                <h2 class="font-poppins mobile:text-center tablet:text-left tablet:text-center pc:text-left font-light pc:text-2xl mobile:text-[24px]">
                   Want Similar Results?
                 </h2>
               </div>
               <div>
                 <button
                   type="button"
-                  class=" h-[60px] pl-[0px] block pc:mt-[0px] tablet:mt-[-60px] font-jakarta font-bold pc:text-lg tablet:text-sm whitespace-pre-wrap pc:leading-[20px] tablet:leading-[0px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat pc:bg-[10px_0px] tablet:bg-[10px_5px] pc:hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300 ease-in"
+                  class=" mobile:mt-[-50px] tablet:mt-[0px] h-[60px] pl-[0px] block pc:mt-[0px] tablet:mt-[-60px] font-jakarta font-bold pc:text-lg mobile:text-sm whitespace-pre-wrap pc:leading-[20px] tablet:leading-[0px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_active_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat pc:bg-[10px_0px] mobile:bg-[10px_5px] pc:hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300 ease-in"
                 >
                   S C H E D U L E  F R E E  C O N S U L A T I O N
                 </button>
@@ -1749,11 +1743,11 @@
           </div>
         </div>
       </section>
-      <section class="relative mt-20 pc:max-w-[1350px] tablet:max-w-[608px] mx-auto">
-        <h2 class="font-poppins font-light text-2xl text-center">
+      <section class="relative mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+        <h2 class="font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">
           How We Work
         </h2>
-        <p class="font-jakarta font-normal text-lg text-white-300 text-center">
+        <p class="font-jakarta font-normal pc:text-lg mobile:text-sm text-white-300 text-center">
           Transparent and efficient development process
         </p>
         <!-- <div
@@ -1893,10 +1887,10 @@
           </div>
         </div> -->
           <div
-          class="flex flex-row flex-wrap mt-10 h-[300px]"
+          class="pc:flex tablet:grid tablet:grid-cols-[195px_195px_195px] mobile:grid mobile:gap-1 justify-center mobile:grid-cols-[142px_142px] flex-row flex-wrap mt-10 tablet:h-[600px] pc:h-[300px]"
         >
         
-          <div class="flex-grow-1  hover:flex-grow-2 relative pc:w-[199px] tablet-[195px] h-[290px] mr-2 overflow-hidden transition-all duration-300 ease-in-out work_box">
+          <div class="flex-grow-1  hover:flex-grow-15 relative pc:w-[149px] tablet:w-[195px] mobile:w-[142px] h-[290px] mr-2 overflow-hidden transition-all duration-300 ease-in-out work_box">
             <div x-data="{ isHovering: false }"
                 @mouseenter="isHovering = true"
                 @mouseleave="isHovering = false"
@@ -1925,7 +1919,7 @@
             </div>
           </div>
         
-          <div class="flex-grow-1  hover:flex-grow-2 relative pc:w-[199px] tablet-[195px] h-[290px] mr-2  overflow-hidden transition-all duration-300 ease-in-out work_box">
+          <div class="flex-grow-1  hover:flex-grow-15 relative pc:w-[149px] tablet:w-[195px] mobile:w-[142px] h-[290px] mr-2  overflow-hidden transition-all duration-300 ease-in-out work_box">
               <div x-data="{ isHovering: false }"
                 @mouseenter="isHovering = true"
                 @mouseleave="isHovering = false"
@@ -1953,8 +1947,8 @@
                   </div>
                 </div>  
           </div>
-          <br>
-          <div class="flex-grow-1  hover:flex-grow-2 relative pc:w-[199px] tablet-[195px] h-[290px] mr-2  overflow-hidden transition-all duration-300 ease-in-ou work_boxt">
+         
+          <div class="flex-grow-1  hover:flex-grow-15 relative pc:w-[149px] tablet:w-[195px] mobile:w-[142px] h-[290px] mr-2  overflow-hidden transition-all duration-300 ease-in-ou work_boxt">
              <div x-data="{ isHovering: false }"
                 @mouseenter="isHovering = true"
                 @mouseleave="isHovering = false"
@@ -1982,7 +1976,7 @@
                 </div>
               </div>  
           </div>
-          <div class="flex-grow-1  hover:flex-grow-2 relative pc:w-[199px] tablet-[195px] h-[290px] mr-2  overflow-hidden transition-all duration-300 ease-in-out work_box">
+          <div class="flex-grow-1  hover:flex-grow-15 relative pc:w-[149px] tablet:w-[195px] mobile:w-[142px] h-[290px] mr-2  overflow-hidden transition-all duration-300 ease-in-out work_box">
             <div x-data="{ isHovering: false }"
                 @mouseenter="isHovering = true"
                 @mouseleave="isHovering = false"
@@ -2010,7 +2004,7 @@
               </div>
            </div>   
           </div>
-          <div class="flex-grow-1 tablet:flex-grow-2  hover:flex-grow-2 relative pc:w-[199px] tablet-[195px] h-[290px] mr-2  overflow-hidden transition-all duration-300 ease-in-out work_box">
+          <div class="flex-grow-1 tablet:flex-grow-15  hover:flex-grow-2 relative pc:w-[149px] mobile:w-[142px] tablet:w-[195px] h-[290px] mr-2  overflow-hidden transition-all duration-300 ease-in-out work_box">
             <div x-data="{ isHovering: false }"
                 @mouseenter="isHovering = true"
                 @mouseleave="isHovering = false"
@@ -2038,7 +2032,7 @@
                 </div>
             </div>  
           </div>
-          <div class="flex-grow-1 tablet:flex-grow-2 hover:flex-grow-2 relative pc:w-[199px] tablet-[195px] h-[290px] mr-2  overflow-hidden transition-all duration-300 ease-in-out work_box">
+          <div class="flex-grow-1 tablet:flex-grow-15 hover:flex-grow-2 relative pc:w-[149px] mobile:w-[142px] tablet:w-[195px] h-[290px] mr-2  overflow-hidden transition-all duration-300 ease-in-out work_box">
             <div x-data="{ isHovering: false }"
                 @mouseenter="isHovering = true"
                 @mouseleave="isHovering = false"
@@ -2069,16 +2063,16 @@
         </div> 
         
       </section>
-      <section class="mt-20 pc:max-w-[1350px] tablet:max-w-[608px] mx-auto">
+      <section class="mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <div class="grid pc:grid-cols-[349px_411px] tablet:grid-cols-[149px_340px] justify-between">
           <div>
-            <h2 class="font-poppins font-light pc:text-2xl tablet:text-[24px]  tablet:leading-[150%]">Technology Stack</h2>
-            <p class="font-poppins font-light pc:text-lg tablet:text-sm text-white-300">
+            <h2 class="font-poppins mobile:text-center tablet:text-left font-light pc:text-2xl mobile:text-[24px]  tablet:leading-[150%]">Technology Stack</h2>
+            <p class="font-poppins mobile:text-center tablet:text-left font-light pc:text-lg mobile:text-sm text-white-300">
               Modern tools for powerful solutions
             </p>
           </div>
           <div>
-            <p class="font-poppins font-light pc:text-base tablet:text-sm text-white-300 tablet:mt-[10px] pc:mt-[0px]">
+            <p class="mobile:mt-5 font-poppins mobile:text-center tablet:text-right font-light pc:text-base tablet:text-sm text-white-300 tablet:mt-[10px] pc:mt-[0px]">
               We work with cutting-edge technologies and proven frameworks to
               build robust, scalable solutions. Our tech stack is carefully
               chosen based on project requirements, ensuring the best
@@ -2094,63 +2088,63 @@
               <div
                 class="w-[120px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
               >
-                <p class="font-poppins font-medium pc:text-lg tablet:text-sm text-center pt-5">PHP</p>
+                <p class="font-poppins font-medium pc:text-lg mobile:text-sm text-center pt-5">PHP</p>
               </div>
             </div>
             <div class="swiper-slide !mr-0 !w-[120px]">
               <div
                 class="w-[120px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
               >
-                <p class="font-poppins font-medium pc:text-lg tablet:text-sm text-center pt-5">React</p>
+                <p class="font-poppins font-medium pc:text-lg mobile:text-sm text-center pt-5">React</p>
               </div>
             </div>
             <div class="swiper-slide !mr-0 !w-[120px]">
               <div
                 class="w-[120px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
               >
-                <p class="font-poppins font-medium pc:text-lg tablet:text-sm text-center pt-5">Laravel</p>
+                <p class="font-poppins font-medium pc:text-lg mobile:text-sm text-center pt-5">Laravel</p>
               </div>
             </div>
             <div class="swiper-slide !mr-0 !w-[120px]">
               <div
                 class="w-[120px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
               >
-                <p class="font-poppins font-medium pc:text-lg tablet:text-sm text-center pt-5">React</p>
+                <p class="font-poppins font-medium pc:text-lg mobile:text-sm text-center pt-5">React</p>
               </div>
             </div>
             <div class="swiper-slide !mr-0 !w-[120px]">
               <div
                 class="w-[120px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
               >
-                <p class="font-poppins font-medium pc:text-lg tablet:text-sm text-center pt-5">Vue.js</p>
+                <p class="font-poppins font-medium pc:text-lg mobile:text-sm text-center pt-5">Vue.js</p>
               </div>
             </div>
             <div class="swiper-slide !mr-0 !w-[120px]">
               <div
                 class="w-[120px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
               >
-                <p class="font-poppins font-medium pc:text-lg tablet:text-sm text-center pt-5">Node.js</p>
+                <p class="font-poppins font-medium pc:text-lg mobile:text-sm text-center pt-5">Node.js</p>
               </div>
             </div>
             <div class="swiper-slide !mr-0 !w-[120px]">
               <div
                 class="w-[120px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
               >
-                <p class="font-poppins font-medium pc:text-lg tablet:text-sm text-center pt-5">MySQL</p>
+                <p class="font-poppins font-medium pc:text-lg mobile:text-sm text-center pt-5">MySQL</p>
               </div>
             </div>
             <div class="swiper-slide !mr-0 !w-[120px]">
               <div
                 class="w-[120px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
               >
-                <p class="font-poppins font-medium pc:text-lg tablet:text-sm text-center pt-5">MongoDB</p>
+                <p class="font-poppins font-medium pc:text-lg mobile:text-sm text-center pt-5">MongoDB</p>
               </div>
             </div>
             <div class="swiper-slide !mr-0 !w-[120px]">
               <div
                 class="w-[120px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
               >
-                <p class="font-poppins font-medium pc:text-lg tablet:text-sm text-center pt-5">PostgreSQL</p>
+                <p class="font-poppins font-medium pc:text-lg mobile:text-sm text-center pt-5">PostgreSQL</p>
               </div>
             </div>
           </div>
@@ -2162,33 +2156,33 @@
           <div class="swiper-scrollbar !bg-black"></div>
         </div>
         <div
-          class="grid pc:grid-cols-[270px_260px_220px] tablet:grid-cols-[161px_155px_137px] justify-center items-center mt-15 pc:w-[960px] tablet:w-[608px] h-[212px] pc:gap-x-15 tablet:gap-x-10 bg-blue"
+          class="grid pc:grid-cols-[270px_260px_220px] tablet:grid-cols-[161px_155px_137px] mobile:grid-cols-[250px] justify-center items-center mobile:justify-items-center mt-15 pc:w-[960px] tablet:w-[608px] mobile:h-[400px] tablet:h-[212px] pc:gap-x-15 tablet:gap-x-10 bg-blue"
         >
           <div>
-            <h2 class="mb-3 font-jakarta font-semibold pc:text-lg tablet:text-base">
+            <h2 class="mb-3 mobile:text-center tablet:text-left font-jakarta font-semibold pc:text-lg mobile:text-base">
               Why Laravel?
             </h2>
-            <p class="font-jakarta font-normal pc:text-base tablet:text-xs text-white-300">
+            <p class="font-jakarta mobile:text-center tablet:text-left font-normal pc:text-base mobile:text-xs text-white-300">
               Laravel's elegant syntax and robust ecosystem make it perfect for
               rapid development without sacrificing quality. Built-in security
               features and extensive package library accelerate delivery.
             </p>
           </div>
           <div>
-            <h2 class="mb-3 font-jakarta font-semibold pc:text-lg tablet:text-base">
+            <h2 class="mb-3 mobile:text-center tablet:text-left font-jakarta font-semibold pc:text-lg mobile:text-base">
               Modern Frontend
             </h2>
-            <p class="font-jakarta font-normal pc:text-base tablet:text-xs text-white-300">
+            <p class="font-jakarta mobile:text-center tablet:text-left font-normal pc:text-base mobile:text-xs text-white-300">
               React and Vue.js enable us to build responsive, interactive user
               interfaces. Component-based architecture ensures maintainability
               and reusability across your application.
             </p>
           </div>
           <div>
-            <h2 class="mb-3 font-jakarta font-semibold pc:text-lg tablet:text-base">
+            <h2 class="mb-3 mobile:text-center tablet:text-left font-jakarta font-semibold pc:text-lg mobile:text-base">
               Cloud Infrastructure
             </h2>
-            <p class="font-jakarta font-normal pc:text-base tablet:text-xs text-white-300">
+            <p class="font-jakarta mobile:text-center tablet:text-left font-normal pc:text-base mobile:text-xs text-white-300">
               AWS provides scalable, reliable infrastructure. Auto-scaling, load
               balancing, and CDN integration ensure your application performs
               under any load.
@@ -2196,20 +2190,20 @@
           </div>
         </div>
       </section>
-      <section class="mt-30 pc:max-w-[1350px] tablet:max-w-[608px] mx-auto">
-        <div class="grid pc:grid-cols-[503px_753px] tablet:grid-cols-[290px_293px] justify-between">
+      <section class="tablet:mt-30 mobile:mt-10 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+        <div class="grid pc:grid-cols-[503px_423px] tablet:grid-cols-[290px_293px] mobile:grid-cols-[290px] mobile:justify-center tablet:justify-between">
           <div>
-             <div class="swiper !w-[100%] pc:h-[300px] tablet:h-[200px] clients swiper-container">
+             <div class="swiper !w-[100%] pc:h-[300px] mobile:h-[205px] clients swiper-container">
         <div class="swiper-wrapper">
              <div class="swiper-slide">
                   <img
                    
                     src="./images/slide1_main.png"
-                    alt="Image" class="pc:max-w-[128px] tablet:max-w-[75px] pc:w-[128px] tablet:w-[75px]  pc:h-[168px] tablet:h-[85px]"
+                    alt="Image" class="pc:max-w-[128px] mobile:max-w-[75px] pc:w-[128px] mobile:w-[75px]  pc:h-[168px] tablet:h-[85px]"
                   />
-                  <div class="client pc:w-['auto'] tablet:w-[90px] ">
+                  <div class="client pc:w-['auto'] mobile:w-[90px] ">
                     <svg 
-                      class="relative top-[-20px] pc:left-[105px] tablet:left-[46px] pc:w-[40px] pc:h-[40px] tablet:w-[29px] tablet:h-[29px]"
+                      class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
                       width="40"
                       height="40"
                       viewBox="0 0 40 40"
@@ -2227,11 +2221,11 @@
                       />
                     </svg>
                     <div class="relative top-[-20px]">
-                      <p class="font-poppins font-normal pc:text-lg tablet:text-sm">
+                      <p class="font-poppins font-normal pc:text-lg mobile:text-sm">
                         John Smith
                       </p>
                       <p
-                        class="mt-1 font-poppins font-light pc:text-sm tablet:text-xs text-blue"
+                        class="mt-1 font-poppins font-light pc:text-sm mobile:text-xs text-blue"
                       >
                         CEO, Fashion Retail Co.
                       </p>
@@ -2243,11 +2237,11 @@
                    
                     src="./images/slide_main.png"
                     alt="Image"
-                    class="pc:max-w-[128px] tablet:max-w-[75px] pc:w-[128px] tablet:w-[75px]  pc:h-[168px] tablet:h-[85px]"
+                    class="pc:max-w-[128px] mobile:max-w-[75px] pc:w-[128px] mobile:w-[75px]  pc:h-[168px] tablet:h-[85px]"
                   />
-                  <div class="client pc:w-['auto'] tablet:w-[90px] opacity-0 ">
+                  <div class="client pc:w-['auto'] mobile:w-[90px] opacity-0 ">
                     <svg 
-                      class="relative top-[-20px] pc:left-[105px] tablet:left-[46px] pc:w-[40px] pc:h-[40px] tablet:w-[29px] tablet:h-[29px]"
+                      class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
                       width="40"
                       height="40"
                       viewBox="0 0 40 40"
@@ -2265,11 +2259,11 @@
                       />
                     </svg>
                     <div class="relative top-[-20px]">
-                      <p class="font-poppins font-normal pc:text-lg tablet:text-sm">
+                      <p class="font-poppins font-normal pc:text-lg mobile:text-sm">
                         John Smith
                       </p>
                       <p
-                        class="mt-1 font-poppins font-light pc:text-sm tablet:text-xs text-blue"
+                        class="mt-1 font-poppins font-light pc:text-sm mobile:text-xs text-blue"
                       >
                         CEO, Fashion Retail Co.
                       </p>
@@ -2281,12 +2275,12 @@
                    
                     src="./images/slide2_main.png"
                     alt="Image"
-                    class="pc:max-w-[128px] tablet:max-w-[75px] pc:w-[128px] tablet:w-[75px]  pc:h-[168px] tablet:h-[85px]"
+                    class="pc:max-w-[128px] mobile:max-w-[75px] pc:w-[128px] mobile:w-[75px]  pc:h-[168px] tablet:h-[85px]"
 
                   />
-                  <div class="client pc:w-['auto'] tablet:w-[90px] opacity-0">
+                  <div class="client pc:w-['auto'] mobile:w-[90px] opacity-0">
                     <svg 
-                      class="relative top-[-20px] pc:left-[105px] tablet:left-[46px] pc:w-[40px] pc:h-[40px] tablet:w-[29px] tablet:h-[29px]"
+                      class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
                       width="40"
                       height="40"
                       viewBox="0 0 40 40"
@@ -2304,11 +2298,11 @@
                       />
                     </svg>
                     <div class="relative top-[-20px]">
-                      <p class="font-poppins font-normal pc:text-lg tablet:text-sm">
+                      <p class="font-poppins font-normal pc:text-lg mobile:text-sm">
                         John Smith
                       </p>
                       <p
-                        class="mt-1 font-poppins font-light pc:text-sm tablet:text-xs text-blue"
+                        class="mt-1 font-poppins font-light pc:text-sm mobile:text-xs text-blue"
                       >
                         CEO, Fashion Retail Co.
                       </p>
@@ -2320,15 +2314,15 @@
     </div>
           </div>
           <div>
-            <h2 class="mb-3 font-poppins font-light pc:text-2xl tablet:text-[24px]">
+            <h2 class="mb-3 mobile:text-center tablet:text-left font-poppins font-light pc:text-2xl mobile:text-[24px]">
               What Our Clients Say
             </h2>
-            <p class="font-jakarta font-medium pc:text-lg tablet:text-sm leading-[172%]">
+            <p class="font-jakarta  mobile:text-center tablet:text-left font-medium pc:text-lg mobile:text-sm leading-[172%]">
               “Webparadox delivered our e-commerce platform on time and exceeded
               our expectations. Their expertise in Laravel and attention to
               detail made all the difference. Highly recommended!”
             </p>
-            <div class="mt-5">
+            <div class="mt-5 tablet:ml-0 mobile:ml-20">
               <button
                 class="mr-2 swiperPrev bg-[url('./images/slide_diseabled.svg')] h-[45px] w-[45px] hover:bg-[url('./images/slide_active.svg')] transition-all duration-300"
               >
@@ -2383,11 +2377,11 @@
           </div>
         </div>
       </section>
-      <section class="mt-20 pc:h-[900px] tablet:h-[650px] pc:max-w-[1350px] tablet:max-w-[608px] mx-auto">
-        <h2 class="mb-3 text-center font-poppins font-light pc:text-2xl tablet:text-[24px]">
+      <section class="mt-20 pc:h-[900px] tablet:h-[650px] mobile:h-[550px] pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[330px] overflow-hidden mx-auto">
+        <h2 class="mb-3 text-center font-poppins font-light pc:text-2xl mobile:text-[24px]">
           Our Global Presence
         </h2>
-        <p class="text-center font-poppins font-light pc:text-lg tablet:text-sm text-white-300">
+        <p class="text-center font-poppins font-light pc:text-lg mobile:text-sm text-white-300">
           Offices in 4 countries to serve you better
         </p>
         <div class="relative">
@@ -2395,10 +2389,10 @@
             class="absolute w-full z-10 grid grid-cols-[237px_237px] justify-between"
           >
             <div
-              class="absolute top-[90px] pc:left-[110px] tablet:left-[90px] w-[237px] h-[110px] border border-solid border-wthite-100/50 pl-5 pt-5"
+              class="absolute top-[90px]  pc:left-[110px] tablet:left-[90px] tablet:w-[237px] mobile:w-[150px] h-[110px] border border-solid border-wthite-100/50 pl-5 pt-5"
             >
               <img src="./images/EN.png" alt="images" />
-              <p class="mt-3 font-poppins font-semibold pc:text-[20px] tablet:text-[14px]">
+              <p class="mt-3 font-poppins font-semibold pc:text-[20px] mobile:text-[14px]">
                 United Kingdom
               </p>
             </div>
@@ -2412,7 +2406,7 @@
               </p>
             </div>
             <div
-              class="absolute right-[0px]  pc:top-[140px] tablet:top-[100px] pc:w-[237px] tablet:w-[180px] h-[110px] border border-solid border-wthite-100/50 pl-5 pt-5"
+              class="absolute tablet:right-[0px]  pc:top-[140px] tablet:top-[100px] mobile:right-[-60px] mobile:top-[60px] pc:w-[237px] tablet:w-[180px] mobile:w-[180px] overflow-hidden h-[110px] border border-solid border-wthite-100/50 pl-5 pt-5"
             >
               <img src="./images/US.png" alt="images" />
               <p class="mt-3 font-poppins font-semibold pc:text-[20px] tablet:text-[14px]">
@@ -2421,11 +2415,11 @@
             </div>
           </div>
           <div class="mt-20 flex w-full absolute z-20">
-            <img src="./images/world.png" alt="Images" class="mx-auto pc:block tablet:hidden" />
-            <img src="./images/mobile/globus.png" alt="Images" class="mx-auto pc:block  pc:hidden tablet:block" />
+            <img src="./images/world.png" alt="Images" class="mx-auto pc:block mobile:hidden" />
+            <img src="./images/mobile/globus.png" alt="Images" class="mx-auto pc:block  pc:hidden mobile:block" />
           </div>
-          <div class="absolute left-[36%] top-[320px] z-30">
-            <div x-data="{ showBox: false }">
+          <div class="absolute tablet:left-[36%] tablet:top-[320px] mobile:top-[190px] mobile:left-[90px] z-30">
+            <div x-data="{ showBox: false }"  @resize.window="if (window.innerWidth > 300) showBox = true" @resize.window="if (window.innerWidth > 960) showBox = false">
               <svg
                 class="relative z-20" @mouseover="showBox = true" @mouseleave="showBox = false"
                 width="22"
@@ -2437,41 +2431,41 @@
                 <circle cx="11" cy="11" r="11" fill="white" />
               </svg>
               <div  x-show="showBox"  x-transition.opacity.duration.500ms
-                class="relative left-[15px] top-[-8px] z-10 w-[265px] pc:h-[410px] tablet:h-[310px] pl-10 pt-7 bg-black/50 border border-solid border-white-100/50"
+                class="relative left-[15px] top-[-8px] z-10 tablet:w-[265px] mobile:w-[200px] pc:h-[410px] tablet:h-[310px] pl-10 pt-7 bg-black/50 border border-solid border-white-100/50"
               >
                 <img src="./images/AE.png" alt="Images" class="mb-3" />
                 <h2 class="mb-3 font-jakarta font-semibold pc:text-xl tablet:text-base">UAE</h2>
                 <div class="mb-3">
-                  <p class="font-jakarta font-light pc:text-base tablet:text-xs text-white-300">
+                  <p class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300">
                     Address
                   </p>
-                  <p class="font-jakarta font-normal pc:text-base tablet:text-xs text-white-300">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300">
                     Dubai, UAE
                   </p>
                 </div>
                 <div class="mb-3">
-                  <p class="font-jakarta font-light pc:text-base tablet:text-xs text-white-300">
+                  <p class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300">
                     Email:
                   </p>
-                  <p class="font-jakarta font-normal pc:text-base tablet:text-xs text-white-300">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300">
                     uae@webparadox.com
                   </p>
                 </div>
                 <div class="mb-3">
-                  <p class="font-jakarta font-light pc:text-base tablet:text-xs text-white-300">
+                  <p class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300">
                     Phone
                   </p>
-                  <p class="font-jakarta font-normal pc:text-base tablet:text-xs text-white-300">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300">
                     +971 XX XXX XXXX
                   </p>
                 </div>
                 <div class="mb-3">
-                  <p class="font-jakarta font-light pc:text-base tablet:text-xs text-white-300">
+                  <p class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300">
                     Hours
                   </p>
                   <p
-                    class="font-jakarta font-normal pc:text-base tablet:text-xs text-white-300>Sun-Thu 9:00-18:00 GST"
-                  >
+                    class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300">Sun-Thu 9:00-18:00 GST"
+                  
                     Sun-Thu 9:00-18:00 GST
                   </p>
                 </div>
@@ -2480,22 +2474,22 @@
           </div>
         </div>
       </section>
-      <section class="mt-20 pc:max-w-[1350px] tablet:max-w-[608px] mx-auto">
-        <h2 class="text-center font-poppins font-light pc:text-2xl tablet:text-[24px]">
+      <section class="mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mobile:h-[1150px] tablet:h-auto mx-auto">
+        <h2 class="mobile:mb-2 tablet:mb-0 text-center font-poppins font-light pc:text-2xl mobile:text-[24px]">
           Frequently Asked Questions
         </h2>
-        <p class="text-center font-poppins font-light pc:text-lg tablet:text-sm text-white-300">
+        <p class="text-center font-poppins font-light pc:text-lg mobile:text-sm text-white-300">
           Everything you need to know about working with us
         </p>
         <div class="mt-5 h-[650px]" x-data="{ openIndex: null }">
           <button
             type="button"
-            class="grid pc:grid-cols-[1300px_21px] tablet:grid-cols-[590px_21px] pc:w-[1320px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] tablet:grid-cols-[590px_21px] pc:w-[960px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 1 ? null : 1"
           >
             How much does custom web development cost?
             <span x-show="openIndex === 1"  x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="20"
                 height="3"
                 viewBox="0 0 20 3"
@@ -2508,7 +2502,7 @@
                 /></svg>
               </span>
             <span x-show="openIndex !== 1" x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="22"
                 height="22"
                 viewBox="0 0 22 22"
@@ -2528,7 +2522,7 @@
             x-ref="content1"
             class="mb-3 accordion-content"
           >
-            <p class="font-jakarta font-light pc:text-base tablet:text-sm text-white-300">
+            <p class="font-jakarta font-light pc:text-base mobile:text-sm text-white-300">
               Project costs vary based on complexity, features, and timeline.
               Simple websites start from $5,000, while complex enterprise
               applications can range from $50,000 to $500,000+. We provide
@@ -2538,12 +2532,12 @@
           </div>
            <button
             type="button"
-            class="grid pc:grid-cols-[1300px_21px] tablet:grid-cols-[590px_21px] pc:w-[1320px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 2? null : 2"
           >
            What is the typical timeline for a Laravel development project?
             <span x-show="openIndex === 2"  x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="20"
                 height="3"
                 viewBox="0 0 20 3"
@@ -2556,7 +2550,7 @@
                 /></svg>
               </span>
             <span x-show="openIndex !== 2" x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="22"
                 height="22"
                 viewBox="0 0 22 22"
@@ -2576,7 +2570,7 @@
             x-ref="content1"
             class="mb-3 accordion-content"
           >
-            <p class="font-jakarta font-light pc:text-base tablet:text-sm text-white-300">
+            <p class="font-jakarta font-light pc:text-base mobile:text-sm text-white-300">
               Project costs vary based on complexity, features, and timeline.
               Simple websites start from $5,000, while complex enterprise
               applications can range from $50,000 to $500,000+. We provide
@@ -2586,12 +2580,12 @@
           </div>
             <button
             type="button"
-            class="grid pc:grid-cols-[1300px_21px] tablet:grid-cols-[590px_21px] pc:w-[1320px] tablet:w-[608px] items-center mb-3 text-left font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 3? null : 3"
           >
          Do you provide support after launch?
             <span x-show="openIndex === 3"  x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="20"
                 height="3"
                 viewBox="0 0 20 3"
@@ -2604,7 +2598,7 @@
                 /></svg>
               </span>
             <span x-show="openIndex !== 3" x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="22"
                 height="22"
                 viewBox="0 0 22 22"
@@ -2624,7 +2618,7 @@
             x-ref="content1"
             class="mb-3 accordion-content"
           >
-            <p class="font-jakarta font-light pc:text-base tablet:text-sm text-white-300">
+            <p class="font-jakarta font-light pc:text-base mobile:text-sm text-white-300">
               Project costs vary based on complexity, features, and timeline.
               Simple websites start from $5,000, while complex enterprise
               applications can range from $50,000 to $500,000+. We provide
@@ -2632,14 +2626,14 @@
               consultation.
             </p>
           </div>
-           <button
+           <button 
             type="button"
-            class="grid pc:grid-cols-[1300px_21px] tablet:grid-cols-[590px_21px] pc:w-[1320px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 4? null : 4"
           >
          DCan you help with existing projects or only new development?
             <span x-show="openIndex === 4"  x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="20"
                 height="3"
                 viewBox="0 0 20 3"
@@ -2652,7 +2646,7 @@
                 /></svg>
               </span>
             <span x-show="openIndex !== 4" x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="22"
                 height="22"
                 viewBox="0 0 22 22"
@@ -2672,7 +2666,7 @@
             x-ref="content1"
             class="mb-3 accordion-content"
           >
-            <p class="font-jakarta font-light pc:text-base tablet:text-sm text-white-300">
+            <p class="font-jakarta font-light pc:text-base mobile:text-sm text-white-300">
               Project costs vary based on complexity, features, and timeline.
               Simple websites start from $5,000, while complex enterprise
               applications can range from $50,000 to $500,000+. We provide
@@ -2682,12 +2676,12 @@
           </div>
             <button
             type="button"
-            class="grid pc:grid-cols-[1300px_21px] tablet:grid-cols-[590px_21px] pc:w-[1320px] tablet:w-[608px] items-center mb-3 text-left font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 5? null : 5"
           >
         What industries do you specialize in?
             <span x-show="openIndex === 5"  x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="20"
                 height="3"
                 viewBox="0 0 20 3"
@@ -2700,7 +2694,7 @@
                 /></svg>
               </span>
             <span x-show="openIndex !== 5" x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="22"
                 height="22"
                 viewBox="0 0 22 22"
@@ -2720,7 +2714,7 @@
             x-ref="content1"
             class="mb-3 accordion-content"
           >
-            <p class="font-jakarta font-light pc:text-base tablet:text-sm text-white-300">
+            <p class="font-jakarta font-light pc:text-base mobile:text-sm text-white-300">
               Project costs vary based on complexity, features, and timeline.
               Simple websites start from $5,000, while complex enterprise
               applications can range from $50,000 to $500,000+. We provide
@@ -2730,12 +2724,12 @@
           </div>
             <button
             type="button"
-            class="grid pc:grid-cols-[1300px_21px] tablet:grid-cols-[590px_21px] pc:w-[1320px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 6? null : 6"
           >
         How do you ensure code quality and security?
             <span x-show="openIndex === 6"  x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="20"
                 height="3"
                 viewBox="0 0 20 3"
@@ -2748,7 +2742,7 @@
                 /></svg>
               </span>
             <span x-show="openIndex !== 6" x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="22"
                 height="22"
                 viewBox="0 0 22 22"
@@ -2768,7 +2762,7 @@
             x-ref="content1"
             class="mb-3 accordion-content"
           >
-            <p class="font-jakarta font-light pc:text-base tablet:text-sm text-white-300">
+            <p class="font-jakarta font-light pc:text-base mobile:text-sm text-white-300">
               Project costs vary based on complexity, features, and timeline.
               Simple websites start from $5,000, while complex enterprise
               applications can range from $50,000 to $500,000+. We provide
@@ -2778,12 +2772,12 @@
           </div>
             <button
             type="button"
-            class="grid pc:grid-cols-[1300px_21px] tablet:grid-cols-[590px_21px] pc:w-[1320px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 7? null : 7"
           >
         Do you sign NDAs and protect intellectual property?
             <span x-show="openIndex === 7"  x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="20"
                 height="3"
                 viewBox="0 0 20 3"
@@ -2796,7 +2790,7 @@
                 /></svg>
               </span>
             <span x-show="openIndex !== 7" x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="22"
                 height="22"
                 viewBox="0 0 22 22"
@@ -2816,7 +2810,7 @@
             x-ref="content1"
             class="mb-3 accordion-content"
           >
-            <p class="font-jakarta font-light pc:text-base tablet:text-sm text-white-300">
+            <p class="font-jakarta font-light pc:text-base mobile:text-sm text-white-300">
               Project costs vary based on complexity, features, and timeline.
               Simple websites start from $5,000, while complex enterprise
               applications can range from $50,000 to $500,000+. We provide
@@ -2826,12 +2820,12 @@
           </div>
            <button
             type="button"
-            class="grid pc:grid-cols-[1300px_21px] tablet:grid-cols-[590px_21px] pc:w-[1320px] tablet:w-[608px] items-center mb-3 text-left font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 8? null : 8"
           >
         What is your development process?
             <span x-show="openIndex === 8"  x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="20"
                 height="3"
                 viewBox="0 0 20 3"
@@ -2844,7 +2838,7 @@
                 /></svg>
               </span>
             <span x-show="openIndex !== 8" x-transition:enter="transition ease-in-out duration-300">
-              <svg
+              <svg class="tablet:w-[20px] mobile:w-[14px]"
                 width="22"
                 height="22"
                 viewBox="0 0 22 22"
@@ -2864,7 +2858,7 @@
             x-ref="content1"
             class="mb-3 accordion-content"
           >
-            <p class="font-jakarta font-light pc:text-base tablet:text-sm text-white-300">
+            <p class="font-jakarta font-light pc:text-base mobile:text-sm text-white-300">
               Project costs vary based on complexity, features, and timeline.
               Simple websites start from $5,000, while complex enterprise
               applications can range from $50,000 to $500,000+. We provide
@@ -2876,26 +2870,26 @@
          
         </div>
       </section>
-      <section class="pc:mt-20 tablet:mt-0 pc:max-w-[1350px] tablet:max-w-[608px] mx-auto">
-        <div class="overflow-visible pc:w-[1350px] tablet:w-[700px]">
+      <section class="pc:mt-20 tablet:mt-0  pc:max-w-[960px] tablet:max-w-[608px] mx-auto">
+        <div class="overflow-visible tablet:block mobile:hidden pc:w-[1080px] tablet:w-[700px]">
           <img src="./images/form.png" alt="image" />
         </div>
         <div
-          class="relative left-[-80px] top-[-250px] pt-7 pb-7 bg-[#222] pc:w-[1080px] tablet:w-[700px]"
+          class="relative tablet:left-[-80px] mobile:left-[0px] top-[-250px] pt-7 pb-7 bg-[#222] pc:w-[1080px] tablet:w-[700px]"
         >
-          <h2 class="text-center font-jakarta font-light pv:text-2xl tablet:text-[24px]">
+          <h2 class="text-center font-jakarta font-light pv:text-2xl mobile:text-[24px]">
             Ready to Start Your Project?
           </h2>
           <p
-            class="text-center font-jakarta font-light pv:text-lg tablet:text-sm text-white-300"
+            class="text-center font-jakarta font-light pv:text-lg mobile:text-sm text-white-300"
           >
             Tell us about your idea and we'll turn it into reality
           </p>
           <form action="#" method="post" class="mt-10">
-            <div class="grid tablet:grid-cols-[223px_223px] pc:grid-cols-[319px_319px] justify-center gap-x-18">
+            <div class="grid tablet:grid-cols-[223px_223px] mobile:grid-cols-[300] mobile:max-w-[300px] tablet:max-w-['auto'] mx-auto pc:grid-cols-[319px_319px] justify-center gap-x-18">
               <div>
                 <input
-                  class="pc:w-[319px] tablet:w-[223px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg tablet:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
+                  class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
                   type="text"
                   name="name"
                   placeholder="Your name *"
@@ -2903,7 +2897,7 @@
               </div>
               <div>
                 <input
-                  class="pc:w-[319px] tablet:w-[223px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg tablet:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
+                  class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
                   type="email"
                   name="name"
                   placeholder="Your Email *"
@@ -2911,7 +2905,7 @@
               </div>
               <div>
                 <input
-                  class="pc:w-[319px] tablet:w-[223px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg tablet:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
+                  class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
                   type="number"
                   name="name"
                   placeholder="Phone number "
@@ -2922,7 +2916,7 @@
               <button @click="open = !open"
                 type="button"
                 name="dropdown"
-                class=" grid pc:grid-cols-[250px_10px] tablet:grid-cols-[213px_10px] items-center justify-between text-left pc:w-[319px] tablet:w-[223px] h-[56px] font-poppins font-normal pc:text-lg tablet:text-sm text-white-300 border-b border-solid border-white-300"
+                class=" grid pc:grid-cols-[250px_10px] tablet:grid-cols-[213px_10px] mobile:grid-cols-[287px_10px] items-center justify-between text-left pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] font-poppins font-normal pc:text-lg mobile:text-sm text-white-300 border-b border-solid border-white-300"
               >
               
                 <span x-text="selected"></span> <!-- Отображение выбранного значения -->
@@ -2932,13 +2926,13 @@
                   <path d="M8.39878 0.396234C8.59291 0.201848 8.90835 0.20117 9.10332 0.394721C9.28057 0.570677 9.29725 0.846578 9.15296 1.04133L9.10484 1.09714L5.10336 5.10377C4.92635 5.28101 4.64862 5.29713 4.45328 5.15213L4.39733 5.1038L0.395188 1.09717C0.201036 0.902803 0.201689 0.588317 0.396647 0.39475C0.573882 0.21878 0.850686 0.203321 1.04542 0.347998L1.1012 0.396205L4.75053 4.04921L8.39878 0.396234Z" fill="#DEDEDE" stroke="#DEDEDE" stroke-width="0.5"/>
                   </svg></span> <!-- Стрелки -->
               </button>
-                 <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] pc:w-[340px] tablet:w-[243px] bg-[#222] px-5 pb-5">
-                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer" >Custom Web Development</a>
-                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer">Laravel Development</a>
-                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer">Mobile Development</a>
-                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer">E-commerce Solutions</a>
-                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer">CRM Implementation</a>
-                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer">Digital Marketing</a>
+                 <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] pc:w-[340px] tablet:w-[243px] mobile:w-[320px] bg-[#222] px-5 pb-5">
+                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer" >Custom Web Development</a>
+                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Laravel Development</a>
+                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Mobile Development</a>
+                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">E-commerce Solutions</a>
+                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">CRM Implementation</a>
+                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Digital Marketing</a>
                     <div class="border-b border-solid border-[#d9d9d9]" ></div>
                   </div>
                   </div>
@@ -2949,7 +2943,7 @@
               <button @click="open = !open"
                 type="button"
                 name="dropdown"
-                class=" grid grid-cols-[250px_10px] items-center justify-between text-left pc:w-[709px] tablet:w-[520px]  h-[56px] font-poppins font-normal pc:text-lg tablet:text-sm text-white-300 border-b border-solid border-white-300"
+                class="mobile:mt-5 tablet:mt-0 grid grid-cols-[250px_10px] items-center justify-between text-left pc:w-[709px] tablet:w-[520px] mobile:w-[300px]  h-[56px] font-poppins font-normal pc:text-lg mobile:text-sm text-white-300 border-b border-solid border-white-300"
               >
               
                 <span x-text="selected"></span> <!-- Отображение выбранного значения -->
@@ -2959,13 +2953,13 @@
                   <path d="M8.39878 0.396234C8.59291 0.201848 8.90835 0.20117 9.10332 0.394721C9.28057 0.570677 9.29725 0.846578 9.15296 1.04133L9.10484 1.09714L5.10336 5.10377C4.92635 5.28101 4.64862 5.29713 4.45328 5.15213L4.39733 5.1038L0.395188 1.09717C0.201036 0.902803 0.201689 0.588317 0.396647 0.39475C0.573882 0.21878 0.850686 0.203321 1.04542 0.347998L1.1012 0.396205L4.75053 4.04921L8.39878 0.396234Z" fill="#DEDEDE" stroke="#DEDEDE" stroke-width="0.5"/>
                   </svg></span> <!-- Стрелки -->
               </button>
-                 <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-50 top-[40px] left-[-20px] pc:w-[739px] tablet:w-[540px] bg-[#222] px-5 pb-5">
-                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer" >Budget Range</a>
-                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer">Budget Ranget</a>
-                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
-                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
-                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
-                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
+                 <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-50 top-[40px] left-[-20px] pc:w-[739px] tablet:w-[540px] mobile:w-[320px] bg-[#222] px-5 pb-5">
+                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal text-base mobile:text-sm text-[#cac5c5] cursor-pointer" >Budget Range</a>
+                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Ranget</a>
+                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
+                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
+                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
+                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
                     <div class="border-b border-solid border-[#d9d9d9]" ></div>
                   </div>
               </div>
@@ -2973,7 +2967,7 @@
               <br />
               <div>
                 <textarea
-                  class="pc:w-[709px] tablet:w-[520px] h-[96px] mt-5 pt-5 text-left outline-none font-poppins font-normal pc:text-lg tablet:text-sm border-b border-solid border-white-300"
+                  class="pc:w-[709px] tablet:w-[520px] mobile:w-[300px] h-[96px] mt-5 pt-5 text-left outline-none font-poppins font-normal pc:text-lg tablet:text-sm border-b border-solid border-white-300"
                   name="message"
                   placeholder="Tell us about your project *"
                 ></textarea>
@@ -2981,7 +2975,7 @@
               <br />
               <div class="flex">
                 <button
-                  class="relative pc:left-[200px] tablet:left-[130px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] bg-no-repeat mt-7 mx-auto pc:bg-[20px_0px] tablet:bg-[25px_5px]  h-[60px] w-[212px] whitespace-pre-wrap font-jakarta font-bold text-lg leading-[20px]  pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300"
+                  class="relative pc:left-[200px] tablet:left-[130px]  pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat mt-7 mx-auto pc:bg-[20px_0px] tablet:bg-[25px_5px] mobile:bg-[20px_5px]   h-[60px] tablet:w-[212px] mobile:w-[180px] whitespace-pre-wrap font-jakarta font-bold pc::text-lg tablet:text-sm leading-[20px]  pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300"
                   type="submit"
                 >
                   S E N D  R E Q U E S T
@@ -2994,65 +2988,65 @@
     </main>
     <footer class="mt-[-130px] bg-[#575757] w-full pt-10 pb-10">
       <div
-        class="grid grid-cols-[187px_187px_124px_212px] pc:gap-x-20 tablet:gap-x-5 justify-center"
+        class="grid tablet:grid-cols-[187px_187px_124px_212px] mobile:grid-cols-[120px_120px] pc:gap-x-20 tablet:gap-x-5 mobile:gap-x-10 justify-center"
       >
         <div>
-          <h2 class="mb-1 font-jakarta font-semibold pc:text-[24px] tablet:text-sm">SERVICES</h2>
+          <h2 class="mb-1 font-jakarta font-semibold pc:text-[24px] mobile:text-sm">SERVICES</h2>
           <nav>
             <ul>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Custom Development</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="./laraveldevelopment.html"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Laravel Development</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >SPA Development</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Mobile Development</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >UI/UX Design</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Digital Marketing</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >CRM Implementation</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Support & Maintenance</a
                 >
               </li>
@@ -3060,62 +3054,62 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-1 font-jakarta font-semibold pc:text-[24px] tablet:text-sm">INDUSTRIES</h2>
+          <h2 class="mb-1 font-jakarta font-semibold pc:text-[24px] mobile:text-sm">INDUSTRIES</h2>
           <nav>
             <ul>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >E-commerce & Retail</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Affiliate Networks</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >FinTech & Banking</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >SaaS & Startups</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Healthcare</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Education</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Travel & Hospitality</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Real Estate</a
                 >
               </li>
@@ -3123,55 +3117,55 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-1 font-jakarta font-semibold pc:text-[24px] tablet:text-sm">COMPANY</h2>
+          <h2 class="mb-1 font-jakarta font-semibold pc:text-[24px] mobile:text-sm">COMPANY</h2>
           <nav>
             <ul>
               <li class="mb-[5px]">
                 <a
                   href="./AboutUs.html"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >About Us</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Case Studies</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Insights & Blog</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Careers</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="./ContactUs.html"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Contact</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Privacy Policy</a
                 >
               </li>
               <li class="mb-[5px]">
                 <a
                   href="#"
-                  class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300 hover:underline"
+                  class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300 hover:underline"
                   >Terms of Service</a
                 >
               </li>
@@ -3179,65 +3173,65 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-1 font-jakarta font-semibold pc:text-[24px] tablet:text-sm">CONTACT</h2>
+          <h2 class="mb-1 font-jakarta font-semibold pc:text-[24px] mobile:text-sm">CONTACT</h2>
           <div class="mb-3">
-            <p class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300">
+            <p class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300">
               Email:
             </p>
-            <p class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300">
+            <p class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300">
               hello@webparadox.com
             </p>
           </div>
           <div class="mb-3">
-            <p class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300">
+            <p class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300">
               Phone (HQ):
             </p>
-            <p class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300">
+            <p class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300">
               +372 XXX XXXX
             </p>
           </div>
           <div class="mb-3">
-            <p class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300">
+            <p class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300">
               WhatsApp:
             </p>
-            <p class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300">
+            <p class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300">
               +372 XXX XXXX
             </p>
           </div>
           <div class="mb-3">
-            <p class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300">
+            <p class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300">
               Telegram:
             </p>
-            <p class="font-jakarta font-light pc:text-lg tablet:text-xs text-white-300">
+            <p class="font-jakarta font-light pc:text-lg mobile:text-xs text-white-300">
               @webparadox
             </p>
           </div>
-          <div class="grid pc:grid-cols-[47px_47px_47px_47px] tablet:grid-cols-[34px_34px_34px_34px] gap-x-2">
+          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[20px] tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
             <div>
               <a
                 href="#"
-                class="block text-center pc:bg-[url('./images/footer_icon.svg')] tablet:bg-[url('./images/mobile/icon_footer.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] pc:hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
+                class="block text-center pc:bg-[url('./images/footer_icon.svg')] mobile:bg-[url('./images/mobile/icon_footer.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] pc:hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
                 >in</a
               >
             </div>
             <div>
               <a
                 href="#"
-                class="block text-center pc:bg-[url('./images/footer_icon.svg')] tablet:bg-[url('./images/mobile/icon_footer.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] pc:hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
+                class="block text-center pc:bg-[url('./images/footer_icon.svg')] mobile:bg-[url('./images/mobile/icon_footer.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] pc:hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
                 >gh</a
               >
             </div>
             <div>
               <a
                 href="#"
-                class="block text-center pc:bg-[url('./images/footer_icon.svg')] tablet:bg-[url('./images/mobile/icon_footer.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] pc:hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
+                class="block text-center pc:bg-[url('./images/footer_icon.svg')] mobile:bg-[url('./images/mobile/icon_footer.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] pc:hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
                 >be</a
               >
             </div>
             <div>
               <a
                 href="#"
-                class="block text-center pc:bg-[url('./images/footer_icon.svg')] tablet:bg-[url('./images/mobile/icon_footer.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] pc:hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
+                class="block text-center pc:bg-[url('./images/footer_icon.svg')] mobile:bg-[url('./images/mobile/icon_footer.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] pc:hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
                 >tw</a
               >
             </div>
@@ -3245,17 +3239,18 @@
         </div>
       </div>
       <div
-        class="grid pc:grid-cols-[268px_99px_114px] tablet:grid-cols-[195px_73px_114px]  justify-center mt-10 border-t border-[#7a7a7a] border-solid pt-7"
+        class="grid pc:grid-cols-[268px_99px_114px] tablet:grid-cols-[195px_73px_114px] mobile:grid-cols-[75px_90px]  justify-center mt-10 border-t border-[#7a7a7a] border-solid pt-7"
       >
-        <div>
-          <p class="tablet:mt-[5px] pc:mt-[0px] font-jakarta font-normal pc:text-base tablet:text-xs text-white-300">
+        <div class="mobile:col-span-2 tablet:col-span-1 mobile:w-[200px]">
+          <p class="tablet:mt-[5px] mobile:ml-[-15px] tablet:ml-[0px] pc:mt-[0px] font-jakarta font-normal pc:text-base mobile:text-xs text-white-300">
             © 2025 Webparadox. All rights reserved.
           </p>
         </div>
+        
         <div>
           <a
             href="#"
-            class="font-jakarta font-light pc:text-base tablet:text-xs text-white-300 border-l border-solid border-white-100/50 pl-1 hover:underline"
+            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300 border-l border-solid border-white-100/50 pl-1 hover:underline"
           >
             Privacy Policy
           </a>
@@ -3263,7 +3258,7 @@
         <div>
           <a
             href="#"
-            class="font-jakarta font-light pc:text-base tablet:text-xs text-white-300 border-l border-solid border-white-100/50 pl-1 hover:underline"
+            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300 border-l border-solid border-white-100/50 pl-1 hover:underline"
             >Terms of Service</a
           >
         </div>

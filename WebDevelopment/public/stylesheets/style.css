@@ -21,6 +21,8 @@
 
 .laravel .swiper-scrollbar-drag {
   width: 400px !important;
+  grid-column-start: 1;
+  grid-column-end: 1;
 }
 
 .accordion-content {
@@ -97,6 +99,8 @@
 svg{
     transition: all 0.3s ease-in;
 }
+
+
 
 
 
