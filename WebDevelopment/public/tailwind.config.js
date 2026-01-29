@@ -7,7 +7,8 @@ tailwind.config = {
           200: "#f5f5f5",
           300: "#dedede",
           400: "#f0f0f0",
-          500: "#e5e7eb"
+          500: "#e5e7eb",
+          600: "#d1d5db"
         },
         blue: "#3e82da",
         black: "#060606"
