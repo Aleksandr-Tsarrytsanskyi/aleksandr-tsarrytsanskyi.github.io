@@ -22,5 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
     el: '.swiper-scrollbar',
       draggable: true,
   },
+
+  breakpoints: {
+  320: { slidesPerView: 1, spaceBetween: 10 }, // Мобильные
+  768: { slidesPerView: 2, spaceBetween: 20 }, // Планшеты
+  1024: { slidesPerView: 3, spaceBetween: 30 } // Десктоп
+}
 });
 })
