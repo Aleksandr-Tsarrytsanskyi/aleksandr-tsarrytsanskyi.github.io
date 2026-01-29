@@ -1653,7 +1653,7 @@
     
 
     </main>
-    <section class="pc:mt-20 mobile:mt-80  tablet:mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:h-[940px] pc:h-auto mx-auto">
+    <section class="pc:mt-20 mobile:mt-80  tablet:mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:h-[870px] tablet:h-[900px] pc:h-auto mx-auto">
         <div class="overflow-visible tablet:block mobile:hidden pc:w-[1080px] tablet:w-[700px]">
           <img src="./images/form.png" alt="image" />
         </div>
@@ -1669,7 +1669,7 @@
            Get a free consultation and detailed project estimate from our Laravel experts
           </p>
           <form action="#" method="post" class="mt-10">
-            <div class="grid tablet:grid-cols-[223px_223px] mobile:grid-cols-[300] mobile:max-w-[300px] tablet:max-w-['auto'] mx-auto pc:grid-cols-[319px_319px] justify-center gap-x-18">
+            <div class="grid tablet:grid-cols-[223px_223px] mobile:grid-cols-[300]  mobile:max-w-[300px] tablet:max-w-['auto'] mx-auto pc:grid-cols-[319px_319px] justify-center gap-x-18">
               <div>
                 <input
                   class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
@@ -1734,7 +1734,7 @@
               <button @click="open = !open"
                 type="button"
                 name="dropdown"
-                class="mobile:mt-5 tablet:mt-0 grid grid-cols-[250px_10px] items-center justify-between text-left pc:w-[709px] tablet:w-[520px] mobile:w-[300px]  h-[56px] font-poppins font-normal pc:text-lg mobile:text-sm text-white-300 border-b border-solid border-white-300"
+                class="mobile:mt-5 tablet:mt-0 grid pc:grid-cols-[250px_10px] mobile:grid-cols-[200px_10px] items-center justify-between text-left pc:w-[319px] tablet:w-[223px] mobile:w-[300px]  h-[56px] font-poppins font-normal pc:text-lg mobile:text-sm text-white-300 border-b border-solid border-white-300"
               >
               
                 <span x-text="selected"></span> <!-- Отображение выбранного значения -->
@@ -1744,7 +1744,7 @@
                   <path d="M8.39878 0.396234C8.59291 0.201848 8.90835 0.20117 9.10332 0.394721C9.28057 0.570677 9.29725 0.846578 9.15296 1.04133L9.10484 1.09714L5.10336 5.10377C4.92635 5.28101 4.64862 5.29713 4.45328 5.15213L4.39733 5.1038L0.395188 1.09717C0.201036 0.902803 0.201689 0.588317 0.396647 0.39475C0.573882 0.21878 0.850686 0.203321 1.04542 0.347998L1.1012 0.396205L4.75053 4.04921L8.39878 0.396234Z" fill="#DEDEDE" stroke="#DEDEDE" stroke-width="0.5"/>
                   </svg></span> <!-- Стрелки -->
               </button>
-                 <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-50 top-[40px] left-[-20px] pc:w-[739px] tablet:w-[540px] mobile:w-[320px] bg-[#222] px-5 pb-5">
+                 <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-50 top-[40px] left-[-20px] pc:w-[340px] tablet:w-[245px] mobile:w-[320px] bg-[#222] px-5 pb-5">
                   <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal text-base mobile:text-sm text-[#cac5c5] cursor-pointer" >Budget Range</a>
                   <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Ranget</a>
                   <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
@@ -1755,7 +1755,7 @@
                   </div>
               </div>
               </div>
-              <br />
+             
               <div>
                 <textarea
                   class="pc:w-[709px] tablet:w-[520px] mobile:w-[300px] h-[96px] mt-5 pt-5 text-left outline-none font-poppins font-normal pc:text-lg tablet:text-sm border-b border-solid border-white-300"
@@ -1763,12 +1763,12 @@
                   placeholder="Project Requirements *"
                 ></textarea>
               </div>
-              <br />
+             <br>
              
 
-              <label class="font-poppins font-normal pc:font-base mobile:text-sm text-white-300">Required Features (select all that apply)</label>
-
-                <div class="grid pc:grid-cols-[109px_151px_135px_156px] mobile:grid-cols-[159px] gap-x-5 gap-y-2">
+              <label class="tablet:mt-5 pc:mt-5  tablet:col-span-2 pc:col-span-2 pc:mt-0 font-poppins font-normal pc:font-base mobile:text-sm text-white-300">Required Features (select all that apply)</label>
+             
+                <div class="grid pc:grid-cols-[109px_151px_135px_156px] tablet:grid-cols-[139px_151px_135px] mobile:grid-cols-[159px] gap-x-5 pc:gap-y-2 tablet:gap-y-0 mobile:gap-y-0">
                  
                 
                   <div>
@@ -1814,7 +1814,7 @@
                     </label>
                   </div>
                 </div>
-
+                <br>
                  <div class="flex">
                 <button
                   class="relative pc:left-[200px] tablet:left-[130px]  pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat mt-7 mx-auto pc:bg-[20px_0px] tablet:bg-[25px_5px] mobile:bg-[20px_5px]   h-[60px] tablet:w-[190px] mobile:w-[180px] whitespace-pre-wrap font-jakarta font-bold pc::text-lg mobile:text-sm leading-[20px]  pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300"
@@ -2083,7 +2083,7 @@
         class="grid pc:grid-cols-[268px_99px_114px] tablet:grid-cols-[195px_73px_114px] mobile:grid-cols-[75px_90px]  justify-center mt-10 border-t border-[#7a7a7a] border-solid pt-7"
       >
         <div class="mobile:col-span-2 tablet:col-span-1 mobile:w-[200px]">
-          <p class="tablet:mt-[5px] mobile:ml-[-15px] tablet:ml-[0px] pc:mt-[0px] font-jakarta font-normal pc:text-base mobile:text-xs text-white-300">
+          <p class="tablet:mt-[5px] pc:w-[300px] mobile:ml-[-15px] tablet:ml-[0px] pc:mt-[0px] font-jakarta font-normal pc:text-base mobile:text-xs text-white-300">
             © 2025 Webparadox. All rights reserved.
           </p>
         </div>
