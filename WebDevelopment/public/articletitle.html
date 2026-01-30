@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -696,6 +696,13 @@
               </div>
             </div>
         </section>
+        <section class="pc:max-w-[960px] mt-5 tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mobile:block tablet:hidden">
+        <div class="mobile:float-right  flex items-center cursor-pointer">
+          
+            <a href="#"  class="  bg-[url('./images/mobile/up.svg')] bg-center bg-no-repeat bg-[#222] w-[56px] mr-3 h-[56px] rounded-[100px]" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"></a>
+           
+        </div>
+       </section>
         <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
         <div
           class="grid pc:grid-cols-[363px_500px] mobile:grid-cols-[300px] tablet:grid-cols-[214px_222px] justify-between items-center mb-7"
