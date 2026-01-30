@@ -47,7 +47,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
     <script
-      defer
+      
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -181,7 +181,7 @@
               </button>
               <a href="#" class="mobile:block tablet:hidden font-poppins font-light text-sm">+372 XXX XXXX</a>
             </div>
-            <div class="pc:hidden tablet:block">
+            <div class="pc:hidden tablet:block relative z-200">
               <div>
                 <div  x-data="{ open: false }">
                   <svg class="tablet:mt-3.5 mobile:mt-1.5 cursor-pointer" @click="open = true" width="33" height="22" viewBox="0 0 33 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -457,7 +457,7 @@
                 <img src="./images/clients_image1.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                <div class="grid tablet:grid-cols-[430px_70px] gap-x-5 items-center ml-7 h-[90px] relative top-[-10px]">
+                <div class="block tablet:grid-cols-[430px_70px] gap-x-5 items-center ml-7 h-[90px] relative pc:top-[20px] mobile:top-[40px]">
                   <div>
                     <p
                       class="tablet:mt-7 mobile:mt-10  font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
@@ -479,7 +479,7 @@
                 <img src="./images/clients_image2.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                <div class="grid grid-cols-[430px_70px] gap-x-5 items-center h-[90px] ml-7 relative top-[-10px]">
+                <div class="block grid-cols-[430px_70px] gap-x-5 items-center h-[90px] ml-7 relative pc:top-[20px] mobile:top-[40px]">
                   <div>
                     <p
                       class="mt-7 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
@@ -500,7 +500,7 @@
                 <img src="./images/services/services_dev_image1.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                <div class="grid grid-cols-[430px_70px] gap-x-5 items-center h-[90px] ml-7 relative top-[-10px]">
+                <div class="block grid-cols-[430px_70px] gap-x-5 items-center h-[90px] ml-7 relative pc:top-[20px] mobile:top-[40px]">
                   <div>
                     <p
                       class="mt-7 font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
@@ -521,7 +521,7 @@
                 <img src="./images/services/services_dev_image3.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                    <div class="grid grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative top-[-10px]">
+                    <div class="block grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative pc:top-[20px] mobile:top-[40px]">
                   <div>
                     <p
                       class="pc:mt-10 tablet:mt-10 mobile:mt-10 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
@@ -542,7 +542,7 @@
                 <img src="./images/services/services_dev_image2.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                    <div class="grid grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative top-[-10px]">
+                    <div class="block grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative pc:top-[20px] mobile:top-[40px]">
                   <div>
                     <p
                       class="pc:mt-10 tablet:mt-10 mobile:mt-10 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
@@ -563,7 +563,7 @@
                 <img src="./images/clients_image4.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                    <div class="grid grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative top-[-10px]">
+                    <div class="block grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative pc:top-[20px] mobile:top-[40px]">
                   <div>
                     <p
                       class="pc:mt-10 tablet:mt-10 mobile:mt-10 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
@@ -584,7 +584,7 @@
                 <img src="./images/services/services_dev_image4.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                    <div class="grid grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative top-[-10px]">
+                    <div class="block grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative pc:top-[20px] mobile:top-[40px]">
                   <div>
                     <p
                       class="pc:mt-10 tablet:mt-10 mobile:mt-10 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
@@ -605,7 +605,7 @@
                 <img src="./images/services/services_dev_image5.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                    <div class="grid grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative top-[-10px]">
+                    <div class="block grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative pc:top-[20px] mobile:top-[40px]">
                   <div>
                     <p
                       class="pc:mt-10 tablet:mt-10 mobile:mt-10 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
