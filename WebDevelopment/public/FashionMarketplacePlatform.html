@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -467,6 +467,13 @@
           </div>
         </div>
       </section>
+      <section class="pc:max-w-[960px] relative mt-8 tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mobile:block tablet:hidden">
+        <div class="mobile:float-right absolute right-[-20px] flex items-center cursor-pointer">
+          
+            <a href="#"  class="  bg-[url('./images/mobile/up.svg')] bg-center bg-no-repeat bg-[#222] w-[56px] mr-3 h-[56px] rounded-[100px]" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"></a>
+           
+        </div>
+       </section>
       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
         <h2 class="mb-1 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Results & Impact</h2>
         <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 text-center">Measurable success metrics achieved within 6 months of launch</p>
@@ -777,16 +784,16 @@
           </div>
         </div>
       </section>
-      <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
-        <div class="grid pc:grid-cols-[355px_569px] mobile:grid-cols-[300px] tablet:grid-cols-[260px_326px] justify-between">
+      <section class="tablet:bg-[#222] tablet:w-full tablet:py-20 mt-20">
+        <div class="grid pc:grid-cols-[355px_569px] mobile:grid-cols-[300px] tablet:grid-cols-[260px_326px] pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto justify-between">
            <div>
-             <img src="./images/Platform/image1.png" class="pc:h-[304px] tablet:h-[429px]" alt="Image">
+             <img src="./images/Platform/image1.png" class="pc:h-[416px] pc:w-[355px] tablet:h-[429px]" alt="Image">
              <p class="mt-7 font-jakarta font-normal text-base text-white-300"> The client needed a complete platform rebuild that could launch within 8 months while maintaining business continuity during migration.</p>
            </div>
            <div class="mobile:col-start-1 mobile:row-start-1 tablet:col-start-2 tablet:row-start-1">
             <h2 class="mb-3 font-poppins font-normal pc:text-2xl mobile:text-[24px] mobile:text-center tablet:text-left">The Challenge</h2>
             <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300">The client's existing e-commerce platform was built on legacy technology that couldn't scale to meet growing demand. They were losing vendors due to poor performance, limited features, and frequent downtime. The checkout process was confusing, resulting in 70% cart abandonment rate.</p>
-            <div class="mobile:mt-5 mobile:mb-5 tablet:mt-0 tablet:mb-0 mobile:bg-[#222] tablet:bg-black mobile:p-5 tablet:p-0">
+            <div class="mobile:mt-5 mobile:mb-5 tablet:mt-0 tablet:mb-0 mobile:bg-[#222] tablet:bg-[#222] mobile:p-5 tablet:p-0">
               <p class="mt-3 font-jakarta font-bold pc:text-lg mobile:text-base text-white-300">Key challenges we needed to solve:</p>
             <ul class="list-disc ml-5 mt-5">
                 <li>
@@ -812,8 +819,8 @@
         </div>
         </div>
       </section>
-       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px]  mx-auto mt-20">
-        <div class="grid pc:grid-cols-[543px_375px] mobile:grid-cols-[300px] tablet:grid-cols-[326px_260px] justify-between">
+       <section class="tablet:bg-[#222] tablet:w-full tablet:pt-10 tablet:pb-20">
+        <div class="grid pc:grid-cols-[543px_375px] mobile:grid-cols-[300px] tablet:grid-cols-[326px_260px] pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px]  mx-auto justify-between">
            <div class="">
              <img src="./images/Platform/image2.png" alt="Image">
             <p class="mb-5 mt-5 font-jakarta font-bold pc:text-lg mobile:text-base text-white-300">Key Features Implemented:</p>
@@ -841,26 +848,26 @@
            <div class="pc:col-start-1  pc:row-start-1 mobile:col-start-1 mobile:row-start-1">
             <h2 class="mb-3 font-poppins font-normal pc:text-2xl mobile:text-[24px]">Our Solution</h2>
             <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300">We architected and built a modern, scalable marketplace platform using Laravel for the backend and Vue.js for a dynamic, responsive frontend. The solution was designed for high availability, security, and ease of use.</p>
-           <div class="mobile:mt-5 mobile:mb-5 tablet:mt-0 tablet:mb-0 mobile:bg-[#222] tablet:bg-black mobile:p-5 tablet:p-0">
+           <div class="mobile:mt-5 mobile:mb-5 tablet:mt-0 tablet:mb-0 mobile:bg-[#222] tablet:bg-[#222] mobile:p-5 tablet:p-0">
              <p class="pc:mt-3 tablet:mb-10 tablet:mt-10 font-jakarta font-bold pc:text-lg mobile:text-base text-white-300">Technical Approach:</p>
             <ul class="list-disc ml-5 mt-5">
                 <li>
-                    <p class="font-jakarta font-normal tablet::text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Microservices Architecture</span>  Separated core functions (inventory, payments, orders) into independent services for better scalability</p>
+                    <p class="font-jakarta font-normal tablet:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Microservices Architecture</span>  Separated core functions (inventory, payments, orders) into independent services for better scalability</p>
                 </li>
                 <li>
-                    <p class="font-jakarta font-normal tablet::text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Real-time Inventory: </span>: Implemented event-driven architecture using Laravel Events and Redis for instant inventory updates</p>
+                    <p class="font-jakarta font-normal tablet:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Real-time Inventory: </span>: Implemented event-driven architecture using Laravel Events and Redis for instant inventory updates</p>
                 </li>
                 <li>
-                    <p class="font-jakarta font-normal tablet::text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Automated Payouts:</span> Integrated Stripe Connect for automatic vendor payments with configurable payout schedules</p>
+                    <p class="font-jakarta font-normal tablet:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Automated Payouts:</span> Integrated Stripe Connect for automatic vendor payments with configurable payout schedules</p>
                 </li>
                 <li>
-                    <p class="font-jakarta font-normal tablet::text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Advanced Search:</span> Elasticsearch integration with custom relevance algorithms and faceted filtering</p>
+                    <p class="font-jakarta font-normal tablet:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Advanced Search:</span> Elasticsearch integration with custom relevance algorithms and faceted filtering</p>
                 </li>
                 <li>
-                    <p class="font-jakarta font-normal tablet::text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Performance Optimization:</span> Redis caching, CDN integration, database query optimization, and image optimization</p>
+                    <p class="font-jakarta font-normal tablet:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Performance Optimization:</span> Redis caching, CDN integration, database query optimization, and image optimization</p>
                 </li>
                 <li>
-                    <p class="font-jakarta font-normal tablet::text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Mobile-First Design:  </span>Responsive Vue.js components optimized for all devices and screen sizes</p>
+                    <p class="font-jakarta font-normal tablet:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Mobile-First Design:  </span>Responsive Vue.js components optimized for all devices and screen sizes</p>
                 </li>
             </ul>
            </div>
@@ -1256,150 +1263,151 @@
             </div>
         </div>
       </section>
-       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
-        
-        <h2 class="mb-1 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">
-        Project Timeline
-        </h2>
-        <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 text-center">
-          8-month journey from concept to launch
-        </p>
-        
-         <div
-          class="grid mobile:block tablet:grid pc:grid-cols-[217px_31px_217px_31px_217px] tablet:grid-cols-[217px_31px_217px] justify-center gap-x-15.5  gap-y-10  mt-10 items-center"
-        >
-          <div class="mobile:mb-5 tablet:mb-0">
-            <img src="./images/Platform/project_icon1.svg" alt="image" class="mx-auto" />
-            <h2
-              class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
-            >
-             Discovery
-            </h2>
-            <p
-              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
-            >
-            Conducted stakeholder interviews, analyzed existing platform, created technical architecture, and planned migration strategy. Defined core features and created detailed project roadmap.
-            </p>
-          </div>
-          <div>
-            <svg class="mobile:hidden tablet:block"
-              width="31"
-              height="8"
-              viewBox="0 0 31 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M30.3536 4.03568C30.5488 3.84042 30.5488 3.52384 30.3536 3.32858L27.1716 0.146595C26.9763 -0.0486672 26.6597 -0.0486672 26.4645 0.146595C26.2692 0.341857 26.2692 0.65844 26.4645 0.853702L29.2929 3.68213L26.4645 6.51056C26.2692 6.70582 26.2692 7.0224 26.4645 7.21766C26.6597 7.41293 26.9763 7.41293 27.1716 7.21766L30.3536 4.03568ZM0 3.68213V4.18213H30V3.68213V3.18213H0V3.68213Z"
-                fill="#7A7A7A"
-              />
-            </svg>
-          </div>
-          <div class="mobile:mb-5 tablet:mb-0">
-            <img src="./images/Platform/project_icon2.svg" alt="image" class="mx-auto" />
-            <h2
-              class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
-            >
-              Design
-            </h2>
-            <p
-              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
-            >
-              Created wireframes, high-fidelity mockups, and interactive prototypes. Designed user flows for both customers and vendors. Conducted usability testing with target users.            </p>
-          </div>
-          <div>
-            <svg class="mobile:hidden tablet:block"
-              width="31"
-              height="8"
-              viewBox="0 0 31 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M30.3536 4.03568C30.5488 3.84042 30.5488 3.52384 30.3536 3.32858L27.1716 0.146595C26.9763 -0.0486672 26.6597 -0.0486672 26.4645 0.146595C26.2692 0.341857 26.2692 0.65844 26.4645 0.853702L29.2929 3.68213L26.4645 6.51056C26.2692 6.70582 26.2692 7.0224 26.4645 7.21766C26.6597 7.41293 26.9763 7.41293 27.1716 7.21766L30.3536 4.03568ZM0 3.68213V4.18213H30V3.68213V3.18213H0V3.68213Z"
-                fill="#7A7A7A"
-              />
-            </svg>
-          </div>
-          <div class="mobile:mb-5 tablet:mb-0 tablet:col-start-1 tablet:row-start-2 pc:col-start-5 pc:row-start-1">
-            <img src="./images/Platform/project_icon3.svg" alt="image" class="mx-auto" />
-            <h2
-              class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
-            >
-            Development
-            </h2>
-            <p
-              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
-            >
-            Built backend API, database architecture, authentication system, product catalog, inventory management, and payment processing. Developed frontend components and integrated with backend APIs.            </p>
-          </div>
+       <section class="bg-[#222] w-full py-10 mt-20">
+        <div class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+          <h2 class="mb-1 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">
+          Project Timeline
+          </h2>
+          <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 text-center">
+            8-month journey from concept to launch
+          </p>
+          
+          <div
+            class="grid mobile:block tablet:grid pc:grid-cols-[217px_31px_217px_31px_217px] tablet:grid-cols-[217px_31px_217px] justify-center gap-x-15.5  gap-y-10  mt-10 items-center"
+          >
+            <div class="mobile:mb-5 tablet:mb-0">
+              <img src="./images/Platform/project_icon1.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+              Discovery
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+              Conducted stakeholder interviews, analyzed existing platform, created technical architecture, and planned migration strategy. Defined core features and created detailed project roadmap.
+              </p>
+            </div>
+            <div>
+              <svg class="mobile:hidden tablet:block"
+                width="31"
+                height="8"
+                viewBox="0 0 31 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30.3536 4.03568C30.5488 3.84042 30.5488 3.52384 30.3536 3.32858L27.1716 0.146595C26.9763 -0.0486672 26.6597 -0.0486672 26.4645 0.146595C26.2692 0.341857 26.2692 0.65844 26.4645 0.853702L29.2929 3.68213L26.4645 6.51056C26.2692 6.70582 26.2692 7.0224 26.4645 7.21766C26.6597 7.41293 26.9763 7.41293 27.1716 7.21766L30.3536 4.03568ZM0 3.68213V4.18213H30V3.68213V3.18213H0V3.68213Z"
+                  fill="#7A7A7A"
+                />
+              </svg>
+            </div>
+            <div class="mobile:mb-5 tablet:mb-0">
+              <img src="./images/Platform/project_icon2.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+                Design
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+                Created wireframes, high-fidelity mockups, and interactive prototypes. Designed user flows for both customers and vendors. Conducted usability testing with target users.            </p>
+            </div>
+            <div>
+              <svg class="mobile:hidden tablet:block"
+                width="31"
+                height="8"
+                viewBox="0 0 31 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30.3536 4.03568C30.5488 3.84042 30.5488 3.52384 30.3536 3.32858L27.1716 0.146595C26.9763 -0.0486672 26.6597 -0.0486672 26.4645 0.146595C26.2692 0.341857 26.2692 0.65844 26.4645 0.853702L29.2929 3.68213L26.4645 6.51056C26.2692 6.70582 26.2692 7.0224 26.4645 7.21766C26.6597 7.41293 26.9763 7.41293 27.1716 7.21766L30.3536 4.03568ZM0 3.68213V4.18213H30V3.68213V3.18213H0V3.68213Z"
+                  fill="#7A7A7A"
+                />
+              </svg>
+            </div>
+            <div class="mobile:mb-5 tablet:mb-0 tablet:col-start-1 tablet:row-start-2 pc:col-start-5 pc:row-start-1">
+              <img src="./images/Platform/project_icon3.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+              Development
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+              Built backend API, database architecture, authentication system, product catalog, inventory management, and payment processing. Developed frontend components and integrated with backend APIs.            </p>
+            </div>
 
-          <div class="mobile:mb-5 tablet:mb-0">
-            <img src="./images/Platform/project_icon4.svg" alt="image" class="mx-auto" />
-            <h2
-              class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
-            >
-             Integration
-            </h2>
-            <p
-              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
-            >
-            Integrated payment gateways, shipping providers, email services, analytics tools, and other third-party services. Implemented automated testing and CI/CD pipelines.            </p>
+            <div class="mobile:mb-5 tablet:mb-0">
+              <img src="./images/Platform/project_icon4.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+              Integration
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+              Integrated payment gateways, shipping providers, email services, analytics tools, and other third-party services. Implemented automated testing and CI/CD pipelines.            </p>
+            </div>
+            <div>
+              <svg class="mobile:hidden tablet:block"
+                width="31"
+                height="8"
+                viewBox="0 0 31 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30.3536 4.03568C30.5488 3.84042 30.5488 3.52384 30.3536 3.32858L27.1716 0.146595C26.9763 -0.0486672 26.6597 -0.0486672 26.4645 0.146595C26.2692 0.341857 26.2692 0.65844 26.4645 0.853702L29.2929 3.68213L26.4645 6.51056C26.2692 6.70582 26.2692 7.0224 26.4645 7.21766C26.6597 7.41293 26.9763 7.41293 27.1716 7.21766L30.3536 4.03568ZM0 3.68213V4.18213H30V3.68213V3.18213H0V3.68213Z"
+                  fill="#7A7A7A"
+                />
+              </svg>
+            </div>
+            <div class="mobile:mb-5 tablet:mb-0 tablet:col-start-1 tablet:row-start-3 pc:col-start-3 pc:row-start-2">
+              <img src="./images/Platform/project_icon5.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-5 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+              Testing
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+              Comprehensive testing including functional, performance, security, and user acceptance testing. Load testing with simulated traffic. Bug fixes and optimization.
+              </p>
+            </div>
+            <div>
+              <svg class="mobile:hidden tablet:hidden pc:block"
+                width="31"
+                height="8"
+                viewBox="0 0 31 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30.3536 4.03568C30.5488 3.84042 30.5488 3.52384 30.3536 3.32858L27.1716 0.146595C26.9763 -0.0486672 26.6597 -0.0486672 26.4645 0.146595C26.2692 0.341857 26.2692 0.65844 26.4645 0.853702L29.2929 3.68213L26.4645 6.51056C26.2692 6.70582 26.2692 7.0224 26.4645 7.21766C26.6597 7.41293 26.9763 7.41293 27.1716 7.21766L30.3536 4.03568ZM0 3.68213V4.18213H30V3.68213V3.18213H0V3.68213Z"
+                  fill="#7A7A7A"
+                />
+              </svg>
+            </div>
+            <div class="mobile:mb-5 tablet:mb-0 tablet:col-start-3 tablet:row-start-3 pc:col-start-5 pc:row-start-2">
+              <img src="./images/Platform/project_icon6.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-5 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+              Launch
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+                Data migration from old platform, vendor onboarding, soft launch with limited traffic, monitoring and adjustments, full public launch. Post-launch support and optimization.            </p>
+            </div>
           </div>
-          <div>
-            <svg class="mobile:hidden tablet:block"
-              width="31"
-              height="8"
-              viewBox="0 0 31 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M30.3536 4.03568C30.5488 3.84042 30.5488 3.52384 30.3536 3.32858L27.1716 0.146595C26.9763 -0.0486672 26.6597 -0.0486672 26.4645 0.146595C26.2692 0.341857 26.2692 0.65844 26.4645 0.853702L29.2929 3.68213L26.4645 6.51056C26.2692 6.70582 26.2692 7.0224 26.4645 7.21766C26.6597 7.41293 26.9763 7.41293 27.1716 7.21766L30.3536 4.03568ZM0 3.68213V4.18213H30V3.68213V3.18213H0V3.68213Z"
-                fill="#7A7A7A"
-              />
-            </svg>
-          </div>
-          <div class="mobile:mb-5 tablet:mb-0 tablet:col-start-1 tablet:row-start-3 pc:col-start-3 pc:row-start-2">
-            <img src="./images/Platform/project_icon5.svg" alt="image" class="mx-auto" />
-            <h2
-              class="pc:mt-3 mobile:mt-7 mb-5 font-jakarta font-semibold text-lg text-white-300 text-center"
-            >
-             Testing
-            </h2>
-            <p
-              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
-            >
-            Comprehensive testing including functional, performance, security, and user acceptance testing. Load testing with simulated traffic. Bug fixes and optimization.
-            </p>
-          </div>
-          <div>
-            <svg class="mobile:hidden tablet:hidden pc:block"
-              width="31"
-              height="8"
-              viewBox="0 0 31 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M30.3536 4.03568C30.5488 3.84042 30.5488 3.52384 30.3536 3.32858L27.1716 0.146595C26.9763 -0.0486672 26.6597 -0.0486672 26.4645 0.146595C26.2692 0.341857 26.2692 0.65844 26.4645 0.853702L29.2929 3.68213L26.4645 6.51056C26.2692 6.70582 26.2692 7.0224 26.4645 7.21766C26.6597 7.41293 26.9763 7.41293 27.1716 7.21766L30.3536 4.03568ZM0 3.68213V4.18213H30V3.68213V3.18213H0V3.68213Z"
-                fill="#7A7A7A"
-              />
-            </svg>
-          </div>
-          <div class="mobile:mb-5 tablet:mb-0 tablet:col-start-3 tablet:row-start-3 pc:col-start-5 pc:row-start-2">
-            <img src="./images/Platform/project_icon6.svg" alt="image" class="mx-auto" />
-            <h2
-              class="pc:mt-3 mobile:mt-7 mb-5 font-jakarta font-semibold text-lg text-white-300 text-center"
-            >
-            Launch
-            </h2>
-            <p
-              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
-            >
-              Data migration from old platform, vendor onboarding, soft launch with limited traffic, monitoring and adjustments, full public launch. Post-launch support and optimization.            </p>
-          </div>
-        </div>
+        </div>  
       </section>
       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-25">
         <h2 class="mb-3 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Customer review</h2>
@@ -1414,8 +1422,9 @@
             </div>
          </div>
       </section>
-      <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-25">
-        <h2 class="mb-1 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Project Team</h2>
+      <section class="tablet:bg-[#222] tablet:w-full tablet:py-10 mt-25">
+        <div class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+          <h2 class="mb-1 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Project Team</h2>
         <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 text-center">The talented people behind this success</p>
         <div class="grid pc:grid-cols-[187px_187px_187px_187px]  mobile:grid-cols-[148px_148px] tablet:grid-cols-[148px_148px_148px_148px] justify-center mt-10 pc:gap-x-20 mobile:gap-x-3 pc:gap-y-17.5 mobile:gap-y-10">
           <div>
@@ -1474,6 +1483,7 @@
               <p class="font-poppins font-medium pc:font-sm mobile:text-xs text-[#989898] text-center">QA Engineer</p>
             </figure>
           </div>
+        </div>
         </div>
       </section>
       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
