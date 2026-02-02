@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded",function() {
   scrollbar: {
     el: '.swiper-scrollbar',
       draggable: true,
+      autoHeight: true
   },
 });
 
