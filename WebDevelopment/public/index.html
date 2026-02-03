@@ -306,7 +306,7 @@
               <div class="relative">
                 <button
                   type="button"
-                  class="pc:h-[60px] mobile:h-[49px] w-77.25 font-jakarta font-medium pc:text-lg mobile:text-sm relative pc:bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_active_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] hover:font-bold transition-bg ease-in duration-300"
+                  class="pc:h-[60px] mobile:mt-5 tablet:mt-0 mobile:mb-3 tablet:mb-0 mobile:h-[49px] w-77.25 font-jakarta font-medium pc:text-lg mobile:text-sm relative pc:bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] hover:font-bold transition-bg ease-in duration-300"
                 >
                   <span class="absolute left-7.5 top-[30%] whitespace-pre"
                     >G E T  F R E E  C O N S U L A T I O N</span
@@ -315,7 +315,7 @@
               </div>
               <div>
                 <a
-                  class="block mobile:ml-[125px] tablet:ml-[0px] pc:h-[60px] mobile:h-[49px] pc:w-77.25 mobile:w-40 font-jakarta font-medium pc:text-lg mobile:text-sm relative pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_active_header.svg')] bg-left bg-no-repeat pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] hover:font-bold transition-bg ease-in duration-300"
+                  class="block mobile:mb-3 tablet:mb-0 mobile:ml-[125px] tablet:ml-[0px] pc:h-[60px] mobile:h-[49px] pc:w-77.25 mobile:w-40 font-jakarta font-medium pc:text-lg mobile:text-sm relative pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] bg-left bg-no-repeat pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] hover:font-bold transition-bg ease-in duration-300"
                   href="#"
                   ><span class="absolute left-7.5 top-[30%] whitespace-pre"
                     >V I E W  C A S E S  T U D I E S</span
@@ -551,7 +551,7 @@
       </div>
     </div>
     <main>
-      <section class=" w-full pc:mt-[0px] tablet:mt-[30px] mobile:mt-[40px] bg-[#222]/50 tablet:py-25 mobile:py-20  pc:pb-10" >
+      <section class=" w-full pc:mt-[0px] tablet:mt-[30px] mobile:mt-[20px] bg-[#222]/50 tablet:py-25 mobile:py-20  pc:pb-10" >
         <div class="grid pc:grid-cols-[396px_532px] tablet:grid-cols-[213px_360px] mobile:grid-cols-[300px] justify-between pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
           <div>
             <div class="grid pc:grid-cols-[187px_194px] tablet:grid-cols-[145px_145px] mobile:grid-cols-[176px_176px] gap-x-2.5">
@@ -1050,12 +1050,12 @@
                   </svg></span> <!-- Стрелки -->
               </button>
                  <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute top-[40px] left-[-20px] pc:w-[328px] tablet:w-[208px] mobile:w-[320px] bg-black px-5 pb-5">
-                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in" >Custom Web Development</a>
-                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">Laravel Development</a>
-                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">Mobile Development</a>
-                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">E-commerce Solutions</a>
-                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">CRM Implementation</a>
-                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">Digital Marketing</a>
+                  <p @click="selected = 'Custom Web Development'; open = false $el.style.backgroundColor = 'yellow'"   class="mb-4 mt-2 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in" >Custom Web Development</a>
+                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-4 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">Laravel Development</a>
+                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-4 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">Mobile Development</a>
+                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-4 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">E-commerce Solutions</a>
+                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-4 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">CRM Implementation</a>
+                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-4 font-poppins font-normal pc:text-base tablet:text-sm mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300  ease-in">Digital Marketing</a>
                     <div class="border-b border-solid border-[#d9d9d9]" ></div>
                   </div>
               </div>
