@@ -64,9 +64,9 @@
   </head>
   <body class="bg-black text-white-100 text-base">
     
-    <div class=" pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+    <div class=" tablet:bg-[url('./images/banner.png')] mobile:bg-[url('./images/mobile/banner_mobile.png')]  pc:h-[803px]  mobile:h-full mobile:max-w-full bg-cover bg-left bg-no-repeat">
       <div
-        class=" tablet:bg-[url('./images/banner.png')] mobile:bg-[url('./images/mobile/banner_mobile.png')]  pc:h-[803px]  mobile:h-full mobile:max-w-full pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px]  bg-cover bg-center"
+        class="  pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto "
       >
         <header class="mt-9 py-4 relative z-100"
              
@@ -556,11 +556,11 @@
           <div>
             <div class="grid pc:grid-cols-[187px_194px] tablet:grid-cols-[145px_145px] mobile:grid-cols-[176px_176px] gap-x-2.5">
               <div>
-                <img src="./images/global_image.png" alt="Image" />
+                <img src="./images/global_image.png" class="mobile:h-[262px] mobile:w-[176px] tablet:w-[145px] tablet:h-[270px] pc:w-[187px] pc:h-[386px]" alt="Image" />
               </div>
-              <div class="relative pc:left-[0] pc:top-[0px] tablet:left-[-80px] tablet:top-[80px] mobile:left-[-60px]">
+              <div class="relative pc:left-[0] pc:top-[0px] tablet:left-[-80px] tablet:top-[80px] mobile:left-[-60px] ">
                 <img
-                  class="mt-27"
+                  class="mt-27 mobile:h-[262px] mobile:w-[176px] tablet:w-[145px] tablet:h-[270px] pc:w-[187px] pc:h-[386px]"
                   src="./images/global_image1.png"
                   alt="Image"
                 />
@@ -679,7 +679,7 @@
           Some of our Clients
         </h2>
         <div
-          class="grid pc:grid-cols-[167px_164px_103px_134px_105px] tablet:grid-cols-[104px_102px_64px_83px_65px] mobile:grid-cols-[59px_93px_59px] justify-center pc:gap-x-18 tablet:gap-x-12 mobile:gap-x-10"
+          class="grid pc:grid-cols-[167px_164px_103px_134px_105px] tablet:grid-cols-[104px_102px_64px_83px_65px] mobile:grid-cols-[59px_93px_59px] justify-center pc:gap-x-18 tablet:gap-x-12 mobile:gap-x-10 mobile:gap-y-3 tablet:gap-y-0"
         >
           <div>
             <svg class="pc:w-[168px] pc:h-[74px] tablet:w-[104px] tablet:h-[46px] mobile:w-[59px] mobile:h-[42px]"
@@ -777,7 +777,7 @@
               </defs>
             </svg>
           </div>
-          <div>
+          <div class="mobile:ml-14 tablet:ml-0">
             <svg class="pc:w-[134px] pc:h-[74px] tablet:w-[83px] tablet:h-[46px] mobile:w-[76px] mobile:h-[42px]"
               width="134"
               height="74"
@@ -809,7 +809,7 @@
               </defs>
             </svg>
           </div>
-          <div>
+          <div class="mobile:ml-12 tablet:ml-0">
             <svg class="pc:w-[106px] pc:h-[74px] tablet:w-[65px] tablet:h-[46px] mobile:w-[95px]  mobile:h-[42px]"
               width="106"
               height="74"
