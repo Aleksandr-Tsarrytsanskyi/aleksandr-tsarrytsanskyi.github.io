@@ -51,12 +51,24 @@
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <script  src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
     <script src="./javascripts/event.js"></script>
+    <script src="./javascripts/services.js"></script>
     <title>Document</title>
   </head>
   <body class="bg-black text-white-100 text-base">
+    <section  x-data="{ show: false }"
+     @scroll.window="show = (window.scrollY > 1000)"
+     class="relative mobile:block tablet:hidden">
+        <div x-show="show"
+         x-transition class="mobile:float-right fixed top-20 z-20 right-0   flex items-center cursor-pointer">
+          
+            <a href="#"  class=" right-[0px] top-[2px] bg-[url('./images/mobile/up.svg')] bg-center bg-no-repeat bg-[#222] w-[56px] mr-3 h-[56px] rounded-[100px]" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"></a>
+           
+        </div>
+    </section>
     <div
       class="bg-[url('./images/banner.png')] pc:h-203 mobile:h-[460px] pc:h-[740px] min-h-full max-w-full bg-cover bg-center"
     >
@@ -343,9 +355,9 @@
         </div>
       </div>
     </div>
-    <main class="pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px] mx-auto">
-      <section>
-        <div class="grid justify-center  h-[40px]">
+    <main class="">
+      <section class=" ">
+        <div class="grid justify-center bg-[#222]/50 py-10  tablet:h-[110px]">
           <div>
             <nav>
               <ul>
@@ -390,14 +402,14 @@
           </div>
         </div>
       </section>
-      <section class="mobile:mt-20 tablet:mt-0 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[375px] mx-auto">
+      <section class=" tablet:mt-0 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[375px] mx-auto">
        
             <div
-              class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px] tablet:mt-[100px] mobile:mt-[60px]  left-0 w-full h-full justify-center"
+              class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px]   left-0 w-full h-full justify-center"
             >
         
-            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]" >
-              <a href="#">
+            <div x-data="{ open: false }" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]" >
+              <a href="#" @click="open = true"  @click.prevent>
                 <div class="absolute top-0">
                 <img src="./images/clients_image.png"  alt="Image" />
               </div>
@@ -442,7 +454,7 @@
                     </p>
                   </div>
                   <div>
-                    <a
+                    <a x-show="open" 
                       class="relative block z-50 pc:mt-3 tablet:mt-8 mobile:mt-7 pc:bg-[url('./images/clients_more.svg')] mobile:bg-[url('./images/mobile/icon_clients_mobile.svg')] bg-right bg-no-repeat pc:w-[70px] pc:h-[70px] tablet:w-[56px] tablet:h-[56px] mobile:w-[46px] mobile:h-[46px] tablet:bg-[url('./images/mobile/icon_clients.svg')]" 
                       href="#"
                     ></a>
@@ -684,7 +696,7 @@
         </form>
         
       </section>
-      <section class="mt-20 tablet:h-[550px]">
+      <section class="mt-20 tablet:h-[550px] pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px] mx-auto">
         <div class="grid pc:grid-cols-[430px_460px] mobile:grid-cols-[300px] tablet:grid-cols-[250px_326px]  justify-between">
           <div class="mobile:h-[450px] tablet:h-auto">
             <img src="./images/services/services_image.png" class="pc:w-[342px] pc:h-[411px] mobile:w-[230px] mobile:h-[355px] tablet:w-[250px] tablet:h-[315px]" alt="image" />
@@ -743,11 +755,11 @@
           </div>
         </div>
       </section>
-      <section class="mt-20">
-        <h2 class="mb-1 font-poppins font-light text-2xl text-center">
+      <section class="mt-20 pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px] mx-auto">
+        <h2 class="mb-1 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">
           How We Work
         </h2>
-        <p class="font-jakarta font-normal text-lg text-white-300 text-center">
+        <p class="font-poppins font-light pc:text-lg tablet:text-sm text-white-300 text-center">
           Our proven process ensures successful project delivery every time
         </p>
         <div
@@ -896,7 +908,7 @@
           </div>
         </div>
          <div
-          class="grid mobile:block tablet:grid pc:grid-cols-[217px_31px_217px_31px_217px] tablet:grid-cols-[217px_31px_217px] justify-center gap-x-15.5  gap-y-10  mt-10 items-center"
+          class="grid mobile:hidden tablet:block mobile:block tablet:grid pc:grid-cols-[217px_31px_217px_31px_217px] tablet:grid-cols-[217px_31px_217px] justify-center gap-x-15.5  gap-y-10  mt-10 items-center"
         >
           <div class="mobile:mb-5 tablet:mb-0">
             <img src="./images/icon_work1.svg" alt="image" class="mx-auto" />
@@ -913,7 +925,7 @@
             </p>
           </div>
           <div>
-            <svg class="mobile:hidden tablet:block"
+            <svg 
               width="31"
               height="8"
               viewBox="0 0 31 8"
@@ -941,7 +953,7 @@
             </p>
           </div>
           <div>
-            <svg class="mobile:hidden tablet:block"
+            <svg 
               width="31"
               height="8"
               viewBox="0 0 31 8"
@@ -984,7 +996,7 @@
             </p>
           </div>
           <div>
-            <svg class="mobile:hidden tablet:block"
+            <svg 
               width="31"
               height="8"
               viewBox="0 0 31 8"
@@ -1012,7 +1024,7 @@
             </p>
           </div>
           <div>
-            <svg class="mobile:hidden tablet:hidden pc:block"
+            <svg class="tablet:hidden pc:block"
               width="31"
               height="8"
               viewBox="0 0 31 8"
@@ -1040,6 +1052,120 @@
             </p>
           </div>
         </div>
+        <div class="mobile:block tablet:hidden mt-5 swiper h-[220px] mobile_work">
+
+        <div class="swiper-wrapper">
+         
+          <div class="swiper-slide">
+            <div class="mobile:mb-5 tablet:mb-0">
+            <img src="./images/icon_work1.svg" alt="image" class="mx-auto" />
+            <h2
+              class="mt-3 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+            >
+              Discovery
+            </h2>
+            <p
+              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+            >
+              We start by understanding your business goals, target audience,
+              and technical requirements through detailed consultations.
+            </p>
+          </div>
+          </div>
+         
+          <div class="swiper-slide">
+            <div class="">
+            <img src="./images/icon_work2.svg" alt="image" class="mx-auto" />
+            <h2
+              class="mt-3 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+            >
+              Strategy & Planning
+            </h2>
+            <p
+              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+            >
+              Our team creates a comprehensive project roadmap with clear
+              milestones, timelines, and deliverables.
+            </p>
+          </div>
+          </div>
+           <div class="swiper-slide">
+              <div class="">
+            <img src="./images/icon_work3.svg" alt="image" class="mx-auto" />
+            <h2
+              class="mt-3 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+            >
+              Design & Development
+            </h2>
+            <p
+              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+            >
+              Using agile methodology, we design and build your solution in
+              iterative sprints with regular feedback loops.
+            </p>
+          </div>
+          </div>
+           <div class="swiper-slide">
+            <div>
+            <img src="./images/icon_work4.svg" alt="image" class="mx-auto" />
+            <h2
+              class="mt-3 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+            >
+              Testing & QA
+            </h2>
+            <p
+              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+            >
+              Rigorous testing ensures your product is bug-free, secure, and
+              performs flawlessly across all devices.
+            </p>
+          </div>
+          </div>
+           <div class="swiper-slide">
+               <div >
+            <img src="./images/icon_work5.svg" alt="image" class="mx-auto" />
+            <h2
+              class="mt-5 mb-5 font-jakarta font-semibold text-lg text-white-300 text-center"
+            >
+              Launch & Deploy
+            </h2>
+            <p
+              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+            >
+              We handle the complete deployment process, from server setup to
+              going live with zero downtime.
+            </p>
+          </div>
+          </div>
+           <div class="swiper-slide">
+              <div>
+            <img src="./images/icon_work6.svg" alt="image" class="mx-auto" />
+            <h2
+              class="mt-5 mb-5 font-jakarta font-semibold text-lg text-white-300 text-center"
+            >
+              Support & Growth
+            </h2>
+            <p
+              class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+            >
+              Post-launch, we provide ongoing support, monitoring, and
+              continuous improvements based on user feedback.
+            </p>
+          </div>
+          </div>
+
+         
+        </div>
+     
+        <div class="swiper-pagination"></div>
+
+      
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+     
+        <div class="swiper-scrollbar"></div>
+      </div>
       </section>
       <section class="tablet:mt-10 mobile:mt-10 pc:mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <div class="grid pc:grid-cols-[385px_310px] tablet:grid-cols-[385px_220px] tablet:justify-between mobile:justify-center items-center">
@@ -1239,7 +1365,7 @@
          
         </div>
       </section>
-      <section class="pc:mt-20 mobile:mt-10">
+      <section class="pc:mt-20 mobile:mt-10 pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px] mx-auto">
         <h2 class="font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Our Technology Stack</h2>
         <p class="font-poppins font-light pc:text-lg mobile:text-sm text-white-300 text-center">We work with modern, proven technologies</p>
         <div class="grid pc:grid-cols-[312px_312px_312px] mobile:grid-cols-[141px_141px] tablet:grid-cols-[194px_194px_194px] justify-center justify-items-center mt-10 gap-y-5 gap-x-3">
@@ -1399,7 +1525,7 @@
             </div>
         </div>
       </section>
-       <section class="mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mobile:h-[560px] tablet:h-[500px] pc:h-[600px] mx-auto">
+       <section class="mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mobile:h-[630px] tablet:h-[500px] pc:h-[600px] mx-auto">
         <h2 class="mobile:mb-2 tablet:mb-0 text-center font-poppins font-light pc:text-2xl mobile:text-[24px]">
           Frequently Asked Questions
         </h2>
@@ -1409,7 +1535,7 @@
         <div class="mt-5 h-[650px]" x-data="{ openIndex: null }">
           <button
             type="button"
-            class="grid pc:grid-cols-[940px_21px] tablet:grid-cols-[590px_21px] pc:w-[960px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] tablet:grid-cols-[590px_21px] pc:w-[960px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:w-[608px] items-center mb-3 text-left  font-poppins mobile:text-sm font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 1 ? null : 1" :style="openIndex  !== 1? 'border-bottom: 1px solid #9ca3af;' : 'border: none;'"
           >
            What services do you offer?
@@ -1453,7 +1579,7 @@
           </div>
            <button
             type="button"
-            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left  font-poppins mobile:text-sm font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 2? null : 2" :style="openIndex  !== 2? 'border-bottom: 1px solid #9ca3af;' : 'border: none;'"
           >
            How long does a typical project take?
@@ -1497,7 +1623,7 @@
           </div>
             <button
             type="button"
-            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left font-poppins mobile:text-sm font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 3? null : 3" :style="openIndex  !== 3? 'border-bottom: 1px solid #9ca3af;' : 'border: none;'"
           >
          Do you work with startups or only established businesses?
@@ -1540,7 +1666,7 @@
           </div>
            <button 
             type="button"
-            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left  font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left  font-poppins mobile:text-sm font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 4? null : 4" :style="openIndex  !== 4? 'border-bottom: 1px solid #9ca3af;' : 'border: none;'"
           >
          What is your development process?
@@ -1584,7 +1710,7 @@
           </div>
             <button
             type="button"
-            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left font-jakarta font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
+            class="grid pc:grid-cols-[940px_21px] mobile:grid-cols-[280px_21px] mobile:w-[300px] tablet:grid-cols-[590px_21px] pc:w-[960px] tablet:w-[608px] items-center mb-3 text-left font-poppins mobile:text-sm font-normal pc:text-[20px] tablet:text-base pb-5 border-b border-solid border-[#7a7a7a]"
             @click="openIndex = openIndex === 5? null : 5" :style="openIndex  !== 5? 'border-bottom: 1px solid #9ca3af;' : 'border: none;'"
           >
        Do you provide post-launch support?
@@ -1643,7 +1769,7 @@
         </div>
         
       </section>
-    <footer class="  bg-[#575757] w-full pt-10 pb-10">
+    <footer class="  bg-[#4b5563] w-full pt-10 pb-10">
       <div
         class="grid tablet:grid-cols-[187px_187px_124px_212px] mobile:grid-cols-[120px_120px] pc:gap-x-20 tablet:gap-x-5 mobile:gap-x-10 mobile:gap-y-10 pc:gap-y-0 justify-center"
       >
@@ -1863,7 +1989,7 @@
               @webparadox
             </p>
           </div>
-          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[20px] tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
+          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[20px] tablet:top-[0px] mobile:mb-5 mobile:mt-12 tablet:mt-0 tablet:mb-0 tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
             <div>
               <a
                 href="#"

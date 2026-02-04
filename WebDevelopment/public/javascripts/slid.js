@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-      let clients =  new Swiper(".clients", {
+ let clients =  new Swiper(".clients", {
     
     loop: true,
     centeredSlides: true,
-    
+    allowTouchMove: false,
     slidesPerView: 3,
     spaceBetween: 60,
     // pagination: {
@@ -16,7 +16,26 @@ document.addEventListener("DOMContentLoaded", function() {
     //     nextEl: '.swiper-button-next',
     //     prevEl: '.swiper-button-prev',
     // }
-});
+
+    breakpoints: {
+    // когда ширина экрана >= 320px (мобильные)
+    300: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // когда ширина экрана >= 640px (планшеты)
+    768: {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // когда ширина экрана >= 1024px (десктопы)
+    960: {
+      slidesPerView: 3,
+      spaceBetween: 60
+    }
+  }
+    });
 
 
 const swiperPrev = document.querySelector(".swiperPrev");

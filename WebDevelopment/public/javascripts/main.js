@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded",function() {
   const swiper = new Swiper('.technology', {
   // Optional parameters
  
-  loop: true,
-  slidesPerView: 3,
+  
+  
    spaceBetween: 10,
-    slidesPerView: "auto",
+  
 
   // If we need pagination
   // pagination: {
@@ -28,6 +28,25 @@ document.addEventListener("DOMContentLoaded",function() {
       draggable: true,
       autoHeight: true
   },
+
+   breakpoints: {
+    // когда ширина экрана >= 320px (мобильные)
+    300: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // когда ширина экрана >= 640px (планшеты)
+    768: {
+      loop: true,
+      slidesPerView: 6,
+      spaceBetween: 20
+    },
+    // когда ширина экрана >= 1024px (десктопы)
+    960: {
+      slidesPerView: 8,
+      spaceBetween: 30
+    }
+  }
 });
 
     let clients =  new Swiper(".clients", {
@@ -48,7 +67,24 @@ document.addEventListener("DOMContentLoaded",function() {
     //     prevEl: '.swiper-button-prev',
     // }
 
-    
+    breakpoints: {
+    // когда ширина экрана >= 320px (мобильные)
+    300: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // когда ширина экрана >= 640px (планшеты)
+    768: {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // когда ширина экрана >= 1024px (десктопы)
+    960: {
+      slidesPerView: 3,
+      spaceBetween: 60
+    }
+  }
     });
 
 

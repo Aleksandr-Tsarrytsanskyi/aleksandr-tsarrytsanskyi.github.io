@@ -1,0 +1,18 @@
+document.addEventListener("DOMContentLoaded",function() {
+const swiper = new Swiper('.mobile_work', {
+  // Optional parameters
+ slidesPerView: 1.5,
+    spaceBetween: 20,
+  loop: true,
+
+  // If we need pagination
+
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+});
+
+})

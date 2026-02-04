@@ -42,18 +42,32 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth@0,75..100;1,75..100&display=swap"
       rel="stylesheet"
     />
-    
-    <script
-      
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script 
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <script  src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
     <script src="./javascripts/event.js"></script>
+    <script src="./javascripts/platforms.js"></script>
     <title>Document</title>
   </head>
   <body class="bg-black text-white-100 text-base">
+    <section  x-data="{ show: false }"
+     @scroll.window="show = (window.scrollY > 1000)"
+     class="relative mobile:block tablet:hidden">
+        <div x-show="show"
+         x-transition class="mobile:float-right fixed top-20 z-20 right-0   flex items-center cursor-pointer">
+          
+            <a href="#"  class=" right-[0px] top-[2px] bg-[url('./images/mobile/up.svg')] bg-center bg-no-repeat bg-[#222] w-[56px] mr-3 h-[56px] rounded-[100px]" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"></a>
+           
+        </div>
+    </section>
     <div
       class="bg-[url('./images/banner.png')]  mobile:h-[460px] pc:h-[600px] min-h-full max-w-full bg-cover bg-center"
     >
@@ -330,25 +344,25 @@
           class="grid pc:grid-cols-[158px_165px_71px_75px] mobile:grid-cols-[104px_107px] tablet:grid-cols-[104px_108px_47px_49px] pc:mt-12 mobile:mt-7 pc:gap-x-20 mobile:gap-x-3 tablet:gap-x-20 mobile:gap-y-5 tablet:gap-y-0 tablet:justify-center mobile:justify-between"
         >
           <div>
-            <h2 class="font-jakarta font-normal pc:text-lg tablet:text-[10px] mobile:text-xs  text-white-300">Client</h2>
+            <h2 class="mb-2 font-jakarta font-normal pc:text-lg tablet:text-[10px] mobile:text-xs  text-white-300">CLIENT</h2>
             <p class="font-jakarta mobile:font-medium font-semibold pc:text-lg mobile:text-xs text-white-100">
             Fashion Retail Group
             </p>
           </div>
           <div>
-            <h2 class="font-jakarta font-normal pc:text-lg mobile:text-xs tablet:text-[10px] text-white-300">Industry</h2>
+            <h2 class="mb-2 font-jakarta font-normal pc:text-lg mobile:text-xs tablet:text-[10px] text-white-300">INDUSTRY</h2>
             <p class="font-jakarta mobile:font-medium font-semibold pc:text-lg mobile:text-xs text-white-100">
               E-commerce & Retail
             </p>
           </div>
-          <div>
-            <h2 class="font-jakarta font-normal pc:text-lg mobile:text-xs tablet:text-[10px] text-white-300">Timeline</h2>
+          <div class="mobile:col-start-2 mobile:row-start-1 tablet:col-start-3 mobile:row-start-1">
+            <h2 class="mb-2 font-jakarta font-normal pc:text-lg mobile:text-xs tablet:text-[10px] text-white-300">TIMELINE</h2>
             <p class="font-jakarta mobile:font-medium font-semibold pc:text-lg mobile:text-xs text-white-100">
               8 Months
             </p>
           </div>
           <div>
-            <h2 class="font-jakarta font-normal pc:text-lg mobile:text-xs tablet:text-[10px] text-white-300">Team Size</h2>
+            <h2 class="mb-2 font-jakarta font-normal pc:text-lg mobile:text-xs tablet:text-[10px] text-white-300">TEAM SIZE</h2>
             <p class="font-jakarta mobile:font-medium font-semibold pc:text-lg mobile:text-xs text-white-100">
              12 People
             </p>
@@ -358,7 +372,7 @@
     </div>
     <main>
       <section class="pc:max-w-[960px] mobile:mt-5 tablet:mt-0 tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
-        <img src="./images/Platform/image.png" alt="Image" />
+        <img src="./images/Platform/image.png" class="mobile:w-[297px] mobile:h-[258px] tablet:w-[608px] tablet:h-[306px] pc:w-[960px] pc:h-[480px]" alt="Image" />
       </section>
       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
         <div class="grid pc:grid-cols-[497px_395px] mobile:grid-cols-[300px] tablet:grid-cols-[291px_291px] justify-between">
@@ -379,39 +393,39 @@
               fulfillment, and advanced search capabilities. The platform
               launched successfully and now processes thousands of orders daily.
             </p>
-            <div class="py-[18px] px-[22px] bg-[#222] mobile:mb-5 tablet:mb-0">
+            <div class="py-[18px] px-[22px] bg-[#222]  mobile:h-[280px]  tablet:h-auto mobile:mb-5 tablet:mb-0">
               <h2
-                class="mb-5 font-jakarta font-bold pc:text-[22px] mobile:text-sm text-white-300"
+                class="mobile:mb-7 mobile:mt-1 tablet:mt-0 tablet:mb-5 font-jakarta mobile:font-bold pc:font-semibold pc:text-[22px] mobile:text-base text-white-300"
               >
                 Key Features Delivered:
               </h2>
               <ul class="list-disc ml-5">
-                <li class="mb-2">
+                <li class="mobile:mb-3 tablet:mb-2">
                   <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300">
                     Multi-vendor marketplace infrastructure
                   </p>
                 </li>
-                <li class="mb-2">
+                <li class="mobile:mb-3 tablet:mb-2">
                   <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300">
                     Real-time inventory synchronization
                   </p>
                 </li>
-                <li class="mb-2">
+                <li class="mobile:mb-3 tablet:mb-2">
                   <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300">
                     Automated vendor payouts
                   </p>
                 </li>
-                <li class="mb-2">
+                <li class="mobile:mb-3 tablet:mb-2">
                   <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300">
                     Advanced product filtering & search
                   </p>
                 </li>
-                <li class="mb-2">
+                <li class="mobile:mb-3 tablet:mb-2">
                   <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300">
                     Multi-currency & multi-language support
                   </p>
                 </li>
-                <li class="mb-2">
+                <li class="mobile:mb-3 tablet:mb-2">
                   <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300">
                     Comprehensive analytics dashboard
                   </p>
@@ -420,37 +434,37 @@
             </div>
           </div>
           <div
-            class="pc:w-[388px] mobile:w-[300px] py-[42px] px-[41px] border border-solid border-[#7a7a7a]"
+            class="pc:w-[388px] mobile:w-[300px] py-[30px] px-[41px] mobile:h-[557px] tablet:h-auto border border-solid border-[#7a7a7a]"
           >
             <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-[20px]">
               Project Details
             </h2>
-            <div class="pb-3 mb-3 border-b border-solid border-[#7a7a7a]">
-              <p class="mb-1 font-jakarta font-medium text-sm text-white-300">
+            <div class="pb-5 mb-5 border-b border-solid border-[#7a7a7a]">
+              <p class="mb-3 font-jakarta font-medium text-sm text-white-300">
                 Services Provided
               </p>
               <h2 class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">
                 Custom Development, UI/UX Design, DevOps, Support
               </h2>
             </div>
-            <div class="pb-3 mb-3 border-b border-solid border-[#7a7a7a]">
-              <p class="mb-1 font-jakarta font-normal text-sm text-white-300">
+            <div class="pb-5 mb-5 border-b border-solid border-[#7a7a7a]">
+              <p class="mb-3 font-jakarta font-normal text-sm text-white-300">
                 Technologies Used
               </p>
               <h2 class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">
                 Laravel 10, Vue.js 3, MySQL, Redis, AWS, Stripe
               </h2>
             </div>
-            <div class="pb-3 mb-3 border-b border-solid border-[#7a7a7a]">
-              <p class="mb-1 font-jakarta font-normal text-sm text-white-300">
+            <div class="pb-5 mb-5 border-b border-solid border-[#7a7a7a]">
+              <p class="mb-3 font-jakarta font-normal text-sm text-white-300">
                 Project Duration
               </p>
               <h2 class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">
                 8 Months (Planning to Launch)
               </h2>
             </div>
-            <div class="pb-3 mb-3 border-b border-solid border-[#7a7a7a]">
-              <p class="mb-1 font-jakarta font-normal text-sm text-white-300">
+            <div class="pb-5 mb-5 border-b border-solid border-[#7a7a7a]">
+              <p class="mb-3 font-jakarta font-normal text-sm text-white-300">
                 Team
               </p>
               <h2 class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">
@@ -458,7 +472,7 @@
               </h2>
             </div>
             <div>
-              <p class="mb-1 font-jakarta font-normal text-sm text-white-300">
+              <p class="mb-3 font-jakarta font-normal text-sm text-white-300">
                 Location
               </p>
               <h2 class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">
@@ -468,13 +482,7 @@
           </div>
         </div>
       </section>
-      <section class="pc:max-w-[960px] relative mt-8 tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mobile:block tablet:hidden">
-        <div class="mobile:float-right absolute right-[-20px] flex items-center cursor-pointer">
-          
-            <a href="#"  class="  bg-[url('./images/mobile/up.svg')] bg-center bg-no-repeat bg-[#222] w-[56px] mr-3 h-[56px] rounded-[100px]" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"></a>
-           
-        </div>
-       </section>
+      
       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
         <h2 class="mb-1 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Results & Impact</h2>
         <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 text-center">Measurable success metrics achieved within 6 months of launch</p>
@@ -787,14 +795,38 @@
       </section>
       <section class="tablet:bg-[#222] tablet:w-full tablet:py-20 mt-20">
         <div class="grid pc:grid-cols-[355px_569px] mobile:grid-cols-[300px] tablet:grid-cols-[260px_326px] pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto justify-between">
-           <div>
+           <div class="mobile:mt-5 tablet:mt-0">
              <img src="./images/Platform/image1.png" class="pc:h-[416px] pc:w-[355px] tablet:h-[429px]" alt="Image">
-             <p class="mt-7 font-jakarta font-normal text-base text-white-300"> The client needed a complete platform rebuild that could launch within 8 months while maintaining business continuity during migration.</p>
+             <p class="mobile:hidden tablet:block mt-7 font-jakarta font-normal text-base text-white-300"> The client needed a complete platform rebuild that could launch within 8 months while maintaining business continuity during migration.</p>
            </div>
+           <div class="mobile:block tablet:hidden mobile:mt-5 mobile:mb-5 tablet:mt-0 tablet:mb-0 mobile:bg-[#222] tablet:bg-[#222] mobile:p-5 tablet:p-0">
+              <p class="mt-3 font-jakarta font-bold pc:text-lg mobile:text-base text-white-300">Key challenges we needed to solve:</p>
+            <ul class="list-disc ml-5 mt-5">
+                <li>
+                    <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Scalability Issues:</span> Platform couldn't handle more than 500 concurrent users without performance degradation</p>
+                </li>
+                <li>
+                    <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Complex Inventory: </span>No real-time inventory sync across multiple vendors and warehouses</p>
+                </li>
+                <li>
+                    <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Payment Processing:</span> Manual vendor payouts taking weeks to process</p>
+                </li>
+                <li>
+                    <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Poor UX:</span> Outdated interface with confusing navigation and checkout flow</p>
+                </li>
+                <li>
+                    <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Limited Analytics:</span> Vendors had no visibility into their sales performance</p>
+                </li>
+                <li>
+                    <p class="font-jakarta font-medium pc:text-base mobile:text-xs text-white-300 leading-[245%]"><span class="font-bold text-white">Mobile Experience: </span>Non-responsive design causing 60% mobile bounce rate</p>
+                </li>
+            </ul>
+            </div>
            <div class="mobile:col-start-1 mobile:row-start-1 tablet:col-start-2 tablet:row-start-1">
             <h2 class="mb-3 font-poppins font-normal pc:text-2xl mobile:text-[24px] mobile:text-center tablet:text-left">The Challenge</h2>
             <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300">The client's existing e-commerce platform was built on legacy technology that couldn't scale to meet growing demand. They were losing vendors due to poor performance, limited features, and frequent downtime. The checkout process was confusing, resulting in 70% cart abandonment rate.</p>
-            <div class="mobile:mt-5 mobile:mb-5 tablet:mt-0 tablet:mb-0 mobile:bg-[#222] tablet:bg-[#222] mobile:p-5 tablet:p-0">
+            <p class="mobile:block tablet:hidden mt-7 font-jakarta font-normal text-base text-white-300"> The client needed a complete platform rebuild that could launch within 8 months while maintaining business continuity during migration.</p>
+            <div class="mobile:hidden tablet:block mobile:mt-5 mobile:mb-5 tablet:mt-0 tablet:mb-0 mobile:bg-[#222] tablet:bg-[#222] mobile:p-5 tablet:p-0">
               <p class="mt-3 font-jakarta font-bold pc:text-lg mobile:text-base text-white-300">Key challenges we needed to solve:</p>
             <ul class="list-disc ml-5 mt-5">
                 <li>
@@ -823,7 +855,7 @@
        <section class="tablet:bg-[#222] tablet:w-full tablet:pt-10 tablet:pb-20">
         <div class="grid pc:grid-cols-[543px_375px] mobile:grid-cols-[300px] tablet:grid-cols-[326px_260px] pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px]  mx-auto justify-between">
            <div class="">
-             <img src="./images/Platform/image2.png" alt="Image">
+             <img src="./images/Platform/image2.png" class="mobile:hidden tablet:block" alt="Image">
             <p class="mb-5 mt-5 font-jakarta font-bold pc:text-lg mobile:text-base text-white-300">Key Features Implemented:</p>
             <ul class="list-disc ml-5">
                 <li class="mb-2">
@@ -847,9 +879,10 @@
             </ul>
             </div>
            <div class="pc:col-start-1  pc:row-start-1 mobile:col-start-1 mobile:row-start-1">
-            <h2 class="mb-3 mobile:mt-3 tablet:mt-0 font-poppins font-normal pc:text-2xl mobile:text-[24px]">Our Solution</h2>
+            <h2 class="mobile:mb-5 tablet:mb-3 mobile:mt-5 tablet:mt-0 font-poppins font-normal pc:text-2xl mobile:text-[24px] mobile:text-center tablet:text-left">Our Solution</h2>
             <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300">We architected and built a modern, scalable marketplace platform using Laravel for the backend and Vue.js for a dynamic, responsive frontend. The solution was designed for high availability, security, and ease of use.</p>
-           <div class="mobile:mt-5 mobile:mb-5 tablet:mt-0 tablet:mb-0 mobile:bg-[#222] tablet:bg-[#222] mobile:p-5 tablet:p-0">
+            <img src="./images/Platform/image2.png" class=" mt-5 mobile:block tablet:hidden" alt="Image">
+            <div class="mobile:mt-5 mobile:mb-5 tablet:mt-0 tablet:mb-0 mobile:bg-[#222] tablet:bg-[#222] mobile:p-5 tablet:p-0">
              <p class="pc:mt-3 tablet:mb-10 tablet:mt-10 font-jakarta font-bold pc:text-lg mobile:text-base text-white-300">Technical Approach:</p>
             <ul class="list-disc ml-5 mt-5">
                 <li>
@@ -902,7 +935,7 @@
       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
         <h2 class="pc:mb-5 mobile:mb-0 font-poppins font-light pc:text-2xl mobile:text-[24px] pc:float-left mobile:float:none mobile:text-center">Technology Stack</h2>
         <p class="mt-5 mobile:mb-5 tablet:mb-0 pc:float-right font-jakarta font-normal pc:text-lg mobile:text-sm text-white-300  mobile:text-center">Modern technologies for a robust platform</p>
-        <div class="tablet:mt-5 pc:mt-0 grid clear-both pc:grid-cols-[310px_310px_310px] mobile:grid-cols-[300px] tablet:grid-cols-[285px_285px] pc:gap-x-3.5 mobile:gap-x-3.5 tablet:gap-x-9 pc:gap-y-3.5 mobile:gap-y-3.5 tablet:gap-y-9">
+        <div class="mobile:hidden tablet:grid tablet:mt-5 pc:mt-0 grid clear-both pc:grid-cols-[310px_310px_310px] mobile:grid-cols-[300px] tablet:grid-cols-[285px_285px] pc:gap-x-3.5 mobile:gap-x-3.5 tablet:gap-x-9 pc:gap-y-3.5 mobile:gap-y-3.5 tablet:gap-y-9">
             <div class="py-[20px] px-[36px] border border-solid border-[#7a7a7a]">
                 <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-lg">Backend</h2>
                 <div class="mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
@@ -1024,7 +1057,7 @@
                 
                
               
-            </div>
+              </div>
                 <div class="py-[20px] px-[36px] border border-solid border-[#7a7a7a]">
                 <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-lg">Infrastructure</h2>
                 <div class="mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
@@ -1263,6 +1296,401 @@
               
             </div>
         </div>
+        <div class="swiper h-[370px] mobile_technology mobile:block tablet:hidden">
+          <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="py-[20px] px-[36px] border border-solid border-[#7a7a7a]">
+                <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-lg">Backend</h2>
+                <div class="mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Laravel 10</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Framework</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">PHP 8.2</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Language</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">MySQL 8</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Database</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Redis</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Cache & Queue</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div>
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Elasticsearch</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Search</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                
+               
+              
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="py-[20px] px-[36px] border border-solid border-[#7a7a7a]">
+                <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-lg">Frontend</h2>
+                <div class="mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Vue.js 3</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Framework</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Vuex</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">State Management</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Tailwind CSS</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Styling</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Vite</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Build Tool</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div>
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Axios</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">HTTP Client</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                
+               
+              
+              </div>
+          </div>
+          <div class="swiper-slide">
+             <div class="py-[20px] px-[36px] border border-solid border-[#7a7a7a]">
+                <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-lg">Infrastructure</h2>
+                <div class="mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">AWS EC2</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Hosting</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">AWS S3</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Storage</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">CloudFront</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">CDN</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Docker</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Containers</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div>
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Nginx</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Web Server</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                
+               
+              
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="py-[20px] px-[36px] border border-solid border-[#7a7a7a]">
+                <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-lg">Integrations</h2>
+                <div class="mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Stripe</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Payments</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">SendGrid</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Email</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Twilio</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">SMS</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class="mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Google Analytics</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Analytics</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div>
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Sentry</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Monitoring</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                
+               
+              
+            </div>
+          </div>
+          <div class="swiper-slide">
+             <div class="py-[20px] px-[36px] border border-solid border-[#7a7a7a]">
+                <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-lg">DevOps</h2>
+                <div class="mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">GitHub Actions</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">CI/CD</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Laravel Forge</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Deployment</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">New Relic</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Monitoring</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div>
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Let's Encrypt</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">SSL</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div>
+                   
+                    
+                </div>
+                
+               
+              
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="py-[20px] px-[36px] border border-solid border-[#7a7a7a]">
+                <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-lg">Testing</h2>
+                <div class="mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">PHPUnit</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Unit Tests</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Pest</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Feature Tests</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium tpc:text-base mobile:text-sm text-[#f0f0f0]">Cypress</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">E2E Tests</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Laravel Dusk</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Browser Tests</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                 <div>
+                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
+                        <div>
+                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Elasticsearch</p>
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Search</p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                
+               
+              
+            </div>
+          </div>
+         
+        </div>
+        
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+      </section>
+       <section class="mobile:block tablet:hidden pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
+        <h2 class="mb-3 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Customer review</h2>
+         <p class="font-jakarta font-medium pc:text-lg mobile:text-sm text-center">"Webparadox exceeded all our expectations. They delivered a world-class marketplace platform that not only met our requirements but anticipated future needs. The team's expertise in Laravel and e-commerce was evident throughout the project. Our vendors love the new platform, and our sales have tripled since launch."</p>
+         <div class="grid grid-cols-[63px_158px] justify-center items-center mt-5 gap-x-3">
+          <div>
+            <img src="./images/Platform/user.png" alt="image">
+            </div>
+            <div>
+              <h2 class="font-poppins font-semibold pc:text-lg mobile:text-sm">John Smith</h2>
+              <p class="font-poppins font-medium pc:text-sm mobile:text-xs text-blue">CEO, Fashion Retail Co.</p>
+            </div>
+         </div>
       </section>
        <section class="bg-[#222] w-full py-10 mt-20">
         <div class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
@@ -1274,7 +1702,7 @@
           </p>
           
           <div
-            class="grid mobile:block tablet:grid pc:grid-cols-[217px_31px_217px_31px_217px] tablet:grid-cols-[217px_31px_217px] justify-center gap-x-15.5  gap-y-10  mt-10 items-center"
+            class="grid mobile:hidden tablet:grid pc:grid-cols-[217px_31px_217px_31px_217px] tablet:grid-cols-[217px_31px_217px] justify-center gap-x-15.5  gap-y-10  mt-10 items-center"
           >
             <div class="mobile:mb-5 tablet:mb-0">
               <img src="./images/Platform/project_icon1.svg" alt="image" class="mx-auto" />
@@ -1408,9 +1836,100 @@
                 Data migration from old platform, vendor onboarding, soft launch with limited traffic, monitoring and adjustments, full public launch. Post-launch support and optimization.            </p>
             </div>
           </div>
+          <div class="mobile:block tablet:hidden mt-5 swiper mobile_project">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
+              <img src="./images/Platform/project_icon1.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+              Discovery
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+              Conducted stakeholder interviews, analyzed existing platform, created technical architecture, and planned migration strategy. Defined core features and created detailed project roadmap.
+              </p>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+              <img src="./images/Platform/project_icon2.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+                Design
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+                Created wireframes, high-fidelity mockups, and interactive prototypes. Designed user flows for both customers and vendors. Conducted usability testing with target users.            </p>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+              <img src="./images/Platform/project_icon3.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+              Development
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+              Built backend API, database architecture, authentication system, product catalog, inventory management, and payment processing. Developed frontend components and integrated with backend APIs.            </p>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+              <img src="./images/Platform/project_icon4.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+              Integration
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+              Integrated payment gateways, shipping providers, email services, analytics tools, and other third-party services. Implemented automated testing and CI/CD pipelines.            </p>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+              <img src="./images/Platform/project_icon5.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-5 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+              Testing
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+              Comprehensive testing including functional, performance, security, and user acceptance testing. Load testing with simulated traffic. Bug fixes and optimization.
+              </p>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mobile:mb-5 tablet:mb-0 tablet:col-start-3 tablet:row-start-3 pc:col-start-5 pc:row-start-2">
+              <img src="./images/Platform/project_icon6.svg" alt="image" class="mx-auto" />
+              <h2
+                class="pc:mt-3 mobile:mt-7 mb-5 font-jakarta font-semibold text-lg text-white-300 text-center"
+              >
+              Launch
+              </h2>
+              <p
+                class="font-jakarta font-normal text-base text-white-300 text-center leading-[140%]"
+              >
+                Data migration from old platform, vendor onboarding, soft launch with limited traffic, monitoring and adjustments, full public launch. Post-launch support and optimization.            </p>
+            </div>
+            </div>
+          </div>         
+          <div class="swiper-scrollbar"></div>
+        </div>
         </div>  
       </section>
-      <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-25">
+      <section class="mobile:hidden tablet:block pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-25">
         <h2 class="mb-3 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Customer review</h2>
          <p class="font-jakarta font-medium pc:text-lg mobile:text-sm text-center">"Webparadox exceeded all our expectations. They delivered a world-class marketplace platform that not only met our requirements but anticipated future needs. The team's expertise in Laravel and e-commerce was evident throughout the project. Our vendors love the new platform, and our sales have tripled since launch."</p>
          <div class="grid grid-cols-[63px_158px] justify-center items-center mt-5 gap-x-3">
@@ -1427,7 +1946,7 @@
         <div class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
           <h2 class="mb-1 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Project Team</h2>
         <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 text-center">The talented people behind this success</p>
-        <div class="grid pc:grid-cols-[187px_187px_187px_187px]  mobile:grid-cols-[148px_148px] tablet:grid-cols-[148px_148px_148px_148px] justify-center mt-10 pc:gap-x-20 mobile:gap-x-3 pc:gap-y-17.5 mobile:gap-y-10">
+        <div class="grid pc:grid-cols-[187px_187px_187px_187px]  mobile:grid-cols-[121px_121px] tablet:grid-cols-[148px_148px_148px_148px] justify-center mt-10 pc:gap-x-20 mobile:gap-x-10 pc:gap-y-17.5 mobile:gap-y-10">
           <div>
             <figure>
               <img src="./images/Platform/ava.png" alt="Image">
@@ -1496,7 +2015,7 @@
             <p class="font-jakarta font-normal pc:text-lg mobile:text-sm text-white-300 mobile:text-center tablet:text-right">Explore more of our work</p>
           </div>
         </div>
-        <div class="grid pc:grid-cols-[294px_294px_294px] mobile:grid-cols-[294px] tablet:grid-cols-[294px_294px] justify-center gap-x-10 gap-y-15">
+        <div class="mobile:hidden tablet:grid grid pc:grid-cols-[294px_294px_294px] mobile:grid-cols-[294px] tablet:grid-cols-[294px_294px] justify-center gap-x-10 gap-y-15">
             <div>
                 <img src="./images/Studies/image1.png" alt="Image">
                 <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Partner Network System</h2>
@@ -1547,8 +2066,72 @@
             </div>
             
         </div>
+        <div class="swiper h-[590px] mobile_studies mobile:block tablet:hidden">
+  <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div>
+                <img src="./images/Studies/image1.png" alt="Image">
+                <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Partner Network System</h2>
+                <P class="mb-3 font-jakarta font-normal text-base text-white-300">Custom affiliate platform with multi-tier commissions, real-time tracking, automated payouts, and comprehensive analytics dashboard.</P>
+                <div class="grid grid-cols-[136px_136px] mt-5">
+                    <div>
+                        <h2 class="font-jakarta font-bold text-[20px]">10K+</h2>
+                        <p class="font-jakarta font-medium text-base text-white-300">Partners</p>
+                    </div>
+                    <div>
+                        <h2 class="font-jakarta font-bold text-[20px]">$2M</h2>
+                        <p  class="font-jakarta font-medium text-base text-white-300">Monthly Volume</p>
+                    </div>
+                </div>
+                <a href="#" class="block bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
+            </div>
+            </div>
+            <div class="swiper-slide">
+               <div>
+                <img src="./images/Studies/image2.png" alt="Image">
+                <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Banking Web Portal</h2>
+                <P class="mb-3 font-jakarta font-normal text-base text-white-300">Secure online banking solution with advanced security features, real-time transactions, and seamless mobile integration.</P>
+                <div class="grid grid-cols-[136px_136px] mt-5">
+                    <div>
+                        <h2 class="font-jakarta font-bold text-[20px]">99.9%</h2>
+                        <p class="font-jakarta font-medium text-base text-white-300">Uptime</p>
+                    </div>
+                    <div>
+                        <h2 class="font-jakarta font-bold text-[20px]">100K+</h2>
+                        <p  class="font-jakarta font-medium text-base text-white-300">Daily Transactions</p>
+                    </div>
+                </div>
+                <a href="#" class="block bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative">
+                <img src="./images/Studies/images3.png" alt="Image">
+                <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">SaaS Project Tool</h2>
+                <P class="mb-3 font-jakarta font-normal text-base text-white-300 h-[83px]">Multi-tenant SaaS application with real-time collaboration, serving 10K+ users across 500+ companies.</P>
+                <div class="grid grid-cols-[136px_136px] mt-5">
+                    <div>
+                        <h2 class="font-jakarta font-bold text-[20px]">10K+</h2>
+                        <p class="font-jakarta font-medium text-base text-white-300">Users</p>
+                    </div>
+                    <div>
+                        <h2 class="font-jakarta font-bold text-[20px]">500+</h2>
+                        <p  class="font-jakarta font-medium text-base text-white-300">Companies</p>
+                    </div>
+                </div>
+                <a href="#" class="block absolute boto bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
+            </div>
+            </div>
+           
+          </div>
+          
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
        </section>
-       <section class="pc:mt-20 mobile:mt-40 bg-[#27272a] w-full py-10">
+       <section class="pc:mt-20 mobile:mt-20 tablet:mt-40 bg-[#27272a] w-full py-10">
         <div class="grid pc:grid-cols-[465px_240px] mobile:grid-cols-[300px] tablet:grid-cols-[278px_217px]  mobile:max-w-[300px] tablet:max-w-[608px] pc:max-w-[960px] mobile:gap-y-5 mobile:gap-x-0 tablet:gap-x-20 pc:justify-between mx-auto">
           <div>
             <h2 class="tablet:mb-3 mobile:mb-0 mobile:text-center tablet:text-left font-poppins font-light mobile:text-[24px] pc:text-2xl mobile:leading-[150%] pc:leading-[120%]">Ready to Start Your Project?</h2>
@@ -1563,7 +2146,7 @@
         
       </section>
     </main>
-     <footer class=" bg-[#575757] w-full pt-10 pb-10">
+     <footer class=" bg-[#4b5563] w-full pt-10 pb-10">
       <div
         class="grid tablet:grid-cols-[187px_187px_124px_212px] mobile:grid-cols-[120px_120px] pc:gap-x-20 tablet:gap-x-5 mobile:gap-x-10 mobile:gap-y-10 pc:gap-y-0 justify-center"
       >
@@ -1783,7 +2366,7 @@
               @webparadox
             </p>
           </div>
-          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[20px] tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
+          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[20px] tablet:top-[0px] mobile:mb-5 mobile:mt-12 tablet:mt-0 tablet:mb-0 tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
             <div>
               <a
                 href="#"
