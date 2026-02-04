@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded",function() {
   // Optional parameters
  
   loop: true,
+  slidesPerView: 3,
    spaceBetween: 10,
     slidesPerView: "auto",
 
@@ -49,6 +50,40 @@ document.addEventListener("DOMContentLoaded",function() {
 
     
     });
+
+
+    const mobileCore = new Swiper('.mobile_core', {
+  // Optional parameters
+  slidesPerView: 1.2,
+    spaceBetween: 10,
+  loop: true,
+
+  // If we need pagination
+ 
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+});
+
+
+const mobileCase = new Swiper('.mobile_case', {
+  // Optional parameters
+  slidesPerView: 1.2,
+    spaceBetween: 10,
+  loop: true,
+
+  // If we need pagination
+ 
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+});
 
 
 const swiperPrev = document.querySelector(".swiperPrev");

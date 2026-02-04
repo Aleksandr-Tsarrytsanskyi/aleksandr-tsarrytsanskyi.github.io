@@ -896,7 +896,7 @@
                   </div>
                   <div>
                     <a
-                      class="relative block z-50 pc:mt-3 tablet:mt-8 mobile:mt-7 pc:bg-[url('./images/clients_more.svg')] mobile:bg-[url('./images/mobile/icon_clients_mobile.svg')] bg-right bg-no-repeat pc:w-[70px] pc:h-[70px] tablet:w-[56px] tablet:h-[56px] mobile:w-[46px] mobile:h-[46px] tablet:bg-[url('./images/mobile/icon_clients.svg')]" 
+                      class="relative block z-50 pc:mt-3 tablet:mt-8 mobile:mt-7 pc:bg-[url('./images/clients_more.svg')]  mobile:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_active_header.svg')]  bg-center bg-no-repeat pc:w-[70px] pc:h-[70px] tablet:w-[56px] tablet:h-[56px] mobile:w-[50px] mobile:h-[50px] tablet:bg-[url('./images/mobile/icon_clients.svg')] transition-all duration-300 ease-in" 
                       href="#"
                     ></a>
                   </div>
@@ -1089,7 +1089,7 @@
             </p>
           </div>
         </div>
-        <div class="grid pc:grid-cols-[455px_462px] tablet:grid-cols-[268px_268px] justify-between">
+        <div class="mobile:hidden tablet:grid grid pc:grid-cols-[455px_462px] tablet:grid-cols-[268px_268px] justify-between">
           <div>
             <img src="./images/exporttise_image.png" alt="image" />
             <div
@@ -1138,8 +1138,68 @@
             </div>
           </div>
         </div>
+        <div class="swiper mobile:block: tablet:hidden mobile_core h-[420px]">
+
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+               <div>
+            <img src="./images/exporttise_image.png" alt="image" />
+            <div
+              class="relative top-[-80px] pc:left-[90px] tablet:left-[20px] pc:w-[365px] tablet:w-[258px] pc:h-[280px] tablet:h-[250px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
+            >
+              <h2 class="mb-5 mt-5 font-poppins font-normal pc:text-[20px] mobile:text-sm">
+                E-commerce Excellence
+              </h2>
+              <p
+                class="font-poppins font-light pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
+              >
+                With over a decade of experience, we've built some of the most
+                sophisticated e-commerce platforms in the market. From small
+                boutique stores to large multi-vendor marketplaces processing
+                millions in transactions, we understand the complexities of
+                online retail.
+              </p>
+              <a
+                href="#"
+                class="block tablet:w-[84px] mobile:w-[64px] mt-5 font-jakarta font-bold tablet:text-lg mobile:text-sm border-b border-solid hover:text-[20px] hover:w-[105px] transition-all ease-in duration-300"
+                >Read more</a
+              >
+            </div>
+          </div>
+            </div>
+            <div class="swiper-slide">
+               <div>
+            <img src="./images/exporttise_image1.png" alt="image" />
+            <div
+              class="relative top-[-80px] pc:left-[97px] tablet:left-[20px] pc:w-[365px] pc:h-[260px] tablet:h-[230px] tablet:w-[258px]  pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue  border-b-4 border-solid transition-all duration-300 ease-in"
+            >
+              <h2 class="mb-5 mt-5 font-poppins font-normal pc:text-[20px] mobile:text-sm">
+                Affiliate Platform Specialists
+              </h2>
+              <p
+                class="font-poppins font-light pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
+              >
+                We're pioneers in building robust affiliate and partner network
+                platforms. Our systems handle complex commission structures,
+                real-time tracking, fraud detection, and automated payouts at
+                scale.
+              </p>
+              <a
+                href="#"
+                class="block tablet:w-[84px] mobile:w-[64px] mt-5 font-jakarta font-bold pc:text-lg mobile:text-sm border-b border-solid hover:text-[20px] hover:w-[105px] transition-all ease-in duration-300"
+                >Read more</a
+              >
+            </div>
+          </div>
+            </div>
+           
+           
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
       </section>
-      <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+      <section class="mobile:mt-10 tablet:mt-0 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <h2 class="mb-3 font-poppins font-light pc:text-2xl tablet:text-[24px] mobile:text-[23px]">
           Why Choose Webparadox
         </h2>
@@ -1365,7 +1425,7 @@
           </div>
         </div>
         <div
-          class="grid pc:grid-cols-[294px_294px_294px] tablet:grid-cols-[294px_294px] justify-center mt-10 mobile:gap-y-8 tablet:gap-y-0 pc:gap-x-10 tablet:gap-x-[20px]"
+          class="mobile:hidden tablet:grid grid pc:grid-cols-[294px_294px_294px] tablet:grid-cols-[294px_294px] justify-center mt-10 mobile:gap-y-8 tablet:gap-y-0 pc:gap-x-10 tablet:gap-x-[20px]"
         >
           <div>
             <img src="./images/studies_image.png" alt="Image" />
@@ -1463,6 +1523,82 @@
             >
           </div>
         </div>
+        <div class="mobile:block tablet:hidden mt-5  swiper h-[600px] mobile_case">
+          <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+              <div>
+            <img src="./images/studies_image.png" alt="Image" />
+            <h2 class="mt-5 mb-5 font-poppins font-semibold pc:text-[20px] mobile:text-lg">
+              Fashion Retail Platform
+            </h2>
+            <p
+              class="font-poppins font-light text-base text-white-300 leading-[163%]"
+            >
+              Multi-vendor e-commerce platform with advanced inventory
+              management, real-time analytics, and automated fulfillment for a
+              growing fashion retailer.
+            </p>
+            <div class="grid grid-cols-[100px_100px] gap-x-5 mt-5">
+              <div>
+                <h2 class="font-poppins font-semibold text-[20px]">300%</h2>
+                <p class="font-poppins font-light pc:text-base tablet:text-sm text-white-300">
+                  Sales Growth
+                </p>
+              </div>
+              <div>
+                <h2 class="font-poppins font-semibold text-[20px]">50K+</h2>
+                <p class="font-jakarta font-medium pc:text-base tablet:text-sm text-white-300">
+                  Active Users
+                </p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 whitespace-pre-wrap font-jakarta font-bold text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
+              >V I E W  C A S E  S T U D Y</a
+            >
+          </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+            <img src="./images/studies_image1.png" alt="Image" />
+            <h2 class="mt-5 mb-5 font-poppins font-semibold pc:text-[20px] mobile:text-lg ">
+              Partner Network System
+            </h2>
+            <p
+              class="font-poppins font-light text-base text-white-300 leading-[163%]"
+            >
+              Custom affiliate platform with multi-tier commissions, real-time
+              tracking, automated payouts, and comprehensive analytics
+              dashboard.
+            </p>
+            <div class="grid grid-cols-[100px_120px] gap-x-5 mt-5">
+              <div>
+                <h2 class="font-poppins font-semibold text-[20px]">10K+</h2>
+                <p class="font-poppins font-light pc:text-base tablet:text-sm text-white-300">
+                  Partners
+                </p>
+              </div>
+              <div>
+                <h2 class="font-poppins font-semibold text-[20px]">$2M</h2>
+                <p class="font-poppins font-light pc:text-base tablet:text-sm text-white-300">
+                  Monthly Volume
+                </p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 whitespace-pre-wrap font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
+              >V I E W  C A S E  S T U D Y</a
+            >
+          </div>
+            </div>
+           
+            
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
       </section>
       <section class="mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <div class="grid pc:grid-cols-[320px_590px] tablet:grid-cols-[608px]  mobile:grid-cols-[300px] pc:justify-between tablet:justify-center">
@@ -1474,7 +1610,7 @@
             </p>
            </div>
             <div >
-              <p class="tablet:mt-20 mobile:text-center tablet:text-right mobile:mt-3 font-poppins font-light pc:text-lg tablet:text-sm  text-white-300">
+              <p class="mobile:hidden tablet:block  tablet:mt-20 mobile:text-center tablet:text-right mobile:mt-3 font-poppins font-light pc:text-lg tablet:text-sm  text-white-300">
               We don't just write code – we architect solutions. Every project
               begins with understanding your business goals and translating them
               into technical requirements. Our agile methodology ensures
@@ -1482,7 +1618,7 @@
             </p>
             </div>
           </div>
-          <div class="mt-5 h-[400px]" x-data="{ openIndex: null }">
+          <div class="mt-5 tablet:h-[400px]" x-data="{ openIndex: null }">
           <button
             type="button"
             class="grid pc:grid-cols-[80px_490px_21px] tablet:grid-cols-[80px_490px_21px] mobile:grid-cols-[80px_200px_21px] items-center mb-3 text-left mobile:w-[300px] pc:w-[590px] tablet:w-[590px] font-poppins font-light pc:text-[30px] tablet:text-[16px] pb-5 border-b border-solid border-[#7a7a7a]"
@@ -1730,6 +1866,12 @@
             </p>
           </div>      
         </div>
+        <p class="mobile:block tablet:hidden  tablet:mt-20 mobile:text-center tablet:text-right mobile:mt-3 font-poppins font-light pc:text-lg tablet:text-sm  text-white-300">
+              We don't just write code – we architect solutions. Every project
+              begins with understanding your business goals and translating them
+              into technical requirements. Our agile methodology ensures
+              transparency, flexibility, and continuous delivery of value.
+            </p>
         </div>
       </section>
       <section class="relative mt-20  bg-[#222] w-full">
@@ -1739,17 +1881,20 @@
               class="grid pc:grid-cols-[450px_375px] tablet:grid-cols-[450px] mobile:grid-cols-[300px] pc:justify-between tablet:justify-center pc:justify-items-normal tablet:justify-items-center items-center  h-[237px]"
             >
               <div>
+                <h2 class="mobile:block tablet:hidden mb-3 font-poppins mobile:text-center tablet:text-left tablet:text-center pc:text-left font-light pc:text-2xl mobile:text-[24px]">
+                  Want Similar Results?
+                </h2>
                 <p class="mb-4 font-poppins mobile:text-center tablet:text-left font-light pc:text-lg mobile:text-sm text-white-300">
                   Let's discuss how we can help grow your business
                 </p>
-                <h2 class="font-poppins mobile:text-center tablet:text-left tablet:text-center pc:text-left font-light pc:text-2xl mobile:text-[24px]">
+                <h2 class="mobile:hidden tablet:block font-poppins mobile:text-center tablet:text-left tablet:text-center pc:text-left font-light pc:text-2xl mobile:text-[24px]">
                   Want Similar Results?
                 </h2>
               </div>
               <div>
                 <button
                   type="button"
-                  class=" mobile:mt-[-50px] tablet:mt-[0px] h-[60px] pl-[0px] block pc:mt-[0px] tablet:mt-[-60px] font-jakarta font-bold pc:text-lg mobile:text-sm whitespace-pre-wrap pc:leading-[20px] tablet:leading-[0px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_active_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat pc:bg-[10px_0px] mobile:bg-[10px_5px] pc:hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300 ease-in"
+                  class=" mobile:mt-[-30px] tablet:mt-[0px] h-[60px] pl-[0px] block pc:mt-[0px] tablet:mt-[-60px] font-jakarta font-bold pc:text-lg mobile:text-sm whitespace-pre-wrap pc:leading-[20px] tablet:leading-[0px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat pc:bg-[10px_0px] mobile:bg-[10px_5px] pc:hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300 ease-in"
                 >
                   S C H E D U L E  F R E E  C O N S U L A T I O N
                 </button>
@@ -1758,7 +1903,11 @@
           </div>
         </div>
       </section>
-      <section class="relative mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+     
+      
+      <div class="mobile:grid tablet:block">
+        <div>
+            <section class="relative mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <h2 class="font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">
           How We Work
         </h2>
@@ -1921,7 +2070,7 @@
             <div class="absolute top-[100px]">
               <img src="./images/icon_work1.svg" alt="image" class="ml-5" />
               <h2
-                class="ml-5 mb-3 mt-5 font-poppins font-semibold text-base text-white-300"
+                class="ml-5 mb-3 mt-5 font-poppins pc:font-semibold mobile:font-normal mobile:text-sm pc:text-base text-white-300"
               >
                 Discovery
               </h2>
@@ -1950,7 +2099,7 @@
                   <div class="absolute top-[100px]">
                     <img src="./images/icon_work2.svg" alt="image" class="ml-5" />
                     <h2
-                      class="ml-5 mb-3 mt-5 font-poppins font-semibold text-base text-white-300"
+                      class="ml-5 mb-3 mt-5 font-poppins pc:font-semibold mobile:font-normal mobile:text-sm pc:text-base text-white-300"
                     >
                       Planning
                     </h2>
@@ -1979,7 +2128,7 @@
                 <div class="absolute top-[100px]">
                   <img src="./images/icon_work3.svg" alt="image" class="ml-5" />
                   <h2
-                    class="ml-5 mb-3 mt-5 font-poppins font-semibold text-lg text-white-300"
+                    class="ml-5 mb-3 mt-5 font-poppins pc:font-semibold mobile:font-normal mobile:text-sm pc:text-base text-white-300"
                   >
                     Design
                   </h2>
@@ -2007,7 +2156,7 @@
               <div class="absolute top-[100px]">
                 <img src="./images/icon_work4.svg" alt="image" class="ml-5" />
                 <h2
-                  class="ml-5 mb-3 mt-5 font-poppins font-semibold text-base text-white-300"
+                  class="ml-5 mb-3 mt-5 font-poppins pc:font-semibold mobile:font-normal mobile:text-sm pc:text-base text-white-300"
                 >
                   Development
                 </h2>
@@ -2035,7 +2184,7 @@
                 <div class="absolute top-[100px]">
                   <img src="./images/icon_work5.svg" alt="image" class="ml-5" />
                   <h2
-                    class="ml-5 mb-3 mt-5 font-poppins font-semibold text-base text-white-300"
+                    class="ml-5 mb-3 mt-5 font-poppins pc:font-semibold mobile:font-normal mobile:text-sm pc:text-base text-white-300"
                   >
                     Testing
                   </h2>
@@ -2063,7 +2212,7 @@
                 <div class="absolute top-[100px]">
                   <img src="./images/icon_work6.svg" alt="image" class="ml-5" />
                   <h2
-                    class="ml-5 mb-3 mt-5 font-poppins font-semibold text-base text-white-300"
+                    class="ml-5 mb-3 mt-5 font-poppins pc:font-semibold mobile:font-normal mobile:text-sm pc:text-base text-white-300"
                   >
                     Support
                   </h2>
@@ -2078,7 +2227,9 @@
         </div> 
         
       </section>
-      <section class="mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+        </div>
+        <div class="col-start-1 row-start-1">
+          <section class="mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <div class="grid pc:grid-cols-[349px_411px] tablet:grid-cols-[149px_340px] justify-between">
           <div>
             <h2 class="font-poppins mobile:text-center tablet:text-left font-light pc:text-2xl mobile:text-[24px]  tablet:leading-[150%]">Technology Stack</h2>
@@ -2204,7 +2355,9 @@
             </p>
           </div>
         </div>
-      </section>
+          </section>
+        </div>
+      </div>
       <section class="tablet:mt-30 mobile:mt-10 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <div class="grid pc:grid-cols-[503px_423px] tablet:grid-cols-[290px_293px] mobile:grid-cols-[290px] mobile:justify-center tablet:justify-between">
           <div>
@@ -2992,7 +3145,7 @@
               <br />
               <div class="flex">
                 <button
-                  class="relative pc:left-[200px] tablet:left-[130px]  pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat mt-7 mx-auto pc:bg-[20px_0px] tablet:bg-[25px_5px] mobile:bg-[20px_5px]   h-[60px] tablet:w-[190px] mobile:w-[180px] whitespace-pre-wrap font-jakarta font-bold pc::text-lg tablet:text-sm leading-[20px]  pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300"
+                  class="relative pc:left-[200px] tablet:left-[130px]  pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat mt-7 mx-auto pc:bg-[20px_0px] tablet:bg-[25px_5px] mobile:bg-[20px_5px]   h-[60px] tablet:w-[190px] mobile:w-[180px] whitespace-pre-wrap font-jakarta font-bold pc::text-lg tablet:text-sm leading-[20px]  pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300"
                   type="submit"
                 >
                   S E N D  R E Q U E S T
