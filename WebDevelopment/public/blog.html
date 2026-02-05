@@ -54,6 +54,16 @@
     <title>Document</title>
 </head>
 <body class="bg-black text-white-100 text-base">
+  <section  x-data="{ show: false }"
+     @scroll.window="show = (window.scrollY > 1000)"
+     class="relative mobile:block tablet:hidden">
+        <div x-show="show"
+         x-transition class="mobile:float-right fixed top-20 z-20 right-0   flex items-center cursor-pointer">
+          
+            <a href="#"  class=" right-[0px] top-[2px] bg-[url('./images/mobile/up.svg')] bg-center bg-no-repeat bg-[#222] w-[56px] mr-3 h-[56px] rounded-[100px]" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"></a>
+           
+        </div>
+    </section>
     <div
       class="bg-[url('./images/mobile/header_banner.svg')]  mobile:h-[460px] pc:h-[650px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
     >
@@ -300,12 +310,12 @@
           </ul>
         </nav>
       </div>
-      <div class="pc:max-w-[760px] mobile:max-w-[300px] tablet:max-w-[508px]  mx-auto pc:mt-30 mobile:mt-20 clear-both">
-        <h2 class="font-poppins font-light pc:text-3xl mobile:text-[27px] tablet:text-[37px] text-center leading-[139%]">
+      <div class="pc:max-w-[760px] mobile:max-w-[375px] tablet:max-w-[508px]  mx-auto pc:mt-30 mobile:mt-20 clear-both">
+        <h2 class="font-poppins font-light pc:text-3xl mobile:text-[30px] tablet:text-[37px] text-center leading-[139%]">
        Laravel & Web Development Insights
         </h2>
         <p
-          class="pc:w-[750px] mobile:w-[300px] tablet:w-[508px] mx-auto mt-5 font-jakarta font-normal pc:text-lg mobile:text-sm text-white-300 text-center"
+          class="pc:w-[750px] mobile:w-[270px] tablet:w-[508px] mx-auto mt-5 font-jakarta font-normal pc:text-lg mobile:text-sm text-white-300 text-center leading-[159%]"
         >
         Expert articles on Laravel development, e-commerce best practices, and web technologies
         </p>
@@ -381,13 +391,13 @@
               </p>
                  <ul class="mt-3 mb-3 pb-2">
                 <li class="float-left mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">8 min read</p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">8 min read</p>
                 </li>
                 <li class="float-left  mr-1">
                   <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
                 </li>
                 <li class="float-left">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">Dec 10, 2025</p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 10, 2025</p>
                 </li>
               </ul>
             </div>
@@ -412,13 +422,13 @@
               </p>
                  <ul class="mt-3 mb-3 pb-2">
                 <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">6 min read </p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">6 min read </p>
                 </li>
                 <li class="float-left  mr-1">
                   <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
                 </li>
                 <li class="float-left">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">Dec 8, 2025</p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 8, 2025</p>
                 </li>
               </ul>
             </div>
@@ -443,13 +453,13 @@
               </p>
               <ul class="mt-3 mb-3 pb-2">
                 <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">12 min read  </p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">12 min read  </p>
                 </li>
                 <li class="float-left  mr-1">
                   <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
                 </li>
                 <li class="float-left">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">Dec 5, 2025</p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 5, 2025</p>
                 </li>
               </ul>
             </div>
@@ -474,24 +484,18 @@
               </p>
                  <ul class="mt-3 mb-3 pb-2">
                 <li class="float-left mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">5 min read </p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">5 min read </p>
                 </li>
                 <li class="float-left  mr-1">
                   <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
                 </li>
                 <li class="float-left">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">Dec 1, 2025</p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 1, 2025</p>
                 </li>
               </ul>
             </div>
           </div>
-          <div class=" pc:max-w-[960px]  tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mobile:block tablet:hidden">
-            <div class="mobile:float-right  flex items-center cursor-pointer relative">
-              
-                <a href="#"  class="absolute right-[-150px] top-[-70px]  bg-[url('./images/mobile/up.svg')] bg-center bg-no-repeat bg-[#222] w-[56px] mr-3 h-[56px] rounded-[100px]" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"></a>
-              
-            </div>
-          </div>
+          
           <div class="mobile:h-[520px]">
             <img src="./images/Article-Title/image8.png" alt="image" />
             <div
@@ -512,13 +516,13 @@
               </p>
                  <ul class="mt-3 mb-3 pb-2">
                 <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">10 min read • </p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">10 min read • </p>
                 </li>
                 <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">•</p>
                 </li>
                 <li class="float-left">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">Nov 28, 2025</p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Nov 28, 2025</p>
                 </li>
               </ul>
             </div>
@@ -543,13 +547,13 @@
               </p>
               <ul class="mt-3 mb-3 pb-2">
                 <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">7 min read  </p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">7 min read  </p>
                 </li>
                 <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">•</p>
                 </li>
                 <li class="float-left">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">Nov 25, 2025</p>
+                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Nov 25, 2025</p>
                 </li>
               </ul>
             </div>
