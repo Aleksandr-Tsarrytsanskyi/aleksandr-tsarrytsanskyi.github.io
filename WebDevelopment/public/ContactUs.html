@@ -57,11 +57,13 @@
    <div
       class="bg-[url('./images/mobile/header_banner.svg')]  mobile:h-[460px] pc:h-[650px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
     >
-      <header class="mt-9 py-4 relative z-100" >
+      <header class="mt-9 py-4 relative z-100"
+             
+             >
             <div x-data="{ scrolled: false }"
                 x-on:scroll.window="scrolled = (window.pageYOffset > 50)"
-                x-bind:class="scrolled ? 'top-0' : 'top-2'" 
-                class="fixed left-0 right-0 bg-black transition-all duration-300 ease-in-out"> 
+                x-bind:class="scrolled ? 'top-0' : 'top-5'"
+                class="fixed left-0 right-0 bg-black  transition-all duration-300 ease-in-out"> 
               <div   
                 class="grid pc:grid-cols-[84px_535px_41px_107px] pc:gap-16  justify-center tablet:grid-cols-[442px_0px_128px_35px] mobile:grid-cols-[113px_0px_153px_35px] tablet:items-normal mobile:items-center tablet:gap-0"
               >
@@ -84,7 +86,7 @@
                             </mask>
                             <path
                               d="M75.8383 0.0221438C76.3713 0.0184922 76.9043 0.0157264 77.4373 0.01361C77.748 0.0123329 78.0587 0.0106095 78.3694 0.0077104C78.6552 0.00504705 78.9409 0.00361955 79.2267 0.00312165C79.33 0.00272473 79.4333 0.00188435 79.5366 0.00053572C80.7415 -0.0146458 81.8309 0.291227 82.7198 1.12412C83.566 1.9467 83.9795 2.93391 84 4.10784C83.9823 4.73603 83.9045 5.21641 83.6111 5.77929C83.576 5.84744 83.576 5.84744 83.5403 5.91697C83.2917 6.39831 83.0368 6.87634 82.7794 7.35314C82.7552 7.39812 82.731 7.4431 82.706 7.48944C82.3694 8.11401 82.0238 8.73253 81.6674 9.34637C81.3078 9.96888 80.9696 10.6022 80.6301 11.2355C80.5826 11.3242 80.5351 11.4129 80.4876 11.5015C80.4644 11.5447 80.4412 11.5879 80.4174 11.6325C80.1553 12.1206 79.8868 12.6053 79.6175 13.0896C79.4834 13.3309 79.3504 13.5728 79.218 13.815C78.8708 14.4506 78.5201 15.0834 78.157 15.7104C77.7835 16.356 77.4297 17.0109 77.0782 17.6683C76.7487 18.284 76.4102 18.8932 76.0592 19.4973C75.7261 20.074 75.4126 20.6604 75.0988 21.2474C74.8027 21.8006 74.5018 22.3497 74.1861 22.8923C73.8293 23.5059 73.493 24.129 73.1594 24.7549C72.7189 25.581 72.2669 26.3982 71.7945 27.207C71.7157 27.344 71.6401 27.4821 71.5659 27.6215C70.835 28.9812 69.559 29.9515 68.0792 30.4159C67.165 30.6417 66.2607 30.6251 65.3241 30.602C64.9319 30.5932 64.5397 30.5899 64.1475 30.586C63.5487 30.58 62.9502 30.5724 62.3516 30.556C61.901 30.5437 61.4508 30.5386 61 30.5377C60.8294 30.5362 60.6587 30.5322 60.4882 30.5256C59.6002 30.462 59.6002 30.462 58.8272 30.8095C58.5709 31.1372 58.4033 31.4948 58.2509 31.8784C58.1567 32.1059 58.0359 32.3073 57.9071 32.5174C57.4482 33.3077 56.993 34.0997 56.5436 34.8952C56.2793 35.3616 56.0081 35.8237 55.7335 36.2843C55.4042 36.837 55.0873 37.395 54.7783 37.959C54.4929 38.4789 54.1965 38.9921 53.8978 39.5047C53.6914 39.859 53.4877 40.2147 53.2842 40.5707C52.8251 41.3726 52.3639 42.1733 51.8983 42.9716C51.8006 43.1395 51.7039 43.308 51.6075 43.4767C50.9202 44.6647 49.9 45.5298 48.5463 45.8982C47.2193 46.1542 46.0153 45.9234 44.8558 45.2516C44.0974 44.7439 43.613 44.0951 43.1636 43.3222C43.0654 43.1538 42.9659 42.9862 42.8662 42.8186C42.2506 41.7828 41.6437 40.7421 41.0361 39.7018C40.9529 39.5593 40.8696 39.4168 40.7863 39.2743C40.7042 39.1337 40.6221 38.993 40.5401 38.8523C40.3313 38.4948 40.1206 38.1387 39.9063 37.7844C39.8637 37.7135 39.821 37.6425 39.777 37.5694C39.6958 37.4346 39.614 37.3001 39.5317 37.166C39.4954 37.1055 39.459 37.0451 39.4216 36.9828C39.3735 36.9038 39.3735 36.9038 39.3244 36.8233C39.2343 36.634 39.1957 36.4809 39.1819 36.2721C39.2385 36.1211 39.2385 36.1211 39.3306 35.9757C39.3647 35.9205 39.3989 35.8652 39.4341 35.8082C39.472 35.7493 39.5098 35.6903 39.5489 35.6295C39.6289 35.5008 39.7087 35.372 39.7886 35.2432C39.8302 35.1768 39.8718 35.1103 39.9147 35.0419C40.1142 34.7203 40.3056 34.3941 40.4973 34.0679C40.5748 33.9365 40.6524 33.8052 40.73 33.6739C40.7685 33.6087 40.807 33.5434 40.8467 33.4762C41.0393 33.1501 41.2322 32.8241 41.4251 32.4981C41.4823 32.4013 41.4823 32.4013 41.5407 32.3026C41.7321 31.9788 41.9237 31.6551 42.1155 31.3314C42.5196 30.6492 42.9219 29.9659 43.3219 29.2813C43.4437 29.0729 43.5656 28.8646 43.6876 28.6563C43.76 28.5326 43.8323 28.4089 43.9046 28.2852C43.9959 28.129 44.0877 27.9731 44.1796 27.8172C44.2056 27.7726 44.2316 27.728 44.2584 27.682C44.3754 27.4844 44.4898 27.3196 44.6579 27.1625C45.0111 27.7213 45.3511 28.2855 45.6805 28.8583C45.7256 28.9363 45.7706 29.0143 45.8157 29.0923C46.0324 29.4671 46.2483 29.8424 46.4636 30.218C46.5599 30.386 46.6565 30.5539 46.7531 30.7217C46.7992 30.802 46.8452 30.8824 46.8911 30.9629C46.9551 31.075 47.0194 31.1868 47.0838 31.2986C47.1385 31.3942 47.1385 31.3942 47.1943 31.4917C47.2843 31.6324 47.3698 31.7371 47.4948 31.8474C47.5213 31.8018 47.5477 31.7561 47.575 31.7091C47.6125 31.6443 47.65 31.5796 47.6886 31.5129C47.7308 31.4401 47.773 31.3673 47.8165 31.2923C47.9113 31.1287 48.006 30.9651 48.1008 30.8015C48.3409 30.3872 48.581 29.9728 48.8208 29.5583C49.2863 28.754 49.7535 27.9506 50.2233 27.1487C50.5026 26.6718 50.7802 26.194 51.057 25.7157C51.1231 25.6015 51.1893 25.4874 51.2554 25.3733C51.2993 25.2975 51.3432 25.2218 51.3871 25.1461C51.4089 25.1087 51.4306 25.0712 51.4529 25.0327C51.5872 24.8009 51.7209 24.5689 51.8543 24.3366C51.9209 24.2206 51.9878 24.1048 52.0548 23.989C52.1376 23.8457 52.2201 23.7021 52.3022 23.5584C52.9383 22.4614 53.7482 21.5966 54.9991 21.2069C55.5122 21.101 56.019 21.1022 56.5412 21.1037C56.6697 21.1037 56.6697 21.1037 56.8008 21.1037C57.0343 21.1037 57.2677 21.104 57.5012 21.1045C57.7457 21.1049 57.9903 21.1049 58.2348 21.105C58.6972 21.1052 59.1596 21.1057 59.622 21.1064C60.1486 21.1071 60.6753 21.1075 61.202 21.1078C62.2849 21.1085 63.3677 21.1096 64.4506 21.1111C64.4705 21.061 64.4904 21.0109 64.5109 20.9593C64.5881 20.7722 64.68 20.6011 64.7794 20.4246C64.8189 20.3544 64.8584 20.2842 64.8991 20.2119C64.942 20.1361 64.9849 20.0603 65.0279 19.9846C65.0607 19.9265 65.0607 19.9265 65.0942 19.8672C65.4418 19.2515 65.7993 18.642 66.1616 18.0345C66.4504 17.5486 66.726 17.0566 66.9975 16.5611C67.2826 16.0417 67.5788 15.5289 67.8772 15.0168C68.0878 14.6552 68.2961 14.2923 68.504 13.9291C68.5397 13.8667 68.5755 13.8042 68.6124 13.7398C68.7554 13.49 68.8983 13.2402 69.0412 12.9903C69.1453 12.8084 69.2493 12.6266 69.3534 12.4448C69.4049 12.3548 69.4049 12.3548 69.4575 12.263C69.6635 11.9035 69.8706 11.5445 70.0786 11.1861C70.1147 11.1239 70.1147 11.1239 70.1515 11.0604C70.2699 10.8565 70.3883 10.6526 70.5069 10.4488C70.5711 10.3383 70.5711 10.3383 70.6366 10.2256C70.6937 10.1274 70.6937 10.1274 70.752 10.0273C70.8327 9.88499 70.9082 9.73979 70.9822 9.59394C64.1022 9.59394 57.2223 9.59394 50.1339 9.59394C49.7855 10.1952 49.4372 10.7964 49.0783 11.4159C48.7895 11.9101 48.5006 12.4044 48.2113 12.8983C48.0053 13.2499 47.7995 13.6017 47.5938 13.9535C47.5113 14.0945 47.4289 14.2355 47.3464 14.3765C47.2852 14.4812 47.2852 14.4812 47.2227 14.588C40.9138 25.3731 40.9138 25.3731 40.7901 25.5845C40.7075 25.7256 40.625 25.8667 40.5425 26.0078C40.3373 26.3587 40.1319 26.7095 39.9264 27.0603C39.4765 27.8285 39.0286 28.5979 38.583 29.3686C38.2428 29.9567 37.8985 30.5423 37.5516 31.1266C37.2559 31.6253 36.9648 32.1264 36.6748 32.6282C36.348 33.1939 36.0188 33.7582 35.6852 34.32C35.3532 34.8793 35.0252 35.4407 34.6997 36.0037C34.236 36.8057 33.7691 37.6058 33.3008 38.4052C33.0948 38.7568 32.889 39.1087 32.6833 39.4604C32.6008 39.6014 32.5184 39.7424 32.4359 39.8834C32.3951 39.9532 32.3542 40.023 32.3122 40.0949C32.1885 40.3063 32.0648 40.5178 31.9411 40.7293C31.9002 40.7991 31.8594 40.869 31.8173 40.941C31.7352 41.0813 31.653 41.2215 31.5708 41.3617C31.3804 41.6867 31.1905 42.0119 31.0032 42.3386C30.9378 42.4526 30.8722 42.5665 30.8065 42.6803C30.7248 42.8219 30.6436 42.9637 30.5629 43.1058C29.8673 44.3089 29.0281 45.195 27.7021 45.707C26.4179 46.039 25.1778 45.9855 23.9882 45.3573C23.7091 45.1921 23.4598 45.0083 23.2158 44.7961C23.1427 44.7332 23.1427 44.7332 23.0681 44.669C22.7797 44.4037 22.55 44.1205 22.3406 43.7918C22.315 43.7521 22.2894 43.7124 22.2631 43.6715C21.9933 43.2498 21.7377 42.8199 21.4839 42.3885C21.4103 42.264 21.3367 42.1396 21.2631 42.0151C21.214 41.9321 21.1649 41.8492 21.1159 41.7662C20.8991 41.3994 20.6806 41.0336 20.4613 40.6683C20.4098 40.5824 20.4098 40.5824 20.3572 40.4948C20.2888 40.3807 20.2204 40.2667 20.1519 40.1526C19.9745 39.8569 19.7973 39.5611 19.6201 39.2652C19.5486 39.1459 19.4772 39.0267 19.4057 38.9074C13.8307 29.6025 13.8307 29.6025 13.7236 29.4237C13.6519 29.3041 13.5803 29.1846 13.5087 29.065C13.3324 28.7709 13.1562 28.4767 12.98 28.1825C12.5879 27.5277 12.1952 26.8732 11.802 26.219C11.3742 25.5073 10.9471 24.7951 10.5205 24.0827C10.343 23.7862 10.1653 23.4898 9.98766 23.1933C9.91619 23.074 9.84471 22.9547 9.77324 22.8354C9.73786 22.7764 9.70248 22.7173 9.66603 22.6565C7.27166 18.6602 4.8773 14.6639 2.48293 10.6676C2.42983 10.579 2.42983 10.579 2.37566 10.4885C2.30438 10.3696 2.23313 10.2506 2.16188 10.1316C1.98025 9.82832 1.79835 9.52519 1.61597 9.22234C1.43633 8.9239 1.25746 8.62504 1.07931 8.32574C1.01678 8.22081 0.954062 8.116 0.891109 8.01132C0.168578 6.80749 -0.207287 5.48722 0.118117 4.08191C0.189667 3.8285 0.283865 3.58937 0.388205 3.34735C0.417631 3.27748 0.447058 3.20761 0.477375 3.13562C1.03694 1.92861 2.10143 1.05548 3.34474 0.590068C3.88619 0.403645 4.40368 0.334734 4.97516 0.333447C5.04326 0.332794 5.11137 0.332141 5.18154 0.331468C5.41098 0.329442 5.64041 0.32834 5.86986 0.327251C6.03804 0.326013 6.20622 0.32473 6.37441 0.323406C6.7911 0.32026 7.2078 0.317883 7.6245 0.315792C7.96865 0.314062 8.3128 0.312087 8.65695 0.309973C12.5398 0.28636 16.4228 0.280425 20.3057 0.277547C20.8604 0.277115 21.4151 0.276388 21.9698 0.275555C22.6528 0.274547 23.3359 0.274046 24.0189 0.274169C24.3722 0.274225 24.7254 0.274079 25.0786 0.273388C25.4053 0.27276 25.7319 0.272748 26.0586 0.273218C26.1773 0.273284 26.296 0.273131 26.4147 0.272736C27.5683 0.269145 28.5149 0.439592 29.3969 1.22855C29.4472 1.28358 29.4976 1.3386 29.5494 1.39529C29.6086 1.4582 29.6677 1.52111 29.7286 1.58592C29.9998 1.89937 30.1948 2.25322 30.3989 2.61126C30.4642 2.72437 30.5295 2.83747 30.5948 2.95057C30.6629 3.06862 30.7308 3.18679 30.7985 3.305C30.9315 3.5368 31.0653 3.76813 31.1994 3.99931C31.2211 4.03675 31.2428 4.07419 31.2651 4.11276C31.309 4.1884 31.3529 4.26405 31.3968 4.33969C31.4632 4.45425 31.5295 4.56885 31.5958 4.68347C31.9308 5.26238 32.2682 5.83992 32.6065 6.41702C32.8262 6.79224 33.0452 7.16791 33.2629 7.54428C33.2984 7.60556 33.2984 7.60556 33.3345 7.66808C33.4485 7.86508 33.5623 8.06213 33.676 8.25927C33.7173 8.33065 33.7585 8.40203 33.801 8.47557C33.8402 8.54385 33.8795 8.61213 33.9199 8.68247C33.9958 8.81065 34.0747 8.9372 34.1566 9.0617C34.4269 9.47304 34.4269 9.47304 34.4481 9.72179C34.3177 10.0342 34.1468 10.3177 33.9698 10.6066C33.885 10.7474 33.8002 10.8882 33.7155 11.029C33.6702 11.1036 33.625 11.1783 33.5798 11.2529C33.3721 11.596 33.1681 11.9411 32.9636 12.2861C32.8452 12.4857 32.7265 12.6852 32.6078 12.8847C32.3483 13.321 32.0889 13.7574 31.8295 14.1938C31.7128 14.3903 31.596 14.5867 31.4792 14.7832C31.4325 14.8618 31.3858 14.9404 31.339 15.019C30.1474 17.024 30.1474 17.024 28.9557 19.0289C28.7667 18.8058 28.6122 18.5813 28.4676 18.3281C28.4255 18.255 28.3835 18.1819 28.3402 18.1066C28.3182 18.068 28.2963 18.0295 28.2736 17.9898C28.1561 17.7838 28.0377 17.5784 27.9194 17.3729C27.8954 17.3313 27.8715 17.2896 27.8468 17.2467C27.6244 16.8602 27.3979 16.4761 27.1702 16.0927C26.6419 15.2022 26.1199 14.3081 25.5978 13.4141C24.7698 11.985 24.7698 11.985 23.9206 10.5682C23.8096 10.3748 23.8096 10.3748 23.7218 10.1721C23.6169 9.94843 23.5165 9.77638 23.3477 9.59394C23.0284 9.48171 22.7153 9.49478 22.3808 9.5053C22.2826 9.50552 22.1844 9.50539 22.0861 9.50495C21.8204 9.50473 21.5549 9.50931 21.2892 9.51477C21.0113 9.51966 20.7333 9.52011 20.4553 9.52104C19.9293 9.52346 19.4034 9.52986 18.8774 9.53771C18.2785 9.54644 17.6795 9.55073 17.0805 9.55465C15.8487 9.5628 14.6171 9.57653 13.3854 9.59394C13.5283 9.8499 13.6712 10.1058 13.8142 10.3617C13.8627 10.4485 13.9111 10.5352 13.9595 10.622C14.3123 11.254 14.6712 11.8821 15.0358 12.5075C15.256 12.886 15.471 13.2673 15.6863 13.6485C15.9934 14.1918 16.3068 14.7309 16.6265 15.2671C16.9531 15.8152 17.2667 16.3686 17.5725 16.9282C17.8156 17.371 18.0702 17.8062 18.3295 18.2399C18.6795 18.8261 19.0133 19.4191 19.3394 20.0185C19.6636 20.6131 20.0026 21.1986 20.3441 21.7837C20.5206 22.0874 20.6951 22.3923 20.8695 22.6971C20.9052 22.7594 20.9408 22.8216 20.9775 22.8857C21.0498 23.012 21.122 23.1382 21.1942 23.2644C21.3375 23.5147 21.4808 23.7648 21.6243 24.015C21.7315 24.2022 21.8388 24.3893 21.946 24.5765C22.088 24.8243 22.2301 25.072 22.3723 25.3197C22.7444 25.9683 23.1152 26.6177 23.4838 27.2682C23.797 27.8208 24.1132 28.3715 24.4328 28.9205C24.7396 29.4486 25.0404 29.9799 25.3398 30.512C25.5264 30.8424 25.7158 31.1669 25.9298 31.4809C25.9868 31.5871 25.9868 31.5871 25.9868 31.7823C26.0303 31.7823 26.0738 31.7823 26.1187 31.7823C26.1367 31.7356 26.1546 31.6889 26.1731 31.6408C26.2499 31.4587 26.3378 31.2917 26.4354 31.1197C26.4723 31.0548 26.5091 30.9898 26.547 30.9229C26.6065 30.8189 26.6065 30.8189 26.6671 30.7128C26.7291 30.6041 26.7291 30.6041 26.7923 30.4932C27.0899 29.9729 27.3947 29.4573 27.7044 28.944C27.9811 28.4852 28.2528 28.0237 28.5227 27.561C28.8412 27.0151 29.1612 26.47 29.4835 25.9262C29.8042 25.385 30.1229 24.8426 30.4401 24.2995C30.9476 23.4308 31.4598 22.5649 31.9727 21.6994C32.4516 20.8911 32.9283 20.0816 33.4021 19.2704C33.7154 18.7342 34.0312 18.1994 34.3479 17.665C34.6304 17.1879 34.9108 16.7097 35.1904 16.2309C35.5453 15.6233 35.9024 15.017 36.2612 14.4116C36.5437 13.9345 36.8241 13.4562 37.1037 12.9775C37.4586 12.3699 37.8157 11.7636 38.1745 11.1581C38.457 10.6811 38.7374 10.2028 39.017 9.72408C39.5244 8.8554 40.0366 7.98952 40.5495 7.124C40.9863 6.3868 41.4217 5.64882 41.8539 4.909C41.9776 4.69749 42.1013 4.48599 42.2251 4.27452C42.308 4.13276 42.3909 3.99097 42.4737 3.84915C44.2163 0.868073 44.2163 0.868073 46.0021 0.280992C46.6364 0.12999 47.282 0.148178 47.9303 0.146223C48.0421 0.145656 48.154 0.145062 48.2659 0.144444C48.5725 0.142827 48.8791 0.141598 49.1858 0.140433C49.5171 0.139107 49.8485 0.137421 50.1798 0.13578C50.83 0.132616 51.4802 0.129785 52.1305 0.127064C52.893 0.123861 53.6555 0.120324 54.418 0.116775C55.7853 0.110422 57.1526 0.104366 58.5198 0.0984785C59.8338 0.0928203 61.1477 0.0869664 62.4617 0.0808769C62.582 0.0803194 62.582 0.0803194 62.7047 0.0797507C62.7848 0.0793796 62.8649 0.0790085 62.9474 0.0786261C63.1088 0.0778782 63.2702 0.0771303 63.4316 0.0763826C63.5113 0.0760134 63.5909 0.0756443 63.673 0.075264C64.9388 0.0694088 66.2047 0.0637489 67.4705 0.0581033C67.9223 0.0560855 68.3742 0.0540402 68.826 0.0519708C69.1894 0.0503083 69.5528 0.0486613 69.9161 0.047023C69.9871 0.0467029 70.058 0.0463828 70.1311 0.046053C70.8945 0.0426308 71.6579 0.0394673 72.4213 0.0370159C72.5211 0.0366948 72.5211 0.0366948 72.623 0.0363673C72.8892 0.0355182 73.1554 0.0346768 73.4217 0.033875C74.2272 0.0314326 75.0328 0.0277161 75.8383 0.0221438Z"
-                      fill="white"
+                              fill="white"
                               stroke="black"
                               stroke-width="2"
                               mask="url(#path-1-inside-1_89_716)"
@@ -100,49 +102,49 @@
                     <ul class="mt-4">
                       <li class="float-left mr-6">
                         <a
-                          class="h-7.5 w-11 pb-1 block text-base font-jakarta font-semibold text-white-200 hover:relative -top-1 relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-b-2 border-white-100 border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
+                          class="h-7.5 w-11 pb-1 block text-base font-poppins font-normal text-white-200 hover:relative -top-1 relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-b-2 border-white-100 border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
                           href="#"
                           >Home</a
                         >
                       </li>
                       <li class="float-left mr-6">
                         <a
-                          class="h-7.5 w-15 pb-1 block text-sm font-jakarta font-normal text-white-200 hover:relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
+                          class="h-7.5 w-15 pb-1 block text-sm font-poppins font-light text-white-200 hover:relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
                           href="/services.html"
                           >Services</a
                         >
                       </li>
                       <li class="float-left mr-6">
                         <a
-                          class="h-7.5 w-11 pb-1 block text-sm font-jakarta font-normal text-white-200 hover:relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
+                          class="h-7.5 w-11 pb-1 block text-sm font-poppins font-light text-white-200 hover:relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
                           href="#"
                           >Cases</a
                         >
                       </li>
                       <li class="float-left mr-6">
                         <a
-                          class="h-7.5 w-11 pb-1 block text-sm font-jakarta font-normal text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
+                          class="h-7.5 w-11 pb-1 block text-sm font-poppins font-light text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
                           href="./AboutUs.html"
                           >About</a
                         >
                       </li>
                       <li class="float-left mr-6">
                         <a
-                          class="h-7.5 w-9 pb-1 block text-sm font-jakarta font-normal text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
+                          class="h-7.5 w-9 pb-1 block text-sm font-poppins font-light text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
                           href="./blog.html"
                           >Blog</a
                         >
                       </li>
                       <li class="float-left mr-6">
                         <a
-                          class="h-7.5 w-14 pb-1 block text-sm font-jakarta font-normal text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
+                          class="h-7.5 w-14 pb-1 block text-sm font-poppins font-light text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
                           href="./Careers.html"
-                        >Careers</a
+                          >Careers</a
                         >
                       </li>
                       <li class="float-left">
                         <a
-                          class="h-7.5 w-19 pb-1 block text-sm font-jakarta font-normal text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
+                          class="h-7.5 w-20 pb-1 block text-sm font-poppins font-light text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
                           href="./ContactUs.html"
                           >Contact Us</a
                         >
@@ -256,18 +258,22 @@
                                 <li>
                                   <a href="./ContactUs.html" class="block text-center font-poppins font-semibold text-lg text-white-500">Contact Us</a>
                                 </li>
+                                
+                              
                               </ul>
                               <button type="button" class=" bg-[url('./images/mobile/btn_header.svg')] h-[49px] bg-left bg-no-repeat pl-7 mt-10 hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300 ease-in whitespace-pre">G E T  Q U O T E</button>
                               </div>
                           </div>
                         </div>
                       </div>  
+                
+                    
                   </div>
                   </div>
                 </div>
               </div>
             </div>  
-      </header>
+        </header>
       <div class="pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px] mx-auto mt-10">
         <nav>
           <ul>
@@ -419,64 +425,64 @@
             <iframe class="pc:w-[960px] tablet:w-[657px] tablet:h-[331px] mx-auto pc:h-[450px] mobile:w-[300px] mobile:h-[283px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d129708.19177674319!2d24.573437571399168!3d59.47158519577548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929499df5616bf%3A0x400b36d18fc6270!2z0KLQsNC70LvQuNC9LCDQrdGB0YLQvtC90LjRjw!5e0!3m2!1sru!2sua!4v1768852661446!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-240 h-[480px]"></iframe>
         </section>
     </main>
-     <footer class="  bg-[#4b5563] w-full pt-10 pb-10">
+     <footer class=" bg-[#4b5563] w-full pt-10 pb-7">
       <div
         class="grid tablet:grid-cols-[187px_187px_124px_212px] mobile:grid-cols-[120px_120px] pc:gap-x-20 tablet:gap-x-5 mobile:gap-x-10 mobile:gap-y-10 pc:gap-y-0 justify-center"
       >
         <div>
-          <h2 class="mb-5 font-poppins font-semibold pc:text-[14px] mobile:text-sm">SERVICES</h2>
+          <h2 class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base">SERVICES</h2>
           <nav>
             <ul>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Custom Development</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="./laraveldevelopment.html"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Laravel Development</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >SPA Development</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Mobile Development</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >UI/UX Design</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Digital Marketing</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >CRM Implementation</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
@@ -487,59 +493,59 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-5 font-poppins font-semibold pc:text-[14px] mobile:text-sm">INDUSTRIES</h2>
+          <h2 class="mb-5 tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base">INDUSTRIES</h2>
           <nav>
             <ul>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >E-commerce & Retail</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Affiliate Networks</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >FinTech & Banking</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >SaaS & Startups</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Healthcare</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Education</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Travel & Hospitality</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
@@ -550,52 +556,52 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-5 font-poppins font-semibold pc:text-[14px] mobile:text-sm">COMPANY</h2>
+          <h2 class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base">COMPANY</h2>
           <nav>
             <ul>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="./AboutUs.html"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >About Us</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Case Studies</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Insights & Blog</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Careers</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="./ContactUs.html"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Contact</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
                   >Privacy Policy</a
                 >
               </li>
-              <li class="mb-[10px]">
+              <li class="mb-[14px]">
                 <a
                   href="#"
                   class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
@@ -606,8 +612,8 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-5 font-poppins font-semibold pc:text-[14px] mobile:text-sm">CONTACT</h2>
-          <div class="mb-3">
+          <h2 class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base">CONTACT</h2>
+          <div class="mb-5">
             <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
               Email:
             </p>
@@ -615,7 +621,7 @@
               hello@webparadox.com
             </p>
           </div>
-          <div class="mb-3">
+          <div class="mb-5">
             <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
               Phone (HQ):
             </p>
@@ -623,7 +629,7 @@
               +372 XXX XXXX
             </p>
           </div>
-          <div class="mb-3">
+          <div class="mb-5">
             <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
               WhatsApp:
             </p>
@@ -631,7 +637,7 @@
               +372 XXX XXXX
             </p>
           </div>
-          <div class="mb-3">
+          <div class="mb-5">
             <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
               Telegram:
             </p>
@@ -639,7 +645,7 @@
               @webparadox
             </p>
           </div>
-          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[20px] mobile:mb-5 mobile:mt-12 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
+          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
             <div>
               <a
                 href="#"
@@ -672,7 +678,7 @@
         </div>
       </div>
       <div
-        class="grid pc:grid-cols-[268px_99px_114px] tablet:grid-cols-[195px_73px_114px] mobile:grid-cols-[75px_90px]  justify-center mt-10 border-t border-[#7a7a7a] border-solid pt-7"
+        class="grid pc:grid-cols-[240px_90px_114px] tablet:grid-cols-[195px_73px_114px] mobile:grid-cols-[75px_90px] items-center  justify-center mt-10 border-t border-[#7a7a7a] pc:w-[950px] mx-auto border-solid pt-4"
       >
         <div class="mobile:col-span-2 tablet:col-span-1 mobile:w-[200px]">
           <p class="tablet:mt-[5px] pc:w-[300px] mobile:ml-[-15px] tablet:ml-[0px] pc:mt-[0px] font-poppins font-light pc:text-sm mobile:text-xs text-white-300">
