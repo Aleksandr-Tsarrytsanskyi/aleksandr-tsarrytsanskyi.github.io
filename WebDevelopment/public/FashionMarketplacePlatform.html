@@ -69,7 +69,7 @@
         </div>
     </section>
     <div
-      class="bg-[url('./images/banner.png')]  mobile:h-[460px] pc:h-[600px] min-h-full max-w-full bg-cover bg-center"
+      class="bg-[url('./images/mobile/header_banner.svg')]  mobile:h-[370px] tablet:h-[400px] pc:h-[550px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
     >
       <header class="mt-9 py-4 relative z-100"
              
@@ -182,8 +182,8 @@
                       <path d="M8.39878 0.396234C8.59291 0.201848 8.90835 0.20117 9.10332 0.394721C9.28057 0.570677 9.29725 0.846578 9.15296 1.04133L9.10484 1.09714L5.10336 5.10377C4.92635 5.28101 4.64862 5.29713 4.45328 5.15213L4.39733 5.1038L0.395188 1.09717C0.201036 0.902803 0.201689 0.588317 0.396647 0.39475C0.573882 0.21878 0.850686 0.203321 1.04542 0.347998L1.1012 0.396205L4.75053 4.04921L8.39878 0.396234Z"   stroke-width="0.5"/>
                       </svg></span> <!-- Стрелки -->
                   </button>
-                    <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] w-[30px]  px-5 pb-5">
-                      <p @click="selected = 'EN'; open = false;" class="mb-2 mt-4 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in" >EN</a>
+                    <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute bg-[#222] pr-10 rounded-[10px] z-30 top-[50px] left-[-20px] w-[30px]  px-5 pb-2">
+                      <p @click="selected = 'EN'; open = false;" class="mb-2 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in" >EN</a>
                       <p @click="selected = 'EN'; open = false;" class=" font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in">EN</a>
                         <div class="border-b border-solid border-[#d9d9d9]" ></div>
                       </div>
@@ -347,7 +347,7 @@
         Real projects, real results. Explore how we've helped businesses across different industries achieve their digital goals through innovative solutions and expert execution.
         </p>
         <div
-          class="grid pc:grid-cols-[158px_165px_71px_75px] mobile:grid-cols-[104px_107px] tablet:grid-cols-[104px_108px_47px_49px] pc:mt-12 mobile:mt-7 pc:gap-x-20 mobile:gap-x-3 tablet:gap-x-20 mobile:gap-y-5 tablet:gap-y-0 tablet:justify-center mobile:justify-between"
+          class="grid pc:grid-cols-[158px_165px_71px_85px] mobile:grid-cols-[104px_107px] tablet:grid-cols-[104px_108px_47px_49px] pc:mt-12 mobile:mt-7 pc:gap-x-20 mobile:gap-x-3 tablet:gap-x-20 mobile:gap-y-5 tablet:gap-y-0 tablet:justify-center mobile:justify-between"
         >
           <div>
             <h2 class="mb-2 font-jakarta font-normal pc:text-lg tablet:text-[10px] mobile:text-xs  text-white-300">CLIENT</h2>
@@ -377,7 +377,7 @@
       </div>
     </div>
     <main>
-      <section class="pc:max-w-[960px] mobile:mt-5 tablet:mt-0 tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
+      <section class="pc:max-w-[960px] pc:mt-[-50px] mobile:mt-20 tablet:mt-0 tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <img src="./images/Platform/image.png" class="mobile:w-[297px] mobile:h-[258px] tablet:w-[608px] tablet:h-[306px] pc:w-[960px] pc:h-[480px]" alt="Image" />
       </section>
       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
@@ -440,7 +440,7 @@
             </div>
           </div>
           <div
-            class="pc:w-[401px] pc:h-[636px] mobile:w-[300px] py-[30px] px-[41px] mobile:h-[557px] tablet:h-auto border border-solid border-[#7a7a7a]"
+            class="pc:w-[401px] pc:h-[636px] mobile:w-[300px] py-[30px] px-[41px] mobile:h-[620px] tablet:h-auto border border-solid border-[#7a7a7a]"
           >
             <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-[20px]">
               Project Details
@@ -1275,28 +1275,8 @@
                     </div>  
                     
                 </div>
-                 <div class=" mb-5 border-b border-solid border-[#7a7a7a] h-[40px]">
-                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
-                        <div>
-                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Laravel Dusk</p>
-                        </div>
-                        <div>
-                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Browser Tests</p>
-                        </div>
-                    </div>  
-                    
-                </div>
-                 <div>
-                    <div class="grid grid-cols-[1fr_1fr] justify-between items-center">
-                        <div>
-                            <p class="font-jakarta font-medium pc:text-base mobile:text-sm text-[#f0f0f0]">Elasticsearch</p>
-                        </div>
-                        <div>
-                            <p class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 float-right">Search</p>
-                        </div>
-                    </div>  
-                    
-                </div>
+                 
+                 
                 
                
               
@@ -1737,7 +1717,7 @@
                 />
               </svg>
             </div>
-            <div class="mobile:mb-5 tablet:mb-0">
+            <div class="mobile:mb-5 tablet:mb-0 pc:mt-[-30px]">
               <img src="./images/Platform/project_icon2.svg" alt="image" class="mx-auto" />
               <h2
                 class="pc:mt-3 mobile:mt-7 mb-3 font-jakarta font-semibold text-lg text-white-300 text-center"

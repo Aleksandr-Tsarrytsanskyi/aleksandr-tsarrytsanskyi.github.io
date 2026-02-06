@@ -181,8 +181,8 @@
                       <path d="M8.39878 0.396234C8.59291 0.201848 8.90835 0.20117 9.10332 0.394721C9.28057 0.570677 9.29725 0.846578 9.15296 1.04133L9.10484 1.09714L5.10336 5.10377C4.92635 5.28101 4.64862 5.29713 4.45328 5.15213L4.39733 5.1038L0.395188 1.09717C0.201036 0.902803 0.201689 0.588317 0.396647 0.39475C0.573882 0.21878 0.850686 0.203321 1.04542 0.347998L1.1012 0.396205L4.75053 4.04921L8.39878 0.396234Z"   stroke-width="0.5"/>
                       </svg></span> <!-- Стрелки -->
                   </button>
-                    <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] w-[30px]  px-5 pb-5">
-                      <p @click="selected = 'EN'; open = false;" class="mb-2 mt-4 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in" >EN</a>
+                    <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute bg-[#222] pr-10 rounded-[10px] z-30 top-[50px] left-[-20px] w-[30px]  px-5 pb-2">
+                      <p @click="selected = 'EN'; open = false;" class="mb-2 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in" >EN</a>
                       <p @click="selected = 'EN'; open = false;" class=" font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in">EN</a>
                         <div class="border-b border-solid border-[#d9d9d9]" ></div>
                       </div>
@@ -443,6 +443,7 @@
             </div>
         </section>
         <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
+          <div x-data="{ openTab: 1 }">
             <div class="grid pc:grid-cols-[511px_373px] mobile:grid-cols-[300px] tablet:grid-cols-[608px] justify-between">
               <div class="tablet:mt-10 pc:mt-0">
                   <div class="relative">
@@ -461,158 +462,316 @@
                   </svg></span> <!-- Стрелки -->
               </button>
                  <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] pc:w-[531px] tablet:w-[628px] mobile:w-[320px] bg-black px-5 pb-5">
-                  <p @click="selected = 'Introduction'; open = false;" class="mb-3 mt-2 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in" > 1. Introduction</a>
-                  <p @click="selected = 'Why Laravel for E-commerce'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">2. Why Laravel for E-commercet</a>
-                  <p @click="selected = 'Architecture Design'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">3. Architecture Design</a>
-                  <p @click="selected = ' Database Structure'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer mobile:ml-3 hover:text-white-100 transition-colors duration-300 ease-in">3.1 Database Structure</a>
-                  <p @click="selected = ' Models & Relationships'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer mobile:ml-3 hover:text-white-100 transition-colors duration-300 ease-in">3.2 Models & Relationships</a>
-                  <p @click="selected = 'Core Features'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">4. Core Features</a>
-                  <p @click="selected = ' Payment Integration'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">5. Payment Integration</a>
-                  <p @click="selected = 'Deployment'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">6. Deployment</a>
-                  <p @click="selected = ' Conclusion'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">7. Conclusion</a>
+                  <p @click="selected = 'Introduction'; open = false; openTab = 2" class="mb-3 mt-2 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in" > 1. Introduction</a>
+                  <p @click="selected = 'Why Laravel for E-commerce'; open = false; openTab = 3" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">2. Why Laravel for E-commercet</a>
+                  <p @click="selected = 'Architecture Design'; open = false; openTab = 4" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">3. Architecture Design</a>
+                  <p @click="selected = ' Database Structure'; open = false; openTab = 5" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer mobile:ml-3 hover:text-white-100 transition-colors duration-300 ease-in">3.1 Database Structure</a>
+                  <p @click="selected = ' Models & Relationships'; open = false; openTab = 6" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer mobile:ml-3 hover:text-white-100 transition-colors duration-300 ease-in">3.2 Models & Relationships</a>
+                  <p @click="selected = 'Core Features'; open = false; openTab = 7" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">4. Core Features</a>
+                  <p @click="selected = ' Payment Integration'; open = false; openTab = 8" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">5. Payment Integration</a>
+                  <p @click="selected = 'Deployment'; open = false; openTab = 9" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">6. Deployment</a>
+                  <p @click="selected = ' Conclusion'; open = false; openTab = 10" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">7. Conclusion</a>
                     <div class="border-b border-solid border-[#d9d9d9]" ></div>
                   </div>
                         </div>
                 </div>
-             <div class="pc:h-[1520px] mobile:h-[1000px] overflow-y-scroll pr-5">   
-                <div class="mb-10">
-                    <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5 mt-10">1. Introduction</h2>
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Building an e-commerce platform requires careful planning, robust architecture, and the right technology stack. Laravel, with its elegant syntax and powerful features, has become one of the most popular choices for developing scalable e-commerce solutions.
+              <div x-show="openTab === 1">
+                  <div class="pc:h-[1520px] mobile:h-[1000px] overflow-y-scroll pr-5">   
+                  <div class="mb-10">
+                      <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5 mt-10">1. Introduction</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Building an e-commerce platform requires careful planning, robust architecture, and the right technology stack. Laravel, with its elegant syntax and powerful features, has become one of the most popular choices for developing scalable e-commerce solutions.
 
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">In this comprehensive guide, we'll walk through the entire process of building an e-commerce platform with Laravel. From initial setup to deployment, you'll learn best practices, common pitfalls to avoid, and how to implement essential features like product management, shopping cart, checkout, and payment processing.</p>
-                    <div class="pc:w-[490px] mobile:w-[280px] pc:h-[158px] mobile:h-[210px] py-[24px] px-[19px] bg-[#222]">
-                     <h2 class="mb-5 font-jakarta font-medium text-base text-white-300">💡 What You'll Learn</h2>
-                        <p class="mb-5 font-jakarta font-medium text-base text-white-300">This guide assumes you have basic Laravel knowledge. We'll cover advanced topics like microservices architecture, queue management, and performance optimization for high-traffic e-commerce sites.</p>
-                   </div>
-                </div>
-                <div>
-                    <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5 mt-10">2. Why Laravel for E-commerce</h2>
-                    <p class="mb-5 font-jakarta font-normal text-lg text-white-300">Laravel offers several advantages that make it ideal for e-commerce development:</p>
-                    <ul class="list-disc text-white ml-5">
-                        <li>
-                            <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Eloquent ORM:</span> Makes database operations intuitive and prevents SQL injection attacks</p>
-                        </li>
-                        <li>
-                            <p  class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Built-in Authentication:</span> Secure user authentication and authorization out of the box</p>
-                        </li>
-                        <li>
-                            <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Queue System:</span> Handle time-consuming tasks like sending emails asynchronously</p>
-                        </li>
-                        <li>
-                            <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Payment Integration: </span>Easy integration with Stripe, PayPal, and other payment gateways</p>
-                        </li>
-                        <li>
-                            <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Testing:</span> Comprehensive testing tools for ensuring code quality</p>
-                        </li>
-                    </ul>
-                    <div class="mt-5 py-[20px] px-[10px] bg-[#222]/50 border-l-4 border-solid border-[#222]">
-                        <p class="font-jakarta font-medium text-base text-white-300">"Laravel's ecosystem and community support make it an excellent choice for building complex e-commerce platforms. The framework's conventions save development time while maintaining code quality." <br>- Laravel Creator</p>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">In this comprehensive guide, we'll walk through the entire process of building an e-commerce platform with Laravel. From initial setup to deployment, you'll learn best practices, common pitfalls to avoid, and how to implement essential features like product management, shopping cart, checkout, and payment processing.</p>
+                      <div class="pc:w-[490px] mobile:w-[280px] pc:h-[158px] mobile:h-[210px] py-[24px] px-[19px] bg-[#222]">
+                      <h2 class="mb-5 font-jakarta font-medium text-base text-white-300">💡 What You'll Learn</h2>
+                          <p class="mb-5 font-jakarta font-medium text-base text-white-300">This guide assumes you have basic Laravel knowledge. We'll cover advanced topics like microservices architecture, queue management, and performance optimization for high-traffic e-commerce sites.</p>
                     </div>
-                </div>
-                <div>
-                    <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">3. Architecture Design</h2>
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">A well-designed architecture is crucial for scalability and maintainability. For e-commerce platforms, we recommend a modular approach that separates concerns and allows individual components to scale independently.</p>
-                    <img src="./images/Article-Title/image1.png" class="pc:w-[511px] pc:h-[230px]" alt="Image">
-                </div>
-                <div>
-                    <h2 class="mt-10 mb-3 font-poppins font-normal pc:text-[28px] mobile:text-[20px]">3.1 Database Structure</h2>
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">The database design is the foundation of your e-commerce platform. Here's a simplified schema for the core tables:</p>
-                    <img src="./images/Article-Title/image2.png" class="pc:w-[511px] pc:h-[445px]" alt="Image">
-                </div>
-                <div>
-                    <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-3">3.2 Models & Relationships</h2>
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Laravel's Eloquent ORM makes it easy to define relationships between models. Here's how you can set up the Product and Order models:</p>
-                                    <img src="./images/Article-Title/image3.png" class="pc:w-[511px] pc:h-[386px]" alt="Image">
-                </div>
-                <div>
-                    <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5 mt-10">4. Core Features Implementation</h2>
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Let's implement the essential features every e-commerce platform needs: product catalog, shopping cart, checkout process, and order management.</p>
-                    <h2 class="mb-5 font-jakarta font-semibold text-lg">Shopping Cart Implementation</h2>
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">For the shopping cart, we'll use Laravel's session management. Here's a simple Cart service:</p>
-                    <img src="./images/Article-Title/image4.png" class="pc:w-[511px] pc:h-[367px]" alt="Image">
-                </div>
-                <div>
-                    <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">5. Payment Integration</h2>
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Payment processing is critical for any e-commerce platform. We'll integrate Stripe using Laravel Cashier, which provides a fluent interface to Stripe's subscription billing services.</p>
-                    <img src="./images/Article-Title/image5.png" class="pc:w-[511px] pc:h-[386px]" alt="Image">
-                    <p class="mb-5 mt-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">First, install Laravel Cashier and configure your Stripe credentials:</p>
-                    <img src="./images/Article-Title/image6.png" class="pc:w-[511px] pc:h-[129px]" alt="Image">
-                    <div class="mt-5 bg-[#4b5563] w-full py-10 px-5">
-                      <h2 class="mb-5 font-poppins font-normal pc:text-[32px] mobile:text-[24px] text-center">Need Help Building Your E-commerce Platform?</h2>
-                      <p class="font-jakarta font-nornal pc:text-lg text-center mobile:text-base text-white-300">Our Laravel experts can help you build a scalable, secure e-commerce solution tailored to your needs.</p>
-                      <div class="flex">
-                          <button type="button" class="mt-7 font-jakarta font-bold pc:text-lg mobile:text-base pc:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] pc:hover:bg-[url('./images/mobile/btn_active_header.svg')] whitespace-pre h-[50px] pl-7 bg-no-repeat bg-left mx-auto transtion-all duration-300 ease-in">GET FREE CONSULATION</button>
+                  </div>
+                  <div>
+                      <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5 mt-10">2. Why Laravel for E-commerce</h2>
+                      <p class="mb-5 font-jakarta font-normal text-lg text-white-300">Laravel offers several advantages that make it ideal for e-commerce development:</p>
+                      <ul class="list-disc text-white ml-5">
+                          <li>
+                              <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Eloquent ORM:</span> Makes database operations intuitive and prevents SQL injection attacks</p>
+                          </li>
+                          <li>
+                              <p  class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Built-in Authentication:</span> Secure user authentication and authorization out of the box</p>
+                          </li>
+                          <li>
+                              <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Queue System:</span> Handle time-consuming tasks like sending emails asynchronously</p>
+                          </li>
+                          <li>
+                              <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Payment Integration: </span>Easy integration with Stripe, PayPal, and other payment gateways</p>
+                          </li>
+                          <li>
+                              <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Testing:</span> Comprehensive testing tools for ensuring code quality</p>
+                          </li>
+                      </ul>
+                      <div class="mt-5 py-[20px] px-[10px] bg-[#222]/50 border-l-4 border-solid border-[#222]">
+                          <p class="font-jakarta font-medium text-base text-white-300">"Laravel's ecosystem and community support make it an excellent choice for building complex e-commerce platforms. The framework's conventions save development time while maintaining code quality." <br>- Laravel Creator</p>
                       </div>
                   </div>
-                </div>
-                <div>
-                    <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">6. Deployment & Performance</h2>
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Deploying your Laravel e-commerce platform requires attention to performance, security, and scalability. Here are key considerations:</p>
-                    <ul class="list-disc ml-5">
-                        <li>
-                            <p class="font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Caching Strategy:</span> Use Redis for session storage and database query caching</p>
-                        </li>
-                        <li>
-                            <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Queue Workers:</span> Process orders, send emails, and update inventory asynchronously</p>
-                        </li>
-                        <li>
-                            <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">CDN Integration:</span> Serve static assets through CloudFront or similar CDN</p>
-                        </li>
-                        <li>
-                            <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Database Optimization: </span>Index frequently queried columns, use database replication</p>
-                        </li>
-                        <li>
-                            <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Monitoring:</span> Implement error tracking with Sentry and performance monitoring with New Relic</p>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">7. Conclusion</h2>
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Building an e-commerce platform with Laravel is a rewarding journey that results in a robust, scalable solution. By following the architecture and best practices outlined in this guide, you'll create a platform that can handle growth and provide an excellent user experience.</p>
-                    <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Remember that e-commerce is an evolving field. Stay updated with Laravel's latest features, monitor your platform's performance, and continuously optimize based on user feedback and analytics.</p>
-                    <div class="py-[24px] px-[19px] bg-[#222]">
-                        <h2 class="mb-3 font-jakarta font-medium text-base text-white-300">🚀 Next Steps</h2>
-                        <p class="font-jakarta font-medium text-base text-white-300">Ready to start your Laravel e-commerce project? Check out our Laravel development services or download our free e-commerce starter template to get a head start.</p>
-                    </div>
-                    <div class="mt-5 pt-[45px] px-[23px] pb-[30px] bg-[#4b5563]">
-                        <div class="grid pc:grid-cols-[83px_283px] mobile:grid-cols-[40px_200px] pc:gap-x-5 mobile:gap-x-3 mb-3">
-                            <div>
-                               <img src="./images//Article-Title/image11.png" class="pc:w-[83px] pc:h-[83px] mobile:w-[40px] mobile:h-[40px]" alt="Image"> 
-                            </div>
-                            <div>
-                                <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[14px]">About Alex Johnson</h2>
-                                <p class="font-jakarta font-normal pc:text-base mobile:text-sm text-white-300">Senior Laravel Developer at Webparadox</p>
-                            </div>
+                  <div>
+                      <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">3. Architecture Design</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">A well-designed architecture is crucial for scalability and maintainability. For e-commerce platforms, we recommend a modular approach that separates concerns and allows individual components to scale independently.</p>
+                      <img src="./images/Article-Title/image1.png" class="pc:w-[511px] pc:h-[230px]" alt="Image">
+                      <p class="mt-3 font-jakarta font-light text-sm text-white-300 text-center">Figure 1: E-commerce platform architecture with Laravel</p>
+                  </div>
+                  <div>
+                      <h2 class="mt-10 mb-3 font-poppins font-normal pc:text-[28px] mobile:text-[20px]">3.1 Database Structure</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">The database design is the foundation of your e-commerce platform. Here's a simplified schema for the core tables:</p>
+                      <img src="./images/Article-Title/image2.png" class="pc:w-[511px] pc:h-[445px]" alt="Image">
+                  </div>
+                  <div>
+                      <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-3">3.2 Models & Relationships</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Laravel's Eloquent ORM makes it easy to define relationships between models. Here's how you can set up the Product and Order models:</p>
+                                      <img src="./images/Article-Title/image3.png" class="pc:w-[511px] pc:h-[386px]" alt="Image">
+                  </div>
+                  <div>
+                      <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5 mt-10">4. Core Features Implementation</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Let's implement the essential features every e-commerce platform needs: product catalog, shopping cart, checkout process, and order management.</p>
+                      <h2 class="mb-5 font-jakarta font-semibold text-lg">Shopping Cart Implementation</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">For the shopping cart, we'll use Laravel's session management. Here's a simple Cart service:</p>
+                      <img src="./images/Article-Title/image4.png" class="pc:w-[511px] pc:h-[367px]" alt="Image">
+                  </div>
+                  <div>
+                      <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">5. Payment Integration</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Payment processing is critical for any e-commerce platform. We'll integrate Stripe using Laravel Cashier, which provides a fluent interface to Stripe's subscription billing services.</p>
+                      <img src="./images/Article-Title/image5.png" class="pc:w-[511px] pc:h-[386px]" alt="Image">
+                      <p class="mb-5 mt-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">First, install Laravel Cashier and configure your Stripe credentials:</p>
+                      <img src="./images/Article-Title/image6.png" class="pc:w-[511px] pc:h-[129px]" alt="Image">
+                      <div class="mt-5 bg-[#4b5563] w-full py-10 px-5">
+                        <h2 class="mb-5 font-poppins font-normal pc:text-[32px] mobile:text-[24px] text-center">Need Help Building Your E-commerce Platform?</h2>
+                        <p class="font-jakarta font-nornal pc:text-lg text-center mobile:text-base text-white-300">Our Laravel experts can help you build a scalable, secure e-commerce solution tailored to your needs.</p>
+                        <div class="flex">
+                            <button type="button" class="mt-7 font-jakarta font-bold pc:text-lg mobile:text-base pc:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] pc:hover:bg-[url('./images/mobile/btn_active_header.svg')] whitespace-pre h-[50px] pl-7 bg-no-repeat bg-left mx-auto transtion-all duration-300 ease-in">GET FREE CONSULATION</button>
                         </div>
-                        <p class="font-jakarta font-medium pc:text-lg mobile:text-base text-white-300">Alex has over 8 years of experience building e-commerce platforms with Laravel. He specializes in scalable architecture and performance optimization for high-traffic websites. When not coding, Alex enjoys contributing to open-source Laravel packages.</p>
-                        <div class="grid grid-cols-[47px_47px_47px_47px] mobile:justify-center gap-x-2 mt-5">
-            <div>
-              <a
-                href="#"
-                class="block text-center bg-[url('./images/footer_icon.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
-                >in</a
-              >
-            </div>
-            <div>
-              <a
-                href="#"
-                class="block text-center bg-[url('./images/footer_icon.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
-                >gh</a
-              >
-            </div>
-            <div>
-              <a
-                href="#"
-                class="block text-center bg-[url('./images/footer_icon.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
-                >tw</a
-              >
-            </div>
-            
-          </div>
+                    </div>
+                  </div>
+                  <div>
+                      <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">6. Deployment & Performance</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Deploying your Laravel e-commerce platform requires attention to performance, security, and scalability. Here are key considerations:</p>
+                      <ul class="list-disc ml-5">
+                          <li>
+                              <p class="font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Caching Strategy:</span> Use Redis for session storage and database query caching</p>
+                          </li>
+                          <li>
+                              <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Queue Workers:</span> Process orders, send emails, and update inventory asynchronously</p>
+                          </li>
+                          <li>
+                              <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">CDN Integration:</span> Serve static assets through CloudFront or similar CDN</p>
+                          </li>
+                          <li>
+                              <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Database Optimization: </span>Index frequently queried columns, use database replication</p>
+                          </li>
+                          <li>
+                              <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Monitoring:</span> Implement error tracking with Sentry and performance monitoring with New Relic</p>
+                          </li>
+                      </ul>
+                  </div>
+                  <div>
+                      <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">7. Conclusion</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Building an e-commerce platform with Laravel is a rewarding journey that results in a robust, scalable solution. By following the architecture and best practices outlined in this guide, you'll create a platform that can handle growth and provide an excellent user experience.</p>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Remember that e-commerce is an evolving field. Stay updated with Laravel's latest features, monitor your platform's performance, and continuously optimize based on user feedback and analytics.</p>
+                      <div class="py-[24px] px-[19px] bg-[#222]">
+                          <h2 class="mb-3 font-jakarta font-medium text-base text-white-300">🚀 Next Steps</h2>
+                          <p class="font-jakarta font-medium text-base text-white-300">Ready to start your Laravel e-commerce project? Check out our Laravel development services or download our free e-commerce starter template to get a head start.</p>
                       </div>
-                </div>
-            </div>
+                      <div class="mt-5 pt-[45px] px-[23px] pb-[30px] bg-[#4b5563]">
+                          <div class="grid pc:grid-cols-[83px_283px] mobile:grid-cols-[40px_200px] pc:gap-x-5 mobile:gap-x-3 mb-3">
+                              <div>
+                                <img src="./images//Article-Title/image11.png" class="pc:w-[83px] pc:h-[83px] mobile:w-[40px] mobile:h-[40px]" alt="Image"> 
+                              </div>
+                              <div>
+                                  <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[14px]">About Alex Johnson</h2>
+                                  <p class="font-jakarta font-normal pc:text-base mobile:text-sm text-white-300">Senior Laravel Developer at Webparadox</p>
+                              </div>
+                          </div>
+                          <p class="font-jakarta font-medium pc:text-lg mobile:text-base text-white-300">Alex has over 8 years of experience building e-commerce platforms with Laravel. He specializes in scalable architecture and performance optimization for high-traffic websites. When not coding, Alex enjoys contributing to open-source Laravel packages.</p>
+                          <div class="grid grid-cols-[47px_47px_47px_47px] mobile:justify-center gap-x-2 mt-5">
+              <div>
+                <a
+                  href="#"
+                  class="block text-center bg-[url('./images/footer_icon.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
+                  >in</a
+                >
               </div>
+              <div>
+                <a
+                  href="#"
+                  class="block text-center bg-[url('./images/footer_icon.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
+                  >gh</a
+                >
+              </div>
+              <div>
+                <a
+                  href="#"
+                  class="block text-center bg-[url('./images/footer_icon.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
+                  >tw</a
+                >
+              </div>
+              
+            </div>
+                        </div>
+                  </div>
+              </div>
+              </div>
+              <div x-show="openTab === 2">
+                <div class="mb-10">
+                      <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5 mt-10">1. Introduction</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Building an e-commerce platform requires careful planning, robust architecture, and the right technology stack. Laravel, with its elegant syntax and powerful features, has become one of the most popular choices for developing scalable e-commerce solutions.
+
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">In this comprehensive guide, we'll walk through the entire process of building an e-commerce platform with Laravel. From initial setup to deployment, you'll learn best practices, common pitfalls to avoid, and how to implement essential features like product management, shopping cart, checkout, and payment processing.</p>
+                      <div class="pc:w-[490px] mobile:w-[280px] pc:h-[158px] mobile:h-[210px] py-[24px] px-[19px] bg-[#222]">
+                      <h2 class="mb-5 font-jakarta font-medium text-base text-white-300">💡 What You'll Learn</h2>
+                          <p class="mb-5 font-jakarta font-medium text-base text-white-300">This guide assumes you have basic Laravel knowledge. We'll cover advanced topics like microservices architecture, queue management, and performance optimization for high-traffic e-commerce sites.</p>
+                    </div>
+                  </div>
+              </div>
+              <div x-show="openTab === 3">
+                <div>
+                      <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5 mt-10">2. Why Laravel for E-commerce</h2>
+                      <p class="mb-5 font-jakarta font-normal text-lg text-white-300">Laravel offers several advantages that make it ideal for e-commerce development:</p>
+                      <ul class="list-disc text-white ml-5">
+                          <li>
+                              <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Eloquent ORM:</span> Makes database operations intuitive and prevents SQL injection attacks</p>
+                          </li>
+                          <li>
+                              <p  class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Built-in Authentication:</span> Secure user authentication and authorization out of the box</p>
+                          </li>
+                          <li>
+                              <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Queue System:</span> Handle time-consuming tasks like sending emails asynchronously</p>
+                          </li>
+                          <li>
+                              <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Payment Integration: </span>Easy integration with Stripe, PayPal, and other payment gateways</p>
+                          </li>
+                          <li>
+                              <p class="font-jakarta font-normal text-lg text-white-300"><span class="font-jakarta font-bold text-lg text-white-100">Testing:</span> Comprehensive testing tools for ensuring code quality</p>
+                          </li>
+                      </ul>
+                      <div class="mt-5 py-[20px] px-[10px] bg-[#222]/50 border-l-4 border-solid border-[#222]">
+                          <p class="font-jakarta font-medium text-base text-white-300">"Laravel's ecosystem and community support make it an excellent choice for building complex e-commerce platforms. The framework's conventions save development time while maintaining code quality." <br>- Laravel Creator</p>
+                      </div>
+                  </div>
+              </div>
+              <div  x-show="openTab === 4">
+                <div>
+                      <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">3. Architecture Design</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">A well-designed architecture is crucial for scalability and maintainability. For e-commerce platforms, we recommend a modular approach that separates concerns and allows individual components to scale independently.</p>
+                      <img src="./images/Article-Title/image1.png" class="pc:w-[511px] pc:h-[230px]" alt="Image">
+                        <p class="mt-3 font-jakarta font-light text-sm text-white-300 text-center">Figure 1: E-commerce platform architecture with Laravel</p>
+                  </div>
+              </div>
+              <div x-show="openTab === 5">
+                <div>
+                      <h2 class="mt-10 mb-3 font-poppins font-normal pc:text-[28px] mobile:text-[20px]">3.1 Database Structure</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">The database design is the foundation of your e-commerce platform. Here's a simplified schema for the core tables:</p>
+                      <img src="./images/Article-Title/image2.png" class="pc:w-[511px] pc:h-[445px]" alt="Image">
+                  </div>
+              </div>
+              <div x-show="openTab === 6">
+                <div>
+                      <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-3">3.2 Models & Relationships</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Laravel's Eloquent ORM makes it easy to define relationships between models. Here's how you can set up the Product and Order models:</p>
+                                      <img src="./images/Article-Title/image3.png" class="pc:w-[511px] pc:h-[386px]" alt="Image">
+                  </div>
+              </div>
+              <div x-show="openTab === 7">
+                <div>
+                      <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5 mt-10">4. Core Features Implementation</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Let's implement the essential features every e-commerce platform needs: product catalog, shopping cart, checkout process, and order management.</p>
+                      <h2 class="mb-5 font-jakarta font-semibold text-lg">Shopping Cart Implementation</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">For the shopping cart, we'll use Laravel's session management. Here's a simple Cart service:</p>
+                      <img src="./images/Article-Title/image4.png" class="pc:w-[511px] pc:h-[367px]" alt="Image">
+                  </div>
+              </div>
+              <div x-show="openTab === 8">
+                <div>
+                      <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">5. Payment Integration</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Payment processing is critical for any e-commerce platform. We'll integrate Stripe using Laravel Cashier, which provides a fluent interface to Stripe's subscription billing services.</p>
+                      <img src="./images/Article-Title/image5.png" class="pc:w-[511px] pc:h-[386px]" alt="Image">
+                      <p class="mb-5 mt-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">First, install Laravel Cashier and configure your Stripe credentials:</p>
+                      <img src="./images/Article-Title/image6.png" class="pc:w-[511px] pc:h-[129px]" alt="Image">
+                      <div class="mt-5 bg-[#4b5563] w-full py-10 px-5">
+                        <h2 class="mb-5 font-poppins font-normal pc:text-[32px] mobile:text-[24px] text-center">Need Help Building Your E-commerce Platform?</h2>
+                        <p class="font-jakarta font-nornal pc:text-lg text-center mobile:text-base text-white-300">Our Laravel experts can help you build a scalable, secure e-commerce solution tailored to your needs.</p>
+                        <div class="flex">
+                            <button type="button" class="mt-7 font-jakarta font-bold pc:text-lg mobile:text-base pc:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] pc:hover:bg-[url('./images/mobile/btn_active_header.svg')] whitespace-pre h-[50px] pl-7 bg-no-repeat bg-left mx-auto transtion-all duration-300 ease-in">GET FREE CONSULATION</button>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div x-show="openTab === 9">
+                <div>
+                      <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">6. Deployment & Performance</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Deploying your Laravel e-commerce platform requires attention to performance, security, and scalability. Here are key considerations:</p>
+                      <ul class="list-disc ml-5">
+                          <li>
+                              <p class="font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Caching Strategy:</span> Use Redis for session storage and database query caching</p>
+                          </li>
+                          <li>
+                              <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Queue Workers:</span> Process orders, send emails, and update inventory asynchronously</p>
+                          </li>
+                          <li>
+                              <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">CDN Integration:</span> Serve static assets through CloudFront or similar CDN</p>
+                          </li>
+                          <li>
+                              <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Database Optimization: </span>Index frequently queried columns, use database replication</p>
+                          </li>
+                          <li>
+                              <p class=" font-jakarta font-normal text-base text-white-300 leading-[159%]"><span class="font-bold text-white-100">Monitoring:</span> Implement error tracking with Sentry and performance monitoring with New Relic</p>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div x-show="openTab === 10">
+                <div>
+                      <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">7. Conclusion</h2>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Building an e-commerce platform with Laravel is a rewarding journey that results in a robust, scalable solution. By following the architecture and best practices outlined in this guide, you'll create a platform that can handle growth and provide an excellent user experience.</p>
+                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Remember that e-commerce is an evolving field. Stay updated with Laravel's latest features, monitor your platform's performance, and continuously optimize based on user feedback and analytics.</p>
+                      <div class="py-[24px] px-[19px] bg-[#222]">
+                          <h2 class="mb-3 font-jakarta font-medium text-base text-white-300">🚀 Next Steps</h2>
+                          <p class="font-jakarta font-medium text-base text-white-300">Ready to start your Laravel e-commerce project? Check out our Laravel development services or download our free e-commerce starter template to get a head start.</p>
+                      </div>
+                      <div class="mt-5 pt-[45px] px-[23px] pb-[30px] bg-[#4b5563]">
+                          <div class="grid pc:grid-cols-[83px_283px] mobile:grid-cols-[40px_200px] pc:gap-x-5 mobile:gap-x-3 mb-3">
+                              <div>
+                                <img src="./images//Article-Title/image11.png" class="pc:w-[83px] pc:h-[83px] mobile:w-[40px] mobile:h-[40px]" alt="Image"> 
+                              </div>
+                              <div>
+                                  <h2 class="font-poppins font-normal pc:text-[28px] mobile:text-[14px]">About Alex Johnson</h2>
+                                  <p class="font-jakarta font-normal pc:text-base mobile:text-sm text-white-300">Senior Laravel Developer at Webparadox</p>
+                              </div>
+                          </div>
+                          <p class="font-jakarta font-medium pc:text-lg mobile:text-base text-white-300">Alex has over 8 years of experience building e-commerce platforms with Laravel. He specializes in scalable architecture and performance optimization for high-traffic websites. When not coding, Alex enjoys contributing to open-source Laravel packages.</p>
+                          <div class="grid grid-cols-[47px_47px_47px_47px] mobile:justify-center gap-x-2 mt-5">
+              <div>
+                <a
+                  href="#"
+                  class="block text-center bg-[url('./images/footer_icon.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
+                  >in</a
+                >
+              </div>
+              <div>
+                <a
+                  href="#"
+                  class="block text-center bg-[url('./images/footer_icon.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
+                  >gh</a
+                >
+              </div>
+              <div>
+                <a
+                  href="#"
+                  class="block text-center bg-[url('./images/footer_icon.svg')] bg-no-repeat bg-center w-[47px] h-[47px] leading-[47px] hover:bg-[url('./images/footer_icon_active.svg')] transition-all duration-300"
+                  >tw</a
+                >
+              </div>
+              
+            </div>
+                        </div>
+                  </div>
+              </div>
+            </div>
               <div class="pc:block tablet:grid tablet:grid-cols-[290px_290px] tablet:w-[608px] pc:w-[373px] tablet:gap-x-7 tablet:overflow-visible mobile:overflow-y-auto mobile:pr-1 mobile:overflow-x-hidden pc:overflow-y-hidden mobile:h-[500px] tablet:h-[800px] pc:h-auto mobile:col-start-1 mobile:row-start-1 pc:col-start-2 pc:row-start-1">
                 <div class="px-[22px] py-10 border border-solid border-[#7a7a7a]">
                     <img src="./images/Article-Title/image.png" class="mx-auto" alt="Image">
@@ -644,7 +803,7 @@
            
                   </div>
                 </div>
-                <div class="px-[22px] py-10 mt-10 border border-solid border-[#7a7a7a]">
+                <div class="px-[22px] py-10 mt-15 border border-solid border-[#7a7a7a]">
                     <h2 class="mb-3 font-jakarta font-medium pc:text-[22px] mobile:text-[20px]">Recent Posts</h2>
                     <div class="grid grid-cols-[47px_247px] gap-x-3 gap-y-5">
                         <div>
@@ -673,9 +832,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="mobile:mt-8 tablet:col-start-2 tablet:row-start-1 pc:col-start-1 pc:row-start-1 py-[42px] px-[33px] pc:mt-10 pc:bg-blue mobile:border mobile:border-solid mobile:border-[#7a7a7a]">
+                <div class="mobile:mt-8 tablet:col-start-2 tablet:row-start-1 pc:col-start-1 pc:row-start-1 py-[42px] px-[33px] pc:mt-[60px] pc:bg-blue mobile:border mobile:border-solid mobile:border-[#7a7a7a]">
                     <h2 class="mb-2 font-jakarta font-medium pc:text-[22px] mobile:text-[20px]">Categories</h2>
-                    <div class="grid grid-cols-[200px_31px] gap-y-5 items-center">
+                    <div class="grid grid-cols-[200px_31px] gap-y-5 items-center justify-between">
                         <div>
                             <p  class="mb-1 mt-2 font-jakarta font-medium pc:text-base mobile:text-sm text-white-400">Laravel Development</p>
                         </div>
@@ -708,7 +867,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="px-[33px] py-[42px] mt-10 bg-blue">
+                <div class="px-[33px] py-[42px] mt-15 bg-blue">
                     <h2 class="mb-2 font-jakarta font-medium pc:text-[22px] mobile:text-[20px]">Newsletter</h2>
                     <p class="mb-5 font-jakarta font-medium text-sm text-white-300">Get the latest Laravel tips and web development insights delivered to your inbox weekly.</p>
                     <form action="#" method="post">
@@ -722,6 +881,7 @@
                 </div>
               </div>
             </div>
+          </div>  
         </section>
         
         <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">

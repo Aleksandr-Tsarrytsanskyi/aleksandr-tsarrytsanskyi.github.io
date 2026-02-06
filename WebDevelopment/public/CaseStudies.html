@@ -73,7 +73,7 @@
         </div>
     </section>
      <div
-      class="bg-[url('./images/banner.png')] pc:h-203 mobile:h-[460px] pc:h-[740px] min-h-full max-w-full bg-cover bg-center"
+      class="bg-[url('./images/mobile/header_banner.svg')]  mobile:h-[370px] tablet:h-[400px] pc:h-[550px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
     >
       <header class="mt-9 py-4 relative z-100"
              
@@ -186,8 +186,8 @@
                       <path d="M8.39878 0.396234C8.59291 0.201848 8.90835 0.20117 9.10332 0.394721C9.28057 0.570677 9.29725 0.846578 9.15296 1.04133L9.10484 1.09714L5.10336 5.10377C4.92635 5.28101 4.64862 5.29713 4.45328 5.15213L4.39733 5.1038L0.395188 1.09717C0.201036 0.902803 0.201689 0.588317 0.396647 0.39475C0.573882 0.21878 0.850686 0.203321 1.04542 0.347998L1.1012 0.396205L4.75053 4.04921L8.39878 0.396234Z"   stroke-width="0.5"/>
                       </svg></span> <!-- Стрелки -->
                   </button>
-                    <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] w-[30px]  px-5 pb-5">
-                      <p @click="selected = 'EN'; open = false;" class="mb-2 mt-4 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in" >EN</a>
+                    <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute bg-[#222] pr-10 rounded-[10px] z-30 top-[50px] left-[-20px] w-[30px]  px-5 pb-2">
+                      <p @click="selected = 'EN'; open = false;" class="mb-2 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in" >EN</a>
                       <p @click="selected = 'EN'; open = false;" class=" font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in">EN</a>
                         <div class="border-b border-solid border-[#d9d9d9]" ></div>
                       </div>
@@ -364,7 +364,7 @@
     </div>
     <main>
       <div class="bg-[#222]/20 w-full mt-[-100px] h-[100px]"></div>
-       <section class=" bg-[#202020]  tablet:w-full mobile:w-[300px] mx-auto pc:mt-[-100px] mobile:mt-[0px] mobile:pt-[20px] mobile:pb-[20px] tablet:pt-[75px] tablet:pb-[81px]">
+       <section class=" bg-[#202020]  tablet:w-full mobile:w-[300px] mx-auto pc:mt-[-50px] mobile:mt-[0px] mobile:pt-[20px] mobile:pb-[20px] tablet:pt-[75px] tablet:pb-[81px]">
         <div class="grid pc:grid-cols-[216px_216px_216px_93px] mobile:grid-cols-[209px] tablet:grid-cols-[127px_127px_127px_77px] mobile:gap-y-7 tablet:gap-y-0 justify-center pc:gap-x-18.5 tablet:gap-x-12 pc:max-w-[960px] tablet:max-w-[608px] mx-auto">
             <div>
                 <h2 class=" mb-5 font-poppins font-normal pc:text-lg mobile:text-sm">Industry</h2>
@@ -541,7 +541,7 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="block  mt-10 font-jakarta font-medium pc:text-xl mobile:text-sm text-center underline">LOAD MORE PROJECTS</a>
+        <a href="#" @click.prevent class="block  mt-10 font-jakarta font-medium pc:text-xl mobile:text-sm text-center underline hover:text-blue transition-colors duration-300 ease-in">LOAD MORE PROJECTS</a>
        </section>
        
        <section class=" mt-20 bg-[#27272a] w-full py-10">

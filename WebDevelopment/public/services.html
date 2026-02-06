@@ -183,8 +183,8 @@
                       <path d="M8.39878 0.396234C8.59291 0.201848 8.90835 0.20117 9.10332 0.394721C9.28057 0.570677 9.29725 0.846578 9.15296 1.04133L9.10484 1.09714L5.10336 5.10377C4.92635 5.28101 4.64862 5.29713 4.45328 5.15213L4.39733 5.1038L0.395188 1.09717C0.201036 0.902803 0.201689 0.588317 0.396647 0.39475C0.573882 0.21878 0.850686 0.203321 1.04542 0.347998L1.1012 0.396205L4.75053 4.04921L8.39878 0.396234Z"   stroke-width="0.5"/>
                       </svg></span> <!-- Стрелки -->
                   </button>
-                    <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] w-[30px]  px-5 pb-5">
-                      <p @click="selected = 'EN'; open = false;" class="mb-2 mt-4 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in" >EN</a>
+                    <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute bg-[#222] pr-10 rounded-[10px] z-30 top-[50px] left-[-20px] w-[30px]  px-5 pb-2">
+                      <p @click="selected = 'EN'; open = false;" class="mb-2 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in" >EN</a>
                       <p @click="selected = 'EN'; open = false;" class=" font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-blue transition-colors duration-300 ease-in">EN</a>
                         <div class="border-b border-solid border-[#d9d9d9]" ></div>
                       </div>
@@ -409,13 +409,13 @@
         </div>
       </section>
       <section class=" tablet:mt-0 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[375px] mx-auto">
-       
+          <div x-data="{ activeBlock: null }">
             <div
               class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px]   left-0 w-full h-full justify-center"
             >
         
-            <div x-data="{ open: false }" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]" >
-              <a href="#" @click="open = true"  @click.prevent>
+            <div @mouseover="activeBlock = 1" @mouseleave="activeBlock = null" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]" >
+              <a href="#">
                 <div class="absolute top-0">
                 <img src="./images/clients_image.png"  alt="Image" />
               </div>
@@ -460,187 +460,417 @@
                     </p>
                   </div>
                   <div>
-                    <a x-show="open" 
-                      class="relative block z-50 pc:mt-3 tablet:mt-8 mobile:mt-7 pc:bg-[url('./images/clients_more.svg')] mobile:bg-[url('./images/mobile/icon_clients_mobile.svg')] bg-right bg-no-repeat pc:w-[70px] pc:h-[70px] tablet:w-[56px] tablet:h-[56px] mobile:w-[46px] mobile:h-[46px] tablet:bg-[url('./images/mobile/icon_clients.svg')]" 
-                      href="#"
-                    ></a>
-                  </div>
+                      <!-- <a
+                        class="relative block z-50 pc:mt-3 tablet:mt-8 mobile:mt-7 pc:bg-[url('./images/clients_more.svg')]  mobile:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_active_header.svg')]  bg-center bg-no-repeat pc:w-[70px] pc:h-[70px] tablet:w-[56px] tablet:h-[56px] mobile:w-[50px] mobile:h-[50px] tablet:bg-[url('./images/mobile/icon_clients.svg')] transition-all duration-300 ease-in" 
+                        href="#"
+                      ></a> -->
+                      <div x-transition:enter="transition ease-out duration-300"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-in duration-200"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0" x-show="activeBlock === 1" style="display: none;">
+                          <svg class="mobile:block pc:hidden mt-5" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <foreignObject x="-10" y="-10" width="66" height="66">
+                                <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                              </foreignObject>
+                              <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                              <path d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z" fill="white" stroke="white" />
+                              <path d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z" fill="white" stroke="white" />
+                              <defs>
+                                <clipPath id="bgblur_0_389_243_clip_path" transform="translate(10 10)">
+                                  <rect width="46" height="46" rx="23" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          <svg class="pc:block mobile:hidden fill-[#4b5563] hover:fill-[#3E82DA]" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <foreignObject x="-10" y="-10" width="90" height="90"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5px);clip-path:url(#bgblur_0_89_83_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="10" width="70" height="70" rx="35" />
+                        <path d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z" fill="white" stroke="white"/>
+                        <path d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z" fill="white" stroke="white"/>
+                        <defs>
+                        <clipPath id="bgblur_0_89_83_clip_path" transform="translate(10 10)"><rect width="70" height="70" rx="35"/>
+                        </clipPath></defs>
+                      </svg>
+                    </div>
+
+                    </div>
                 </div>
               </div>
               </a>
             </div>
 
-            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
+            <div @mouseover="activeBlock = 2" @mouseleave="activeBlock = null" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
               <a href="./laraveldevelopment.html">
                 <div class="absolute top-0">
                 <img src="./images/clients_image1.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                <div class="block tablet:grid-cols-[430px_70px] gap-x-5 items-center ml-7 h-[90px] relative pc:top-[20px] mobile:top-[40px]">
-                  <div>
-                    <p
-                      class="tablet:mt-7 mobile:mt-10  font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
-                    >
-                      Laravel Development
-                    </p>
+                <div class="grid pc:grid-cols-[320px_50px] tablet:grid-cols-[230px_70px] mobile:grid-cols-[220px_40px] h-[90px] pc:gap-x-20 tablet:gap-x-10 mobile:gap-x-10 justify-between items-center ml-7  relative pc:top-[20px] mobile:top-[40px]">
+                    <div>
+                      <p
+                        class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
+                      >
+                        Laravel Development
+                      </p>
+                    </div>
+                     <div x-transition:enter="transition ease-out duration-300"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-in duration-200"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0" x-show="activeBlock === 2" style="display: none;">
+                          <svg class="mobile:block pc:hidden tablet:mt-[-50px] mobile:mt-[-50px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <foreignObject x="-10" y="-10" width="66" height="66">
+                                <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                              </foreignObject>
+                              <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                              <path d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z" fill="white" stroke="white" />
+                              <path d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z" fill="white" stroke="white" />
+                              <defs>
+                                <clipPath id="bgblur_0_389_243_clip_path" transform="translate(10 10)">
+                                  <rect width="46" height="46" rx="23" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          <svg class="pc:block mobile:hidden fill-[#4b5563] hover:fill-[#3E82DA] mt-[-60px]" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <foreignObject x="-10" y="-10" width="90" height="90"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5px);clip-path:url(#bgblur_0_89_83_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="10" width="70" height="70" rx="35" />
+                        <path d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z" fill="white" stroke="white"/>
+                        <path d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z" fill="white" stroke="white"/>
+                        <defs>
+                        <clipPath id="bgblur_0_89_83_clip_path" transform="translate(10 10)"><rect width="70" height="70" rx="35"/>
+                        </clipPath></defs>
+                      </svg>
+                    </div>
                   </div>
-                  <div>
-                    
-                  </div>
-                </div>
               </div>
               </a>
             </div>
 
-            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]"  >
+            <div @mouseover="activeBlock = 3" @mouseleave="activeBlock = null" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]"  >
               <a href="#">
                 <div class="absolute top-0">
                 <img src="./images/clients_image2.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                <div class="block grid-cols-[430px_70px] gap-x-5 items-center h-[90px] ml-7 relative pc:top-[20px] mobile:top-[40px]">
-                  <div>
-                    <p
-                      class="mt-7 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
-                    >
-                      Mobile Development
-                    </p>
+                <div class="grid pc:grid-cols-[320px_50px] tablet:grid-cols-[230px_70px] mobile:grid-cols-[220px_40px] h-[90px] pc:gap-x-20 tablet:gap-x-10 mobile:gap-x-10 justify-between items-center ml-7  relative pc:top-[20px] mobile:top-[40px]">
+                    <div>
+                      <p
+                        class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
+                      >
+                        SPA Development
+                      </p>
+                    </div>
+                     <div x-transition:enter="transition ease-out duration-300"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-in duration-200"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0" x-show="activeBlock === 3" style="display: none;">
+                          <svg class="mobile:block pc:hidden tablet:mt-[-50px] mobile:mt-[-50px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <foreignObject x="-10" y="-10" width="66" height="66">
+                                <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                              </foreignObject>
+                              <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                              <path d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z" fill="white" stroke="white" />
+                              <path d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z" fill="white" stroke="white" />
+                              <defs>
+                                <clipPath id="bgblur_0_389_243_clip_path" transform="translate(10 10)">
+                                  <rect width="46" height="46" rx="23" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          <svg class="pc:block mobile:hidden fill-[#4b5563] hover:fill-[#3E82DA] mt-[-60px]" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <foreignObject x="-10" y="-10" width="90" height="90"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5px);clip-path:url(#bgblur_0_89_83_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="10" width="70" height="70" rx="35" />
+                        <path d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z" fill="white" stroke="white"/>
+                        <path d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z" fill="white" stroke="white"/>
+                        <defs>
+                        <clipPath id="bgblur_0_89_83_clip_path" transform="translate(10 10)"><rect width="70" height="70" rx="35"/>
+                        </clipPath></defs>
+                      </svg>
+                    </div>
                   </div>
-                  <div>
-                   
-                  </div>
-                </div>
               </div>
               </a>
             </div>
-            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]" >
+            <div @mouseover="activeBlock = 4" @mouseleave="activeBlock = null" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]" >
               <a href="#">
                 <div class="absolute top-0">
                 <img src="./images/services/services_dev_image1.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                <div class="block grid-cols-[430px_70px] gap-x-5 items-center h-[90px] ml-7 relative pc:top-[20px] mobile:top-[40px]">
-                  <div>
-                    <p
-                      class="mt-7 font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
-                    >
-                      SPA Development
-                    </p>
+                <div class="grid pc:grid-cols-[320px_50px] tablet:grid-cols-[230px_70px] mobile:grid-cols-[220px_40px] h-[90px] pc:gap-x-20 tablet:gap-x-10 mobile:gap-x-10 justify-between items-center ml-7  relative pc:top-[20px] mobile:top-[40px]">
+                    <div>
+                      <p
+                        class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
+                      >
+                        Mobile Development
+                      </p>
+                    </div>
+                     <div x-transition:enter="transition ease-out duration-300"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-in duration-200"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0" x-show="activeBlock === 4" style="display: none;">
+                          <svg class="mobile:block pc:hidden tablet:mt-[-50px] mobile:mt-[-50px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <foreignObject x="-10" y="-10" width="66" height="66">
+                                <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                              </foreignObject>
+                              <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                              <path d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z" fill="white" stroke="white" />
+                              <path d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z" fill="white" stroke="white" />
+                              <defs>
+                                <clipPath id="bgblur_0_389_243_clip_path" transform="translate(10 10)">
+                                  <rect width="46" height="46" rx="23" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          <svg class="pc:block mobile:hidden fill-[#4b5563] hover:fill-[#3E82DA] mt-[-60px]" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <foreignObject x="-10" y="-10" width="90" height="90"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5px);clip-path:url(#bgblur_0_89_83_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="10" width="70" height="70" rx="35" />
+                        <path d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z" fill="white" stroke="white"/>
+                        <path d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z" fill="white" stroke="white"/>
+                        <defs>
+                        <clipPath id="bgblur_0_89_83_clip_path" transform="translate(10 10)"><rect width="70" height="70" rx="35"/>
+                        </clipPath></defs>
+                      </svg>
+                    </div>
                   </div>
-                  <div>
-                    
-                  </div>
-                </div>
               </div>
               </a>
             </div>
-            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
+            <div @mouseover="activeBlock = 5" @mouseleave="activeBlock = null" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
               <a href="#">
                 <div class="absolute top-0">
                 <img src="./images/services/services_dev_image3.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                    <div class="block grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative pc:top-[20px] mobile:top-[40px]">
-                  <div>
-                    <p
-                      class="pc:mt-10 tablet:mt-10 mobile:mt-10 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
-                    >
-                    Digital Marketing
-                    </p>
+                  <div class="grid pc:grid-cols-[320px_50px] tablet:grid-cols-[230px_70px] mobile:grid-cols-[220px_40px] h-[90px] pc:gap-x-20 tablet:gap-x-10 mobile:gap-x-10 justify-between items-center ml-7  relative pc:top-[20px] mobile:top-[40px]">
+                    <div>
+                      <p
+                        class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
+                      >
+                       UI/UX Design
+                      </p>
+                    </div>
+                     <div x-transition:enter="transition ease-out duration-300"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-in duration-200"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0" x-show="activeBlock === 5" style="display: none;">
+                          <svg class="mobile:block pc:hidden tablet:mt-[-50px] mobile:mt-[-50px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <foreignObject x="-10" y="-10" width="66" height="66">
+                                <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                              </foreignObject>
+                              <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                              <path d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z" fill="white" stroke="white" />
+                              <path d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z" fill="white" stroke="white" />
+                              <defs>
+                                <clipPath id="bgblur_0_389_243_clip_path" transform="translate(10 10)">
+                                  <rect width="46" height="46" rx="23" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          <svg class="pc:block mobile:hidden fill-[#4b5563] hover:fill-[#3E82DA] mt-[-60px]" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <foreignObject x="-10" y="-10" width="90" height="90"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5px);clip-path:url(#bgblur_0_89_83_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="10" width="70" height="70" rx="35" />
+                        <path d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z" fill="white" stroke="white"/>
+                        <path d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z" fill="white" stroke="white"/>
+                        <defs>
+                        <clipPath id="bgblur_0_89_83_clip_path" transform="translate(10 10)"><rect width="70" height="70" rx="35"/>
+                        </clipPath></defs>
+                      </svg>
+                    </div>
                   </div>
-                  <div>
-                   
-                  </div>
-                </div>
               </div>
               </a>
             </div>
-            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
+            <div @mouseover="activeBlock = 6" @mouseleave="activeBlock = null" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
               <a href="#">
                   <div class="absolute top-0">
                 <img src="./images/services/services_dev_image2.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                    <div class="block grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative pc:top-[20px] mobile:top-[40px]">
-                  <div>
-                    <p
-                      class="pc:mt-10 tablet:mt-10 mobile:mt-10 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
-                    >
-                    UI/UX Design
-                    </p>
+                  <div class="grid pc:grid-cols-[320px_50px] tablet:grid-cols-[230px_70px] mobile:grid-cols-[220px_40px] h-[90px] pc:gap-x-20 tablet:gap-x-10 mobile:gap-x-10 justify-between items-center ml-7  relative pc:top-[20px] mobile:top-[40px]">
+                    <div>
+                      <p
+                        class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
+                      >
+                        Digital Marketing
+                      </p>
+                    </div>
+                     <div x-transition:enter="transition ease-out duration-300"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-in duration-200"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0" x-show="activeBlock === 6" style="display: none;">
+                          <svg class="mobile:block pc:hidden tablet:mt-[-50px] mobile:mt-[-50px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <foreignObject x="-10" y="-10" width="66" height="66">
+                                <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                              </foreignObject>
+                              <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                              <path d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z" fill="white" stroke="white" />
+                              <path d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z" fill="white" stroke="white" />
+                              <defs>
+                                <clipPath id="bgblur_0_389_243_clip_path" transform="translate(10 10)">
+                                  <rect width="46" height="46" rx="23" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          <svg class="pc:block mobile:hidden fill-[#4b5563] hover:fill-[#3E82DA] mt-[-60px]" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <foreignObject x="-10" y="-10" width="90" height="90"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5px);clip-path:url(#bgblur_0_89_83_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="10" width="70" height="70" rx="35" />
+                        <path d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z" fill="white" stroke="white"/>
+                        <path d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z" fill="white" stroke="white"/>
+                        <defs>
+                        <clipPath id="bgblur_0_89_83_clip_path" transform="translate(10 10)"><rect width="70" height="70" rx="35"/>
+                        </clipPath></defs>
+                      </svg>
+                    </div>
                   </div>
-                  <div>
-                  
-                  </div>
-                </div>
               </div>
               </a>
             </div>
-            <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
+            <div @mouseover="activeBlock = 7" @mouseleave="activeBlock = null" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
               <a href="#">
                   <div class="absolute top-0">
                 <img src="./images/clients_image4.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                    <div class="block grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative pc:top-[20px] mobile:top-[40px]">
-                  <div>
-                    <p
-                      class="pc:mt-10 tablet:mt-10 mobile:mt-10 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
-                    >
-                    CRM Implementation
-                    </p>
+                  <div class="grid pc:grid-cols-[320px_50px] tablet:grid-cols-[230px_70px] mobile:grid-cols-[220px_40px] h-[90px] pc:gap-x-20 tablet:gap-x-10 mobile:gap-x-10 justify-between items-center ml-7  relative pc:top-[20px] mobile:top-[40px]">
+                    <div>
+                      <p
+                        class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
+                      >
+                        CRM Implementation
+                      </p>
+                    </div>
+                     <div x-transition:enter="transition ease-out duration-300"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-in duration-200"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0" x-show="activeBlock === 7" style="display: none;">
+                          <svg class="mobile:block pc:hidden tablet:mt-[-50px] mobile:mt-[-50px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <foreignObject x="-10" y="-10" width="66" height="66">
+                                <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                              </foreignObject>
+                              <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                              <path d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z" fill="white" stroke="white" />
+                              <path d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z" fill="white" stroke="white" />
+                              <defs>
+                                <clipPath id="bgblur_0_389_243_clip_path" transform="translate(10 10)">
+                                  <rect width="46" height="46" rx="23" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          <svg class="pc:block mobile:hidden fill-[#4b5563] hover:fill-[#3E82DA] mt-[-60px]" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <foreignObject x="-10" y="-10" width="90" height="90"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5px);clip-path:url(#bgblur_0_89_83_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="10" width="70" height="70" rx="35" />
+                        <path d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z" fill="white" stroke="white"/>
+                        <path d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z" fill="white" stroke="white"/>
+                        <defs>
+                        <clipPath id="bgblur_0_89_83_clip_path" transform="translate(10 10)"><rect width="70" height="70" rx="35"/>
+                        </clipPath></defs>
+                      </svg>
+                    </div>
                   </div>
-                  <div>
-                  
-                  </div>
-                </div>
               </div>
               </a>
             </div>
-             <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
+             <div @mouseover="activeBlock = 8" @mouseleave="activeBlock = null" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
               <a href="#">
                   <div class="absolute top-0">
                 <img src="./images/services/services_dev_image4.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                    <div class="block grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative pc:top-[20px] mobile:top-[40px]">
-                  <div>
-                    <p
-                      class="pc:mt-10 tablet:mt-10 mobile:mt-10 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
-                    >
-                    Support & Maintenance
-                    </p>
+                  <div class="grid pc:grid-cols-[360px_50px] tablet:grid-cols-[250px_70px] mobile:grid-cols-[240px_40px] h-[90px] pc:gap-x-20 tablet:gap-x-10 mobile:gap-x-10 justify-between items-center ml-7  relative pc:top-[20px] mobile:top-[40px]">
+                    <div>
+                      <p
+                        class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
+                      >
+                        Support & Maintenance
+                      </p>
+                    </div>
+                     <div x-transition:enter="transition ease-out duration-300"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-in duration-200"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0" x-show="activeBlock === 8" style="display: none;">
+                          <svg class="mobile:block pc:hidden tablet:mt-[-50px] mobile:mt-[-50px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <foreignObject x="-10" y="-10" width="66" height="66">
+                                <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                              </foreignObject>
+                              <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                              <path d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z" fill="white" stroke="white" />
+                              <path d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z" fill="white" stroke="white" />
+                              <defs>
+                                <clipPath id="bgblur_0_389_243_clip_path" transform="translate(10 10)">
+                                  <rect width="46" height="46" rx="23" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          <svg class="pc:block mobile:hidden fill-[#4b5563] hover:fill-[#3E82DA] mt-[-60px]" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <foreignObject x="-10" y="-10" width="90" height="90"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5px);clip-path:url(#bgblur_0_89_83_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="10" width="70" height="70" rx="35" />
+                        <path d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z" fill="white" stroke="white"/>
+                        <path d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z" fill="white" stroke="white"/>
+                        <defs>
+                        <clipPath id="bgblur_0_89_83_clip_path" transform="translate(10 10)"><rect width="70" height="70" rx="35"/>
+                        </clipPath></defs>
+                      </svg>
+                    </div>
                   </div>
-                  <div>
-                  
-                  </div>
-                </div>
               </div>
               </a>
             </div>
-             <div class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
+             <div @mouseover="activeBlock = 9" @mouseleave="activeBlock = null" class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[232px]">
               <a href="#">
                   <div class="absolute top-0">
                 <img src="./images/services/services_dev_image5.png" alt="Image" />
               </div>
               <div class="absolute bottom-0">
-                    <div class="block grid-cols-[430px_70px] gap-x-5 h-[90px] items-center ml-7 relative pc:top-[20px] mobile:top-[40px]">
-                  <div>
-                    <p
-                      class="pc:mt-10 tablet:mt-10 mobile:mt-10 font-poppins font-normal pc:text-1xl mobile:text-[20px]"
-                    >
-                    Business Automation
-                    </p>
+                  <div class="grid pc:grid-cols-[320px_50px] tablet:grid-cols-[230px_70px] mobile:grid-cols-[220px_40px] h-[90px] pc:gap-x-20 tablet:gap-x-10 mobile:gap-x-10 justify-between items-center ml-7  relative pc:top-[20px] mobile:top-[40px]">
+                    <div>
+                      <p
+                        class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px] " 
+                      >
+                        Business Automation
+                      </p>
+                    </div>
+                     <div x-transition:enter="transition ease-out duration-300"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-in duration-200"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0" x-show="activeBlock === 9" style="display: none;">
+                          <svg class="mobile:block pc:hidden tablet:mt-[-50px] mobile:mt-[-50px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <foreignObject x="-10" y="-10" width="66" height="66">
+                                <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                              </foreignObject>
+                              <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                              <path d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z" fill="white" stroke="white" />
+                              <path d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z" fill="white" stroke="white" />
+                              <defs>
+                                <clipPath id="bgblur_0_389_243_clip_path" transform="translate(10 10)">
+                                  <rect width="46" height="46" rx="23" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          <svg class="pc:block mobile:hidden fill-[#4b5563] hover:fill-[#3E82DA] mt-[-60px]" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <foreignObject x="-10" y="-10" width="90" height="90"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5px);clip-path:url(#bgblur_0_89_83_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="10" width="70" height="70" rx="35" />
+                        <path d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z" fill="white" stroke="white"/>
+                        <path d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z" fill="white" stroke="white"/>
+                        <defs>
+                        <clipPath id="bgblur_0_89_83_clip_path" transform="translate(10 10)"><rect width="70" height="70" rx="35"/>
+                        </clipPath></defs>
+                      </svg>
+                    </div>
                   </div>
-                  <div>
-                  
-                  </div>
-                </div>
               </div>
               </a>
             </div>
         
             </div>
+         </div>   
       </section>
       <section class="tablet:mt-30 mobile:mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
         <h2 class="font-poppins font-light pc:text-2xl mobile:text-[24px] mb-1 text-center">
