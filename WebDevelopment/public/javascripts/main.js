@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded",function() {
   // Optional parameters
  
   
-  
+  slidesPerView: 8,
    spaceBetween: 10,
   
 
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded",function() {
   scrollbar: {
     el: '.swiper-scrollbar',
       draggable: true,
-      autoHeight: true
+      
   },
 
    breakpoints: {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded",function() {
     },
     // когда ширина экрана >= 640px (планшеты)
     768: {
-      loop: true,
+     
       slidesPerView: 6,
       spaceBetween: 20
     },
@@ -90,9 +90,9 @@ document.addEventListener("DOMContentLoaded",function() {
 
     const mobileCore = new Swiper('.mobile_core', {
   // Optional parameters
-  slidesPerView: 1.2,
+  slidesPerView: 1.1,
     spaceBetween: 10,
-  loop: true,
+ 
 
   // If we need pagination
  

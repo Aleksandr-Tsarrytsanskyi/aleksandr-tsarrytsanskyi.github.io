@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",function() {
 const swiper = new Swiper('.mobile_technology ', {
   // Optional parameters
- slidesPerView: 1,
+    slidesPerView: 1,
     spaceBetween: 20,
   
 
@@ -17,7 +17,7 @@ const swiper = new Swiper('.mobile_technology ', {
 
 const swiper1 = new Swiper('.mobile_project ', {
   // Optional parameters
- slidesPerView: 1.5,
+    slidesPerView: 1.5,
     spaceBetween: 40,
   
 

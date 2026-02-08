@@ -30,6 +30,7 @@ tailwind.config = {
       "pc": "1200px"
       
     },
+     
 
      maxWidth: {
         '8xl': '1300px', // 1440px
