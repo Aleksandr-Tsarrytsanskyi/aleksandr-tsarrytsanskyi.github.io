@@ -60,6 +60,6 @@ const swiperPrev = document.querySelector(".swiperPrev");
             el.style.opacity = "0"
           })
             activeSlide.lastElementChild.style.opacity = "1"
-      });
+      })
 
 })

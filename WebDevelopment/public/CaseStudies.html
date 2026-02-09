@@ -53,11 +53,13 @@
         src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
         ></script>
         <script  src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+       <script
+      defer
+      src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
     <script src="./javascripts/slid.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./javascripts/event.js"></script>
     <meta name="description" content="Enterprise Web Development for Complex Business Solutions" />
     <meta property="og:type" content="" />
     <meta property="og:url" content="" />
@@ -725,137 +727,154 @@
         </div>
         
       </section>
-      <section class="tablet:mt-30 mobile:mt-10 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
-        <div class="grid pc:grid-cols-[503px_423px] tablet:grid-cols-[290px_293px] mobile:grid-cols-[290px] mobile:justify-center tablet:justify-between">
+      <section
+        class="tablet:mt-30 mobile:mt-10 pc:mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
+      >
+        <div
+          class="grid pc:grid-cols-[503px_423px] tablet:grid-cols-[290px_293px] mobile:grid-cols-[290px] mobile:justify-center tablet:justify-between"
+        >
           <div>
-            <h2 class="mobile:block tablet:hidden mb-3 mobile:text-center tablet:text-left font-poppins font-light pc:text-2xl mobile:text-[24px]">
+            <h2
+              class="mobile:block tablet:hidden mb-3 mobile:text-center tablet:text-left font-poppins font-light pc:text-2xl mobile:text-[24px]"
+            >
               What Our Clients Say
             </h2>
-             <div class="swiper !w-[100%] pc:h-[300px] mobile:h-[205px] clients swiper-container">
+            <div
+              class="swiper !w-[100%] pc:h-[300px] mobile:h-[205px] clients swiper-container"
+            >
               <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                        <img
-                        
-                          src="./images/slide1_main.png"
-                          alt="Image" class="pc:max-w-[128px] mobile:max-w-[75px] pc:w-[128px] mobile:w-[75px]  pc:h-[168px] tablet:h-[85px]"
-                        />
-                        <div class="client pc:w-['auto'] mobile:w-[90px] ">
-                          <svg 
-                            class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 40 40"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <rect width="40" height="40" fill="#3E82DA" />
-                            <path
-                              d="M10.3153 13.0859C10.2209 13.135 10.1265 13.229 10.0773 13.3271C9.99526 13.4865 9.99526 13.5437 10.0035 17.5941C10.0158 21.669 10.0158 21.7017 10.1019 21.812C10.1471 21.8733 10.2373 21.9633 10.2988 22.0082C10.4096 22.09 10.467 22.094 12.1696 22.1063L13.9295 22.1186L13.9418 24.8447C13.9541 27.5668 13.9541 27.5708 14.0444 27.7139C14.2208 27.9959 14.2372 28 15.5705 28H16.7643L16.9243 27.8529C17.0843 27.7098 17.1007 27.6689 18.1181 24.6322L19.1437 21.5545L19.1355 17.4837C19.1232 13.4456 19.1232 13.4129 19.0371 13.3026C18.992 13.2412 18.9017 13.1513 18.8402 13.1064C18.7294 13.0205 18.6966 13.0205 14.5982 13.0124C10.5491 13.0042 10.4629 13.0042 10.3153 13.0859Z"
-                              fill="white"
-                            />
-                            <path
-                              d="M22.241 13.0572C22.0728 13.1308 21.9005 13.3392 21.8718 13.5027C21.8594 13.5763 21.8553 15.4482 21.8594 17.6675C21.8718 21.6689 21.8718 21.7016 21.9579 21.8119C22.003 21.8732 22.0933 21.9632 22.1548 22.0081C22.2656 22.0899 22.323 22.0939 24.0502 22.1062L25.8306 22.1185L25.8388 24.8937L25.8511 27.6729L26.007 27.8241L26.1588 27.9795L27.369 27.9917C28.7106 28.004 28.7516 27.9958 28.9075 27.7424C28.9526 27.6688 29.4408 26.2588 29.9946 24.6075L30.9997 21.5994V17.5449C30.9997 13.5599 30.9997 13.4864 30.9177 13.327C30.8643 13.2207 30.7782 13.1349 30.6715 13.0817C30.5115 13 30.4418 13 26.4378 13C23.1435 13.0041 22.3394 13.0123 22.241 13.0572Z"
-                              fill="white"
-                            />
-                          </svg>
-                          <div class="relative top-[-20px]">
-                            <p class="font-poppins font-normal pc:text-lg mobile:text-sm">
-                              John Smith
-                            </p>
-                            <p
-                              class="mt-1 font-poppins font-light pc:text-sm mobile:text-xs text-blue"
-                            >
-                              CEO, Fashion Retail Co.
-                            </p>
-                          </div>
-                        </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./images/slide1_main.png"
+                    alt="Image"
+                    class="pc:max-w-[147px] mobile:max-w-[75px] pc:w-[147px] mobile:w-[75px] pc:h-[168px] tablet:h-[85px]"
+                  />
+                  <div class="client pc:w-['auto'] mobile:w-[90px]">
+                    <svg
+                      class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="40" height="40" fill="#3E82DA" />
+                      <path
+                        d="M10.3153 13.0859C10.2209 13.135 10.1265 13.229 10.0773 13.3271C9.99526 13.4865 9.99526 13.5437 10.0035 17.5941C10.0158 21.669 10.0158 21.7017 10.1019 21.812C10.1471 21.8733 10.2373 21.9633 10.2988 22.0082C10.4096 22.09 10.467 22.094 12.1696 22.1063L13.9295 22.1186L13.9418 24.8447C13.9541 27.5668 13.9541 27.5708 14.0444 27.7139C14.2208 27.9959 14.2372 28 15.5705 28H16.7643L16.9243 27.8529C17.0843 27.7098 17.1007 27.6689 18.1181 24.6322L19.1437 21.5545L19.1355 17.4837C19.1232 13.4456 19.1232 13.4129 19.0371 13.3026C18.992 13.2412 18.9017 13.1513 18.8402 13.1064C18.7294 13.0205 18.6966 13.0205 14.5982 13.0124C10.5491 13.0042 10.4629 13.0042 10.3153 13.0859Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M22.241 13.0572C22.0728 13.1308 21.9005 13.3392 21.8718 13.5027C21.8594 13.5763 21.8553 15.4482 21.8594 17.6675C21.8718 21.6689 21.8718 21.7016 21.9579 21.8119C22.003 21.8732 22.0933 21.9632 22.1548 22.0081C22.2656 22.0899 22.323 22.0939 24.0502 22.1062L25.8306 22.1185L25.8388 24.8937L25.8511 27.6729L26.007 27.8241L26.1588 27.9795L27.369 27.9917C28.7106 28.004 28.7516 27.9958 28.9075 27.7424C28.9526 27.6688 29.4408 26.2588 29.9946 24.6075L30.9997 21.5994V17.5449C30.9997 13.5599 30.9997 13.4864 30.9177 13.327C30.8643 13.2207 30.7782 13.1349 30.6715 13.0817C30.5115 13 30.4418 13 26.4378 13C23.1435 13.0041 22.3394 13.0123 22.241 13.0572Z"
+                        fill="white"
+                      />
+                    </svg>
+                    <div class="relative top-[-20px]">
+                      <p
+                        class="font-poppins font-normal pc:text-lg mobile:text-sm"
+                      >
+                        John Smith
+                      </p>
+                      <p
+                        class="mt-1 font-poppins font-light pc:text-sm mobile:text-xs text-blue"
+                      >
+                        CEO, Fashion Retail Co.
+                      </p>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                        <img
-                        
-                          src="./images/slide_main.png"
-                          alt="Image"
-                          class="pc:max-w-[128px] mobile:max-w-[75px] pc:w-[128px] mobile:w-[75px]  pc:h-[168px] tablet:h-[85px]"
-                        />
-                        <div class="client pc:w-['auto'] mobile:w-[90px] opacity-0 ">
-                          <svg 
-                            class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 40 40"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <rect width="40" height="40" fill="#3E82DA" />
-                            <path
-                              d="M10.3153 13.0859C10.2209 13.135 10.1265 13.229 10.0773 13.3271C9.99526 13.4865 9.99526 13.5437 10.0035 17.5941C10.0158 21.669 10.0158 21.7017 10.1019 21.812C10.1471 21.8733 10.2373 21.9633 10.2988 22.0082C10.4096 22.09 10.467 22.094 12.1696 22.1063L13.9295 22.1186L13.9418 24.8447C13.9541 27.5668 13.9541 27.5708 14.0444 27.7139C14.2208 27.9959 14.2372 28 15.5705 28H16.7643L16.9243 27.8529C17.0843 27.7098 17.1007 27.6689 18.1181 24.6322L19.1437 21.5545L19.1355 17.4837C19.1232 13.4456 19.1232 13.4129 19.0371 13.3026C18.992 13.2412 18.9017 13.1513 18.8402 13.1064C18.7294 13.0205 18.6966 13.0205 14.5982 13.0124C10.5491 13.0042 10.4629 13.0042 10.3153 13.0859Z"
-                              fill="white"
-                            />
-                            <path
-                              d="M22.241 13.0572C22.0728 13.1308 21.9005 13.3392 21.8718 13.5027C21.8594 13.5763 21.8553 15.4482 21.8594 17.6675C21.8718 21.6689 21.8718 21.7016 21.9579 21.8119C22.003 21.8732 22.0933 21.9632 22.1548 22.0081C22.2656 22.0899 22.323 22.0939 24.0502 22.1062L25.8306 22.1185L25.8388 24.8937L25.8511 27.6729L26.007 27.8241L26.1588 27.9795L27.369 27.9917C28.7106 28.004 28.7516 27.9958 28.9075 27.7424C28.9526 27.6688 29.4408 26.2588 29.9946 24.6075L30.9997 21.5994V17.5449C30.9997 13.5599 30.9997 13.4864 30.9177 13.327C30.8643 13.2207 30.7782 13.1349 30.6715 13.0817C30.5115 13 30.4418 13 26.4378 13C23.1435 13.0041 22.3394 13.0123 22.241 13.0572Z"
-                              fill="white"
-                            />
-                          </svg>
-                          <div class="relative top-[-20px]">
-                            <p class="font-poppins font-normal pc:text-lg mobile:text-sm">
-                              John Smith
-                            </p>
-                            <p
-                              class="mt-1 font-poppins font-light pc:text-sm mobile:text-xs text-blue"
-                            >
-                              CEO, Fashion Retail Co.
-                            </p>
-                          </div>
-                        </div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./images/slide_main.png"
+                    alt="Image"
+                    class="pc:max-w-[147px] mobile:max-w-[75px] pc:w-[147px] mobile:w-[75px] pc:h-[168px] tablet:h-[85px]"
+                  />
+                  <div class="client pc:w-['auto'] mobile:w-[90px] opacity-0">
+                    <svg
+                      class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="40" height="40" fill="#3E82DA" />
+                      <path
+                        d="M10.3153 13.0859C10.2209 13.135 10.1265 13.229 10.0773 13.3271C9.99526 13.4865 9.99526 13.5437 10.0035 17.5941C10.0158 21.669 10.0158 21.7017 10.1019 21.812C10.1471 21.8733 10.2373 21.9633 10.2988 22.0082C10.4096 22.09 10.467 22.094 12.1696 22.1063L13.9295 22.1186L13.9418 24.8447C13.9541 27.5668 13.9541 27.5708 14.0444 27.7139C14.2208 27.9959 14.2372 28 15.5705 28H16.7643L16.9243 27.8529C17.0843 27.7098 17.1007 27.6689 18.1181 24.6322L19.1437 21.5545L19.1355 17.4837C19.1232 13.4456 19.1232 13.4129 19.0371 13.3026C18.992 13.2412 18.9017 13.1513 18.8402 13.1064C18.7294 13.0205 18.6966 13.0205 14.5982 13.0124C10.5491 13.0042 10.4629 13.0042 10.3153 13.0859Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M22.241 13.0572C22.0728 13.1308 21.9005 13.3392 21.8718 13.5027C21.8594 13.5763 21.8553 15.4482 21.8594 17.6675C21.8718 21.6689 21.8718 21.7016 21.9579 21.8119C22.003 21.8732 22.0933 21.9632 22.1548 22.0081C22.2656 22.0899 22.323 22.0939 24.0502 22.1062L25.8306 22.1185L25.8388 24.8937L25.8511 27.6729L26.007 27.8241L26.1588 27.9795L27.369 27.9917C28.7106 28.004 28.7516 27.9958 28.9075 27.7424C28.9526 27.6688 29.4408 26.2588 29.9946 24.6075L30.9997 21.5994V17.5449C30.9997 13.5599 30.9997 13.4864 30.9177 13.327C30.8643 13.2207 30.7782 13.1349 30.6715 13.0817C30.5115 13 30.4418 13 26.4378 13C23.1435 13.0041 22.3394 13.0123 22.241 13.0572Z"
+                        fill="white"
+                      />
+                    </svg>
+                    <div class="relative top-[-20px]">
+                      <p
+                        class="font-poppins font-normal pc:text-lg mobile:text-sm"
+                      >
+                        John Smith
+                      </p>
+                      <p
+                        class="mt-1 font-poppins font-light pc:text-sm mobile:text-xs text-blue"
+                      >
+                        CEO, Fashion Retail Co.
+                      </p>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                        <img
-                        
-                          src="./images/slide2_main.png"
-                          alt="Image"
-                          class="pc:max-w-[128px] mobile:max-w-[75px] pc:w-[128px] mobile:w-[75px]  pc:h-[168px] tablet:h-[85px]"
-
-                        />
-                        <div class="client pc:w-['auto'] mobile:w-[90px] opacity-0">
-                          <svg 
-                            class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 40 40"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <rect width="40" height="40" fill="#3E82DA" />
-                            <path
-                              d="M10.3153 13.0859C10.2209 13.135 10.1265 13.229 10.0773 13.3271C9.99526 13.4865 9.99526 13.5437 10.0035 17.5941C10.0158 21.669 10.0158 21.7017 10.1019 21.812C10.1471 21.8733 10.2373 21.9633 10.2988 22.0082C10.4096 22.09 10.467 22.094 12.1696 22.1063L13.9295 22.1186L13.9418 24.8447C13.9541 27.5668 13.9541 27.5708 14.0444 27.7139C14.2208 27.9959 14.2372 28 15.5705 28H16.7643L16.9243 27.8529C17.0843 27.7098 17.1007 27.6689 18.1181 24.6322L19.1437 21.5545L19.1355 17.4837C19.1232 13.4456 19.1232 13.4129 19.0371 13.3026C18.992 13.2412 18.9017 13.1513 18.8402 13.1064C18.7294 13.0205 18.6966 13.0205 14.5982 13.0124C10.5491 13.0042 10.4629 13.0042 10.3153 13.0859Z"
-                              fill="white"
-                            />
-                            <path
-                              d="M22.241 13.0572C22.0728 13.1308 21.9005 13.3392 21.8718 13.5027C21.8594 13.5763 21.8553 15.4482 21.8594 17.6675C21.8718 21.6689 21.8718 21.7016 21.9579 21.8119C22.003 21.8732 22.0933 21.9632 22.1548 22.0081C22.2656 22.0899 22.323 22.0939 24.0502 22.1062L25.8306 22.1185L25.8388 24.8937L25.8511 27.6729L26.007 27.8241L26.1588 27.9795L27.369 27.9917C28.7106 28.004 28.7516 27.9958 28.9075 27.7424C28.9526 27.6688 29.4408 26.2588 29.9946 24.6075L30.9997 21.5994V17.5449C30.9997 13.5599 30.9997 13.4864 30.9177 13.327C30.8643 13.2207 30.7782 13.1349 30.6715 13.0817C30.5115 13 30.4418 13 26.4378 13C23.1435 13.0041 22.3394 13.0123 22.241 13.0572Z"
-                              fill="white"
-                            />
-                          </svg>
-                          <div class="relative top-[-20px]">
-                            <p class="font-poppins font-normal pc:text-lg mobile:text-sm">
-                              John Smith
-                            </p>
-                            <p
-                              class="mt-1 font-poppins font-light pc:text-sm mobile:text-xs text-blue"
-                            >
-                              CEO, Fashion Retail Co.
-                            </p>
-                          </div>
-                        </div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./images/slide2_main.png"
+                    alt="Image"
+                    class="pc:max-w-[147px] mobile:max-w-[75px] pc:w-[147px] mobile:w-[75px] pc:h-[168px] tablet:h-[85px]"
+                  />
+                  <div class="client pc:w-['auto'] mobile:w-[90px] opacity-0">
+                    <svg
+                      class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="40" height="40" fill="#3E82DA" />
+                      <path
+                        d="M10.3153 13.0859C10.2209 13.135 10.1265 13.229 10.0773 13.3271C9.99526 13.4865 9.99526 13.5437 10.0035 17.5941C10.0158 21.669 10.0158 21.7017 10.1019 21.812C10.1471 21.8733 10.2373 21.9633 10.2988 22.0082C10.4096 22.09 10.467 22.094 12.1696 22.1063L13.9295 22.1186L13.9418 24.8447C13.9541 27.5668 13.9541 27.5708 14.0444 27.7139C14.2208 27.9959 14.2372 28 15.5705 28H16.7643L16.9243 27.8529C17.0843 27.7098 17.1007 27.6689 18.1181 24.6322L19.1437 21.5545L19.1355 17.4837C19.1232 13.4456 19.1232 13.4129 19.0371 13.3026C18.992 13.2412 18.9017 13.1513 18.8402 13.1064C18.7294 13.0205 18.6966 13.0205 14.5982 13.0124C10.5491 13.0042 10.4629 13.0042 10.3153 13.0859Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M22.241 13.0572C22.0728 13.1308 21.9005 13.3392 21.8718 13.5027C21.8594 13.5763 21.8553 15.4482 21.8594 17.6675C21.8718 21.6689 21.8718 21.7016 21.9579 21.8119C22.003 21.8732 22.0933 21.9632 22.1548 22.0081C22.2656 22.0899 22.323 22.0939 24.0502 22.1062L25.8306 22.1185L25.8388 24.8937L25.8511 27.6729L26.007 27.8241L26.1588 27.9795L27.369 27.9917C28.7106 28.004 28.7516 27.9958 28.9075 27.7424C28.9526 27.6688 29.4408 26.2588 29.9946 24.6075L30.9997 21.5994V17.5449C30.9997 13.5599 30.9997 13.4864 30.9177 13.327C30.8643 13.2207 30.7782 13.1349 30.6715 13.0817C30.5115 13 30.4418 13 26.4378 13C23.1435 13.0041 22.3394 13.0123 22.241 13.0572Z"
+                        fill="white"
+                      />
+                    </svg>
+                    <div class="relative top-[-20px]">
+                      <p
+                        class="font-poppins font-normal pc:text-lg mobile:text-sm"
+                      >
+                        John Smith
+                      </p>
+                      <p
+                        class="mt-1 font-poppins font-light pc:text-sm mobile:text-xs text-blue"
+                      >
+                        CEO, Fashion Retail Co.
+                      </p>
+                    </div>
                   </div>
+                </div>
               </div>
-          </div>
+            </div>
           </div>
           <div>
-            <h2 class="mobile:hidden tablet:block mb-3 mobile:text-center tablet:text-left font-poppins font-light pc:text-2xl mobile:text-[24px]">
+            <h2
+              class="mobile:hidden tablet:block mb-3 mobile:text-center tablet:text-left font-poppins font-light pc:text-2xl mobile:text-[24px]"
+            >
               What Our Clients Say
             </h2>
-            <p class="font-jakarta  mobile:text-center tablet:text-left font-medium pc:text-base mobile:text-sm leading-[172%]">
-              “Webparadox exceeded all our expectations. They delivered a world-class marketplace platform that not only met our requirements but anticipated future needs. The team's expertise in Laravel and e-commerce was evident throughout the project. Our vendors love the new platform, and our sales have tripled since launch."
+            <p
+              class="font-poppins mobile:text-center tablet:text-left font-normal pc:text-lg mobile:text-sm leading-[172%]"
+            >
+              “Webparadox delivered our e-commerce platform on time and exceeded
+              our expectations. Their expertise in Laravel and attention to
+              detail made all the difference. Highly recommended!”
             </p>
             <div class="mt-5 tablet:ml-0 mobile:ml-20">
               <button
