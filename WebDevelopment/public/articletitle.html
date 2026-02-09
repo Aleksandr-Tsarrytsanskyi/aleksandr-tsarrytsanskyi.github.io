@@ -48,7 +48,7 @@
     />
     
     <script
-    
+    defer
     src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <script  src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -71,8 +71,8 @@
         </div>
     </section>
       <header class="pc:mt-9 mobile:mt-3 py-4 relative z-100">
-          <div
-            x-data="{ scrolled: false }"
+          <div  style="opacity:0" :style="{opacity:'1'}"
+            x-data="{ scrolled: false }" 
             x-on:scroll.window="scrolled = (window.pageYOffset > 50)"
             x-bind:class="scrolled ? 'top-0' : 'top-5'"
             class="pc:fixed left-0 right-0 pc:bg-black transition-all duration-300 ease-in-out"

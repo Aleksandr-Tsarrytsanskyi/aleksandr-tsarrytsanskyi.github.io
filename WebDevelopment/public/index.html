@@ -47,8 +47,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script
       defer
       src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
@@ -163,9 +163,9 @@
       <div
         class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
       >
-        <header class="pc:mt-9 mobile:mt-3 py-4 relative z-100">
+        <header class="pc:mt-9 mobile:mt-3 py-4 relative z-100" >
           <div
-            x-data="{ scrolled: false }"
+            x-data="{ scrolled: false }" style="opacity:0" :style="{opacity:'1'}"
             x-on:scroll.window="scrolled = (window.pageYOffset > 50)"
             x-bind:class="scrolled ? 'top-0' : 'top-5'"
             class="pc:fixed left-0 right-0 pc:bg-black transition-all duration-300 ease-in-out"
@@ -259,7 +259,7 @@
                   </ul>
                 </nav>
               </div>
-              <div class="relative pc:block mobile:hidden">
+              <div class="relative pc:block mobile:hidden" >
                 <div
                   x-data="{ open: false, selected: 'EN', isHovered: false }"
                   @mouseenter="isHovered = true"
