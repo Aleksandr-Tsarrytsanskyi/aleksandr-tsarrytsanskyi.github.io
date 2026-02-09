@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
  
  
    spaceBetween: 10,
-    slidesPerView: 1.3,
+    slidesPerView: "auto",
+    
 
   // If we need pagination
   // pagination: {
