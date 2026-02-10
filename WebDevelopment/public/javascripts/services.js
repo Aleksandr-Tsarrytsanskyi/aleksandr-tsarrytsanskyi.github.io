@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",function() {
 const swiper = new Swiper('.mobile_work', {
   // Optional parameters
- slidesPerView: 1.5,
+ slidesPerView: 'auto',
     spaceBetween: 20,
   
 

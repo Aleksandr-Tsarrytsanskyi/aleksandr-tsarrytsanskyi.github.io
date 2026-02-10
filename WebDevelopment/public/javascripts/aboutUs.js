@@ -3,7 +3,7 @@ const swiper = new Swiper('.mobile_values', {
   // Optional parameters
      slidesPerView: 1.7,
     spaceBetween: 10,
-    loop: true,
+   
 
   // If we need pagination
 
