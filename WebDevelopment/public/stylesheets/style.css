@@ -37,12 +37,12 @@
   overflow: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out; /* Плавная анимация */
-  padding: 0 10px;
+  padding: 0 ;
 }
 .accordion-content.open {
   opacity: 1;
   max-height: 500px; /* Большое значение, чтобы вместить контент. Анимируется от 0 до этого значения */
-  padding: 10px;
+  padding: 0px;
 }
 
 ::-webkit-scrollbar {
