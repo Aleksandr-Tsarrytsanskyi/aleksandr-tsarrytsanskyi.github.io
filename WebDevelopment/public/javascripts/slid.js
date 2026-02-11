@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     centeredSlides: true,
     allowTouchMove: false,
     slidesPerView: 3,
-    spaceBetween: 60,
+    spaceBetween: 40,
     // pagination: {
     //     el: ".swiper-pagination",
     //     clickable: true,
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // когда ширина экрана >= 1024px (десктопы)
     960: {
       slidesPerView: 3,
-      spaceBetween: 60
+      spaceBetween: 40
     }
   }
     });

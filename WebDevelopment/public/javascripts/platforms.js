@@ -17,8 +17,8 @@ const swiper = new Swiper('.mobile_technology ', {
 
 const swiper1 = new Swiper('.mobile_project ', {
   // Optional parameters
-    slidesPerView: 1.5,
-    spaceBetween: 40,
+    slidesPerView: "auto",
+    spaceBetween: 30,
   
 
   // If we need pagination

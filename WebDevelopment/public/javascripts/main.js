@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded",function() {
     centeredSlides: true,
     allowTouchMove: false,
     slidesPerView: 3,
-    spaceBetween: 60,
+    spaceBetween: 40,
     // pagination: {
     //     el: ".swiper-pagination",
     //     clickable: true,
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded",function() {
     // когда ширина экрана >= 1024px (десктопы)
     960: {
       slidesPerView: 3,
-      spaceBetween: 60
+      spaceBetween: 40
     }
   }
     });
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded",function() {
     const mobileCore = new Swiper('.mobile_core', {
   // Optional parameters
   slidesPerView: 1.1,
-    spaceBetween: 10,
+    spaceBetween: 20,
  
 
   // If we need pagination
@@ -109,7 +109,7 @@ const mobileCase = new Swiper('.mobile_case', {
   // Optional parameters
   slidesPerView: 1.2,
     spaceBetween: 10,
-  loop: true,
+
 
   // If we need pagination
  
