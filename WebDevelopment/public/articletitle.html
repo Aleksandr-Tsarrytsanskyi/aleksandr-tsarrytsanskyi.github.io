@@ -645,10 +645,10 @@
               <div class="tablet:mt-10 pc:mt-0">
                   <div class="relative">
                         <div x-data="{ open: false, selected: 'Тable of Contents:' }">
-                        <button @click="open = !open"
+                        <butt hover:underlineon @click="open = !open"
                           type="button"
                           name="dropdown"
-                          class=" mt-5 mb-5 grid pc:grid-cols-[300px_10px] tablet:grid-cols-[213px_10px] mobile:grid-cols-[287px_10px] items-center justify-between text-left pc:w-[511px] tablet:w-[608px] mobile:w-[300px] h-[56px] font-poppins font-normal pc:text-[20px] !tracking-[0px] mobile:text-sm text-white-300 border-b border-solid border-white-300"
+                          class=" mt-5 mb-5 cursor-pointer grid pc:grid-cols-[300px_10px] tablet:grid-cols-[213px_10px] mobile:grid-cols-[287px_10px] items-center justify-between text-left pc:w-[511px] tablet:w-[608px] mobile:w-[300px] h-[56px] font-poppins font-normal pc:text-[20px] !tracking-[0px] mobile:text-sm text-white-300 border-b border-solid border-white-300"
                         >
               
                 <span x-text="selected"></span> <!-- Отображение выбранного значения -->
@@ -659,15 +659,15 @@
                   </svg></span> <!-- Стрелки -->
               </button>
                  <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] pc:w-[531px] tablet:w-[628px] mobile:w-[320px] bg-black px-5 pb-5">
-                  <p @click="selected = 'Introduction'; open = false; openTab = 2" class="mb-3 mt-2 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in" > 1. Introduction</a>
-                  <p @click="selected = 'Why Laravel for E-commerce'; open = false; openTab = 3" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">2. Why Laravel for E-commercet</a>
-                  <p @click="selected = 'Architecture Design'; open = false; openTab = 4" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">3. Architecture Design</a>
-                  <p @click="selected = ' Database Structure'; open = false; openTab = 5" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer mobile:ml-3 hover:text-white-100 transition-colors duration-300 ease-in">3.1 Database Structure</a>
-                  <p @click="selected = ' Models & Relationships'; open = false; openTab = 6" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer mobile:ml-3 hover:text-white-100 transition-colors duration-300 ease-in">3.2 Models & Relationships</a>
-                  <p @click="selected = 'Core Features'; open = false; openTab = 7" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">4. Core Features</a>
-                  <p @click="selected = ' Payment Integration'; open = false; openTab = 8" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">5. Payment Integration</a>
-                  <p @click="selected = 'Deployment'; open = false; openTab = 9" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">6. Deployment</a>
-                  <p @click="selected = ' Conclusion'; open = false; openTab = 10" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">7. Conclusion</a>
+                  <p @click="selected = 'Introduction'; open = false; openTab = 2" class="mb-3 mt-2 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in" > 1. Introduction</a>
+                  <p @click="selected = 'Why Laravel for E-commerce'; open = false; openTab = 3" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">2. Why Laravel for E-commercet</a>
+                  <p @click="selected = 'Architecture Design'; open = false; openTab = 4" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">3. Architecture Design</a>
+                  <p @click="selected = ' Database Structure'; open = false; openTab = 5" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer mobile:ml-3 hover:text-white-100 hover:underline transition-colors duration-300 ease-in">3.1 Database Structure</a>
+                  <p @click="selected = ' Models & Relationships'; open = false; openTab = 6" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer mobile:ml-3 hover:text-white-100 hover:underline transition-colors duration-300 ease-in">3.2 Models & Relationships</a>
+                  <p @click="selected = 'Core Features'; open = false; openTab = 7" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">4. Core Features</a>
+                  <p @click="selected = ' Payment Integration'; open = false; openTab = 8" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">5. Payment Integration</a>
+                  <p @click="selected = 'Deployment'; open = false; openTab = 9" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">6. Deployment</a>
+                  <p @click="selected = ' Conclusion'; open = false; openTab = 10" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100  hover:underlinetransition-colors duration-300 ease-in">7. Conclusion</a>
                     <div class="border-b border-solid border-[#d9d9d9]" ></div>
                   </div>
                         </div>
@@ -769,12 +769,12 @@
                   <div>
                       <h2 class="mt-10 font-poppins font-normal pc:text-[28px] mobile:text-[20px] mb-5">7. Conclusion</h2>
                       <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Building an e-commerce platform with Laravel is a rewarding journey that results in a robust, scalable solution. By following the architecture and best practices outlined in this guide, you'll create a platform that can handle growth and provide an excellent user experience.</p>
-                      <p class="mb-5 font-jakarta font-normal text-base text-white-300 leading-[159%]">Remember that e-commerce is an evolving field. Stay updated with Laravel's latest features, monitor your platform's performance, and continuously optimize based on user feedback and analytics.</p>
-                      <div class="py-[24px] px-[19px] bg-[#222]">
+                      <p class="mb-7 font-jakarta font-normal text-base text-white-300 leading-[159%]">Remember that e-commerce is an evolving field. Stay updated with Laravel's latest features, monitor your platform's performance, and continuously optimize based on user feedback and analytics.</p>
+                      <div class="mb-3  py-[24px] px-[19px] bg-[#222]">
                           <h2 class="mb-3 font-jakarta font-medium text-base text-white-300">🚀 Next Steps</h2>
                           <p class="font-jakarta font-medium text-base text-white-300 leading-[159%]">Ready to start your Laravel e-commerce project? Check out our Laravel development services or download our free e-commerce starter template to get a head start.</p>
                       </div>
-                      <div class="mt-5 pt-[45px] px-[23px] pb-[30px] bg-[#4b5563]">
+                      <div class="mt-7 pt-[45px] px-[23px] pb-[30px] bg-[#4b5563]">
                           <div class="grid pc:grid-cols-[83px_283px] mobile:grid-cols-[40px_200px] pc:gap-x-5 mobile:gap-x-3 mb-3">
                               <div>
                                 <img src="./images//Article-Title/image11.png" class="pc:w-[83px] pc:h-[83px] mobile:w-[40px] mobile:h-[40px]" alt="Image"> 
@@ -1568,40 +1568,62 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base">CONTACT</h2>
+          <h2
+            class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base"
+          >
+            CONTACT
+          </h2>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Email:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="mailto:hello@webparadox.com"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               hello@webparadox.com
             </p>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Phone (HQ):
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="tel:372XXXXXXX"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               +372 XXX XXXX
-            </p>
+              </a>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               WhatsApp:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="https://wa.me/372 XXX XXXX"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               +372 XXX XXXX
-            </p>
+            </a>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Telegram:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="https://t.me/webparadox"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               @webparadox
-            </p>
+          </a>
           </div>
-          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
+          <div
+            class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10"
+          >
             <div>
               <a
                 href="#"

@@ -581,12 +581,12 @@
                   </svg></span> <!-- Стрелки -->
               </button>
                  <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] pc:w-[340px] mobile:w-[239px] bg-[#222] px-5 pb-5">
-                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in" >Custom Web Development</a>
-                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Laravel Development</a>
-                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Mobile Development</a>
-                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">E-commerce Solutions</a>
-                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">CRM Implementation</a>
-                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Digital Marketing</a>
+                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in" >Custom Web Development</a>
+                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Laravel Development</a>
+                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Mobile Development</a>
+                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">E-commerce Solutions</a>
+                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">CRM Implementation</a>
+                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-xs text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Digital Marketing</a>
                     <div class="border-b border-solid border-[#d9d9d9]" ></div>
                   </div>
                 </div>
@@ -677,68 +677,72 @@
         </div>
       </section>
       <section class="mt-5">
-        <div class="grid pc:grid-cols-[410px_491px] mobile:grid-cols-[300px] tablet:grid-cols-[265px_319px] justify-between">
-          <div>
-            <img src="./images/Laravel/image.png" class="mobile:w-[295px] mobile:h-[399px] tablet:w-[265px] pc:w-[410px] pc:h-[504px]" alt="Image" />
+        <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
+          <div class="grid pc:grid-cols-[410px_491px] mobile:grid-cols-[300px] tablet:grid-cols-[265px_319px] justify-between">
+            <div>
+              <img src="./images/Laravel/image.png" class="mobile:w-[295px] mobile:h-[399px] tablet:w-[265px] pc:w-[410px] pc:h-[504px]" alt="Image" />
+            </div>
+            <div>
+              <h2 class="mb-7 mobile:mt-4 pc:mt-0 font-poppins font-normal pc:text-[28px] mobile:text-[16px]">
+                Laravel E-commerce Development
+              </h2>
+              <p class="mb-7 font-jakarta font-medium pc:text-lg mobile:text-sm text-white-300 leading-[159%]">
+                Build high-performance online stores and marketplaces with
+                Laravel. Our e-commerce solutions include:
+              </p>
+              <ul class="list-disc text-white-300 mobile:ml-5 pc:ml-5 pc:ml-0">
+                <li class="mb-3">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs  text0white-300">
+                    Custom shopping cart and checkout
+                  </p>
+                </li>
+                <li class="mb-3">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
+                    Multi-vendor marketplace platforms
+                  </p>
+                </li>
+                <li class="mb-3">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
+                    Payment gateway integrations (Stripe, PayPal, etc.)
+                  </p>
+                </li>
+                <li class="mb-3">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
+                    Inventory management systems
+                  </p>
+                </li>
+                <li class="mb-3">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
+                    Product catalog with advanced filtering
+                  </p>
+                </li>
+                <li class="mb-3">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
+                    Order management and fulfillment
+                  </p>
+                </li>
+                <li class="mb-3">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
+                    Real-time analytics and reporting
+                  </p>
+                </li>
+                <li class="mb-4">
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
+                    Mobile-responsive design
+                  </p>
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="block pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] mobile:ml-5 bg-no-repeat h-[60px]  pl-8 pc:mt-11 mobile:mt-5 font-jakarta font-bold pc:text-lg mobile:text-sm pc:leading-[60px] mobile:leading-[50px] pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in"
+              >
+                VIEW E-COMMERCE PROJECTS</a
+              >
+            </div>
           </div>
-          <div>
-            <h2 class="mb-7 mobile:mt-4 pc:mt-0 font-poppins font-normal pc:text-[28px] mobile:text-[16px]">
-              Laravel E-commerce Development
-            </h2>
-            <p class="mb-7 font-jakarta font-medium pc:text-lg mobile:text-sm text-white-300 leading-[159%]">
-              Build high-performance online stores and marketplaces with
-              Laravel. Our e-commerce solutions include:
-            </p>
-            <ul class="list-disc text-white-300 mobile:ml-5 pc:ml-5 pc:ml-0">
-              <li class="mb-3">
-                <p class="font-jakarta font-normal pc:text-base mobile:text-xs  text0white-300">
-                  Custom shopping cart and checkout
-                </p>
-              </li>
-              <li class="mb-3">
-                <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
-                  Multi-vendor marketplace platforms
-                </p>
-              </li>
-              <li class="mb-3">
-                <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
-                  Payment gateway integrations (Stripe, PayPal, etc.)
-                </p>
-              </li>
-              <li class="mb-3">
-                <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
-                  Inventory management systems
-                </p>
-              </li>
-              <li class="mb-3">
-                <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
-                  Product catalog with advanced filtering
-                </p>
-              </li>
-              <li class="mb-3">
-                <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
-                  Order management and fulfillment
-                </p>
-              </li>
-              <li class="mb-3">
-                <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
-                  Real-time analytics and reporting
-                </p>
-              </li>
-              <li class="mb-4">
-                <p class="font-jakarta font-normal pc:text-base mobile:text-xs text0white-300">
-                  Mobile-responsive design
-                </p>
-              </li>
-            </ul>
-            <a
-              href="#"
-              class="block pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] mobile:ml-5 bg-no-repeat h-[60px]  pl-8 pc:mt-11 mobile:mt-5 font-jakarta font-bold pc:text-lg mobile:text-sm pc:leading-[60px] mobile:leading-[50px] pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in"
-            >
-              VIEW E-COMMERCE PROJECTS</a
-            >
-          </div>
-        </div>
+        </div>  
       </section>
       <section class="pc:mt-20 mobile:mt-10">
         <h2 class="mb-2 font-poppins font-light pc:text-2xl mobile:text-[24px] mobile:text-center tablet:text-left">Why Choose Our Laravel Team</h2>
@@ -1168,7 +1172,7 @@
           </div>
         </div>
       </section>
-        <section class="mt-20">
+        <section class="mt-20   ">
           <div class="grid pc:grid-cols-[528px_250px] mobile:grid-cols-[300px] tablet:grid-cols-[608px] justify-between items-center mb-5">
             <div>
               <h2 class="font-poppins font-light pc:text-2xl mobile:text-[24px] mobile:text-center pc:text-left">Laravel Projects<br class="mobile:block tablet:hidden"> We've Built</h2>
@@ -1177,35 +1181,38 @@
               <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 mobile:text-center pc:text-right">Real solutions for real businesses</p>
             </div>
           </div>
-          <div class="swiper laravel pc:w-[1104px] mobile:w-[300px] tablet:w-[608px] h-[570px]">
+          <div class="swiper laravel  pc:w-[1104px] mobile:w-[300px] tablet:w-[608px] h-[570px]">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide  ">
-      <div class="pc:w-[351px] mobile:w-[300px]">
-        <article>
-          <img src="./images/Laravel/image2.png" class="mobile:w-[294px] mobile:h-[256px] tablet:w-[286px] pc:w-[341px]" alt="Image">
-          <h2 class="mt-4 mb-3 font-jakarta font-semibold pc:text-xl mobile:text-lg mobile:text-center tablet:text-left">Multi-Vendor Marketplace</h2>
-          <p class="font-jakarta font-normal text-base text-white-300 mobile:text-center tablet:text-left leading-[163%]">Laravel-based marketplace platform with 1000+ vendors, real-time inventory, and automated payouts.</p>
-          <ul class="mt-5">
-            <li class="mr-3 float-left border border-solid border-white-100 rounded-[100px] py-3 pc:px-4.75 mobile:px-3 ">
-              <p class="font-jakarta font-normal text-xs ">Laravel 10</p>
-            </li>
-            <li class="mr-3 float-left border border-solid border-white-100 rounded-[100px] py-3 pc:px-4.75 mobile:px-3 ">
-              <p class="font-jakarta font-normal text-xs ">Vue.js</p>
-            </li>
-            <li class="mr-3 float-left border border-solid border-white-100 rounded-[100px] py-3 pc:px-4.75 mobile:px-3 ">
-              <p class="font-jakarta font-normal text-xs ">Stripe</p>
-            </li>
-            <li class="mr-3 float-left border border-solid border-white-100 rounded-[100px] py-3 pc:px-4.75 mobile:px-3 ">
-              <p class="font-jakarta font-normal text-xs ">Redis</p>
-            </li>
-          </ul>
-          <div class="flex w-[300px]">
-              <a href="#" class="mx-auto block  mobile:bg-[url('./images/mobile/btn_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] tablet:mt-22 mobile:mt-5 pl-9 font-jakarta font-bold pc:text-lg mobile:text-sm clear-both hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300 ease-in">VIEW</a>
-          </div>
-        </article>
-      </div>
+     
+    <div class="swiper-slide  "> 
+      
+          <div class="pc:w-[351px] mobile:w-[300px]">
+            <article>
+              <img src="./images/Laravel/image2.png" class="mobile:w-[294px] mobile:h-[256px] tablet:w-[286px] pc:w-[341px]" alt="Image">
+              <h2 class="mt-4 mb-3 font-jakarta font-semibold pc:text-xl mobile:text-lg mobile:text-center tablet:text-left">Multi-Vendor Marketplace</h2>
+              <p class="font-jakarta font-normal text-base text-white-300 mobile:text-center tablet:text-left leading-[163%]">Laravel-based marketplace platform with 1000+ vendors, real-time inventory, and automated payouts.</p>
+              <ul class="mt-5">
+                <li class="mr-3 float-left border border-solid border-white-100 rounded-[100px] py-3 pc:px-4.75 mobile:px-3 ">
+                  <p class="font-jakarta font-normal text-xs ">Laravel 10</p>
+                </li>
+                <li class="mr-3 float-left border border-solid border-white-100 rounded-[100px] py-3 pc:px-4.75 mobile:px-3 ">
+                  <p class="font-jakarta font-normal text-xs ">Vue.js</p>
+                </li>
+                <li class="mr-3 float-left border border-solid border-white-100 rounded-[100px] py-3 pc:px-4.75 mobile:px-3 ">
+                  <p class="font-jakarta font-normal text-xs ">Stripe</p>
+                </li>
+                <li class="mr-3 float-left border border-solid border-white-100 rounded-[100px] py-3 pc:px-4.75 mobile:px-3 ">
+                  <p class="font-jakarta font-normal text-xs ">Redis</p>
+                </li>
+              </ul>
+              <div class="flex w-[300px]">
+                  <a href="#" class="mx-auto block  mobile:bg-[url('./images/mobile/btn_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] tablet:mt-22 mobile:mt-5 pl-9 font-jakarta font-bold pc:text-lg mobile:text-sm clear-both hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300 ease-in">VIEW</a>
+              </div>
+            </article>
+          </div>  
+        
     </div>
     <div class="swiper-slide  ">
       <div  class="pc:w-[351px] mobile:w-[300px]">
@@ -1662,39 +1669,51 @@
         <h2 class="font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Specialized Laravel Solutions</h2>
         <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 text-center">Need something specific? We've got you covered</p>
         <div class="grid pc:grid-cols-[312px_312px_312px] mobile:grid-cols-[300px] tablet:grid-cols-[194px_194px_194px] gap-x-5 mobile:gap-y-5 pc:gap-y-0 mt-10">
-          <div>
-            <div class="grid pc:grid-cols-[312px] pc:pl-5 justify-center  bg-[#222] h-[208px]">
-              <div>
-                <h2 class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">Laravel E-commerce Platform</h2>
-                <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300">Build a high-performance online store with Laravel</p>
-                <div class="mobile:flex pc:block">
-                    <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">  
+            <div>
+              <div class="grid pc:grid-cols-[312px] pc:pl-5 justify-center  bg-[#222] h-[208px]">
+                <div>
+                  <h2 class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">Laravel E-commerce Platform</h2>
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300">Build a high-performance online store with Laravel</p>
+                  <div class="mobile:flex pc:block">
+                      <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <div class="grid pc:grid-cols-[312px] pc:pl-5 tablet:grid-cols-[180px] justify-center bg-[#222] h-[208px]"> 
-              <div>
-                <h2  class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">Laravel API Development</h2>
-                <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300">RESTful APIs that scale with your<br class="mobile:hidden pc:block"> business</p>
-                <div class="mobile:flex pc:block">
-                    <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+          </div>  
+           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
+            <div>
+              <div class="grid pc:grid-cols-[312px] pc:pl-5 tablet:grid-cols-[180px] justify-center bg-[#222] h-[208px]"> 
+                <div>
+                  <h2  class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">Laravel API Development</h2>
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300">RESTful APIs that scale with your<br class="mobile:hidden pc:block"> business</p>
+                  <div class="mobile:flex pc:block">
+                      <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <div class="grid pc:grid-cols-[312px] pc:pl-5 justify-center bg-[#222] h-[208px]">
-              <div>
-                <h2  class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">Laravel SaaS Development</h2>
-                <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300">Multi-tenant SaaS applications with subscriptions</p>
-                <div class="mobile:flex pc:block">
-                    <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+          </div>  
+           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
+            <div>
+              <div class="grid pc:grid-cols-[312px] pc:pl-5 justify-center bg-[#222] h-[208px]">
+                <div>
+                  <h2  class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">Laravel SaaS Development</h2>
+                  <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300">Multi-tenant SaaS applications with subscriptions</p>
+                  <div class="mobile:flex pc:block">
+                      <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div>  
         </div>
       </section>
        <section class="mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px]  tablet:h-auto mx-auto">
@@ -1975,39 +1994,51 @@
         <h2 class="font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">Related Services</h2>
         <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 text-center"> Other services that complement Laravel development</p>
         <div class="grid pc:grid-cols-[312px_312px_312px] mobile:grid-cols-[300px] tablet:grid-cols-[194px_194px_194px] gap-x-5 mobile:gap-y-5 pc:gap-y-0 mt-10">
-          <div>
-            <div class="grid pc:grid-cols-[312px] tablet:grid-cols-[180px]  pc:pl-5 justify-center  bg-[#222] h-[240px]">
+           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">  
               <div>
-                <h2 class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">Custom Web Development</h2>
-                <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300">Full-stack development beyond Laravel</p>
-                <div class="mobile:flex pc:block">
-                    <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+                <div class="grid pc:grid-cols-[312px] tablet:grid-cols-[180px]  pc:pl-5 justify-center  bg-[#222] h-[240px]">
+                  <div>
+                    <h2 class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">Custom Web Development</h2>
+                    <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300">Full-stack development beyond Laravel</p>
+                    <div class="mobile:flex pc:block">
+                        <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+             <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"> 
+              <div>
+                <div class="grid pc:grid-cols-[312px] pc:pl-5 tablet:grid-cols-[180px] justify-center bg-[#222] h-[240px]"> 
+                  <div>
+                    <h2  class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">SPA Development</h2>
+                    <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300">React & Vue.js single-page applications</p>
+                    <div class="mobile:flex pc:block">
+                        <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <div class="grid pc:grid-cols-[312px] pc:pl-5 tablet:grid-cols-[180px] justify-center bg-[#222] h-[240px]"> 
+             <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">  
               <div>
-                <h2  class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">SPA Development</h2>
-                <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300">React & Vue.js single-page applications</p>
-                <div class="mobile:flex pc:block">
-                    <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+                <div class="grid pc:grid-cols-[312px] pc:pl-5 justify-center bg-[#222] h-[240px]">
+                  <div>
+                    <h2  class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">API Development</h2>
+                    <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300 whitespace-pre">RESTful  and  GraphQL<br class="tablet:block pc:hidden mobile:hidden">  APIs</p>
+                    <div class="mobile:flex pc:block">
+                        <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div>
-            <div class="grid pc:grid-cols-[312px] pc:pl-5 justify-center bg-[#222] h-[240px]">
-              <div>
-                <h2  class="pc:mb-5 mobile:mb-10 mt-5 font-jakarta font-semibold mobile:text-center pc:text-left pc:text-lg mobile:text-sm">API Development</h2>
-                <p class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300 whitespace-pre">RESTful  and  GraphQL<br class="tablet:block pc:hidden mobile:hidden">  APIs</p>
-                <div class="mobile:flex pc:block">
-                    <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left h-[60px] leading-[60px] mt-8 pl-7 font-jakarta font-bold pc:text-lg mobile:text-sm pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">LEARN MORE</a>
-                </div>
-              </div>
-            </div>
-          </div>
+            </div>  
         </div>
       </section>
     </main>
@@ -2076,12 +2107,12 @@
                   </svg></span> <!-- Стрелки -->
               </button>
                  <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] pc:w-[340px] tablet:w-[243px] mobile:w-[320px] bg-[#222] px-5 pb-5">
-                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer" >Custom Web Development</a>
-                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Laravel Development</a>
-                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Mobile Development</a>
-                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">E-commerce Solutions</a>
-                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">CRM Implementation</a>
-                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Digital Marketing</a>
+                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal hover:underline pc:text-base mobile:text-sm text-[#cac5c5] hover:text-white-100 cursor-pointer" >Custom Web Development</a>
+                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal hover:underline pc:text-base mobile:text-sm text-[#cac5c5] hover:text-white-100 cursor-pointer">Laravel Development</a>
+                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal hover:underline pc:text-base mobile:text-sm text-[#cac5c5] hover:text-white-100 cursor-pointer">Mobile Development</a>
+                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal hover:underline pc:text-base mobile:text-sm text-[#cac5c5] hover:text-white-100 cursor-pointer">E-commerce Solutions</a>
+                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal hover:underline pc:text-base mobile:text-sm text-[#cac5c5] hover:text-white-100 cursor-pointer">CRM Implementation</a>
+                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal hover:underline pc:text-base mobile:text-sm text-[#cac5c5] hover:text-white-100 cursor-pointer">Digital Marketing</a>
                     <div class="border-b border-solid border-[#d9d9d9]" ></div>
                   </div>
                   </div>
@@ -2103,12 +2134,12 @@
                   </svg></span> <!-- Стрелки -->
               </button>
                  <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-50 top-[60px] left-[-20px] pc:w-[340px] tablet:w-[245px] mobile:w-[320px] bg-[#222] px-5 pb-5">
-                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal text-base mobile:text-sm text-[#cac5c5] cursor-pointer" >Budget Range</a>
-                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Ranget</a>
-                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
-                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
-                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
-                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer">Budget Range</a>
+                  <p @click="selected = 'Custom Web Development'; open = false;" class="mb-3 mt-2 font-poppins font-normal text-base mobile:text-sm text-[#cac5c5] hover:underline hover:text-white-100 cursor-pointer" >Budget Range</a>
+                  <p @click="selected = 'Laravel Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] hover:underline hover:text-white-100 cursor-pointer">Budget Ranget</a>
+                  <p @click="selected = 'Mobile Development'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] hover:underline hover:text-white-100 cursor-pointer">Budget Range</a>
+                  <p @click="selected = 'E-commerce Solutions'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] hover:underline hover:text-white-100 cursor-pointer">Budget Range</a>
+                  <p @click="selected = 'CRM Implementation'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] hover:underline hover:text-white-100 cursor-pointer">Budget Range</a>
+                  <p @click="selected = 'Digital Marketing'; open = false;" class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] hover:underline hover:text-white-100 cursor-pointer">Budget Range</a>
                     <div class="border-b border-solid border-[#d9d9d9]" ></div>
                   </div>
               </div>
@@ -2372,40 +2403,62 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base">CONTACT</h2>
+          <h2
+            class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base"
+          >
+            CONTACT
+          </h2>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Email:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="mailto:hello@webparadox.com"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               hello@webparadox.com
             </p>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Phone (HQ):
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="tel:372XXXXXXX"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               +372 XXX XXXX
-            </p>
+              </a>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               WhatsApp:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="https://wa.me/372 XXX XXXX"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               +372 XXX XXXX
-            </p>
+            </a>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Telegram:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="https://t.me/webparadox"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               @webparadox
-            </p>
+          </a>
           </div>
-          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
+          <div
+            class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10"
+          >
             <div>
               <a
                 href="#"

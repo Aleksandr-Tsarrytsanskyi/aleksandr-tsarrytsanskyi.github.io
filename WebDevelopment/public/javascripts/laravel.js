@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Optional parameters
  
  
-   spaceBetween: 10,
+   spaceBetween: 20,
     slidesPerView: 3,
 
   // If we need pagination
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   breakpoints: {
   320: { slidesPerView: 1, spaceBetween: 10}, // Мобильные
-  768: { slidesPerView: 2, spaceBetween: 20 }, // Планшеты
+  768: { slidesPerView: 2, spaceBetween: 50 }, // Планшеты
   1024: { slidesPerView: 3, spaceBetween: 30 } // Десктоп
 }
 });

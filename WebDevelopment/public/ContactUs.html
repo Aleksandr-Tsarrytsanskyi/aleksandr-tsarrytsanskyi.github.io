@@ -61,7 +61,7 @@
 </head>
 <body class="bg-black text-white-100 text-base">
    <div
-      class="bg-[url('./images/mobile/header_banner.svg')]  mobile:h-[400px] pc:h-[500px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
+      class="bg-[url('./images/mobile/header_banner.svg')]  mobile:h-[400px] pc:h-[470px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
     >
       <header class="pc:mt-9 mobile:mt-3 py-4 relative z-100">
           <div style="opacity:0" :style="{opacity:'1'}"
@@ -109,7 +109,7 @@
                   <ul class="mt-4">
                     <li class="float-left mr-6">
                       <a
-                        class="h-7.5 w-11 pb-1 block text-base font-poppins font-normal text-white-200 hover:relative -top-1 relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-b-2 border-white-100 border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
+                        class="h-7.5 w-11 pb-1 block text-sm font-poppins font-normal text-white-200 hover:relative  relative hover:text-white-100 hover:text-base hover:border-b-2  border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
                         href="#"
                         >Home</a
                       >
@@ -151,7 +151,7 @@
                     </li>
                     <li class="float-left">
                       <a
-                        class="h-7.5 w-20 pb-1 block text-sm font-poppins font-light text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
+                        class="h-7.5 w-20 pb-1 block text-base font-poppins font-light text-white-200 hover:relative  border-b-2 border-white-100 relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
                         href="./ContactUs.html"
                         >Contact Us</a
                       >
@@ -468,7 +468,7 @@
             </li>
            
             <li class="float-left">
-              <p class="pc:mt-[1px] mobile:mt-1.5 font-poppins font-normal pc:text-base mobile:text-xs">Contact Us</p>
+              <p class="pc:mt-[1px] mobile:mt-1.5 font-poppins border-b-2 border-solid border-white-100 pb-1 font-normal pc:text-base mobile:text-xs">Contact Us</p>
             </li>
           </ul>
         </nav>
@@ -484,8 +484,8 @@
       
       </div>
     </div>
-    <main class="mobile:mt-[-100px] pc:mt-[-130px bg-[#222]/50 py-20 ">
-        <section class="]">
+    <main class="  bg-[#222]/50 py-20 ">
+        <section class="">
             <div class="grid pc:max-w-[960px] tablet:max-w-[608px] mx-auto pc:grid-cols-[406px_482px] mobile:grid-cols-[300px] tablet:grid-cols-[274px_330px] mobile:justify-center tablet:gap-x-5 pc:gap-x-0 tablet:justify-between">
                 <div>
                     <h2 class="mb-5 mobile:w-[270px] mx-auto tablet:w-auto font-poppins font-light pc:text-2xl mobile:text-[24px] mobile:text-center tablet:text-left">We'd Love to Hear From You</h2>
@@ -542,12 +542,12 @@
                               </svg></span> <!-- Стрелки -->
                           </button>
                             <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-30 top-[40px] left-[-20px] pc:w-[340px] mobile:w-[240px] tablet:w-[270px] bg-[#222] px-5 pb-5">
-                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in" >Project Type</a>
-                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Project Type</a>
-                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Project Type</a>
-                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Project Type</a>
-                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Project Type</a>
-                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Project Type</a>
+                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in" >Project Type</a>
+                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Project Type</a>
+                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Project Type</a>
+                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Project Type</a>
+                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Project Type</a>
+                              <p @click="selected = 'Project Type'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Project Type</a>
                                 <div class="border-b border-solid border-[#d9d9d9]" ></div>
                               </div>
                             </div>
@@ -568,12 +568,12 @@
                                 </svg></span> <!-- Стрелки -->
                             </button>
                               <div x-show="open" @click.outside="open = false" x-transition.opacity.duration.500ms class="absolute z-100 top-[40px] left-[-20px] pc:w-[340px] mobile:w-[240px] tablet:w-[270px] bg-[#222] px-5 pb-5">
-                                <p @click="selected = 'Project Budget'; open = false;" class="mb-3 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in" >Project Budget</a>
-                                <p @click="selected = 'Project Budget'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Project Budget</a>
-                                <p @click="selected = 'Project Budget'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Project Budget</a>
-                                <p @click="selected = 'Project Budget'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Project Budgets</a>
-                                <p @click="selected = 'Project Budget'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Project Budget</a>
-                                <p @click="selected = 'Project Budgetg'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in">Project Budget</a>
+                                <p @click="selected = 'Project Budget'; open = false;" class="mb-3 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in" >Project Budget</a>
+                                <p @click="selected = 'Project Budget'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Project Budget</a>
+                                <p @click="selected = 'Project Budget'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Project Budget</a>
+                                <p @click="selected = 'Project Budget'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Project Budgets</a>
+                                <p @click="selected = 'Project Budget'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Project Budget</a>
+                                <p @click="selected = 'Project Budgetg'; open = false;" class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in">Project Budget</a>
                                   <div class="border-b border-solid border-[#d9d9d9]" ></div>
                                 </div>
                             </div>
@@ -779,40 +779,62 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base">CONTACT</h2>
+          <h2
+            class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base"
+          >
+            CONTACT
+          </h2>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Email:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="mailto:hello@webparadox.com"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               hello@webparadox.com
             </p>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Phone (HQ):
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="tel:372XXXXXXX"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               +372 XXX XXXX
-            </p>
+              </a>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               WhatsApp:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="https://wa.me/372 XXX XXXX"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               +372 XXX XXXX
-            </p>
+            </a>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Telegram:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="https://t.me/webparadox"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               @webparadox
-            </p>
+          </a>
           </div>
-          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
+          <div
+            class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10"
+          >
             <div>
               <a
                 href="#"

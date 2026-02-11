@@ -119,7 +119,7 @@
                   <ul class="mt-4">
                     <li class="float-left mr-6">
                       <a
-                        class="h-7.5 w-11 pb-1 block text-base font-poppins font-normal text-white-200 hover:relative -top-1 relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-b-2 border-white-100 border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
+                        class="h-7.5 w-11 pb-1 block text-sm font-poppins font-normal text-white-200 hover:relative  hover:text-white-100 hover:text-base hover:border-b-2  border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
                         href="#"
                         >Home</a
                       >
@@ -147,7 +147,7 @@
                     </li>
                     <li class="float-left mr-6">
                       <a
-                        class="h-7.5 w-9 pb-1 block text-sm font-poppins font-light text-white-200 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
+                        class="h-7.5 w-9 pb-1 block text-base font-poppins font-light text-white-200 border-b-2 border-white-100 relative -top-1 hover:relative -top-0.5 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
                         href="./blog.html"
                         >Blog</a
                       >
@@ -478,7 +478,7 @@
             </li>
            
             <li class="float-left">
-              <p class="pc:mt-[1px] mobile:mt-1.5 font-poppins font-normal pc:text-base mobile:text-xs">Blog</p>
+              <p class="pc:mt-[1px] mobile:mt-1.5 font-poppins border-b-2 border-solid border-white-100 pb-1  font-normal pc:text-base mobile:text-xs">Blog</p>
             </li>
           </ul>
         </nav>
@@ -495,7 +495,7 @@
       
       </div>
     </div>
-    <main class="bg-[#222]/20 pt-10">
+    <main class="bg-[#222]/20 pt-10 pb-20">
         <section class="pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px] mx-auto">
         <div class="grid justify-center h-[40px]">
           <div>
@@ -541,196 +541,219 @@
           </div>
         </div>
       </section >
-        <section class="pc:mt-10 tablet:mt-10 mobile:mt-20 mb-15 pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px] mx-auto">
+        <section class="pc:mt-10 tablet:mt-10 mobile:mt-20  pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px] mx-auto">
         
         <div class="grid pc:grid-cols-[282px_282px_282px] mobile:grid-cols-[282px] tablet:grid-cols-[282px_282px]  justify-between">
-          <div>
-            <img src="./images/Article-Title/image7.png" alt="image" />
-            <div
-              class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
-            >
-            <ul class="mt-5">
-              <li class="pc:w-[115px] mobile:w-[105px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
-                <p class="font-jakarta font-medium pc:text-sm mobile:text-xs">LARAVEL</p>
-              </li>
-            </ul>
-              <h2 class="mb-5 mt-5 font-jakarta font-semibold pc:text-lg mobile:text-sm">
-               How to Build Scalable E-commerce with Laravel 11
-              </h2>
-              <p
-                class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
+          <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">  
+            <div>
+              <img src="./images/Article-Title/image7.png" alt="image" />
+              <div
+                class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
               >
-              Learn best practices for building high-performance e-commerce platforms using Laravel 11's latest features...
-              </p>
-                 <ul class="mt-3 mb-3 pb-2">
-                <li class="float-left mr-1">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">8 min read</p>
-                </li>
-                <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
-                </li>
-                <li class="float-left">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 10, 2025</p>
+              <ul class="mt-5">
+                <li class="pc:w-[115px] mobile:w-[105px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
+                  <p class="font-jakarta font-medium pc:text-sm mobile:text-xs">LARAVEL</p>
                 </li>
               </ul>
+                <h2 class="mb-5 mt-5 font-jakarta font-semibold pc:text-lg mobile:text-sm">
+                How to Build Scalable E-commerce with Laravel 11
+                </h2>
+                <p
+                  class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
+                >
+                Learn best practices for building high-performance e-commerce platforms using Laravel 11's latest features...
+                </p>
+                  <ul class="mt-3 mb-3 pb-2">
+                  <li class="float-left mr-1">
+                    <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">8 min read</p>
+                  </li>
+                  <li class="float-left  mr-1">
+                    <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
+                  </li>
+                  <li class="float-left">
+                    <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 10, 2025</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="mobile:h-[540px]">
-            <img src="./images/Article-Title/image8.png" alt="image" />
-            <div
-              class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
-            >
-            <ul class="mt-5">
-              <li class="pc:w-[150px] mobile:w-[140px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
-                <p class="font-jakarta font-medium pc:text-sm mobile:text-xs">E-COMMERCE</p>
-              </li>
-            </ul>
-              <h2 class="mb-5 mt-5 font-jakarta font-semibold  pc:text-lg mobile:text-sm">
-              Top 10 Payment Gateways for Online Stores in 2025
-              </h2>
-              <p
-                class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
+          </div> 
+          <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"> 
+            <div class="mobile:h-[540px]">
+              <img src="./images/Article-Title/image8.png" alt="image" />
+              <div
+                class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
               >
-              Complete comparison of payment processors including Stripe, PayPal, and emerging solutions...
-              </p>
-                 <ul class="mt-3 mb-3 pb-2">
-                <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">6 min read </p>
-                </li>
-                <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
-                </li>
-                <li class="float-left">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 8, 2025</p>
+              <ul class="mt-5">
+                <li class="pc:w-[150px] mobile:w-[140px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
+                  <p class="font-jakarta font-medium pc:text-sm mobile:text-xs">E-COMMERCE</p>
                 </li>
               </ul>
+                <h2 class="mb-5 mt-5 font-jakarta font-semibold  pc:text-lg mobile:text-sm">
+                Top 10 Payment Gateways for Online Stores in 2025
+                </h2>
+                <p
+                  class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
+                >
+                Complete comparison of payment processors including Stripe, PayPal, and emerging solutions...
+                </p>
+                  <ul class="mt-3 mb-3 pb-2">
+                  <li class="float-left  mr-1">
+                    <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">6 min read </p>
+                  </li>
+                  <li class="float-left  mr-1">
+                    <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
+                  </li>
+                  <li class="float-left">
+                    <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 8, 2025</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="mobile:h-[520px]">
-            <img src="./images/Article-Title/image9.png" alt="image" />
-            <div
-              class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
-            >
-             <ul class="mt-5">
-              <li class="w-pc:[115px] mobile:w-[105px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
-                <p class="font-jakarta font-medium pc:text-sm mobile:text-xs"> Tutorial</p>
-              </li>
-            </ul>
-              <h2 class="mb-5 mt-5 font-jakarta font-semibold  pc:text-lg mobile:text-sm">
-              Laravel API Development: Complete Guide
-              </h2>
-              <p
-                class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
-              >
-              Step-by-step tutorial on building RESTful APIs with Laravel, including authentication...
-              </p>
-              <ul class="mt-3 mb-3 pb-2">
-                <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">12 min read  </p>
-                </li>
-                <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
-                </li>
-                <li class="float-left">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 5, 2025</p>
-                </li>
-              </ul>
+          </div> 
+          <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"> 
+                <div class="mobile:h-[520px]">
+                  <img src="./images/Article-Title/image9.png" alt="image" />
+                  <div
+                    class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
+                  >
+                  <ul class="mt-5">
+                    <li class="w-pc:[115px] mobile:w-[105px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
+                      <p class="font-jakarta font-medium pc:text-sm mobile:text-xs"> Tutorial</p>
+                    </li>
+                  </ul>
+                    <h2 class="mb-5 mt-5 font-jakarta font-semibold  pc:text-lg mobile:text-sm">
+                    Laravel API Development: Complete Guide
+                    </h2>
+                    <p
+                      class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
+                    >
+                    Step-by-step tutorial on building RESTful APIs with Laravel, including authentication...
+                    </p>
+                    <ul class="mt-3 mb-3 pb-2">
+                      <li class="float-left  mr-1">
+                        <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">12 min read  </p>
+                      </li>
+                      <li class="float-left  mr-1">
+                        <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
+                      </li>
+                      <li class="float-left">
+                        <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 5, 2025</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+          </div>   
+          <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">   
+              <div>
+                <img src="./images/Article-Title/image7.png" alt="image" />
+                <div
+                  class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
+                >
+                <ul class="mt-5">
+                  <li class="pc:w-[132px] mobile:w-[120px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
+                    <p class="font-jakarta font-medium pc:text-sm mobile:text-xs">Case Study</p>
+                  </li>
+                </ul>
+                  <h2 class="mb-5 mt-5 font-jakarta font-semibold  pc:text-lg mobile:text-sm">
+                  How We Built a $2M Fashion Marketplace
+                  </h2>
+                  <p
+                    class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
+                  >
+                  Behind the scenes look at developing a multi-vendor marketplace that processes thousands...
+                  </p>
+                    <ul class="mt-3 mb-3 pb-2">
+                    <li class="float-left mr-1">
+                      <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">5 min read </p>
+                    </li>
+                    <li class="float-left  mr-1">
+                      <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
+                    </li>
+                    <li class="float-left">
+                      <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 1, 2025</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>  
+          <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
+                <div class="mobile:h-[520px]">
+                  <img src="./images/Article-Title/image8.png" alt="image" />
+                  <div
+                    class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
+                  >
+                  <ul class="mt-5">
+                    <li class="w-[105px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
+                      <p class="font-jakarta font-medium pc:text-sm mobile:text-xs">Laravel</p>
+                    </li>
+                  </ul>
+                    <h2 class="mb-5 mt-5 font-jakarta font-semibold  pc:text-lg mobile:text-sm">
+                    Laravel Performance Optimization Checklist
+                    </h2>
+                    <p
+                      class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300 leading-[163%]"
+                    >
+                    Essential techniques to speed up your Laravel application and handle high traffic loads...
+                    </p>
+                      <ul class="mt-3 mb-3 pb-2">
+                      <li class="float-left  mr-1">
+                        <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">10 min read • </p>
+                      </li>
+                      <li class="float-left  mr-1">
+                        <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">•</p>
+                      </li>
+                      <li class="float-left">
+                        <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Nov 28, 2025</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
             </div>
-          </div>
-          <div>
-            <img src="./images/Article-Title/image7.png" alt="image" />
-            <div
-              class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
-            >
-            <ul class="mt-5">
-              <li class="pc:w-[132px] mobile:w-[120px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
-                <p class="font-jakarta font-medium pc:text-sm mobile:text-xs">Case Study</p>
-              </li>
-            </ul>
-              <h2 class="mb-5 mt-5 font-jakarta font-semibold  pc:text-lg mobile:text-sm">
-               How We Built a $2M Fashion Marketplace
-              </h2>
-              <p
-                class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
-              >
-               Behind the scenes look at developing a multi-vendor marketplace that processes thousands...
-              </p>
-                 <ul class="mt-3 mb-3 pb-2">
-                <li class="float-left mr-1">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">5 min read </p>
-                </li>
-                <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal text-sm text-[#a9a9a9]">•</p>
-                </li>
-                <li class="float-left">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Dec 1, 2025</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="mobile:h-[520px]">
-            <img src="./images/Article-Title/image8.png" alt="image" />
-            <div
-              class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
-            >
-            <ul class="mt-5">
-              <li class="w-[105px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
-                <p class="font-jakarta font-medium pc:text-sm mobile:text-xs">Laravel</p>
-              </li>
-            </ul>
-              <h2 class="mb-5 mt-5 font-jakarta font-semibold  pc:text-lg mobile:text-sm">
-              Laravel Performance Optimization Checklist
-              </h2>
-              <p
-                class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300 leading-[163%]"
-              >
-               Essential techniques to speed up your Laravel application and handle high traffic loads...
-              </p>
-                 <ul class="mt-3 mb-3 pb-2">
-                <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">10 min read • </p>
-                </li>
-                <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">•</p>
-                </li>
-                <li class="float-left">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Nov 28, 2025</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mobile:h-[520px]">
-            <img src="./images/Article-Title/image9.png" alt="image" />
-            <div
-              class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
-            >
-             <ul class="mt-5">
-              <li class="pc:w-[145px] mobile:w-[135px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
-                <p class="font-jakarta font-medium pc:text-sm mobile:text-xs"> E-commerce</p>
-              </li>
-            </ul>
-              <h2 class="mb-5 mt-5 font-jakarta font-semibold  pc:text-lg mobile:text-sm">
-               E-commerce UX Design: 15 Must-Have Features
-              </h2>
-              <p
-                class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
-              >
-              Discover the essential user experience elements that boost conversion rates in online stores...
-              </p>
-              <ul class="mt-3 mb-3 pb-2">
-                <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">7 min read  </p>
-                </li>
-                <li class="float-left  mr-1">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">•</p>
-                </li>
-                <li class="float-left">
-                  <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Nov 25, 2025</p>
-                </li>
-              </ul>
-            </div>
-          </div>
+            <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
+                <div class="mobile:h-[520px]">
+                  <img src="./images/Article-Title/image9.png" alt="image" />
+                  <div
+                    class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
+                  >
+                  <ul class="mt-5">
+                    <li class="pc:w-[145px] mobile:w-[135px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
+                      <p class="font-jakarta font-medium pc:text-sm mobile:text-xs"> E-commerce</p>
+                    </li>
+                  </ul>
+                    <h2 class="mb-5 mt-5 font-jakarta font-semibold  pc:text-lg mobile:text-sm">
+                    E-commerce UX Design: 15 Must-Have Features
+                    </h2>
+                    <p
+                      class="font-jakarta font-normal pc:text-sm mobile:text-xs text-white-300 leading-[163%]"
+                    >
+                    Discover the essential user experience elements that boost conversion rates in online stores...
+                    </p>
+                    <ul class="mt-3 mb-3 pb-2">
+                      <li class="float-left  mr-1">
+                        <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">7 min read  </p>
+                      </li>
+                      <li class="float-left  mr-1">
+                        <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">•</p>
+                      </li>
+                      <li class="float-left">
+                        <p class="font-jakarta font-normal tablet:text-sm mobile:text-xs text-[#a9a9a9]">Nov 25, 2025</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>  
         </div>
         <div>
             <a href="#" class="relative z-20 block mt-[-30px] font-jakarta font-medium pc:text-lg mobile:text-sm text-center underline hover:text-blue  transition-colors  duration-300 ease-in"  @click.prevent>LOAD MORE</a>
@@ -924,40 +947,62 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base">CONTACT</h2>
+          <h2
+            class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base"
+          >
+            CONTACT
+          </h2>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Email:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="mailto:hello@webparadox.com"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               hello@webparadox.com
             </p>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Phone (HQ):
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="tel:372XXXXXXX"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               +372 XXX XXXX
-            </p>
+              </a>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               WhatsApp:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="https://wa.me/372 XXX XXXX"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               +372 XXX XXXX
-            </p>
+            </a>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Telegram:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="https://t.me/webparadox"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               @webparadox
-            </p>
+          </a>
           </div>
-          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
+          <div
+            class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10"
+          >
             <div>
               <a
                 href="#"

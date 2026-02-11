@@ -515,7 +515,7 @@
         Real projects, real results. Explore how we've helped businesses across different industries achieve their digital goals through innovative solutions and expert execution.
         </p>
         <div
-          class="grid pc:grid-cols-[158px_165px_71px_85px] mobile:grid-cols-[114px_60px] tablet:grid-cols-[104px_108px_47px_49px] pc:mt-12 mobile:mt-7 pc:gap-x-20 mobile:gap-x-3 tablet:gap-x-20 mobile:gap-y-5 tablet:gap-y-0 tablet:justify-center mobile:justify-between"
+          class="grid pc:grid-cols-[168px_175px_81px_85px] mobile:grid-cols-[114px_60px] tablet:grid-cols-[104px_108px_47px_49px] pc:mt-12 mobile:mt-7 pc:gap-x-[140px] mobile:gap-x-3 tablet:gap-x-20 mobile:gap-y-5 tablet:gap-y-0 tablet:justify-center mobile:justify-between"
         >
           <div>
             <h2 class="mb-2 font-jakarta font-normal pc:text-lg tablet:text-[10px] mobile:text-xs  text-white-300">CLIENT</h2>
@@ -2247,54 +2247,66 @@
           </div>
         </div>
         <div class="mobile:hidden tablet:grid grid pc:grid-cols-[294px_294px_294px] mobile:grid-cols-[294px] tablet:grid-cols-[294px_294px] justify-center gap-x-10 gap-y-15">
-            <div>
-                <img src="./images/Studies/image1.png" alt="Image">
-                <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Partner Network System</h2>
-                <P class="mb-3 font-jakarta font-normal text-base text-white-300 leading-[163%]">Custom affiliate platform with multi-tier commissions, real-time tracking, automated payouts, and comprehensive analytics dashboard.</P>
-                <div class="grid grid-cols-[136px_136px] mt-5">
-                    <div>
-                        <h2 class="font-jakarta font-bold text-[20px]">10K+</h2>
-                        <p class="font-jakarta font-medium text-base text-white-300">Partners</p>
-                    </div>
-                    <div>
-                        <h2 class="font-jakarta font-bold text-[20px]">$2M</h2>
-                        <p  class="font-jakarta font-medium text-base text-white-300">Monthly Volume</p>
-                    </div>
-                </div>
-                <a href="#" class="block bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
-            </div>
-            <div>
-                <img src="./images/Studies/image2.png" alt="Image">
-                <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Banking Web Portal</h2>
-                <P class="mb-3 font-jakarta font-normal text-base text-white-300 leading-[163%]">Secure online banking solution with advanced security features, real-time transactions, and seamless mobile integration.</P>
-                <div class="grid grid-cols-[136px_136px] mt-5">
-                    <div>
-                        <h2 class="font-jakarta font-bold text-[20px]">99.9%</h2>
-                        <p class="font-jakarta font-medium text-base text-white-300">Uptime</p>
-                    </div>
-                    <div>
-                        <h2 class="font-jakarta font-bold text-[20px]">100K+</h2>
-                        <p  class="font-jakarta font-medium text-base text-white-300">Daily Transactions</p>
-                    </div>
-                </div>
-                <a href="#" class="block bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
-            </div>
-            <div class="relative">
-                <img src="./images/Studies/images3.png" alt="Image">
-                <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">SaaS Project Tool</h2>
-                <P class="mb-3 font-jakarta font-normal text-base text-white-300 h-[83px] leading-[163%]">Multi-tenant SaaS application with real-time collaboration, serving 10K+ users across 500+ companies.</P>
-                <div class="grid grid-cols-[136px_136px] mt-5">
-                    <div>
-                        <h2 class="font-jakarta font-bold text-[20px]">10K+</h2>
-                        <p class="font-jakarta font-medium text-base text-white-300">Users</p>
-                    </div>
-                    <div>
-                        <h2 class="font-jakarta font-bold text-[20px]">500+</h2>
-                        <p  class="font-jakarta font-medium text-base text-white-300">Companies</p>
-                    </div>
-                </div>
-                <a href="#" class="block absolute boto bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
-            </div>
+             <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">  
+              <div>
+                  <img src="./images/Studies/image1.png" alt="Image">
+                  <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Partner Network System</h2>
+                  <P class="mb-3 font-jakarta font-normal text-base text-white-300 leading-[163%]">Custom affiliate platform with multi-tier commissions, real-time tracking, automated payouts, and comprehensive analytics dashboard.</P>
+                  <div class="grid grid-cols-[136px_136px] mt-5">
+                      <div>
+                          <h2 class="font-jakarta font-bold text-[20px]">10K+</h2>
+                          <p class="font-jakarta font-medium text-base text-white-300">Partners</p>
+                      </div>
+                      <div>
+                          <h2 class="font-jakarta font-bold text-[20px]">$2M</h2>
+                          <p  class="font-jakarta font-medium text-base text-white-300">Monthly Volume</p>
+                      </div>
+                  </div>
+                  <a href="#" class="block bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
+              </div>
+            </div>  
+             <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
+              <div>
+                  <img src="./images/Studies/image2.png" alt="Image">
+                  <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Banking Web Portal</h2>
+                  <P class="mb-3 font-jakarta font-normal text-base text-white-300 leading-[163%]">Secure online banking solution with advanced security features, real-time transactions, and seamless mobile integration.</P>
+                  <div class="grid grid-cols-[136px_136px] mt-5">
+                      <div>
+                          <h2 class="font-jakarta font-bold text-[20px]">99.9%</h2>
+                          <p class="font-jakarta font-medium text-base text-white-300">Uptime</p>
+                      </div>
+                      <div>
+                          <h2 class="font-jakarta font-bold text-[20px]">100K+</h2>
+                          <p  class="font-jakarta font-medium text-base text-white-300">Daily Transactions</p>
+                      </div>
+                  </div>
+                  <a href="#" class="block bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
+              </div>
+            </div>  
+             <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
+              <div class="relative">
+                  <img src="./images/Studies/images3.png" alt="Image">
+                  <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">SaaS Project Tool</h2>
+                  <P class="mb-3 font-jakarta font-normal text-base text-white-300 h-[83px] leading-[163%]">Multi-tenant SaaS application with real-time collaboration, serving 10K+ users across 500+ companies.</P>
+                  <div class="grid grid-cols-[136px_136px] mt-5">
+                      <div>
+                          <h2 class="font-jakarta font-bold text-[20px]">10K+</h2>
+                          <p class="font-jakarta font-medium text-base text-white-300">Users</p>
+                      </div>
+                      <div>
+                          <h2 class="font-jakarta font-bold text-[20px]">500+</h2>
+                          <p  class="font-jakarta font-medium text-base text-white-300">Companies</p>
+                      </div>
+                  </div>
+                  <a href="#" class="block absolute boto bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
+              </div>
+            </div>  
             
         </div>
         <div class="swiper h-[590px] mobile_studies mobile:block tablet:hidden">
@@ -2564,40 +2576,62 @@
           </nav>
         </div>
         <div>
-          <h2 class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base">CONTACT</h2>
+          <h2
+            class="mb-5 font-poppins tablet:font-semibold mobile:font-normal pc:text-[14px] mobile:text-base"
+          >
+            CONTACT
+          </h2>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Email:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="mailto:hello@webparadox.com"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               hello@webparadox.com
             </p>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Phone (HQ):
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="tel:372XXXXXXX"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               +372 XXX XXXX
-            </p>
+              </a>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               WhatsApp:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="https://wa.me/372 XXX XXXX"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               +372 XXX XXXX
-            </p>
+            </a>
           </div>
           <div class="mb-5">
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <p
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               Telegram:
             </p>
-            <p class="font-poppins font-light pc:text-base mobile:text-xs text-white-300">
+            <a href="https://t.me/webparadox"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+            >
               @webparadox
-            </p>
+          </a>
           </div>
-          <div class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10 ">
+          <div
+            class="grid mobile:relative mobile:left-[-160px] mobile:top-[40px] mobile:mb-5 mobile:mt-5 tablet:mt-0 tablet:mb-0 tablet:top-[0px] tablet:left-[0px] pc:grid-cols-[47px_47px_47px_47px] mobile:grid-cols-[34px_34px_34px_34px] tablet:gap-x-2 mobile:gap-x-10"
+          >
             <div>
               <a
                 href="#"
