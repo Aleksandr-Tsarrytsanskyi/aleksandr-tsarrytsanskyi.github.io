@@ -45,6 +45,10 @@
   padding: 0px;
 }
 
+/* .macos .mc_header {
+  display:none
+} */
+
 ::-webkit-scrollbar {
   width: 3px; /* Ширина полосы */
 }

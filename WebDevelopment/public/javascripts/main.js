@@ -1,5 +1,25 @@
 document.addEventListener("DOMContentLoaded",function() {
+const platform = navigator.platform.toLowerCase();
+const userAgent = navigator.userAgent.toLowerCase();
+let os = 'unknown';
 
+
+if (platform.includes('win')) {
+    os = 'windows';
+    document.body.classList.add(os)
+} else if (platform.includes('mac')) {
+    os = 'macos';
+    document.body.classList.add(os)
+} else if (platform.includes('linux')) {
+    os = 'linux';
+    document.body.classList.add(os)
+} else if (/android/.test(userAgent)) {
+    os = 'android';
+    document.body.classList.add(os)
+} else if (/iphone|ipad|ipod/.test(userAgent)) {
+    os = 'ios';
+    document.body.classList.add(os)
+}
 // activeSlide.lastElementChild.style.opacity = "1"
 
 

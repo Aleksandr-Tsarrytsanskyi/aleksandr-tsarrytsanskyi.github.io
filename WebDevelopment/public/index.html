@@ -164,7 +164,7 @@
       </div>
     </section>
     <div
-      class="bg-[url('./images/mobile/header_banner.svg')]  mobile:h-[850px] tablet:h-[400px] pc:h-[680px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
+      class=" bg-[url('./images/mobile/header_banner.svg')]  mobile:h-[850px] tablet:h-[400px] pc:h-[680px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
     >
       <div
         class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
@@ -4003,7 +4003,7 @@
         </div>
       </section>
       <section
-        class="tablet:mt-20 bg-[#000000] mobile:mt-10 relative w-full pc:h-[1000px] tablet:h-[830px] mobile:h-[600px]"
+        class="tablet:mt-20 bg-[#000000] mobile:mt-10 relative w-full pc:h-[1000px] tablet:h-[830px] mobile:h-[620px]"
       >
         
         <div class="absolute w-full h-full inset-0">
@@ -4023,140 +4023,373 @@
               >
                 Offices in 4 countries to serve you better
               </p>
-              <div class="relative">
-                <div
-                  class="absolute w-full z-100 grid grid-cols-[237px_237px] justify-between"
-                >
+              <div x-data="{ activeBlock: null }">
+                  <div class="relative">
                   <div
-                    class="absolute pc:top-[90px] mobile:top-[-20px] pc:left-[110px] tablet:left-[90px] tablet:w-[237px] mobile:w-[150px] h-[110px] border border-solid border-wthite-100/50 pl-5 pt-5"
+                    class="absolute w-full z-100 grid grid-cols-[237px_237px] justify-between"
                   >
-                    <img src="./images/EN.png" alt="images" />
-                    <p
-                      class="mt-3 font-poppins font-semibold pc:text-[20px] mobile:text-[14px]"
+                    <div @click="activeBlock = 4;"
+                      class="absolute pc:top-[90px] mobile:top-[-20px] pc:left-[110px] tablet:left-[90px] tablet:w-[237px] mobile:w-[150px] h-[110px] cursor-pointer border border-solid border-wthite-100/50 pl-5 pt-5"
                     >
-                      United Kingdom
-                    </p>
-                  </div>
-                  <div
-                    class="absolute tablet:top-[250px] mobile:top-[120px] mobile:left-[-50px] pc:w-[237px] tablet:w-[190px] mobile:w-[120px] h-[110px] border border-solid border-wthite-100/50 pl-5 pt-5"
-                  >
-                    <img src="./images/AE.png" alt="images" />
+                      <img src="./images/EN.png" alt="images" />
+                      <p
+                        class="mt-3 font-poppins font-semibold pc:text-[20px] mobile:text-[14px]"
+                      >
+                        United Kingdom
+                      </p>
+                    </div>
+                    <div @click="activeBlock = 2;"
+                      class="absolute tablet:top-[250px] mobile:top-[120px] mobile:left-[-50px] pc:w-[237px] tablet:w-[190px] mobile:w-[120px] h-[110px] cursor-pointer border border-solid border-wthite-100/50 pl-5 pt-5"
+                    >
+                      <img src="./images/ee.png" alt="images" />
 
-                    <p
-                      class="mt-3 font-poppins font-semibold pc:text-[20px] tablet:text-[14px]"
+                      <p
+                        class="mt-3 font-poppins font-semibold pc:text-[20px] tablet:text-[14px]"
+                      >
+                        Estonia (HQ)
+                      </p>
+                    </div>
+                    <div @click="activeBlock = 1;"
+                      class="absolute tablet:top-[380px] pc:left-[20px] tablet:left-[5px] mobile:top-[240px] mobile:left-[-40px] pc:w-[237px] tablet:w-[190px] cursor-pointer mobile:w-[120px] h-[110px] border border-solid border-wthite-100/50 pl-5 pt-5"
                     >
-                      Estonia (HQ)
-                    </p>
-                  </div>
-                  <div
-                    class="absolute tablet:right-[0px] pc:top-[140px] tablet:top-[100px] mobile:right-[-60px] mobile:top-[60px] pc:w-[237px] tablet:w-[180px] mobile:w-[180px] overflow-hidden h-[110px] border border-solid border-wthite-100/50 pl-5 pt-5"
-                  >
-                    <img src="./images/US.png" alt="images" />
-                    <p
-                      class="mt-3 font-poppins font-semibold pc:text-[20px] tablet:text-[14px]"
-                    >
-                      United States
-                    </p>
-                  </div>
-                </div>
-                <div class="mt-20 relative w-full absolute z-20 flex">
-                   <div x-data="{ hovered: false }" 
-                      <div @mouseenter="hovered = true" 
-                        @mouseleave="hovered = false">
-                        <video   x-show="!hovered"  autoplay muted loop playsinline preload="auto" width="696" height="696" class="mx-auto absolute inset-0" poster="placeholder.jpg">
-                          <source src="./images/video/earth.mp4" type="video/mp4">
-                        </video>
-                       
-                      <div x-show="hovered" >
-                        <img src="./images/world.png" alt="Изображение" width="696" height="696" class="mx-auto absolute inset-0" >
-                      </div>
-                     
-                       <div x-show="hovered" x-transition
-                  class="absolute  z-200 pc:left-[35%] pc:top-[240px] tablet:left-[30%] tablet:top-[200px]  mobile:top-[110px] mobile:left-[90px] "
-                >
-                  
-                    <svg
-                      class="relative z-20"
-                     
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="11" cy="11" r="11" fill="white" />
-                    </svg>
-                    <div
-                      
-                     
-                      class="relative left-[15px] top-[-8px] z-10 tablet:w-[265px] mobile:w-[200px] pc:h-[410px] tablet:h-[310px] pl-10 pt-7 bg-black/50 border border-solid border-white-100/50"
-                    >
-                      <img src="./images/AE.png" alt="Images" class="mb-3" />
-                      <h2
-                        class="mb-5 font-jakarta font-semibold pc:text-xl tablet:text-base"
+                       <img src="./images/AE.png" alt="Images"  />
+
+                      <p
+                        class="mt-3 font-poppins font-semibold pc:text-[20px] tablet:text-[14px]"
                       >
                         UAE
-                      </h2>
-                      <div class="mb-5">
-                        <p
-                          class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
-                        >
-                          Address
-                        </p>
-                        <p
-                          class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
-                        >
-                          Dubai, UAE
-                        </p>
-                      </div>
-                      <div class="mb-5">
-                        <p
-                          class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
-                        >
-                          Email:
-                        </p>
-                        <p
-                          class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
-                        >
-                          uae@webparadox.com
-                        </p>
-                      </div>
-                      <div class="mb-5">
-                        <p
-                          class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
-                        >
-                          Phone
-                        </p>
-                        <p
-                          class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
-                        >
-                          +971 XX XXX XXXX
-                        </p>
-                      </div>
-                      <div class="mb-5">
-                        <p
-                          class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
-                        >
-                          Hours
-                        </p>
-                        <p
-                          class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
-                        >
-                          Sun-Thu 9:00-18:00 GST
-                        </p>
-                      </div>
+                      </p>
                     </div>
+                    <div @click="activeBlock = 3;"
+                      class="absolute tablet:right-[0px] pc:top-[140px] tablet:top-[100px] mobile:right-[-60px] mobile:top-[10px] pc:w-[237px] tablet:w-[180px] mobile:w-[180px] cursor-pointer overflow-hidden h-[110px] border border-solid border-wthite-100/50 pl-5 pt-5"
+                    > 
+                      <img src="./images/US.png" alt="images" />
+                      <p
+                        class="mt-3 font-poppins font-semibold pc:text-[20px] tablet:text-[14px]"
+                      >
+                        United States
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mt-20 relative w-full absolute z-20 flex">
+                        <div @click="activeBlock = 1;">
+                          <video  autoplay muted loop playsinline preload="auto" width="696" height="696" class="mx-auto absolute inset-0" poster="placeholder.jpg" >
+                            <source src="./images/video/earth.mp4" type="video/mp4">
+                          </video>
+                        </div>  
+                          <div  x-show="activeBlock === 1" x-transition style="display: none;"
+                    class="absolute  z-200 pc:left-[35%] pc:top-[240px] tablet:left-[30%] tablet:top-[200px]  mobile:top-[110px] mobile:left-[90px] "
+                  >
+                    
+                      <svg
+                        class="relative z-20"
+                      
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="11" cy="11" r="11" fill="white" />
+                      </svg>
+                      <div
+                        
+                      
+                        class="relative left-[15px] top-[-8px] z-10 tablet:w-[265px] mobile:w-[200px] pc:h-[410px] tablet:h-[310px] pl-10 pt-7 bg-black/50 border border-solid border-white-100/50"
+                      >
+                        <img src="./images/AE.png" alt="Images" class="mb-3" />
+                        <h2
+                          class="mb-5 font-jakarta font-semibold pc:text-xl tablet:text-base"
+                        >
+                          UAE
+                        </h2>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Address
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Dubai, UAE
+                          </p>
                         </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Email:
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            uae@webparadox.com
+                          </p>
                         </div>
-                   </div>     
-                </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Phone
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            +971 XX XXX XXXX
+                          </p>
+                        </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Hours
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Sun-Thu 9:00-18:00 GST
+                          </p>
+                        </div>
+                      </div>
+                          </div>
+                          <div  x-show="activeBlock === 2" x-transition style="display: none;"
+                    class="absolute  z-200 pc:left-[35%] pc:top-[240px] tablet:left-[30%] tablet:top-[200px]  mobile:top-[110px] mobile:left-[90px] "
+                  >
+                    
+                      <svg
+                        class="relative z-20"
+                      
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="11" cy="11" r="11" fill="white" />
+                      </svg>
+                      <div
+                        
+                      
+                        class="relative left-[15px] top-[-8px] z-10 tablet:w-[265px] mobile:w-[200px] pc:h-[410px] tablet:h-[310px] pl-10 pt-7 bg-black/50 border border-solid border-white-100/50"
+                      >
+                       <img src="./images/ee.png" alt="images" class="mb-3"/>
+                        <h2
+                          class="mb-5 font-jakarta font-semibold pc:text-xl tablet:text-base"
+                        >
+                          EST
+                        </h2>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Address
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Tallinn, EST
+                          </p>
+                        </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Email:
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            uae@webparadox.com
+                          </p>
+                        </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Phone
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            +971 XX XXX XXXX
+                          </p>
+                        </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Hours
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Sun-Thu 9:00-18:00 GST
+                          </p>
+                        </div>
+                      </div>
+                          </div>
+                          <div  x-show="activeBlock === 3" x-transition style="display: none;"
+                    class="absolute z-200 pc:left-[35%] pc:top-[240px] tablet:left-[30%] tablet:top-[200px]  mobile:top-[110px] mobile:left-[90px] "
+                  >
+                    
+                      <svg
+                        class="relative z-20"
+                      
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="11" cy="11" r="11" fill="white" />
+                      </svg>
+                      <div
+                        
+                      
+                        class="relative left-[15px] top-[-8px] z-10 tablet:w-[265px] mobile:w-[200px] pc:h-[410px] tablet:h-[310px] pl-10 pt-7 bg-black/50 border border-solid border-white-100/50"
+                      >
+                        <img src="./images/US.png" alt="images" class="mb-3"/>
+                        <h2
+                          class="mb-5 font-jakarta font-semibold pc:text-xl tablet:text-base"
+                        >
+                          US
+                        </h2>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Address
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Washington, US
+                          </p>
+                        </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Email:
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            uae@webparadox.com
+                          </p>
+                        </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Phone
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            +971 XX XXX XXXX
+                          </p>
+                        </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Hours
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Sun-Thu 9:00-18:00 GST
+                          </p>
+                        </div>
+                      </div>
+                          </div>
+                          <div  x-show="activeBlock === 4" x-transition style="display: none;"
+                    class="absolute  z-200 pc:left-[35%] pc:top-[240px] tablet:left-[30%] tablet:top-[200px]  mobile:top-[110px] mobile:left-[90px] "
+                  >
+                    
+                      <svg
+                        class="relative z-20"
+                      
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="11" cy="11" r="11" fill="white" />
+                      </svg>
+                      <div
+                        
+                      
+                        class="relative left-[15px] top-[-8px] z-10 tablet:w-[265px] mobile:w-[200px] pc:h-[410px] tablet:h-[310px] pl-10 pt-7 bg-black/50 border border-solid border-white-100/50"
+                      >
+                        <img src="./images/EN.png" alt="images" class="mb-3"/>
+                        <h2
+                          class="mb-5 font-jakarta font-semibold pc:text-xl tablet:text-base"
+                        >
+                          UK
+                        </h2>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Address
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            London, UK
+                          </p>
+                        </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Email:
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            uae@webparadox.com
+                          </p>
+                        </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Phone
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            +971 XX XXX XXXX
+                          </p>
+                        </div>
+                        <div class="mb-5">
+                          <p
+                            class="font-jakarta font-light pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Hours
+                          </p>
+                          <p
+                            class="font-jakarta font-normal pc:text-base mobile:text-xs text-white-300"
+                          >
+                            Sun-Thu 9:00-18:00 GST
+                          </p>
+                        </div>
+                      </div>
+                          </div>
+                        </div>
 
-               
-                </div>
+                
+                  </div>
+               </div>   
               </div>
             </div>
-          </section>
-        </div>
+        </section>
+     
       </section>
       <section
         class="tablet:mt-20 mobile:mt-10 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] tablet:h-auto mx-auto"
