@@ -45,9 +45,9 @@
   padding: 0px;
 }
 
-.ios .mc_header {
+/* .ios .mc_header {
   display:none
-}
+} */
 
 ::-webkit-scrollbar {
   width: 3px; /* Ширина полосы */
