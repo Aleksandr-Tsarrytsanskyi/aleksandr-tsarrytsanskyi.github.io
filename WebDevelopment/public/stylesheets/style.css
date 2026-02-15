@@ -156,6 +156,7 @@ button:not(header, .none-spassing) , a:not(header a, .not-spacing_text a, footer
  
 }
 
+
 .clients .swiper-slide-active img {
   width: 125px;
   height: 100px ;

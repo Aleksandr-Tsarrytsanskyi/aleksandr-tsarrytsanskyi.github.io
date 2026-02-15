@@ -603,14 +603,20 @@
           </div>
         </div>  
        </section>
-       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20">
-        <div class="grid pc:grid-cols-[294px_294px_294px] mobile:grid-cols-[294px] tablet:grid-cols-[294px_294px] justify-center gap-x-10 gap-y-15">
+       <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto tablet:mt-80 pc:mt-[340px] mobile:mt-[300px]">
+        <div class="grid pc:grid-cols-[294px_294px_294px] mobile:grid-cols-[294px] tablet:grid-cols-[294px_294px]  justify-center gap-x-10 pc:gap-y-[600px] tablet:gap-y-[600px] mobile:gap-y-[570px] ">
            <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
-                @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">    
-            <div>
-                  <img src="./images/Studies/image1.png" alt="Image">
-                  <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px]">Partner Network System</h2>
+                @mouseleave="hovered = false" 
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative group">    
+            <div class="relative ">
+              <div class="absolute bottom-0">
+                    <img src="./images/Studies/active_image1.png" alt="Image">
+              </div>
+                <div class="absolute bottom-0 " >
+                  <img src="./images/Studies/image1.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                </div>
+                  <div class="absolute top-0 ">
+                    <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px]">Partner Network System</h2>
                   <P class="mb-3 font-jakarta font-normal text-base text-white-300 leading-[163%]">Custom affiliate platform with multi-tier commissions, real-time tracking, automated payouts, and comprehensive analytics dashboard.</P>
                   <div class="grid grid-cols-[136px_136px] mt-5">
                       <div>
@@ -625,14 +631,21 @@
                   <div class="mobile:flex tablet:block">
                       <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-bold pc:text-lg mobile:text-sm leading-[60px] pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in active-link ">VIEW CASE STUDY</a>
                   </div>
+                  </div>
               </div>
             </div>  
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">
-              <div>
-                  <img src="./images/Studies/image2.png" alt="Image">
-                  <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px]">Banking Web Portal</h2>
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative group">
+              <div class="relative ">
+                <div class="absolute bottom-0">
+                    <img src="./images/Studies/active_image2.png" alt="Image">
+              </div>
+                <div class="absolute bottom-0">
+                  <img src="./images/Studies/image2.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                </div>
+                  <div class="absolute bottom-0 h-full">
+                    <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px]">Banking Web Portal</h2>
                   <P class="mb-3 font-jakarta font-normal text-base text-white-300 leading-[163%]">Secure online banking solution with advanced security features, real-time transactions, and seamless mobile integration.</P>
                   <div class="grid grid-cols-[136px_136px] mt-5">
                       <div>
@@ -647,14 +660,21 @@
                   <div class="mobile:flex tablet:block">
                       <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-bold pc:text-lg mobile:text-sm leading-[60px] pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in active-link ">VIEW CASE STUDY</a>
                   </div>
+                  </div>
               </div>
             </div>  
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative group">
               <div class="relative">
-                  <img src="./images/Studies/images3.png" alt="Image">
-                  <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px]">SaaS Project Tool</h2>
+                <div class="absolute bottom-0">
+                    <img src="./images/Studies/active_image3.png" alt="Image">
+              </div>
+                <div class="absolute bottom-0">
+                  <img src="./images/Studies/images3.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                </div>
+                  <div class="absolute top-0">
+                    <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px]">SaaS Project Tool</h2>
                   <P class="mb-3 font-jakarta font-normal text-base text-white-300 h-[83px] leading-[163%]">Multi-tenant SaaS application with real-time collaboration, serving 10K+ users across 500+ companies.</P>
                   <div class="grid grid-cols-[136px_136px] mt-5">
                       <div>
@@ -669,14 +689,21 @@
                   <div class="mobile:flex tablet:block">
                       <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-bold pc:text-lg mobile:text-sm leading-[60px] pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in active-link ">VIEW CASE STUDY</a>
                   </div>
+                  </div>
               </div>
             </div>  
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">
-              <div>
-                  <img src="./images/Studies/images4.png" alt="Image">
-                  <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px] leading-[163%]">Telemedicine Mobile App</h2>
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative  group">
+              <div class="relative">
+                <div class="absolute bottom-0">
+                    <img src="./images/Studies/active_image4.png" alt="Image">
+              </div>
+                <div class="absolute bottom-0">
+                  <img src="./images/Studies/images4.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                </div>
+                  <div class="absolute top-0 h-full">
+                    <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px] leading-[163%]">Telemedicine Mobile App</h2>
                   <P class="mb-3 font-jakarta font-normal text-base text-white-300">Cross-platform mobile app connecting patients with doctors, featuring video calls and appointment scheduling.</P>
                   <div class="grid grid-cols-[136px_136px] mt-5">
                       <div>
@@ -691,14 +718,21 @@
                   <div class="mobile:flex tablet:block">
                       <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-bold pc:text-lg mobile:text-sm leading-[60px] pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in active-link ">VIEW CASE STUDY</a>
                   </div>
+                  </div>
               </div>
             </div> 
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active"> 
-              <div>
-                  <img src="./images/Studies/images5.png" alt="Image">
-                  <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px] leading-[163%]">Real Estate Platform</h2>
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative group"> 
+              <div class="relative">
+                <div class="absolute bottom-0">
+                    <img src="./images/Studies/active_image5.png" alt="Image">
+              </div>
+                <div class="absolute bottom-0">
+                  <img src="./images/Studies/images5.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                </div>
+                  <div class="absolute top-0 h-full">
+                    <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px] leading-[163%]">Real Estate Platform</h2>
                   <P class="mb-3 font-jakarta font-normal text-base text-white-300">Property listing platform with advanced search, virtual tours, and CRM integration for real estate agents.</P>
                   <div class="grid grid-cols-[136px_136px] mt-5">
                       <div>
@@ -713,14 +747,21 @@
                   <div class="mobile:flex tablet:block">
                       <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-bold pc:text-lg mobile:text-sm leading-[60px] pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in active-link ">VIEW CASE STUDY</a>
                   </div>
+                  </div>
               </div>
             </div>  
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">
-              <div>
-                  <img src="./images/Studies/images6.png" alt="Image">
-                  <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px] leading-[163%]">Online Learning Portal</h2>
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative group">
+              <div class="relative">
+                <div class="absolute bottom-0">
+                    <img src="./images/Studies/active_image6.png" alt="Image">
+              </div>
+                <div class="absolute bottom-0">
+                  <img src="./images/Studies/images6.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                </div>
+                  <div class="absolute top-0 h-full">
+                    <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px] leading-[163%]">Online Learning Portal</h2>
                   <P class="mb-3 font-jakarta font-normal text-base text-white-300">E-learning platform with video courses, quizzes, certificates, and student progress tracking.</P>
                   <div class="grid grid-cols-[136px_136px] mt-5">
                       <div>
@@ -735,10 +776,11 @@
                   <div class="mobile:flex tablet:block">
                       <a href="#" class="block mx-auto pc:bg-[url('./images/header_btn_hide.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-bold pc:text-lg mobile:text-sm leading-[60px] pc:hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in active-link ">VIEW CASE STUDY</a>
                   </div>
+                  </div>
               </div>
             </div>  
         </div>
-        <a href="#" @click.prevent class="block  mt-10 font-jakarta font-medium pc:text-xl mobile:text-sm text-center underline hover:text-blue transition-colors duration-300 ease-in">LOAD MORE PROJECTS</a>
+        <a href="#" @click.prevent class="block tablet:mt-[300px] mobile:mt-[300px] pc:mt-[310px] font-jakarta font-medium pc:text-xl mobile:text-sm text-center underline hover:text-blue transition-colors duration-300 ease-in">LOAD MORE PROJECTS</a>
        </section>
        
        <section class=" mt-20 bg-[#27272a] w-full py-10">
