@@ -505,7 +505,7 @@
           </ul>
         </nav>
       </div>
-      <div class="pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px]  mx-auto pc:mt-30 mobile:mt-20 clear-both">
+      <div class="pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px]  mx-auto pc:mt-[100px] mobile:mt-20 clear-both">
         <h2 class="font-poppins font-light pc:text-3xl mobile:text-[29px] tablet:text-[36px] text-center">
          Fashion Marketplace Platform
         </h2>
@@ -519,25 +519,25 @@
         >
           <div>
             <h2 class="mb-2 font-jakarta font-normal pc:text-lg tablet:text-[10px] mobile:text-xs  text-white-300">CLIENT</h2>
-            <p class="font-poppins mobile:font-medium font-semibold pc:text-lg mobile:text-xs text-white-100">
+            <p class="font-poppins mobile:font-medium pc:font-semibold pc:text-lg mobile:text-xs text-white-100">
             Fashion Retail Group
             </p>
           </div>
           <div>
             <h2 class="mb-2 font-jakarta font-normal pc:text-lg mobile:text-xs tablet:text-[10px] text-white-300">INDUSTRY</h2>
-            <p class="font-poppins mobile:font-medium font-semibold pc:text-lg mobile:text-xs text-white-100">
+            <p class="font-poppins mobile:font-medium pc:font-semibold pc:text-lg mobile:text-xs text-white-100">
               E-commerce & Retail
             </p>
           </div>
           <div class="mobile:col-start-2 mobile:row-start-1 tablet:col-start-3 mobile:row-start-1">
             <h2 class="mb-2 font-jakarta font-normal pc:text-lg mobile:text-xs tablet:text-[10px] text-white-300">TIMELINE</h2>
-            <p class="font-poppins mobile:font-medium font-semibold pc:text-lg mobile:text-xs text-white-100">
+            <p class="font-poppins mobile:font-medium pc:font-semibold pc:text-lg mobile:text-xs text-white-100">
               8 Months
             </p>
           </div>
           <div>
             <h2 class="mb-2 font-jakarta font-normal pc:text-lg mobile:text-xs tablet:text-[10px] text-white-300">TEAM SIZE</h2>
-            <p class="font-poppins mobile:font-medium font-semibold pc:text-lg mobile:text-xs text-white-100">
+            <p class="font-poppins mobile:font-medium pc:font-semibold pc:text-lg mobile:text-xs text-white-100">
              12 People
             </p>
           </div>
@@ -970,7 +970,14 @@
       <section class="tablet:bg-[#222] tablet:w-full tablet:py-20 mt-20">
         <div class="grid pc:grid-cols-[355px_569px] mobile:grid-cols-[300px] tablet:grid-cols-[260px_326px] pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto justify-between">
            <div class="mobile:mt-5 tablet:mt-0">
-             <img src="./images/Platform/image1.png" class="pc:h-[416px] pc:w-[355px] tablet:h-[429px]" alt="Image">
+             <div class="relative group">
+              <div class="absolute">
+                <img src="./images/Platform/active_img3.png" class="pc:h-[416px] pc:w-[355px] tablet:h-[429px]" alt="Image">
+              </div>
+              <div class="absolute">
+                <img src="./images/Platform/image1.png" class="pc:h-[416px] pc:w-[355px] tablet:h-[429px] group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+              </div>
+             </div>
              <p class="mobile:hidden tablet:block mt-7 font-jakarta font-normal text-base text-white-300 leading-[159%]"> The client needed a complete platform rebuild that could launch within 8 months while maintaining business continuity during migration.</p>
            </div>
            <div class="mobile:block tablet:hidden mobile:mt-5 mobile:mb-5 tablet:mt-0 tablet:mb-0 mobile:bg-[#222] tablet:bg-[#222] mobile:p-5 tablet:p-0">
@@ -2255,9 +2262,16 @@
         <div class="mobile:hidden tablet:grid grid pc:grid-cols-[294px_294px_294px] mobile:grid-cols-[294px] tablet:grid-cols-[294px_294px] justify-center gap-x-10 gap-y-15">
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">  
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active group">  
               <div>
-                  <img src="./images/Studies/image1.png" alt="Image">
+                  <div class="relative h-[255px]">
+                    <div class="absolute">
+                      <img src="./images/Platform/active_img.png" alt="Image">
+                    </div>
+                    <div class="absolute">
+                      <img src="./images/Studies/image1.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                    </div>
+                  </div>
                   <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Partner Network System</h2>
                   <P class="mb-3 font-jakarta font-normal text-base text-white-300 leading-[163%]">Custom affiliate platform with multi-tier commissions, real-time tracking, automated payouts, and comprehensive analytics dashboard.</P>
                   <div class="grid grid-cols-[136px_136px] mt-5">
@@ -2275,9 +2289,16 @@
             </div>  
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active group">
               <div>
-                  <img src="./images/Studies/image2.png" alt="Image">
+                  <div class="relative h-[255px]">
+                    <div class="absolute">
+                      <img src="./images/Platform/active_img1.png" alt="Image">
+                    </div>
+                    <div class="absolute">
+                      <img src="./images/Studies/image2.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                    </div>
+                  </div>
                   <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Banking Web Portal</h2>
                   <P class="mb-3 font-jakarta font-normal text-base text-white-300 leading-[163%]">Secure online banking solution with advanced security features, real-time transactions, and seamless mobile integration.</P>
                   <div class="grid grid-cols-[136px_136px] mt-5">
@@ -2295,9 +2316,16 @@
             </div>  
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active group">
               <div class="relative">
-                  <img src="./images/Studies/images3.png" alt="Image">
+                <div class="relative h-[255px]">
+                    <div class="absolute">
+                      <img src="./images/Platform/active_img2.png" alt="Image">
+                    </div>
+                    <div class="absolute">
+                      <img src="./images/Studies/images3.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                    </div>
+                  </div>
                   <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">SaaS Project Tool</h2>
                   <P class="mb-3 font-jakarta font-normal text-base text-white-300 h-[83px] leading-[163%]">Multi-tenant SaaS application with real-time collaboration, serving 10K+ users across 500+ companies.</P>
                   <div class="grid grid-cols-[136px_136px] mt-5">
