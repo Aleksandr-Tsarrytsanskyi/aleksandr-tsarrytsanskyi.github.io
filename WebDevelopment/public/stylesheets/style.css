@@ -10,12 +10,17 @@
 .clients .swiper-slide {
   transition: transform 0.5s ease;
   padding: 40px 0 !important;
-  margin-right: 40px !important;
+  margin-right: 20px !important;
 }
 
 .clients .swiper-slide-active {
-  transform: scale(1.1) !important; /* Увеличиваем на 20% */
-  margin-top: -20px
+  transform: scale(1.2) !important; /* Увеличиваем на 20% */
+  margin-top: -20px;
+}
+
+.clients .swiper-slide-active img {
+  width: 170px;
+  height: 193px;
 }
 
 
@@ -82,6 +87,27 @@
 }
 
 
+/* .swiper-scrollbar {
+  bottom: 0 !important; 
+  left: 0% !important; 
+  width: 100% !important; 
+  position: absolute !important;
+}
+
+.swiper-scrollbar-drag {
+  top: 0 !important; 
+  left: 0 !important; 
+   transform: translate3d(300px, 0px, 0px) !important;
+  
+} */
+
+
+.item-active:hover .active-link  {
+   background-image: url("../images/btn_icon_active.svg");
+   background-repeat: no-repeat;
+   background-position: 0px 0px;
+}
+
 
 .image-container {
     position: relative; /* Пример, чтобы изображения были друг над другом */
@@ -124,10 +150,15 @@ button:not(header, .none-spassing) , a:not(header a, .not-spacing_text a, footer
 
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1200px) {
   .clients .swiper-slide-active {
   transform: scale(1.2) !important; /* Увеличиваем на 20% */
  
+}
+
+.clients .swiper-slide-active img {
+  width: 125px;
+  height: 100px ;
 }
 
 .clients .swiper-slide {

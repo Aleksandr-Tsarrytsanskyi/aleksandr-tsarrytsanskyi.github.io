@@ -1,25 +1,25 @@
 document.addEventListener("DOMContentLoaded",function() {
-const platform = navigator.platform.toLowerCase();
-const userAgent = navigator.userAgent.toLowerCase();
-let os = 'unknown';
+// const platform = navigator.platform.toLowerCase();
+// const userAgent = navigator.userAgent.toLowerCase();
+// let os = 'unknown';
 
 
-if (platform.includes('win')) {
-    os = 'windows';
-    document.body.classList.add(os)
-} else if (platform.includes('mac')) {
-    os = 'macos';
-    document.body.classList.add(os)
-} else if (platform.includes('linux')) {
-    os = 'linux';
-    document.body.classList.add(os)
-} else if (/android/.test(userAgent)) {
-    os = 'android';
-    document.body.classList.add(os)
-} else if (/iphone|ipad|ipod/.test(userAgent)) {
-    os = 'ios';
-    document.body.classList.add(os)
-}
+// if (platform.includes('win')) {
+//     os = 'windows';
+//     document.body.classList.add(os)
+// } else if (platform.includes('mac')) {
+//     os = 'macos';
+//     document.body.classList.add(os)
+// } else if (platform.includes('linux')) {
+//     os = 'linux';
+//     document.body.classList.add(os)
+// } else if (/android/.test(userAgent)) {
+//     os = 'android';
+//     document.body.classList.add(os)
+// } else if (/iphone|ipad|ipod/.test(userAgent)) {
+//     os = 'ios';
+//     document.body.classList.add(os)
+// }
 // activeSlide.lastElementChild.style.opacity = "1"
 
 
@@ -27,8 +27,11 @@ if (platform.includes('win')) {
   // Optional parameters
  
   
-  slidesPerView: 8,
+  slidesPerView: "auto",
    spaceBetween: 10,
+   loop: true,
+    //  simulateTouch: false,
+    //  allowTouchMove: false, 
   
 
   // If we need pagination
@@ -46,27 +49,53 @@ if (platform.includes('win')) {
   scrollbar: {
     el: '.swiper-scrollbar',
       draggable: true,
+       snapOnRelease: true,
+       
+        dragSize: 'auto'
       
   },
+  // autoplay: {
+  //   delay: 5000, // Задержка в мс (3 секунды)
+  //   disableOnInteraction: false, // Не останавливать после взаимодействия
+     
+  // },
+
+
+  //  on: {
+   
+  //   setTranslate: function () {
+  //     // При каждом движении переопределяем transform
+  //     const drag = this.scrollbar.dragEl;
+  //     if (drag) {
+  //       // Получаем текущий transform от Swiper
+  //       const currentTransform = drag.style.transform;
+  //       // Добавляем свои изменения, например, масштаб
+  //       drag.style.transform = `${currentTransform} translateX(0px)`;
+  //     }
+  //   },
+  // },
 
    breakpoints: {
     // когда ширина экрана >= 320px (мобильные)
     300: {
-      slidesPerView: 3,
-      spaceBetween: 10
+      slidesPerView: "auto",
+      spaceBetween: 0
     },
     // когда ширина экрана >= 640px (планшеты)
     768: {
      
-      slidesPerView: 6,
-      spaceBetween: 20
+      slidesPerView: "auto",
+      spaceBetween: 0
     },
     // когда ширина экрана >= 1024px (десктопы)
     960: {
-      slidesPerView: 8,
-      spaceBetween: 30
+      slidesPerView: "auto",
+      spaceBetween: 0
     }
   }
+
+  
+  
 });
 
     let clients =  new Swiper(".clients", {
@@ -75,7 +104,7 @@ if (platform.includes('win')) {
     centeredSlides: true,
     allowTouchMove: false,
     slidesPerView: 3,
-    spaceBetween: 40,
+    spaceBetween: 20,
     // pagination: {
     //     el: ".swiper-pagination",
     //     clickable: true,
@@ -102,6 +131,50 @@ if (platform.includes('win')) {
     // когда ширина экрана >= 1024px (десктопы)
     960: {
       slidesPerView: 3,
+      spaceBetween: 20
+    }
+  }
+    });
+
+     let icons =  new Swiper(".icons", {
+    
+       slidesPerView: "auto",
+       spaceBetween: 40,
+       loop: true,
+       simulateTouch: false,
+     allowTouchMove: false, 
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    //     speed: 1000
+    // },
+    // speed: 1000,
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // }
+
+    autoplay: {
+    delay: 5000, // Задержка в мс (3 секунды)
+    disableOnInteraction: false, // Не останавливать после взаимодействия
+     
+  },
+
+    breakpoints: {
+    // когда ширина экрана >= 320px (мобильные)
+    300: {
+      slidesPerView: "auto",
+      spaceBetween: 40
+    },
+    // когда ширина экрана >= 640px (планшеты)
+    768: {
+      loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 40
+    },
+    // когда ширина экрана >= 1024px (десктопы)
+    960: {
+      slidesPerView: "auto",
       spaceBetween: 40
     }
   }

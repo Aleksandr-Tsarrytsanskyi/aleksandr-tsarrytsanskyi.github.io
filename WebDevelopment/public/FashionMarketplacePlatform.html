@@ -500,7 +500,7 @@
               </svg>
             </li>
             <li class="float-left">
-              <p class="pc:mt-[1px] mobile:mt-1.5 font-poppins font-normal pc:text-base mobile:text-xs">Fashion Marketplace Platform</p>
+              <p class="pc:mt-[1px] mobile:mt-1.5 font-poppins font-normal pc:text-base mobile:text-xs border-b-2 border-solid border-white-100 pb-1">Fashion Marketplace Platform</p>
             </li>
           </ul>
         </nav>
@@ -1845,12 +1845,18 @@
       </section>
        <section class="bg-[#222] w-full py-10 mt-20">
         <div class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto">
-          <h2 class="mb-1 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">
+          <div class="grid pc:grid-cols-[311px_320px] tablet:grid-cols-[200px_290px] justify-between items-center">
+           <div>
+             <h2 class="mb-1 font-poppins font-light pc:text-2xl mobile:text-[24px] text-center">
           Project Timeline
           </h2>
-          <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 text-center">
+           </div>
+          <div>
+            <p class="font-jakarta font-normal pc:text-lg mobile:text-base text-white-300 text-center">
             8-month journey from concept to launch
           </p>
+          </div>
+          </div>
           
           <div
             class="grid mobile:hidden tablet:grid pc:grid-cols-[217px_31px_207px_31px_227px] tablet:grid-cols-[217px_31px_217px] justify-center gap-x-15.5  gap-y-10  mt-10 items-center"
@@ -2249,7 +2255,7 @@
         <div class="mobile:hidden tablet:grid grid pc:grid-cols-[294px_294px_294px] mobile:grid-cols-[294px] tablet:grid-cols-[294px_294px] justify-center gap-x-10 gap-y-15">
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">  
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">  
               <div>
                   <img src="./images/Studies/image1.png" alt="Image">
                   <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Partner Network System</h2>
@@ -2264,12 +2270,12 @@
                           <p  class="font-jakarta font-medium text-base text-white-300">Monthly Volume</p>
                       </div>
                   </div>
-                  <a href="#" class="block bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
+                  <a href="#" class="block bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in active-link">VIEW CASE STUDY</a>
               </div>
             </div>  
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">
               <div>
                   <img src="./images/Studies/image2.png" alt="Image">
                   <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">Banking Web Portal</h2>
@@ -2284,12 +2290,12 @@
                           <p  class="font-jakarta font-medium text-base text-white-300">Daily Transactions</p>
                       </div>
                   </div>
-                  <a href="#" class="block bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
+                  <a href="#" class="block bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in active-link">VIEW CASE STUDY</a>
               </div>
             </div>  
              <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">
               <div class="relative">
                   <img src="./images/Studies/images3.png" alt="Image">
                   <h2 class="mb-3 mt-3 font-jakarta font-medium text-[20px]">SaaS Project Tool</h2>
@@ -2304,7 +2310,7 @@
                           <p  class="font-jakarta font-medium text-base text-white-300">Companies</p>
                       </div>
                   </div>
-                  <a href="#" class="block absolute boto bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in">VIEW CASE STUDY</a>
+                  <a href="#" class="block absolute boto bg-[url('./images/header_btn_hide.svg')] bg-no-repeat bg-left mt-5 pl-8 h-[60px] font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/services/link_active.svg')] transition-all duration-300 ease-in active-link">VIEW CASE STUDY</a>
               </div>
             </div>  
             

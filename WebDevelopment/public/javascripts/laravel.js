@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const laravel = new Swiper('.laravel', {
   // Optional parameters
  
- 
+  loop: true,
    spaceBetween: 20,
     slidesPerView: 3,
 
@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
   scrollbar: {
     el: '.swiper-scrollbar',
       draggable: true,
+       
+      
   },
 
   breakpoints: {

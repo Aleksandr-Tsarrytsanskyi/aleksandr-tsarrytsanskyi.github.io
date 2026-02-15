@@ -525,7 +525,7 @@
               </svg>
             </li>
             <li class="float-left mr-3">
-              <p class="mt-0.5 font-roboto font-normal pc:text-base mobile:text-sm ">
+              <p class="mt-0.5 font-roboto font-normal pc:text-base mobile:text-sm border-b-2 borde-solid border-white-100 pb-1">
                Article Title
               </p>
             </li>
@@ -563,10 +563,10 @@
                         <p class="font-jakarta font-medium pc:text-base mobile:text-[8px] tablet:text-xs">January 15, 2025</p>
                     </div>
                      <div>
-                        <p class="font-jakarta font-medium text-base mobile:text-[8px] tablet:text-xs">12 min read</p>
+                        <p class="font-jakarta font-medium pc:text-base mobile:text-[8px] tablet:text-xs">12 min read</p>
                     </div>
                      <div>
-                        <p class="font-jakarta font-medium text-base mobile:text-[8px] tablet:text-xs">2.5K views</p>
+                        <p class="font-jakarta font-medium pc:text-base mobile:text-[8px] tablet:text-xs">2.5K views</p>
                     </div>
                 </div>
                 <div>
@@ -1097,10 +1097,12 @@
           </div>
         </div>
         <div class="grid mobile:hidden tablet:grid pc:grid-cols-[282px_282px_282px] mobile:grid-cols-[300px] tablet:grid-cols-[268px_268px] justify-between">
-          <div class="mobile:h-[500px] pc:h-auto">
+          <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="mobile:h-[500px] pc:h-auto">
             <img src="./images/Article-Title/image7.png" alt="image" />
-            <div
-              class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-all duration-300 ease-in"
+            <div :class="hovered ? 'border-l-3 border-solid border-blue' : ''"
+              class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black  border-solid transition-all duration-300 ease-in"
             >
             <ul class="mt-5">
               <li class="w-[115px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
@@ -1128,10 +1130,17 @@
               </ul>
             </div>
           </div>
-          <div class="mobile:h-[500px] pc:h-auto">
-            <img src="./images/Article-Title/image8.png" alt="image" />
-            <div
-              class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-all duration-300 ease-in"
+          <div  x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="mobile:h-[500px] pc:h-auto group relative">
+           <div class="absolute">
+             <img src="./images/Article-Title/active_image8.png" alt="image" />
+           </div>
+           <div class="absolute">
+             <img src="./images/Article-Title/image8.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in mobile:hidden pc:block" alt="image" />
+           </div>
+            <div :class="hovered ? 'border-l-3 border-solid border-blue' : ''"
+              class="relative pc:top-[240px] tablet:top-[220px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black  border-solid border-b-4 transition-all duration-300 ease-in"
             >
             <ul class="mt-5">
               <li class="w-[150px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
@@ -1159,10 +1168,17 @@
               </ul>
             </div>
           </div>
-          <div class="mobile:h-[500px] pc:h-auto">
-            <img src="./images/Article-Title/image9.png" alt="image" />
-            <div
-              class="relative top-[-80px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-all duration-300 ease-in"
+          <div  x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+                @mouseleave="hovered = false"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="mobile:h-[500px] pc:h-auto group relative">
+              <div class="absolute">
+             <img src="./images/Article-Title/active_image9.png" alt="image" />
+           </div>
+           <div class="absolute">
+             <img src="./images/Article-Title/image9.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in mobile:hidden pc:block" alt="image" />
+           </div>
+                <div :class="hovered ? 'border-l-3 border-b-3 border-solid border-blue' : ''"
+              class="relative pc:top-[240px] tablet:top-[220px] left-[10px] w-[284px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black border-b-4 border-solid transition-all duration-300 ease-in"
             >
              <ul class="mt-5">
               <li class="w-[125px] py-[11px] px-[31px] border border-solid border-white rounded-[100px]">
@@ -1228,7 +1244,7 @@
             </div>
             <div class="swiper-slide">
               <div class="mobile:h-[500px] pc:h-auto">
-            <img src="./images/Article-Title/image8.png" alt="image" />
+            <img src="./images/Article-Title/active_image8.png" alt="image" />
             <div
               class="relative top-[-80px] left-[10px] w-[271px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-all duration-300 ease-in"
             >
@@ -1261,7 +1277,7 @@
             </div>
             <div class="swiper-slide">
               <div class="mobile:h-[500px] pc:h-auto">
-            <img src="./images/Article-Title/image9.png" alt="image" />
+            <img src="./images/Article-Title/active_image9.png" alt="image" />
             <div
               class="relative top-[-80px] left-[10px] w-[271px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-all duration-300 ease-in"
             >

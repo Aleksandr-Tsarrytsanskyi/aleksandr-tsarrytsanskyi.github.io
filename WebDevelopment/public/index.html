@@ -965,6 +965,35 @@
           </div>
         </div>
       </section>
+      <!-- <div x-data="{ offset: 0 }" 
+     x-init="window.addEventListener('scroll', () => { 
+       offset = window.pageYOffset * 0.3; 
+     })"
+     class="container">
+    
+    <div class="parallax-block" 
+         :style="`transform:  translateY(${offset}px) scale(${1 + offset/2000});`"
+         style="transition: transform 0.1s ease-out;">
+         <img src="./images/clients_image1.png" alt="">
+       
+    </div>
+</div> -->
+
+<!-- <div 
+    x-data="{ offset: 0 }" 
+    @scroll.window="offset = window.scrollY"
+    class="parallax-container"
+    style="overflow: hidden; height: 100vh; width: 300px; position: relative;"
+>
+    <img 
+        src="./images/clients_image1.png" 
+        alt="Parallax"
+        class="parallax-image"
+        :style="`transform: scale(${1 + offset * 0.0005}) ; transition: transform 0.1s ease-out;`"
+        style="width: 100%; height: 100vh; object-fit: cover; position: absolute; top: 0;"
+    >
+</div> -->
+
       <section
         class="pc:mt-10 tablet:mt-10 mobile:mt-10 tablet:mb-30 mobile:mb-0 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
       >
@@ -973,10 +1002,13 @@
         >
           Some of our Clients
         </h2>
-        <div
-          class="grid pc:grid-cols-[167px_164px_103px_134px_105px] tablet:grid-cols-[104px_102px_64px_83px_65px] mobile:grid-cols-[59px_93px_59px] justify-center pc:gap-x-18 tablet:gap-x-12 mobile:gap-x-10 mobile:gap-y-3 tablet:gap-y-0"
-        >
-          <div>
+       
+        <div class="swiper icons">
+  <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide pc:!w-[168px] mobile:!w-[59px] tablet:!w-[104px]">
+            <div>
             <svg
               class="pc:w-[168px] pc:h-[74px] tablet:w-[104px] tablet:h-[46px] mobile:w-[59px] mobile:h-[42px]"
               width="168"
@@ -1009,7 +1041,9 @@
               </defs>
             </svg>
           </div>
-          <div>
+          </div>
+          <div class="swiper-slide pc:!w-[164px] mobile:!w-[93px] tablet:!w-[102px]">
+            <div>
             <svg
               class="pc:w-[165px] pc:h-[74px] tablet:w-[102px] tablet:h-[46px] mobile:w-[93px] mobile:h-[42px]"
               width="165"
@@ -1042,7 +1076,9 @@
               </defs>
             </svg>
           </div>
-          <div>
+          </div>
+          <div class="swiper-slide pc:!w-[103px] mobile:!w-[59px] tablet:!w-[64px]">
+            <div>
             <svg
               class="pc:w-[104px] pc:h-[74px] tablet:w-[64px] tablet:h-[46px] mobile:w-[59px] mobile:h-[42px]"
               width="104"
@@ -1075,7 +1111,9 @@
               </defs>
             </svg>
           </div>
-          <div class="mobile:ml-14 tablet:ml-0">
+          </div>
+          <div class="swiper-slide pc:!w-[134px] mobile:!w-[76px] tablet:!w-[83px]">
+            <div >
             <svg
               class="pc:w-[134px] pc:h-[74px] tablet:w-[83px] tablet:h-[46px] mobile:w-[76px] mobile:h-[42px]"
               width="134"
@@ -1108,7 +1146,9 @@
               </defs>
             </svg>
           </div>
-          <div class="mobile:ml-12 tablet:ml-0">
+          </div>
+          <div class="swiper-slide pc:!w-[105px] mobile:!w-[95px] tablet:!w-[65px]">
+            <div>
             <svg
               class="pc:w-[106px] pc:h-[74px] tablet:w-[65px] tablet:h-[46px] mobile:w-[95px] mobile:h-[42px]"
               width="106"
@@ -1141,180 +1181,182 @@
               </defs>
             </svg>
           </div>
+          </div>
+         
         </div>
+        <!-- If we need pagination -->
+        
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
       </section>
       <section
         class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[375px] mx-auto not-spacing_text"
       >
         <div x-data="{ activeBlock: null }">
-          
+     
           <div
             class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px] tablet:mt-[100px] mobile:mt-[40px] left-0 w-full h-full justify-center"
           >
-          <div x-data="{hovered: false }">
-            <div
-              @mouseover="activeBlock = 1; hovered = true"
-              @mouseleave="activeBlock = null; hovered = false"
-              class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px]"
-              :style="hovered ? 'transform: scale(1.1); transition: 0.3s; z-index: 10' : 'transform: scale(1); transition: 0.3s; z-index: 1'"
-              >
-              <a href="#" @click.prevent>
-                <div class="absolute top-0">
-                  <img src="./images/clients_image.png" class="mobile:h-[268px] tablet:h-auto" alt="Image" />
-                </div>
-                <div class="absolute top-0">
-                  <ul
-                    class="list-disc list-outside pc:ml-[117px] tablet:ml-[80px] mobile:ml-[90px] pc:mt-5 tablet:mt-0 mobile:mt-3 text-white-300"
-                  >
-                    <li class="pc:mb-2 tablet:mb-1">
-                      <p
-                        class="pc:mt-7 tablet:mt-1 font-poppins font-light pc:text-sm mobile:text-sm text-white-300 leading-[140%]"
-                      >
-                        E-commerce platforms
-                      </p>
-                    </li>
-                    <li class="pc:mb-2 tablet:mb-1">
-                      <p
-                        class="font-poppins font-light pc:text-sm mobile:text-sm text-white-300 leading-[140%]"
-                      >
-                        Business automation systems
-                      </p>
-                    </li>
-                    <li class="pc:mb-2 tablet:mb-1">
-                      <p
-                        class="font-poppins font-light pc:text-sm mobile:text-sm text-white-300 leading-[140%]"
-                      >
-                        Enterprise portals
-                      </p>
-                    </li>
-                  </ul>
-                  <h2
-                    class="font-poppins font-normal pc:text-[30px] mobile:text-[20px] pc:ml-[100px] tablet:ml-[60px] mobile:ml-[75px] pc:mt-20 mobile:mt-8 pc:mb-5 mobile:mb-3"
-                  >
-                    Custom Web Development
-                  </h2>
-                  <div
-                    class="grid pc:grid-cols-[430px_70px] tablet:grid-cols-[250px_70px] mobile:grid-cols-[270px_70px] pc:gap-x-12 mobile:gap-x-5"
-                  >
-                    <div>
-                      <p
-                        class="pc:ml-[100px] tablet:ml-[60px] mobile:ml-[80px] font-poppins font-light pc:text-base mobile:text-sm text-white-300 leading-[171%]"
-                      >
-                        Enterprise-grade web applications<br
-                          class="pc:block mobile:hidden"
-                        />
-                        tailored to your unique business
-                        <br class="pc:block mobile:hidden" />requirements. We
-                        build scalable, secure,
-                        <br class="pc:block mobile:hidden" />and
-                        high-performance solutions.
-                      </p>
-                    </div>
-                    <div>
-                      <!-- <a
-                        class="relative block z-50 pc:mt-3 tablet:mt-8 mobile:mt-7 pc:bg-[url('./images/clients_more.svg')]  mobile:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_active_header.svg')]  bg-center bg-no-repeat pc:w-[70px] pc:h-[70px] tablet:w-[56px] tablet:h-[56px] mobile:w-[50px] mobile:h-[50px] tablet:bg-[url('./images/mobile/icon_clients.svg')] transition-all duration-300 ease-in" 
-                        href="#"
-                      ></a> -->
-                      <div
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0"
-                        x-transition:enter-end="opacity-100"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100"
-                        x-transition:leave-end="opacity-0"
-                        x-show="activeBlock === 1"
-                        style="display: none"
-                      >
-                        <a href="./index.html" >
-                          <svg
-                          class="mobile:block pc:hidden mt-5 fill-[#4b5563] cursor-pointer relative  z-200 hover:fill-[#3B82F6]"
-                          width="46"
-                          height="46"
-                          viewBox="0 0 46 46"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+          
+            <div x-data="{hovered: false }">
+              <div
+                @mouseover="activeBlock = 1; hovered = true"
+                @mouseleave="activeBlock = null; hovered = false"
+                class="relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px]"
+                :style="hovered ? 'transform: scale(1.1); transition: 0.3s; z-index: 10' : 'transform: scale(1); transition: 0.3s; z-index: 1'"
+                >
+                <a href="#" @click.prevent>
+                  
+                      <div class="absolute top-0" >
+                        <img src="./images/clients_image.png" class="mobile:h-[268px] tablet:h-auto" alt="Image" />
+                      </div>
+                     
+                  <div class="absolute top-0">
+                    <ul
+                      class="list-disc list-outside pc:ml-[117px] tablet:ml-[80px] mobile:ml-[90px] pc:mt-5 tablet:mt-0 mobile:mt-3 text-white-300"
+                    >
+                      <li class="pc:mb-2 tablet:mb-1">
+                        <p
+                          class="pc:mt-7 tablet:mt-1 font-poppins font-light pc:text-sm mobile:text-sm text-white-300 leading-[140%]"
                         >
-                          <foreignObject x="-10" y="-10" width="66" height="66">
-                            <div xmlns="http://www.w3.org/1999/xhtml"></div>
-                          </foreignObject>
-                          <rect
-                            data-figma-bg-blur-radius="10"
+                          E-commerce platforms
+                        </p>
+                      </li>
+                      <li class="pc:mb-2 tablet:mb-1">
+                        <p
+                          class="font-poppins font-light pc:text-sm mobile:text-sm text-white-300 leading-[140%]"
+                        >
+                          Business automation systems
+                        </p>
+                      </li>
+                      <li class="pc:mb-2 tablet:mb-1">
+                        <p
+                          class="font-poppins font-light pc:text-sm mobile:text-sm text-white-300 leading-[140%]"
+                        >
+                          Enterprise portals
+                        </p>
+                      </li>
+                    </ul>
+                    <h2
+                      class="font-poppins font-normal pc:text-[30px] mobile:text-[20px] pc:ml-[100px] tablet:ml-[60px] mobile:ml-[75px] pc:mt-20 mobile:mt-8 pc:mb-5 mobile:mb-3"
+                    >
+                      Custom Web Development
+                    </h2>
+                    <div
+                      class="grid pc:grid-cols-[430px_70px] tablet:grid-cols-[250px_70px] mobile:grid-cols-[270px_70px] pc:gap-x-12 mobile:gap-x-5"
+                    >
+                      <div>
+                        <p
+                          class="pc:ml-[100px] tablet:ml-[60px] mobile:ml-[80px] font-poppins font-light pc:text-base mobile:text-sm text-white-300 leading-[171%]"
+                        >
+                          Enterprise-grade web applications<br
+                            class="pc:block mobile:hidden"
+                          />
+                          tailored to your unique business
+                          <br class="pc:block mobile:hidden" />requirements. We
+                          build scalable, secure,
+                          <br class="pc:block mobile:hidden" />and
+                          high-performance solutions.
+                        </p>
+                      </div>
+                      <div>
+                        <!-- <a
+                          class="relative block z-50 pc:mt-3 tablet:mt-8 mobile:mt-7 pc:bg-[url('./images/clients_more.svg')]  mobile:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_active_header.svg')]  bg-center bg-no-repeat pc:w-[70px] pc:h-[70px] tablet:w-[56px] tablet:h-[56px] mobile:w-[50px] mobile:h-[50px] tablet:bg-[url('./images/mobile/icon_clients.svg')] transition-all duration-300 ease-in" 
+                          href="#"
+                        ></a> -->
+                        <div
+                          x-transition:enter="transition ease-out duration-300"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-in duration-200"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0"
+                          x-show="activeBlock === 1"
+                          style="display: none"
+                        >
+                          <a href="./index.html" >
+                            <svg
+                            class="mobile:block pc:hidden mt-5 fill-[#4b5563] cursor-pointer relative  z-200 hover:fill-[#3B82F6]"
                             width="46"
                             height="46"
-                            rx="23"
-                           
-                          />
-                          <path
-                            d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z"
-                            fill="white"
-                            stroke="white"
-                          />
-                          <path
-                            d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z"
-                            fill="white"
-                            stroke="white"
-                          />
-                          <defs>
-                            <clipPath
-                              id="bgblur_0_389_243_clip_path"
-                              transform="translate(10 10)"
-                            >
-                              <rect width="46" height="46" rx="23" />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                        <svg
-                          class="pc:block mobile:hidden fill-[#3E82DA] hover:fill-[#3E82DA]"
-                          width="70"
-                          height="70"
-                          viewBox="0 0 70 70"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <foreignObject x="-10" y="-10" width="90" height="90">
-                            <div
-                              xmlns="http://www.w3.org/1999/xhtml"
-                              style="
-                                backdrop-filter: blur(5px);
-                                clip-path: url(#bgblur_0_89_83_clip_path);
-                                height: 100%;
-                                width: 100%;
-                              "
-                            ></div>
-                          </foreignObject>
-                          <rect
-                            data-figma-bg-blur-radius="10"
+                            viewBox="0 0 46 46"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <foreignObject x="-10" y="-10" width="66" height="66">
+                              <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                            </foreignObject>
+                            <rect
+                              data-figma-bg-blur-radius="10"
+                              width="46"
+                              height="46"
+                              rx="23"
+                            
+                            />
+                            <path
+                              d="M17.8894 27.8195C17.6809 27.6057 17.6636 27.27 17.8373 27.0359L17.8894 26.9747L26.1261 18.5262C26.3536 18.2929 26.7224 18.2929 26.9498 18.5262C27.1583 18.7401 27.1757 19.0757 27.0019 19.3099L26.9498 19.3711L18.7131 27.8195C18.4857 28.0528 18.1169 28.0528 17.8894 27.8195Z"
+                              fill="white"
+                              stroke="white"
+                            />
+                            <path
+                              d="M19.9148 19.5597C19.5931 19.5604 19.3318 19.2935 19.3311 18.9636C19.3305 18.6637 19.5454 18.4149 19.8262 18.3716L19.9123 18.3649L26.5423 18.3503C26.8356 18.3496 27.0785 18.5714 27.1198 18.8604L27.1259 18.9489L27.1122 25.7499C27.1115 26.0798 26.8502 26.3467 26.5286 26.3461C26.2362 26.3454 25.9945 26.1239 25.9535 25.8357L25.9474 25.7474L25.9595 19.5463L19.9148 19.5597Z"
+                              fill="white"
+                              stroke="white"
+                            />
+                            <defs>
+                              <clipPath
+                                id="bgblur_0_389_243_clip_path"
+                                transform="translate(10 10)"
+                              >
+                                <rect width="46" height="46" rx="23" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <svg
+                            class="pc:block mobile:hidden fill-[#3E82DA] hover:fill-[#3E82DA]"
                             width="70"
                             height="70"
-                            rx="35"
-                          />
-                          <path
-                            d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z"
-                            fill="white"
-                            stroke="white"
-                          />
-                          <path
-                            d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z"
-                            fill="white"
-                            stroke="white"
-                          />
-                          <defs>
-                            <clipPath
-                              id="bgblur_0_89_83_clip_path"
-                              transform="translate(10 10)"
-                            >
-                              <rect width="70" height="70" rx="35" />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                        </a>
+                            viewBox="0 0 70 70"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                          
+                            <rect
+                              data-figma-bg-blur-radius="10"
+                              width="70"
+                              height="70"
+                              rx="35"
+                            />
+                            <path
+                              d="M27.3348 42.1931C27.0099 41.8677 26.9828 41.3569 27.2536 41.0006L27.3348 40.9075L40.1698 28.0512C40.5242 27.6961 41.0988 27.6961 41.4532 28.0512C41.7781 28.3766 41.8052 28.8874 41.5345 29.2437L41.4532 29.3368L28.6183 42.1931C28.2639 42.5481 27.6892 42.5481 27.3348 42.1931Z"
+                              fill="white"
+                              stroke="white"
+                            />
+                            <path
+                              d="M30.4889 29.6245C29.9877 29.6256 29.5805 29.2195 29.5794 28.7174C29.5784 28.261 29.9134 27.8824 30.351 27.8165L30.485 27.8064L40.8163 27.7841C41.2733 27.7831 41.6519 28.1206 41.7162 28.5603L41.7258 28.695L41.7044 39.0444C41.7034 39.5464 41.2962 39.9526 40.795 39.9516C40.3393 39.9506 39.9628 39.6135 39.8989 39.175L39.8893 39.0406L39.9083 29.6041L30.4889 29.6245Z"
+                              fill="white"
+                              stroke="white"
+                            />
+                            <defs>
+                              <clipPath
+                                id="bgblur_0_89_83_clip_path"
+                                transform="translate(10 10)"
+                              >
+                                <rect width="70" height="70" rx="35" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
-          </div>
+          
           <div x-data="{hovered: false }">
               <div
                 @mouseover="activeBlock = 2; hovered = true"
@@ -1393,17 +1435,7 @@
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <foreignObject x="-10" y="-10" width="90" height="90">
-                              <div
-                                xmlns="http://www.w3.org/1999/xhtml"
-                                style="
-                                  backdrop-filter: blur(5px);
-                                  clip-path: url(#bgblur_0_89_83_clip_path);
-                                  height: 100%;
-                                  width: 100%;
-                                "
-                              ></div>
-                            </foreignObject>
+                            
                             <rect
                               data-figma-bg-blur-radius="10"
                               width="70"
@@ -1514,17 +1546,7 @@
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <foreignObject x="-10" y="-10" width="90" height="90">
-                              <div
-                                xmlns="http://www.w3.org/1999/xhtml"
-                                style="
-                                  backdrop-filter: blur(5px);
-                                  clip-path: url(#bgblur_0_89_83_clip_path);
-                                  height: 100%;
-                                  width: 100%;
-                                "
-                              ></div>
-                            </foreignObject>
+                            
                             <rect
                               data-figma-bg-blur-radius="10"
                               width="70"
@@ -1635,17 +1657,7 @@
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <foreignObject x="-10" y="-10" width="90" height="90">
-                            <div
-                              xmlns="http://www.w3.org/1999/xhtml"
-                              style="
-                                backdrop-filter: blur(5px);
-                                clip-path: url(#bgblur_0_89_83_clip_path);
-                                height: 100%;
-                                width: 100%;
-                              "
-                            ></div>
-                          </foreignObject>
+                          
                           <rect
                             data-figma-bg-blur-radius="10"
                             width="70"
@@ -1756,17 +1768,7 @@
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <foreignObject x="-10" y="-10" width="90" height="90">
-                            <div
-                              xmlns="http://www.w3.org/1999/xhtml"
-                              style="
-                                backdrop-filter: blur(5px);
-                                clip-path: url(#bgblur_0_89_83_clip_path);
-                                height: 100%;
-                                width: 100%;
-                              "
-                            ></div>
-                          </foreignObject>
+                          
                           <rect
                             data-figma-bg-blur-radius="10"
                             width="70"
@@ -1877,17 +1879,7 @@
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <foreignObject x="-10" y="-10" width="90" height="90">
-                            <div
-                              xmlns="http://www.w3.org/1999/xhtml"
-                              style="
-                                backdrop-filter: blur(5px);
-                                clip-path: url(#bgblur_0_89_83_clip_path);
-                                height: 100%;
-                                width: 100%;
-                              "
-                            ></div>
-                          </foreignObject>
+                          
                           <rect
                             data-figma-bg-blur-radius="10"
                             width="70"
@@ -2077,8 +2069,8 @@
                 :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
             <div>
               <img src="./images/exporttise_image.png" alt="image" />
-              <div
-                class="relative top-[-100px] pc:left-[90px] tablet:left-[20px] pc:w-[365px] tablet:w-[258px] pc:h-[280px] tablet:h-[250px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
+              <div :class="hovered ? 'border-l-4 border-solid border-blue' : ''"
+                class="relative top-[-100px] pc:left-[90px] tablet:left-[20px] pc:w-[365px] tablet:w-[258px] pc:h-[280px] tablet:h-[250px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black  border-solid transition-colors duration-300 ease-in"
               >
                 <h2
                   class="mb-5 mt-5 font-poppins font-normal pc:text-[20px] mobile:text-sm"
@@ -2104,11 +2096,12 @@
           </div> 
           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"> 
-              <div>
-                <img src="./images/exporttise_image1.png" class="pc:w-[454px] pc:h-[369px]" alt="image" />
-                <div
-                  class="relative top-[-100px] pc:left-[97px] tablet:left-[20px] pc:w-[365px] pc:h-[260px] tablet:h-[230px] tablet:w-[258px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue border-b-4 border-solid transition-all duration-300 ease-in"
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="group "> 
+                <div class="relative">
+                  <img src="./images/active_exporttise_image1.png" class="absolute pc:w-[454px] pc:h-[369px]   transition-opacity  duration-300 easy-in" alt="image" />
+                  <img src="./images/exporttise_image1.png" class="absolute pc:w-[454px] pc:h-[369px] group-hover:opacity-1  " alt="image" />
+                <div  :class="hovered ? 'border-l-4 border-solid border-blue' : ''" 
+                  class="relative pc:top-[270px] pc:left-[97px] tablet:top-[120px] tablet:left-[20px] pc:w-[365px] pc:h-[260px] tablet:h-[230px] tablet:w-[258px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue border-b-4 border-solid transition-all duration-300 ease-in"
                 >
                   <h2
                     class="mb-5 mt-5 font-poppins font-normal pc:text-[20px] mobile:text-sm"
@@ -2165,7 +2158,7 @@
             </div>
             <div class="swiper-slide">
               <div>
-            <img src="./images/exporttise_image1.png" class="mobile:w-[270px] mobile:h-[219px]" alt="image" />
+            <img src="./images/active_exporttise_image1.png" class="mobile:w-[270px] mobile:h-[219px]" alt="image" />
                 <div
                   class="relative tablet:top-[-80px] mobile:top-[-50px] mobile:left-[20px] pc:left-[97px] tablet:left-[20px] pc:w-[365px] pc:h-[260px] tablet:h-[230px] tablet:w-[258px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue border-b-4 border-solid transition-all duration-300 ease-in"
                 >
@@ -2211,13 +2204,17 @@
           class="grid pc:grid-cols-[360px_541px] tablet:grid-cols-[258px_326px] mobile:grid-cols-[300px] justify-between"
         >
           <div
-            class="mobile:col-start-1 mobile:row-start-2 tablet:col-start-1 tablet:row-start-1"
+            class="relative group  mobile:col-start-1 mobile:row-start-2 tablet:col-start-1 tablet:row-start-1"
           >
-            <img
+            
+              <img
+              src="./images/active_paradox_image.png"
+              class="absolute mobile:max-w-[214px] mobile:w-[214px] tablet:w-auto mobile:h-[395px] tablet:h-auto tablet:max-w-[258px] pc:max-w-[360px]"
+              alt="Image"/>
+              <img
               src="./images/paradox_image.png"
-              class="mobile:max-w-[214px] mobile:w-[214px] tablet:w-auto mobile:h-[395px] tablet:h-auto tablet:max-w-[258px] pc:max-w-[360px]"
-              alt="Image"
-            />
+              class="absolute mobile:max-w-[214px] mobile:w-[214px] tablet:w-auto mobile:h-[395px] tablet:h-auto tablet:max-w-[258px] group-hover:opacity-1 mobile:hidden tablet:block pc:max-w-[360px] transition-oopacity duration-300 easy-in"
+              alt="Image"/>
           </div>
           <div>
             <div
@@ -2300,7 +2297,7 @@
             </div>
           </div>
           <div
-            class="flex relative tablet:top-[-40px] mobile:top-[-350px] tablet:left-[150px] mobile:left-[140px] tablet:mt-6 pc:mt-0 mobile:py-7 tablet:py-0 bg-blue pc:w-[806px] tablet:w-[485px] mobile:w-[160px] mobile:h-[408px] pc:h-[200px] tablet:h-[98px]"
+            class="flex relative pc:top-[-10px] tablet:top-[-40px] mobile:top-[50px] tablet:left-[150px] mobile:left-[140px] tablet:mt-6 pc:mt-0 mobile:py-7 tablet:py-0 bg-blue pc:w-[806px] tablet:w-[485px] mobile:w-[160px] mobile:h-[408px] pc:h-[200px] tablet:h-[98px]"
           >
             <div
               class="grid pc:grid-cols-[182px_178px_180px_136px] tablet:grid-cols-[93px_88px_98px_81px] mobile:grid-cols-[113px] items-center gap-x-5 mobile:gap-y-5 tablet:gap-y-0 mx-auto"
@@ -2358,7 +2355,7 @@
         </div>
       </section>
       <section
-        class="tablet:mt-10 mobile:mt-[-300px] pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
+        class="tablet:mt-10 mobile:mt-[90px] pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
       >
         <div
           class="grid pc:grid-cols-[385px_310px] tablet:grid-cols-[385px_220px] tablet:justify-between mobile:justify-center items-center"
@@ -2478,53 +2475,62 @@
           </div>
         </div>
         <div
-          class="mobile:hidden tablet:grid grid pc:grid-cols-[294px_294px_294px] tablet:grid-cols-[294px_294px] justify-center mt-10 mobile:gap-y-8 tablet:gap-y-0 pc:gap-x-10 tablet:gap-x-[20px]"
+          class="mobile:hidden tablet:grid grid pc:grid-cols-[294px_294px_294px] tablet:grid-cols-[294px_294px] justify-center mt-10 mobile:gap-y-8 tablet:gap-y-0 pc:gap-x-10 tablet:gap-x-[20px] "
         >
           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
-            <div>
-              <img src="./images/studies_image.png" alt="Image" />
-              <h2
-                class="mt-5 mb-5 font-poppins font-semibold pc:text-[20px] tablet:text-lg"
-              >
-                Fashion Retail Platform
-              </h2>
-              <p
-                class="font-poppins font-light text-base text-white-300 leading-[171%]"
-              >
-                Multi-vendor e-commerce platform with advanced inventory
-                management, real-time analytics, and automated fulfillment for a
-                growing fashion retailer.
-              </p>
-              <div class="grid grid-cols-[100px_100px] gap-x-5 mt-5">
-                <div>
-                  <h2 class="font-poppins font-semibold text-[20px]">300%</h2>
-                  <p
-                    class="font-poppins font-light pc:text-sm tablet:text-sm text-white-300"
-                  >
-                    Sales Growth
-                  </p>
-                </div>
-                <div>
-                  <h2 class="font-poppins font-semibold text-[20px]">50K+</h2>
-                  <p
-                    class="font-jakarta font-medium pc:text-sm tablet:text-sm text-white-300"
-                  >
-                    Active Users
-                  </p>
-                </div>
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">
+                
+            <div class="relative top-[255px] group ">
+              <div class="absolute bottom-0">
+                <img src="./images/active_studies_image1.png" alt="Image" class="" />
               </div>
-              <a
-                href="#"
-                class="block pc:w-[267px] bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 [word-spacing:1px] tracking-[1px]  font-jakarta font-bold text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
-                >VIEW CASE STUDY</a
-              >
+              <div class="absolute bottom-0">
+                <img src="./images/studies_image.png" alt="Image" class="group-hover:opacity-1 transition-opacity duration-300 easy-in"/>
+              </div>
+           
+              <div class="absolute top-0">
+                  <h2
+                  class="mt-5 mb-5 font-poppins font-semibold pc:text-[20px] tablet:text-lg"
+                >
+                  Fashion Retail Platform
+                </h2>
+                <p
+                  class="font-poppins font-light text-base text-white-300 leading-[171%]"
+                >
+                  Multi-vendor e-commerce platform with advanced inventory
+                  management, real-time analytics, and automated fulfillment for a
+                  growing fashion retailer.
+                </p>
+                <div class="grid grid-cols-[100px_100px] gap-x-5 mt-5">
+                  <div>
+                    <h2 class="font-poppins font-semibold text-[20px]">300%</h2>
+                    <p
+                      class="font-poppins font-light pc:text-sm tablet:text-sm text-white-300"
+                    >
+                      Sales Growth
+                    </p>
+                  </div>
+                  <div>
+                    <h2 class="font-poppins font-semibold text-[20px]">50K+</h2>
+                    <p
+                      class="font-jakarta font-medium pc:text-sm tablet:text-sm text-white-300"
+                    >
+                      Active Users
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  class="block pc:w-[267px] bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 [word-spacing:1px] tracking-[1px] hover:bg-[url('./images/btn_icon_active.svg')]  font-jakarta font-bold text-lg leading-[60px]  transition-all duration-300 active-link"
+                  >VIEW CASE STUDY</a
+                >
+              </div>
             </div>
           </div> 
           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"> 
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"  class="item-active"> 
             <div>
               <img src="./images/studies_image1.png" alt="Image" />
               <h2
@@ -2559,17 +2565,23 @@
               </div>
               <a
                 href="#"
-                class="block pc:w-[267px] bg-[url('./images/header_btn_hide.svg')] [word-spacing:1px] tracking-[1px] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
+                class="block pc:w-[267px] bg-[url('./images/header_btn_hide.svg')] [word-spacing:1px] tracking-[1px] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300 active-link"
                 >VIEW CASE STUDY</a
               >
             </div>
           </div>  
           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
-            <div class="pc:block tablet:hidden">
-              <img src="./images/studies_image2.png" alt="Image" />
-              <h2 class="mt-5 mb-5 font-jakarta font-medium pc:text-[20px]">
+                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"  class="item-active">
+            <div class="pc:block tablet:hidden relative top-[255px] group">
+              <div class="absolute bottom-0">
+                <img src="./images/active_studies_image2.png" alt="Image" class="" />
+              </div>
+              <div class="absolute bottom-0">
+                <img src="./images/studies_image2.png" alt="Image" class="group-hover:opacity-1  transition-opacity duration-300 easy-in"/>
+              </div>
+              <div class="absolute top-0">
+                 <h2 class="mt-5 mb-5 font-jakarta font-medium pc:text-[20px]">
                 Banking Web Portal
               </h2>
               <p
@@ -2594,9 +2606,10 @@
               </div>
               <a
                 href="#"
-                class="block pc:w-[267px] bg-[url('./images/header_btn_hide.svg')] [word-spacing:1px] tracking-[1px]   bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5  font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
+                class="block pc:w-[267px] bg-[url('./images/header_btn_hide.svg')] [word-spacing:1px] tracking-[1px]   bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5  font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300 active-link"
                 >VIEW CASE STUDY</a
               >
+              </div>
             </div>
             </div>
         </div>
@@ -2606,7 +2619,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div>
-                <img src="./images/studies_image.png" alt="Image" />
+                <img src="./images/active_studies_image1.png" alt="Image" />
                 <h2
                   class="mt-5 mb-5 font-poppins font-semibold pc:text-[20px] mobile:text-lg"
                 >
@@ -2639,7 +2652,7 @@
                 </div>
                 <a
                   href="#"
-                  class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 whitespace-pre-wrap font-jakarta font-bold text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
+                  class="block bg-[url('./images/btn_icon_active.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 whitespace-pre-wrap font-jakarta font-bold text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
                   >VIEW CASE STUDY</a
                 >
               </div>
@@ -2679,7 +2692,7 @@
                 </div>
                 <a
                   href="#"
-                  class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5  font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
+                  class="block bg-[url('./images/btn_icon_active.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5  font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
                   >VIEW CASE STUDY</a
                 >
               </div>
@@ -3633,9 +3646,9 @@
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide  ">
+                <div class="swiper-slide tablet:!w-[135px] mobile:!w-[100px] ">
                   <div
-                    class="pc:w-[120px] mobile:w-[100px] h-[67px] mobile:border-l-2 border-l-none border-r-2 border-solid border-[#7a7a7a]"
+                    class="tablet:w-[135px] mobile:w-[100px] h-[67px] mobile:border-l-2 border-l-none border-r-2 border-solid border-[#7a7a7a]"
                   >
                     <p
                       class="font-poppins font-normal pc:text-lg mobile:text-sm text-center pt-5"
@@ -3644,9 +3657,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide  ">
+                <div class="swiper-slide tablet:!w-[135px] mobile:!w-[100px] ">
                   <div
-                    class="pc:w-[120px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
+                    class="tablet:w-[135px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
                   >
                     <p
                       class="font-poppins font-normal pc:text-lg mobile:text-sm text-center pt-5"
@@ -3655,9 +3668,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide  ">
+                <div class="swiper-slide tablet:!w-[135px] mobile:!w-[100px]  ">
                   <div
-                    class="pc:w-[120px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
+                    class="tablet:w-[135px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
                   >
                     <p
                       class="font-poppins font-normal pc:text-lg mobile:text-sm text-center pt-5"
@@ -3666,9 +3679,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide  ">
+                <div class="swiper-slide tablet:!w-[135px] mobile:!w-[100px]  ">
                   <div
-                    class="pc:w-[120px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
+                    class="tablet:w-[135px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
                   >
                     <p
                       class="font-poppins font-normal pc:text-lg mobile:text-sm text-center pt-5"
@@ -3677,9 +3690,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide  ">
+                <div class="swiper-slide tablet:!w-[135px] mobile:!w-[100px]  ">
                   <div
-                    class="pc:w-[120px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
+                    class="tablet:w-[135px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
                   >
                     <p
                       class="font-poppins font-normal pc:text-lg mobile:text-sm text-center pt-5"
@@ -3688,9 +3701,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide  ">
+                <div class="swiper-slide tablet:!w-[135px] mobile:!w-[100px]  ">
                   <div
-                    class="pc:w-[120px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
+                    class="tablet:w-[135px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
                   >
                     <p
                       class="font-poppins font-normal pc:text-lg mobile:text-sm text-center pt-5"
@@ -3699,9 +3712,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide  ">
+                <div class="swiper-slide tablet:!w-[135px] mobile:!w-[100px]  ">
                   <div
-                    class="pc:w-[120px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
+                    class="tablet:w-[135px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
                   >
                     <p
                       class="font-poppins font-normal pc:text-lg mobile:text-sm text-center pt-5"
@@ -3710,9 +3723,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide  ">
+                <div class="swiper-slide tablet:!w-[135px] mobile:!w-[100px]  ">
                   <div
-                    class="pc:w-[120px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
+                    class="tablet:w-[135px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
                   >
                     <p
                       class="font-poppins font-normal pc:text-lg mobile:text-sm text-center pt-5"
@@ -3721,9 +3734,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide  ">
+                <div class="swiper-slide tablet:!w-[135px] mobile:!w-[100px]  ">
                   <div
-                    class="pc:w-[120px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
+                    class="tablet:w-[135px] mobile:w-[100px] h-[67px] border-r-2 border-solid border-[#7a7a7a]"
                   >
                     <p
                       class="font-poppins font-normal pc:text-lg mobile:text-sm text-center pt-5"
@@ -3802,7 +3815,7 @@
         class="tablet:mt-30 mobile:mt-10 pc:mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
       >
         <div
-          class="grid pc:grid-cols-[470px_423px] tablet:grid-cols-[290px_293px] mobile:grid-cols-[290px] mobile:justify-center tablet:justify-between"
+          class="grid pc:grid-cols-[500px_423px] tablet:grid-cols-[290px_293px] mobile:grid-cols-[290px] mobile:justify-center tablet:justify-between"
         >
           <div>
             <h2
@@ -3811,7 +3824,7 @@
               What Our Clients Say
             </h2>
             <div
-              class="swiper !w-[100%] pc:h-[300px] mobile:h-[205px] clients swiper-container"
+              class="swiper !w-[100%] pc:h-[330px] mobile:h-[215px] clients swiper-container"
             >
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -5303,7 +5316,7 @@
       </section>
     </main>
     <footer
-      class="pc:mt-[-170px] tablet:mt-[-210px] bg-[#4b5563] w-full pt-10 pb-7"
+      class=" pc:mt-[-170px] tablet:mt-[-210px] bg-[#4b5563] w-full pt-10 tablet:pb-7 mobile:pb-20"
     >
       <div
         class="grid tablet:grid-cols-[187px_187px_124px_212px] mobile:grid-cols-[120px_120px] pc:gap-x-20 tablet:gap-x-5 mobile:gap-x-10 mobile:gap-y-10 pc:gap-y-0 justify-center"
