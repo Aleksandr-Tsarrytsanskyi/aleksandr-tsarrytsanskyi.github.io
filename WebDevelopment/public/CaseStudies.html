@@ -605,15 +605,13 @@
        </section>
        <section class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto tablet:mt-80 pc:mt-[340px] mobile:mt-[300px]">
         <div class="grid pc:grid-cols-[294px_294px_294px] mobile:grid-cols-[294px] tablet:grid-cols-[294px_294px]  justify-center gap-x-10 pc:gap-y-[600px] tablet:gap-y-[600px] mobile:gap-y-[570px] ">
-           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
-                @mouseleave="hovered = false" 
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative group">    
+           <div  class="item-active  relative group pc:hover:scale-105 transtion-all duration-300 easy-in">    
             <div class="relative ">
               <div class="absolute bottom-0">
                     <img src="./images/Studies/active_image1.png" alt="Image">
               </div>
                 <div class="absolute bottom-0 " >
-                  <img src="./images/Studies/image1.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                  <img src="./images/Studies/image1.png" class="group-hover:opacity-1 mobile:hidden pc:block transition-opacity duration-300 easy-in" alt="Image">
                 </div>
                   <div class="absolute top-0 ">
                     <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px]">Partner Network System</h2>
@@ -634,15 +632,13 @@
                   </div>
               </div>
             </div>  
-             <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
-                @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative group">
+             <div  class="item-active relative group pc:hover:scale-105 transtion-all duration-300 easy-in">
               <div class="relative ">
                 <div class="absolute bottom-0">
                     <img src="./images/Studies/active_image2.png" alt="Image">
               </div>
                 <div class="absolute bottom-0">
-                  <img src="./images/Studies/image2.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                  <img src="./images/Studies/image2.png" class="mobile:hidden pc:block group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
                 </div>
                   <div class="absolute bottom-0 h-full">
                     <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px]">Banking Web Portal</h2>
@@ -663,15 +659,13 @@
                   </div>
               </div>
             </div>  
-             <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
-                @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative group">
+             <div  class="item-active relative group pc:hover:scale-105 transtion-all duration-300 easy-in">
               <div class="relative">
                 <div class="absolute bottom-0">
                     <img src="./images/Studies/active_image3.png" alt="Image">
               </div>
                 <div class="absolute bottom-0">
-                  <img src="./images/Studies/images3.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                  <img src="./images/Studies/images3.png" class="mobile:hidden pc:block group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
                 </div>
                   <div class="absolute top-0">
                     <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px]">SaaS Project Tool</h2>
@@ -692,15 +686,13 @@
                   </div>
               </div>
             </div>  
-             <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
-                @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative  group">
+             <div  class="item-active relative  group pc:hover:scale-105 transtion-all duration-300 easy-in">
               <div class="relative">
                 <div class="absolute bottom-0">
                     <img src="./images/Studies/active_image4.png" alt="Image">
               </div>
                 <div class="absolute bottom-0">
-                  <img src="./images/Studies/images4.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                  <img src="./images/Studies/images4.png" class="mobile:hidden pc:block group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
                 </div>
                   <div class="absolute top-0 h-full">
                     <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px] leading-[163%]">Telemedicine Mobile App</h2>
@@ -721,15 +713,13 @@
                   </div>
               </div>
             </div> 
-             <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
-                @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative group"> 
+             <div  class="item-active relative group pc:hover:scale-105 transtion-all duration-300 easy-in"> 
               <div class="relative">
                 <div class="absolute bottom-0">
                     <img src="./images/Studies/active_image5.png" alt="Image">
               </div>
                 <div class="absolute bottom-0">
-                  <img src="./images/Studies/images5.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                  <img src="./images/Studies/images5.png" class="mobile:hidden pc:block group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
                 </div>
                   <div class="absolute top-0 h-full">
                     <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px] leading-[163%]">Real Estate Platform</h2>
@@ -750,15 +740,13 @@
                   </div>
               </div>
             </div>  
-             <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
-                @mouseleave="hovered = false"
-                :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active relative group">
+             <div  class="item-active relative group pc:hover:scale-105 transtion-all duration-300 easy-in">
               <div class="relative">
                 <div class="absolute bottom-0">
                     <img src="./images/Studies/active_image6.png" alt="Image">
               </div>
                 <div class="absolute bottom-0">
-                  <img src="./images/Studies/images6.png" class="group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
+                  <img src="./images/Studies/images6.png" class="mobile:hidden pc:block group-hover:opacity-1 transition-opacity duration-300 easy-in" alt="Image">
                 </div>
                   <div class="absolute top-0 h-full">
                     <h2 class="mb-3 mt-3 font-jakarta font-semibold text-[20px] leading-[163%]">Online Learning Portal</h2>
