@@ -139,10 +139,10 @@ document.addEventListener("DOMContentLoaded",function() {
      let icons =  new Swiper(".icons", {
     
        slidesPerView: "auto",
-       spaceBetween: 40,
+      
        loop: true,
-       simulateTouch: false,
-     allowTouchMove: false, 
+    //    simulateTouch: false,
+    //  allowTouchMove: false, 
     // pagination: {
     //     el: ".swiper-pagination",
     //     clickable: true,
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded",function() {
     // когда ширина экрана >= 320px (мобильные)
     300: {
       slidesPerView: "auto",
-      spaceBetween: 40
+      spaceBetween: 30
     },
     // когда ширина экрана >= 640px (планшеты)
     768: {
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded",function() {
     // когда ширина экрана >= 1024px (десктопы)
     960: {
       slidesPerView: "auto",
-      spaceBetween: 40
+      spaceBetween: 130
     }
   }
     });

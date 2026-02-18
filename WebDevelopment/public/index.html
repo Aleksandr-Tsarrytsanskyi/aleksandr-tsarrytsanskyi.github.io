@@ -824,7 +824,7 @@
         </div>
       </div>
     </div>
-    <main class="bg-[#222]/20 pt-25 mobile:mt-3 tablet:mt-0">
+    <main class="bg-[#222]/20 tablet:pt-25 mobile:pt-10 mobile:mt-[100px] tablet:mt-0">
       <section
         class="w-full pc:mt-[0px] tablet:mt-[30px] mobile:mt-[20px] pc:pb-10"
       >
@@ -1007,7 +1007,7 @@
   <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide pc:!w-[168px] mobile:!w-[59px] tablet:!w-[104px]">
+          <div class="swiper-slide pc:!w-[168px] mobile:!w-[59px] tablet:!w-[104px] mx-auto">
             <div>
             <svg
               class="pc:w-[168px] pc:h-[74px] tablet:w-[104px] tablet:h-[46px] mobile:w-[59px] mobile:h-[42px]"
@@ -1042,7 +1042,7 @@
             </svg>
           </div>
           </div>
-          <div class="swiper-slide pc:!w-[164px] mobile:!w-[93px] tablet:!w-[102px]">
+          <div class="swiper-slide pc:!w-[164px] mobile:!w-[93px] tablet:!w-[102px] mx-auto">
             <div>
             <svg
               class="pc:w-[165px] pc:h-[74px] tablet:w-[102px] tablet:h-[46px] mobile:w-[93px] mobile:h-[42px]"
@@ -1077,7 +1077,7 @@
             </svg>
           </div>
           </div>
-          <div class="swiper-slide pc:!w-[103px] mobile:!w-[59px] tablet:!w-[64px]">
+          <div class="swiper-slide pc:!w-[103px] mobile:!w-[59px] tablet:!w-[64px] mx-auto">
             <div>
             <svg
               class="pc:w-[104px] pc:h-[74px] tablet:w-[64px] tablet:h-[46px] mobile:w-[59px] mobile:h-[42px]"
@@ -1112,7 +1112,7 @@
             </svg>
           </div>
           </div>
-          <div class="swiper-slide pc:!w-[134px] mobile:!w-[76px] tablet:!w-[83px]">
+          <div class="swiper-slide pc:!w-[134px] mobile:!w-[76px] tablet:!w-[83px] mx-auto">
             <div >
             <svg
               class="pc:w-[134px] pc:h-[74px] tablet:w-[83px] tablet:h-[46px] mobile:w-[76px] mobile:h-[42px]"
@@ -1147,7 +1147,7 @@
             </svg>
           </div>
           </div>
-          <div class="swiper-slide pc:!w-[105px] mobile:!w-[95px] tablet:!w-[65px]">
+          <div class="swiper-slide pc:!w-[105px] mobile:!w-[95px] tablet:!w-[65px] mx-auto">
             <div>
             <svg
               class="pc:w-[106px] pc:h-[74px] tablet:w-[65px] tablet:h-[46px] mobile:w-[95px] mobile:h-[42px]"
@@ -1986,7 +1986,7 @@
                   x-show="open"
                   @click.outside="open = false"
                   x-transition.opacity.duration.500ms
-                  class="absolute top-[40px] left-[-20px] pc:w-[328px] tablet:w-[208px] mobile:w-[320px] bg-black px-5 pb-5"
+                  class="absolute z-20 top-[40px] left-[-20px] pc:w-[335px] tablet:w-[208px] mobile:w-[320px] bg-black px-5 pb-5"
                 >
                   <p
                     @click="selected = 'Custom Web Development'; open = false;"
@@ -2064,10 +2064,11 @@
         <div
           class="mobile:hidden tablet:grid grid pc:grid-cols-[455px_462px] tablet:grid-cols-[268px_268px] justify-between"
         >
-          <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
+        <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
                 :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'">
-            <div>
+            <a href="#" class="!tracking-[0px]">
+              <div>
               <img src="./images/exporttise_image.png" alt="image" />
               <div :class="hovered ? 'border-l-4 border-solid border-blue' : ''"
                 class="relative top-[-100px] pc:left-[90px] tablet:left-[20px] pc:w-[365px] tablet:w-[258px] pc:h-[280px] tablet:h-[250px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black  border-solid transition-colors duration-300 ease-in"
@@ -2093,11 +2094,13 @@
                 >
               </div>
             </div>
+            </a>
           </div> 
           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
                 :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="group "> 
-                <div class="relative">
+                <a href="#"  class="!tracking-[0px]">
+                  <div class="relative">
                   <img src="./images/active_exporttise_image1.png" class="absolute pc:w-[454px] pc:h-[369px]   transition-opacity  duration-300 easy-in" alt="image" />
                   <img src="./images/exporttise_image1.png" class="absolute pc:w-[454px] pc:h-[369px] group-hover:opacity-1  " alt="image" />
                 <div  :class="hovered ? 'border-l-4 border-solid border-blue' : ''" 
@@ -2123,6 +2126,7 @@
                   >
                 </div>
               </div>
+                </a>
           </div>
         </div>
         <div class="swiper mobile:block mt-7 tablet:hidden mobile_core h-[420px]">
@@ -2481,7 +2485,8 @@
                 @mouseleave="hovered = false"
                 :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'" class="item-active">
                 
-            <div class="relative top-[255px] group ">
+            <a href="#" class="!tracking-[0px]">
+              <div class="relative top-[255px] group ">
               <div class="absolute bottom-0">
                 <img src="./images/active_studies_image1.png" alt="Image" class="" />
               </div>
@@ -2527,11 +2532,13 @@
                 >
               </div>
             </div>
+            </a>
           </div> 
           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
                 :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"  class="item-active"> 
-            <div>
+            <a href="#" class="!tracking-[0px]">
+              <div>
               <img src="./images/studies_image1.png" alt="Image" />
               <h2
                 class="mt-5 mb-5 font-poppins font-semibold pc:text-[20px] tablet:text-lg"
@@ -2569,11 +2576,13 @@
                 >VIEW CASE STUDY</a
               >
             </div>
+            </a>
           </div>  
           <div x-data="{ hovered: false }"  @mouseenter="hovered = true" 
                 @mouseleave="hovered = false"
                 :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"  class="item-active">
-            <div class="pc:block tablet:hidden relative top-[255px] group">
+            <a href="#" class="!tracking-[0px]">
+              <div class="pc:block tablet:hidden relative top-[255px] group">
               <div class="absolute bottom-0">
                 <img src="./images/active_studies_image2.png" alt="Image" class="" />
               </div>
@@ -2611,6 +2620,7 @@
               >
               </div>
             </div>
+            </a>
             </div>
         </div>
         <div
@@ -2650,9 +2660,9 @@
                     </p>
                   </div>
                 </div>
-                <a
+                <a @click.prevent
                   href="#"
-                  class="block bg-[url('./images/btn_icon_active.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 whitespace-pre-wrap font-jakarta font-bold text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
+                  class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 whitespace-pre-wrap font-jakarta font-bold text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
                   >VIEW CASE STUDY</a
                 >
               </div>
@@ -2690,9 +2700,9 @@
                     </p>
                   </div>
                 </div>
-                <a
+                <a @click.prevent
                   href="#"
-                  class="block bg-[url('./images/btn_icon_active.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5  font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
+                  class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5  font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
                   >VIEW CASE STUDY</a
                 >
               </div>
@@ -5542,19 +5552,19 @@
               Email:
             </p>
             <a href="mailto:hello@webparadox.com"
-              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
             >
               hello@webparadox.com
-            </p>
+          </a>
           </div>
           <div class="mb-5">
             <p
-              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:no-underline"
             >
               Phone (HQ):
             </p>
             <a href="tel:372XXXXXXX"
-              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
             >
               +372 XXX XXXX
               </a>
@@ -5566,7 +5576,7 @@
               WhatsApp:
             </p>
             <a href="https://wa.me/372 XXX XXXX"
-              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
             >
               +372 XXX XXXX
             </a>
@@ -5578,7 +5588,7 @@
               Telegram:
             </p>
             <a href="https://t.me/webparadox"
-              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300"
+              class="font-poppins font-light pc:text-base mobile:text-xs text-white-300 hover:underline"
             >
               @webparadox
           </a>
