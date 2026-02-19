@@ -46,6 +46,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script
@@ -56,6 +57,7 @@
       defer
       src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
     ></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
@@ -73,6 +75,7 @@
   </head>
 
   <body class="bg-black text-white-100 text-base">
+  
     <section
       x-data="{ show: false }"
       @scroll.window="show = (window.scrollY > 1000)"
@@ -81,7 +84,7 @@
       <div
         x-show="show"
         x-transition
-        class="mobile:float-right fixed top-20 z-20 right-0 flex items-center cursor-pointer"
+        class="mobile:float-right fixed bottom-20 z-20 right-0 flex items-center cursor-pointer"
       >
         <a
           href="#"
@@ -91,12 +94,12 @@
       </div>
     </section>
     <div
-      class="mc_header bg-[url('./images/mobile/header_banner.svg')] mobile:h-[850px] tablet:h-[400px] pc:h-[680px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
+      class="mc_header bg-[url('./images/mobile/header_banner.svg')] mobile:h-[850px] tablet:h-[580px] pc:h-[680px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
     >
       <div
         class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
       >
-        <header class="pc:mt-9 mobile:mt-3 py-4 relative z-100">
+        <header class="pc:mt-9 mobile:mt-3 py-4 relative z-200">
           <div
             x-data="{ scrolled: false }"
             style="opacity: 0"
@@ -152,7 +155,7 @@
                     <li class="float-left mr-6">
                       <a
                         class="h-7.5 w-15 pb-1 block text-sm font-poppins font-light text-white-200 hover:relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-white-100 border-solid transition-[font-size] ease-in duration-300"
-                        href="/services.html"
+                        href="./services.html"
                         >Services</a
                       >
                     </li>
@@ -755,7 +758,7 @@
     <main
       class="bg-[#222]/20 tablet:pt-25 mobile:pt-10 mobile:mt-[100px] tablet:mt-0"
     >
-      <section
+      <section  
         class="w-full pc:mt-[0px] tablet:mt-[30px] mobile:mt-[20px] pc:pb-10"
       >
         <div
@@ -1114,7 +1117,7 @@
           <!-- If we need pagination -->
 
           <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
+          
         </div>
       </section>
       <section
@@ -1124,7 +1127,7 @@
           <div
             class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px] tablet:mt-[100px] mobile:mt-[40px] left-0 w-full h-full justify-center"
           >
-            <div x-data="{hovered: false }">
+            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 1; hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1287,7 +1290,7 @@
               </div>
             </div>
 
-            <div x-data="{hovered: false }">
+            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 2; hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1405,7 +1408,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }">
+            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 3;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1523,7 +1526,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }">
+            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 4;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1641,7 +1644,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }">
+            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 5; hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1759,7 +1762,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }">
+            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 6; hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -2685,12 +2688,14 @@
                     </p>
                   </div>
                 </div>
-                <a
-                  @click.prevent
-                  href="#"
+               <div x-data="{}">
+                 <a
+                 
+                  href="#"  @click.prevent
                   class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 whitespace-pre-wrap font-jakarta font-bold text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
                   >VIEW CASE STUDY</a
                 >
+               </div>
               </div>
             </div>
             <div class="swiper-slide">
@@ -2726,12 +2731,15 @@
                     </p>
                   </div>
                 </div>
-                <a
+                  <div x-data="{}">
+                    <a
                   @click.prevent
                   href="#"
                   class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
                   >VIEW CASE STUDY</a
                 >
+                  </div>
+                
               </div>
             </div>
           </div>
@@ -3735,7 +3743,7 @@
                     alt="Image"
                     class="pc:max-w-[147px] mobile:max-w-[75px] pc:w-[147px] mobile:w-[75px] pc:h-[168px] tablet:h-[85px]"
                   />
-                  <div class="client pc:w-['auto'] mobile:w-[90px]">
+                  <div class="client pc:w-['auto'] mobile:w-[90px] tablet:w-[140px]">
                     <svg
                       class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
                       width="40"
@@ -3769,7 +3777,7 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="relative pc:h-[180px] mobile:h-[105px]">
+                  <div class="relative pc:h-[180px] mobile:h-[105px] tablet:h-[130px]">
                     <img
                       src="./images/active_slider/img.png"
                       alt="Image"
@@ -3781,7 +3789,7 @@
                       class="absolute pc:max-w-[147px] mobile:max-w-[75px] pc:w-[147px] mobile:w-[75px] pc:h-[168px] tablet:h-[85px] slide-hide transition-opacity duration-300 ease-in"
                     />
                   </div>
-                  <div class="client pc:w-['auto'] mobile:w-[90px] opacity-0">
+                  <div class="client pc:w-['auto'] mobile:w-[90px] tablet:w-[140px] opacity-0">
                     <svg
                       class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
                       width="40"
@@ -3815,7 +3823,7 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="relative pc:h-[180px] mobile:h-[105px]">
+                  <div class="relative pc:h-[180px] mobile:h-[105px] tablet:h-[130px]">
                     <img
                       src="./images/active_slider/img1.png"
                       alt="Image"
@@ -3870,7 +3878,7 @@
               What Our Clients Say
             </h2>
             <p
-              class="font-poppins mobile:text-center tablet:text-left font-normal pc:text-lg mobile:text-sm leading-[172%]"
+              class="mobile:mt-2 tablet:mt-0 font-poppins mobile:text-center tablet:text-left font-normal pc:text-lg mobile:text-sm leading-[172%]"
             >
               “Webparadox delivered our e-commerce platform on time and exceeded
               our expectations. Their expertise in Laravel and attention to
@@ -4846,7 +4854,7 @@
           >
             Tell us about your idea and we'll turn it into reality
           </p>
-          <form action="#" method="post" class="mt-10">
+          <form action="#" method="post" class="mt-10" @submit.prevent>
             <div
               class="grid tablet:grid-cols-[223px_223px] mobile:grid-cols-[300] mobile:max-w-[300px] tablet:max-w-['auto'] mx-auto pc:grid-cols-[319px_319px] justify-center gap-x-18"
             >
@@ -5058,12 +5066,50 @@
               </div>
               <br />
               <div class="flex">
-                <button
+                  <div x-data="{ openModal1: false, openModal2: false }" class="p-4 relative z-300">
+    <!-- Кнопки управления -->
+   
+                  <button @click="openModal1 = true"   @click.prevent
                   class="relative pc:left-[200px] [word-spacing:2px] tracking-[2px] tablet:left-[130px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat mt-7 mx-auto pc:bg-[20px_0px] pl-[40px] tablet:bg-[25px_5px] mobile:bg-[20px_5px] h-[60px] tablet:w-[190px] mobile:w-[180px] font-jakarta font-bold pc:text-lg tablet:text-sm leading-[20px] pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300"
                   type="submit"
                 >
                   SENDRE QUEST
                 </button>
+    <!-- Модальное окно 1 -->
+    <div x-show="openModal1"   style="display: none"
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+         x-transition>
+        
+        <div @click.away="openModal1 = false" class="relative bg-blue p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg">
+          <button @click.prevent @click="openModal1 = false" class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"></button>
+           <div class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center ">
+            <div>
+              <img src="./images/Platform/icon_modal.svg" class="mx-auto pc:w-[103px] pc:h-[103px] mobile:h-[43px] mobile:w-[43px]" alt="Image">
+              <h2 class="text-center font-poppins pc:font-medium mobile:font-semibold pc:text-[30px] mobile:text-base pc:mt-10 mobile:mt-5 pc:mb-10 mobile:mb-5">Form submitted successfully</h2>
+              <p class="text-center pc:font-poppins mobile:font-jakarta font-normal pc:text-lg mobile:text-sm leading-[175%]">We have received your request and are already working on it. Our manager will contact you shortly.</p>
+            </div>
+           </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно 2 (вложенное или независимое) -->
+    <div x-show="openModal2"  style="display: none"
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+         x-transition>
+        <div @click.away="openModal2 = false" class="relative bg-[#52525b] p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px]  shadow-lg">
+            <button @click.prevent @click="openModal2 = false" class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"></button>
+            <div class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center ">
+            <div>
+              <img src="./images/Platform/erorr_modal.svg" class="mx-auto pc:w-[114px] pc:h-[114px] mobile:h-[69px] mobile:w-[69px]" alt="Image">
+              <h2 class="text-center font-poppins pc:font-medium mobile:font-semibold pc:text-[30px] mobile:text-base pc:mt-10 mobile:mt-5 pc:mb-10 mobile:mb-5">Failed to submit form</h2>
+              <p class="text-center pc:font-poppins mobile:font-jakarta font-normal pc:text-lg mobile:text-sm leading-[175%]">A technical error occurred. Please try again or contact us in another way.</p>
+            </div>
+           </div>
+        </div>
+    </div>
+                  </div>
+                
+
               </div>
             </div>
           </form>
@@ -5562,5 +5608,6 @@
         </div>
       </div>
     </footer>
+    
   </body>
 </html>

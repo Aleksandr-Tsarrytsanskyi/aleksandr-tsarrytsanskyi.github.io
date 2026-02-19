@@ -23,13 +23,18 @@ document.addEventListener("DOMContentLoaded",function() {
 // activeSlide.lastElementChild.style.opacity = "1"
 
 
+    AOS.init();
+ 
   const swiper = new Swiper('.technology', {
   // Optional parameters
  
   
   slidesPerView: "auto",
    spaceBetween: 10,
-   loop: true,
+   
+  //  centeredSlides: false, // Отключить центрирование
+  // initialSlide: 0,
+   
     //  simulateTouch: false,
     //  allowTouchMove: false, 
   
@@ -49,9 +54,7 @@ document.addEventListener("DOMContentLoaded",function() {
   scrollbar: {
     el: '.swiper-scrollbar',
       draggable: true,
-       snapOnRelease: true,
        
-        dragSize: 'auto'
       
   },
   // autoplay: {
