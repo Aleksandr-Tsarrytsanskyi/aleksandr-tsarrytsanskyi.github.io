@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded",function() {
-const swiper = new Swiper('.mobile_work', {
+AOS.init();
+  const swiper = new Swiper('.mobile_work', {
   // Optional parameters
  slidesPerView: 'auto',
     spaceBetween: 20,

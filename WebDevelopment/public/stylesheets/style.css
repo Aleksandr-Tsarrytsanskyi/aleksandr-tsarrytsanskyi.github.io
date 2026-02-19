@@ -214,6 +214,30 @@ button:not(header, .none-spassing) , a:not(header a, .not-spacing_text a, footer
   }
 }
 
+@media (max-width: 769px) {
+  [data-aos="custom-effect"] {
+    
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+  transition-property: border, transform, opacity;
+  transition: all 0.5s easy-in
+}
+
+/* Конечное состояние (когда AOS добавляет класс .aos-animate) */
+[data-aos="custom-effect"].aos-animate {
+  
+   border-left: 1px solid #3b82f6;
+   border-bottom: 1px solid #3b82f6;
+   border-top: 1px solid #3b82f6;
+   border-right: 1px solid #3b82f6;
+  transform: scale(1) rotate(0deg) !important;
+}
+}
+
+
+
 
 
 

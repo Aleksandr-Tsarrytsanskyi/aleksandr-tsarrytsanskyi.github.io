@@ -46,6 +46,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
@@ -55,6 +56,7 @@
       defer
       src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
     ></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
     <script src="./javascripts/event.js"></script>
@@ -578,7 +580,7 @@
       </div>
     </div>
     <main
-      class="mobile:mt-5 tablet:mt-0 pc:mt-[-25px] bg-[#222]/20 mobile:pt-10 pc:pt-[55px] tablet:pt-10"
+      class="mobile:mt-[60px] tablet:mt-0 pc:mt-[-25px] bg-[#222]/20 mobile:pt-7 pc:pt-[55px] tablet:pt-10"
     >
       <section class="mobile:mb-[55px] pc:mb-10 tablet:mb-0 mobile:mt-8">
         <div
@@ -643,7 +645,7 @@
           <div
             class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px] left-0 w-full h-full justify-center"
           >
-            <div x-data="{hovered: false }" class="relative group">
+            <div x-data="{hovered: false }" class="relative group" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 1;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -810,7 +812,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" class="relative group">
+            <div x-data="{hovered: false }" class="relative group" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 2;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -925,7 +927,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" class="relative group">
+            <div x-data="{hovered: false }" class="relative group" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 3;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1040,7 +1042,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" class="relative group">
+            <div x-data="{hovered: false }" class="relative group" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 4;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1155,7 +1157,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" class="relative group">
+            <div x-data="{hovered: false }" class="relative group" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 5;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1270,7 +1272,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" class="relative group">
+            <div x-data="{hovered: false }" class="relative group" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 6;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1385,7 +1387,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" class="relative group">
+            <div x-data="{hovered: false }" class="relative group" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 7;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1500,7 +1502,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" class="relative group">
+            <div x-data="{hovered: false }" class="relative group" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 8;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1615,7 +1617,7 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" class="relative group">
+            <div x-data="{hovered: false }" class="relative group" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
               <div
                 @mouseover="activeBlock = 9;hovered = true"
                 @mouseleave="activeBlock = null;hovered = false"
@@ -2518,7 +2520,7 @@
         <div
           class="grid pc:grid-cols-[241px_241px_241px_241px] mobile:grid-cols-[148px_148px] tablet:grid-cols-[153px_153px_153px_153px] justify-center mt-10"
         >
-          <div
+          <div data-aos="custom-effect" data-aos-duration="1500" data-aos-offset="300"
             class="h-[130px] border-l-2 border-l-[#222]/10 border-b-2 border-solid border-[#7a7a7a] hover:border-blue hover:border-l-blue  transition-colors duration-300 ease-in"
           >
             <h2
@@ -2527,7 +2529,7 @@
               E-commerce<br />& Retail
             </h2>
           </div>
-          <div
+          <div data-aos="custom-effect" data-aos-duration="1500" data-aos-offset="300" 
             class="h-[130px] border-l-2 border-b-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
@@ -2537,7 +2539,7 @@
               Networks
             </h2>
           </div>
-          <div
+          <div data-aos="custom-effect" data-aos-duration="1500" data-aos-offset="300"
             class="h-[130px] tablet:border-l-2 mobile:border-l-0 border-b-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
@@ -2546,7 +2548,7 @@
               FinTech &<br />Banking
             </h2>
           </div>
-          <div
+          <div data-aos="custom-effect" data-aos-duration="1500" data-aos-offset="300"
             class="h-[130px] border-b-2 border-l-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
@@ -2555,7 +2557,7 @@
               SaaS<br />Platforms
             </h2>
           </div>
-          <div
+          <div data-aos="custom-effect" data-aos-duration="1500" data-aos-offset="300"
             class="h-[130px] border-b-2 mobile:border-b-[#7a7a7a] tablet:border-b-[#222]/10 border-l-2 border-l-[#222]/10 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
@@ -2564,7 +2566,7 @@
               Healthcare &<br />Telemedicine
             </h2>
           </div>
-          <div
+          <div data-aos="custom-effect" data-aos-duration="1500" data-aos-offset="300"
             class="h-[130px] border-b-2 mobile:border-b-[#7a7a7a] tablet:border-b-[#222]/10 border-l-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
@@ -2573,7 +2575,7 @@
               Education &<br />E-learning
             </h2>
           </div>
-          <div
+          <div data-aos="custom-effect" data-aos-duration="1500" data-aos-offset="300"
             class="h-[130px] border-b-2 border-b-[#222]/10 tablet:border-l-2 mobile:border-l-0 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
@@ -2582,7 +2584,7 @@
               Travel &<br />Hospitality
             </h2>
           </div>
-          <div
+          <div data-aos="custom-effect" data-aos-duration="1500" data-aos-offset="300"
             class="h-[130px] border-b-2 border-b-[#222]/10 border-l-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
