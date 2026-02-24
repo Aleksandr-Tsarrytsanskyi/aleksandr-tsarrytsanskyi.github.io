@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const laravel = new Swiper('.laravel', {
   // Optional parameters
  
-  loop: true,
+  // loop: true,
    spaceBetween: 10,
     slidesPerView: "auto",
     
