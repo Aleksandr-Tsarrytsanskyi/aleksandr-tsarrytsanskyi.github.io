@@ -244,6 +244,16 @@ button:not(header, .none-spassing) , a:not(header a, .not-spacing_text a, footer
   [data-aos="magni-effect"].aos-animate {
      transform: scale(1.1)  !important;
   }
+
+    [data-aos="work-effect"] {
+     transform: scale(1)  !important;
+      transition-property: transform;
+      
+  }
+
+  [data-aos="work-effect"].aos-animate {
+     transform: scale(1.2)  !important;
+  }
 }
 
 
