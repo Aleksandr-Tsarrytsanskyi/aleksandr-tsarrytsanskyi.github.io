@@ -234,6 +234,16 @@ button:not(header, .none-spassing) , a:not(header a, .not-spacing_text a, footer
    border-right: 1px solid #3b82f6;
   transform: scale(1) rotate(0deg) !important;
 }
+
+  [data-aos="magni-effect"] {
+     transform: scale(1)  !important;
+      transition-property: transform;
+      
+  }
+
+  [data-aos="magni-effect"].aos-animate {
+     transform: scale(1.1)  !important;
+  }
 }
 
 

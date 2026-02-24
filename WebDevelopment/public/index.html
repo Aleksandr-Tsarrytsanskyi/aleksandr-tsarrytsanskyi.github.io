@@ -1127,7 +1127,8 @@
           <div
             class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px] tablet:mt-[100px] mobile:mt-[40px] left-0 w-full h-full justify-center"
           >
-            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
+           
+            <div x-data="{hovered: false }">
               <div
                 @mouseover="activeBlock = 1; hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1139,7 +1140,7 @@
                     <img
                       src="./images/clients_image.png"
                       class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image"
+                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0"  data-aos-easing="ease"
                     />
                   </div>
 
@@ -1196,7 +1197,7 @@
                           class="relative block z-50 pc:mt-3 tablet:mt-8 mobile:mt-7 pc:bg-[url('./images/clients_more.svg')]  mobile:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_active_header.svg')]  bg-center bg-no-repeat pc:w-[70px] pc:h-[70px] tablet:w-[56px] tablet:h-[56px] mobile:w-[50px] mobile:h-[50px] tablet:bg-[url('./images/mobile/icon_clients.svg')] transition-all duration-300 ease-in" 
                           href="#"
                         ></a> -->
-                        <div
+                        <div class="mobile:hidden pc:block"
                           x-transition:enter="transition ease-out duration-300"
                           x-transition:enter-start="opacity-0"
                           x-transition:enter-end="opacity-100"
@@ -1283,14 +1284,27 @@
                             </svg>
                           </a>
                         </div>
+                        <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                        <svg class="mt-[50px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           
+                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
+                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                            <defs>
+                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                                <rect width="46" height="46" rx="23" />
+                              </clipPath>
+                            </defs>
+                        </svg>
+                      </div>
                       </div>
                     </div>
                   </div>
                 </a>
               </div>
             </div>
-
-            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="300">
+           
+            <div x-data="{hovered: false }" >
               <div
                 @mouseover="activeBlock = 2; hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1298,11 +1312,11 @@
                 :style="hovered ? 'transform: scale(1.1); transition: 0.3s; z-index: 10' : 'transform: scale(1); transition: 0.3s; z-index: 1'"
               >
                 <a href="./laraveldevelopment.html">
-                  <div class="absolute top-0">
+                  <div class="absolute top-0 ">
                     <img
                       src="./images/clients_image1.png"
-                      class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image"
+                      class="mobile:h-[268px]  tablet:h-auto"
+                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0" data-aos-delay="300"  data-aos-easing="ease"
                     />
                   </div>
                   <div class="absolute bottom-0">
@@ -1311,12 +1325,12 @@
                     >
                       <div>
                         <p
-                          class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px]"
+                          class="tablet:mt-[-40px] mobile:mt-[-50px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px]"
                         >
                           Laravel Development
                         </p>
                       </div>
-                      <div
+                      <div class="mobile:hidden pc:block"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100"
@@ -1403,12 +1417,27 @@
                           </svg>
                         </a>
                       </div>
+                      <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                        <a href="./laraveldevelopment.html">
+                          <svg class="mt-[-65px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           
+                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
+                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                            <defs>
+                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                                <rect width="46" height="46" rx="23" />
+                              </clipPath>
+                            </defs>
+                        </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="300">
+            <div x-data="{hovered: false }">
               <div
                 @mouseover="activeBlock = 3;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1420,7 +1449,7 @@
                     <img
                       src="./images/clients_image2.png"
                       class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image"
+                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0" data-aos-delay="300"  data-aos-easing="ease"
                     />
                   </div>
                   <div class="absolute bottom-0">
@@ -1429,12 +1458,12 @@
                     >
                       <div>
                         <p
-                          class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px]"
+                          class="tablet:mt-[-40px] mobile:mt-[-50px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px]"
                         >
                           Mobile Development
                         </p>
                       </div>
-                      <div
+                      <div class="mobile:hidden pc:block"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100"
@@ -1521,12 +1550,27 @@
                           </svg>
                         </a>
                       </div>
+                      <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                        <a href="#">
+                          <svg class="mt-[-65px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           
+                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
+                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                            <defs>
+                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                                <rect width="46" height="46" rx="23" />
+                              </clipPath>
+                            </defs>
+                        </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="300">
+            <div x-data="{hovered: false }">
               <div
                 @mouseover="activeBlock = 4;hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1538,7 +1582,7 @@
                     <img
                       src="./images/clients_image3.png"
                       class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image"
+                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0" data-aos-delay="300"  data-aos-easing="ease"
                     />
                   </div>
                   <div class="absolute bottom-0">
@@ -1547,12 +1591,12 @@
                     >
                       <div>
                         <p
-                          class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px]"
+                          class="tablet:mt-[-40px] mobile:mt-[-50px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px]"
                         >
                           E-commerce Solutions
                         </p>
                       </div>
-                      <div
+                      <div class="mobile:hidden pc:block"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100"
@@ -1639,12 +1683,27 @@
                           </svg>
                         </a>
                       </div>
+                      <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                        <a href="#">
+                          <svg class="mt-[-65px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           
+                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
+                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                            <defs>
+                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                                <rect width="46" height="46" rx="23" />
+                              </clipPath>
+                            </defs>
+                        </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="300">
+            <div x-data="{hovered: false }">
               <div
                 @mouseover="activeBlock = 5; hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1656,7 +1715,7 @@
                     <img
                       src="./images/clients_image4.png"
                       class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image"
+                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0" data-aos-delay="300"  data-aos-easing="ease"
                     />
                   </div>
                   <div class="absolute bottom-0">
@@ -1665,12 +1724,12 @@
                     >
                       <div>
                         <p
-                          class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px]"
+                          class="tablet:mt-[-40px] mobile:mt-[-50px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px]"
                         >
                           CRM Implementation
                         </p>
                       </div>
-                      <div
+                      <div class="mobile:hidden pc:block"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100"
@@ -1757,12 +1816,27 @@
                           </svg>
                         </a>
                       </div>
+                      <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                        <a href="#">
+                          <svg class="mt-[-65px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           
+                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
+                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                            <defs>
+                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                                <rect width="46" height="46" rx="23" />
+                              </clipPath>
+                            </defs>
+                        </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="300">
+            <div x-data="{hovered: false }">
               <div
                 @mouseover="activeBlock = 6; hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1774,7 +1848,7 @@
                     <img
                       src="./images/clients_image5.png"
                       class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image"
+                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0" data-aos-delay="300"  data-aos-easing="ease"
                     />
                   </div>
                   <div class="absolute bottom-0">
@@ -1783,12 +1857,12 @@
                     >
                       <div>
                         <p
-                          class="tablet:mt-[-40px] mobile:mt-[-40px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px]"
+                          class="tablet:mt-[-40px] mobile:mt-[-20px] pc:mt-[-50px] font-poppins font-normal pc:text-1xl mobile:text-[20px]"
                         >
                           Digital Marketing
                         </p>
                       </div>
-                      <div
+                      <div class="mobile:hidden pc:block"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100"
@@ -1873,6 +1947,21 @@
                               </clipPath>
                             </defs>
                           </svg>
+                        </a>
+                      </div>
+                      <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                        <a href="#">
+                          <svg class="mt-[-30px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           
+                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
+                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
+                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                            <defs>
+                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                                <rect width="46" height="46" rx="23" />
+                              </clipPath>
+                            </defs>
+                        </svg>
                         </a>
                       </div>
                     </div>
