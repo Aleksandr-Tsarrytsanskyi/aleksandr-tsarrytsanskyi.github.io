@@ -161,6 +161,14 @@ button:not(header, .none-spassing) , a:not(header a, .not-spacing_text a, footer
  
 }
 
+.swiperPrev:active {
+  background: url('../images/slide_active.svg') no-repeat center;
+}
+
+.swiperNext:active {
+  background: url('../images/slide_active.svg') no-repeat center;
+}
+
 .laravel .swiper-scrollbar-drag, .mobile_work .swiper-scrollbar-drag {
   width: 185px !important;
 }
@@ -205,6 +213,8 @@ button:not(header, .none-spassing) , a:not(header a, .not-spacing_text a, footer
   width: 100px !important;
   height: 100px !important;
 }
+
+
 
 @media (min-width: 769px) {
   [data-aos] {

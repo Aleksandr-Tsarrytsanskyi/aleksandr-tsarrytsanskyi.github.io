@@ -84,7 +84,7 @@
       <div
         x-show="show"
         x-transition
-        class="mobile:float-right fixed bottom-20 z-20 right-0 flex items-center cursor-pointer"
+        class="mobile:float-right fixed bottom-20 z-120 right-0 flex items-center cursor-pointer"
       >
         <a
           href="#"
@@ -1972,7 +1972,7 @@
           </div>
         </div>
       </section>
-      <section
+      <section x-data="{}"
         class="tablet:mt-20 mobile:mt-10 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
       >
         <h2
@@ -1985,7 +1985,7 @@
         >
           Get a free consultation and project estimate
         </p>
-        <form action="#" method="post" class="mt-5">
+        <form action="#" method="post" class="mt-5" @submit.prevent>
           <div
             class="grid pc:grid-cols-[319px_308px_215px] tablet:grid-cols-[163px_178px_154px] mobile:grid-cols-[300px] pc:gap-x-[50px] tablet:gap-x-[42px] justify-center"
           >
@@ -2178,7 +2178,7 @@
                 />
                 <div
                   :class="hovered ? 'border-l-4 border-solid border-blue' : ''"
-                  class="relative pc:top-[270px] pc:left-[97px] tablet:top-[120px] tablet:left-[20px] pc:w-[365px] pc:h-[260px] tablet:h-[230px] tablet:w-[258px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue border-b-4 border-solid transition-all duration-300 ease-in"
+                  class="relative pc:top-[270px] pc:left-[97px] tablet:top-[120px] tablet:left-[20px] pc:w-[365px] pc:h-[280px] tablet:h-[230px] tablet:w-[258px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue border-b-4 border-solid transition-all duration-300 ease-in"
                 >
                   <h2
                     class="mb-5 mt-5 font-poppins font-normal pc:text-[20px] mobile:text-sm"
@@ -2212,7 +2212,7 @@
               <div>
                 <img src="./images/exporttise_image.png" alt="image" />
                 <div
-                  class="relative tablet:top-[-80px] mobile:top-[-50px] mobile:left-[20px] pc:left-[90px] tablet:left-[20px] pc:w-[365px] tablet:w-[258px] pc:h-[280px] tablet:h-[250px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
+                  class="relative tablet:top-[-80px] mobile:top-[-50px] mobile:left-[20px] pc:left-[90px] tablet:left-[20px] pc:w-[365px] tablet:w-[258px] pc:h-[280px] mobile:w-[252px] tablet:h-[250px] pl-5 pt-1 pb-5 bg-black border-b-4 border-l-4 border-black hover:border-blue hover:border-b-4 border-solid transition-colors duration-300 ease-in"
                 >
                   <h2
                     class="mb-5 mt-5 font-poppins font-normal pc:text-[20px] mobile:text-sm"
@@ -2244,7 +2244,7 @@
                   alt="image"
                 />
                 <div
-                  class="relative tablet:top-[-80px] mobile:top-[-50px] mobile:left-[20px] pc:left-[97px] tablet:left-[20px] pc:w-[365px] pc:h-[260px] tablet:h-[230px] tablet:w-[258px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue border-b-4 border-solid transition-all duration-300 ease-in"
+                  class="relative tablet:top-[-80px] mobile:top-[-50px] mobile:left-[20px] pc:left-[97px] tablet:left-[20px] pc:w-[365px] mobile:w-[252px] pc:h-[260px] tablet:h-[230px] tablet:w-[258px] pl-5 pt-1 pb-5 bg-black border-l-4 border-black hover:border-blue border-b-4 border-solid transition-all duration-300 ease-in"
                 >
                   <h2
                     class="mb-5 mt-5 font-poppins font-normal pc:text-[20px] mobile:text-sm"
@@ -3341,12 +3341,12 @@
                 </h2>
               </div>
               <div>
-                <button
+                <a href="#feedback"
                   type="button"
-                  class="mobile:mt-[-30px] [word-spacing:2px] tracking-[2px] tablet:mt-[0px] h-[60px] pl-[40px] block pc:mt-[0px] tablet:mt-[-60px] font-jakarta font-bold pc:text-lg mobile:text-sm pc:leading-[20px] tablet:leading-[0px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat pc:bg-[10px_0px] mobile:bg-[10px_5px] pc:hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300 ease-in"
+                  class="mobile:mt-[-30px] [word-spacing:2px] tracking-[2px] tablet:mt-[0px] h-[60px] pl-[40px] block pc:mt-[0px] tablet:mt-[-60px] font-jakarta font-bold pc:text-lg mobile:text-sm pc:leading-[60px] mobile:leading-[60px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat pc:bg-[10px_0px] mobile:bg-[10px_5px] pc:hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300 ease-in"
                 >
                   SCHEDULE FREE CONSULATION
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -3811,7 +3811,7 @@
           </section>
         </div>
       </div>
-      <section
+      <section 
         class="tablet:mt-30 mobile:mt-10 pc:mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
       >
         <div
@@ -3976,7 +3976,7 @@
             </p>
             <div class="mt-5 tablet:ml-0 mobile:ml-20">
               <button
-                class="mr-2 swiperPrev bg-[url('./images/slide_diseabled.svg')] h-[45px] w-[45px] hover:bg-[url('./images/slide_active.svg')] transition-all duration-300"
+                class="mr-2 swiperPrev bg-[url('./images/slide_diseabled.svg')] h-[45px] w-[45px] pc:hover:bg-[url('./images/slide_active.svg')] transition-all duration-300"
               >
                 <svg
                   class="relative left-[15px]"
@@ -4001,7 +4001,7 @@
                 </svg>
               </button>
               <button
-                class="swiperNext bg-[url('./images/slide_diseabled.svg')] h-[45px] w-[45px] hover:bg-[url('./images/slide_active.svg')] transition-all duration-300"
+                class="swiperNext bg-[url('./images/slide_diseabled.svg')] h-[45px] w-[45px] pc:hover:bg-[url('./images/slide_active.svg')] transition-all duration-300"
               >
                 <svg
                   class="relative left-[15px]"
@@ -4923,7 +4923,7 @@
           </div>
         </div>
       </section>
-      <section
+      <section id="feedback"
         class="mobile:mt-[300px] pc:mt-20 tablet:mt-0 pc:max-w-[960px] tablet:max-w-[608px] mx-auto"
       >
         <div
@@ -5327,7 +5327,7 @@
                   @mouseenter="hoveredBlock = 3"
                   @mouseleave="hoveredBlock = null"
                 >
-                  <a href="./blog.htmll">
+                  <a href="./blog.html">
                     <svg
                       class="mx-auto"
                       width="21"

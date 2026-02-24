@@ -64,7 +64,7 @@
   </head>
   <body class="bg-black text-white-100 text-base">
     <div
-      class="bg-[url('./images/mobile/header_banner.svg')] mobile:h-[400px] pc:h-[420px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
+      class="bg-[url('./images/mobile/header_banner.svg')] mobile:h-[400px] pc:h-[390px] min-h-full max-w-[960px] mx-auto bg-cover bg-center"
     >
       <header class="pc:mt-9 mobile:mt-3 py-4 relative z-100">
         <div
@@ -590,8 +590,8 @@
               </p>
             </div>
           </div>
-          <div class="bg-[#222] px-10.5 py-5">
-            <form action="#" method="post">
+          <div class="bg-[#222] px-10.5 py-5" x-data="{}">
+            <form action="#" method="post" @submit.prevent>
               <div class="mb-10">
                 <input
                   type="text"
@@ -952,7 +952,7 @@
               @mouseenter="hoveredBlock = 3"
               @mouseleave="hoveredBlock = null"
             >
-              <a href="./blog.htmll">
+              <a href="./blog.html">
                 <svg
                   class="mx-auto"
                   width="21"

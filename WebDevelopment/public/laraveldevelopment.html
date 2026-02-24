@@ -1680,13 +1680,13 @@
           <div class="swiper-scrollbar  bg-[#515151]"></div>
         </div>
       </section>
-      <section class="mt-20">
+      <section class="mt-20" x-data="{}">
         <h2
           class="pc:w-[800px] mobile:w-[300px] tablet:w-[508px] mx-auto font-poppins font-light pc:text-2xl mobile:text-[24px] text-center"
         >
           Want to work with us on projects like this? Send us your resume!
         </h2>
-        <form action="#" method="post">
+        <form action="#" method="post" @submit.prevent>
           <div
             class="grid pc:grid-cols-[309px_339px] mobile:grid-cols-[300px] tablet:grid-cols-[114px_114px_174px_95px] tablet:items-center gap-y-10 pc:gap-x-20 tablet:gap-x-9 justify-center"
           >
@@ -2886,7 +2886,7 @@
               @mouseenter="hoveredBlock = 3"
               @mouseleave="hoveredBlock = null"
             >
-              <a href="./blog.htmll">
+              <a href="./blog.html">
                 <svg
                   class="mx-auto"
                   width="21"

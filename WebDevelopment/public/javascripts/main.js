@@ -221,8 +221,9 @@ const mobileCase = new Swiper('.mobile_case', {
 const swiperPrev = document.querySelector(".swiperPrev");
   const swiperNext = document.querySelector(".swiperNext");
 
-      swiperPrev.addEventListener("click", () => {
+      swiperPrev.addEventListener("click", (e) => {
         clients.slidePrev();
+        // e.target.classList.add("clients_button_active")
             const activeSlide = document.querySelector(".clients .swiper-slide-active")
             const activeClient = document.querySelectorAll(".clients .client")
           activeClient.forEach(el => {
