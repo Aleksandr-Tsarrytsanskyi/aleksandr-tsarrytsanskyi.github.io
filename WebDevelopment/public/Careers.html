@@ -90,7 +90,7 @@
           x-data="{ scrolled: false }"
           x-on:scroll.window="scrolled = (window.pageYOffset > 50)"
           x-bind:class="scrolled ? 'top-0' : 'top-5'"
-          class="pc:fixed left-0 right-0 pc:bg-black transition-all duration-300 ease-in-out"
+          class="pc:fixed  left-0 right-0 pc:bg-black transition-all duration-300 ease-in-out"
         >
           <div
             class="grid pc:grid-cols-[84px_535px_41px_107px] pc:gap-16 justify-center tablet:grid-cols-[442px_0px_128px_35px] mobile:grid-cols-[113px_0px_153px_35px] tablet:items-normal mobile:items-center tablet:gap-0"
@@ -1698,13 +1698,13 @@
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
-              class="p-4 relative z-300"
+              class="p-4 relative z-20"
             >
             <form action="#" method="post" class="mt-10"  @submit.prevent="submit">
             <div
               class="grid tablet:grid-cols-[223px_223px] mobile:grid-cols-[300] mobile:max-w-[300px] tablet:max-w-['auto'] mx-auto pc:grid-cols-[319px_319px] justify-center gap-x-18"
             >
-              <div class="relative">
+              <div class="relative ">
                 <input x-model="form.name"
                   class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
                   type="text"
