@@ -46,7 +46,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script
@@ -75,7 +75,6 @@
   </head>
 
   <body class="bg-black text-white-100 text-base">
-  
     <section
       x-data="{ show: false }"
       @scroll.window="show = (window.scrollY > 1000)"
@@ -758,7 +757,7 @@
     <main
       class="bg-[#222]/20 tablet:pt-25 mobile:pt-10 mobile:mt-[100px] tablet:mt-0"
     >
-      <section  
+      <section
         class="w-full pc:mt-[0px] tablet:mt-[30px] mobile:mt-[20px] pc:pb-10"
       >
         <div
@@ -1117,7 +1116,6 @@
           <!-- If we need pagination -->
 
           <!-- If we need scrollbar -->
-          
         </div>
       </section>
       <section
@@ -1127,7 +1125,6 @@
           <div
             class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px] tablet:mt-[100px] mobile:mt-[40px] left-0 w-full h-full justify-center"
           >
-           
             <div x-data="{hovered: false }">
               <div
                 @mouseover="activeBlock = 1; hovered = true"
@@ -1140,7 +1137,11 @@
                     <img
                       src="./images/clients_image.png"
                       class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0"  data-aos-easing="ease"
+                      alt="Image"
+                      data-aos="magni-effect"
+                      data-aos-duration="1000"
+                      data-aos-offset="0"
+                      data-aos-easing="ease"
                     />
                   </div>
 
@@ -1197,7 +1198,8 @@
                           class="relative block z-50 pc:mt-3 tablet:mt-8 mobile:mt-7 pc:bg-[url('./images/clients_more.svg')]  mobile:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/mobile_arrow.svg'),url('./images/mobile/btn_active_header.svg')]  bg-center bg-no-repeat pc:w-[70px] pc:h-[70px] tablet:w-[56px] tablet:h-[56px] mobile:w-[50px] mobile:h-[50px] tablet:bg-[url('./images/mobile/icon_clients.svg')] transition-all duration-300 ease-in" 
                           href="#"
                         ></a> -->
-                        <div class="mobile:hidden pc:block"
+                        <div
+                          class="mobile:hidden pc:block"
                           x-transition:enter="transition ease-out duration-300"
                           x-transition:enter-start="opacity-0"
                           x-transition:enter-end="opacity-100"
@@ -1284,27 +1286,56 @@
                             </svg>
                           </a>
                         </div>
-                        <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
-                        <svg class="mt-[50px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           
-                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
-                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
-                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                        <div
+                          class="mobile:block pc:hidden"
+                          data-aos="zoom-in"
+                          data-aos-offset="0"
+                          data-aos-delay="300"
+                          data-aos-duration="1000"
+                        >
+                          <svg
+                            class="mt-[50px]"
+                            width="46"
+                            height="46"
+                            viewBox="0 0 46 46"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              data-figma-bg-blur-radius="10"
+                              width="46"
+                              height="46"
+                              rx="23"
+                              fill="#3B82F6"
+                            />
+                            <path
+                              d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z"
+                              fill="white"
+                              stroke="white"
+                            />
+                            <path
+                              d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z"
+                              fill="white"
+                              stroke="white"
+                            />
                             <defs>
-                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                              <clipPath
+                                id="bgblur_0_664_1926_clip_path"
+                                transform="translate(10 10)"
+                              >
                                 <rect width="46" height="46" rx="23" />
                               </clipPath>
                             </defs>
-                        </svg>
-                      </div>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </a>
               </div>
             </div>
-           
-            <div x-data="{hovered: false }" >
+
+            <div x-data="{hovered: false }">
               <div
                 @mouseover="activeBlock = 2; hovered = true"
                 @mouseleave="activeBlock = null; hovered = false"
@@ -1312,11 +1343,16 @@
                 :style="hovered ? 'transform: scale(1.1); transition: 0.3s; z-index: 10' : 'transform: scale(1); transition: 0.3s; z-index: 1'"
               >
                 <a href="./laraveldevelopment.html">
-                  <div class="absolute top-0 ">
+                  <div class="absolute top-0">
                     <img
                       src="./images/clients_image1.png"
-                      class="mobile:h-[268px]  tablet:h-auto"
-                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0" data-aos-delay="300"  data-aos-easing="ease"
+                      class="mobile:h-[268px] tablet:h-auto"
+                      alt="Image"
+                      data-aos="magni-effect"
+                      data-aos-duration="1000"
+                      data-aos-offset="0"
+                      data-aos-delay="300"
+                      data-aos-easing="ease"
                     />
                   </div>
                   <div class="absolute bottom-0">
@@ -1330,7 +1366,8 @@
                           Laravel Development
                         </p>
                       </div>
-                      <div class="mobile:hidden pc:block"
+                      <div
+                        class="mobile:hidden pc:block"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100"
@@ -1417,19 +1454,48 @@
                           </svg>
                         </a>
                       </div>
-                      <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                      <div
+                        class="mobile:block pc:hidden"
+                        data-aos="zoom-in"
+                        data-aos-offset="0"
+                        data-aos-delay="300"
+                        data-aos-duration="1000"
+                      >
                         <a href="./laraveldevelopment.html">
-                          <svg class="mt-[-65px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           
-                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
-                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
-                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                          <svg
+                            class="mt-[-65px]"
+                            width="46"
+                            height="46"
+                            viewBox="0 0 46 46"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              data-figma-bg-blur-radius="10"
+                              width="46"
+                              height="46"
+                              rx="23"
+                              fill="#3B82F6"
+                            />
+                            <path
+                              d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z"
+                              fill="white"
+                              stroke="white"
+                            />
+                            <path
+                              d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z"
+                              fill="white"
+                              stroke="white"
+                            />
                             <defs>
-                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                              <clipPath
+                                id="bgblur_0_664_1926_clip_path"
+                                transform="translate(10 10)"
+                              >
                                 <rect width="46" height="46" rx="23" />
                               </clipPath>
                             </defs>
-                        </svg>
+                          </svg>
                         </a>
                       </div>
                     </div>
@@ -1449,7 +1515,12 @@
                     <img
                       src="./images/clients_image2.png"
                       class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0" data-aos-delay="300"  data-aos-easing="ease"
+                      alt="Image"
+                      data-aos="magni-effect"
+                      data-aos-duration="1000"
+                      data-aos-offset="0"
+                      data-aos-delay="300"
+                      data-aos-easing="ease"
                     />
                   </div>
                   <div class="absolute bottom-0">
@@ -1463,7 +1534,8 @@
                           Mobile Development
                         </p>
                       </div>
-                      <div class="mobile:hidden pc:block"
+                      <div
+                        class="mobile:hidden pc:block"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100"
@@ -1550,19 +1622,48 @@
                           </svg>
                         </a>
                       </div>
-                      <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                      <div
+                        class="mobile:block pc:hidden"
+                        data-aos="zoom-in"
+                        data-aos-offset="0"
+                        data-aos-delay="300"
+                        data-aos-duration="1000"
+                      >
                         <a href="#">
-                          <svg class="mt-[-65px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           
-                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
-                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
-                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                          <svg
+                            class="mt-[-65px]"
+                            width="46"
+                            height="46"
+                            viewBox="0 0 46 46"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              data-figma-bg-blur-radius="10"
+                              width="46"
+                              height="46"
+                              rx="23"
+                              fill="#3B82F6"
+                            />
+                            <path
+                              d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z"
+                              fill="white"
+                              stroke="white"
+                            />
+                            <path
+                              d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z"
+                              fill="white"
+                              stroke="white"
+                            />
                             <defs>
-                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                              <clipPath
+                                id="bgblur_0_664_1926_clip_path"
+                                transform="translate(10 10)"
+                              >
                                 <rect width="46" height="46" rx="23" />
                               </clipPath>
                             </defs>
-                        </svg>
+                          </svg>
                         </a>
                       </div>
                     </div>
@@ -1582,7 +1683,12 @@
                     <img
                       src="./images/clients_image3.png"
                       class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0" data-aos-delay="300"  data-aos-easing="ease"
+                      alt="Image"
+                      data-aos="magni-effect"
+                      data-aos-duration="1000"
+                      data-aos-offset="0"
+                      data-aos-delay="300"
+                      data-aos-easing="ease"
                     />
                   </div>
                   <div class="absolute bottom-0">
@@ -1596,7 +1702,8 @@
                           E-commerce Solutions
                         </p>
                       </div>
-                      <div class="mobile:hidden pc:block"
+                      <div
+                        class="mobile:hidden pc:block"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100"
@@ -1683,19 +1790,48 @@
                           </svg>
                         </a>
                       </div>
-                      <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                      <div
+                        class="mobile:block pc:hidden"
+                        data-aos="zoom-in"
+                        data-aos-offset="0"
+                        data-aos-delay="300"
+                        data-aos-duration="1000"
+                      >
                         <a href="#">
-                          <svg class="mt-[-65px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           
-                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
-                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
-                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                          <svg
+                            class="mt-[-65px]"
+                            width="46"
+                            height="46"
+                            viewBox="0 0 46 46"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              data-figma-bg-blur-radius="10"
+                              width="46"
+                              height="46"
+                              rx="23"
+                              fill="#3B82F6"
+                            />
+                            <path
+                              d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z"
+                              fill="white"
+                              stroke="white"
+                            />
+                            <path
+                              d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z"
+                              fill="white"
+                              stroke="white"
+                            />
                             <defs>
-                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                              <clipPath
+                                id="bgblur_0_664_1926_clip_path"
+                                transform="translate(10 10)"
+                              >
                                 <rect width="46" height="46" rx="23" />
                               </clipPath>
                             </defs>
-                        </svg>
+                          </svg>
                         </a>
                       </div>
                     </div>
@@ -1715,7 +1851,12 @@
                     <img
                       src="./images/clients_image4.png"
                       class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0" data-aos-delay="300"  data-aos-easing="ease"
+                      alt="Image"
+                      data-aos="magni-effect"
+                      data-aos-duration="1000"
+                      data-aos-offset="0"
+                      data-aos-delay="300"
+                      data-aos-easing="ease"
                     />
                   </div>
                   <div class="absolute bottom-0">
@@ -1729,7 +1870,8 @@
                           CRM Implementation
                         </p>
                       </div>
-                      <div class="mobile:hidden pc:block"
+                      <div
+                        class="mobile:hidden pc:block"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100"
@@ -1816,19 +1958,48 @@
                           </svg>
                         </a>
                       </div>
-                      <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                      <div
+                        class="mobile:block pc:hidden"
+                        data-aos="zoom-in"
+                        data-aos-offset="0"
+                        data-aos-delay="300"
+                        data-aos-duration="1000"
+                      >
                         <a href="#">
-                          <svg class="mt-[-65px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           
-                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
-                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
-                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                          <svg
+                            class="mt-[-65px]"
+                            width="46"
+                            height="46"
+                            viewBox="0 0 46 46"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              data-figma-bg-blur-radius="10"
+                              width="46"
+                              height="46"
+                              rx="23"
+                              fill="#3B82F6"
+                            />
+                            <path
+                              d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z"
+                              fill="white"
+                              stroke="white"
+                            />
+                            <path
+                              d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z"
+                              fill="white"
+                              stroke="white"
+                            />
                             <defs>
-                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                              <clipPath
+                                id="bgblur_0_664_1926_clip_path"
+                                transform="translate(10 10)"
+                              >
                                 <rect width="46" height="46" rx="23" />
                               </clipPath>
                             </defs>
-                        </svg>
+                          </svg>
                         </a>
                       </div>
                     </div>
@@ -1848,7 +2019,12 @@
                     <img
                       src="./images/clients_image5.png"
                       class="mobile:h-[268px] tablet:h-auto"
-                      alt="Image" data-aos="magni-effect" data-aos-duration="1000" data-aos-offset="0" data-aos-delay="300"  data-aos-easing="ease"
+                      alt="Image"
+                      data-aos="magni-effect"
+                      data-aos-duration="1000"
+                      data-aos-offset="0"
+                      data-aos-delay="300"
+                      data-aos-easing="ease"
                     />
                   </div>
                   <div class="absolute bottom-0">
@@ -1862,7 +2038,8 @@
                           Digital Marketing
                         </p>
                       </div>
-                      <div class="mobile:hidden pc:block"
+                      <div
+                        class="mobile:hidden pc:block"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100"
@@ -1949,19 +2126,48 @@
                           </svg>
                         </a>
                       </div>
-                      <div class="mobile:block pc:hidden" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000">
+                      <div
+                        class="mobile:block pc:hidden"
+                        data-aos="zoom-in"
+                        data-aos-offset="0"
+                        data-aos-delay="300"
+                        data-aos-duration="1000"
+                      >
                         <a href="#">
-                          <svg class="mt-[-60px]" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           
-                            <rect data-figma-bg-blur-radius="10" width="46" height="46" rx="23" fill="#3B82F6" />
-                            <path d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z" fill="white" stroke="white" />
-                            <path d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z" fill="white" stroke="white" />
+                          <svg
+                            class="mt-[-60px]"
+                            width="46"
+                            height="46"
+                            viewBox="0 0 46 46"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              data-figma-bg-blur-radius="10"
+                              width="46"
+                              height="46"
+                              rx="23"
+                              fill="#3B82F6"
+                            />
+                            <path
+                              d="M17.8899 27.819C17.6814 27.6051 17.6641 27.2695 17.8378 27.0353L17.8899 26.9741L26.1266 18.5257C26.3541 18.2924 26.7228 18.2924 26.9503 18.5257C27.1588 18.7395 27.1762 19.0752 27.0024 19.3094L26.9503 19.3705L18.7136 27.819C18.4861 28.0523 18.1174 28.0523 17.8899 27.819Z"
+                              fill="white"
+                              stroke="white"
+                            />
+                            <path
+                              d="M19.9153 19.5592C19.5936 19.5599 19.3323 19.293 19.3316 18.9631C19.3309 18.6632 19.5459 18.4144 19.8267 18.3711L19.9127 18.3644L26.5427 18.3498C26.836 18.3491 27.079 18.5709 27.1203 18.8599L27.1264 18.9484L27.1127 25.7494C27.112 26.0793 26.8507 26.3463 26.5291 26.3456C26.2366 26.3449 25.995 26.1234 25.954 25.8352L25.9479 25.7469L25.96 19.5458L19.9153 19.5592Z"
+                              fill="white"
+                              stroke="white"
+                            />
                             <defs>
-                              <clipPath id="bgblur_0_664_1926_clip_path" transform="translate(10 10)">
+                              <clipPath
+                                id="bgblur_0_664_1926_clip_path"
+                                transform="translate(10 10)"
+                              >
                                 <rect width="46" height="46" rx="23" />
                               </clipPath>
                             </defs>
-                        </svg>
+                          </svg>
                         </a>
                       </div>
                     </div>
@@ -1972,7 +2178,8 @@
           </div>
         </div>
       </section>
-      <section x-data="{}"
+      <section
+        x-data="{}"
         class="tablet:mt-20 mobile:mt-10 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
       >
         <h2
@@ -2777,14 +2984,14 @@
                     </p>
                   </div>
                 </div>
-               <div x-data="{}">
-                 <a
-                 
-                  href="#"  @click.prevent
-                  class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 whitespace-pre-wrap font-jakarta font-bold text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
-                  >VIEW CASE STUDY</a
-                >
-               </div>
+                <div x-data="{}">
+                  <a
+                    href="#"
+                    @click.prevent
+                    class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 whitespace-pre-wrap font-jakarta font-bold text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
+                    >VIEW CASE STUDY</a
+                  >
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
@@ -2820,15 +3027,14 @@
                     </p>
                   </div>
                 </div>
-                  <div x-data="{}">
-                    <a
-                  @click.prevent
-                  href="#"
-                  class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
-                  >VIEW CASE STUDY</a
-                >
-                  </div>
-                
+                <div x-data="{}">
+                  <a
+                    @click.prevent
+                    href="#"
+                    class="block bg-[url('./images/header_btn_hide.svg')] bg-left bg-no-repeat h-[60px] w-[210px] pl-8 mt-5 font-jakarta font-medium text-lg leading-[60px] hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300"
+                    >VIEW CASE STUDY</a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -3341,7 +3547,8 @@
                 </h2>
               </div>
               <div>
-                <a href="#feedback"
+                <a
+                  href="#feedback"
                   type="button"
                   class="mobile:mt-[-30px] [word-spacing:2px] tracking-[2px] tablet:mt-[0px] h-[60px] pl-[40px] block pc:mt-[0px] tablet:mt-[-60px] font-jakarta font-bold pc:text-lg mobile:text-sm pc:leading-[60px] mobile:leading-[60px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat pc:bg-[10px_0px] mobile:bg-[10px_5px] pc:hover:bg-[url('./images/btn_icon_active.svg')] transition-all duration-300 ease-in"
                 >
@@ -3372,18 +3579,20 @@
             <div
               class="pc:flex tablet:grid tablet:grid-cols-[195px_195px_195px] mobile:grid mobile:gap-1 justify-center mobile:grid-cols-[142px_142px] flex-row flex-wrap mt-10 tablet:h-[585px] pc:h-[300px]"
             >
-              <div  
+              <div
                 class="flex-grow-1 hover:flex-grow-2 relative pc:w-auto tablet:w-[195px] mobile:w-[142px] h-[290px] mr-2 overflow-hidden transition-all duration-300 ease-in-out work_box"
               >
-                <div 
+                <div
                   x-data="{ isHovering: false }"
                   @mouseenter="isHovering = true"
                   @mouseleave="isHovering = false"
                   class="overflow-hidden"
-                 
                 >
                   <div class="absolute h-[290px]">
-                    <img data-aos="work-effect" data-aos-duration="1000" data-aos-offset="300"
+                    <img
+                      data-aos="work-effect"
+                      data-aos-duration="1000"
+                      data-aos-offset="300"
                       src="./images/work_image.jpg"
                       alt="image"
                       class="block min-h-[290px] object-cover overflow-hidden opacity-50"
@@ -3413,7 +3622,7 @@
                 </div>
               </div>
 
-              <div 
+              <div
                 class="flex-grow-1 hover:flex-grow-2 relative pc:w-auto tablet:w-[195px] mobile:w-[142px] h-[290px] mr-2 overflow-hidden transition-all duration-300 ease-in-out work_box"
               >
                 <div
@@ -3423,7 +3632,10 @@
                   class="overflow-hidden"
                 >
                   <div class="absolute h-[290px]">
-                    <img data-aos="work-effect" data-aos-duration="1000" data-aos-delay="600" 
+                    <img
+                      data-aos="work-effect"
+                      data-aos-duration="1000"
+                      data-aos-delay="600"
                       src="./images/work_image2.jpg"
                       alt="image"
                       class="block w-full h-full min-h-[290px] object-cover opacity-50 scale-110"
@@ -3453,7 +3665,7 @@
                 </div>
               </div>
 
-              <div 
+              <div
                 class="flex-grow-1 hover:flex-grow-2 relative pc:w-auto tablet:w-[195px] mobile:w-[142px] h-[290px] mr-2 overflow-hidden transition-all duration-300 ease-in-ou work_boxt"
               >
                 <div
@@ -3463,7 +3675,10 @@
                   class="overflow-hidden"
                 >
                   <div class="absolute h-[290px]">
-                    <img data-aos="work-effect" data-aos-duration="1000" data-aos-delay="700" 
+                    <img
+                      data-aos="work-effect"
+                      data-aos-duration="1000"
+                      data-aos-delay="700"
                       src="./images/work_image3.jpg"
                       alt="image"
                       class="block w-full min-h-[290px] object-cover h-full opacity-50"
@@ -3492,7 +3707,7 @@
                   </div>
                 </div>
               </div>
-              <div 
+              <div
                 class="flex-grow-1 hover:flex-grow-2 relative pc:w-auto tablet:w-[195px] mobile:w-[142px] h-[290px] mr-2 overflow-hidden transition-all duration-300 ease-in-out work_box"
               >
                 <div
@@ -3502,7 +3717,10 @@
                   class="overflow-hidden"
                 >
                   <div class="absolute h-[290px]">
-                    <img data-aos="work-effect" data-aos-duration="1000" data-aos-delay="800" 
+                    <img
+                      data-aos="work-effect"
+                      data-aos-duration="1000"
+                      data-aos-delay="800"
                       src="./images/work_image4.jpg"
                       alt="image"
                       class="block min-h-[290px] object-cover w-full h-full opacity-50"
@@ -3531,7 +3749,7 @@
                   </div>
                 </div>
               </div>
-              <div 
+              <div
                 class="flex-grow-1 tablet:flex-grow-2 hover:flex-grow-2 relative pc:w-auto mobile:w-[142px] tablet:w-[195px] h-[290px] mr-2 overflow-hidden transition-all duration-300 ease-in-out work_box"
               >
                 <div
@@ -3541,7 +3759,10 @@
                   class="overflow-hidden"
                 >
                   <div class="absolute h-[290px]">
-                    <img data-aos="work-effect" data-aos-duration="1000" data-aos-delay="900" 
+                    <img
+                      data-aos="work-effect"
+                      data-aos-duration="1000"
+                      data-aos-delay="900"
                       src="./images/work_image5.jpg"
                       alt="image"
                       class="block min-h-[290px] object-cover w-full h-full opacity-50"
@@ -3580,7 +3801,10 @@
                   class="overflow-hidden"
                 >
                   <div class="absolute h-[290px]">
-                    <img data-aos="work-effect" data-aos-duration="1000" data-aos-delay="1000" 
+                    <img
+                      data-aos="work-effect"
+                      data-aos-duration="1000"
+                      data-aos-delay="1000"
                       src="./images/work_image6.jpg"
                       alt="image"
                       class="block min-h-[290px] object-cover w-full h-full opacity-50"
@@ -3811,7 +4035,7 @@
           </section>
         </div>
       </div>
-      <section 
+      <section
         class="tablet:mt-30 mobile:mt-10 pc:mt-20 pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto"
       >
         <div
@@ -3833,7 +4057,9 @@
                     alt="Image"
                     class="pc:max-w-[147px] mobile:max-w-[75px] pc:w-[147px] mobile:w-[75px] pc:h-[168px] tablet:h-[85px]"
                   />
-                  <div class="client pc:w-['auto'] mobile:w-[90px] tablet:w-[140px]">
+                  <div
+                    class="client pc:w-['auto'] mobile:w-[90px] tablet:w-[140px]"
+                  >
                     <svg
                       class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
                       width="40"
@@ -3867,7 +4093,9 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="relative pc:h-[180px] mobile:h-[105px] tablet:h-[130px]">
+                  <div
+                    class="relative pc:h-[180px] mobile:h-[105px] tablet:h-[130px]"
+                  >
                     <img
                       src="./images/active_slider/img.png"
                       alt="Image"
@@ -3879,7 +4107,9 @@
                       class="absolute pc:max-w-[147px] mobile:max-w-[75px] pc:w-[147px] mobile:w-[75px] pc:h-[168px] tablet:h-[85px] slide-hide transition-opacity duration-300 ease-in"
                     />
                   </div>
-                  <div class="client pc:w-['auto'] mobile:w-[90px] tablet:w-[140px] opacity-0">
+                  <div
+                    class="client pc:w-['auto'] mobile:w-[90px] tablet:w-[140px] opacity-0"
+                  >
                     <svg
                       class="relative top-[-20px] pc:left-[105px] mobile:left-[46px] pc:w-[40px] pc:h-[40px] mobile:w-[29px] mobile:h-[29px]"
                       width="40"
@@ -3913,7 +4143,9 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="relative pc:h-[180px] mobile:h-[105px] tablet:h-[130px]">
+                  <div
+                    class="relative pc:h-[180px] mobile:h-[105px] tablet:h-[130px]"
+                  >
                     <img
                       src="./images/active_slider/img1.png"
                       alt="Image"
@@ -4923,7 +5155,8 @@
           </div>
         </div>
       </section>
-      <section id="feedback"
+      <section
+        id="feedback"
         class="mobile:mt-[300px] pc:mt-20 tablet:mt-0 pc:max-w-[960px] tablet:max-w-[608px] mx-auto"
       >
         <div
@@ -4944,25 +5177,65 @@
           >
             Tell us about your idea and we'll turn it into reality
           </p>
-          <form action="#" method="post" class="mt-10" @submit.prevent>
+          <div
+              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, open1:false, selected: 'Select Service *', selected1: 'Select Range *', form: { name: '', email: '', message: '' }, 
+                        errors: {}, 
+                        submit() {
+                            const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                            const be = /^[a-zA-Zа-яА-ЯёЁ]{3}$/;
+                           
+                            
+                            this.errors = {};
+                            if (this.form.name === '') {
+                                  this.openModal2 = true;
+                                this.errors.name = 'Имя обязательно';
+                            }
+                            if (!re.test(this.form.email)) {
+                                  this.openModal2 = true;
+                                this.errors.email = 'Почта обязательно';
+                            }
+                            
+                            if (this.selected === 'Select Service *') {
+                                this.errors.service = 'Пожалуйста, выберите ';
+                               
+                            }
+                            if (this.selected1 === 'Select Range *') {
+                                this.errors.range = 'Пожалуйста, выберите ';
+                                
+                            }
+                            if (this.form.message === '') {
+                                  this.openModal2 = true;
+                                this.errors.message = 'Сообщение обязательно';
+                            }
+                            if (Object.keys(this.errors).length === 0) {
+                                this.openModal1 = true; // Открываем модалку при успехе
+                                // Здесь логика отправки данных (fetch и т.д.)
+                            }
+                        }}"
+              class="p-4 relative z-300"
+            >
+            <form action="#" method="post" class="mt-10"  @submit.prevent="submit">
             <div
               class="grid tablet:grid-cols-[223px_223px] mobile:grid-cols-[300] mobile:max-w-[300px] tablet:max-w-['auto'] mx-auto pc:grid-cols-[319px_319px] justify-center gap-x-18"
             >
-              <div class="mb-5">
-                <input
-                  class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
+              <div class="relative mb-5">
+                <input x-model="form.name"  
+                  class="pc:w-[319px] relative z-20 tablet:w-[223px]  mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
                   type="text"
-                  name="name"
+                  name="names"
                   placeholder="Your name *"
                 />
+                <span x-show="errors.name" style="display:none"  class="block absolute pc:right-[-140px] pc:top-[20px] tablet:right-[-100px] tablet:top-[20px] mobile:right-[-130px] mobile:top-[20px] w-full bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
-              <div class="mb-5">
-                <input
-                  class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
-                  type="email"
+              <div class="relative mb-5">
+                <input x-model="form.email" 
+                  class="pc:w-[319px] relative z-20 tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
+                  type="text"
                   name="name"
                   placeholder="Your Email *"
                 />
+                <span x-show="errors.email" style="display:none" class="block absolute pc:right-[-140px] pc:top-[20px] tablet:right-[-100px] tablet:top-[20px] mobile:right-[-130px] mobile:top-[20px] w-full bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
+
               </div>
               <div class="mb-5">
                 <input
@@ -4973,12 +5246,12 @@
                 />
               </div>
               <div class="relative mb-5">
-                <div x-data="{ open: false, selected: 'Select Service' }">
+                
                   <button
                     @click="open = !open"
                     type="button"
                     name="dropdown"
-                    class="grid pc:grid-cols-[250px_10px] none-spassing tablet:grid-cols-[213px_10px] mobile:grid-cols-[287px_10px] items-center justify-between text-left pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] font-poppins font-normal pc:text-lg mobile:text-sm text-white-300 border-b border-solid border-white-300"
+                    class="grid relative z-20 pc:grid-cols-[250px_10px] none-spassing tablet:grid-cols-[213px_10px] mobile:grid-cols-[287px_10px] items-center justify-between text-left pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] font-poppins font-normal pc:text-lg mobile:text-sm text-white-300 border-b border-solid border-white-300"
                   >
                     <span x-text="selected"></span>
                     <!-- Отображение выбранного значения -->
@@ -5057,19 +5330,19 @@
                     </p>
                     <div class="border-b border-solid border-[#d9d9d9]"></div>
                   </div>
-                </div>
+                 <span x-show="errors.service" style="display:none"  class="block absolute pc:right-[-140px] pc:top-[20px] tablet:right-[-90px] tablet:top-[20px] mobile:right-[-130px] mobile:top-[20px] w-full bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
               <div class="relative mb-5">
-                <div x-data="{ open: false, selected: 'Budget Range *' }">
+               
                   <button
-                    @click="open = !open"
+                    @click="open1 = !open"
                     type="button"
                     name="dropdown"
-                    class="mobile:mt-5 tablet:mt-0 none-spassing grid grid-cols-[250px_10px] items-center justify-between text-left pc:w-[709px] tablet:w-[520px] mobile:w-[300px] h-[56px] font-poppins font-normal pc:text-lg mobile:text-sm text-white-300 border-b border-solid border-white-300"
+                    class="mobile:mt-5 relative z-20 tablet:mt-0 none-spassing grid grid-cols-[250px_10px] items-center justify-between text-left pc:w-[709px] tablet:w-[520px] mobile:w-[300px] h-[56px] font-poppins font-normal pc:text-lg mobile:text-sm text-white-300 border-b border-solid border-white-300"
                   >
-                    <span x-text="selected"></span>
+                    <span x-text="selected1"></span>
                     <!-- Отображение выбранного значения -->
-                    <span x-show="open">
+                    <span x-show="open1">
                       <svg
                         width="10"
                         height="6"
@@ -5083,7 +5356,7 @@
                           stroke="#DEDEDE"
                           stroke-width="0.5"
                         /></svg></span
-                    ><span x-show="!open">
+                    ><span x-show="!open1">
                       <svg
                         width="10"
                         height="6"
@@ -5101,108 +5374,160 @@
                     <!-- Стрелки -->
                   </button>
                   <div
-                    x-show="open"
-                    @click.outside="open = false"
+                    x-show="open1"
+                    @click.outside="open1 = false"
                     x-transition.opacity.duration.500ms
                     class="absolute z-50 top-[60px] left-[-20px] pc:w-[739px] tablet:w-[540px] mobile:w-[320px] bg-[#222] px-5 pb-5"
                   >
                     <p
-                      @click="selected = 'Custom Web Development'; open = false;"
+                      @click="selected1 = 'Custom Web Development'; open1 = false;"
                       class="mb-3 mt-2 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Budget Range
                     </p>
                     <p
-                      @click="selected = 'Laravel Development'; open = false;"
+                      @click="selected1 = 'Laravel Development'; open1 = false;"
                       class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Budget Ranget
                     </p>
                     <p
-                      @click="selected = 'Mobile Development'; open = false;"
+                      @click="selected1 = 'Mobile Development'; open1 = false;"
                       class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Budget Range
                     </p>
                     <p
-                      @click="selected = 'E-commerce Solutions'; open = false;"
+                      @click="selected1 = 'E-commerce Solutions'; open1 = false;"
                       class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Budget Range
                     </p>
                     <p
-                      @click="selected = 'CRM Implementation'; open = false;"
+                      @click="selected1 = 'CRM Implementation'; open1 = false;"
                       class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Budget Range
                     </p>
                     <p
-                      @click="selected = 'Digital Marketing'; open = false;"
+                      @click="selected1 = 'Digital Marketing'; open1 = false;"
                       class="mb-3 font-poppins font-normal pc:text-base mobile:text-sm text-[#cac5c5] cursor-pointer hover:text-white-100 transition-colors duration-300 ease-in"
                     >
                       Budget Range
                     </p>
                     <div class="border-b border-solid border-[#d9d9d9]"></div>
                   </div>
-                </div>
+               <span x-show="errors.range" style="display:none"  class="block absolute pc:right-[-530px] pc:top-[20px] tablet:right-[-385px] tablet:top-[20px] mobile:right-[-130px] mobile:top-[40px] w-full bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
               <br />
-              <div>
-                <textarea
-                  class="pc:w-[709px] tablet:w-[520px] mobile:w-[300px] h-[96px] mt-5 pt-5 text-left outline-none font-poppins font-normal pc:text-lg tablet:text-sm border-b border-solid border-white-300"
-                  name="message"
+              <div class="relative">
+                <textarea x-model="form.message"
+                  class="pc:w-[709px] relative z-20 tablet:w-[520px] mobile:w-[300px] h-[96px] mt-5 pt-5 text-left outline-none font-poppins font-normal pc:text-lg tablet:text-sm border-b border-solid border-white-300"
+                  name="message1"
                   placeholder="Tell us about your project *"
                 ></textarea>
+                <span x-show="errors.message" style="display:none" class="block absolute pc:right-[-530px] pc:top-[40px] tablet:right-[-385px] tablet:top-[40px] mobile:right-[-130px] mobile:top-[40px] w-full bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
               <br />
               <div class="flex">
-                  <div x-data="{ openModal1: false, openModal2: false }" class="p-4 relative z-300">
-    <!-- Кнопки управления -->
-   
-                  <button @click="openModal1 = true"   @click.prevent
-                  class="relative pc:left-[200px] [word-spacing:2px] tracking-[2px] tablet:left-[130px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat mt-7 mx-auto pc:bg-[20px_0px] pl-[40px] tablet:bg-[25px_5px] mobile:bg-[20px_5px] h-[60px] tablet:w-[190px] mobile:w-[180px] font-jakarta font-bold pc:text-lg tablet:text-sm leading-[20px] pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300"
-                  type="submit"
-                >
-                  SENDRE QUEST
-                </button>
-    <!-- Модальное окно 1 -->
-    <div x-show="openModal1"   style="display: none"
-         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-         x-transition>
-        
-        <div @click.away="openModal1 = false" class="relative bg-blue p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg">
-          <button @click.prevent @click="openModal1 = false" class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"></button>
-           <div class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center ">
-            <div>
-              <img src="./images/Platform/icon_modal.svg" class="mx-auto pc:w-[103px] pc:h-[103px] mobile:h-[43px] mobile:w-[43px]" alt="Image">
-              <h2 class="text-center font-poppins pc:font-medium mobile:font-semibold pc:text-[30px] mobile:text-base pc:mt-10 mobile:mt-5 pc:mb-10 mobile:mb-5">Form submitted successfully</h2>
-              <p class="text-center pc:font-poppins mobile:font-jakarta font-normal pc:text-lg mobile:text-sm leading-[175%]">We have received your request and are already working on it. Our manager will contact you shortly.</p>
-            </div>
-           </div>
-        </div>
-    </div>
-
-    <!-- Модальное окно 2 (вложенное или независимое) -->
-    <div x-show="openModal2"  style="display: none"
-         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-         x-transition>
-        <div @click.away="openModal2 = false" class="relative bg-[#52525b] p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px]  shadow-lg">
-            <button @click.prevent @click="openModal2 = false" class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"></button>
-            <div class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center ">
-            <div>
-              <img src="./images/Platform/erorr_modal.svg" class="mx-auto pc:w-[114px] pc:h-[114px] mobile:h-[69px] mobile:w-[69px]" alt="Image">
-              <h2 class="text-center font-poppins pc:font-medium mobile:font-semibold pc:text-[30px] mobile:text-base pc:mt-10 mobile:mt-5 pc:mb-10 mobile:mb-5">Failed to submit form</h2>
-              <p class="text-center pc:font-poppins mobile:font-jakarta font-normal pc:text-lg mobile:text-sm leading-[175%]">A technical error occurred. Please try again or contact us in another way.</p>
-            </div>
-           </div>
-        </div>
-    </div>
-                  </div>
                 
+                  <!-- Кнопки управления -->
 
+                  <button
+                   
+                   
+                    class="relative pc:left-[200px] [word-spacing:2px] tracking-[2px] tablet:left-[130px] pc:bg-[url('./images/header_btn_hide.svg')] tablet:bg-[url('./images/mobile/btn_header.svg')] mobile:bg-[url('./images/mobile/btn_header.svg')] mobile:hover:bg-[url('./images/mobile/btn_active_header.svg')] bg-no-repeat mt-7 mx-auto pc:bg-[20px_0px] pl-[40px] tablet:bg-[25px_5px] mobile:bg-[20px_5px] h-[60px] tablet:w-[190px] mobile:w-[180px] font-jakarta font-bold pc:text-lg tablet:text-sm leading-[20px] pc:hover:bg-[url('./images/btn_icon_active.svg')] tablet:hover:bg-[url('./images/mobile/btn_active_header.svg')] transition-all duration-300"
+                    type="submit"
+                  >
+                    SENDRE QUEST
+                  </button>
+                  <!-- Модальное окно 1 -->
+                  <div
+                    x-show="openModal1"
+                    style="display: none"
+                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    x-transition
+                  >
+                    <div
+                      @click.away="openModal1 = false"
+                      class="relative bg-blue p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg"
+                    >
+                      <button
+                        @click.prevent
+                        @click="openModal1 = false"
+                        class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
+                      ></button>
+                      <div
+                        class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center"
+                      >
+                        <div>
+                          <img
+                            src="./images/Platform/icon_modal.svg"
+                            class="mx-auto pc:w-[103px] pc:h-[103px] mobile:h-[43px] mobile:w-[43px]"
+                            alt="Image"
+                          />
+                          <h2
+                            class="text-center font-poppins pc:font-medium mobile:font-semibold pc:text-[30px] mobile:text-base pc:mt-10 mobile:mt-5 pc:mb-10 mobile:mb-5"
+                          >
+                            Form submitted successfully
+                          </h2>
+                          <p
+                            class="text-center pc:font-poppins mobile:font-jakarta font-normal pc:text-lg mobile:text-sm leading-[175%]"
+                          >
+                            We have received your request and are already
+                            working on it. Our manager will contact you shortly.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Модальное окно 2 (вложенное или независимое) -->
+                  <div
+                    x-show="openModal2"
+                    style="display: none"
+                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    x-transition
+                  >
+                    <div
+                      @click.away="openModal2 = false"
+                      class="relative bg-[#52525b] p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg"
+                    >
+                      <button
+                        @click.prevent
+                        @click="openModal2 = false"
+                        class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
+                      ></button>
+                      <div
+                        class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center"
+                      >
+                        <div>
+                          <img
+                            src="./images/Platform/erorr_modal.svg"
+                            class="mx-auto pc:w-[114px] pc:h-[114px] mobile:h-[69px] mobile:w-[69px]"
+                            alt="Image"
+                          />
+                          <h2
+                            class="text-center font-poppins pc:font-medium mobile:font-semibold pc:text-[30px] mobile:text-base pc:mt-10 mobile:mt-5 pc:mb-10 mobile:mb-5"
+                          >
+                            Failed to submit form
+                          </h2>
+                          <p
+                            class="text-center pc:font-poppins mobile:font-jakarta font-normal pc:text-lg mobile:text-sm leading-[175%]"
+                          >
+                            A technical error occurred. Please try again or
+                            contact us in another way.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+               
               </div>
             </div>
           </form>
+          </div>
+          
           <section
             class="mobile:block fixed bottom-0 left-0 right-0 bg-[#222] py-2 z-100 tablet:hidden mt-[50px]"
           >
@@ -5698,6 +6023,5 @@
         </div>
       </div>
     </footer>
-    
   </body>
 </html>

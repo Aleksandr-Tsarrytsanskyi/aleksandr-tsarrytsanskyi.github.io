@@ -591,22 +591,61 @@
             </div>
           </div>
           <div class="bg-[#222] px-10.5 py-5" x-data="{}">
-            <form action="#" method="post" @submit.prevent>
-              <div class="mb-10">
-                <input
+            <div
+              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, open1:false, selected: 'Project Type *', selected1: 'Project Budget *', form: { name: '', email: '', message: '' }, 
+                        errors: {}, 
+                        submit() {
+                            const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                            const be = /^[a-zA-Zа-яА-ЯёЁ]{3}$/;
+                           
+                            
+                            this.errors = {};
+                            if (this.form.name === '') {
+                                  this.openModal2 = true;
+                                this.errors.name = 'Имя обязательно';
+                            }
+                            if (!re.test(this.form.email)) {
+                                  this.openModal2 = true;
+                                this.errors.email = 'Почта обязательно';
+                            }
+                            
+                            if (this.selected === 'Project Type *') {
+                                this.errors.service = 'Пожалуйста, выберите ';
+                               
+                            }
+                            if (this.selected1 === 'Project Budget *') {
+                                this.errors.range = 'Пожалуйста, выберите ';
+                                
+                            }
+                            if (this.form.message === '') {
+                                  this.openModal2 = true;
+                                this.errors.message = 'Сообщение обязательно';
+                            }
+                            if (Object.keys(this.errors).length === 0) {
+                                this.openModal1 = true; // Открываем модалку при успехе
+                                // Здесь логика отправки данных (fetch и т.д.)
+                            }
+                        }}"
+              class=" relative z-300"
+            >
+            <form action="#" method="post" @submit.prevent="submit">
+              <div class="mb-10 relative">
+                <input x-model="form.name"
                   type="text"
                   name="name"
                   class="pc:w-[398px] mobile:w-[220px] tablet:w-[250px] h-[56px] font-poppins font-normal pc:text-lg mobile:text-base text-white-300 outline-none border-b border-solid border-text-white-300 placeholder:text-white-300"
                   placeholder="Full Name *"
                 />
+                 <span x-show="errors.name" style="display:none"  class="block absolute pc:right-[-180px] pc:top-[20px] tablet:right-[-110px] tablet:top-[20px] mobile:right-[-90px] mobile:top-[20px] w-full bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
-              <div class="mb-10">
-                <input
-                  type="email"
+              <div class="mb-10 relative">
+                <input x-model="form.email"
+                  type="text"
                   name="mail"
                   class="pc:w-[398px] mobile:w-[220px] tablet:w-[250px] h-[56px] font-poppins font-normal pc:text-lg mobile:text-base text-white-300 outline-none border-b border-solid border-text-white-300 placeholder:text-white-300"
                   placeholder="Email Address *"
                 />
+                 <span x-show="errors.email" style="display:none"  class="block absolute pc:right-[-180px] pc:top-[20px] tablet:right-[-110px] tablet:top-[20px] mobile:right-[-90px] mobile:top-[20px] w-full bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
               <div class="mb-10">
                 <input
@@ -625,7 +664,7 @@
                 />
               </div>
               <div class="mb-10 relative">
-                <div x-data="{ open: false, selected: 'Project Type *' }">
+               
                   <button
                     @click="open = !open"
                     type="button"
@@ -709,19 +748,19 @@
                     </p>
                     <div class="border-b border-solid border-[#d9d9d9]"></div>
                   </div>
-                </div>
+                 <span x-show="errors.service" style="display:none"  class="block absolute pc:right-[-180px] pc:top-[20px] tablet:right-[-110px] tablet:top-[20px] mobile:right-[-90px] mobile:top-[20px] w-full bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
               <div class="mb-10 relative">
-                <div x-data="{ open: false, selected: 'Project Budget' }">
+                
                   <button
-                    @click="open = !open"
+                    @click="open1 = !open1"
                     type="button"
                     name="dropdown"
                     class="grid pc:grid-cols-[250px_10px] !tracking-[0px] mobile:grid-cols-[200px_10px] items-center justify-between text-left pc:w-[398px] mobile:w-[220px] tablet:w-[250px] h-[56px] font-poppins font-normal pc:text-lg mobile:text-base text-white-300 border-b border-solid border-white-300"
                   >
-                    <span x-text="selected"></span>
+                    <span x-text="selected1"></span>
                     <!-- Отображение выбранного значения -->
-                    <span x-show="open">
+                    <span x-show="open1">
                       <svg
                         width="10"
                         height="6"
@@ -735,7 +774,7 @@
                           stroke="#DEDEDE"
                           stroke-width="0.5"
                         /></svg></span
-                    ><span x-show="!open">
+                    ><span x-show="!open1">
                       <svg
                         width="10"
                         height="6"
@@ -753,57 +792,58 @@
                     <!-- Стрелки -->
                   </button>
                   <div
-                    x-show="open"
-                    @click.outside="open = false"
+                    x-show="open1"
+                    @click.outside="open1 = false"
                     x-transition.opacity.duration.500ms
                     class="absolute z-100 top-[40px] left-[-20px] pc:w-[340px] mobile:w-[240px] tablet:w-[270px] bg-[#222] px-5 pb-5"
                   >
                     <p
-                      @click="selected = 'Project Budget'; open = false;"
+                      @click="selected1 = 'Project Budget'; open1 = false;"
                       class="mb-3 mt-2 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Project Budget
                     </p>
                     <p
-                      @click="selected = 'Project Budget'; open = false;"
+                      @click="selected1 = 'Project Budget'; open1 = false;"
                       class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Project Budget
                     </p>
                     <p
-                      @click="selected = 'Project Budget'; open = false;"
+                      @click="selected1 = 'Project Budget'; open1 = false;"
                       class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Project Budget
                     </p>
                     <p
-                      @click="selected = 'Project Budget'; open = false;"
+                      @click="selected1 = 'Project Budget'; open1 = false;"
                       class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Project Budgets
                     </p>
                     <p
-                      @click="selected = 'Project Budget'; open = false;"
+                      @click="selected1 = 'Project Budget'; open1 = false;"
                       class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Project Budget
                     </p>
                     <p
-                      @click="selected = 'Project Budgetg'; open = false;"
+                      @click="selected1 = 'Project Budgetg'; open1 = false;"
                       class="mb-3 font-poppins font-normal text-base text-[#cac5c5] cursor-pointer hover:text-white-100 hover:underline transition-colors duration-300 ease-in"
                     >
                       Project Budget
                     </p>
                     <div class="border-b border-solid border-[#d9d9d9]"></div>
                   </div>
-                </div>
+                 <span x-show="errors.range" style="display:none"  class="block absolute pc:right-[-180px] pc:top-[20px] tablet:right-[-110px] tablet:top-[20px] mobile:right-[-90px] mobile:top-[20px] w-full bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
-              <div class="mb-10">
-                <textarea
+              <div class="mb-10 relative">
+                <textarea x-model="form.message"
                   name="message"
                   class="pc:w-[398px] mobile:w-[220px] tablet:w-[250px] pc:h-[80px] mobile:h-[60px] font-poppins font-normal pc:text-lg mobile:text-base text-white-300 outline-none border-b border-solid border-text-white-300 placeholder:text-white-300"
                   placeholder="Message *"
                 ></textarea>
+                 <span x-show="errors.message" style="display:none"  class="block absolute pc:right-[-180px] pc:top-[0px] tablet:right-[-110px] tablet:top-[20px] mobile:right-[-90px] mobile:top-[20px] w-full bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
               <div class="flex">
                 <button
@@ -812,8 +852,89 @@
                 >
                   SEND MESSAGE
                 </button>
+                 <div
+                    x-show="openModal1"
+                    style="display: none"
+                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    x-transition
+                  >
+                    <div
+                      @click.away="openModal1 = false"
+                      class="relative bg-blue p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg"
+                    >
+                      <button
+                        @click.prevent
+                        @click="openModal1 = false"
+                        class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
+                      ></button>
+                      <div
+                        class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center"
+                      >
+                        <div>
+                          <img
+                            src="./images/Platform/icon_modal.svg"
+                            class="mx-auto pc:w-[103px] pc:h-[103px] mobile:h-[43px] mobile:w-[43px]"
+                            alt="Image"
+                          />
+                          <h2
+                            class="text-center font-poppins pc:font-medium mobile:font-semibold pc:text-[30px] mobile:text-base pc:mt-10 mobile:mt-5 pc:mb-10 mobile:mb-5"
+                          >
+                            Form submitted successfully
+                          </h2>
+                          <p
+                            class="text-center pc:font-poppins mobile:font-jakarta font-normal pc:text-lg mobile:text-sm leading-[175%]"
+                          >
+                            We have received your request and are already
+                            working on it. Our manager will contact you shortly.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Модальное окно 2 (вложенное или независимое) -->
+                  <div
+                    x-show="openModal2"
+                    style="display: none"
+                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    x-transition
+                  >
+                    <div
+                      @click.away="openModal2 = false"
+                      class="relative bg-[#52525b] p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg"
+                    >
+                      <button
+                        @click.prevent
+                        @click="openModal2 = false"
+                        class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
+                      ></button>
+                      <div
+                        class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center"
+                      >
+                        <div>
+                          <img
+                            src="./images/Platform/erorr_modal.svg"
+                            class="mx-auto pc:w-[114px] pc:h-[114px] mobile:h-[69px] mobile:w-[69px]"
+                            alt="Image"
+                          />
+                          <h2
+                            class="text-center font-poppins pc:font-medium mobile:font-semibold pc:text-[30px] mobile:text-base pc:mt-10 mobile:mt-5 pc:mb-10 mobile:mb-5"
+                          >
+                            Failed to submit form
+                          </h2>
+                          <p
+                            class="text-center pc:font-poppins mobile:font-jakarta font-normal pc:text-lg mobile:text-sm leading-[175%]"
+                          >
+                            A technical error occurred. Please try again or
+                            contact us in another way.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </form>
+            </div>
           </div>
         </div>
       </section>
