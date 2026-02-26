@@ -635,7 +635,7 @@
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
-              class="p-4 relative z-20"
+              class="p-4 relative "
             >
             <form action="#" method="post" @submit.prevent="submit">
                   <div class="relative pc:mb-5 mobile:mb-3 flex">
@@ -755,17 +755,17 @@
                     <div
                     x-show="openModal1"
                     style="display: none"
-                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    class="fixed inset-0 z-120 bg-black bg-opacity-50 flex items-center justify-center z-120"
                     x-transition
                   >
                     <div
                       @click.away="openModal1 = false"
-                      class="relative bg-blue p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg"
+                      class="relative bg-blue z-320 p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg"
                     >
                       <button
                         @click.prevent
                         @click="openModal1 = false"
-                        class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
+                        class="absolute z-140 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
                       ></button>
                       <div
                         class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center"
@@ -796,20 +796,20 @@
                   <div
                     x-show="openModal2"
                     style="display: none"
-                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    class="fixed inset-0  bg-black bg-opacity-50 flex items-center justify-center z-120"
                     x-transition
                   >
                     <div
                       @click.away="openModal2 = false"
-                      class="relative bg-[#52525b] p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg"
+                      class="relative  bg-[#52525b] p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg"
                     >
                       <button
                         @click.prevent
                         @click="openModal2 = false"
-                        class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
+                        class="absolute z-140 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
                       ></button>
                       <div
-                        class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center"
+                        class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute  inset-0 justify-center items-center justify-items-center"
                       >
                         <div>
                           <img
@@ -1800,27 +1800,56 @@
         >
           Want to work with us on projects like this? Send us your resume!
         </h2>
-        <form action="#" method="post" @submit.prevent>
+        <div
+              x-data="{ openModal1: false, isValid: true, openModal2: false, form: { name: '', title: '' }, 
+                        errors: {}, 
+                        submit() {
+                            const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                           
+                           
+                            
+                            this.errors = {};
+                            
+                            if (!re.test(this.form.name)) {
+                                  this.openModal2 = true;
+                                this.errors.name = ' обязательно';
+                            }
+                            if (this.form.title === '') {
+                                  this.openModal2 = true;
+                                this.errors.title = ' обязательно';
+                            }
+                            
+                            
+                            if (Object.keys(this.errors).length === 0) {
+                                this.openModal1 = true; // Открываем модалку при успехе
+                                // Здесь логика отправки данных (fetch и т.д.)
+                            }
+                        }}"
+              class="p-4 relative "
+            >
+            <form action="#" method="post" @submit.prevent="submit">
           <div
             class="grid pc:grid-cols-[309px_339px] mobile:grid-cols-[300px] tablet:grid-cols-[114px_114px_174px_95px] tablet:items-center gap-y-10 pc:gap-x-20 tablet:gap-x-9 justify-center"
           >
-            <div>
-              <input
+            <div class="relative">
+              <input x-model="form.name"
                 type="text"
                 class="pc:w-[309px] mobile:w-[300px] tablet:w-[114px] h-[56px] outline-none font-poppins font-normal pc:text-lg mobile:text-xs text-white-300 placeholder:text-white-300 border-b border-solid border-white-300"
                 name="name"
                 placeholder="Your name *"
               />
+               <span x-show="errors.name" style="display:none"  class="block w-[10px] absolute pc:right-[15px] pc:top-[10px] tablet:right-[15px] tablet:top-[10px] mobile:right-[15px] mobile:top-[10px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
             </div>
-            <div>
-              <input
+            <div class="relative">
+              <input x-model="form.title"
                 type="text"
                 class="pc:w-[309px] mobile:w-[300px] tablet:w-[114px] h-[56px] outline-none font-poppins font-normal pc:text-lg mobile:text-xs text-white-300 placeholder:text-white-300 border-b border-solid border-white-300"
                 name="job"
                 placeholder="Job title *"
               />
+               <span x-show="errors.title" style="display:none"  class="block w-[10px] absolute pc:right-[50px] pc:top-[10px] tablet:right-[15px] tablet:top-[10px] mobile:right-[15px] mobile:top-[10px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
             </div>
-            <div class="relative tablet:mx-auto pc:mx-0">
+            <div class="relative tablet:mx-auto pc:mx-0 tablet:left-[-20px] pc:left-[0px]">
               <input
                 type="file"
                 class="absolute top-0 left-0 w-full h-full opacity-0 text-[0] cursor-pointer outline-none font-poppins font-normal text-white-300 placeholder:text-white-300"
@@ -1862,9 +1891,91 @@
               >
                 SEND
               </button>
+              <div
+                    x-show="openModal1"
+                    style="display: none"
+                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-120"
+                    x-transition
+                  >
+                    <div
+                      @click.away="openModal1 = false"
+                      class="relative bg-blue p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg"
+                    >
+                      <button
+                        @click.prevent
+                        @click="openModal1 = false"
+                        class="absolute z-140 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
+                      ></button>
+                      <div
+                        class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center"
+                      >
+                        <div>
+                          <img
+                            src="./images/Platform/icon_modal.svg"
+                            class="mx-auto pc:w-[103px] pc:h-[103px] mobile:h-[43px] mobile:w-[43px]"
+                            alt="Image"
+                          />
+                          <h2
+                            class="text-center font-poppins pc:font-medium mobile:font-semibold pc:text-[30px] mobile:text-base pc:mt-10 mobile:mt-5 pc:mb-10 mobile:mb-5"
+                          >
+                            Form submitted successfully
+                          </h2>
+                          <p
+                            class="text-center pc:font-poppins mobile:font-jakarta font-normal pc:text-lg mobile:text-sm leading-[175%]"
+                          >
+                            We have received your request and are already
+                            working on it. Our manager will contact you shortly.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+                  <!-- Модальное окно 2 (вложенное или независимое) -->
+                  <div
+                    x-show="openModal2"
+                    style="display: none"
+                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-120"
+                    x-transition
+                  >
+                    <div
+                      @click.away="openModal2 = false"
+                      class="relative bg-[#52525b] p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg"
+                    >
+                      <button
+                        @click.prevent
+                        @click="openModal2 = false"
+                        class="absolute z-140 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
+                      ></button>
+                      <div
+                        class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center"
+                      >
+                        <div>
+                          <img
+                            src="./images/Platform/erorr_modal.svg"
+                            class="mx-auto pc:w-[114px] pc:h-[114px] mobile:h-[69px] mobile:w-[69px]"
+                            alt="Image"
+                          />
+                          <h2
+                            class="text-center font-poppins pc:font-medium mobile:font-semibold pc:text-[30px] mobile:text-base pc:mt-10 mobile:mt-5 pc:mb-10 mobile:mb-5"
+                          >
+                            Failed to submit form
+                          </h2>
+                          <p
+                            class="text-center pc:font-poppins mobile:font-jakarta font-normal pc:text-lg mobile:text-sm leading-[175%]"
+                          >
+                            A technical error occurred. Please try again or
+                            contact us in another way.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
           </div>
         </form>
+            </div>
+        
       </section>
       <section class="mt-20">
         <h2
@@ -3104,7 +3215,7 @@
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
-              class="p-4 relative z-20"
+              class="p-4 relative "
             >
             <form action="#" method="post" class="mt-10"  @submit.prevent="submit">
           <div
@@ -3440,11 +3551,11 @@
                 </button>
     <!-- Модальное окно 1 -->
     <div x-show="openModal1"   style="display: none"
-         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-120"
          x-transition>
         
         <div @click.away="openModal1 = false" class="relative bg-blue p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px] shadow-lg">
-          <button @click.prevent @click="openModal1 = false" class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"></button>
+          <button @click.prevent @click="openModal1 = false" class="absolute z-140 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"></button>
            <div class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center ">
             <div>
               <img src="./images/Platform/icon_modal.svg" class="mx-auto pc:w-[103px] pc:h-[103px] mobile:h-[43px] mobile:w-[43px]" alt="Image">
@@ -3457,10 +3568,10 @@
 
     <!-- Модальное окно 2 (вложенное или независимое) -->
     <div x-show="openModal2"  style="display: none"
-         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-120"
          x-transition>
         <div @click.away="openModal2 = false" class="relative bg-[#52525b] p-6 pc:w-[709px] pc:h-[511px] mobile:w-[300px] mobile:h-[365px]  shadow-lg">
-            <button @click.prevent @click="openModal2 = false" class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"></button>
+            <button @click.prevent @click="openModal2 = false" class="absolute z-140 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"></button>
             <div class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center ">
             <div>
               <img src="./images/Platform/erorr_modal.svg" class="mx-auto pc:w-[114px] pc:h-[114px] mobile:h-[69px] mobile:w-[69px]" alt="Image">

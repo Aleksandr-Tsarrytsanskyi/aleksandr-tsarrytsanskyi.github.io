@@ -580,7 +580,7 @@
       </div>
     </div>
     <main
-      class="mobile:mt-[60px] tablet:mt-0 pc:mt-[-25px] bg-[#222]/20 mobile:pt-7 pc:pt-[55px] tablet:pt-10"
+      class="mobile:mt-[60px] tablet:mt-0 pc:mt-[-25px] bg-[#222]/20 mobile:pt-7 pc:pt-[55px] tablet:pt-10 mobile:pb-[50px]"
     >
       <section class="mobile:mb-[55px] pc:mb-10 tablet:mb-0 mobile:mt-8">
         <div
@@ -1841,7 +1841,7 @@
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
-              class="p-4 relative z-20"
+              class="p-4 relative "
             >
              <form action="#" method="post" class="mt-5" @submit.prevent="submit">
           <div
@@ -1955,7 +1955,7 @@
                <div
                     x-show="openModal1"
                     style="display: none"
-                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-120"
                     x-transition
                   >
                     <div
@@ -1965,7 +1965,7 @@
                       <button
                         @click.prevent
                         @click="openModal1 = false"
-                        class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
+                        class="absolute z-140 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
                       ></button>
                       <div
                         class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center"
@@ -1996,7 +1996,7 @@
                   <div
                     x-show="openModal2"
                     style="display: none"
-                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-120"
                     x-transition
                   >
                     <div
@@ -2006,7 +2006,7 @@
                       <button
                         @click.prevent
                         @click="openModal2 = false"
-                        class="absolute z-20 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
+                        class="absolute z-140 right-[10px] top-[10px] pc:bg-[url('./images/Platform/close_modal.svg')] mobile:bg-[url('./images/Platform/mobile_close_modal.svg')] bg-no-repeat bg-right h-[22px] w-[24px]"
                       ></button>
                       <div
                         class="grid pc:grid-cols-[473px] mobile:grid-cols-[221px] absolute z-10 inset-0 justify-center items-center justify-items-center"
@@ -2039,17 +2039,14 @@
        
       </section>
       <section
-        class="mt-20 tablet:h-[550px] pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px] mx-auto"
+        class="tablet:mt-20 mobile:mt-10 tablet:h-[550px] pc:max-w-[960px] mobile:max-w-[300px] tablet:max-w-[608px] mx-auto"
       >
-        <div
-          x-data="{ hovered: false }"
-          @mouseenter="hovered = true"
-          @mouseleave="hovered = false"
-          :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"
+        <div class="group"
+          
         >
           <a href="#" class="!tracking-[0px]">
             <div
-              class="grid group pc:grid-cols-[430px_460px] mobile:grid-cols-[300px] tablet:grid-cols-[250px_326px] justify-between"
+              class="grid  pc:grid-cols-[430px_460px] mobile:grid-cols-[300px] tablet:grid-cols-[250px_326px] justify-between pc:group-hover:scale-105 transition-transform duration-300 easy-in"
             >
               <div class="mobile:h-[450px] tablet:h-auto">
                 <img
@@ -3818,7 +3815,7 @@
         </div>
       </section>
     </main>
-    <section class="mt-10 bg-[#27272a] w-full py-10">
+    <section class=" bg-[#27272a] w-full py-10">
       <div
         class="grid pc:grid-cols-[465px_240px] mobile:grid-cols-[300px] tablet:grid-cols-[278px_217px] mobile:max-w-[300px] tablet:max-w-[608px] pc:max-w-[960px] mobile:gap-y-5 mobile:gap-x-0 tablet:gap-x-20 pc:justify-between mx-auto"
       >
