@@ -1125,12 +1125,10 @@
           <div
             class="grid pc:grid-cols-[600px_600px] tablet:grid-cols-[384px_384px] mobile:grid-cols-[375px] tablet:mt-[100px] mobile:mt-[40px] left-0 w-full h-full justify-center"
           >
-            <div x-data="{hovered: false }">
+            <div class="group">
               <div
-                @mouseover="activeBlock = 1; hovered = true"
-                @mouseleave="activeBlock = null; hovered = false"
-                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px]"
-                :style="hovered ? 'transform: scale(1.1); transition: 0.3s; z-index: 10' : 'transform: scale(1); transition: 0.3s; z-index: 1'"
+               
+                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px] group-hover:z-20 pc:group-hover:scale-105 transition-transform duration-300 easy-in"
               >
                 <a href="#" @click.prevent>
                   <div class="absolute top-0">
@@ -1200,14 +1198,7 @@
                         ></a> -->
                         <div
                           class="mobile:hidden pc:block"
-                          x-transition:enter="transition ease-out duration-300"
-                          x-transition:enter-start="opacity-0"
-                          x-transition:enter-end="opacity-100"
-                          x-transition:leave="transition ease-in duration-200"
-                          x-transition:leave-start="opacity-100"
-                          x-transition:leave-end="opacity-0"
-                          x-show="activeBlock === 1"
-                          style="display: none"
+                         
                         >
                           <a href="./index.html">
                             <svg
@@ -1252,7 +1243,7 @@
                               </defs>
                             </svg>
                             <svg
-                              class="pc:block mobile:hidden fill-[#3E82DA] hover:fill-[#3E82DA]"
+                              class="pc:block pc:group-hover:opacity-100 pc:opacity-0 mobile:hidden fill-[#3E82DA] hover:fill-[#3E82DA]"
                               width="70"
                               height="70"
                               viewBox="0 0 70 70"
@@ -1335,12 +1326,10 @@
               </div>
             </div>
 
-            <div x-data="{hovered: false }">
+            <div class="group">
               <div
-                @mouseover="activeBlock = 2; hovered = true"
-                @mouseleave="activeBlock = null; hovered = false"
-                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px]"
-                :style="hovered ? 'transform: scale(1.1); transition: 0.3s; z-index: 10' : 'transform: scale(1); transition: 0.3s; z-index: 1'"
+               
+                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px] group-hover:z-20 pc:group-hover:scale-105 transition-transform duration-300 easy-in "
               >
                 <a href="./laraveldevelopment.html">
                   <div class="absolute top-0">
@@ -1368,14 +1357,7 @@
                       </div>
                       <div
                         class="mobile:hidden pc:block"
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0"
-                        x-transition:enter-end="opacity-100"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100"
-                        x-transition:leave-end="opacity-0"
-                        x-show="activeBlock === 2"
-                        style="display: none"
+                       
                       >
                         <a href="./index.html">
                           <svg
@@ -1420,7 +1402,7 @@
                             </defs>
                           </svg>
                           <svg
-                            class="pc:block mt-[-50px] mobile:hidden fill-[#3E82DA] hover:fill-[#3E82DA]"
+                            class="pc:block pc:group-hover:opacity-100 pc:opacity-0 mt-[-50px] mobile:hidden fill-[#3E82DA] hover:fill-[#3E82DA]"
                             width="70"
                             height="70"
                             viewBox="0 0 70 70"
@@ -1503,12 +1485,10 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }">
+            <div class="group">
               <div
-                @mouseover="activeBlock = 3;hovered = true"
-                @mouseleave="activeBlock = null; hovered = false"
-                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px]"
-                :style="hovered ? 'transform: scale(1.1); transition: 0.3s; z-index: 10' : 'transform: scale(1); transition: 0.3s; z-index: 1'"
+                
+                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px] group-hover:z-20 pc:group-hover:scale-105 transition-transform duration-300 easy-in"
               >
                 <a href="#">
                   <div class="absolute top-0">
@@ -1536,14 +1516,7 @@
                       </div>
                       <div
                         class="mobile:hidden pc:block"
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0"
-                        x-transition:enter-end="opacity-100"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100"
-                        x-transition:leave-end="opacity-0"
-                        x-show="activeBlock === 3"
-                        style="display: none"
+                       
                       >
                         <a href="./index.html">
                           <svg
@@ -1588,7 +1561,7 @@
                             </defs>
                           </svg>
                           <svg
-                            class="pc:block mobile:hidden mt-[-50px] fill-[#3E82DA] hover:fill-[#3E82DA]"
+                            class="pc:block pc:group-hover:opacity-100 pc:opacity-0 mobile:hidden mt-[-50px] fill-[#3E82DA] hover:fill-[#3E82DA]"
                             width="70"
                             height="70"
                             viewBox="0 0 70 70"
@@ -1671,12 +1644,10 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }">
+            <div class="group">
               <div
-                @mouseover="activeBlock = 4;hovered = true"
-                @mouseleave="activeBlock = null; hovered = false"
-                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px]"
-                :style="hovered ? 'transform: scale(1.1); transition: 0.3s; z-index: 10' : 'transform: scale(1); transition: 0.3s; z-index: 1'"
+               
+                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px] group-hover:z-20 pc:group-hover:scale-105 transition-transform duration-300 easy-in"
               >
                 <a href="#">
                   <div class="absolute top-0">
@@ -1704,14 +1675,7 @@
                       </div>
                       <div
                         class="mobile:hidden pc:block"
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0"
-                        x-transition:enter-end="opacity-100"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100"
-                        x-transition:leave-end="opacity-0"
-                        x-show="activeBlock === 4"
-                        style="display: none"
+                        
                       >
                         <a href="./index.html">
                           <svg
@@ -1756,7 +1720,7 @@
                             </defs>
                           </svg>
                           <svg
-                            class="pc:block mobile:hidden mt-[-50px] fill-[#3E82DA] hover:fill-[#3E82DA]"
+                            class="pc:block pc:group-hover:opacity-100 pc:opacity-0 mobile:hidden mt-[-50px] fill-[#3E82DA] hover:fill-[#3E82DA]"
                             width="70"
                             height="70"
                             viewBox="0 0 70 70"
@@ -1839,12 +1803,10 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }">
+            <div class="group">
               <div
-                @mouseover="activeBlock = 5; hovered = true"
-                @mouseleave="activeBlock = null; hovered = false"
-                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px]"
-                :style="hovered ? 'transform: scale(1.1); transition: 0.3s; z-index: 10' : 'transform: scale(1); transition: 0.3s; z-index: 1'"
+               
+                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px] group-hover:z-20 pc:group-hover:scale-105 transition-transform duration-300 easy-in"
               >
                 <a href="#">
                   <div class="absolute top-0">
@@ -1872,14 +1834,7 @@
                       </div>
                       <div
                         class="mobile:hidden pc:block"
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0"
-                        x-transition:enter-end="opacity-100"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100"
-                        x-transition:leave-end="opacity-0"
-                        x-show="activeBlock === 5"
-                        style="display: none"
+                       
                       >
                         <a href="./index.html">
                           <svg
@@ -1924,7 +1879,7 @@
                             </defs>
                           </svg>
                           <svg
-                            class="pc:block mobile:hidden mt-[-50px] fill-[#3E82DA] hover:fill-[#3E82DA]"
+                            class="pc:block pc:group-hover:opacity-100 pc:opacity-0 mobile:hidden mt-[-50px] fill-[#3E82DA] hover:fill-[#3E82DA]"
                             width="70"
                             height="70"
                             viewBox="0 0 70 70"
@@ -2007,12 +1962,10 @@
                 </a>
               </div>
             </div>
-            <div x-data="{hovered: false }">
+            <div class="group">
               <div
-                @mouseover="activeBlock = 6; hovered = true"
-                @mouseleave="activeBlock = null; hovered = false"
-                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px]"
-                :style="hovered ? 'transform: scale(1.1); transition: 0.3s; z-index: 10' : 'transform: scale(1); transition: 0.3s; z-index: 1'"
+                
+                class="overflow-hidden relative pc:h-[370px] tablet:h-[237px] mobile:h-[268px] group-hover:z-20 pc:group-hover:scale-105 transition-transform duration-300 easy-in"
               >
                 <a href="#">
                   <div class="absolute top-0">
@@ -2040,14 +1993,7 @@
                       </div>
                       <div
                         class="mobile:hidden pc:block"
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0"
-                        x-transition:enter-end="opacity-100"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100"
-                        x-transition:leave-end="opacity-0"
-                        x-show="activeBlock === 6"
-                        style="display: none"
+                       
                       >
                         <a href="./index.html">
                           <svg
@@ -2092,7 +2038,7 @@
                             </defs>
                           </svg>
                           <svg
-                            class="pc:block mobile:hidden mt-[-50px] fill-[#3E82DA] hover:fill-[#3E82DA]"
+                            class="pc:block pc:group-hover:opacity-100 pc:opacity-0 mobile:hidden mt-[-50px] fill-[#3E82DA] hover:fill-[#3E82DA]"
                             width="70"
                             height="70"
                             viewBox="0 0 70 70"
