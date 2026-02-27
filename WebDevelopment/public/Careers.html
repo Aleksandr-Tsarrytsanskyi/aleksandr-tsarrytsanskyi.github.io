@@ -1667,14 +1667,16 @@
             goals
           </p>
           <div
-              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, selected: 'Position Applying For *', form: { name: '', email: '', message: '' }, 
+              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, selected: 'Position Applying For *', form: { name: '', email: '', message: '' }, fileError: '', 
                         errors: {}, 
-                        submit() {
+                        submit(event) {
+                          this.fileError = '';
+                          this.errors = {};
+                          
                             const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                            const be = /^[a-zA-Zа-яА-ЯёЁ]{3}$/;
+                           
                            
                             
-                            this.errors = {};
                             if (this.form.name === '') {
                                   this.openModal2 = true;
                                 this.errors.name = 'Имя обязательно';
@@ -1693,6 +1695,15 @@
                                   this.openModal2 = true;
                                 this.errors.message = 'Сообщение обязательно';
                             }
+                           
+                             const file = this.$refs.fileInput.files[0];                          
+                            if (!file) {
+                             
+                              this.errors.fileError = 'Пожалуйста, выберите файл.';
+                              
+                              }
+
+                           
                             if (Object.keys(this.errors).length === 0) {
                                 this.openModal1 = true; // Открываем модалку при успехе
                                 // Здесь логика отправки данных (fetch и т.д.)
@@ -1844,14 +1855,15 @@
               </div>
               <br />
               <div
-                class="relative mt-5 mobile:mx-auto pc:mx-0 mobile:ml-[60px] tablet:ml-0"
+                class="relative mt-5 mobile:mx-auto pc:mx-0 mobile:ml-[40px] tablet:ml-0"
               >
-                <input
+                <input  x-ref="fileInput"
                   type="file"
                   class="absolute top-0 left-0 w-full h-full opacity-0 text-[0] cursor-pointer outline-none font-poppins font-normal text-white-300 placeholder:text-white-300"
                   name="doc"
-                  accept=".docx, .txt"
+                  accept=".pdf"
                 />
+                 <span x-show="errors.fileError" style="display:none"  class="block w-[10px] absolute pc:right-[70px] pc:top-[-5px] tablet:right-[-20px] tablet:top-[-5px] mobile:right-[-10px] mobile:top-[-5px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
 
                 <div class="grid grid-cols-[12px_205px] gap-x-2">
                   <div>

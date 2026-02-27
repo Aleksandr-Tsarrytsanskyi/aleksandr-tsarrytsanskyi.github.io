@@ -1818,7 +1818,12 @@
                                   this.openModal2 = true;
                                 this.errors.title = ' обязательно';
                             }
-                            
+                             const file = this.$refs.fileInput.files[0];                          
+                            if (!file) {
+                             
+                              this.errors.fileError = 'Пожалуйста, выберите файл.';
+                              
+                              }
                             
                             if (Object.keys(this.errors).length === 0) {
                                 this.openModal1 = true; // Открываем модалку при успехе
@@ -1851,11 +1856,12 @@
             </div>
             <div class="relative tablet:mx-auto pc:mx-0 tablet:left-[-20px] pc:left-[0px]">
               <input
-                type="file"
+                type="file" x-ref="fileInput"
                 class="absolute top-0 left-0 w-full h-full opacity-0 text-[0] cursor-pointer outline-none font-poppins font-normal text-white-300 placeholder:text-white-300"
                 name="doc"
-                accept=".docx, .txt"
+                accept=".pdf, .docx"
               />
+              <span x-show="errors.fileError" style="display:none"  class="block w-[10px] absolute pc:right-[70px] pc:top-[-5px] tablet:right-[-10px] tablet:top-[-5px] mobile:right-[70px] mobile:top-[-5px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
 
               <div class="grid grid-cols-[12px_193px] gap-x-2">
                 <div>
