@@ -141,8 +141,8 @@
               <ul class="mt-4">
                 <li class="float-left mr-6">
                   <a
-                    class="h-7.5 w-11 pb-1 block text-base font-poppins font-normal text-white-200 hover:relative -top-1 relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-b-2 border-white-100 border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
-                    href="#"
+                    class="h-7.5 w-11 pb-1 block text-sm font-poppins font-normal text-white-200 hover:relative hover:-top-1 relative  hover:text-white-100 hover:text-base hover:border-b-2   hover:border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
+                    href="./index.html"
                     >Home</a
                   >
                 </li>
@@ -626,12 +626,15 @@
                             
                             if (this.selected === 'Select Service *') {
                                 this.errors.service = 'Пожалуйста, выберите ';
-                               
+                                
                             }
                            
                           
                             if (Object.keys(this.errors).length === 0) {
                                 this.openModal1 = true; // Открываем модалку при успехе
+                                this.form.name = ''
+                                this.form.email = ''
+                                this.selected = 'Select Service *'
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
@@ -745,7 +748,7 @@
                       <span x-show="errors.service" style="display:none"  class="block w-[10px] absolute pc:right-[15px] pc:top-[20px] tablet:right-[15px] tablet:top-[20px] mobile:right-[15px] mobile:top-[20px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
                   </div>
                   <div class="flex">
-                    <button
+                    <button 
                       type="submit"
                       class="bg-[url('./images/mobile/btn_header.svg')] hover:bg-[url('./images/mobile/btn_active_header.svg')] mx-auto bg-no-repeat bg-left font-jakarta font-bold pc:text-lg mobile:text-sm w-[192px] h-[60px] leading-[60px] pc:pl-7 mobile:pl-0 mt-5 transition-all duration-300 ease-in"
                       name="send"
@@ -1810,7 +1813,7 @@
                             
                             this.errors = {};
                             
-                            if (!re.test(this.form.name)) {
+                            if (this.form.name === '') {
                                   this.openModal2 = true;
                                 this.errors.name = ' обязательно';
                             }
@@ -1861,9 +1864,9 @@
                 name="doc"
                 accept=".pdf, .docx"
               />
-              <span x-show="errors.fileError" style="display:none"  class="block w-[10px] absolute pc:right-[70px] pc:top-[-5px] tablet:right-[-10px] tablet:top-[-5px] mobile:right-[70px] mobile:top-[-5px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
+              <span x-show="errors.fileError" style="display:none"  class="block w-[10px] absolute pc:right-[70px] pc:top-[-5px] tablet:right-[15px] tablet:top-[-5px] mobile:right-[50px] mobile:top-[-5px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
 
-              <div class="grid grid-cols-[12px_193px] gap-x-2">
+              <div class="grid grid-cols-[12px_223px] gap-x-2">
                 <div>
                   <svg
                     class="cursor-pointer"
@@ -1883,7 +1886,7 @@
                   <p
                     class="cursor-pointer font-jakarta font-medium font-base tracking-[3px] mobile:text-sm"
                   >
-                    UPLOAD YOUR RESUME
+                    UPLOAD YOUR RESUME*
                   </p>
                 </div>
               </div>
@@ -3189,7 +3192,7 @@
           experts
         </p>
         <div
-              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, open1: false, selected: 'Project Type *', selected1: 'Budget Range', form: { name: '', email: '', message: '' }, 
+              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, open1: false, selected: 'Project Type *', selected1: 'Budget Range', form: { name: '', email: '', message: '', number: '', company: '' }, 
                         errors: {}, 
                         submit() {
                             const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -3218,6 +3221,12 @@
                            
                             if (Object.keys(this.errors).length === 0) {
                                 this.openModal1 = true; // Открываем модалку при успехе
+                                this.form.name = ''
+                                this.form.email = ''
+                                this.form.number = ''
+                                this.form.company = ''
+                                this.form.message = ''
+
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"

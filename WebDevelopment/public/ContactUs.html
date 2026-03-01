@@ -115,7 +115,7 @@
                   <li class="float-left mr-6">
                     <a
                       class="h-7.5 w-11 pb-1 block text-sm font-poppins font-normal text-white-200 hover:relative relative hover:text-white-100 hover:text-base hover:border-b-2 border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
-                      href="#"
+                      href="./index.html"
                       >Home</a
                     >
                   </li>
@@ -592,7 +592,7 @@
           </div>
           <div class="bg-[#222] px-10.5 py-5" x-data="{}">
             <div
-              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, open1:false, selected: 'Project Type *', selected1: 'Project Budget *', form: { name: '', email: '', message: '' }, 
+              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, open1:false, selected: 'Project Type *', selected1: 'Project Budget *', form: { name: '', email: '', message: '', number: '', company: '' }, 
                         errors: {}, 
                         submit() {
                             const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -623,6 +623,11 @@
                             }
                             if (Object.keys(this.errors).length === 0) {
                                 this.openModal1 = true; // Открываем модалку при успехе
+                                this.form.name = ''
+                                this.form.email = ''
+                                this.form.message = ''
+                                this.form.number = ''
+                                this.form.company = ''
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
@@ -648,7 +653,7 @@
                  <span x-show="errors.email" style="display:none"  class="block w-[10px] absolute pc:right-[15px] pc:top-[20px] tablet:right-[15px] tablet:top-[20px] mobile:right-[15px] mobile:top-[20px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
               <div class="mb-10">
-                <input
+                <input x-model="form.number"
                   type="number"
                   name="mail"
                   class="pc:w-[398px] mobile:w-[220px] tablet:w-[250px] h-[56px] font-poppins font-normal pc:text-lg mobile:text-base text-white-300 outline-none border-b border-solid border-text-white-300 placeholder:text-white-300 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
@@ -656,7 +661,7 @@
                 />
               </div>
               <div class="mb-10">
-                <input
+                <input x-model="form.company"
                   type="text"
                   name="mail"
                   class="pc:w-[398px] mobile:w-[220px] tablet:w-[250px] h-[56px] font-poppins font-normal pc:text-lg mobile:text-base text-white-300 outline-none border-b border-solid border-text-white-300 placeholder:text-white-300"

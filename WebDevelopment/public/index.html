@@ -147,7 +147,7 @@
                     <li class="float-left mr-6">
                       <a
                         class="h-7.5 w-11 pb-1 block text-base font-poppins font-normal text-white-200 hover:relative -top-1 relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-b-2 border-white-100 border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
-                        href="#"
+                        href="./index.html"
                         >Home</a
                       >
                     </li>
@@ -263,7 +263,7 @@
                 </div>
               </div>
               <div>
-                <button
+                <button  @click.prevent
                   type="button"
                   class="mobile:hidden tablet:block w-26.75 h-10 mt-1.5 font-jakarta font-medium text-sm bg-[#575757] rounded-[100px] hover:bg-blue transition-colors duration-300 ease-in"
                 >
@@ -2141,6 +2141,7 @@
                             
                             if (Object.keys(this.errors).length === 0) {
                                 this.openModal1 = true; // Открываем модалку при успехе
+                                this.form.email = ''
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
@@ -2438,7 +2439,7 @@
                   </p>
                   <a
                     href="#"
-                    class="block tablet:w-[105px] pc:w-[102px] mobile:w-[74px] mt-5 font-jakarta font-bold tablet:text-lg pc:text-lg mobile:text-sm border-b border-solid hover:text-[20px] hover:w-[128px] transition-all ease-in duration-300"
+                    class="block tablet:w-[105px] pc:w-[102px] mobile:w-[74px] mobile:mt-5 pc:mt-10 font-jakarta font-bold tablet:text-lg pc:text-lg mobile:text-sm border-b border-solid hover:text-[20px] hover:w-[128px] transition-all ease-in duration-300"
                     >Read more</a
                   >
                 </div>
@@ -5214,7 +5215,7 @@
             Tell us about your idea and we'll turn it into reality
           </p>
           <div
-              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, open1:false, selected: 'Select Service *', selected1: 'Select Range *', form: { name: '', email: '', message: '' }, 
+              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, open1:false, selected: 'Select Service *', selected1: 'Select Range *', form: { name: '', email: '', message: '', number: '' }, 
                         errors: {}, 
                         submit() {
                             const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -5245,6 +5246,11 @@
                             }
                             if (Object.keys(this.errors).length === 0) {
                                 this.openModal1 = true; // Открываем модалку при успехе
+                                this.form.name = ''
+                                this.form.email = ''
+                                this.form.number = ''
+                                this.form.message= ''
+                               
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
@@ -5274,7 +5280,7 @@
 
               </div>
               <div class="mb-5">
-                <input
+                <input x-model="form.number" 
                   class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                   type="number"
                   name="name"

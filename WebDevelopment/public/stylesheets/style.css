@@ -173,6 +173,12 @@ button:not(header, .none-spassing) , a:not(header a, .not-spacing_text a, footer
  
 }
 
+.clients_active_btn {
+  background: url("../images/slide_active.svg") no-repeat !important;
+  height: 45px;
+  width: 45px;
+}
+
 .clients .swiper-slide-active {
   transform: scale(1.3) !important; /* Увеличиваем на 20% */
   margin-top: -20px;

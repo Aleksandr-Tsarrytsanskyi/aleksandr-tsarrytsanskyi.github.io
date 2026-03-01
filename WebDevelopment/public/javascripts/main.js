@@ -217,12 +217,16 @@ const mobileCase = new Swiper('.mobile_case', {
   },
 });
 
-
+const mediaQuery = window.matchMedia('(max-width: 1200px)');
 const swiperPrev = document.querySelector(".swiperPrev");
   const swiperNext = document.querySelector(".swiperNext");
 
       swiperPrev.addEventListener("click", (e) => {
         clients.slidePrev();
+        swiperPrev.classList.add("clients_active_btn");
+        setTimeout(() => {
+            swiperPrev.classList.remove("clients_active_btn");
+        }, 500);
         // e.target.classList.add("clients_button_active")
             const activeSlide = document.querySelector(".clients .swiper-slide-active")
             const activeClient = document.querySelectorAll(".clients .client")
@@ -235,6 +239,10 @@ const swiperPrev = document.querySelector(".swiperPrev");
       });
       swiperNext.addEventListener("click", () => {
         clients.slideNext();
+         swiperNext.classList.add("clients_active_btn");
+        setTimeout(() => {
+            swiperNext.classList.remove("clients_active_btn");
+        }, 500);
         const activeSlide = document.querySelector(".clients .swiper-slide-active")
             const activeClient = document.querySelectorAll(".clients .client")
           activeClient.forEach(el => {

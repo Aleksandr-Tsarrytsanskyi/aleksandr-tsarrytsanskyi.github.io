@@ -43,6 +43,10 @@ const swiperPrev = document.querySelector(".swiperPrev");
 
       swiperPrev.addEventListener("click", () => {
         clients.slidePrev();
+         swiperPrev.classList.add("clients_active_btn");
+        setTimeout(() => {
+            swiperPrev.classList.remove("clients_active_btn");
+        }, 500);
             const activeSlide = document.querySelector(".clients .swiper-slide-active")
             const activeClient = document.querySelectorAll(".clients .client")
           activeClient.forEach(el => {
@@ -54,6 +58,10 @@ const swiperPrev = document.querySelector(".swiperPrev");
       });
       swiperNext.addEventListener("click", () => {
         clients.slideNext();
+         swiperNext.classList.add("clients_active_btn");
+        setTimeout(() => {
+            swiperNext.classList.remove("clients_active_btn");
+        }, 500);
         const activeSlide = document.querySelector(".clients .swiper-slide-active")
             const activeClient = document.querySelectorAll(".clients .client")
           activeClient.forEach(el => {

@@ -132,7 +132,7 @@
                   <li class="float-left mr-6">
                     <a
                       class="h-7.5 w-11 pb-1 block text-sm font-poppins font-normal text-white-200 hover:relative relative hover:text-white-100 hover:text-base hover:border-b-2 border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
-                      href="#"
+                      href="./index.html"
                       >Home</a
                     >
                   </li>
@@ -1667,7 +1667,7 @@
             goals
           </p>
           <div
-              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, selected: 'Position Applying For *', form: { name: '', email: '', message: '' }, fileError: '', 
+              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, selected: 'Position Applying For *', form: { name: '', email: '', message: '', profile: '', git: '', number: '' }, fileError: '', 
                         errors: {}, 
                         submit(event) {
                           this.fileError = '';
@@ -1700,12 +1700,18 @@
                             if (!file) {
                              
                               this.errors.fileError = 'Пожалуйста, выберите файл.';
-                              
+                              return false
                               }
 
                            
                             if (Object.keys(this.errors).length === 0) {
                                 this.openModal1 = true; // Открываем модалку при успехе
+                               this.form.name = ''
+                               this.form.email = ''
+                               this.form.message = ''
+                               this.form.profile = ''
+                               this.form.git = ''
+                               this.form.number = ''
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
@@ -1734,7 +1740,7 @@
                 <span x-show="errors.email" style="display:none"  class="block w-[10px] absolute pc:right-[15px] pc:top-[20px] tablet:right-[15px] tablet:top-[20px] mobile:right-[15px] mobile:top-[20px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
               </div>
               <div>
-                <input 
+                <input x-model="form.number"
                   class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                   type="number"
                   name="name"
@@ -1742,7 +1748,7 @@
                 />
               </div>
               <div>
-                <input
+                <input x-model="form.profile"
                   class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
                   type="text"
                   name="name"
@@ -1750,7 +1756,7 @@
                 />
               </div>
               <div>
-                <input
+                <input x-model="form.git"
                   class="pc:w-[319px] tablet:w-[223px] mobile:w-[300px] h-[56px] mb-5 outline-none font-poppins font-normal pc:text-lg mobile:text-sm placeholder:text-white-300 border-b border-solid border-white-300"
                   type="text"
                   name="name"

@@ -138,7 +138,7 @@
                 <li class="float-left mr-6">
                   <a
                     class="h-7.5 w-11 pb-1 block text-base font-poppins font-normal text-white-200 hover:relative -top-1 relative -top-1 hover:text-white-100 hover:text-base hover:border-b-2 border-b-2 border-white-100 border-solid transition-[font-size] duration-300 ease-in tablet:max-w-8xl"
-                    href="#"
+                    href="./index.html"
                     >Home</a
                   >
                 </li>
@@ -2495,6 +2495,9 @@
                             }
                             if (Object.keys(this.errors).length === 0) {
                                 this.openModal1 = true; // Открываем модалку при успехе
+                                this.form.name = ''
+                                this.form.email = ''
+                                this.form.message = ''
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
