@@ -1,4 +1,14 @@
+/* .zoom-image {
+  width: 300px;
+  height: auto;
+  transform: scale(1);
+  transition: transform 0.3s ease; 
+  will-change: transform;
+}
 
+.rellax {
+    transform: scale(1.5); 
+} */
 
 .swiper-scrollbar-drag {
   background: #3e82da !important;

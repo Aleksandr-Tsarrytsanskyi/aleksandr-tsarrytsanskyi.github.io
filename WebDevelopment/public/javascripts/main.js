@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded",function() {
 // activeSlide.lastElementChild.style.opacity = "1"
 
 
-    AOS.init();
+AOS.init();
  
   const swiper = new Swiper('.technology', {
   // Optional parameters
