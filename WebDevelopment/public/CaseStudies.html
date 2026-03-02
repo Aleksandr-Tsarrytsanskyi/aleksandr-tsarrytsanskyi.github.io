@@ -638,14 +638,11 @@
         </div>
       </section>
       <section
-        class="pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20"
+        class="group pc:max-w-[960px] tablet:max-w-[608px] mobile:max-w-[300px] mx-auto mt-20"
       >
         <div
-          x-data="{ hovered: false }"
-          @mouseenter="hovered = true"
-          @mouseleave="hovered = false"
-          :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"
-          class="item-active"
+        
+          class="item-active pc:group-hover:scale-105 transition-transform duration-300 easy-in"
         >
           <div
             class="grid pc:grid-cols-[455px_430px] mobile:grid-cols-[300px] justify-between"
