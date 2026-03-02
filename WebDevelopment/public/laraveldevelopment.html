@@ -927,19 +927,16 @@
           </div>
         </div>
       </section>
-      <section class="mt-5">
+      <section class="mt-5 group">
         <div
-          x-data="{ hovered: false }"
-          @mouseenter="hovered = true"
-          @mouseleave="hovered = false"
-          :class="hovered ? 'scale-105 z-10 transition-all duration-300 easy-in' : 'transition-all duration-300 easy-in'"
-          class="item-active group"
+
+          class="item-active pc:group-hover:scale-105 transition-transform duration-300 easy-in"
         >
-          <a href="#">
+          <a href="#" class="!tracking-[0px]">
             <div
               class="grid pc:grid-cols-[410px_491px] mobile:grid-cols-[300px] tablet:grid-cols-[265px_319px] justify-between"
             >
-              <div class="relative">
+              <div class="relative h-[400px]">
                 <img
                   src="./images/Laravel/active_image.png"
                   class="absolute mobile:w-[295px] mobile:h-[399px] tablet:w-[265px] pc:w-[410px] pc:h-[504px]"
@@ -951,7 +948,7 @@
                   alt="Image"
                 />
               </div>
-              <div>
+              <div class="relative">
                 <h2
                   class="mb-7 mobile:mt-4 pc:mt-0 font-poppins font-normal pc:text-[28px] mobile:text-[16px]"
                 >
@@ -1475,7 +1472,7 @@
             </h2>
           </div>
           <div
-            class="h-[130px] tablet:border-l-2 mobile:border-l-0 border-b-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
+            class="h-[130px] mobile:border-l-2 mobile:border-l-[#222]/10 tablet:border-l-[#7a7a7a] mobile:border-l-0 border-b-2 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
               class="text-center mt-[40px] font-poppins font-normal pc:text-lg tablet:text-sm text-white-300 leading-[140%] pc:hover:text-[20px] transition-[font-size] duration-300 ease-in hover:font-semibold"
@@ -1511,7 +1508,7 @@
             </h2>
           </div>
           <div
-            class="h-[130px] border-b-2 border-b-black tablet:border-l-2 mobile:border-l-0 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
+            class="h-[130px] border-b-2 border-b-black mobile:border-l-2 mobile:border-l-[#222]/10 tablet:border-l-[#7a7a7a] mobile:border-l-0 border-solid border-[#7a7a7a] hover:border-blue transition-colors duration-300 ease-in"
           >
             <h2
               class="text-center mt-[40px] font-poppins font-normal pc:text-lg tablet:text-sm text-white-300 leading-[140%] pc:hover:text-[20px] transition-[font-size] duration-300 ease-in hover:font-semibold"
@@ -1557,10 +1554,10 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
 
-            <div class="swiper-slide !w-[351px] group">
+            <div class="swiper-slide !w-[300px] group">
               <a href="#" class="!tracking-[0px]">
                 <div
-                  class=" hover:scale-105 transition-all duration-300 easy-in"
+                  class=" pc:hover:scale-105 transition-all duration-300 easy-in"
                 >
                   <article>
                     <img
@@ -1614,10 +1611,10 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slide  !w-[351px]  group">
+            <div class="swiper-slide  !w-[300px]  group">
               <a href="#" class="!tracking-[0px]">
                 <div
-                  class=" hover:scale-105 transition-all duration-300 easy-in"
+                  class=" pc:hover:scale-105 transition-all duration-300 easy-in"
                 >
                   <article>
                     <img
@@ -1672,10 +1669,10 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slide  !w-[351px]  group">
+            <div class="swiper-slide  !w-[300px]  group">
               <a href="#" class="!tracking-[0px]">
                 <div
-                  class=" hover:scale-105 transition-all duration-300 easy-in"
+                  class=" pc:hover:scale-105 transition-all duration-300 easy-in"
                 >
                   <article>
                     <img
@@ -1730,10 +1727,10 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slide  !w-[351px]  group">
+            <div class="swiper-slide  !w-[300px]  group">
               <a href="#" class="!tracking-[0px]">
                 <div
-                  class=" hover:scale-105 transition-all duration-300 easy-in"
+                  class=" pc:hover:scale-105 transition-all duration-300 easy-in"
                 >
                   <article>
                     <img
@@ -2406,7 +2403,7 @@
           >
             <div>
               <div
-                class="grid pc:grid-cols-[312px] pc:pl-5 justify-center bg-[#222] h-[208px]"
+                class="grid pc:grid-cols-[240px] justify-center bg-[#222] h-[220px]"
               >
                 <div>
                   <h2
@@ -2439,7 +2436,7 @@
           >
             <div>
               <div
-                class="grid pc:grid-cols-[312px] pc:pl-5 tablet:grid-cols-[180px] justify-center bg-[#222] h-[208px]"
+                class="grid pc:grid-cols-[260px] pc:pl-5 tablet:grid-cols-[180px] justify-center bg-[#222] h-[220px]"
               >
                 <div>
                   <h2
@@ -2475,7 +2472,7 @@
           >
             <div>
               <div
-                class="grid pc:grid-cols-[312px] pc:pl-5 justify-center bg-[#222] h-[208px]"
+                class="grid pc:grid-cols-[260px] pc:pl-5 justify-center bg-[#222] h-[220px]"
               >
                 <div>
                   <h2
@@ -2515,7 +2512,7 @@
           Common questions about Laravel projects
         </p>
         <div
-          class="mt-5 pc:h-[450px] mobile:h-auto"
+          class="mt-5  "
           x-data="{ openIndex: null }"
         >
           <button
@@ -2903,7 +2900,7 @@
           >
             <div>
               <div
-                class="grid pc:grid-cols-[312px] tablet:grid-cols-[180px] pc:pl-5 justify-center bg-[#222] h-[240px]"
+                class="grid pc:grid-cols-[260px] tablet:grid-cols-[180px] pc:pl-5 justify-center bg-[#222] h-[220px]"
               >
                 <div>
                   <h2
@@ -2936,7 +2933,7 @@
           >
             <div>
               <div
-                class="grid pc:grid-cols-[312px] pc:pl-5 tablet:grid-cols-[180px] justify-center bg-[#222] h-[240px]"
+                class="grid pc:grid-cols-[260px] pc:pl-5 tablet:grid-cols-[180px] justify-center bg-[#222] h-[220px]"
               >
                 <div>
                   <h2
@@ -2969,7 +2966,7 @@
           >
             <div>
               <div
-                class="grid pc:grid-cols-[312px] pc:pl-5 justify-center bg-[#222] h-[240px]"
+                class="grid pc:grid-cols-[260px] pc:pl-5 justify-center bg-[#222] h-[220px]"
               >
                 <div>
                   <h2
@@ -2978,11 +2975,10 @@
                     API Development
                   </h2>
                   <p
-                    class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300 whitespace-pre"
+                    class="font-jakarta font-normal pc:text-base mobile:text-center pc:text-left mobile:text-xs text-white-300 "
                   >
                     RESTful and GraphQL<br
-                      class="tablet:block pc:hidden mobile:hidden"
-                    />
+                      class="tablet:block pc:block mobile:hidden"/>
                     APIs
                   </p>
                   <div class="mobile:flex pc:block">

@@ -173,6 +173,12 @@ button:not(header, .none-spassing) , a:not(header a, .not-spacing_text a, footer
  
 }
 
+.item-active:hover .active-link  {
+   background-image: url("../images/mobile/btn_active_header.svg") ;
+   background-repeat: no-repeat;
+   background-position: 0px 0px;
+}
+
 .clients_active_btn {
   background: url("../images/slide_active.svg") no-repeat !important;
   height: 45px;
