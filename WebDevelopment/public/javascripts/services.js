@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded",function() {
-AOS.init();
+AOS.init({
+   duration: 1000, // Длительность анимации
+  mirror: true,  // Повторять анимацию при скролле назад
+  once: false 
+});
   const swiper = new Swiper('.mobile_work', {
   // Optional parameters
  slidesPerView: 'auto',

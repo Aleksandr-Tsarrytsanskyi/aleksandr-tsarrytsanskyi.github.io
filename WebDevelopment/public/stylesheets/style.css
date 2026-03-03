@@ -47,7 +47,7 @@
 
 
 .laravel .swiper-scrollbar-drag {
-  width: 400px !important;
+  width: 740px !important;
 
 }
 
@@ -290,6 +290,19 @@ button:not(header, .none-spassing) , a:not(header a, .not-spacing_text a, footer
   [data-aos="magni-effect"].aos-animate {
      transform: scale(1.1)  !important;
   }
+
+  [data-aos].animate-up {
+  /* Кастомная анимация при скролле назад */
+  opacity: 0;
+  transform: translateY(100px); /* Напримерулетает вниз */
+  transition-property: opacity, transform;
+}
+
+[data-aos].animate-down {
+  /* Анимация при скролле вперед */
+  opacity: 1;
+  transform: translateY(0);
+}
 
     [data-aos="work-effect"] {
      transform: scale(1)  !important;

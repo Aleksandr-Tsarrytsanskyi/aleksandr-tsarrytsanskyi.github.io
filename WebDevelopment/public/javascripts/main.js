@@ -23,7 +23,13 @@ document.addEventListener("DOMContentLoaded",function() {
 // activeSlide.lastElementChild.style.opacity = "1"
 
 
-AOS.init();
+AOS.init({
+  duration: 1000, // Длительность анимации
+  mirror: true,  // Повторять анимацию при скролле назад
+  once: false 
+});
+
+
  
   const swiper = new Swiper('.technology', {
   // Optional parameters
