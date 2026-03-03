@@ -1822,11 +1822,20 @@
                             if (!file) {
                              
                               this.errors.fileError = 'Пожалуйста, выберите файл.';
-                              
+                              this.openModal2 = true;
+                              return false;
+                              }
+                               if (!['application/pdf'].includes(file.type)) {
+                                  this.errors.formaterror = 'Разрешены только PNG или JPEG.';
+                                  event.target.value = ''; // Сброс поля
+                                    this.openModal2 = true;
+                                  return false;
                               }
                             
                             if (Object.keys(this.errors).length === 0) {
                                 this.openModal1 = true; // Открываем модалку при успехе
+                                this.form.name = ''
+                                this.form.title = ''
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
@@ -1856,12 +1865,13 @@
             </div>
             <div class="relative tablet:mx-auto pc:mx-0 tablet:left-[-20px] pc:left-[0px]">
               <input
-                type="file" x-ref="fileInput"
+                type="file" x-ref="fileInput" @change="submit($event)"
                 class="absolute top-0 left-0 w-full h-full opacity-0 text-[0] cursor-pointer outline-none font-poppins font-normal text-white-300 placeholder:text-white-300"
                 name="doc"
                 accept=".pdf, .docx"
               />
               <span x-show="errors.fileError" style="display:none"  class="block w-[10px] absolute pc:right-[70px] pc:top-[-5px] tablet:right-[15px] tablet:top-[-5px] mobile:right-[50px] mobile:top-[-5px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
+              <span x-show="errors.formaterror" style="display:none"  class="block w-[10px] absolute pc:right-[70px] pc:top-[-5px] tablet:right-[15px] tablet:top-[-5px] mobile:right-[50px] mobile:top-[-5px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
 
               <div class="grid grid-cols-[12px_223px] gap-x-2">
                 <div>

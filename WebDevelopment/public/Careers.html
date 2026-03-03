@@ -1698,9 +1698,16 @@
                            
                              const file = this.$refs.fileInput.files[0];                          
                             if (!file) {
-                             
                               this.errors.fileError = 'Пожалуйста, выберите файл.';
-                              
+                              this.openModal2 = true;
+                              return false;
+                              }
+
+                              if (!['application/pdf'].includes(file.type)) {
+                                  this.errors.formaterror = 'Разрешены только PNG или JPEG.';
+                                  event.target.value = ''; // Сброс поля
+                                    this.openModal2 = true;
+                                  return false;
                               }
 
                            
@@ -1717,7 +1724,7 @@
                         }}"
               class="p-4 relative"
             >
-            <form action="#" method="post" class="mt-10"  @submit.prevent="submit">
+            <form action="#" method="post" class="mt-10"  @submit.prevent="submit" >
             <div
               class="grid tablet:grid-cols-[223px_223px] mobile:grid-cols-[300] mobile:max-w-[300px] tablet:max-w-['auto'] mx-auto pc:grid-cols-[319px_319px] justify-center gap-x-18"
             >
@@ -1863,14 +1870,15 @@
               <div
                 class="relative mt-5 mobile:mx-auto pc:mx-0 mobile:ml-[40px] tablet:ml-0"
               >
-                <input  x-ref="fileInput"
+                <input  x-ref="fileInput"  @change="submit($event)" 
                   type="file"
                   class="absolute top-0 left-0 w-full h-full opacity-0 text-[0] cursor-pointer outline-none font-poppins font-normal text-white-300 placeholder:text-white-300"
                   name="doc"
                   accept=".pdf"
                 />
                  <span x-show="errors.fileError" style="display:none"  class="block w-[10px] absolute pc:right-[70px] pc:top-[-5px] tablet:right-[-20px] tablet:top-[-5px] mobile:right-[-10px] mobile:top-[-5px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
-
+                 <span x-show="errors.formaterror" style="display:none"  class="block w-[10px] absolute pc:right-[70px] pc:top-[-5px] tablet:right-[-20px] tablet:top-[-5px] mobile:right-[-10px] mobile:top-[-5px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
+               
                 <div class="grid grid-cols-[12px_205px] gap-x-2">
                   <div>
                     <svg
