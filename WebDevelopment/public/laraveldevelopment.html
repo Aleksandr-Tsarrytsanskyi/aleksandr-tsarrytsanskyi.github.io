@@ -3218,7 +3218,7 @@
         </p>
         <div
               x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, open1: false, selected: 'Project Type *', selected1: 'Budget Range', form: { name: '', email: '', message: '', number: '', company: '' }, 
-                        errors: {}, 
+                        errors: {},  interests: [],
                         submit() {
                             const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
                             const be = /^[a-zA-Zа-яА-ЯёЁ]{3}$/;
@@ -3251,6 +3251,7 @@
                                 this.form.number = ''
                                 this.form.company = ''
                                 this.form.message = ''
+                                this.interests = [];
 
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
@@ -3491,9 +3492,10 @@
                 <label
                   class="relative font-poppins font-normal pc:text-sm mobile:text-xs text-white-300 cursor-pointer"
                 >
-                  <input
+                  <input x-model="interests"
                     type="checkbox"
-                    name="features"
+                    name="Admin"
+                    value="admin"
                     class="asbolute w-[150px] h-[20px] z-10 opacity-0 cursor-pointer transform input_checkbox"
                   />
                   <span
@@ -3506,9 +3508,10 @@
                 <label
                   class="relative font-poppins font-normal pc:text-sm mobile:text-xs text-white-300 cursor-pointer"
                 >
-                  <input
+                  <input  x-model="interests"
                     type="checkbox"
-                    name="features"
+                    name="User"
+                     value="user"
                     class="asbolute w-[150px] h-[20px] z-10 opacity-0 cursor-pointer input_checkbox"
                   />
                   <span
@@ -3521,9 +3524,10 @@
                 <label
                   class="relative font-poppins font-normal pc:text-sm mobile:text-xs text-white-300 cursor-pointer"
                 >
-                  <input
+                  <input x-model="interests"
                     type="checkbox"
                     name="features"
+                       value="api"
                     class="asbolute w-[150px] h-[20px] z-10 opacity-0 cursor-pointer input_checkbox"
                   />
                   <span
@@ -3536,9 +3540,10 @@
                 <label
                   class="relative font-poppins font-normal pc:text-sm mobile:text-xs text-white-300 cursor-pointer"
                 >
-                  <input
+                  <input x-model="interests"
                     type="checkbox"
                     name="features"
+                       value="payment"
                     class="asbolute w-[150px] h-[20px] z-10 opacity-0 cursor-pointer input_checkbox"
                   />
                   <span
@@ -3551,9 +3556,10 @@
                 <label
                   class="relative font-poppins font-normal pc:text-sm mobile:text-xs text-white-300 cursor-pointer"
                 >
-                  <input
+                  <input x-model="interests"
                     type="checkbox"
                     name="features"
+                       value="party"
                     class="asbolute w-[240px] h-[20px] z-10 opacity-0 cursor-pointer input_checkbox"
                   />
                   <span
@@ -3566,9 +3572,10 @@
                 <label
                   class="relative font-poppins font-normal pc:text-sm mobile:text-xs text-white-300 cursor-pointer"
                 >
-                  <input
+                  <input x-model="interests"
                     type="checkbox"
                     name="features"
+                       value="real"
                     class="asbolute w-[240px] h-[20px] z-10 opacity-0 cursor-pointer input_checkbox"
                   />
                   <span
