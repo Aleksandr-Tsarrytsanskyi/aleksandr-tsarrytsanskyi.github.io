@@ -1668,7 +1668,7 @@
           </p>
           <div
               x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, selected: 'Position Applying For *', form: { name: '', email: '', message: '', profile: '', git: '', number: '' }, fileError: '', fileName1: '', fileError1: '',
-                        errors: {}, 
+                        errors: {}, file: '',
                         submit(event) {
                           this.fileError = '';
                           this.errors = {};
@@ -1695,7 +1695,7 @@
                                 this.errors.message = 'Сообщение обязательно';
                             }
                            
-                             const file = this.$refs.fileInput.files[0];                          
+                              file = this.$refs.fileInput.files[0];                          
                             if (!file) {
                               this.errors.fileError = 'Пожалуйста, выберите файл.';
                               
@@ -1720,6 +1720,7 @@
                                this.form.git = ''
                                this.form.number = ''
                                this.fileName1 = ''
+                               $refs.fileInput.value = ''
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
@@ -1924,7 +1925,68 @@
                   </div>
                 </div>
                  <div class="relative">
-                  <p x-show="fileName1" class="absolute left-[20px] text-white-100 font-normal font-jakarta pc:text-base mobile:text-sm" x-text="'Выбран файл: ' + fileName1"></p>
+                  <div class="flex  absolute left-[20px]">
+                  <div x-show="fileName1" style="display:none" class="mr-[5px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 612.675 612.675" style="width: 20px; height: 20px; transform-origin: 50% 50%; transform: scaleX(1) scaleY(1) rotate(0deg);" xml:space="preserve" preserveAspectRatio="xMidYMid meet">
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+	<g id="_x34__17_" fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+		<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+			<path d="M581.209,223.007L269.839,530.92c-51.592,51.024-135.247,51.024-186.839,0c-51.592-51.023-51.592-133.737,0-184.761     L363.248,69.04c34.402-34.009,90.15-34.009,124.553,0c34.402,34.008,34.402,89.166,0,123.174l-280.249,277.12     c-17.19,17.016-45.075,17.016-62.287,0c-17.19-16.993-17.19-44.571,0-61.587L394.37,161.42l-31.144-30.793L114.144,376.975     c-34.402,34.009-34.402,89.166,0,123.174c34.402,34.009,90.15,34.009,124.552,0l280.249-277.12     c51.592-51.023,51.592-133.737,0-184.761c-51.593-51.023-135.247-51.023-186.839,0L36.285,330.784l1.072,1.071     c-53.736,68.323-49.012,167.091,14.5,229.88c63.512,62.79,163.35,67.492,232.46,14.325l1.072,1.072l326.942-323.31     L581.209,223.007z" fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class=""></path>
+		</g>
+	</g>
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+<g fill="#FFFFFF" style="fill:#FFFFFF;stroke:none" stroke="none" class="">
+</g>
+</svg>
+                  </div>
+                  <div x-show="fileName1" style="display:none" class="mr-[10px]">
+                    <p  class=" top-[-5px] text-white-100 font-normal font-jakarta  pc:text-base mobile:text-sm" x-text="'' + fileName1"></p>
+                  </div>
+                  <div x-show="fileName1" style="display:none" class="mr-[10px]">
+                    <svg @click="$refs.fileInput.value = ''; fileName1 = ''" class="mt-[4px] cursor-pointer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" style="shape-rendering: geometricprecision; text-rendering: geometricprecision; fill-rule: evenodd; clip-rule: evenodd; width: 15px; height: 15px; transform-origin: 50% 50%; transform: scaleX(1) scaleY(1) rotate(0deg);" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+                          <defs>
+                            <style type="text/css">
+                            
+                              .str0 {stroke:#FF3300;stroke-width:40;stroke-linecap:round}
+                              .fil0 {fill:none}
+                            
+                            </style>
+                          </defs>
+                          <g id="Layer_x0020_1" fill="#FF3300" style="fill:#FF3300;stroke:none" stroke="none" class="">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0 str0" d="M425 75l-350 350m350 0l-350 -350" fill="none" style="fill:none;stroke:#FF3300" stroke="#FF3300"></path>
+                          </g>
+                          </svg>
+                  </div>
+                </div>
                  </div>
               </div>
               <br />
