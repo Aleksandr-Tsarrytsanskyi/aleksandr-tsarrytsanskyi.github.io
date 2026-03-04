@@ -1801,7 +1801,7 @@
           Want to work with us on projects like this? Send us your resume!
         </h2>
         <div
-              x-data="{ openModal1: false, isValid: true, openModal2: false, form: { name: '', title: '' }, 
+              x-data="{ openModal1: false, isValid: true, openModal2: false, form: { name: '', title: '' }, fileError1: '', fileName1: '', 
                         errors: {}, 
                         submit() {
                             const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -1836,6 +1836,7 @@
                                 this.openModal1 = true; // Открываем модалку при успехе
                                 this.form.name = ''
                                 this.form.title = ''
+                                 this.fileName1 = ''
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
@@ -1865,7 +1866,22 @@
             </div>
             <div class="relative tablet:mx-auto pc:mx-0 tablet:left-[-20px] pc:left-[0px]">
               <input
-                type="file" x-ref="fileInput" 
+                type="file" x-ref="fileInput" @change="
+                          const file = $event.target.files[0];
+                          if (file) {
+                              // Валидация: проверка размера (макс. 2MB)
+                              if (file.size > 2 * 4024 * 4024) {
+                                  fileError1 = 'Файл слишком большой! (Макс 2МБ)';
+                                  fileName1 = '';
+                              } else {
+                                  fileName1 = file.name;
+                                  fileError1 = '';
+                              }
+                          } else {
+                              fileName1 = '';
+                              fileError1 = '';
+                          }
+                      " 
                 class="absolute top-0 left-0 w-full h-full opacity-0 text-[0] cursor-pointer outline-none font-poppins font-normal text-white-300 placeholder:text-white-300"
                 name="doc"
                 accept=".pdf, .docx"
@@ -1896,6 +1912,9 @@
                     UPLOAD YOUR RESUME*
                   </p>
                 </div>
+              </div>
+              <div class="relative">
+                <p x-show="fileName1" class="absolute left-[20px] top-[-5px] text-white-100 font-normal font-jakarta  pc:text-base mobile:text-sm" x-text="'Выбран файл: ' + fileName1"></p>
               </div>
             </div>
 

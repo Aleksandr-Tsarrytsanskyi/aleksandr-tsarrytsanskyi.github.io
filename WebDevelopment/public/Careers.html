@@ -1667,7 +1667,7 @@
             goals
           </p>
           <div
-              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, selected: 'Position Applying For *', form: { name: '', email: '', message: '', profile: '', git: '', number: '' }, fileError: '', 
+              x-data="{ openModal1: false, isValid: true, openModal2: false, open: false, selected: 'Position Applying For *', form: { name: '', email: '', message: '', profile: '', git: '', number: '' }, fileError: '', fileName1: '', fileError1: '',
                         errors: {}, 
                         submit(event) {
                           this.fileError = '';
@@ -1698,6 +1698,7 @@
                              const file = this.$refs.fileInput.files[0];                          
                             if (!file) {
                               this.errors.fileError = 'Пожалуйста, выберите файл.';
+                              
                               this.openModal2 = true;
                               return false;
                               }
@@ -1718,6 +1719,7 @@
                                this.form.profile = ''
                                this.form.git = ''
                                this.form.number = ''
+                               this.fileName1 = ''
                                 // Здесь логика отправки данных (fetch и т.д.)
                             }
                         }}"
@@ -1869,15 +1871,32 @@
               <div
                 class="relative mt-5 mobile:mx-auto pc:mx-0 mobile:ml-[40px] tablet:ml-0"
               >
-                <input  x-ref="fileInput"
+              
+                <input  x-ref="fileInput" @change="
+                          const file = $event.target.files[0];
+                          if (file) {
+                              // Валидация: проверка размера (макс. 2MB)
+                              if (file.size > 2 * 4024 * 4024) {
+                                  fileError1 = 'Файл слишком большой! (Макс 2МБ)';
+                                  fileName1 = '';
+                              } else {
+                                  fileName1 = file.name;
+                                  fileError1 = '';
+                              }
+                          } else {
+                              fileName1 = '';
+                              fileError1 = '';
+                          }
+                      "
                   type="file"
                   class="absolute top-0 left-0 w-full h-full opacity-0 text-[0] cursor-pointer outline-none font-poppins font-normal text-white-300 placeholder:text-white-300"
                   name="doc"
                   accept=".pdf"
                 />
+                
                  <span x-show="errors.fileError" style="display:none"  class="block w-[10px] absolute pc:right-[70px] pc:top-[-5px] tablet:right-[-20px] tablet:top-[-5px] mobile:right-[-10px] mobile:top-[-5px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
                  <span x-show="errors.formaterror" style="display:none"  class="block w-[10px] absolute pc:right-[70px] pc:top-[-5px] tablet:right-[-20px] tablet:top-[-5px] mobile:right-[-10px] mobile:top-[-5px]  bg-[url('./images/error.svg')] bg-no-repeat bg-center h-[22px]"></span>
-               
+                 
                 <div class="grid grid-cols-[12px_205px] gap-x-2">
                   <div>
                     <svg
@@ -1902,6 +1921,9 @@
                     </p>
                   </div>
                 </div>
+                 <div class="relative">
+                  <p x-show="fileName1" class="absolute left-[20px] text-white-100 font-normal font-jakarta pc:text-base mobile:text-sm" x-text="'Выбран файл: ' + fileName1"></p>
+                 </div>
               </div>
               <br />
               <div class="flex">
