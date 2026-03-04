@@ -1876,7 +1876,7 @@
                           const file = $event.target.files[0];
                           if (file) {
                               // Валидация: проверка размера (макс. 2MB)
-                              if (file.size > 2 * 4024 * 4024) {
+                              if (file.size > 100 * 1024 * 1024) {
                                   fileError1 = 'Файл слишком большой! (Макс 2МБ)';
                                   fileName1 = '';
                               } else {
@@ -1886,6 +1886,7 @@
                           } else {
                               fileName1 = '';
                               fileError1 = '';
+                              
                           }
                       "
                   type="file"
