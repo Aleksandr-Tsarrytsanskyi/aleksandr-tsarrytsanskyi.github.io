@@ -3,14 +3,617 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
+    <script src="./javascripts/main.js"></script>
     <title>Document</title>
 </head>
 <body>
-   <header></header>
-   <main></main>
+   <header class="relative bg-[url('./images/header_banner.png')] h-[1000px] bg-cover bg-no-repeat bg-center" >
+    <div>
+        <div class="bg-[rgba(254,254,254,0.15)] py-[8px] backdrop-blur-[20px] h-[52px]">
+            <div class="grid grid-cols-[400px_338px] max-w-[1600px] mx-auto justify-between items-center">
+            <div>
+                <p class="font-raleway font-bold text-[18px] text-white-100">Ready to start a renovation?<a href="#" class="font-normal"> Contact us today!</a></p>
+            </div>
+            <div>
+                <div class="grid grid-cols-[171px_168px] items-center">
+                    <div>
+                        <a href="#" class="bg-[url('./images//phone.svg')] bg-no-repeat bg-[12px_-0px] block h-[24px] pl-[45px] font-raleway font-bold text-[16px]  text-white-100">Request a Call</a>
+                    </div>
+                    <div>
+                        <div class="grid grid-cols-[36px_36px_36px_36px] gap-[8px]">
+                            <div>
+                                <a href="#">
+                               <svg class="hover:fill-orange-100 transition-all duration-300 ease-in" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="35" height="35" stroke="#FEFEFE" stroke-opacity="0.25"/>
+                                <path d="M24 9.50575C24 9.37318 23.9473 9.24605 23.8536 9.15231C23.7598 9.05857 23.6326 9.00591 23.5 9.00591H21C19.7411 8.94322 18.5086 9.38118 17.5717 10.2241C16.6348 11.067 16.0698 12.2463 16 13.5044V16.2035H13.5C13.3674 16.2035 13.2402 16.2562 13.1464 16.3499C13.0527 16.4437 13 16.5708 13 16.7034V19.3025C13 19.4351 13.0527 19.5622 13.1464 19.656C13.2402 19.7497 13.3674 19.8024 13.5 19.8024H16V26.5002C16 26.6327 16.0527 26.7599 16.1464 26.8536C16.2402 26.9473 16.3674 27 16.5 27H19.5C19.6326 27 19.7598 26.9473 19.8536 26.8536C19.9473 26.7599 20 26.6327 20 26.5002V19.8024H22.62C22.7312 19.804 22.8397 19.7685 22.9285 19.7015C23.0172 19.6345 23.0811 19.5398 23.11 19.4325L23.83 16.8333C23.8499 16.7595 23.8526 16.6821 23.8378 16.607C23.8231 16.532 23.7913 16.4613 23.7449 16.4005C23.6985 16.3396 23.6388 16.2902 23.5704 16.2561C23.5019 16.222 23.4265 16.204 23.35 16.2035H20V13.5044C20.0249 13.257 20.1411 13.0277 20.326 12.8613C20.5109 12.695 20.7512 12.6035 21 12.6047H23.5C23.6326 12.6047 23.7598 12.5521 23.8536 12.4583C23.9473 12.3646 24 12.2375 24 12.1049V9.50575Z" fill="#FEFEFE"/>
+                                </svg>
+
+                                </a>    
+                                </div>
+                            <div>
+                                <a href="#">
+                                   <svg class="hover:fill-orange-100 transition-all duration-300 ease-in" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="35" height="35" stroke="#FEFEFE" stroke-opacity="0.25"/>
+                                    <path d="M22 8C25.3123 8 28 10.6877 28 14V22C28 25.3123 25.3123 28 22 28H14C10.6877 28 8 25.3123 8 22V14C8 10.6877 10.6877 8 14 8H22ZM14 10C11.7923 10 10 11.7923 10 14V22C10 24.2077 11.7923 26 14 26H22C24.2077 26 26 24.2077 26 22V14C26 11.7923 24.2077 10 22 10H14ZM18 13C20.7623 13 23 15.2377 23 18C23 20.7623 20.7623 23 18 23C15.2377 23 13 20.7623 13 18C13 15.2377 15.2377 13 18 13ZM18 15C16.3423 15 15 16.3423 15 18C15 19.6577 16.3423 21 18 21C19.6577 21 21 19.6577 21 18C21 16.3423 19.6577 15 18 15ZM23 11.5C23.8284 11.5 24.5 12.1716 24.5 13C24.5 13.8284 23.8284 14.5 23 14.5C22.1716 14.5 21.5 13.8284 21.5 13C21.5 12.1716 22.1716 11.5 23 11.5Z" fill="#FEFEFE"/>
+                                    </svg>
+                                </a>    
+                                </div>
+                            <div>
+                                <a href="#">
+                                <svg class="hover:fill-orange-100 transition-all duration-300 ease-in" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="35" height="35" stroke="#FEFEFE" stroke-opacity="0.25"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.429 14.969H19.143V16.819C19.678 15.755 21.05 14.799 23.111 14.799C27.062 14.799 28 16.917 28 20.803V28H24V21.688C24 19.475 23.465 18.227 22.103 18.227C20.214 18.227 19.429 19.572 19.429 21.687V28H15.429V14.969ZM8.57 27.83H12.57V14.799H8.57V27.83ZM13.143 10.55C13.1431 10.8853 13.0767 11.2172 12.9474 11.5266C12.8181 11.8359 12.6287 12.1165 12.39 12.352C12.1506 12.5901 11.8667 12.7787 11.5544 12.9071C11.2421 13.0354 10.9076 13.101 10.57 13.1C9.8896 13.0985 9.23691 12.8303 8.752 12.353C8.5143 12.1166 8.32553 11.8357 8.1965 11.5264C8.06746 11.217 8.00069 10.8852 8 10.55C8 9.873 8.27 9.225 8.753 8.747C9.2367 8.26788 9.89018 7.99938 10.571 8C11.253 8 11.907 8.269 12.39 8.747C12.873 9.225 13.143 9.873 13.143 10.55Z" fill="#FEFEFE"/>
+                                </svg>
+
+                                </a>    
+                                </div>
+                            <div>
+                                <a href="#">
+                                
+                                    <svg class="hover:fill-orange-100 transition-all duration-300 ease-in" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="35" height="35" stroke="#FEFEFE" stroke-opacity="0.25"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18 10C18.855 10 19.732 10.022 20.582 10.058L21.586 10.106L22.547 10.163L23.447 10.224L24.269 10.288C25.1612 10.3559 26.0008 10.7364 26.64 11.3626C27.2791 11.9888 27.6768 12.8204 27.763 13.711L27.803 14.136L27.878 15.046C27.948 15.989 28 17.017 28 18C28 18.983 27.948 20.011 27.878 20.954L27.803 21.864L27.763 22.289C27.6768 23.1798 27.2789 24.0115 26.6396 24.6377C26.0002 25.2639 25.1604 25.6443 24.268 25.712L23.448 25.775L22.548 25.837L21.586 25.894L20.582 25.942C19.7218 25.9793 18.861 25.9986 18 26C17.139 25.9986 16.2782 25.9793 15.418 25.942L14.414 25.894L13.453 25.837L12.553 25.775L11.731 25.712C10.8388 25.6441 9.9992 25.2636 9.36004 24.6374C8.72089 24.0112 8.32319 23.1796 8.237 22.289L8.197 21.864L8.122 20.954C8.04583 19.9711 8.00514 18.9858 8 18C8 17.017 8.052 15.989 8.122 15.046L8.197 14.136L8.237 13.711C8.32316 12.8206 8.72071 11.9891 9.35966 11.3629C9.99861 10.7368 10.838 10.3561 11.73 10.288L12.551 10.224L13.451 10.163L14.413 10.106L15.417 10.058C16.2775 10.0207 17.1387 10.0014 18 10ZM16 15.575V20.425C16 20.887 16.5 21.175 16.9 20.945L21.1 18.52C21.1914 18.4674 21.2673 18.3916 21.3201 18.3003C21.3729 18.209 21.4007 18.1055 21.4007 18C21.4007 17.8945 21.3729 17.791 21.3201 17.6997C21.2673 17.6084 21.1914 17.5326 21.1 17.48L16.9 15.056C16.8088 15.0033 16.7053 14.9756 16.5999 14.9756C16.4945 14.9756 16.3911 15.0034 16.2998 15.0561C16.2086 15.1088 16.1329 15.1846 16.0802 15.2759C16.0276 15.3671 15.9999 15.4706 16 15.576V15.575Z" fill="#FEFEFE"/>
+                                    </svg>
+
+                                </a>    
+                                </div>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="grid mt-[16px] grid-cols-[173px_573px_251px] max-w-[1600px] items-center mx-auto gap-x-[300px] justify-center">
+            <div>
+                <nav>
+                    <a href="#">
+                        <img src="./images/Logo.svg" alt="logo">
+                    </a>
+                </nav>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li class="mr-[32px] float-left">
+                            <a href="#" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in">Home</a>
+                        </li>
+                        <li class="mr-[32px] float-left">
+                            <a href="#" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in">About</a>
+                        </li>
+                        <li class="mr-[32px] float-left">
+                            <a href="#" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in" >Services</a>
+                        </li>
+                        <li class="mr-[32px] float-left">
+                            <a href="#" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in" >Portfolio</a>
+                        </li>
+                        <li class="mr-[32px] float-left">
+                            <a href="#" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in" >Awards & Media</a>
+                        </li>
+                        <li class=" float-left">
+                            <a href="#" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in" >financing</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <div class="grid grid-cols-[81px_165px] gap-x-[5px] items-center">
+                    <div>
+                        <button type="button" class="bg-[url('./images/uiw_login.svg')] bg-no-repeat bg-left font-raleway font-semibold text-[16px] text-white-100 pl-[28px] ">login</button>
+                    </div>
+                    <div>
+                        <button type="button" class="w-[165px] h-[52px] leading-[52px] text-center font-raleway font-bold text-[16px] text-white-100 bg-orange-100 transition-colors duration-300 ease-in hover:bg-[#e94b10]">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-[15px] border-solid border-b border-[rgba(254,254,254,0.5)]"></div>
+        <div class="grid grid-cols-[778px_154px] justify-between items-end max-w-[1600px] mx-auto mt-[80px]">
+            <div>
+                <h1 class="font-raleway font-extrabold text-[60px] leading-[100%] text-white-100">Hamilton Home Renovations Company<br> You Can Trust!</h1>
+                <p class="font-raleway font-bold text-[26px] text-white-100 mt-[40px]">Newfore Award-Winning Home Renovations Contractor</p>
+                <div class="mt-[40px] grid grid-cols-[350px_350px] gap-y-[10px]">
+                    <div>
+                        <p class="bg-[url('./images/header_list.svg')] bg-no-repeat bg-[0px_7px] pl-[40px] font-raleway font-medium text-[24px] text-white-100">10+ Years in Business</p>
+                    </div>
+                    <div>
+                        <p class="bg-[url('./images/header_list.svg')] bg-no-repeat bg-[0px_7px] pl-[40px] font-raleway font-medium text-[24px] text-white-100">$5 Million Insurance</p>
+                    </div>
+                    <div>
+                        <p class="bg-[url('./images/header_list.svg')] bg-no-repeat bg-[0px_7px] pl-[40px] font-raleway font-medium text-[24px] text-white-100">Quality & Time Guarantees</p>
+                    </div>
+                    <div>
+                        <p class="bg-[url('./images/header_list.svg')] bg-no-repeat bg-[0px_7px] pl-[40px] font-raleway font-medium text-[24px] text-white-100">200 + Projects Completed</p>
+                    </div>
+                </div>
+                 <div class="mt-[35px] border-solid border-b border-[rgba(254,254,254,0.5)]"></div>
+                <div class="grid grid-cols-[348px_120px_280px] gap-x-[15px] mt-[46px] items-center">
+                    <div>
+                        <button type="button" class="hover:bg-[#e94b10] w-[328px] h-[68px] bg-[url('./images/header_icon.svg')] leading-[68px] bg-no-repeat bg-[268px_8px] bg-orange-100 text-white-100 font-raleway font-bold text-[16px] transition-colors duration-300 ease-in">GET A FREE ESTIMATE!</button>
+                    </div>
+                    <div>
+                        <img src="./images/header_image1.svg" alt="Image">
+                    </div>
+                    <div>
+                        <div class="grid grid-cols-[86px_83px] gap-x-[10px] items-center">
+                            <div>
+                                <img class="mt-[5px]" src="./images/header_rating.svg" alt="Image">
+                            </div>
+                            <div>
+                                <p class="font-raleway font-normal text-[18px] text-white-100"><span class="font-bold">4.9</span><span class="relative top-[2px]"> Rating</span></p>
+                            </div>
+                        </div>
+                        <p class="font-raleway font-medium text-[18px] text-white-100">based On <span class="font-bold relative top-[-3px]">450 </span>Reviews</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./images/google_icon.svg" class="mb-[28px]  mx-auto" alt="Image">
+                <img src="./images/bae_icon.svg" class="mb-[28px] mx-auto" alt="Image">
+                <img src="./images/true_icon.svg" class="mx-auto" alt="Image">
+            </div>
+        </div>
+    </div>
+   </header>
+   <main>
+    <section class="max-w-[1600px] mx-auto mt-[-80px] ">
+        <div class="bg-white-100 py-[48px] px-[48px] absolute ">
+           <div class="grid grid-cols-[740px_573px] justify-between items-center">
+            <div>
+                <h2 class="font-urbanist font-extrabold text-[36px] text-black-100">START YOUR RENOVATION <span class="text-orange-100">PROJECT</span> TODAY</h2>
+            </div>
+            <div>
+                <p class="font-raleway font-medium text-[22px] text-black-100">Need help with your renovation? Just ask us for a quote!</p>
+            </div>
+           </div>
+           <form action="#" method="post" class="mt-[32px]">
+            <div class="grid grid-cols-[488px_488px_488px] gap-x-[20px]">
+                <div>
+                <div>
+                    <div>
+                        <input class="bg-[url('./images/form_name.svg')] bg-no-repeat bg-[10px_20px] border-solid border-[1px] h-[68px] w-[488px] pl-[40px] border-[#34373C]/30" type="text" name="name" placeholder="Full Name">
+                    </div>
+                    <div>
+                      <svg class="float-right relative top-[-40px] left-[-20px]" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.39594 8.83598L3.79695 5.55556L0 4.39153L0.614214 2.48678L4.46701 3.86243L4.35533 0H6.64467L6.533 3.86243L10.3858 2.48678L11 4.39153L7.20305 5.55556L9.6599 8.83598L7.8731 10L5.52792 6.56085L3.1269 10L1.39594 8.83598Z" fill="#F15D26" />
+                    </svg>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    
+                    <div>
+                        <input class="bg-[url('./images/form_email.svg')] bg-no-repeat bg-[10px_20px] border-solid border-[1px] h-[68px] w-[488px] pl-[40px] border-[#34373C]/30" type="text" name="mail" placeholder="Email">
+                    </div>
+                    <div>
+                       <svg class="float-right relative top-[-40px] left-[-20px]" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.39594 8.83598L3.79695 5.55556L0 4.39153L0.614214 2.48678L4.46701 3.86243L4.35533 0H6.64467L6.533 3.86243L10.3858 2.48678L11 4.39153L7.20305 5.55556L9.6599 8.83598L7.8731 10L5.52792 6.56085L3.1269 10L1.39594 8.83598Z" fill="#F15D26" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                   
+                    <div>
+                        <input type="text" class="bg-[url('./images/form_phone.svg')] bg-no-repeat bg-[10px_20px] border-solid border-[1px] h-[68px] w-[488px] pl-[40px] border-[#34373C]/30" name="phone" placeholder="Phone Number">
+                    </div>
+                    <div>
+                       <svg class="float-right relative top-[-40px] left-[-20px]" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.39594 8.83598L3.79695 5.55556L0 4.39153L0.614214 2.48678L4.46701 3.86243L4.35533 0H6.64467L6.533 3.86243L10.3858 2.48678L11 4.39153L7.20305 5.55556L9.6599 8.83598L7.8731 10L5.52792 6.56085L3.1269 10L1.39594 8.83598Z" fill="#F15D26" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <input type="text" class="bg-[url('./images/form_adress.svg')] bg-no-repeat bg-[10px_20px] border-solid border-[1px] h-[68px] w-[488px] pl-[40px] border-[#34373C]/30" name="address" placeholder="Address">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="relative">
+                <button type="button" class="project_service_list text-left pl-[10px] w-[488px] h-[68px] font-raleway font-normal text-[18px] border-solid border-[1px] text-black-100 border-[#34373C]/30">services you need</button>
+                <div class="bg-gray-100 pl-[16px] py-[16px] form_list absolute w-[488px]">
+                    <ul>
+                        <li>
+                            <p class="mb-[20px] cursor-pointer font-raleway font-normal text-[16px] text-black-100">Home Renovations</p>
+                        </li>
+                        <li>
+                            <p class="mb-[20px] cursor-pointer font-raleway font-normal text-[16px] text-black-100">Home Additions</p>
+                        </li>
+                        <li>
+                            <p class="mb-[20px] cursor-pointer font-raleway font-normal text-[16px] text-black-100">Commercial Renovations</p>
+                        </li>
+                        <li>
+                            <p class="mb-[20px] cursor-pointer font-raleway font-normal text-[16px] text-black-100">Bathroom Renovations</p>
+                        </li>
+                        <li>
+                            <p class="mb-[20px] cursor-pointer font-raleway font-normal text-[16px] text-black-100">Kitchen Renovations</p>
+                        </li>
+                        <li>
+                            <p class=" font-raleway font-normal text-[16px] text-black-100">Basement Renovations</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <button type="submit" name="send" class="bg-[url('./images/header_icon.svg')] bg-no-repeat bg-[427px_8px] w-[488px] h-[68px] font-raleway font-bold text-[16px] text-white-100 bg-orange-100 hover:bg-[#e94b10] transition-colors duration-300 ease-in">GET A FREE ESTIMATE!</button>
+            </div>
+            </div>
+           </form>
+        </div>
+    </section>
+    <section class="bg-gray-100 pt-[350px]  h-[870px]">
+        <div class="max-w-[1600px] mt-[10px] mx-auto grid grid-cols-[740px_1fr]">
+            <div>
+                <p class="bg-[url('./images/bg_guarant.svg')] font-urbanist font-bold text-[18px] text-black-100 bg-no-repeat bg-[0px_10px] pl-[10px]">CUSTOMIZE YOUR HOME TO BE YOUR OWN</p>
+                <h2 class="mt-[16px] mb-[24px] font-raleway font-extrabold text-[44px] text-black leading-[100%]">Best Rated Home Renovation Contractor in <span class="text-orange-100">Hamilton</span></h2>
+                <p class="font-raleway font-normal text-[18px] text-black-100">Newfore is the most reliable Home Renovations Contractor in Hamilton. We proudly serve homeowners across the GTHA to Toronto. Whether you’re in Hamilton, Toronto, Burlington, Niagara or Kitchener, we cover it all. With our attention to superior craftsmanship and personalized service, we bring your vision to life and help transform your house into the home you’ve always wanted.</p>
+                <p class="my-[24px] font-raleway font-normal text-[18px] text-black-100">We specialize in transforming homes with</p>
+                <div class="grid grid-cols-[380px_360px]">
+                    <div>
+                        <ul>
+                            <li class="mb-[16px] bg-[url('./images/b_list_icon.svg')] bg-no-repeat bg-[0px_3px] pl-[35px]">
+                                <p class="font-raleway font-semibold text-[18px] text-black-100">complex renovations</p>
+                            </li>
+                            <li class="mb-[16px] bg-[url('./images/b_list_icon.svg')] bg-no-repeat bg-[0px_3px] pl-[35px]">
+                                <p class="font-raleway font-semibold text-[18px] text-black-100">kitchen renovations</p>
+                            </li>
+                            <li class="mb-[16px] bg-[url('./images/b_list_icon.svg')] bg-no-repeat bg-[0px_3px] pl-[35px]">
+                                <p class="font-raleway font-semibold text-[18px] text-black-100">bathroom renovations</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-[16px] bg-[url('./images/b_list_icon.svg')] bg-no-repeat bg-[0px_3px] pl-[35px]">
+                                <p class="font-raleway font-semibold text-[18px] text-black-100">basement renovations</p>
+                            </li>
+                            <li class="mb-[16px] bg-[url('./images/b_list_icon.svg')] bg-no-repeat bg-[0px_3px] pl-[35px]">
+                                <p class="font-raleway font-semibold text-[18px] text-black-100">home additions</p>
+                            </li>
+                            <li class="mb-[16px] bg-[url('./images/b_list_icon.svg')] bg-no-repeat bg-[0px_3px] pl-[35px]">
+                                <p class="font-raleway font-semibold text-[18px] text-black-100">full-scale custom builds</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid-cols-[360px_328px] mt-[57px] items-center">
+                   <div>
+                     <div class="mt-[10px] grid grid-cols-[20px_360px] gap-x-[10px] items-center">
+                        <div>
+                        <img src="./images/icon_serving.svg" alt="Image">
+                    </div>
+                    <div>
+                        <p class="font-raleway font-semibold text-[15px] text-black-100 opacity-[0.4]">Serving</p>
+                        <h2 class="font-raleway font-extrabold text-[22px text-black-100]">HAMILTON, TORONTO & THE GTHA</h2>
+                    </div>
+                   </div>
+                </div>
+                    <div>
+                        <button type="button" class="w-[328px] h-[68px] bg-[url('./images/header_icon.svg')] bg-no-repeat bg-[265px_8px] bg-orange-100 text-white-100 font-raleway font-bold text-[16px] hover:bg-[#e94b10] transition-colors duration-300 ease-in">GET A FREE ESTIMATE!</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="swiper hamilton w-full h-full">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+        <img src="./images/image1.png" alt="image">
+    </div>
+    <div class="swiper-slide">
+         <img src="./images/image2.png" alt="image">
+    </div>
+    <div class="swiper-slide">
+         <img src="./images/image3.png" alt="image">
+    </div>
+    <div class="swiper-slide">
+         <img src="./images/image4.png" alt="image">
+    </div>
+    <div class="swiper-slide">
+         <img src="./images/image5.png" alt="image">
+    </div>
+     <div class="swiper-slide">
+         <img src="./images/image6.png" alt="image">
+    </div>
+  
+  </div>
+  <!-- If we need pagination -->
+  
+</div>
+<div class="backdrop-blur-[5px] bg-[rgba(254, 254, 254, 0.1)] gap-x-[8px] grid items-center mx-auto justify-center grid-cols-[60px_60px] w-[172px] h-[100px] float-right relative top-[-200px] z-100">
+    <div>
+        <button type="button" class="swiperPrev"></button>
+    </div>
+    <div>
+          <button type="button" class="swiperNext"></button>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-[160px] max-w-[1600px] mx-auto">
+        <div class="grid grid-cols-[788px_300px] items-center border-solid border-t border-[rgba(52, 55, 60, 0.1)] border-b">
+            <div>
+                <p class="bg-[url('./images/bg_guarant.svg')] bg-no-repeat bg-[0px_11px] pl-[10px] font-urbanist font-bold text-[18px] text-black-100">Residential & Commercial Renovations Hamilton</p>
+            </div>
+            <div>
+                <h2 class="font-raleway font-extrabold text-[44px] text-black-100">our <span class="text-orange-100">services</span></h2>
+            </div>
+        </div>
+        <div class="grid mt-[48px] grid-cols-[382px_382px_382px_382px] gap-x-[20px]">
+            <div class="bg-gray-100 pt-[20px]">
+               <div class="pl-[20px]">
+                 <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 mb-[5px]">HOME RENOVATIONS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur. Metus viverra sed duis aliquam mauris a eget bibendum ac.</p>
+                <a href="#" class="mt-[16px] block w-[117px] h-[32px] leading-[32px] bg-white-100 font-raleway font-semibold text-[14px] text-black-100 text-center">LEARN MORE</a>
+               </div>
+                <img src="./images/Img_services1.png" alt='image'>
+            </div>
+            <div class="bg-gray-100 pt-[20px]">
+               <div class="pl-[20px]">
+                  <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 mb-[5px]">KITCHEN RENOVATIONS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur. Metus viverra sed duis aliquam mauris a eget bibendum ac.</p>
+               <a href="#" class="mt-[16px] block w-[117px] h-[32px] leading-[32px] bg-white-100 font-raleway font-semibold text-[14px] text-black-100 text-center">LEARN MORE</a>
+               </div>
+                <img src="./images/Img_services2.png" alt='image'>
+            </div>
+            <div class="bg-gray-100 pt-[20px]">
+                <div class="pl-[20px]">
+                     <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 mb-[5px]">BATHROOM RENOVATIONS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur. Metus viverra sed duis.</p>
+               <a href="#" class="mt-[16px] block w-[117px] h-[32px] leading-[32px] bg-white-100 font-raleway font-semibold text-[14px] text-black-100 text-center">LEARN MORE</a>
+                </div>
+                <img src="./images/Img_services3.png" alt='image'>
+            </div>
+            <div class="bg-gray-100 pt-[20px]">
+                <div class="pl-[20px]">
+                     <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 mb-[5px]">BASEMENT RENOVATIONS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur. Metus viverra sed duis.</p>
+               <a href="#" class="mt-[16px] block w-[117px] h-[32px] leading-[32px] bg-white-100 font-raleway font-semibold text-[14px] text-black-100 text-center">LEARN MORE</a>
+                </div>
+                <img src="./images/Img_services4.png" alt='image'>
+            </div>
+        </div>
+        <div class="grid mt-[24px] grid-cols-[788px_788px] gap-x-[10px]">
+            <div class="mt-[24px]">
+                <div  class="grid grid-cols-[382px_382px] items-center gap-x-[20px] gap-y-[24px]">
+                    <div class="bg-[url('./images/arrow_services.svg')] leading-[76px] pl-[20px] bg-no-repeat bg-[340px_20px] h-[76px] border border-solid border-[rgba(52, 55, 60, 0.15)] font-urbanist font-extrabold text-[18px] text-black-100">
+                      <a href="#"> GARDEN SUITES </a>
+                    </div>
+                    <div class="bg-[url('./images/arrow_services.svg')] leading-[76px] pl-[20px] bg-no-repeat bg-[340px_20px] h-[76px] border border-solid border-[rgba(52, 55, 60, 0.15)] font-urbanist font-extrabold text-[18px] text-black-100">
+                       <a href="#"> HOME ADDITIONS</a>
+                    </div>
+                    <div class="bg-[url('./images/arrow_services.svg')] leading-[76px] pl-[20px] bg-no-repeat bg-[340px_20px] h-[76px] border border-solid border-[rgba(52, 55, 60, 0.15)] font-urbanist font-extrabold text-[18px] text-black-100">
+                       <a href="#"> COMMERCIAL RENOVATIONS</a>
+                    </div>
+                    <div class="bg-[url('./images/arrow_services.svg')] leading-[76px] pl-[20px] bg-no-repeat bg-[340px_20px] h-[76px] border border-solid border-[rgba(52, 55, 60, 0.15)] font-urbanist font-extrabold text-[18px] text-black-100">
+                       <a href="#"> LOAD BEARING WALL REMOVAL</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-black-100 mt-[22px] h-[176px] pt-[28px]">
+                <p class="font-raleway font-semibold text-[18px] ml-[60px] text-white-100">YOUR RENOVATION JUST BECAME MORE AFFORDABLE!</p>
+                <div class="grid grid-cols-[560px_322px] relative">
+                    <div>
+                        <a hrtef="#" class="ml-[20px] mt-[21px] bg-[url('./images/bg_services.png')] bg-no-repeat bg-[0px_0px] block backdrop-blur-[15px] bg-white-100/30 w-[560px] h-[100px] text-center leading-[100px] font-raleway font-semibold text-[20px] text-white-100 ">apply for financing</a>
+                    </div>
+                    <div class="absolute right-0 top-[-80px]">
+                        <img src="./images/Img_services5.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-black-100 pt-[60px] h-[764px] mt-[48px] relative z-100">
+        <div class="grid grid-cols-[788px_400px] max-w-[1600px] mx-auto items-center border-t border-solid border-b border-[rgba(254, 254, 254, 0.2)]">
+            <div>
+                <p class="font-urbanist font-bold text-[18px] text-white-100">YOUR PIECE OF MIND</p>
+            </div>
+            <div>
+                <h2 class="font-urbanist font-extrabold text-[44px] text-white-100">Our <span class="text-orange-100">Guarantees</span></h2>
+            </div>
+        </div>
+        <div>
+            <div class="grid grid-cols-[756px_756px] gap-x-[20px] max-w-[1600px] py-[32px] px-[32px] mx-auto mt-[48px] bg-white-100">
+                <div>
+                    <div>
+                      <a href="#" type="button" class=" w-[756px] mb-[22px] grid grid-cols-[48px_592px_60px] text-left bg-gray-100 h-[116px] pl-[20px]  items-center font-urbanist font-extrabold text-[28px]">
+                        <span class="block bg-[url('./images/icon_guarantee.svg')] h-[48px] bg-no-repeat bg-left"></span>
+                        <span class="block pl-[10px]">TIME GUARANTEE</span>
+                        <span class="block bg-[url('./images/arrow_guarantee.svg')] h-[60px] bg-no-repeat bg-right"></span>
+
+                    </a> 
+                    </div>
+                    <div>
+                      <a href="#" type="button" class="w-[756px] mb-[22px] grid grid-cols-[48px_592px_60px] text-left bg-gray-100 h-[116px] pl-[20px] pr-[20px] items-center font-urbanist font-extrabold text-[28px]">
+                        <span class="block bg-[url('./images/icon_guarantee1.svg')] h-[48px] bg-no-repeat bg-left"></span>
+                        <span class="block pl-[10px]">QUALITY GUARANTEE</span>
+                        <span class="block bg-[url('./images/arrow_guarantee.svg')] h-[60px] bg-no-repeat bg-right"></span>
+
+                    </a> 
+                    </div>
+                    <div class="mb-[20px] border-t border-solid border-b border-[rgba(52, 55, 60, 0.15)] w-[756px]">
+                     <a href="#" type="button" class="w-[756px] mb-[0px] grid grid-cols-[48px_592px_60px] text-left  h-[116px] pl-[20px] pr-[20px] items-center font-urbanist font-extrabold text-[28px]">
+                        <span class="block bg-[url('./images/icon_guarantee2.svg')] h-[48px] bg-no-repeat bg-left"></span>
+                        <span class="block pl-[10px]">COST GUARANTEE</span>
+                        <span class="block bg-[url('./images/active_arrow_guarantee.svg')] h-[60px] bg-no-repeat bg-right"></span>
+
+                    </a> 
+                    <div class="mb-[20px]">
+                        <ul class="pl-[20px]">
+                            <li class="mb-[26px]">
+                                <p class="bg-[url('./images/b_list_icon.svg')] bg-no-repeat bg-left pl-[35px]">If you’re not 100% satisfied with your preliminary design package or finish<br> selections, we’ll revise at no extra cost</p>
+                            </li>
+                            <li class="mb-[26px]">
+                                <p class="bg-[url('./images/b_list_icon.svg')] bg-no-repeat bg-left pl-[35px]">Love it, or we redo it</p>
+                            </li>
+                            <li>
+                                <p class="bg-[url('./images/b_list_icon.svg')] bg-no-repeat bg-left pl-[35px]">Full-scale custom builds</p>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div>
+                      <a href="#" type="button" class="w-[756px] grid grid-cols-[48px_592px_60px] text-left bg-gray-100 h-[116px] pl-[20px] pr-[20px] items-center font-urbanist font-extrabold text-[28px]">
+                        <span class="block bg-[url('./images/icon_guarantee3.svg')] h-[48px] bg-no-repeat bg-left"></span>
+                        <span class="block pl-[10px]">DEESIGN SATISFACTION GUARANTEE</span>
+                        <span class="block bg-[url('./images/arrow_guarantee.svg')] h-[60px] bg-no-repeat bg-right"></span>
+
+                    </a> 
+                    </div>
+                    
+                </div>
+                <div>
+                    <img src="./images/gua_image.png" alt="Image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-100 pt-[200px] ">
+        <div class="max-w-[1600px] mx-auto grid grid-cols-[883px_813px]">
+            <div>
+                <p class="mb-[16px] bg-[url('./images/bg_guarant.svg')] bg-no-repeat bg-left pl-[10px] font-urbanist font-bold text-[18px] text-black-100 opacity-[0.4]">LOREM IPSUM MET SIT</p>
+                <h2 class="mb-[24px] font-urbanist font-extrabold text-[44px] text-black-100 leading-[100%]">Newfore: Hamilton’s Home<br> Renovation <span class="text-orange-100">Expert</span></h2>
+                <p class="mb-[40px] font-raleway font-normal text-[18px] text-[rgba(52,55,60,0.3)] leading-[178%]">Newfore does more than simply renovate your space. We’re Hamilton’s most reliablehome renovation company, committed to providing quality transformations that enhance your home’s function and blend in its overall design. Our licensed and insured team doesn’t just update your bedrooms, we transform homes into beautiful, functioning spaces. We also offer <span class="font-semibold text-orange-100">Financing plans</span>, making those bells and whistles you always wanted, that much more affordable.</p>
+                <h2 class="mb-[24px] font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%]">COMMERCIAL RENOVATIONS HAMILTON</h2>
+                <p class="mb-[40px] font-raleway font-normal text-[18px] text-[rgba(52,55,60,0.3)] leading-[178%]">First impressions matter, especially in business. At Newfore, we transform commercial spaces across Hamilton, Stoney Creek and beyond, combining expert craftsmanship, efficient timelines, and modern design to elevate your brand image and functionality. From retail stores and<span class="font-semibold text-orange-100"> office buildings </span class="font-semibold text-orange-100">to<span class="font-semibold text-orange-100"> restaurants</span> and<span class="font-semibold text-orange-100"> gym</span> facilities, we deliver renovations that enhance productivity, attract customers, and turn businesses into memorable spaces. With tailored solutions and quick turnaround, Newfore is your trusted partner for commercial renovations that inspire success.</p>
+                <div class="mb-[40px] bg-white-100 pl-[150px] ml-[-150px] leading-[72px]  h-[72px]">
+                    <div class="grid grid-cols-[28px_800px] gap-x-[10px] items-center">
+                        <div>
+                            <img src="./images/project_icon.svg" alt="image">
+                        </div>
+                        <div>
+                            <p class="text-[rgba(52,55,60,0.5)] font-raleway font-semibold text-[18px]">Best Home Renovations Contractor – <span class="text-black-100">Ancaster Based – Ontario Bound!</span></p>
+                        </div>
+                    </div>
+                </div>
+                <p class="mb-[24px] font-raleway font-normal text-[18px] text-[rgba(52,55,60,0.3)] leading-[178%]">At Newfore, we stand behind our work with firm guarantees that give you confidence in your investment. Our commitment to time, quality, design and cost ensures that your project is completed as promised, without compromise.</p>
+                <p class=" font-raleway font-normal text-[18px] text-[rgba(52,55,60,0.3)] leading-[178%]">At Newfore, we stand behind our work with firm guarantees that give you confidence in</p>
+                <div class="grid grid-cols-[742px_416px] mt-[-30px] items-center">
+                    <div class="relative z-100">
+                        <img src="./images/project_image.png"  alt="Image">
+                    </div>
+                    <div class="mt-[50px] ml-[-120px]">
+                        <div class="pl-[50px] mb-[5px] grid grid-cols-[172px_172px] items-center bg-white-100 h-[124px]">
+                        <div>
+                            <span class="font-urbanist font-extrabold text-[76px] text-orange-100">100+</span>
+                        </div>
+                        <div>
+                            <p class="font-raleway font-bold text-[24px] text-black-100 leading-[117%]">Expert</p>
+                            <p class="font-raleway font-bold text-[24px] text-[rgba(52,55,60,0.5)] leading-[117%]">Installers</p>
+                        </div>
+                        </div>
+                         <div class="pl-[50px] mb-[5px]  bg-white-100 h-[124px] grid grid-cols-[172px_172px] items-center">
+                            <div>
+                            <span class="font-urbanist font-extrabold text-[76px] text-orange-100">10+</span>
+                        </div>
+                        <div>
+                            <p class="font-raleway font-bold text-[24px] text-black-100 leading-[117%]">Years in</p>
+                            <p class="font-raleway font-bold text-[24px] text-[rgba(52,55,60,0.5)] leading-[117%]">Business</p>
+                        </div>
+                         </div>
+                         <div class="pl-[50px] bg-white-100 h-[124px] grid grid-cols-[172px_172px] items-center">
+                            <div>
+                            <span class="font-urbanist font-extrabold text-[76px] text-orange-100">1K+</span>
+                        </div>
+                        <div>
+                            <p class="font-raleway font-bold text-[24px] text-black-100 leading-[117%]">Projects</p>
+                            <p class="font-raleway font-bold text-[24px] text-[rgba(52,55,60,0.5)] leading-[117%]">completed</p>
+                        </div>
+                         </div>
+                        
+                    </div>
+                </div>
+                <p class="mb-[40px] font-raleway font-normal text-[18px] text-[rgba(52,55,60,0.3)] leading-[178%]">We’re experts. We handle home and commercial renovations, and you can count on us whether it’s a home renovation, a bathroom renovation, a kitchen renovation or an complete addition.</p>
+                <p class="mb-[40px] font-raleway font-normal text-[18px] text-[rgba(52,55,60,0.3)] leading-[178%]">As your most reliable renovation partner, we keep things simple: we show up, do great work, finish on time. We communicate along the way and make sure you understand what we’re doing every step of the way. Whether it’s a full home makeover or a few smaller upgrades, we use our experience and local know-how to make every part of your space better. We’ve been at this for over 10 years and built a solid name for quality and reliability in the area. When you hire us, you can expect high standards, consistent pricing, and a job done on time.</p>
+                <p class="bg-[url('./images/bg_guarant.svg')] bg-no-repeat bg-left pl-[10px] mb-[10px] font-raleway font-bold text-[18px] text-black-100 opacity-[0.4] leading-[178%]">LOREM IPSUM MET SIT</p>
+                <h2 class="mb-[24px] font-urbanist font-extrabold text-[44px] text-black-100 leading-[100%]"><span class="text-orange-100">Newfore:</span> The Home Renovation Company by which all others are measured</h2>
+                <p  class="mb-[24px] font-raleway font-normal text-[18px] text-[rgba(52,55,60,0.3)] leading-[178%]">With 10+ years under our belt, Newfore is a trusted renovations contractor for homes and businesses. Clients choose us for solid craftsmanship, clear communication, and work that’s done on time. From additions, kitchens, bathrooms, and basements to offices and retail fitouts, we deliver reliable results that raise the bar for Hamilton home renovations and commercial renovations.</p>
+                <img src="./images/project_image1.png" alt="Image">
+                <div>
+                    <p class="mt-[24px] bg-[url('./images/bg_guarant.svg')] font-urbanist font-bold text-[18px] bg-no-repeat bg-left pl-[10px]">LOREM IPSUM MET SIT</p>
+                    <h2 class="font-urbanist font-extrabold text-[44px]"><span class="text-orange-100">MAISON GARDEN</span> SUITES</h2>
+                    <p class="mb-[24px] font-raleway font-normal text-[18px] text-[rgba(52,55,60,0.3)] leading-[178%]">Maison Garden Suites, a proud part of the Newfore family, specializes in crafting beautiful garden suites that epitomize luxury and tranquility. Explore bespoke outdoor living spaces designed to enhance your lifestyle.</p>
+                </div>
+            </div>
+            <div>
+                <h2>START YOUR RENOVATION <span>PROJECT</span></h2>
+                <p>Need help with your renovation? Just ask us for a quote!</p>
+                <form action="#" method="post">
+                    <div>
+                        <input type="text" name="name">
+                    </div>
+                    <div>
+                         <input type="text" name="email">
+                    </div>
+                    <div>
+                         <input type="text" name="phone">
+                    </div>
+                    <div>
+                         <input type="text" name="adress">
+                    </div>
+                    <div>
+                        <button type="button" class="project_btn">services you need</button>
+                        <div>
+                            <ul>
+                        <li>
+                            <p class="mb-[20px] cursor-pointer font-raleway font-normal text-[16px] text-black-100">Home Renovations</p>
+                        </li>
+                        <li>
+                            <p class="mb-[20px] cursor-pointer font-raleway font-normal text-[16px] text-black-100">Home Additions</p>
+                        </li>
+                        <li>
+                            <p class="mb-[20px] cursor-pointer font-raleway font-normal text-[16px] text-black-100">Commercial Renovations</p>
+                        </li>
+                        <li>
+                            <p class="mb-[20px] cursor-pointer font-raleway font-normal text-[16px] text-black-100">Bathroom Renovations</p>
+                        </li>
+                        <li>
+                            <p class="mb-[20px] cursor-pointer font-raleway font-normal text-[16px] text-black-100">Kitchen Renovations</p>
+                        </li>
+                        <li>
+                            <p class=" font-raleway font-normal text-[16px] text-black-100">Basement Renovations</p>
+                        </li>
+                    </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit">submit</button>
+                    </div>
+                </form>
+                <div>
+                    <p></p>
+                    <div>
+                        <div>
+                            <a href="#">apply for financing</a>
+                        </div>
+                        <div>
+                            <img src="./images/project_iamge.png" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   </main>
    <footer></footer>
 </body>
 </html>
