@@ -120,6 +120,15 @@ const work_prev_slide = document.querySelector(".work_prev_slide");
 
      })
 
+     document
+       .getElementById("scrollButton")
+       .addEventListener("click", function () {
+         document.querySelector("header").scrollIntoView({
+           behavior: "smooth", // Плавная прокрутка
+           block: "start", // Прокрутить до начала элемента
+         });
+       });
+
      function changeAcardion() {
      
   
@@ -163,9 +172,9 @@ const work_prev_slide = document.querySelector(".work_prev_slide");
   })
   
 
-}
+      }
 
-changeAcardion()
+    changeAcardion()
 
 })
 
