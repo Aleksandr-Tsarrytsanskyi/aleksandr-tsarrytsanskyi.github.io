@@ -152,7 +152,7 @@ img {
 }
 
 .animate_img {
-  animation: running-text 20s linear infinite
+  animation: running-text 30s linear infinite
 }
 
 @keyframes running-text {
@@ -316,4 +316,16 @@ footer {
   background-image: url('../images/Logo_footer.png');
   background-repeat: no-repeat;
   background-position: left bottom;
+}
+
+.Guarantees a:hover .Guarantees__span {
+  display: none;
+}
+
+.Guarantees a:hover .Guarantees__span_active {
+  display: block;
+}
+
+.Guarantees__span_active {
+  display: none;
 }
