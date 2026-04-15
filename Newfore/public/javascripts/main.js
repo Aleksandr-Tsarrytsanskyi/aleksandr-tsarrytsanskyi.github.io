@@ -39,7 +39,7 @@ const portfolio = new Swiper('.portfolio', {
   // Optional parameters
   loop: true,
    slidesPerView: 3.2,
-   spaceBetween: 10,
+   spaceBetween: 110,
 
   // If we need pagination
   
@@ -74,7 +74,7 @@ const portfolio = new Swiper('.portfolio', {
 const work = new Swiper('.work', {
   // Optional parameters
   slidesPerView: 2.6,
-  spaceBetween: 10,
+  spaceBetween: 140,
   loop: true,
 
   // If we need pagination

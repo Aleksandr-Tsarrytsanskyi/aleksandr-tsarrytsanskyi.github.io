@@ -301,9 +301,9 @@ background-image: url("../images/close_acardion.svg") !important;
 
 .questions p {
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   border-top: 1px solid rgba(254, 254, 254, 0.2);
-  padding-top: 10px;
+  padding-top: 20px;
 
 }
 
