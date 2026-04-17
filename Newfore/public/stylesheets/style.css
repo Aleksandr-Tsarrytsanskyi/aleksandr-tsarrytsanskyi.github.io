@@ -236,7 +236,7 @@ img {
   content: "";
     position: absolute;
     left: 3px;
-    top: 1px;
+    top: 4px;
    z-index: 200;
     width: 10px;
     height: 10px;
@@ -329,3 +329,5 @@ footer {
 .Guarantees__span_active {
   display: none;
 }
+
+.Newfore {}

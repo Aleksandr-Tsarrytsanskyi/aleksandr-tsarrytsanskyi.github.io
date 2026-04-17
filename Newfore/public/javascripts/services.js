@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const project_list = document.querySelector(".project_list")
+    const buttonList = document.querySelector(".project_service_list")
     const listP = document.querySelectorAll(".form_list p")
- const buttonList = document.querySelector(".project_service_list")
-  const form_list = document.querySelector(".form_list")
- listP.forEach(list => {
+    const form_list = document.querySelector(".form_list")
+
+
+    buttonList.addEventListener("click", function() {
+        this.classList.toggle("project_service_list_hide")
+          form_list.classList.toggle("form_list_show")
+    })
+
+    
+
+    listP.forEach(list => {
         list.addEventListener("click", function() {
             form_list.classList.remove("form_list_show")
             buttonList.classList.remove("project_service_list_hide")
@@ -12,20 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     })
 
-     buttonList.addEventListener("click", function() {
-        this.classList.toggle("project_service_list_hide")
-          form_list.classList.toggle("form_list_show")
-    })
- 
- const work = new Swiper('.work', {
-  // Optional parameters
-  slidesPerView: 2.6,
-  spaceBetween: 140,
-  loop: true,
 
-  // If we need pagination
-  
-});
+   
 
 const portfolio = new Swiper('.portfolio', {
   // Optional parameters
@@ -37,12 +33,31 @@ const portfolio = new Swiper('.portfolio', {
   
 });
 
-const Portfolio_prev_slide = document.querySelector(".Portfolio_prev_slide");
-  const Portfolio_next_slide = document.querySelector(".Portfolio_next_slide");
+
+
+
+
+const work = new Swiper('.work', {
+  // Optional parameters
+  slidesPerView: 2.6,
+  spaceBetween: 140,
+  loop: true,
+
+  // If we need pagination
+  
+});
+
+
+
+
 const work_prev_slide = document.querySelector(".work_prev_slide");
   const work_next_slide = document.querySelector(".work_next_slide");
+  const Portfolio_prev_slide = document.querySelector(".Portfolio_prev_slide");
+  const Portfolio_next_slide = document.querySelector(".Portfolio_next_slide");
 
-work_prev_slide.addEventListener("click", () => {
+    
+
+     work_prev_slide.addEventListener("click", () => {
         work.slidePrev();
 
      })
@@ -62,7 +77,7 @@ work_prev_slide.addEventListener("click", () => {
 
      })
 
-      document
+     document
        .getElementById("scrollButton")
        .addEventListener("click", function () {
          document.querySelector("header").scrollIntoView({
@@ -119,3 +134,4 @@ work_prev_slide.addEventListener("click", () => {
     changeAcardion()
 
 })
+
