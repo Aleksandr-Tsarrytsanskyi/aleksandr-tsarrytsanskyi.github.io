@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <script src="./javascripts/awards.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="relative bg-[url('./images/Awards/banner.png')] h-[552px] bg-cover bg-no-repeat bg-center" >
+    <div class="bg-[url('./images/Awards/overlay.png')] bg-no-repeat bg-left bg-cover h-[552px]">
+        <div class="bg-[rgba(254,254,254,0.15)] py-[8px] backdrop-blur-[20px] h-[52px]">
+            <div class="grid grid-cols-[430px_368px] max-w-[1600px] mx-auto justify-between items-center">
+            <div>
+                <p class="mt-[3px] font-raleway font-bold text-[18px] text-white-100">Ready To Start A Renovation?<a href="#" class="font-normal hover:underline"> Contact Us Today!</a></p>
+            </div>
+            <div>
+                <div class="grid grid-cols-[181px_168px] gap-x-[20px] items-center">
+                    <div>
+                        <a href="#" class="mt-[4px] ml-[-3px] bg-[url('./images//phone.svg')] bg-no-repeat bg-[8px_-0px] block h-[24px] pl-[45px] font-raleway font-bold text-[16px]  text-white-100 hover:underline uppercase">Request a Call</a>
+                    </div>
+                    <div>
+                        <div class="grid grid-cols-[36px_36px_36px_36px] gap-[8px]">
+                            <div>
+                                <a href="#">
+                               <svg class="hover:fill-orange-100 transition-all duration-300 ease-in" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="35" height="35" stroke="#FEFEFE" stroke-opacity="0.25"/>
+                                <path d="M24 9.50575C24 9.37318 23.9473 9.24605 23.8536 9.15231C23.7598 9.05857 23.6326 9.00591 23.5 9.00591H21C19.7411 8.94322 18.5086 9.38118 17.5717 10.2241C16.6348 11.067 16.0698 12.2463 16 13.5044V16.2035H13.5C13.3674 16.2035 13.2402 16.2562 13.1464 16.3499C13.0527 16.4437 13 16.5708 13 16.7034V19.3025C13 19.4351 13.0527 19.5622 13.1464 19.656C13.2402 19.7497 13.3674 19.8024 13.5 19.8024H16V26.5002C16 26.6327 16.0527 26.7599 16.1464 26.8536C16.2402 26.9473 16.3674 27 16.5 27H19.5C19.6326 27 19.7598 26.9473 19.8536 26.8536C19.9473 26.7599 20 26.6327 20 26.5002V19.8024H22.62C22.7312 19.804 22.8397 19.7685 22.9285 19.7015C23.0172 19.6345 23.0811 19.5398 23.11 19.4325L23.83 16.8333C23.8499 16.7595 23.8526 16.6821 23.8378 16.607C23.8231 16.532 23.7913 16.4613 23.7449 16.4005C23.6985 16.3396 23.6388 16.2902 23.5704 16.2561C23.5019 16.222 23.4265 16.204 23.35 16.2035H20V13.5044C20.0249 13.257 20.1411 13.0277 20.326 12.8613C20.5109 12.695 20.7512 12.6035 21 12.6047H23.5C23.6326 12.6047 23.7598 12.5521 23.8536 12.4583C23.9473 12.3646 24 12.2375 24 12.1049V9.50575Z" fill="#FEFEFE"/>
+                                </svg>
+
+                                </a>    
+                                </div>
+                            <div>
+                                <a href="#">
+                                   <svg class="hover:fill-orange-100 transition-all duration-300 ease-in" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="35" height="35" stroke="#FEFEFE" stroke-opacity="0.25"/>
+                                    <path d="M22 8C25.3123 8 28 10.6877 28 14V22C28 25.3123 25.3123 28 22 28H14C10.6877 28 8 25.3123 8 22V14C8 10.6877 10.6877 8 14 8H22ZM14 10C11.7923 10 10 11.7923 10 14V22C10 24.2077 11.7923 26 14 26H22C24.2077 26 26 24.2077 26 22V14C26 11.7923 24.2077 10 22 10H14ZM18 13C20.7623 13 23 15.2377 23 18C23 20.7623 20.7623 23 18 23C15.2377 23 13 20.7623 13 18C13 15.2377 15.2377 13 18 13ZM18 15C16.3423 15 15 16.3423 15 18C15 19.6577 16.3423 21 18 21C19.6577 21 21 19.6577 21 18C21 16.3423 19.6577 15 18 15ZM23 11.5C23.8284 11.5 24.5 12.1716 24.5 13C24.5 13.8284 23.8284 14.5 23 14.5C22.1716 14.5 21.5 13.8284 21.5 13C21.5 12.1716 22.1716 11.5 23 11.5Z" fill="#FEFEFE"/>
+                                    </svg>
+                                </a>    
+                                </div>
+                            <div>
+                                <a href="#">
+                                <svg class="hover:fill-orange-100 transition-all duration-300 ease-in" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="35" height="35" stroke="#FEFEFE" stroke-opacity="0.25"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.429 14.969H19.143V16.819C19.678 15.755 21.05 14.799 23.111 14.799C27.062 14.799 28 16.917 28 20.803V28H24V21.688C24 19.475 23.465 18.227 22.103 18.227C20.214 18.227 19.429 19.572 19.429 21.687V28H15.429V14.969ZM8.57 27.83H12.57V14.799H8.57V27.83ZM13.143 10.55C13.1431 10.8853 13.0767 11.2172 12.9474 11.5266C12.8181 11.8359 12.6287 12.1165 12.39 12.352C12.1506 12.5901 11.8667 12.7787 11.5544 12.9071C11.2421 13.0354 10.9076 13.101 10.57 13.1C9.8896 13.0985 9.23691 12.8303 8.752 12.353C8.5143 12.1166 8.32553 11.8357 8.1965 11.5264C8.06746 11.217 8.00069 10.8852 8 10.55C8 9.873 8.27 9.225 8.753 8.747C9.2367 8.26788 9.89018 7.99938 10.571 8C11.253 8 11.907 8.269 12.39 8.747C12.873 9.225 13.143 9.873 13.143 10.55Z" fill="#FEFEFE"/>
+                                </svg>
+
+                                </a>    
+                                </div>
+                            <div>
+                                <a href="#">
+                                
+                                    <svg class="hover:fill-orange-100 transition-all duration-300 ease-in" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="35" height="35" stroke="#FEFEFE" stroke-opacity="0.25"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18 10C18.855 10 19.732 10.022 20.582 10.058L21.586 10.106L22.547 10.163L23.447 10.224L24.269 10.288C25.1612 10.3559 26.0008 10.7364 26.64 11.3626C27.2791 11.9888 27.6768 12.8204 27.763 13.711L27.803 14.136L27.878 15.046C27.948 15.989 28 17.017 28 18C28 18.983 27.948 20.011 27.878 20.954L27.803 21.864L27.763 22.289C27.6768 23.1798 27.2789 24.0115 26.6396 24.6377C26.0002 25.2639 25.1604 25.6443 24.268 25.712L23.448 25.775L22.548 25.837L21.586 25.894L20.582 25.942C19.7218 25.9793 18.861 25.9986 18 26C17.139 25.9986 16.2782 25.9793 15.418 25.942L14.414 25.894L13.453 25.837L12.553 25.775L11.731 25.712C10.8388 25.6441 9.9992 25.2636 9.36004 24.6374C8.72089 24.0112 8.32319 23.1796 8.237 22.289L8.197 21.864L8.122 20.954C8.04583 19.9711 8.00514 18.9858 8 18C8 17.017 8.052 15.989 8.122 15.046L8.197 14.136L8.237 13.711C8.32316 12.8206 8.72071 11.9891 9.35966 11.3629C9.99861 10.7368 10.838 10.3561 11.73 10.288L12.551 10.224L13.451 10.163L14.413 10.106L15.417 10.058C16.2775 10.0207 17.1387 10.0014 18 10ZM16 15.575V20.425C16 20.887 16.5 21.175 16.9 20.945L21.1 18.52C21.1914 18.4674 21.2673 18.3916 21.3201 18.3003C21.3729 18.209 21.4007 18.1055 21.4007 18C21.4007 17.8945 21.3729 17.791 21.3201 17.6997C21.2673 17.6084 21.1914 17.5326 21.1 17.48L16.9 15.056C16.8088 15.0033 16.7053 14.9756 16.5999 14.9756C16.4945 14.9756 16.3911 15.0034 16.2998 15.0561C16.2086 15.1088 16.1329 15.1846 16.0802 15.2759C16.0276 15.3671 15.9999 15.4706 16 15.576V15.575Z" fill="#FEFEFE"/>
+                                    </svg>
+
+                                </a>    
+                                </div>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="grid mt-[16px] grid-cols-[173px_669px_251px] max-w-[1600px] items-center mx-auto gap-x-[252px] justify-center">
+            <div>
+                <nav>
+                    <a href="./index.html">
+                        <img src="./images/Logo.svg" alt="logo">
+                    </a>
+                </nav>
+            </div>
+            <div>
+                <nav>
+                    <ul class="ml-[-17px] mt-[-5px]">
+                        <li class="mr-[32px] float-left">
+                            <a href="./index.html" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in uppercase">Home</a>
+                        </li>
+                        <li class="mr-[32px] float-left">
+                            <a href="./about.html" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in uppercase">About</a>
+                        </li>
+                        <li class="mr-[32px] float-left">
+                            <a href="#" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in uppercase" >Services</a>
+                        </li>
+                        <li class="mr-[32px] float-left">
+                            <a href="#" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in uppercase" >Portfolio</a>
+                        </li>
+                        <li class="mr-[32px] float-left">
+                            <a href="#" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in uppercase" >Awards & Media</a>
+                        </li>
+                        <li class=" float-left">
+                            <a href="#" class="font-raleway font-semibold text-[16px] text-white-100 hover:text-orange-100 transition-colors duration-300 ease-in uppercase" >financing</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <div class="grid grid-cols-[81px_165px] gap-x-[15px] items-center">
+                    <div>
+                        <button type="button" class="ml-[-20px] bg-[url('./images/uiw_login.svg')] bg-no-repeat bg-left font-raleway font-semibold text-[16px] text-white-100 pl-[28px] hover:underline">LOGIN</button>
+                    </div>
+                    <div>
+                        <button type="button" class="w-[165px] h-[52px] leading-[52px] text-center font-raleway font-bold text-[16px] text-white-100 bg-orange-100 transition-colors duration-300 ease-in hover:bg-[#e94b10]">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-[15px] border-solid border-b border-[rgba(254,254,254,0.5)]"></div>
+        <div class="grid grid-cols-[850px_154px] justify-between items-end max-w-[1600px] mx-auto mt-[80px]">
+            <div>
+                <h1 class="uppercase font-raleway font-extrabold text-[60px] leading-[100%] text-white-100">awards & media</h1>
+                
+                <div class="mt-[35px] border-solid border-b border-[rgba(254,254,254,0.5)]"></div>
+                <p class=" font-raleway font-medium text-[22px] text-white-100 mt-[40px]">Lorem ipsum dolor sit amet consectetur. Parturient feugiat et donec mi eu elementum egestas vitae. Interdum at tortor viverra diam cursus.</p>
+                
+            </div>
+            
+        </div>
+    </div>
+   </header>
+   <main>
+    <section class="bg-gray-100 relative z-20">
+        <div class="grid grid-cols-[1059px_477px] pt-[60px] justify-between max-w-[1600px] mx-auto">
+            <div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px]  gap-x-[24px]  items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">feb 9</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2024</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img1.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#" class=" ">
+                            <h2 class="hover:underline font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%]">The Building Code # 206 – Big opportunity in tiny homes</h2>
+                        </a>
+                        <div>  
+                            <div class="grid   grid-cols-[1fr_87px_36px_36px] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon1.svg" alt="Icon">
+                            </div>
+                            <div>
+                                <p class="font-raleway font-normal text-[18px] text-black-100">Listen on </p>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="./images/Awards/icon_yotube.svg" alt="Image">
+                                </a>
+                            </div>
+                            <div>
+                                 <a href="#">
+                                    <img src="./images/Awards/icon_spot.svg" alt="Image">
+                                 </a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">oct 23</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2023</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img2.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="hover:underline font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%]">Real Estate Investor’s Playbook</h2>
+                        </a>
+                        <div class="grid  grid-cols-[1fr_87px_36px_36px_36px] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon2.svg" alt="Icon">
+                            </div>
+                            <div>
+                                <p class="font-raleway font-normal text-[18px] text-black-100">Listen on </p>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="./images/Awards/icon_yotube.svg" alt="Image">
+                                </a>
+                            </div>
+                            <div>
+                                 <a href="#">
+                                    <img src="./images/Awards/icon_spot.svg" alt="Image">
+                                 </a>
+                            </div>
+                             <div>
+                                 <a href="#">
+                                    <img src="./images/Awards/icon_aplle.svg" alt="Image">
+                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">sep 26</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2023</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img3.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="hover:underline font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%]">Ep. 124: Transforming Abandoned Properties</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr_87px_36px_36px_36px] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon3.svg" alt="Icon">
+                            </div>
+                            <div>
+                                <p class="font-raleway font-normal text-[18px] text-black-100">Listen on </p>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="./images/Awards/icon_spot.svg" alt="Image">
+                                </a>
+                            </div>
+                            <div>
+                                 <a href="#">
+                                    <img src="./images/Awards/icon_aplle.svg" alt="Image">
+                                 </a>
+                            </div>
+
+                            <div>
+                                 <a href="#">
+                                    <img src="./images/Awards/icon_pod.svg" alt="Image">
+                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">sep 16</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2023</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img4.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="hover:underline font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%]">#406 Seif El-Sahly of Newfore Inc. talks about renovating in Hamilton, Garage Dwellings and HGTV</h2>
+                        </a>
+                        <div class="grid   grid-cols-[256px_87px_36px_36px] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon4.svg" alt="Icon">
+                            </div>
+                            <div>
+                                <p class="font-raleway font-normal text-[18px] text-black-100">Listen on </p>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="./images/Awards/icon_yotube.svg" alt="Image">
+                                </a>
+                            </div>
+                            <div>
+                                 <a href="#">
+                                    <img src="./images/Awards/icon_spot.svg" alt="Image">
+                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100  px-[24px]  py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">sep 13</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2023</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img5.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid  h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="hover:underline font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%]">Abandoned Renovations, Garden Suites and Construction Entrepreneurship with Seif El-Sahly</h2>
+                        </a>
+                        <div class="grid  grid-cols-[1fr_87px_36px]  gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon5.svg" alt="Icon">
+                            </div>
+                            <div>
+                                <p class="font-raleway font-normal text-[18px] text-black-100">Listen on </p>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="./images/Awards/icon_aplle.svg" alt="Image">
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">sep 13</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2023</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img6.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Hamilton Construction Chronicles with Seif El-Sahly (Ep. #223)</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr_87px_36px_36px] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon6.svg" alt="Icon">
+                            </div>
+                            <div>
+                                <p class="font-raleway font-normal text-[18px] text-black-100">Listen on </p>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="./images/Awards/icon_yotube.svg" alt="Image">
+                                </a>
+                            </div>
+                            <div>
+                                 <a href="#">
+                                    <img src="./images/Awards/icon_spot.svg" alt="Image">
+                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">aug 31</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2023</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img7.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Meet Seif: The Mastermind Behind 150 Jaw-Dropping Tiny Home Garage Renovations in Just 3 Years!</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr_87px_36px_36px_36px_36px] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon7.svg" alt="Icon">
+                            </div>
+                            <div>
+                                <p class="font-raleway font-normal text-[18px] text-black-100">Listen on </p>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="./images/Awards/icon_yotube.svg" alt="Image">
+                                </a>
+                            </div>
+                            <div>
+                                 <a href="#">
+                                    <img src="./images/Awards/icon_spot.svg" alt="Image">
+                                 </a>
+                            </div>
+                            <div>
+                                 <a href="#">
+                                    <img src="./images/Awards/icon_aplle.svg" alt="Image">
+                                 </a>
+                            </div>
+                             <div>
+                                 <a href="#">
+                                    <img src="./images/Awards/icon_pod.svg" alt="Image">
+                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">jul 6</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2023</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img8.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Create additional income by converting garages into homes</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon8.svg" alt="Icon">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">jul 6</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2023</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img9.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Create additional income by converting garages into homes</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon9.svg" alt="Icon">
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">dec 28</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2021</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img10.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Reno Tips to Get the Best Bang for Your Buck</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon10.svg" alt="Icon">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">oct 1</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2021</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img11.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Best General Contractors in Canada 2021)</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon11.svg" alt="Icon">
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">mar 16</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2021</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img12.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Entrepreneurial engineer sets out to revitalize Hamilton</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon12.svg" alt="Icon">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">sep 16</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2020</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img13.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Renewal projects on Barton Street and across Hamilton</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon13.svg" alt="Icon">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">aug 14</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2020</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img14.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Barton Street Rebirth</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon14.svg" alt="Icon">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">feb 12</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2020</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img15.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Outstanding Business Achievement Award for Mid-Sized Business of 2020</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon15.svg" alt="Icon">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">feb 07</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2020</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img16.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Best of 2020</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon16.svg" alt="Icon">
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-[20px] bg-white-100 px-[24px] py-[24px] h-[296px]">
+                <div class="grid grid-cols-[120px_373px_470px] gap-x-[24px] items-center">
+                    <div>
+                        <p class="text-center mx-auto border-b pb-[10px] border-solid border-[rgba(52,55,60,0.2);] w-[54px] uppercase font-urbanist font-extrabold text-[22px] text-black-100">feb 07</p>
+                        <p class=" mt-[5px] text-center  font-urbanist font-extrabold text-[36px] text-black-100">2020</p>
+                    </div>
+                    <div>
+                        <img src="./images/Awards/img17.png" alt="Image">
+                    </div>
+                    <div class="ml-[40px] grid h-[246px] items-end">
+                        <a href="#">
+                            <h2 class="font-urbanist font-extrabold text-[28px] text-black-100 leading-[100%] hover:underline">Best of 2020</h2>
+                        </a>
+                        <div class="grid   grid-cols-[1fr] gap-x-[5px] pt-[20px] border-t border-solid border-[rgba(52,55,60,0.1)] items-center">
+                            <div>
+                                <img src="./images/Awards/icon17.svg" alt="Icon">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="mt-[-150px]">
+                <div class="listen">
+            <h2 class="mb-[26px] font-urbanist font-extrabold text-[28px] text-white-100">Listen On</h2>
+            <div class="grid grid-cols-[140px_199px] gap-[10px] items-center">
+                <div>
+                    <a href="#" class="listen_link grid grid-cols-[44px_72px] gap-x-[10px] items-center border border-solid border-[rgba(254,254,254,0.15)] font-raleway font-normal text-[18px] text-white-100 ">
+                       <span>
+                            <svg class="listen_svg  width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" fill="#FEFEFE" fill-opacity="0.15"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22 14C22.855 14 23.732 14.022 24.582 14.058L25.586 14.106L26.547 14.163L27.447 14.224L28.269 14.288C29.1612 14.3559 30.0008 14.7364 30.64 15.3626C31.2791 15.9888 31.6768 16.8204 31.763 17.711L31.803 18.136L31.878 19.046C31.948 19.989 32 21.017 32 22C32 22.983 31.948 24.011 31.878 24.954L31.803 25.864L31.763 26.289C31.6768 27.1798 31.2789 28.0115 30.6396 28.6377C30.0002 29.2639 29.1604 29.6443 28.268 29.712L27.448 29.775L26.548 29.837L25.586 29.894L24.582 29.942C23.7218 29.9793 22.861 29.9986 22 30C21.139 29.9986 20.2782 29.9793 19.418 29.942L18.414 29.894L17.453 29.837L16.553 29.775L15.731 29.712C14.8388 29.6441 13.9992 29.2636 13.36 28.6374C12.7209 28.0112 12.3232 27.1796 12.237 26.289L12.197 25.864L12.122 24.954C12.0458 23.9711 12.0051 22.9858 12 22C12 21.017 12.052 19.989 12.122 19.046L12.197 18.136L12.237 17.711C12.3232 16.8206 12.7207 15.9891 13.3597 15.3629C13.9986 14.7368 14.838 14.3561 15.73 14.288L16.551 14.224L17.451 14.163L18.413 14.106L19.417 14.058C20.2775 14.0207 21.1387 14.0014 22 14ZM20 19.575V24.425C20 24.887 20.5 25.175 20.9 24.945L25.1 22.52C25.1914 22.4674 25.2673 22.3916 25.3201 22.3003C25.3729 22.209 25.4007 22.1055 25.4007 22C25.4007 21.8945 25.3729 21.791 25.3201 21.6997C25.2673 21.6084 25.1914 21.5326 25.1 21.48L20.9 19.056C20.8088 19.0033 20.7053 18.9756 20.5999 18.9756C20.4945 18.9756 20.3911 19.0034 20.2998 19.0561C20.2086 19.1088 20.1329 19.1846 20.0802 19.2759C20.0276 19.3671 19.9999 19.4706 20 19.576V19.575Z" fill="#FEFEFE"/>
+                            </svg>
+                       </span>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="listen_link grid grid-cols-[44px_131px] gap-x-[10px] items-center border border-solid border-[rgba(254,254,254,0.15)] font-raleway font-normal text-[18px] text-white-100 ">
+                        <span>
+                            
+                            <svg  class="listen_svg  width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" fill="#FEFEFE" fill-opacity="0.15"/>
+                            <path d="M19.5605 25.5842C19.5605 24.3977 20.5362 23.6067 21.9996 23.6067C23.463 23.6067 24.4386 24.3977 24.4386 25.5842C24.4386 28.0561 23.9508 32.9999 21.9996 32.9999C20.0484 32.9999 19.5605 28.0561 19.5605 25.5842Z" fill="#FEFEFE"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4634 21.1348C13.4638 19.5873 13.8739 18.0681 14.6507 16.7358C15.4276 15.4034 16.5428 14.3067 17.8802 13.5598C19.2176 12.8129 20.7282 12.4433 22.2545 12.4894C23.7808 12.5356 25.267 12.9958 26.5581 13.8221C27.8492 14.6485 28.898 15.8106 29.5951 17.1875C30.2922 18.5644 30.6121 20.1056 30.5216 21.6505C30.431 23.1953 29.9332 24.6873 29.0801 25.9708C28.227 27.2544 27.0498 28.2825 25.6712 28.948C25.5908 29.5333 25.4818 30.1141 25.3444 30.6883C29.2224 29.2941 32 25.5437 32 21.1348C32 15.5384 27.522 11 22 11C16.478 11 12 15.5384 12 21.1348C12 25.5437 14.7776 29.2951 18.6556 30.6893L18.6263 30.5657C18.5026 30.0314 18.4033 29.4916 18.3288 28.948C16.8721 28.2448 15.642 27.1376 14.7809 25.7548C13.9198 24.3719 13.463 22.77 13.4634 21.1348Z" fill="#FEFEFE"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8775 21.1349C16.8775 20.2907 17.0807 19.4593 17.4694 18.7127C17.8581 17.966 18.4207 17.3268 19.1082 16.8502C19.7958 16.3737 20.5876 16.0743 21.4152 15.978C22.2427 15.8817 23.0809 15.9914 23.8571 16.2976C24.6333 16.6038 25.3242 17.0972 25.8698 17.7351C26.4153 18.373 26.7992 19.1361 26.988 19.9583C27.1769 20.7805 27.165 21.637 26.9535 22.4535C26.7419 23.27 26.3371 24.0219 25.7741 24.644C25.8586 24.9426 25.9012 25.2561 25.9019 25.5843C25.9019 25.8691 25.896 26.1865 25.8824 26.5266C27.0045 25.6963 27.8389 24.5276 28.266 23.1876C28.693 21.8477 28.691 20.4051 28.2602 19.0664C27.8293 17.7277 26.9917 16.5614 25.8672 15.7343C24.7426 14.9073 23.3888 14.4619 21.9994 14.4619C20.61 14.4619 19.2562 14.9073 18.1317 15.7343C17.0072 16.5614 16.1696 17.7277 15.7387 19.0664C15.3078 20.4051 15.3058 21.8477 15.7329 23.1876C16.16 24.5276 16.9943 25.6963 18.1165 26.5266C18.1028 26.1865 18.097 25.8691 18.097 25.5843C18.0976 25.2561 18.1402 24.9426 18.2248 24.644C17.3565 23.6875 16.8755 22.4346 16.8775 21.1349Z" fill="#FEFEFE"/>
+                            <path d="M19.8047 20.3932C19.8047 20.9832 20.036 21.5491 20.4476 21.9663C20.8593 22.3835 21.4176 22.6179 21.9998 22.6179C22.582 22.6179 23.1403 22.3835 23.552 21.9663C23.9637 21.5491 24.1949 20.9832 24.1949 20.3932C24.1949 19.8031 23.9637 19.2373 23.552 18.8201C23.1403 18.4028 22.582 18.1685 21.9998 18.1685C21.4176 18.1685 20.8593 18.4028 20.4476 18.8201C20.036 19.2373 19.8047 19.8031 19.8047 20.3932Z" fill="#FEFEFE"/>
+                            </svg>
+                        </span>
+                        <span>Apple Podcasts</span>
+                    </a>
+                </div>
+                <div class="w-[210px]">
+                    <a href="#" class="listen_link grid grid-cols-[44px_142px] gap-x-[10px] items-center border border-solid border-[rgba(254,254,254,0.15)] font-raleway font-normal text-[18px] text-white-100 ">
+                        <span>
+                            <svg  class="listen_svg  width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="44" height="44" fill="#FEFEFE" fill-opacity="0.15"/>
+                                <path d="M14.4505 21.1058C14.5405 21.7226 14.5473 22.3558 14.4438 22.9727C14.3439 23.5926 13.7469 23.9927 13.1236 23.9429C12.5401 23.8928 12.0736 23.4361 12.0167 22.8295C11.9901 22.5596 12.0133 22.286 12.0133 22.016C12.0099 22.016 12.0099 22.016 12.0065 22.016C12.0065 21.7693 11.9898 21.526 12.0099 21.2827C12.06 20.6093 12.5133 20.156 13.1468 20.1158C13.7805 20.0756 14.3541 20.4757 14.4505 21.1058Z" fill="#FEFEFE"/>
+                                <path d="M18.7785 26.093H18.7751C18.7751 26.3629 18.7983 26.6396 18.7683 26.9064C18.7049 27.4964 18.2084 27.9598 17.625 28C17.0316 28.0399 16.3981 27.5866 16.3381 26.9766C16.2748 26.3864 16.2781 25.7798 16.3313 25.1864C16.3879 24.5696 16.9914 24.1096 17.595 24.1331C18.2084 24.1563 18.7185 24.6398 18.7751 25.2764C18.7986 25.5463 18.7785 25.8197 18.7785 26.093Z" fill="#FEFEFE"/>
+                                <path d="M18.7843 17.732C18.7877 18.3056 18.7843 18.8754 18.7843 19.4455C18.7843 20.1823 18.7911 20.9157 18.7843 21.6525C18.7778 22.1991 18.5011 22.5859 18.0043 22.7927C17.2876 23.0895 16.4642 22.6193 16.3242 21.8494C16.2976 21.6927 16.301 21.526 16.301 21.3627V17.5258C16.301 17.3625 16.2976 17.199 16.321 17.0391C16.4144 16.4223 16.9644 15.9523 17.5711 15.9623C18.1777 15.9688 18.7045 16.4523 18.7744 17.079C18.7979 17.2952 18.7843 17.5153 18.7843 17.732Z" fill="#FEFEFE"/>
+                                <path d="M20.7272 25.2427C20.7238 23.0692 20.7238 20.8956 20.7272 18.7221C20.7272 18.5319 20.7172 18.3387 20.7472 18.1519C20.8471 17.5385 21.4107 17.072 22.014 17.0986C22.6107 17.1252 23.1808 17.6118 23.2006 18.2286C23.204 18.4188 23.2074 18.6086 23.2074 18.7987V25.4029C23.2074 25.7028 23.2074 25.9996 23.0309 26.2664C22.7541 26.6931 22.2341 26.9364 21.774 26.843C21.2441 26.7364 20.8307 26.3363 20.7472 25.8128C20.7172 25.6261 20.7272 25.4329 20.7272 25.2427Z" fill="#FEFEFE"/>
+                                <path d="M23.2043 30.0833C23.2043 30.3266 23.221 30.5734 23.2009 30.8167C23.1475 31.4635 22.6642 31.9267 22.0375 31.9569C21.4241 31.9835 20.8206 31.5501 20.7575 30.9369C20.6975 30.3467 20.6975 29.7401 20.7609 29.1502C20.8307 28.5166 21.3975 28.1101 22.0378 28.1367C22.6778 28.1599 23.1446 28.6035 23.1978 29.2701C23.221 29.54 23.2012 29.8103 23.2012 30.0836C23.2012 30.0836 23.2009 30.0833 23.2043 30.0833Z" fill="#FEFEFE"/>
+                                <path d="M20.7645 14.835C20.6745 14.2182 20.6677 13.5816 20.7713 12.9682C20.8746 12.3514 21.4747 11.9513 22.0949 12.0048C22.6783 12.0583 23.1449 12.5183 23.1983 13.1216C23.2215 13.3915 23.2017 13.6651 23.2017 13.935C23.2017 13.935 23.2017 13.935 23.2051 13.935C23.2051 14.1817 23.2184 14.4251 23.2017 14.6684C23.1483 15.3418 22.6984 15.7919 22.0615 15.8251C21.4212 15.8618 20.8545 15.4618 20.7645 14.835Z" fill="#FEFEFE"/>
+                                <path d="M25.1875 18.8488C25.0976 18.2289 25.0877 17.5954 25.1943 16.9786C25.3044 16.3587 25.9178 15.945 26.521 16.0053C27.1144 16.0653 27.5645 16.512 27.6211 17.1288C27.6477 17.3956 27.6245 17.6721 27.6245 17.9423C27.6279 17.9423 27.6279 17.9423 27.6313 17.9423V18.6757C27.6313 19.2925 27.0847 19.8057 26.4879 19.849C25.8776 19.8923 25.2775 19.4688 25.1875 18.8488Z" fill="#FEFEFE"/>
+                                <path d="M27.6185 22.1957C27.6386 22.359 27.6386 22.5225 27.6386 22.6858V26.4396C27.6386 26.5728 27.6321 26.7095 27.6321 26.8461C27.6253 27.5396 26.9819 28.0263 26.4053 28.0229C25.7952 28.0195 25.265 27.5696 25.1685 26.9395C25.1453 26.7794 25.1518 26.6127 25.1518 26.4495C25.1484 25.8261 25.1484 25.1994 25.1518 24.5727C25.1518 23.8925 25.1518 23.2126 25.1484 22.5358C25.1484 22.2857 25.175 22.0492 25.2851 21.8225C25.5417 21.3059 26.0553 21.0459 26.6387 21.1423C27.1618 21.2289 27.552 21.6423 27.6185 22.1957Z" fill="#FEFEFE"/>
+                                <path d="M31.9292 21.0592C32.0024 21.706 32.0491 22.3593 31.9125 22.9993C31.7758 23.6359 31.2091 24.0026 30.579 23.9361C30.0023 23.8761 29.5556 23.4127 29.5021 22.7958C29.482 22.5259 29.4987 22.2523 29.4987 21.9824C29.4987 21.7357 29.482 21.4923 29.5021 21.249C29.5556 20.6322 29.9387 20.2188 30.5023 20.1388C31.1423 20.0522 31.6358 20.3289 31.8723 20.9055C31.8924 20.9556 31.9258 21.0057 31.9292 21.0592Z" fill="#FEFEFE"/>
+                                <path d="M23.2074 18.7987V25.4029C23.2074 25.7028 23.2074 25.9996 23.0309 26.2664C22.7541 26.6931 22.2341 26.9364 21.774 26.843C21.2441 26.7364 20.8307 26.3363 20.7472 25.8128C20.7172 25.6261 20.7272 25.4329 20.7272 25.2427C20.7238 23.0692 20.7238 20.8956 20.7272 18.7221C20.7272 18.5319 20.7172 18.3387 20.7472 18.1519C20.8471 17.5385 21.4107 17.072 22.014 17.0986C22.6107 17.1252 23.1808 17.6118 23.2006 18.2286C23.2043 18.4188 23.2074 18.6089 23.2074 18.7987Z" fill="#FEFEFE"/>
+                                <path d="M18.7843 19.4455C18.7843 20.1823 18.7911 20.9157 18.7843 21.6525C18.7778 22.1991 18.5011 22.5859 18.0043 22.7927C17.2876 23.0895 16.4642 22.6193 16.3242 21.8494C16.2976 21.6927 16.301 21.526 16.301 21.3627V17.5258C16.301 17.3625 16.2976 17.199 16.321 17.0391C16.4144 16.4223 16.9644 15.9523 17.5711 15.9623C18.1777 15.9688 18.7045 16.4523 18.7744 17.079C18.7976 17.2958 18.7843 17.5156 18.7843 17.7323C18.7877 18.3053 18.7843 18.8754 18.7843 19.4455Z" fill="#FEFEFE"/>
+                                <path d="M27.6386 22.6858V26.4396C27.6386 26.5728 27.6321 26.7095 27.6321 26.8461C27.6253 27.5396 26.9819 28.0263 26.4053 28.0229C25.7952 28.0195 25.265 27.5696 25.1685 26.9395C25.1453 26.7794 25.1518 26.6127 25.1518 26.4495C25.1484 25.8261 25.1484 25.1994 25.1518 24.5727C25.1518 23.8925 25.1518 23.2126 25.1484 22.5358C25.1484 22.2857 25.175 22.0492 25.2851 21.8225C25.5417 21.3059 26.0553 21.0459 26.6387 21.1423C27.1621 21.2289 27.552 21.6423 27.6188 22.1957C27.6386 22.3593 27.6386 22.5225 27.6386 22.6858Z" fill="#FEFEFE"/>
+                                <path d="M18.7751 26.093C18.7751 26.3629 18.7983 26.6396 18.7683 26.9064C18.7049 27.4964 18.2084 27.9598 17.625 28C17.0316 28.0399 16.3981 27.5866 16.3381 26.9766C16.2748 26.3864 16.2781 25.7798 16.3313 25.1864C16.3879 24.5696 16.9914 24.1096 17.595 24.1331C18.2084 24.1563 18.7185 24.6398 18.7751 25.2764C18.7983 25.5463 18.7785 25.8197 18.7785 26.0933H18.7751V26.093Z" fill="#FEFEFE"/>
+                                <path d="M27.6262 17.942C27.6296 17.942 27.6296 17.942 27.633 17.942V18.6754C27.633 19.2922 27.0863 19.8054 26.4896 19.8487C25.8796 19.892 25.2795 19.4687 25.1895 18.8485C25.0995 18.2286 25.0896 17.5951 25.1963 16.9783C25.3063 16.3584 25.9198 15.9447 26.523 16.005C27.1163 16.0649 27.5665 16.5117 27.6231 17.1285C27.6494 17.3953 27.6262 17.6721 27.6262 17.942Z" fill="#FEFEFE"/>
+                                <path d="M23.2015 14.6684C23.148 15.3418 22.6981 15.7919 22.0612 15.8251C21.4212 15.8618 20.8545 15.4618 20.7645 14.835C20.6745 14.2182 20.6677 13.5816 20.7713 12.9682C20.8746 12.3514 21.4747 11.9513 22.0949 12.0048C22.6783 12.0583 23.1449 12.5183 23.1983 13.1216C23.2215 13.3915 23.2017 13.6651 23.2017 13.935C23.2017 13.935 23.2017 13.935 23.2051 13.935C23.2049 14.1817 23.2182 14.4251 23.2015 14.6684Z" fill="#FEFEFE"/>
+                                <path d="M14.4438 22.9727C14.3439 23.5926 13.7469 23.9927 13.1236 23.9429C12.5401 23.8928 12.0736 23.4361 12.0167 22.8295C11.9901 22.5596 12.0133 22.286 12.0133 22.0161C12.0099 22.0161 12.0099 22.0161 12.0065 22.0161C12.0065 21.7693 11.9898 21.526 12.0099 21.2827C12.06 20.6093 12.5133 20.156 13.1468 20.1158C13.7803 20.0759 14.3535 20.4757 14.4503 21.1058C14.5405 21.7224 14.547 22.3559 14.4438 22.9727Z" fill="#FEFEFE"/>
+                                <path d="M31.9125 22.9993C31.7758 23.6359 31.2091 24.0026 30.579 23.9361C30.0023 23.8761 29.5556 23.4127 29.5021 22.7958C29.482 22.5259 29.4987 22.2523 29.4987 21.9824C29.4987 21.7357 29.482 21.4923 29.5021 21.249C29.5556 20.6322 29.9387 20.2188 30.5023 20.1388C31.1423 20.0522 31.6358 20.3289 31.8723 20.9055C31.8924 20.9556 31.9258 21.0054 31.9289 21.0589C32.0024 21.7057 32.0491 22.3593 31.9125 22.9993Z" fill="#FEFEFE"/>
+                                <path d="M23.2009 30.8167C23.1475 31.4635 22.6642 31.9267 22.0375 31.9569C21.4241 31.9835 20.8206 31.5501 20.7575 30.9369C20.6975 30.3467 20.6975 29.7401 20.7609 29.1502C20.8307 28.5166 21.3975 28.1101 22.0378 28.1367C22.6778 28.1599 23.1446 28.6035 23.1978 29.2701C23.221 29.54 23.2012 29.8103 23.2012 30.0836C23.2012 30.0836 23.2012 30.0836 23.2046 30.0836C23.2043 30.3266 23.221 30.5734 23.2009 30.8167Z" fill="#FEFEFE"/>
+                            </svg>
+                        </span>
+                        <span>Google Podcasts</span>
+                    </a>
+                </div>
+                <div class="w-[127px] ml-[70px]">
+                    <a href="#" class="listen_link grid grid-cols-[44px_72px] gap-x-[10px] items-center border border-solid border-[rgba(254,254,254,0.15)] font-raleway font-normal text-[18px] text-white-100 ">
+                        <span>
+                            
+                            <svg  class="listen_svg  width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" fill="#FEFEFE" fill-opacity="0.15"/>
+                            <path d="M22 12C27.52 12 32 16.48 32 22C32 27.52 27.52 32 22 32C16.48 32 12 27.52 12 22C12 16.48 16.48 12 22 12ZM25.2217 25.083C23.0453 23.9677 20.5449 23.7079 18.1875 24.335C17.7873 24.4415 17.5488 24.8527 17.6553 25.2529C17.7618 25.6529 18.1722 25.8913 18.5723 25.7852C20.5746 25.2524 22.6947 25.4724 24.5381 26.417C24.9067 26.6059 25.358 26.4604 25.5469 26.0918C25.7358 25.7232 25.5903 25.2719 25.2217 25.083ZM20.75 20.5C19.4479 20.5 18.187 20.7137 17.0107 21.1094C16.6183 21.2415 16.4071 21.6671 16.5391 22.0596C16.6713 22.4519 17.0968 22.6632 17.4893 22.5312C18.513 22.1869 19.6122 22 20.75 22C22.6324 22 24.4023 22.5129 25.9219 23.3984C26.2797 23.607 26.7396 23.4857 26.9482 23.1279C27.1568 22.7701 27.0356 22.3101 26.6777 22.1016C24.9374 21.0873 22.9074 20.5 20.75 20.5ZM21.25 17C19.5491 17 17.9287 17.3407 16.4551 17.9707C16.0744 18.1336 15.8978 18.5743 16.0605 18.9551C16.2235 19.3357 16.6642 19.5124 17.0449 19.3496C18.3313 18.7997 19.7509 18.5 21.25 18.5C23.5044 18.5 25.5984 19.192 27.3281 20.3701C27.6704 20.603 28.137 20.5141 28.3701 20.1719C28.603 19.8296 28.5141 19.363 28.1719 19.1299C26.2017 17.7881 23.8155 17 21.25 17Z" fill="#FEFEFE"/>
+                            </svg>
+                        </span>
+                        <span>Spotify</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="listen_link grid grid-cols-[44px_72px] gap-x-[10px] items-center border border-solid border-[rgba(254,254,254,0.15)] font-raleway font-normal text-[18px] text-white-100 ">
+                        <span>
+                            <svg  class="listen_svg  width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="44" height="44" fill="#FEFEFE" fill-opacity="0.15"/>
+                                <mask id="mask0_474_8005" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="10" width="24" height="24">
+                                <rect x="10" y="10" width="24" height="24" fill="url(#pattern0_474_8005)"/>
+                                </mask>
+                                <g mask="url(#mask0_474_8005)">
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                <rect opacity="0.2" x="10" y="10" width="24" height="24" fill="#FEFEFE"/>
+                                </g>
+                                <defs>
+                                <pattern id="pattern0_474_8005" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_474_8005" transform="scale(0.004)"/>
+                                </pattern>
+                                <image id="image0_474_8005" width="250" height="250" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6CAYAAACI7Fo9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFx2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4xLWMwMDEgNzkuMTQ2Mjg5OTc3NywgMjAyMy8wNi8yNS0yMzo1NzoxNCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4wIChNYWNpbnRvc2gpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyNi0wMi0yNlQxNzowMTozNiswMjowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjYtMDItMjZUMTc6MDI6MTUrMDI6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjYtMDItMjZUMTc6MDI6MTUrMDI6MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTEwNTBhYTQtMzYzNC00NmY0LWI2MjQtMDcyNGRkYzNjZGQzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNGRjI4QTUwQTI0NDExRUE4MUYyQTIyMUQyOERGNEVEIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6Q0ZGMjhBNTBBMjQ0MTFFQTgxRjJBMjIxRDI4REY0RUQiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTlCODg2MENBMjNGMTFFQTgxRjJBMjIxRDI4REY0RUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0ZGMjhBNEVBMjQ0MTFFQTgxRjJBMjIxRDI4REY0RUQiLz4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTEwNTBhYTQtMzYzNC00NmY0LWI2MjQtMDcyNGRkYzNjZGQzIiBzdEV2dDp3aGVuPSIyMDI2LTAyLTI2VDE3OjAyOjE1KzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjUuMyAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4jOBZ4AAAdlklEQVR4nO2deZRfRZXHP7SAQlgCYQKDrEE2DcpiQREpEBEE0SAIyogiOioIuDFuODoeUUE5DIPIIiKyg4gCNhzZo/gMPHwaUBLCIiGAIoREkpCVJJ3541ZDJ3bSv+5+9aree/dzzu80J6Srbuf3+3bVq7r3e9dYvnw5iqI0m67YASiKEh4VuqK0ABW6orQAFbqitAAVuqK0ABW6orQAFbqitAAVuqK0ABW6orQAFbqitAAVuqK0ABW6orQAFbqitAAVuqK0ABW6orQAFbqitAAVuqK0ABW6orQAFbqitAAVuqK0ABW6orQAFbqitAAVuqK0ABW6orSANWMH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"/>
+                                </defs>
+                                </svg>
+                        </span>
+                        <span>PodBean</span>
+                    </a>
+                </div>
+            </div>
+                 </div>
+                 <div class="border-t border-b border-solid border-[rgba(52,55,60,0.1)] mt-[40px] pb-[28px] pt-[36px]">
+                    <h2 class="mb-[36px] uppercase font-urbanist font-extrabold text-[28px] text-balck-100">publishing year</h2>
+                    <ul>
+                        <li class="float-left mr-[10px]">
+                            <a href="#" class="bg-orange-100 py-[12px] px-[20px] font-raleway font-semibold text-[16px] text-white-100 ">ALL</a>
+                        </li>
+                        <li class="float-left mr-[10px]">
+                            <a href="#" class="bg-white-100 py-[12px] px-[20px] font-raleway font-semibold text-[16px] text-black-100 hover:bg-orange-100 hover:text-white-100 transition-all duration-300 ease-in">2024</a>
+                        </li>
+                        <li class="float-left mr-[10px]">
+                            <a href="#" class="bg-white-100 py-[12px] px-[20px] font-raleway font-semibold text-[16px] text-black-100 hover:bg-orange-100 hover:text-white-100 transition-all duration-300 ease-in">2023</a>
+                        </li>
+                        <li class="float-left mr-[10px]">
+                            <a href="#" class="bg-white-100 py-[12px] px-[20px] font-raleway font-semibold text-[16px] text-black-100 hover:bg-orange-100 hover:text-white-100 transition-all duration-300 ease-in">2022</a>
+                        </li>
+                        <li class="float-left ">
+                            <a href="#" class="bg-white-100 py-[12px] px-[20px] font-raleway font-semibold text-[16px] text-black-100 hover:bg-orange-100 hover:text-white-100 transition-all duration-300 ease-in">2021</a>
+                        </li>
+                    </ul>
+                  <div class="clear"></div>
+                    <a herf="#" class="block font-raleway font-semibold text-[14px] text-black-100 mt-[20px] ml-[10px] hover:underline cursor-pointer">MORE</a>
+                 </div>
+            </div>
+        </div>
+          <img src="./images/Awards/newfore.png" alt="Image">
+    </section>
+    <section class="max-w-[1600px] mx-auto mt-[60px]">
+        <div class="grid grid-cols-[800px_792px] items-center border-t border-b border-solid border-[gba(52,55,60,0.1)]">
+            <div>
+                <p class="uppercase tracking-[2px] font-urbanist font-bold text-[18px] bg-[url('./images/bg_guarant.svg')] text-black-100 bg-no-repeat bg-left pl-[10px] opacity-[0.4]">lorem ipsum met sit</p>
+            </div>
+            <div>
+                <h2 class="uppercase font-urbanist font-extrabold text-[44px] text-black-100"><span class="text-orange-100">Areas</span> of Service</h2>
+            </div>
+        </div>
+        <div class="grid grid-cols-[788px_788px] mt-[48px] justify-between gap-x-[60px]">
+             <div class="bg-gray-100 pt-[52px]  border border-solid border-[rgba(52,55,60,0.1)] px-[36px] pb-[40px] h-[554px]">
+                <h2 class="text-center font-urbanist font-extrabold text-[34px] text-black-100">START YOUR RENOVATION <span class="text-orange-100">PROJECT</span></h2>
+                <p class="text-center font-raleway font-medium text-[22px] text-black-100">Need help with your renovation? Just ask us for a quote!</p>
+                <form action="#" method="post" class="mt-[22px]">
+                    <div class="grid grid-cols-[346px_346px] gap-[20px]">
+                        <div class="h-[68px]">
+                        <input class="w-[346px] bg-white-100 h-[68px] bg-[url('./images/form_name.svg')] bg-no-repeat bg-[10px_20px] pl-[40px] border border-solid border-[rgba(52,55,60,0.1)]" type="text" name="name" placeholder="Full Name">
+                        <div class="float-right relative top-[-50px] left-[-10px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.89594 15.836L10.297 12.5556L6.5 11.3915L7.11421 9.48678L10.967 10.8624L10.8553 7H13.1447L13.033 10.8624L16.8858 9.48678L17.5 11.3915L13.703 12.5556L16.1599 15.836L14.3731 17L12.0279 13.5608L9.6269 17L7.89594 15.836Z" fill="#F15D26" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="h-[68px]">
+                         <input class="w-[346px] bg-white-100 h-[68px] bg-[url('./images/form_email.svg')] bg-no-repeat bg-[10px_20px] pl-[40px] border border-solid border-[rgba(52,55,60,0.1)]" type="text" name="email" placeholder="Email">
+                          <div class="float-right relative top-[-50px] left-[-10px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.89594 15.836L10.297 12.5556L6.5 11.3915L7.11421 9.48678L10.967 10.8624L10.8553 7H13.1447L13.033 10.8624L16.8858 9.48678L17.5 11.3915L13.703 12.5556L16.1599 15.836L14.3731 17L12.0279 13.5608L9.6269 17L7.89594 15.836Z" fill="#F15D26" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                         <input class="w-[346px] bg-white-100 h-[68px] bg-[url('./images/form_phone.svg')] bg-no-repeat bg-[10px_20px] pl-[40px] border border-solid border-[rgba(52,55,60,0.1)]" type="text" name="phone" placeholder="Phone Number">
+                          <div class="float-right relative top-[-50px] left-[-10px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.89594 15.836L10.297 12.5556L6.5 11.3915L7.11421 9.48678L10.967 10.8624L10.8553 7H13.1447L13.033 10.8624L16.8858 9.48678L17.5 11.3915L13.703 12.5556L16.1599 15.836L14.3731 17L12.0279 13.5608L9.6269 17L7.89594 15.836Z" fill="#F15D26" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                         <input class="w-[346px] bg-white-100 h-[68px] bg-[url('./images/form_adress.svg')] bg-no-repeat bg-[10px_20px] pl-[40px] border border-solid border-[rgba(52,55,60,0.1)]" type="text" name="adress" placeholder="Address">
+                          <div class="float-right relative top-[-50px] left-[-10px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.89594 15.836L10.297 12.5556L6.5 11.3915L7.11421 9.48678L10.967 10.8624L10.8553 7H13.1447L13.033 10.8624L16.8858 9.48678L17.5 11.3915L13.703 12.5556L16.1599 15.836L14.3731 17L12.0279 13.5608L9.6269 17L7.89594 15.836Z" fill="#F15D26" />
+                            </svg>
+                        </div>
+                    </div>
+                    </div>
+                    <label class="uppercase block text-center w-[200px] mx-auto bg-gray-100 relative z-20 top-[-10px] font-urbanist font-extrabold text-[16px] text-black-100">services you need:</label>
+                    <div class="services_radio border border-solid mt-[-20px] border-[rgba(52,55,60,0.2)] py-[20px] px-[10px] grid grid-cols-[168px_168px_168px_148px_148px] gap-y-[15px]">
+                        <label>
+                            <input type="radio" class="services_input" name="services" >
+                            <span class="services_span  font-raleway font-normal text-[17px] text-black-100">home Reno</span>
+                        </label>
+                        <label >
+                            <input type="radio" class="services_input" name="services" >
+                           <span class="services_span  font-normal text-[17px] text-black-100">kitchen</span>
+                        </label>
+                        <label>
+                            <input type="radio" class="services_input" name="services" >
+                          <span class="services_span  font-normal text-[17px] text-black-100"> bathroom</span>
+                        </label>
+                        <label>
+                            <input type="radio" class="services_input" name="services" >
+                          <span class="services_span  font-normal text-[17px] text-black-100"> basement</span>
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" class="services_input" name="services" >
+                          <span class="services_span  font-normal text-[17px] text-black-100"> garden suite</span>
+                        </label>
+                        <label>
+                            <input type="radio" class="services_input" name="services" >
+                            <span class="services_span  font-normal text-[17px] text-black-100">addition</span>
+                        </label>
+                        <label>
+                            <input type="radio" class="services_input" name="services" >
+                          <span class="services_span  font-normal text-[17px] text-black-100">commercial</span>
+                        </label>
+                        <label>
+                            <input type="radio" class="services_input" name="services" >
+                          <span class="services_span  font-normal text-[17px] text-black-100"> commercial</span>
+                        </label>
+                    </div>
+                    <div class="grid grid-cols-[346px_300px] items-center gap-x-[20px]">
+                       <div>
+                         <button type="submit" class="mt-[10px] tracking-[1px] w-[346px] h-[68px] bg-[url('./images/header_icon.svg')] font-raleway font-bold text-[16px] text-white-100 bg-no-repeat  bg-[280px_8px] pr-[50px] text-center hover:bg-[#e94b10] transition-colors duration-300 ease-in bg-orange-100">GET A FGREE ESTIMATE!</button>
+                       </div>
+                       <div>
+                        <p class="mt-[10px] font-raleway font-normal text-[16px] leading-[150%] text-black-100 opacity-[0.4]">Reach out, and we’ll get back to you as soon as possible.</p>
+                       </div>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="services_links">
+              <a href="#">Hamilton</a>
+              <a href="#">Burlington</a>
+              <a href="#">Stoney Creek</a>
+              <a href="#">St Catharines</a>
+              <a href="#">Oakville</a>
+              <a href="#">Toronto</a>
+              <a href="#">Ancaster</a>
+            </div>
+        </div>
+    </section>
+   </main>
+   <footer class="mt-[40px]">
+    
+        <div class="footer_logo relative pt-[60px] pb-[10px]">
+            <div class="absolute right-0 top-0 h-[100px]">
+            <button type="button" id="scrollButton" class="bg-[rgba(254,254,254,0.1)] w-[113px] h-[112px] leading-[112px] font-raleway font-bold text-[16px] text-white-100 text-center">TOP</button>
+            </div>
+            <div class="grid grid-cols-[800px_517px] justify-between max-w-[1600px] mx-auto">
+                <div>
+                    <h2 class="font-urbanist font-extrabold text-[60px] text-white-100 leading-[100%]">START YOUR <span class="text-orange-100">RENOVATION</span> PROJECT TODAY</h2>
+                </div>
+                <div class="mt-[-20px]">
+                    <p class="font-raleway font-medium text-[22px] text-white-100 leading-[164%]">We can help you with your home renovation project, just ask us for a quote!</p>
+                    <a href="#" class="mt-[20px] uppercase tracking-[2px] bg-[url('./images/header_icon.svg')] bg-no-repeat bg-[300px_8px] bg-orange-100 w-[363px] h-[68px]  leading-[68px] text-center block font-raleway font-bold pr-[40px] text-[16px] text-white-100 hover:bg-[#e94b10] transition-all duration-300 ease-in">get a project estimate!</a>
+                </div>
+                
+            </div>
+            <div class="max-w-[1600px] mx-auto mt-[48px] border-t border-solid borde-white-100 pb-[48px]"></div>
+            <div class="grid grid-cols-[340px_382px_382px_382px] gap-x-[37px] max-w-[1600px]  mx-auto">
+                <div>
+                    <nav>
+                        <a href="#">
+                            <img src="./images/footer_logo.svg" alt="Logo">
+                        </a>
+                    </nav>
+                    <p class="font-raleway mt-[20px] font-normal text-[18px] text-white-100 leading-[178%]">Lorem ipsum dolor sit amet consectetur. Feugiat quis sapien tristique ultrices mauris pellentesque. Odio tincidunt neque amet sed est eu egestas mi. Aenean in vel quam neque adipiscing arcu neque sed.</p>
+                    <div class="mt-[20px] grid grid-cols-[40px_40px_40px_40px] gap-x-[5px]">
+                        <div>
+                           <a href="#">
+                             <img src="./images/footer_face.svg" alt="Image">
+                           </a>
+                        </div>
+                        <div>
+                             <a href="#">
+                                <img src="./images/footer_insta.svg" alt="Image">
+                             </a>
+                        </div>
+                        <div>
+                             <a href="#">
+                                <img src="./images/footer_in.svg" alt="Image">
+                             </a>
+                        </div>
+                        <div>
+                             <a href="#">
+                                <img src="./images/footer_you.svg" alt="Image">
+                             </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="font-urbanist font-extrabold text-[22px] text-white-100 mb-[20px]">SERVICES</h2>
+                    <nav>
+                        <ul>
+                            <li class="mb-[8px]">
+                                <a href="#" class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] hover:underline">Home Renovation</a>
+                            </li>
+                            <li class="mb-[8px]">
+                                <a href="#" class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] hover:underline">Kitchens</a>
+                            </li>
+                            <li class="mb-[8px]">
+                                <a href="#" class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] hover:underline">Bathrooms</a>
+                            </li>
+                            <li  class="mb-[8px]">
+                                <a href="#" class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] hover:underline">Basements</a>
+                            </li>
+                            <li  class="mb-[8px]">
+                                <a href="#" class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] hover:underline">Additions</a>
+                            </li>
+                            <li  class="mb-[8px]">
+                                <a href="#" class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] hover:underline">Commercial</a>
+                            </li>
+                            <li  class="mb-[8px]">
+                                <a href="#" class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] hover:underline">Garden Suites</a>
+                            </li>
+                            <li  class="mb-[8px]">
+                                <a href="#" class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] hover:underline">Load Bearing Wall Removal</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h2 class="font-urbanist font-extrabold text-[22px] text-white-100 mb-[20px]">CONTACT US</h2>
+                    <div class="grid grid-cols-[24px_280px] items-center gap-x-[10px] gap-y-[20px]">
+                        <div>
+                            <img src="./images/footer_address.svg" alt="image">
+                        </div>
+                        <div>
+                            <p class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] leading-[178%]">435 McNeilly Rd, Unit 104, Stoney Creek, ON L8E 5E3</p>
+                        </div>
+                        <div>
+                             <img src="./images/footer_phone.svg" alt="image">
+                        </div>
+                        <div>
+                            <a href="tel:2892017888" class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] hover:underline">289.201.7888</a>
+                        </div>
+                        <div>
+                            <img src="./images/footer_email.svg" alt="image">
+                        </div>
+                        <div>
+                            <a href="mailto:info@newfore.com" class="font-raleway font-normal text-[18px] text-white-100 opacity-[0.7] hover:underline">info@newfore.com</a>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-[60px] block font-urbanist font-extrabold text-[18px] text-white-100 opacity-[0.7] hover:underline uppercase">Privacy Policy</a>
+                    <a href="#" class="block font-urbanist font-extrabold text-[18px] text-white-100 opacity-[0.7] hover:underline uppercase">Terms and Conditions</a>
+                </div>
+                <div>
+                    <h2 class="font-urbanist font-extrabold text-[22px] text-white-100 mb-[20px]">AFFILIATED ASSOCIATIONS</h2>
+                    <img src="./images/footer_icons.svg" alt="image">
+                </div>
+            </div>
+            <div class="mt-[74px] mb-[10px] border-t border-solid border-[rgba(254,254,254,0.3)]"></div>
+            <div class="max-w-[1600px]  mx-auto grid grid-cols-[1369px_207px] justify-between">
+                <div> 
+                    <p class="font-raleway font-normal text-[18px] text-white-100">Copyright © 2026 Newfore Inc. All rights reserved.</p>
+                </div>
+                <div>
+                    <div class="grid grid-cols-[90px_100px] items-center">
+                        <div>
+                            <p class="mt-[8px] font-urbanist font-normal text-[14px] text-white-100">DESIGNED BY</p>
+                        </div>
+                        <div>
+                            <img src="./images/copyright.svg" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+</body>
+</html>
