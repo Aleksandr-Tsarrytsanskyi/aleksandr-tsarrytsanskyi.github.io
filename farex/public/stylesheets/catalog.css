@@ -1,0 +1,58 @@
+.footer_item {
+    bottom: 0 !important;
+    margin-top: 40px;
+}
+
+.breadcrumbing {
+    margin-bottom: 0px !important;
+}
+
+.card__body {
+    margin-bottom: 20px;
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: 400px 332px;
+    justify-content: space-between;
+    max-width: 1075px;
+    margin: auto;
+    align-items: center
+}
+
+.show_more .none {
+    display: none;
+}
+
+.wrapper .error {
+    color: red;
+    font-size: 16px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.wrapper a {
+    color: #221f1f;
+    font-family: "Roboto Regular";
+    font-size: 16px;
+    margin-bottom: 0px;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+}
+
+.header__besket_counter_show {
+    opacity: 1 !important;
+}
+
+
+
+

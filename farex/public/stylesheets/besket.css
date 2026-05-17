@@ -1,0 +1,37 @@
+.footer_item {
+    bottom: 0 !important;
+}
+
+.empty_basket {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    padding-bottom: 200px;
+    margin-top: 100px;
+    
+}
+
+.empty_basket_show {
+    display: grid !important;
+}
+
+.empty_basket p {
+    font-family: "Inter Bold";
+    font-size: 24px;
+    color: #221f1f
+}
+
+.add_empty_basket {
+display: grid !important;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+footer {
+    margin-top: 40px;
+}
