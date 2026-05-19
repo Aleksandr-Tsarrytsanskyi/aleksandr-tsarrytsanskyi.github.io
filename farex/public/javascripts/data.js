@@ -38,8 +38,8 @@ let filteredRom;
 btnShowCards.addEventListener("click", sliceArrCards);
 cards.addEventListener("click", handleCardClick);
 cards.addEventListener("click", handlefavoritesCardClick);
-list_products.addEventListener("change", sliceFiltrListArrCards);
-catalogFiltrBtn.addEventListener("click", sliceFiltrBtnArrCards);
+// list_products.addEventListener("change", sliceFiltrListArrCards);
+// catalogFiltrBtn.addEventListener("click", sliceFiltrBtnArrCards);
 filtrProducts.addEventListener("submit", apllyFiltrProducts);
 filtersProductsButton.addEventListener("click", sliceFiltr);
 const filters = document.querySelectorAll(
@@ -243,145 +243,145 @@ function apllyFiltrProducts(event) {
 
 showMoreCatalog();
 
-function sliceFiltrListArrCards(event) {
-  // if((event.target.value == "price") || (event.target.value == "popularity")) {
-  //   console.log("POI");
+// function sliceFiltrListArrCards(event) {
+//   // if((event.target.value == "price") || (event.target.value == "popularity")) {
+//   //   console.log("POI");
 
-  //   return
-  // }
+//   //   return
+//   // }
 
-  ////
+//   ////
 
-  if(event.target) {
-    filtersProductsBtn.classList.add("filtersProductsBtn_hide")
-  }
+//   if(event.target) {
+//     filtersProductsBtn.classList.add("filtersProductsBtn_hide")
+//   }
 
-  const products = document.querySelector(".products_catalog");
-  const catalog = document.querySelector(".show_more__catalog");
-  const catalogFiltrBtn = document.querySelector(".show_more__filtr");
+//   const products = document.querySelector(".products_catalog");
+//   const catalog = document.querySelector(".show_more__catalog");
+//   const catalogFiltrBtn = document.querySelector(".show_more__filtr");
 
-  if (
-    (event.target && event.target.value == "new") ||
-    (event.target && event.target.value == "top")
-  ) {
-    thisValue = event.target.value;
-    console.log("OKL");
-    products.textContent = "";
-    catalog.classList.add("show_more__catalog_hide");
-    catalogFiltrBtn.classList.remove("show_more__catalog_hide");
-    let filtr = productsData.filter((item) => item.filtr === this.value);
-    const addCards = filtr.slice(0, 5);
-    renderFiltrAdd(addCards);
-    catalogFiltrBtn.classList.remove("filtersProductsBtn_hide");
+//   if (
+//     (event.target && event.target.value == "new") ||
+//     (event.target && event.target.value == "top")
+//   ) {
+//     thisValue = event.target.value;
+//     console.log("OKL");
+//     products.textContent = "";
+//     catalog.classList.add("show_more__catalog_hide");
+//     catalogFiltrBtn.classList.remove("show_more__catalog_hide");
+//     let filtr = productsData.filter((item) => item.filtr === this.value);
+//     const addCards = filtr.slice(0, 5);
+//     renderFiltrAdd(addCards);
+//     catalogFiltrBtn.classList.remove("filtersProductsBtn_hide");
     
-  }
+//   }
 
-  if (event.target && event.target.value == "price") {
-    thisValue = event.target.value;
-    cards.textContent = "";
-    catalog.classList.add("show_more__catalog_hide");
-    catalogFiltrBtn.classList.remove("show_more__catalog_hide");
-    let sort = productsData.sort((a, b) => b.price - a.price);
-    const addCards = sort.slice(0, 5);
-    console.log(addCards);
+//   if (event.target && event.target.value == "price") {
+//     thisValue = event.target.value;
+//     cards.textContent = "";
+//     catalog.classList.add("show_more__catalog_hide");
+//     catalogFiltrBtn.classList.remove("show_more__catalog_hide");
+//     let sort = productsData.sort((a, b) => b.price - a.price);
+//     const addCards = sort.slice(0, 5);
+//     console.log(addCards);
 
-    renderFiltrAdd(addCards);
-    catalogFiltrBtn.classList.remove("filtersProductsBtn_hide");
-  }
+//     renderFiltrAdd(addCards);
+//     catalogFiltrBtn.classList.remove("filtersProductsBtn_hide");
+//   }
 
-  if (event.target && event.target.value == "popularity") {
-    thisValue = event.target.value;
-    cards.textContent = "";
-    catalog.classList.add("show_more__catalog_hide");
-    catalogFiltrBtn.classList.remove("show_more__catalog_hide");
-    let sort = productsData.sort((a, b) => a.price - b.price);
-    const addCards = sort.slice(0, 5);
-    console.log(addCards);
+//   if (event.target && event.target.value == "popularity") {
+//     thisValue = event.target.value;
+//     cards.textContent = "";
+//     catalog.classList.add("show_more__catalog_hide");
+//     catalogFiltrBtn.classList.remove("show_more__catalog_hide");
+//     let sort = productsData.sort((a, b) => a.price - b.price);
+//     const addCards = sort.slice(0, 5);
+//     console.log(addCards);
 
-    renderFiltrAdd(addCards);
-    catalogFiltrBtn.classList.remove("filtersProductsBtn_hide");
-  }
+//     renderFiltrAdd(addCards);
+//     catalogFiltrBtn.classList.remove("filtersProductsBtn_hide");
+//   }
 
-  if (event.target && event.target.value == "allproducts") {
-    thisValue = event.target.value;
-    cards.textContent = "";
-    catalog.classList.add("show_more__catalog_hide");
-    catalogFiltrBtn.classList.remove("show_more__catalog_hide");
-    const arrCards = productsData.slice(0, COUNT_SHOW_CARDS_CLICK);
+//   if (event.target && event.target.value == "allproducts") {
+//     thisValue = event.target.value;
+//     cards.textContent = "";
+//     catalog.classList.add("show_more__catalog_hide");
+//     catalogFiltrBtn.classList.remove("show_more__catalog_hide");
+//     const arrCards = productsData.slice(0, COUNT_SHOW_CARDS_CLICK);
 
-    renderFiltrAdd(arrCards);
-    catalogFiltrBtn.classList.remove("filtersProductsBtn_hide");
-  }
+//     renderFiltrAdd(arrCards);
+//     catalogFiltrBtn.classList.remove("filtersProductsBtn_hide");
+//   }
 
-  chekingActiveButtons(basket);
-  chekingFavoritesActiveBurrons(favorites);
+//   chekingActiveButtons(basket);
+//   chekingFavoritesActiveBurrons(favorites);
 
-  shownCardS = cards.children.length;
+//   shownCardS = cards.children.length;
 
-  if (shownCardS >= productsData.length) {
-    btnShowCards.classList.add("none");
-  }
+//   if (shownCardS >= productsData.length) {
+//     btnShowCards.classList.add("none");
+//   }
 
-  //////
-}
+//   //////
+// }
 
-function sliceFiltrBtnArrCards() {
-  if (shownCardS >= productsData.length) return;
+// function sliceFiltrBtnArrCards() {
+//   if (shownCardS >= productsData.length) return;
 
-  countClickBtnShowCards++;
-  const countShowCards = COUNT_SHOW_CARDS_CLICK * countClickBtnShowCards;
-  if (thisValue == "price") {
-    console.log(thisValue);
+//   countClickBtnShowCards++;
+//   const countShowCards = COUNT_SHOW_CARDS_CLICK * countClickBtnShowCards;
+//   if (thisValue == "price") {
+//     console.log(thisValue);
 
-    let sort = productsData.sort((a, b) => b.price - a.price);
-    const addCards = sort.slice(shownCardS, countShowCards);
-    renderFiltrAdd(addCards);
-    shownCardS = cards.children.length;
+//     let sort = productsData.sort((a, b) => b.price - a.price);
+//     const addCards = sort.slice(shownCardS, countShowCards);
+//     renderFiltrAdd(addCards);
+//     shownCardS = cards.children.length;
 
-  if (shownCardS >= sort.length) {
+//   if (shownCardS >= sort.length) {
    
     
-    catalogFiltrBtn.classList.add("filtersProductsBtn_hide");
-  }
-  } else {
-    console.log(thisValue);
-    let filtr = productsData.filter((item) => item.filtr === thisValue);
-    const addCards = filtr.slice(shownCardS, countShowCards);
+//     catalogFiltrBtn.classList.add("filtersProductsBtn_hide");
+//   }
+//   } else {
+//     console.log(thisValue);
+//     let filtr = productsData.filter((item) => item.filtr === thisValue);
+//     const addCards = filtr.slice(shownCardS, countShowCards);
 
-    renderFiltrAdd(addCards);
-  }
+//     renderFiltrAdd(addCards);
+//   }
 
-  if (thisValue == "popularity") {
-    let sort = productsData.sort((a, b) => a.price - b.price);
-    const addCards = sort.slice(shownCardS, countShowCards);
-    renderFiltrAdd(addCards);
+//   if (thisValue == "popularity") {
+//     let sort = productsData.sort((a, b) => a.price - b.price);
+//     const addCards = sort.slice(shownCardS, countShowCards);
+//     renderFiltrAdd(addCards);
 
-    shownCardS = cards.children.length;
+//     shownCardS = cards.children.length;
 
-  if (shownCardS >= sort.length) {
+//   if (shownCardS >= sort.length) {
     
     
-    catalogFiltrBtn.classList.add("filtersProductsBtn_hide");
-  }
-  }
+//     catalogFiltrBtn.classList.add("filtersProductsBtn_hide");
+//   }
+//   }
 
-  if (thisValue == "allproducts") {
-    const arrCards = productsData.slice(shownCardS, countShowCards);
+//   if (thisValue == "allproducts") {
+//     const arrCards = productsData.slice(shownCardS, countShowCards);
 
-    renderFiltrAdd(arrCards);
-     shownCardS = cards.children.length;
+//     renderFiltrAdd(arrCards);
+//      shownCardS = cards.children.length;
 
-  if (shownCardS >= productsData.length) {
+//   if (shownCardS >= productsData.length) {
     
     
-    catalogFiltrBtn.classList.add("filtersProductsBtn_hide");
-  }
-  }
+//     catalogFiltrBtn.classList.add("filtersProductsBtn_hide");
+//   }
+//   }
   
 
-  chekingActiveButtons(basket);
-  chekingFavoritesActiveBurrons(favorites);
-}
+//   chekingActiveButtons(basket);
+//   chekingFavoritesActiveBurrons(favorites);
+// }
 
 async function getProducts() {
   try {
