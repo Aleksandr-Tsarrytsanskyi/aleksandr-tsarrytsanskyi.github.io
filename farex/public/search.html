@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheets/style.css" />
-    <link rel="stylesheet" href="./stylesheets/normalize.css" />
-    <link rel="stylesheet" href="./stylesheets/catalog.css" />
-    <link rel="stylesheet" href="./libs/nouislider.min.css" />
-    <script type="module" src="./javascripts/languages/lang.js"></script>
-    <script type="module" src="./libs/nouislider.min.js"></script>
-    <script type="module" src="./javascripts/catalog.js"></script>
-    <script type="module" defer src="./javascripts/data.js"></script>
-  
-  
+    <link rel="stylesheet" href="./stylesheets/search.css" />
+    <link rel="stylesheet" href="./stylesheets/normalize.css"/>
+    
+     <script defer type="module" src="./javascripts/modules/search.js"></script>
+     
     <title>Document</title>
-  </head>
-  <body>
-    
-    
+</head>
+<body>
     <header class="header">
       <div class="header__body">
         <div class="header__body_cell">
@@ -1738,7 +1732,9 @@
                 <a href="./catalog.html" data-lang="catalog">КАТАЛОГ</a>
               </li>
               <li>
-                <a href="./topsellers.html" data-lang="topsellers">ТОП ПРОДАЖ</a>
+                <a href="./topsellers.html" data-lang="topsellers"
+                  >ТОП ПРОДАЖ</a
+                >
               </li>
             </ul>
           </nav>
@@ -1754,7 +1750,8 @@
                 class="search_products" autocomplete="off" spellcheck="false" autocorrect="off" aria-autocomplete="none"
               />
             </div>
-              <button type="submit" class="btn_search">
+          </form>
+          <button type="button" class="btn_search">
             <svg
               class="right-menu__search"
               width="33"
@@ -1767,22 +1764,17 @@
               />
             </svg>
           </button>
-          </form>
-        
         </div>
         <div class="header__cell">
           <div class="header__favorites_counter">
-            <p>
-              <span class="counter">1</span>+
-            </p>
+            <p class="counter">1</p>
           </div>
           <div class="header__besket_counter">
-            <p><span class="counter">0</span>+</p>
+            <p><span class="counter">1</span>+</p>
           </div>
           <nav class="header__right_menu">
             <ul>
-            
-              <li class="favorites_icon mobile_none">
+              <li class="mobile_none">
                 <a href="./favorites.html">
                   <svg
                     width="33"
@@ -1836,49 +1828,63 @@
                   </svg>
                 </button>
               </li>
-               <li>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><circle cx="256" cy="256" r="256" fill="#ffda44" opacity="1" data-original="#ffda44" class=""></circle><path fill="#338af3" d="M0 256C0 114.616 114.616 0 256 0s256 114.616 256 256" opacity="1" data-original="#338af3" class=""></path></g></svg>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="512"
+                  height="512"
+                  x="0"
+                  y="0"
+                  viewBox="0 0 512 512"
+                  style="enable-background: new 0 0 512 512"
+                  xml:space="preserve"
+                  class=""
+                >
+                  <g>
+                    <circle
+                      cx="256"
+                      cy="256"
+                      r="256"
+                      fill="#ffda44"
+                      opacity="1"
+                      data-original="#ffda44"
+                      class=""
+                    ></circle>
+                    <path
+                      fill="#338af3"
+                      d="M0 256C0 114.616 114.616 0 256 0s256 114.616 256 256"
+                      opacity="1"
+                      data-original="#338af3"
+                      class=""
+                    ></path>
+                  </g>
+                </svg>
               </li>
               <li>
-              <select name="lang" class="select_lang">
-                <option value="ru">Русский</option>
-                <option value="ua">Українська</option>
-              </select>
-                
+                <select name="lang" class="select_lang">
+                  <option value="ru">Русский</option>
+                  <option value="ua">Українська</option>
+                </select>
               </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
-
     <main>
-      <section class="breadcrumbing">
-        <ul>
-          <li>
-            <a href="./index.html" data-lang="text">Главная</a>
-          </li>
-          <li>
-            <p>/</p>
-          </li>
-          <li>
-            <p>Каталог</p>
-          </li>
-        </ul>
-      </section>
-      <section>
-       <div class="catalog">
+        <section class="search_res">
+          <div class="catalog">
           <div>
-              <h2 class="products__title">КАТАЛОГ</h2>
+              <h2 class="products__title">ТОВАРЫ</h2>
           </div>
           <div class="filtr">
-              <div class="filtr__cell">
-                <button type="button" class="filtr_btn" data-lang="text1">ФИЛЬТР</button>
-              </div>
+              
               <div class="filtr__cell">
                 <select class="list_products" name="filter_list">
                    <option value="allproducts">ВСЕ ТОВАРЫ</option>
-                  <option value="price" data-lang="text5">ОТ ДОРОГИХ ДО ДЕШЕВЫХ</option>
+                  <option value="price" data-lang="text5">ОТ ДОРОГИХ</option>
                   <option value="popularity" data-lang="text2">ОТ ДЕШЕВЫХ</option>
                   <option value="new" data-lang="text3">НОВИНКИ</option>
                   <option value="top" data-lang="text4">ТОП ПРОДАЖ</option>
@@ -1886,754 +1892,13 @@
               </div>
             </div>
        </div>
-        <div class="products_catalog">
-        
-         <!-- <div class="products__cell">
-          
-            <div class="card">
-              <div class="card__item">
-                <div class="card__body">
-                  <div class="card__cell">
-                    <div class="hit">
-                      <p>ТОП ПРОДАЖ</p>
-                    </div>
-                  </div>
-                  <div class="card__cell">
-                    <button type="button" class="favorites"></button>
-                  </div>
-                </div>
-                <div class="card__product">
-                     <a href="./aboutProduct.html">
-                  <img
-                    src="./images/teclastP50/teclast1.webp"
-                    alt="Андроид 15"
-                  />
-                  </a>
-                </div>
-              </div>
-              <div class="card__content">
-                <div class="card__reviews">
-                  <div class="card__reviews_cell">
-                    <p class="text_left">5.0</p>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <svg
-                      width="180"
-                      height="36"
-                      viewBox="0 0 180 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                        fill="#D29440"
-                      />
-                    </svg>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <p class="text_right">
-                      <span class="card__count">3</span> отызва
-                    </p>
-                  </div>
-                </div>
-                <div class="card__title">
-                     <a href="./aboutProduct.html">
-                  <h2>Teclast P50 11-дюймовий планшет</h2>
-                  </a>
-                </div>
-                <div class="card__price">
-                  <div class="card__price_cell">
-                    <p class="price">5 500₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <p class="discount">6 999₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <button type="button" class="card__besket_add"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-        </div>
-        <div class="products__cell">
-         
-            <div class="card">
-              <div class="card__item">
-                <div class="card__body">
-                  <div class="card__cell">
-                    <div class="hit">
-                      <p>ТОП ПРОДАЖ</p>
-                    </div>
-                  </div>
-                  <div class="card__cell">
-                    <button type="button" class="favorites"></button>
-                  </div>
-                </div>
-                <div class="card__product">
-                     <a href="./aboutProduct.html">
-                  <img src="./images/Teclast-T50Mini/teclast3.webp" alt="Андроид 15" />
-                </a>
-                </div>
-              </div>
-              <div class="card__content">
-                <div class="card__reviews">
-                  <div class="card__reviews_cell">
-                    <p class="text_left">5.0</p>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <svg
-                      width="180"
-                      height="36"
-                      viewBox="0 0 180 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                        fill="#D29440"
-                      />
-                    </svg>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <p class="text_right">
-                      <span class="card__count">3</span> отызва
-                    </p>
-                  </div>
-                </div>
-                <div class="card__title">
-                  <h2>1 Teclast T50 Mini Планшет</h2>
-                </div>
-                <div class="card__price">
-                  <div class="card__price_cell">
-                    <p class="price">4 699₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <p class="discount">6 999₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <button type="button" class="card__besket_add"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-         
-        </div>
-        <div class="products__cell">
-         
-            <div class="card">
-              <div class="card__item">
-                <div class="card__body">
-                  <div class="card__cell">
-                    <div class="hit">
-                      <p>ТОП ПРОДАЖ</p>
-                    </div>
-                  </div>
-                  <div class="card__cell">
-                    <button type="button" class="favorites"></button>
-                  </div>
-                </div>
-                <div class="card__product">
-                     <a href="./aboutProduct.html">
-                  <img src="./images/CRELANDER-CR/CRELANDER.webp" alt="Андроид 15" />
-                </a>
-                </div>
-              </div>
-              <div class="card__content">
-                <div class="card__reviews">
-                  <div class="card__reviews_cell">
-                    <p class="text_left">5.0</p>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <svg
-                      width="180"
-                      height="36"
-                      viewBox="0 0 180 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                        fill="#D29440"
-                      />
-                    </svg>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <p class="text_right">
-                      <span class="card__count">3</span> отызва
-                    </p>
-                  </div>
-                </div>
-                <div class="card__title">
-                  <h2>CRELANDER 10.1-дюймовий</h2>
-                </div>
-                <div class="card__price">
-                  <div class="card__price_cell">
-                    <p class="price">4 500₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <p class="discount">5 500₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <button type="button" class="card__besket_add"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-         
-        </div>
-        <div class="products__cell">
-          
-            <div class="card">
-              <div class="card__item">
-                <div class="card__body">
-                  <div class="card__cell">
-                    <div class="hit">
-                      <p>ТОП ПРОДАЖ</p>
-                    </div>
-                  </div>
-                  <div class="card__cell">
-                    <button type="button" class="favorites"></button>
-                  </div>
-                </div>
-                <div class="card__product">
-                     <a href="./aboutProduct.html">
-                  <img src="./images/KINGRID-T90/KINGRID.webp" alt="Андроид 15" />
-                </a>
-                </div>
-              </div>
-              <div class="card__content">
-                <div class="card__reviews">
-                  <div class="card__reviews_cell">
-                    <p class="text_left">5.0</p>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <svg
-                      width="180"
-                      height="36"
-                      viewBox="0 0 180 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                        fill="#D29440"
-                      />
-                    </svg>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <p class="text_right">
-                      <span class="card__count">3</span> отызва
-                    </p>
-                  </div>
-                </div>
-                <div class="card__title">
-                  <h2>KINGRID T90 Android 16 Новий планшет</h2>
-                </div>
-                <div class="card__price">
-                  <div class="card__price_cell">
-                    <p class="price">6 000₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <p class="discount">7 500₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <button type="button" class="card__besket_add"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-       
-        </div>
-        <div class="products__cell">
-         
-            <div class="card">
-              <div class="card__item">
-                <div class="card__body">
-                  <div class="card__cell">
-                    <div class="hit">
-                      <p>ТОП ПРОДАЖ</p>
-                    </div>
-                  </div>
-                  <div class="card__cell">
-                    <button type="button" class="favorites"></button>
-                  </div>
-                </div>
-                <div class="card__product">
-                     <a href="./aboutProduct.html">
-                  <img src="./images/Odea-A13/odea1.webp" alt="Андроид 15" />
-                </a>
-                </div>
-              </div>
-              <div class="card__content">
-                <div class="card__reviews">
-                  <div class="card__reviews_cell">
-                    <p class="text_left">5.0</p>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <svg
-                      width="180"
-                      height="36"
-                      viewBox="0 0 180 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                        fill="#D29440"
-                      />
-                    </svg>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <p class="text_right">
-                      <span class="card__count">3</span> отызва
-                    </p>
-                  </div>
-                </div>
-                <div class="card__title">
-                     <a href="./aboutProduct.html">
-                  <h2>Планшет Odea A13 13 4-дюймовим дисплеєм</h2>
-                  </a>
-                </div>
-                <div class="card__price">
-                  <div class="card__price_cell">
-                    <p class="price">7 380₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <p class="discount">8 999₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <button type="button" class="card__besket_add"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-        </div>
-        <div class="products__cell">
-         
-            <div class="card">
-              <div class="card__item">
-                <div class="card__body">
-                  <div class="card__cell">
-                    <div class="hit">
-                      <p>ТОП ПРОДАЖ</p>
-                    </div>
-                  </div>
-                  <div class="card__cell">
-                    <button type="button" class="favorites"></button>
-                  </div>
-                </div>
-                <div class="card__product">
-                     <a href="./aboutProduct.html">
-                  <img src="./images/QDDQ-12/QDDQ1.webp" alt="Андроид 15" />
-                    </a>
-                </div>
-              </div>
-              <div class="card__content">
-                <div class="card__reviews">
-                  <div class="card__reviews_cell">
-                    <p class="text_left">5.0</p>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <svg
-                      width="180"
-                      height="36"
-                      viewBox="0 0 180 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                        fill="#D29440"
-                      />
-                    </svg>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <p class="text_right">
-                      <span class="card__count">3</span> отызва
-                    </p>
-                  </div>
-                </div>
-                <div class="card__title">
-                     <a href="./aboutProduct.html">
-                  <h2>QDDQ 12-дюймовий Android 16 планшет</h2>
-                  </a>
-                </div>
-                <div class="card__price">
-                  <div class="card__price_cell">
-                    <p class="price">6 450₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <p class="discount">8 600₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <button type="button" class="card__besket_add"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-        </div>
-        <div class="products__cell">
-          
-            <div class="card">
-              <div class="card__item">
-                <div class="card__body">
-                  <div class="card__cell">
-                    <div class="hit">
-                      <p>ТОП ПРОДАЖ</p>
-                    </div>
-                  </div>
-                  <div class="card__cell">
-                    <button type="button" class="favorites"></button>
-                  </div>
-                </div>
-                <div class="card__product">
-                     <a href="./aboutProduct.html">
-                  <img src="./images/RELNDOO-P02/RELNDOO.webp" alt="Андроид 15" />
-                </a>
-                </div>
-              </div>
-              <div class="card__content">
-                <div class="card__reviews">
-                  <div class="card__reviews_cell">
-                    <p class="text_left">5.0</p>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <svg
-                      width="180"
-                      height="36"
-                      viewBox="0 0 180 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                        fill="#D29440"
-                      />
-                    </svg>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <p class="text_right">
-                      <span class="card__count">3</span> отызва
-                    </p>
-                  </div>
-                </div>
-                <div class="card__title">
-                     <a href="./aboutProduct.html">
-                  <h2>Планшет Relndoo Android 15</h2>
-                  </a>
-                </div>
-                <div class="card__price">
-                  <div class="card__price_cell">
-                    <p class="price">4 230₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <p class="discount">5 250₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <button type="button" class="card__besket_add"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-        </div>
-        <div class="products__cell">
-         
-            <div class="card">
-              <div class="card__item">
-                <div class="card__body">
-                  <div class="card__cell">
-                    <div class="hit">
-                      <p>ТОП ПРОДАЖ</p>
-                    </div>
-                  </div>
-                  <div class="card__cell">
-                    <button type="button" class="favorites"></button>
-                  </div>
-                </div>
-                <div class="card__product">
-                     <a href="./aboutProduct.html">
-                  <img src="./images/ROENLLCE/ROENLLCE.webp" alt="Андроид 15" />
-                        </a>
-                </div>
-              </div>
-              <div class="card__content">
-                <div class="card__reviews">
-                  <div class="card__reviews_cell">
-                    <p class="text_left">5.0</p>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <svg
-                      width="180"
-                      height="36"
-                      viewBox="0 0 180 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                        fill="#D29440"
-                      />
-                    </svg>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <p class="text_right">
-                      <span class="card__count">3</span> отызва
-                    </p>
-                  </div>
-                </div>
-                <div class="card__title">
-                     <a href="./aboutProduct.html">
-                  <h2>Планшет ROENLLCE 10.1-дюймовий</h2>
-                  </a>
-                </div>
-                <div class="card__price">
-                  <div class="card__price_cell">
-                    <p class="price">4 587₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <p class="discount">5 044₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <button type="button" class="card__besket_add"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-        </div>
-        <div class="products__cell">
-          
-            <div class="card">
-              <div class="card__item">
-                <div class="card__body">
-                  <div class="card__cell">
-                    <div class="hit">
-                      <p>ТОП ПРОДАЖ</p>
-                    </div>
-                  </div>
-                  <div class="card__cell">
-                    <button type="button" class="favorites"></button>
-                  </div>
-                </div>
-                <div class="card__product">
-                     <a href="./aboutProduct.html">
-                  <img src="./images/andoid15/andoid1.webp" alt="Андроид 15" />
-                </a>
-                </div>
-              </div>
-              <div class="card__content">
-                <div class="card__reviews">
-                  <div class="card__reviews_cell">
-                    <p class="text_left">5.0</p>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <svg
-                      width="180"
-                      height="36"
-                      viewBox="0 0 180 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                        fill="#D29440"
-                      />
-                      <path
-                        d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                        fill="#D29440"
-                      />
-                    </svg>
-                  </div>
-                  <div class="card__reviews_cell">
-                    <p class="text_right">
-                      <span class="card__count">3</span> отызва
-                    </p>
-                  </div>
-                </div>
-                <div class="card__title">
-                     <a href="./aboutProduct.html">
-                  <h2>10.1" Планшет PC с Android 15</h2>
-                  </a>
-                </div>
-                <div class="card__price">
-                  <div class="card__price_cell">
-                    <p class="price">5099₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <p class="discount">6 699₴</p>
-                  </div>
-                  <div class="card__price_cell">
-                    <button type="button" class="card__besket_add"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-        </div> -->
-        
-      </div>
-      <div class="show_more show_more__catalog">
+            <div class="products_catalog"></div>
+            <div class="show_more show_more__catalog">
         <div class="cell">
           <button type="button" class="none" data-lang="text6">ПОКАЗАТЬ ЕЩЕ</button>
         </div>
       </div>
-      <div class=" show_more__filtr">
-        <div class="cell">
-          <button type="button" class="none " data-lang="text6">ПОКАЗАТЬ ЕЩЕ</button>
-        </div>
-      </div>
-
-      <div class=" products_catalog_filtr">
-        <div class="cell">
-          <button type="button" class="none " data-lang="text6">ПОКАЗАТЬ ЕЩЕ</button>
-        </div>
-      </div>
-      
-      </section>
+        </section>
     </main>
     <footer>
       <div class="footer_item">
@@ -2658,7 +1923,7 @@
 
                       <g
                         transform="matrix(2.7289 0 0 2.7289 590.5934 384)"
-                        id="glyphGroup_textPair_1765878351680_0.8441657316846212"
+                      
                       >
                         <g style="">
                           <g transform="matrix(1 0 0 1 -78.516 -0.36)">
@@ -4348,7 +3613,7 @@
                   </a>
                 </li>
                 <li>
-                  <p data-lang="text7">
+                  <p data-lang="text26">
                     FAREX 2025© — ВСЕ<br />
                     ПРАВА ЗАЩИЩЕНЫ
                   </p>
@@ -4357,37 +3622,47 @@
             </nav>
           </div>
           <div class="footer__cell">
-            <h2 data-lang="text8">Информация про кампанию</h2>
+            <h2 data-lang="text27">Информация про кампанию</h2>
             <nav>
               <ul>
                 <li>
                   <a href="./about-farex.html" target="_blank">О Farex</a>
                 </li>
                 <li>
-                  <a href="./contact.html" target="_blank" data-lang="text9">Связаться с нами</a>
+                  <a href="./contact.html" target="_blank" data-lang="text28"
+                    >Связаться с нами</a
+                  >
                 </li>
               </ul>
             </nav>
           </div>
           <div class="footer__cell">
-            <h2 data-lang="text10">Служба поддержки</h2>
+            <h2 data-lang="text29">Служба поддержки</h2>
             <nav>
               <ul>
                 <li>
-                  <a href="./return-policy.html" target="_blank" data-lang="text11"
+                  <a
+                    href="./return-policy.html"
+                    target="_blank"
+                    data-lang="text30"
                     >Возврат и Возмещения</a
                   >
                 </li>
                 <li>
-                  <a href="./delivery.html" target="_blank" data-lang="text12"
+                  <a href="./delivery.html" target="_blank" data-lang="text31"
                     >Информация о доставке</a
                   >
                 </li>
                 <li>
-                  <a href="./guarantee.html" target="_blank" data-lang="text13">Гарантия</a>
+                  <a href="./guarantee.html" target="_blank" data-lang="text32"
+                    >Гарантия</a
+                  >
                 </li>
                 <li>
-                  <a href="./privacy-policy.html" target="_blank" data-lang="text14"
+                  <a
+                    href="./privacy-policy.html"
+                    target="_blank"
+                    data-lang="text33"
                     >Политика конфиденциальности</a
                   >
                 </li>
@@ -4402,13 +3677,15 @@
                   <a href="#">Каталог</a>
                 </li>
                 <li>
-                  <a href="#" data-lang="text15">Топпродаж</a>
+                  <a href="#" data-lang="text34">Топпродаж</a>
                 </li>
               </ul>
             </nav>
           </div>
           <div class="footer__cell">
-            <button type="button" class="up_header" data-lang="text16">НАВВЕРХ</button>
+            <button type="button" class="up_header" data-lang="text35">
+              НАВВЕРХ
+            </button>
           </div>
           <div class="footer__cell">
             <div class="footer__card">
@@ -4469,7 +3746,7 @@
               <li>
                 <a href="#">Relndoo</a>
               </li>
-               <li>
+              <li>
                 <a href="#">Планшет</a>
               </li>
             </ul>
@@ -4478,287 +3755,31 @@
         </div>
       </div>
     </div>
-
-    <div class="modal modal_filtr" role="dialog" aria-modal="true" aria-labelledby="title" tabindex="-1">
-      <div class="modal_filtr__body">
-        <div class="modal__container">
-          <h2 id="title"></h2>
-          <div class="modal__content">
-            <form action="#" method="get" class="filtr_products">
-              <div class="modal_filtr__header">
-                <div class="cell">
-                  <label class="modal_filtr__text top">ТОП ПРОДАЖ</label>
-
-                  <label class="modal_filtr__text">СО СКИДКОЙ</label>
-                </div>
-                <div class="cell">
-                  <label class="modal_filtr__switch">
-                    <input
-                      type="checkbox"
-                      name="hit"
-                      value="hit"
-                      class="modal_filtr__toogle"
-                    />
-                    <span class="move"></span>
-                  </label>
-                  <br />
-                  <label class="modal_filtr__switch">
-                    <input
-                      type="checkbox"
-                      name="hit"
-                      value="dis"
-                      class="modal_filtr__toogle"
-                    />
-                    <span class="move"></span>
-                  </label>
-                </div>
-              </div>
-              <div class="modal_filtr__price">
-                <div class="cell">
-                  <label class="modal_filtr__label_price">
-                    <input
-                      type="number"
-                      class="modal_filtr_input modal_filtr__price_min"
-                      min="0"
-                      max="10000"
-                      id="input-0"
-                      placeholder="0"
-                    />
-                  </label>
-                </div>
-                <div class="cell">
-                  <lable class="modal_filtr_border">-</lable>
-                </div>
-                <div class="cell">
-                  <label class="modal_filtr__label_price">
-                    <input
-                      type="number"
-                      class="modal_filtr_input modal_filtr__price_max"
-                      min="0"
-                      max="10000"
-                      id="input-1"
-                      placeholder="10000"
-                    />
-                  </label>
-                </div>
-              </div>
-              <div id="range_slider"></div>
-              <div class="modal_filtr_categories">
-                <label class="modal_filtr_categories_title">КАТЕГОРИИ</label>
-                <br />
-                <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=" andoid15"
-                    class="modal_filtr_categories_input" value="ANDROID15"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  ANDROID15
-                </lable>
-                <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="CELENDERW30"
-                  />
-                  <span class="modal-filtr_move"></span>
-                CELENDERW30
-                </lable>
-                <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="COLORROOM"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  COLORROOM
-                </lable>
-                <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value=" JIKOCXN"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  JIKOCXN
-                </lable>
-                <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="KINGRID"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  KINGRID
-                </lable>
-                <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="NANNEE"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  NANNEE
-                </lable>
-                <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value=" ODEA"
-                  />
-                  <span class="modal-filtr_move"></span>
-                 ODEA
-                </lable>
-                <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value=" PEICHENG"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  PEICHENG
-                </lable>
-                   <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value=" QDDQ"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  QDDQ
-                </lable>
-                   <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value=" RELNDOO"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  RELNDOO
-                </lable>
-                   <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="ROENLLCE"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  ROENLLCE
-                </lable>
-                   <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="TABWEE"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  TABWEE 
-                </lable>
-                   <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="TECLAST"
-                  />
-                  <span class="modal-filtr_move"></span>
-                 TECLAST
-                </lable>
-                <div class="rom">
-                  <label class="modal_filtr_categories_rom" >Память</label>
-                 <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="128GB" 
-                  />
-                  <span class="modal-filtr_move"></span>
-                  128GB
-                </lable>
-                      <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="256GB"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  256GB
-                </lable>
-                   <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="64GB"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  64GB
-                </lable>
-                </div>
-                 <div class="ram">
-                  <label class="modal_filtr_categories_rom" >Оперативная Память</label>
-                   <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="4GB"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  4GB
-                </lable>
-                  <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="6GB"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  6GB
-                </lable>
-                 <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="8GB"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  8GB
-                </lable>
-                <lable class="modal_filtr_categories_item">
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="modal_filtr_categories_input" value="16GB"
-                  />
-                  <span class="modal-filtr_move"></span>
-                  16GB
-                </lable>
-                 </div>
-              </div>
-              <div>
-                <input type="submit" name="send" class="modal-filtr_send" value="ПРИМЕНИТЬ">
-              </div>
-              <div>
-                <button type="button" class="modal-filtr_reset">СБРОСИТЬ ВСЕ</button>
-              </div>
-            </form>
-          </div>
-          <button class="modal__close">&#10006;</button>
-        </div>
-      </div>
-    </div>
-     <div class="wrapper"></div>
      <div class="modal modal_profile">
       <div class="modal_profile__body">
         <div class="modal_profile__container">
           <h2 data-lang="modal1">Добро пожаловать в Farex!</h2>
           <div class="modal_profile__content">
             <div class="cell">
-              <button type="button" class="modal_profile__login" data-lang="modal2">УЖЕ ЕСТЬ АККАУНТ</button>
+              <button
+                type="button"
+                class="modal_profile__login"
+                data-lang="modal2"
+              >
+                УЖЕ ЕСТЬ АККАУНТ
+              </button>
             </div>
             <div class="cell">
-                <button type="button" class="modal_profile__registration" data-lang="modal3">НЕТ АККАУНТА</button>
+              <button
+                type="button"
+                class="modal_profile__registration"
+                data-lang="modal3"
+              >
+                НЕТ АККАУНТА
+              </button>
             </div>
           </div>
-           <button class="modal__close ">&#10006;</button>
+          <button class="modal__close">&#10006;</button>
         </div>
       </div>
     </div>
@@ -4769,23 +3790,41 @@
           <div class="modal_profile_login__content">
             <form action="#" method="post">
               <div>
-                <input type="email" name="main" value="" placeholder="ЭЛ.ПОЧТА">
+                <input
+                  type="email"
+                  name="main"
+                  value=""
+                  placeholder="ЭЛ.ПОЧТА"
+                />
               </div>
               <div>
-                <input type="password" name="password" value="" placeholder="ПАРОЛЬ">
+                <input
+                  type="password"
+                  name="password"
+                  value=""
+                  placeholder="ПАРОЛЬ"
+                />
               </div>
               <div>
-                <button type="button" name="repeatpassword" class="modal_profile_login_repeat_pas" data-lang="modal5">Я забыл пароль</button>
+                <button
+                  type="button"
+                  name="repeatpassword"
+                  class="modal_profile_login_repeat_pas"
+                  data-lang="modal5"
+                >
+                  Я забыл пароль
+                </button>
               </div>
               <div>
-                <input type="submit" name="send" value="ВОЙТИ В АККАУНТ">
+                <input type="submit" name="send" value="ВОЙТИ В АККАУНТ" />
               </div>
             </form>
           </div>
-           <button class="modal__close ">&#10006;</button>
+          <button class="modal__close">&#10006;</button>
         </div>
       </div>
     </div>
+    <div class="wrapper"></div>
     <div class="modal modal_profile_registration">
       <div class="modal_profile_registration__body">
         <div class="modal_profile_registration__container">
@@ -4793,23 +3832,48 @@
           <div class="modal_profile_registration__content">
             <form action="#" method="post">
               <div>
-                <input type="email" name="mail" value="" placeholder="ЭЛ.ПОЧТА">
+                <input
+                  type="email"
+                  name="mail"
+                  value=""
+                  placeholder="ЭЛ.ПОЧТА"
+                />
               </div>
               <div>
-                <input type="password" name="password" value="" placeholder="ПАРОЛЬ">
+                <input
+                  type="password"
+                  name="password"
+                  value=""
+                  placeholder="ПАРОЛЬ"
+                />
               </div>
               <div>
-                <input type="password" name="repeatpassword" value="" placeholder="ПАВТОРИТЕ ПАРОЛЬ">
+                <input
+                  type="password"
+                  name="repeatpassword"
+                  value=""
+                  placeholder="ПАВТОРИТЕ ПАРОЛЬ"
+                />
               </div>
               <div>
-                <button type="button" class="modal_profile_registration_login" data-lang="modal8">У МЕНЯ ЕСТЬ АККАУНТ</button>
+                <button
+                  type="button"
+                  class="modal_profile_registration_login"
+                  data-lang="modal8"
+                >
+                  У МЕНЯ ЕСТЬ АККАУНТ
+                </button>
               </div>
               <div>
-                <input type="submit" name="send" placeholder="СОЗДАТЬ АККАУНТ">
+                <input
+                  type="submit"
+                  name="send"
+                 
+                />
               </div>
             </form>
           </div>
-            <button class="modal__close ">&#10006;</button>
+          <button class="modal__close">&#10006;</button>
         </div>
       </div>
     </div>
@@ -4820,59 +3884,70 @@
           <div class="modal_profile_reset_pas__content">
             <form action="#" method="post">
               <div>
-                <input type="email" name="mail" value="" placeholder="ЭЛ.ПОЧТА">
+                <input
+                  type="email"
+                  name="mail"
+                  value=""
+                  placeholder="ЭЛ.ПОЧТА"
+                />
               </div>
               <div>
-                <input type="submit" name="send" value="Отправить">
+                <input type="submit" name="send" value="Отправить" />
               </div>
             </form>
           </div>
-           <button class="modal__close ">&#10006;</button>
+          <button class="modal__close">&#10006;</button>
         </div>
       </div>
     </div>
-    <div class=" modal modal_add_faborites">
-        <div class="modal_add_faborites__body">
-            <div class="modal_add_faborites__container">
-                <div class="modal_add_faborites__content">
-                <div class="cell">
-                    <h2>Вы добавили товар в избранное</h2>
-                </div>
-                <div class="cell">
-                    <a href="./favorites.html" class="modal_add_faborites__link">В избранное</a>
-                </div>
-                </div>
-                
+    <div class="modal modal_add_faborites">
+      <div class="modal_add_faborites__body">
+        <div class="modal_add_faborites__container">
+          <div class="modal_add_faborites__content">
+            <div class="cell">
+              <h2 data-lang="modal12">Вы добавили товар в избранное</h2>
             </div>
-        </div>
-    </div>
-    <div class=" modal modal_add_besket">
-        <div class="modal_add_besket__body">
-            <div class="modal_add_besket__container">
-                <div class="modal_add_besket__content">
-                <div class="cell">
-                    <h2>Вы добавили товар в корзину</h2>
-                </div>
-                <div class="cell">
-                    <a href="./besket.html" class="modal_add_besket__besket">В корзину</a>
-                </div>
-                </div>
-                
+            <div class="cell">
+              <a
+                href="./favorites.html"
+                class="modal_add_faborites__link"
+                data-lang="modal13"
+                >В избранное</a
+              >
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class=" modal modal_empty_besket">
-        <div class="modal_empty_besket__body">
-            <div class="modal_empty_besket__container">
-                <div class="modal_empty_besket__content">
-                <div class="cell">
-                    <h2>Корзина пуста</h2>
-                </div>
-                
-                </div>
-                
+    <div class="modal modal_add_besket">
+      <div class="modal_add_besket__body">
+        <div class="modal_add_besket__container">
+          <div class="modal_add_besket__content">
+            <div class="cell">
+              <h2 data-lang="modal14">Вы добавили товар в корзину</h2>
             </div>
+            <div class="cell">
+              <a
+                href="./besket.html"
+                class="modal_add_besket__besket"
+                data-lang="modal15"
+                >В карзину</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-  </body>
+    <div class="modal modal_empty_besket">
+      <div class="modal_empty_besket__body">
+        <div class="modal_empty_besket__container">
+          <div class="modal_empty_besket__content">
+            <div class="cell">
+              <h2 data-lang="modal6">Корзина пуста</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
 </html>

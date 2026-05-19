@@ -14,6 +14,7 @@ import {
 } from "./constants/constant.js";
 import { modalController } from "./modal/modal.js";
 import { renderFiltrAdd } from "./filters/filter_catalog.js";
+import {search} from "./modules/helpers.js"
 const cards = document.querySelector(".products_catalog");
 const btnShowCards = document.querySelector(".show_more button");
 const productsCatalog = document.querySelector(".products_catalog");
@@ -25,6 +26,7 @@ const filtersProductsBtn = document.querySelector(".products_catalog_filtr");
  const filtersProductsButton = document.querySelector(
     ".products_catalog_filtr button",
   );
+
 let shownCardS = COUNT_SHOW_CARDS_CLICK;
 let countClickBtnShowCards = 1;
 let productsData = [];
@@ -45,6 +47,7 @@ const filters = document.querySelectorAll(
 );
 
 getProducts();
+search();
 
 // cards.addEventListener("click",delProductBasket)
 // productsCatalog.addEventListener("click",delProductBasket)

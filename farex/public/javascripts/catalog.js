@@ -48,6 +48,13 @@ modalController({
     time: "300",
   });
 
+  //  modalController({
+  //   modal: ".modal_search",
+  //   btnOpen: ".search_products",
+  //   btnClose: ".modal__close",
+  //   time: "300",
+  // });
+
   
 
   function rangeSlider() {
