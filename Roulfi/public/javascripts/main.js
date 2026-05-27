@@ -57,7 +57,12 @@ function addEventListener() {
     const companyList = document.querySelectorAll('.modal__graphics-lists');
     const generateBtn = document.querySelector('.modal__create-graphics-generate');
     const promoInput = document.querySelector('.modal__create-graphics-content-promo');
+    const companyCopyLink = document.querySelector('.modal__company-success-referal-copy img');
+    
     const mobileList = document.querySelectorAll('.modal__graphics-company-list');
+    const clipboard = document.querySelectorAll('.profile__creation-copy-bufer');
+    const clipboardRecards = document.querySelectorAll('.profile__company-card-item-wallet img');
+    const clipboardReferals = document.querySelectorAll('.profile__referals-copy img');
     const mediaQuery = window.matchMedia('(max-width: 840px)');
     const minmediaQuery = window.matchMedia('(min-width: 840px)');
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -83,8 +88,18 @@ function addEventListener() {
     })
     }
 
-    
-
+    clipboard.forEach(copy => {
+      copy.addEventListener("click", async (e) => {
+        let copyValue = e.target.parentElement.previousElementSibling.value
+        
+        try {
+        await navigator.clipboard.writeText(copyValue);
+       
+    } catch (err) {
+        console.error('Ошибка при копировании: ', err);
+    }
+      })
+    })
 if (mediaQuery.matches) {
     mobileList.forEach(el => {
         el.addEventListener("click", function() {
@@ -96,7 +111,48 @@ if (mediaQuery.matches) {
     })
 }
 
+
+clipboardRecards.forEach(copy => {
+      copy.addEventListener("click", async (e) => {
+        let copyValue = e.target.parentElement.previousElementSibling.firstElementChild.textContent
+       
+       
+        
+        try {
+        await navigator.clipboard.writeText(copyValue);
+       
+    } catch (err) {
+        console.error('Ошибка при копировании: ', err);
+    }
+      })
+    })
+
+
+    clipboardReferals.forEach(copy => {
+      copy.addEventListener("click", async (e) => {
+        let copyValue = e.target.parentElement.previousElementSibling.firstElementChild.textContent
+      
+       
+        
+        try {
+        await navigator.clipboard.writeText(copyValue);
+       
+    } catch (err) {
+        console.error('Ошибка при копировании: ', err);
+    }
+      })
+    })
+
+   companyCopyLink.addEventListener("click", async (e) => {
+      let copyvalue = e.target.parentElement.previousElementSibling.value;
     
+       try {
+        await navigator.clipboard.writeText(copyvalue);
+       
+    } catch (err) {
+        console.error('Ошибка при копировании: ', err);
+    }
+   }) 
 
     
 
@@ -114,6 +170,8 @@ if (mediaQuery.matches) {
     navigator.clipboard.writeText(promo);
    
     })
+
+    
 
     
 }

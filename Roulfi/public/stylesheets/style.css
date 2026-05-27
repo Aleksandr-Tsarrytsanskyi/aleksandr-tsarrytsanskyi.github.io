@@ -238,8 +238,12 @@ color: #fff;
 .profile__company-card-grafics p {
   font-family: "Roboto Medium";
   font-size: 18px;
-color: #fff;
+color: #353535;
 margin-top: 2px;
+}
+
+.profile__company-card-grafics-item:hover .profile__company-card-grafics-texts  {
+  color: #fff;
 }
 
 .profile__company-card-grafics-title {
@@ -690,6 +694,11 @@ font-family: "Roboto Medium";
 transition: background 0.3s ease-in;
 }
 
+.profile__referals-copy img, .profile__company-card-item-wallet img{
+  cursor: pointer;
+}
+
+
 .modal__create-graphics-link-referal:hover {
   background: #e81c5a;
 }
@@ -870,10 +879,15 @@ outline: none;
   cursor: pointer;
 }
 
-.modal__company-success-referal-link {
-  background-image: url("../images/Modal/regeral.svg");
-  background-repeat: no-repeat;
-  background-position: 321px 33px;
+.modal__company-success-referal-copy {
+      cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 61px;
+}
+
+.modal__company-success-referal-pos {
+  position: relative;
 }
 
 
