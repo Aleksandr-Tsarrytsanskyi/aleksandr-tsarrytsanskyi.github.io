@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="./stylesheets/topsellers.css" />
     
     <script type="module" src="./javascripts/top-sellers.js"></script>
+     <script type="module" defer src="./javascripts/mvc/controller.js"></script>
     <title>Document</title>
 </head>
 <body>
+   
       <div class="modal modal_profile">
       <div class="modal_profile__body">
         <div class="modal_profile__container">
@@ -1868,11 +1870,11 @@
           <form action="#" method="get" class="search">
             <div>
               <input
-                type="search"
+                type="text"
                 name="search"
                 value=""
                 placeholder="Поиск"
-                class="search_products"
+                class="search_products" autocomplete="off" spellcheck="false" autocorrect="off" aria-autocomplete="none"
               />
             </div>
           </form>
@@ -1994,13 +1996,20 @@
           <div class="filtr">
             
             <div class="filtr__cell">
-              <select class="list_products" name="filter_list">
-                <option vlaue="popularity">ПО ПОПУЛЯРНОСТИ</option>
-                <option vlaue="items">НОВИНКИ</option>
-                <option vlaue="top">ТОП ПРОДАЖ</option>
-                <option vlaue="price">ПО ЦЕНЕ</option>
-              </select>
-            </div>
+                <select class="list_products" name="filter_list">
+                   <option value="allproducts">ВСЕ ТОВАРЫ</option>
+                  <option value="new" data-lang="text3">НОВИНКИ</option>
+                  <option value="top" data-lang="text4">ТОП ПРОДАЖ</option>
+                </select>
+
+              </div>
+              <div class="filtr__cell">
+                <select class="list_price" name="filter_list">
+                  <option disabled selected>СОРТИРОВКА</option>
+                  <option value="asc" data-lang="text3">ОТ ДОРОГИХ</option>
+                  <option value="dsc" data-lang="text4">ОТ ДЕШЕВЫХ</option>
+                </select>
+              </div>
           
           </div>
         </div>
@@ -2008,9 +2017,14 @@
           <div class="products_catalog">
         
           </div>
-          <div class="show_more">
+          <div class="show_more show_more__catalog">
         <div class="cell">
           <button type="button" class="none" data-lang="text6">ПОКАЗАТЬ ЕЩЕ</button>
+        </div>
+      </div>
+      <div class=" show_more__category">
+        <div class="cell">
+          <button type="button" class="none " data-lang="text6">ПОКАЗАТЬ ЕЩЕ</button>
         </div>
       </div>
        </section> 
@@ -3821,5 +3835,36 @@
         </div>
       </div>
     </footer>
+    <div class="modal modal_search">
+      <div class="modal_search__body">
+        <div class="modal_search__container">
+          
+          <div class="modal_search__content">
+            <h2 class="modal_search__title"></h2>
+            
+              <div class="products_catalog">
+
+              </div>
+             <a href="#" class="modal_search_products">ПОКАЗАТЬ ВСЕ РЕЗУЛЬТАТЫ</a>
+             <p class="modal_search__text">Папулярные запросы</p>
+             <ul class="modal_search__list">
+              <li>
+                <a href="#">Teclast</a>
+              </li>
+              <li>
+                <a href="#">Odea</a>
+              </li>
+              <li>
+                <a href="#">Relndoo</a>
+              </li>
+               <li>
+                <a href="#">Планшет</a>
+              </li>
+            </ul>
+          </div>
+           <button class="modal__close ">&#10006;</button>
+        </div>
+      </div>
+    </div>
 </body>
 </html>

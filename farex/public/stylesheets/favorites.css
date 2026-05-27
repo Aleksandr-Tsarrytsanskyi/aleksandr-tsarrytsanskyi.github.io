@@ -3,7 +3,7 @@
 }
 
 .filtr {
-    grid-template-columns: 186px 140px;
+    grid-template-columns: 349px 140px;
     justify-content: space-between;
 }
 
@@ -51,4 +51,8 @@
 
 footer {
     margin-top: 40px;
+}
+
+.modal_search__body_height {
+    height: 487px;
 }

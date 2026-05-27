@@ -2,6 +2,7 @@ import { modalController } from "./modal/modal.js";
 import { scrollToHeaderBtn } from "./scrollUp.js";
 import {showErrorMessage,checkingRelevanceValueFavorites, getBasketLocalStorage,setBasketLocalStorage ,getFavoritesLocalStorage, setFavoritesLocalStorage} from "./utils/utils.js";
 import {ERRO_SERVER, PRODUCT_INFORMATION_NOT_FOUND, NO_ITEMS_CART,NO_FAVORITES_PRODUCT} from "./constants/constant.js";
+import{search} from './modules/helpers.js'
 scrollToHeaderBtn();
 modalController({
   modal: ".modal_profile",
@@ -35,6 +36,8 @@ modalController({
     btnClose: ".modal__close",
     time: "300"
 })
+
+search();
 // document.addEventListener("DOMContentLoaded", function() {
 //     const addfavorites = document.querySelector(".mobile_none a");
 //   const showfavorites = document.querySelector(".mobile_none");
@@ -550,7 +553,7 @@ function delProductBasket(event) {
   }
 
    if(!bakset.length) {
-    showErrorMessage(NO_ITEMS_CART)
+    showErrorMessage(NO_FAVORITES_PRODUCT)
     console.log("sa");
     contentProducts.textContent = ""
     empty_basket.classList.add("empty_basket_show")

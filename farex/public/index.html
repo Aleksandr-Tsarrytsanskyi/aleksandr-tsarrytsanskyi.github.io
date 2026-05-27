@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/home.css" />
     <link rel="stylesheet" href="./stylesheets/normalize.css"/>
     <!-- media="print" onload="this.media='all'" -->
     <link
@@ -12,10 +13,27 @@
     />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script defer type="module" src="./javascripts/main.js"></script>
+   
     <script defer type="module" src="./javascripts/languages/lang.js"></script>
     <title>Document</title>
   </head>
   <body>
+   <div class="video_block">
+     <!-- <video class="video" autoplay muted loop  width="100%"   height="1400px" preload="metadata" >
+    <source src="../public/images/video.mp4" type="video/mp4">
+          Ваш браузер не поддерживает встроенное видео. Пожалуйста, обновите браузер.
+    </video> -->
+   </div>
+  <div class="modal modal_success">
+    <div class="modal_success__body">
+      <div class="modal_success__container">
+        <h2 class="modal_success__title">Подвердите вашу почту</h2>
+        <a href="https://gmail.com" type="button" class="modal_success__login">Подвердить</a>
+         <button class="modal__close">&#10006;</button>
+      </div>
+    </div>
+  </div>
+
     <div class="modal modal_profile">
       <div class="modal_profile__body">
         <div class="modal_profile__container">
@@ -125,6 +143,9 @@
                 </button>
               </div>
               <div>
+                <span class="error_span"></span>
+              </div>
+              <div>
                 <input
                   type="submit"
                   name="send"
@@ -137,6 +158,7 @@
         </div>
       </div>
     </div>
+     <div class="wrapper"></div>
     <div class="modal modal_profile_reset_pas">
       <div class="modal_profile_reset_pas__body">
         <div class="modal_profile_reset_pas__container">
@@ -1940,11 +1962,12 @@
           <form action="#" method="get" class="search">
             <div>
               <input
-                type="search"
+                type="text"
                 name="search"
                 value=""
                 placeholder="Поиск"
-                class="search_products"
+                class="search_products" autocomplete="off" spellcheck="false" autocorrect="off" aria-autocomplete="none"
+              />
               />
             </div>
           </form>
@@ -1964,14 +1987,14 @@
         </div>
         <div class="header__cell">
           <div class="header__favorites_counter">
-            <p class="counter">1</p>
+            <p><spna class="counter">1</spna>+</p>
           </div>
           <div class="header__besket_counter">
             <p><span class="counter">1</span>+</p>
           </div>
           <nav class="header__right_menu">
             <ul>
-              <li class="mobile_none">
+              <li class="favorites_icon mobile_none">
                 <a href="./favorites.html">
                   <svg
                     width="33"
@@ -2085,7 +2108,8 @@
         </div>
       </section>
       <div class="clear"></div>
-      <section class="new_items_products products">
+      <div class="products_cards">
+        <section class="new_items_products products">
         <div class="new_items_products__item">
           <div class="new_items_products__header">
             <div class="new_items_products__cell">
@@ -2095,421 +2119,8 @@
           <div class="swiper new_products">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="card__item">
-                    <div class="card__body">
-                      <div class="card__cell">
-                        <!-- <div class="hit">
-                          <p>ТОП ПРОДАЖ</p>
-                        </div> -->
-                      </div>
-                      <div class="card__cell">
-                        <button type="button" class="favorites"></button>
-                      </div>
-                    </div>
-                    <a href="./aboutProduct.html">
-                      <div class="card__product">
-                        <img
-                          src="./images/Teclast-ArtPad-Air-11/teclast2.webp"
-                          alt="Андроид 15"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card__content">
-                    <div class="card__reviews">
-                      <div class="card__reviews_cell">
-                        <p>5.0</p>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <svg
-                          width="180"
-                          height="36"
-                          viewBox="0 0 180 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <p><span class="card__count">3</span> отызва</p>
-                      </div>
-                    </div>
-                    <div class="card__title">
-                      <a href="./aboutProduct.html">
-                        <h2>Планшет Teclast ArtPad Air 11</h2>
-                      </a>
-                    </div>
-
-                    <div class="card__price">
-                      <div class="card__price_cell">
-                        <p class="price">7 999₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <p class="discount">8 999₴</p>
-                      </div>
-                      <div class="card__price_cell none">
-                        <p class="discount">1 000₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <button type="button" class="card__besket_add"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="card__item">
-                    <div class="card__body">
-                      <div class="card__cell">
-                        <div class="hit">
-                          <p>ТОП ПРОДАЖ</p>
-                        </div>
-                      </div>
-                      <div class="card__cell">
-                        <button type="button" class="favorites"></button>
-                      </div>
-                    </div>
-                    <div class="card__product">
-                      <a href="./aboutProduct.html">
-                        <img
-                          src="./images/teclastP30/teclast1.webp"
-                          alt="Андроид 15"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card__content">
-                    <div class="card__reviews">
-                      <div class="card__reviews_cell">
-                        <p>5.0</p>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <svg
-                          width="180"
-                          height="36"
-                          viewBox="0 0 180 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <p><span class="card__count">3</span> отызва</p>
-                      </div>
-                    </div>
-                    <div class="card__title">
-                      <a href="./aboutProduct.html">
-                        <h2>Планшет Teclast P30 10.1 дюйма</h2>
-                      </a>
-                    </div>
-                    <div class="card__price">
-                      <div class="card__price_cell">
-                        <p class="price">4 999₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <p class="discount">5 999₴</p>
-                      </div>
-                      <div class="card__price_cell none">
-                        <p class="discount">1 000₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <button type="button" class="card__besket_add"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="card__item">
-                    <div class="card__body">
-                      <div class="card__cell">
-                        <div class="hit">
-                          <p>ТОП ПРОДАЖ</p>
-                        </div>
-                      </div>
-                      <div class="card__cell">
-                        <button type="button" class="favorites"></button>
-                      </div>
-                    </div>
-                    <div class="card__product">
-                      <a href="./aboutProduct.html">
-                        <img
-                          src="./images/teclastP50/teclast1.webp"
-                          alt="Андроид 15"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card__content">
-                    <div class="card__reviews">
-                      <div class="card__reviews_cell">
-                        <p>5.0</p>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <svg
-                          width="180"
-                          height="36"
-                          viewBox="0 0 180 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <p><span class="card__count">3</span> отызва</p>
-                      </div>
-                    </div>
-                    <div class="card__title">
-                      <a href="./aboutProduct.html">
-                        <h2>Teclast P50 11-дюймовий планшет</h2>
-                      </a>
-                    </div>
-                    <div class="card__price">
-                      <div class="card__price_cell">
-                        <p class="price">5 500₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <p class="discount">6 999₴</p>
-                      </div>
-                      <div class="card__price_cell none">
-                        <p class="discount">1 499₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <button type="button" class="card__besket_add"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="card__item">
-                    <div class="card__body">
-                      <div class="card__cell">
-                        <div class="hit">
-                          <p>ТОП ПРОДАЖ</p>
-                        </div>
-                      </div>
-                      <div class="card__cell">
-                        <button type="button" class="favorites"></button>
-                      </div>
-                    </div>
-                    <div class="card__product">
-                      <a href="./aboutProduct.html">
-                        <img
-                          src="./images/Teclast-T50Mini/teclast3.webp"
-                          alt="Андроид 15"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card__content">
-                    <div class="card__reviews">
-                      <div class="card__reviews_cell">
-                        <p>5.0</p>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <svg
-                          width="180"
-                          height="36"
-                          viewBox="0 0 180 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <p><span class="card__count">3</span> отызва</p>
-                      </div>
-                    </div>
-                    <div class="card__title">
-                      <h2>Teclast T50Mini Планшет</h2>
-                    </div>
-                    <div class="card__price">
-                      <div class="card__price_cell">
-                        <p class="price">4 699₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <p class="discount">6 999₴</p>
-                      </div>
-                      <div class="card__price_cell none">
-                        <p class="discount">2 300₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <button type="button" class="card__besket_add"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="card__item">
-                    <div class="card__body">
-                      <div class="card__cell">
-                        <!-- <div class="hit">
-                          <p>ТОП ПРОДАЖ</p>
-                        </div> -->
-                      </div>
-                      <div class="card__cell">
-                        <button type="button" class="favorites"></button>
-                      </div>
-                    </div>
-                    <div class="card__product">
-                      <a href="./aboutProduct.html">
-                        <img
-                          src="./images/Teclast-T50-Plus/teclast2.webp"
-                          alt="Андроид 15"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card__content">
-                    <div class="card__reviews">
-                      <div class="card__reviews_cell">
-                        <p>5.0</p>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <svg
-                          width="180"
-                          height="36"
-                          viewBox="0 0 180 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <p><span class="card__count">3</span> отызва</p>
-                      </div>
-                    </div>
-                    <div class="card__title">
-                      <a href="./aboutProduct.html">
-                        <h2>Планшет Teclast T50 Plus</h2>
-                      </a>
-                    </div>
-                    <div class="card__price">
-                      <div class="card__price_cell">
-                        <p class="price">6 855₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <p class="discount">7 449₴</p>
-                      </div>
-                      <div class="card__price_cell none">
-                        <p class="discount">594₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <button type="button" class="card__besket_add"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+             
+              
             </div>
             <!-- If we need pagination -->
 
@@ -2526,427 +2137,14 @@
         <div class="new_items_products__item">
           <div class="new_items_products__header">
             <div class="new_items_products__cell">
-              <h2 data-lang="text6">ВЫ СМОТРЕЛИ</h2>
+              <h2 data-lang="text6">ТОП ПРОДАЖ</h2>
             </div>
           </div>
           <div class="swiper new_watch">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="card__item">
-                    <div class="card__body">
-                      <div class="card__cell">
-                        <!-- <div class="hit">
-                          <p>ТОП ПРОДАЖ</p>
-                        </div> -->
-                      </div>
-                      <div class="card__cell">
-                        <button type="button" class="favorites"></button>
-                      </div>
-                    </div>
-                    <a href="./aboutProduct.html">
-                      <div class="card__product">
-                        <img
-                          src="./images/Teclast-ArtPad-Air-11/teclast2.webp"
-                          alt="Андроид 15"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card__content">
-                    <div class="card__reviews">
-                      <div class="card__reviews_cell">
-                        <p>5.0</p>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <svg
-                          width="180"
-                          height="36"
-                          viewBox="0 0 180 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <p><span class="card__count">3</span> отызва</p>
-                      </div>
-                    </div>
-                    <div class="card__title">
-                      <a href="./aboutProduct.html">
-                        <h2>Планшет Teclast ArtPad Air 11</h2>
-                      </a>
-                    </div>
-
-                    <div class="card__price">
-                      <div class="card__price_cell">
-                        <p class="price">7 999₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <p class="discount">8 999₴</p>
-                      </div>
-                      <div class="card__price_cell none">
-                        <p class="discount">1 000₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <button type="button" class="card__besket_add"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="card__item">
-                    <div class="card__body">
-                      <div class="card__cell">
-                        <div class="hit">
-                          <p>ТОП ПРОДАЖ</p>
-                        </div>
-                      </div>
-                      <div class="card__cell">
-                        <button type="button" class="favorites"></button>
-                      </div>
-                    </div>
-                    <div class="card__product">
-                      <a href="./aboutProduct.html">
-                        <img
-                          src="./images/teclastP30/teclast1.webp"
-                          alt="Андроид 15"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card__content">
-                    <div class="card__reviews">
-                      <div class="card__reviews_cell">
-                        <p>5.0</p>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <svg
-                          width="180"
-                          height="36"
-                          viewBox="0 0 180 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <p><span class="card__count">3</span> отызва</p>
-                      </div>
-                    </div>
-                    <div class="card__title">
-                      <a href="./aboutProduct.html">
-                        <h2>Планшет Teclast P30 10.1 дюйма</h2>
-                      </a>
-                    </div>
-                    <div class="card__price">
-                      <div class="card__price_cell">
-                        <p class="price">4 999₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <p class="discount">5 999₴</p>
-                      </div>
-                      <div class="card__price_cell none">
-                        <p class="discount">1 000₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <button type="button" class="card__besket_add"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="card__item">
-                    <div class="card__body">
-                      <div class="card__cell">
-                        <div class="hit">
-                          <p>ТОП ПРОДАЖ</p>
-                        </div>
-                      </div>
-                      <div class="card__cell">
-                        <button type="button" class="favorites"></button>
-                      </div>
-                    </div>
-                    <div class="card__product">
-                      <a href="./aboutProduct.html">
-                        <img
-                          src="./images/teclastP50/teclast1.webp"
-                          alt="Андроид 15"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card__content">
-                    <div class="card__reviews">
-                      <div class="card__reviews_cell">
-                        <p>5.0</p>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <svg
-                          width="180"
-                          height="36"
-                          viewBox="0 0 180 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <p><span class="card__count">3</span> отызва</p>
-                      </div>
-                    </div>
-                    <div class="card__title">
-                      <a href="./aboutProduct.html">
-                        <h2>Teclast P50 11-дюймовий планшет</h2>
-                      </a>
-                    </div>
-                    <div class="card__price">
-                      <div class="card__price_cell">
-                        <p class="price">5 500₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <p class="discount">6 999₴</p>
-                      </div>
-                      <div class="card__price_cell none">
-                        <p class="discount">1 499₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <button type="button" class="card__besket_add"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="card__item">
-                    <div class="card__body">
-                      <div class="card__cell">
-                        <div class="hit">
-                          <p>ТОП ПРОДАЖ</p>
-                        </div>
-                      </div>
-                      <div class="card__cell">
-                        <button type="button" class="favorites"></button>
-                      </div>
-                    </div>
-                    <div class="card__product">
-                      <a href="./aboutProduct.html">
-                        <img
-                          src="./images/Teclast-T50Mini/teclast3.webp"
-                          alt="Андроид 15"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card__content">
-                    <div class="card__reviews">
-                      <div class="card__reviews_cell">
-                        <p>5.0</p>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <svg
-                          width="180"
-                          height="36"
-                          viewBox="0 0 180 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <p><span class="card__count">3</span> отызва</p>
-                      </div>
-                    </div>
-                    <div class="card__title">
-                      <h2>Teclast T50Mini Планшет</h2>
-                    </div>
-                    <div class="card__price">
-                      <div class="card__price_cell">
-                        <p class="price">4 699₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <p class="discount">6 999₴</p>
-                      </div>
-                      <div class="card__price_cell none">
-                        <p class="discount">2 300₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <button type="button" class="card__besket_add"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="card__item">
-                    <div class="card__body">
-                      <div class="card__cell">
-                        <!-- <div class="hit">
-                          <p>ТОП ПРОДАЖ</p>
-                        </div> -->
-                      </div>
-                      <div class="card__cell">
-                        <button type="button" class="favorites"></button>
-                      </div>
-                    </div>
-                    <div class="card__product">
-                      <a href="./aboutProduct.html">
-                        <img
-                          src="./images/Teclast-T50-Plus/teclast2.webp"
-                          alt="Андроид 15"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card__content">
-                    <div class="card__reviews">
-                      <div class="card__reviews_cell">
-                        <p>5.0</p>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <svg
-                          width="180"
-                          height="36"
-                          viewBox="0 0 180 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.3574 30L18.0006 23.9664L9.64371 30L12.8524 20.2558L4.5 14.2607H14.812L18.0006 4.5L21.1891 14.2607H31.5L23.1487 20.2558L26.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M62.3574 30L54.0006 23.9664L45.6437 30L48.8524 20.2558L40.5 14.2607H50.812L54.0006 4.5L57.1891 14.2607H67.5L59.1487 20.2558L62.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M98.3574 30L90.0006 23.9664L81.6437 30L84.8524 20.2558L76.5 14.2607H86.812L90.0006 4.5L93.1891 14.2607H103.5L95.1487 20.2558L98.3574 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M134.357 30L126.001 23.9664L117.644 30L120.852 20.2558L112.5 14.2607H122.812L126.001 4.5L129.189 14.2607H139.5L131.149 20.2558L134.357 30Z"
-                            fill="#D29440"
-                          />
-                          <path
-                            d="M170.357 30L162.001 23.9664L153.644 30L156.852 20.2558L148.5 14.2607H158.812L162.001 4.5L165.189 14.2607H175.5L167.149 20.2558L170.357 30Z"
-                            fill="#D29440"
-                          />
-                        </svg>
-                      </div>
-                      <div class="card__reviews_cell">
-                        <p><span class="card__count">3</span> отызва</p>
-                      </div>
-                    </div>
-                    <div class="card__title">
-                      <a href="./aboutProduct.html">
-                        <h2>Планшет Teclast T50 Plus</h2>
-                      </a>
-                    </div>
-                    <div class="card__price">
-                      <div class="card__price_cell">
-                        <p class="price">6 855₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <p class="discount">7 449₴</p>
-                      </div>
-                      <div class="card__price_cell none">
-                        <p class="discount">594₴</p>
-                      </div>
-                      <div class="card__price_cell">
-                        <button type="button" class="card__besket_add"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
             <!-- If we need pagination -->
 
@@ -2958,6 +2156,7 @@
           </div>
         </div>
       </section>
+      </div>
       <section class="products-items">
         <div class="products-items__pos">
           <div class="products-items__center">
@@ -5030,5 +4229,36 @@
         </div>
       </div>
     </footer>
+    <div class="modal modal_search">
+      <div class="modal_search__body">
+        <div class="modal_search__container">
+          
+          <div class="modal_search__content">
+            <h2 class="modal_search__title"></h2>
+            
+              <div class="products_catalog">
+
+              </div>
+             <a href="#" class="modal_search_products">ПОКАЗАТЬ ВСЕ РЕЗУЛЬТАТЫ</a>
+             <p class="modal_search__text">Папулярные запросы</p>
+             <ul class="modal_search__list">
+              <li>
+                <a href="#">Teclast</a>
+              </li>
+              <li>
+                <a href="#">Odea</a>
+              </li>
+              <li>
+                <a href="#">Relndoo</a>
+              </li>
+               <li>
+                <a href="#">Планшет</a>
+              </li>
+            </ul>
+          </div>
+           <button class="modal__close ">&#10006;</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

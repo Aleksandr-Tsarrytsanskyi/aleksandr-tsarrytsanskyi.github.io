@@ -13,7 +13,7 @@
 
 .catalog {
     display: grid;
-    grid-template-columns: 400px 332px;
+    grid-template-columns: 400px 496px;
     justify-content: space-between;
     max-width: 1075px;
     margin: auto;

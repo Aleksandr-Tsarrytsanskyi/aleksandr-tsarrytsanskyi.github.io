@@ -1778,7 +1778,7 @@
             </p>
           </div>
           <div class="header__besket_counter">
-            <p><span class="counter">0</span>+</p>
+            <p><span class="counter">1</span>+</p>
           </div>
           <nav class="header__right_menu">
             <ul>
@@ -1879,10 +1879,16 @@
               <div class="filtr__cell">
                 <select class="list_products" name="filter_list">
                    <option value="allproducts">ВСЕ ТОВАРЫ</option>
-                  <option value="price" data-lang="text5">ОТ ДОРОГИХ ДО ДЕШЕВЫХ</option>
-                  <option value="popularity" data-lang="text2">ОТ ДЕШЕВЫХ</option>
                   <option value="new" data-lang="text3">НОВИНКИ</option>
                   <option value="top" data-lang="text4">ТОП ПРОДАЖ</option>
+                </select>
+
+              </div>
+              <div class="filtr__cell">
+                <select class="list_price" name="filter_list">
+                  <option disabled selected>СОРТИРОВКА</option>
+                  <option value="asc" data-lang="text3">ОТ ДОРОГИХ</option>
+                  <option value="dsc" data-lang="text4">ОТ ДЕШЕВЫХ</option>
                 </select>
               </div>
             </div>
@@ -2623,6 +2629,12 @@
         </div>
       </div>
       <div class=" show_more__filtr">
+        <div class="cell">
+          <button type="button" class="none " data-lang="text6">ПОКАЗАТЬ ЕЩЕ</button>
+        </div>
+      </div>
+
+      <div class=" show_more__category">
         <div class="cell">
           <button type="button" class="none " data-lang="text6">ПОКАЗАТЬ ЕЩЕ</button>
         </div>

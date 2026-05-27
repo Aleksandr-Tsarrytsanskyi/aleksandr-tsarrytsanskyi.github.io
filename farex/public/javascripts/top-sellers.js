@@ -1,6 +1,7 @@
 import {setFavoritesLocalStorage,getFavoritesLocalStorage, showErrorMessage,getBasketLocalStorage, setBasketLocalStorage,checkingRelevanceValueBasket} from "./utils/utils.js";
 import {COUNT_SHOW_CARDS_CLICK,ERRO_SERVER, NO_PRODUCTS_IN_THIS_CATEGORY} from "./constants/constant.js";
     import { modalController } from "./modal/modal.js";
+    import {search} from "./modules/helpers.js"
 const cards = document.querySelector(".products_catalog");
 const btnShowCards = document.querySelector(".show_more button")
 const productsCatalog = document.querySelector(".products_catalog")
@@ -11,6 +12,7 @@ let productsData = [];
 const basket  = getBasketLocalStorage();
 const favorites  = getFavoritesLocalStorage();
 getProducts();
+search();
 btnShowCards.addEventListener("click",sliceArrCards)
  cards.addEventListener("click",handleCardClick)
  cards.addEventListener("click",handlefavoritesCardClick)

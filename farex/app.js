@@ -7,6 +7,7 @@ let livereload = require('livereload');
 let connectLivereload = require('connect-livereload');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var usersApiRouter = require('./routes/authRouter');
 let publicDirectory = path.join(__dirname, "public");
 var app = express();
 
@@ -31,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/authRouter', usersApiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

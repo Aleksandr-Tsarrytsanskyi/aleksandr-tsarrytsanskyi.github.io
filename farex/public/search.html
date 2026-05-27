@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./stylesheets/normalize.css"/>
     
      <script defer type="module" src="./javascripts/modules/search.js"></script>
+     <script defer type="module" src="./javascripts/mvc/controllerSearch.js"></script>
      
     <title>Document</title>
 </head>
@@ -1767,14 +1768,14 @@
         </div>
         <div class="header__cell">
           <div class="header__favorites_counter">
-            <p class="counter">1</p>
+            <p><span class="counter">1</span>+</p>
           </div>
           <div class="header__besket_counter">
             <p><span class="counter">1</span>+</p>
           </div>
           <nav class="header__right_menu">
             <ul>
-              <li class="mobile_none">
+              <li class="favorites_icon mobile_none">
                 <a href="./favorites.html">
                   <svg
                     width="33"
@@ -1876,7 +1877,8 @@
     <main>
         <section class="search_res">
           <div class="catalog">
-          <div>
+            <div class="catalog_filtr">
+              <div>
               <h2 class="products__title">ТОВАРЫ</h2>
           </div>
           <div class="filtr">
@@ -1884,18 +1886,30 @@
               <div class="filtr__cell">
                 <select class="list_products" name="filter_list">
                    <option value="allproducts">ВСЕ ТОВАРЫ</option>
-                  <option value="price" data-lang="text5">ОТ ДОРОГИХ</option>
-                  <option value="popularity" data-lang="text2">ОТ ДЕШЕВЫХ</option>
                   <option value="new" data-lang="text3">НОВИНКИ</option>
                   <option value="top" data-lang="text4">ТОП ПРОДАЖ</option>
                 </select>
+
               </div>
+              <div class="filtr__cell">
+                <select class="list_price" name="filter_list">
+                  <option disabled selected>СОРТИРОВКА</option>
+                  <option value="asc" data-lang="text3">ОТ ДОРОГИХ</option>
+                  <option value="dsc" data-lang="text4">ОТ ДЕШЕВЫХ</option>
+                </select>
+              </div>
+          </div>
             </div>
-       </div>
             <div class="products_catalog"></div>
             <div class="show_more show_more__catalog">
         <div class="cell">
           <button type="button" class="none" data-lang="text6">ПОКАЗАТЬ ЕЩЕ</button>
+        </div>
+      </div>
+
+      <div class=" show_more__category">
+        <div class="cell">
+          <button type="button" class="none " data-lang="text6">ПОКАЗАТЬ ЕЩЕ</button>
         </div>
       </div>
         </section>

@@ -1829,7 +1829,7 @@
                 name="search"
                 value=""
                 placeholder="Поиск"
-                class="search_products"
+                class="search_products" autocomplete="off" spellcheck="false" autocorrect="off" aria-autocomplete="none"
               />
             </div>
           </form>
@@ -1859,7 +1859,7 @@
           <nav class="header__right_menu">
             <ul>
             
-              <li class="mobile_none">
+              <li class="favorites_icon mobile_none">
                 <a href="./favorites.html">
                   <svg
                     width="33"
@@ -3804,5 +3804,80 @@
         </div>
       </div>
     </footer>
+    <div class="modal modal_search">
+      <div class="modal_search__body">
+        <div class="modal_search__container">
+          
+          <div class="modal_search__content">
+            <h2 class="modal_search__title"></h2>
+            
+              <div class="products_catalog">
+
+              </div>
+             <a href="#" class="modal_search_products">ПОКАЗАТЬ ВСЕ РЕЗУЛЬТАТЫ</a>
+             <p class="modal_search__text">Папулярные запросы</p>
+             <ul class="modal_search__list">
+              <li>
+                <a href="#">Teclast</a>
+              </li>
+              <li>
+                <a href="#">Odea</a>
+              </li>
+              <li>
+                <a href="#">Relndoo</a>
+              </li>
+               <li>
+                <a href="#">Планшет</a>
+              </li>
+            </ul>
+          </div>
+           <button class="modal__close ">&#10006;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class=" modal modal_add_faborites">
+        <div class="modal_add_faborites__body">
+            <div class="modal_add_faborites__container">
+                <div class="modal_add_faborites__content">
+                <div class="cell">
+                    <h2>Вы добавили товар в избранное</h2>
+                </div>
+                <div class="cell">
+                    <a href="./favorites.html" class="modal_add_faborites__link">В избранное</a>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class=" modal modal_add_besket">
+        <div class="modal_add_besket__body">
+            <div class="modal_add_besket__container">
+                <div class="modal_add_besket__content">
+                <div class="cell">
+                    <h2>Вы добавили товар в корзину</h2>
+                </div>
+                <div class="cell">
+                    <a href="./besket.html" class="modal_add_besket__besket">В корзину</a>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class=" modal modal_empty_besket">
+        <div class="modal_empty_besket__body">
+            <div class="modal_empty_besket__container">
+                <div class="modal_empty_besket__content">
+                <div class="cell">
+                    <h2>Корзина пуста</h2>
+                </div>
+                
+                </div>
+                
+            </div>
+        </div>
+    </div>
   </body>
 </html>

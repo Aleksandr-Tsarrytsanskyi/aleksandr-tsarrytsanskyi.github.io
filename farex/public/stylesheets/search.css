@@ -1,3 +1,11 @@
 .modal_search  .card__body {
     margin-bottom: 10px !important;
 }
+
+.filtr {
+    grid-template-columns: 168px 169px;
+}
+
+.list_products {
+    display: none;
+}

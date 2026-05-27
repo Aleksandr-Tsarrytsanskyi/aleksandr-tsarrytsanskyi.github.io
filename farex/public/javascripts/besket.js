@@ -2,6 +2,7 @@ import { modalController } from "./modal/modal.js";
 import { scrollToHeaderBtn } from "./scrollUp.js";
 import {setFavoritesLocalStorage,getFavoritesLocalStorage,showErrorMessage,checkingRelevanceValueBasket,setBasketLocalStorage, getBasketLocalStorage} from "./utils/utils.js";
 import {ERRO_SERVER, PRODUCT_INFORMATION_NOT_FOUND, NO_ITEMS_CART} from "./constants/constant.js";
+import {search} from "./modules/helpers.js"
 scrollToHeaderBtn();
 modalController({
   modal: ".modal_profile",
@@ -120,7 +121,7 @@ modalController({
 
   // const besketcontent = document.querySelector(".besket_products")
   // const empty_basket = document.querySelector(".empty_basket")
-
+search();
   const conculateTotalCartValue = () => {
       const cartItems = document.querySelectorAll(".besket_products_item");
       const cartTotalPrice = document.querySelector(".besket_products__total_price");                   

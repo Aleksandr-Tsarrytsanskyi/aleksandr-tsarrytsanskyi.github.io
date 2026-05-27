@@ -16,40 +16,72 @@ export class Model {
     }
 
     soretingProducts (sortingValue) {
-        const {sortType} = sortingValue;
+        const {sortType, sortPrice} = sortingValue;
         let filterData;
+
 
         if(sortType !== "allproducts") {
             filterData = this.data.filter((request) => {
-                return request
+                return request.filtr === sortType
             })
         }
 
         else {
-            filterData = [...this.data];
+            filterData = [...this.data]
         }
+        
+    return filterData.sort((a,b) => {
+        switch (sortPrice) {
+            case "asc":             
+                   return b.price - a.price
+                            
+                break;
 
-        return filterData.filter((product) => {
-            switch (sortType) {
-                case "new":
-                   if(product.filtr == "new") {
-                       return product
-                        
-                   }
-                 break;   
+                case "dsc":             
+                   return a.price - b.price
+                            
+                break;
+        
+           
+        }
+    })
+        
 
-                  case "top":
-                   if(product.filtr == "top") {
-                  return product
-                    
-                   }
-                 break;  
-                 
-                
-            
-                default:
-                    break;
-            }
-        })
+        
+    }
+
+    soretingUrlProducts (sortingValue) {
+        const {sortType, sortPrice} = sortingValue;
+        let checkFiltrData = []
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('search'); // Получаем то, что искали
+       
+            const decodedQuery = decodeURIComponent(searchQuery).toLowerCase();
+            let filterData = this.data.filter(el => el.name.toLowerCase().includes(decodedQuery))
+            checkFiltrData = filterData
+             
+       
+         
+        
+        
+        
+    return checkFiltrData.sort((a,b) => {
+        switch (sortPrice) {
+            case "asc":             
+                   return b.price - a.price
+                            
+                break;
+
+                case "dsc":             
+                   return a.price - b.price
+                            
+                break;
+        
+           
+        }
+    })
+        
+
+        
     }
 }

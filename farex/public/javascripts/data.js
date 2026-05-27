@@ -122,6 +122,11 @@ function apllyFiltrProducts(event) {
   const filtersbtn = document.querySelector(
     ".products_catalog_filtr",
   );
+   const btnCotegory = document.querySelector(
+    ".show_more__category ",
+  );
+
+  btnCotegory.classList.add("filtersProductsBtn_hide")
   const min = document.querySelector(".modal_filtr__price_min").value;
   const max = document.querySelector(".modal_filtr__price_max").value;
   if (!resFiltr) {
@@ -551,11 +556,15 @@ function sliceArrCards() {
 }
 
 const basketCount = document.querySelector(".header__besket_counter");
+function addBasketProducts() {
 if (basket.length) {
   basketCount.classList.add("header__besket_counter_show");
 } else {
   basketCount.classList.remove("header__besket_counter_show");
 }
+}
+
+addBasketProducts();
 setBasketLocalStorage(basket);
 
 // localStorage.clear();
@@ -580,7 +589,7 @@ function handleCardClick(event) {
   chekingActiveButtons(basket);
 }
 
-function chekingActiveButtons(besket) {
+ function chekingActiveButtons(besket) {
   const buttons = document.querySelectorAll(".card__besket_add");
   const modalEmpty = document.querySelector(".modal_empty_besket");
 
@@ -631,7 +640,7 @@ function handlefavoritesCardClick(event) {
   chekingFavoritesActiveBurrons(favorites);
 }
 
-function chekingFavoritesActiveBurrons(favorites) {
+ function chekingFavoritesActiveBurrons(favorites) {
   const buttons = document.querySelectorAll(".card .favorites");
 
   buttons.forEach((btn) => {
