@@ -13,7 +13,7 @@
       src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
     ></script>
 
-    <script defer type="module" src="../dist/main.160f1570347f6cd35a16.js"></script>
+    <script defer type="module" src="./javascripts/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
@@ -21,7 +21,7 @@
   </head>
   <body>
      
-    <header class="relative">
+    <header class="relative header">
         <button type="button" class="cursor-pointer burger-btn">
             <svg class="cursor-pointer relative z-50" width="50" height="10" viewBox="0 0 50 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="50" height="1" fill="white"/>
@@ -29,9 +29,10 @@
                 </svg>
 
            </button>
-      <div class="relative h-[1080px] header-video-poster">
-        <video
-          class="header-video-bg"
+      <div class="relative pc:h-[1080px] mobile:h-[790px] header-video-poster">
+        <div class="video-placeholder">
+          <video
+          class="header-video-bg " 
           preload="auto"
           autoplay
           muted
@@ -39,19 +40,20 @@
           playsinline
         >
           <source src="./video/videoDekstop1.mp4" type="video/mp4" />
-          <source src="./video/videoDekstop.mov" type="video/quicktime" />
+          <!-- <source src="./video/videoDekstop.mov" type="video/quicktime" /> -->
           Ваш браузер не поддерживает видео теги.
         </video>
+        </div>
       
            
         
-        <div class="flex justify-center h-[1080px] items-center">
+        <div class="flex justify-center pc:h-[1080px] mobile:h-[790px] items-center">
           <div>
             
-            <h1 class="font-FahkwangRegular text-[64px] text-[#FFE2C4]">
+            <h1 class="font-FahkwangRegular pc:text-[64px] mobile:text-[44px] text-[#FFE2C4]">
               InSama Dance
             </h1>
-            <p class="font-jostMedium text-[18px] text-[#FFE2C4] text-center">
+            <p class="font-jostMedium pc:text-[18px] mobile:text-[14px] text-[#FFE2C4] text-center">
               танец святой и грешной
             </p>
           </div>
@@ -60,7 +62,7 @@
     </header>
     <main>
       <section id="Aboutauthor"
-        class="before:content-[''] before:absolute before:bg-[url('./images/bg_who.png')] before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[100%] before:bg-[#FBEFE5]"
+        class="before:content-[''] before:absolute bg-[url('./images/bg_who.png')] before:bg-[#ffe7d3] before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[100%] "
       >
         <div
           class="pt-[120px] grid grid-cols-[606px_591px] gap-x-[83px] justify-center"
@@ -222,9 +224,10 @@
         </div>
       </section>
       <section id="IndependentCourses"
-        class="pb-[120px] before:content-[''] faq-course-content mt-[-40px] before:absolute before:bg-[url('./images/bg_who.png')] before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[100%] before:bg-[#FBEFE5]"
       >
-        <div
+        <div  class="pb-[120px] before:content-[''] faq-course-content mt-[0px] before:absolute bg-[url('./images/bg_who.png')] before: before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[40%]"
+>
+          <div
           class="pt-[120px] grid grid-cols-[648px_572px] gap-x-[60px] justify-center"
         >
           <div>
@@ -528,6 +531,7 @@
             </div>
           </div>
         </div>
+        </div>
       </section>
       <section id="VideoStudents" class="bg-[#4A0003] video">
         <div class="max-w-[1280px] mx-auto">
@@ -555,7 +559,7 @@
         </div>
       </section>
       <section id="CourseInSamaDance"
-        class="before:content-[''] buy-course before:absolute before:bg-[url('./images/courses.png')] before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[100%] before:bg-[#FBEFE5]"
+        class="before:content-[''] buy-course before:absolute before:bg-[url('./images/courses.png')] before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[100%] before:bg-[#ffe7d3]"
       >
         <div class="max-w-[1280px] pt-[120px] pb-[120px] mx-auto">
           <h2
@@ -1964,7 +1968,7 @@
         </div>
       </section>
       <section id="questions"
-        class="before:content-[''] faq-content buy-course before:absolute before:bg-[url('./images/bg-fag.png')] before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[100%] before:bg-[#FBEFE5]"
+        class="before:content-[''] faq-content buy-course before:absolute before:bg-[url('./images/bg-fag.png')] before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[100%] before:bg-[#ffe7d3]"
       >
         <div class="pt-[150px] pb-[110px] max-w-[960px] mx-auto">
           <h2

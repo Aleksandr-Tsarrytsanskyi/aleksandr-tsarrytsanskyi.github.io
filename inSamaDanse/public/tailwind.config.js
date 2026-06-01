@@ -12,9 +12,9 @@ tailwind.config = {
         "4xl": "62px",
       },
       screens: {
-      'tablet': '768px',
-      'mobile': '375px',
-      "pc": "1480px"
+      'tablet': '864px',
+      'mobile': '360px',
+      "pc": "1280px"
       
     },
      

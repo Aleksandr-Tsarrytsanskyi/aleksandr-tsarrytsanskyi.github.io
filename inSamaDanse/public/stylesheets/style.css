@@ -6,6 +6,7 @@
 body {
   margin: 0;
   padding: 0;
+  background: #ffe7d3;
 }
 
 html {
@@ -475,6 +476,26 @@ transition: opacity 0.5s ease-in;
   color: #972b0f;
   text-decoration: underline;
 }
+
+.abouta-uthor-bg,  {
+  background: #ffe7d3;
+}
+
+.abouta-uthor-slot {
+  background-image: url('../images/bg_who.png'),;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+@media screen and (max-width: 864px) {
+  /* .header-video-bg {
+    display: none;
+  } */
+}
+
+
+
 
 
 
