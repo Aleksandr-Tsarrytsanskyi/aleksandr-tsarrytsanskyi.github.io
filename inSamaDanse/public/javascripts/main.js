@@ -136,6 +136,63 @@ modalController({
       slidesPerView: 3,
       spaceBetween: 10,
 
+       breakpoints: {
+    // Если ширина экрана >= 480px
+    360: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+
+    864: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // Если ширина экрана >= 768px
+    
+  }
+
+      // If we need pagination
+      //   pagination: {
+      //     el: '.swiper-pagination',
+      //   },
+
+      //   // Navigation arrows
+      //   navigation: {
+      //     nextEl: '.swiper-button-next',
+      //     prevEl: '.swiper-button-prev',
+      //   },
+
+      //   // And if we need scrollbar
+      //   scrollbar: {
+      //     el: '.swiper-scrollbar',
+      //   },
+    });
+
+     const inSama = new Swiper(".inSama", {
+      // Optional parameters
+
+      loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      centeredSlides: false,
+
+      on: {
+    init: function () {
+      this.update();
+    },
+  },
+
+  //      breakpoints: {
+  //   // Если ширина экрана >= 480px
+  //   360: {
+  //     slidesPerView: 1,
+  //     spaceBetween: 0,
+      
+  //   },
+  //   // Если ширина экрана >= 768px
+    
+  // }
+
       // If we need pagination
       //   pagination: {
       //     el: '.swiper-pagination',

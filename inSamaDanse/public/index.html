@@ -65,32 +65,51 @@
         class="before:content-[''] before:absolute bg-[url('./images/bg_who.png')] before:bg-[#ffe7d3] before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[100%] "
       >
         <div
-          class="pt-[120px] grid grid-cols-[606px_591px] gap-x-[83px] justify-center"
+          class="pc:pt-[120px] mobile:pb-[100px] pc:pb-[0px] mobile:pt-[100px] grid pc:grid-cols-[606px_591px] mobile:grid-cols-[360px] pc:gap-x-[83px] justify-center"
         >
-          <div>
+          <div class="mobile:h-[480px] pc:h-auto">
+            <h2
+                class="font-jostMedium mobile:block pc:hidden text-[42px] text text-[#4C180B] mb-[20px]"
+              >
+                Кто я
+              </h2>
             <div class="relative z-200">
-              <img
+              <img class="pc:block mobile:hidden"
                 src="./images/image1.png"
                 alt="image"
                 loading="lazy"
                 width="321"
                 height="382"
               />
+              <img class="pc:hidden mobile:block"
+                src="./images/mobile/image1.png"
+                alt="image"
+                loading="lazy"
+                width="189"
+                height="226"
+              />
             </div>
             <div class="relative z-100 float-right top-[-230px]">
-              <img
+              <img class="pc:block mobile:hidden"
                 src="./images/image2.png"
                 alt="image"
                 loading="lazy"
                 width="392"
                 height="467"
               />
+              <img class="pc:hidden mobile:block mt-[90px]"
+                src="./images/mobile/image2.png"
+                alt="image"
+                loading="lazy"
+                width="231"
+                height="276"
+              />
             </div>
           </div>
           <div>
             <article class="mt-[10px]">
               <h2
-                class="font-jostMedium text-[42px] text text-[#4C180B] mb-[24px]"
+                class="font-jostMedium mobile:hidden pc:block text-[42px] text text-[#4C180B] mb-[24px]"
               >
                 Кто я
               </h2>
@@ -171,7 +190,7 @@
               </div>
             </article>
             <div class="mt-[24px]">
-              <img
+              <img class="mobile:float-right mobile:mr-[20px] pc:mr-[0px] pc:float-left"
                 src="./images/icon.svg"
                 alt="icon"
                 loading="lazy"
@@ -183,25 +202,44 @@
         </div>
       </section>
       <section
-        class="relative mt-[-100px] h-[960px] flex justify-center bg-cover-pos"
+        class="relative pc:mt-[-100px]  pc:h-[960px] mobile:h-[888px] flex justify-center bg-cover-pos"
       >
-        <div class="absolute w-[100%] h-[100%]">
-          <img
+
+      <div class="swiper inSama">
+  <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="absolute w-[100%] h-[100%]">
+          <img class="mobile:hidden pc:block"
             src="./images/image3.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          <img class="mobile:block pc:hidden"
+            src="./images/mobile/image3.png"
             alt="Image"
             loading="lazy"
             class="bject-cover w-full h-full"
           />
         </div>
         <div class="absolute w-[100%] bottom-[0px] h-[100%]">
-          <img
+          <img class="mobile:hidden pc:block"
             src="./images/bg-in-sama.png"
             alt="Image"
             loading="lazy"
             class="bject-cover w-full h-full"
           />
+          <img class="mobile:block pc:hidden"
+            src="./images/mobile/insama-bg.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          
         </div>
-        <div class="absolute w-[100%] bottom-[0px] h-[136px]">
+        <div class="absolute  w-[100%] bottom-[0px] h-[136px]">
           <img
             src="./images/bg-sama-bottom.png"
             alt="Image"
@@ -209,61 +247,231 @@
             class="w-full h-full"
           />
         </div>
-        <div class="absolute w-[100%] top-[34%] h-[100%] leading-[240%]">
+        <div class="absolute w-[100%] pc:top-[34%] mobile:top-[60%] h-[100%] leading-[240%]">
           <div
-            class="grid grid-cols-[606px_591px] justify-center justify-items-end gap-x-[83px]"
+            class="grid pc:grid-cols-[606px_591px] mobile:grid-cols-[273px] justify-center pc:justify-items-end gap-x-[83px]"
           >
             <div></div>
             <div>
-              <h2 class="font-jostMedium text-[32px] text-[#FFFCF9]">
+              <h2 class="font-jostMedium pc:text-[32px] mobile:text-[20px] pc:leading-[125%] mobile:leading-[120%] text-[#FFFCF9]">
                 InSama - это не стиль.<br />Это переход из "Я стараюсь"<br />
                 <spna class="mt-[5px] block">в "я уже есть"</spna>
               </h2>
             </div>
           </div>
         </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="absolute w-[100%] h-[100%]">
+          <img class="mobile:hidden pc:block"
+            src="./images/image3.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          <img class="mobile:block pc:hidden"
+            src="./images/mobile/image3.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+        </div>
+        <div class="absolute w-[100%] bottom-[0px] h-[100%]">
+          <img class="mobile:hidden pc:block"
+            src="./images/bg-in-sama.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          <img class="mobile:block pc:hidden"
+            src="./images/mobile/insama-bg.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          
+        </div>
+        <div class="absolute  w-[100%] bottom-[0px] h-[136px]">
+          <img
+            src="./images/bg-sama-bottom.png"
+            alt="Image"
+            loading="lazy"
+            class="w-full h-full"
+          />
+        </div>
+        <div class="absolute w-[100%] pc:top-[34%] mobile:top-[60%] h-[100%] leading-[240%]">
+          <div
+            class="grid pc:grid-cols-[606px_591px] mobile:grid-cols-[273px] justify-center pc:justify-items-end gap-x-[83px]"
+          >
+            <div></div>
+            <div>
+              <h2 class="font-jostMedium pc:text-[32px] mobile:text-[20px] pc:leading-[125%] mobile:leading-[120%] text-[#FFFCF9]">
+               InSama — это про включить<br> вес в стопе, дыхание в тазу,<br> голос в груди, чтобы внутри<br> появилась опора.
+              
+              </h2>
+            </div>
+          </div>
+        </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="absolute w-[100%] h-[100%]">
+          <img class="mobile:hidden pc:block"
+            src="./images/image3.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          <img class="mobile:block pc:hidden"
+            src="./images/mobile/image3.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+        </div>
+        <div class="absolute w-[100%] bottom-[0px] h-[100%]">
+          <img class="mobile:hidden pc:block"
+            src="./images/bg-in-sama.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          <img class="mobile:block pc:hidden"
+            src="./images/mobile/insama-bg.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          
+        </div>
+        <div class="absolute  w-[100%] bottom-[0px] h-[136px]">
+          <img
+            src="./images/bg-sama-bottom.png"
+            alt="Image"
+            loading="lazy"
+            class="w-full h-full"
+          />
+        </div>
+        <div class="absolute w-[100%] pc:top-[34%] mobile:top-[60%] h-[100%] leading-[240%]">
+          <div
+            class="grid pc:grid-cols-[606px_591px] mobile:grid-cols-[273px] justify-center pc:justify-items-end gap-x-[83px]"
+          >
+            <div></div>
+            <div>
+              <h2 class="font-jostMedium pc:text-[32px] mobile:text-[20px] pc:leading-[125%] mobile:leading-[120%] text-[#FFFCF9]">
+                InSama Dance — это не про<br> "научиться красиво<br> двигаться".Это про вернуться<br> в своё тело и перестать жить<br> на полсилы.
+              </h2>
+            </div>
+          </div>
+        </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="absolute w-[100%] h-[100%]">
+          <img class="mobile:hidden pc:block"
+            src="./images/image3.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          <img class="mobile:block pc:hidden"
+            src="./images/mobile/image3.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+        </div>
+        <div class="absolute w-[100%] bottom-[0px] h-[100%]">
+          <img class="mobile:hidden pc:block"
+            src="./images/bg-in-sama.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          <img class="mobile:block pc:hidden"
+            src="./images/mobile/insama-bg.png"
+            alt="Image"
+            loading="lazy"
+            class="bject-cover w-full h-full"
+          />
+          
+        </div>
+        <div class="absolute  w-[100%] bottom-[0px] h-[136px]">
+          <img
+            src="./images/bg-sama-bottom.png"
+            alt="Image"
+            loading="lazy"
+            class="w-full h-full"
+          />
+        </div>
+        <div class="absolute w-[100%] pc:top-[34%] mobile:top-[60%] h-[100%] leading-[240%]">
+          <div
+            class="grid pc:grid-cols-[606px_591px] mobile:grid-cols-[273px] justify-center pc:justify-items-end gap-x-[83px]"
+          >
+            <div></div>
+            <div>
+              <h2 class="font-jostMedium pc:text-[32px] mobile:text-[20px] pc:leading-[125%] mobile:leading-[120%] text-[#FFFCF9]">
+               Когда тело оживает — оно<br> начинает двигаться само.<br>И вместе с ним оживает<br> походка, голос, выборы,<br> деньги, отношения.
+              </h2>
+            </div>
+          </div>
+        </div>
+            </div>
+          
+          </div>
+          <!-- If we need pagination -->
+         
+      </div>
+
+        
       </section>
       <section id="IndependentCourses"
       >
         <div  class="pb-[120px] before:content-[''] faq-course-content mt-[0px] before:absolute bg-[url('./images/bg_who.png')] before: before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[40%]"
 >
           <div
-          class="pt-[120px] grid grid-cols-[648px_572px] gap-x-[60px] justify-center"
+          class="pc:pt-[120px] mobile:pt-[100px] grid pc:grid-cols-[648px_572px] mobile:grid-cols-[360px] gap-x-[60px] justify-center"
         >
           <div>
             <h2
-              class="font-jostMedium text-[42px] text-[#4C180B] leading-[110%] mb-[60px]"
+              class="font-jostMedium pc:text-[42px] mobile:text-[32px] text-[#4C180B] leading-[110%] pc:mb-[60px] mobile:mb-[40px]"
             >
               Самый мощный курс InSama Dance – НАЛОЖНИЦА
             </h2>
-            <img
+            <img class="mobile:hidden pc:block"
               src="./images/image4.png"
               alt="Image"
               loading="lazy"
               width="648"
               height="648"
             />
+
+             <img class="mobile:block pc:hidden"
+              src="./images/mobile/image4.png"
+              alt="Image"
+              loading="lazy"
+              width="358"
+              height="469"
+            />
           </div>
-          <div class="mt-[150px]">
+          <div class="pc:mt-[150px] mobile:mt-[40px]">
             <p
-              class="mb-[40px] font-jostMedium text-[18px] text-[#4C180B] leading-[110%]"
+              class="pc:mb-[40px] mobile:mb-[24px] font-jostMedium text-[18px] text-[#4C180B] leading-[110%]"
             >
               Если у тебя откликается хоть одно – курс для тебя:
             </p>
             <div>
               <div
-                class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+                class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[16px_40px_16px_40px]"
               >
                 <button
                   type="button"
-                  class="acardion text-left font-jostMedium text-[18px] text-[#4C180B]"
+                  class="acardion text-left font-jostMedium pc:text-[18px] mobile:text-[16px] text-[#4C180B]"
                 >
                   <span class="font-FahkwangMedium text-[16px]">/01</span
                   ><br />Не люблю себя / своё тело
                 </button>
                 <div class="acardion__content">
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#E3E3E3] leading-[120%] mt-[10px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#E3E3E3] leading-[120%] mt-[10px]"
                   >
                     Боюсь проявлять сексуальность, постоянно смотрю “что
                     скажут”.
@@ -271,18 +479,18 @@
                 </div>
               </div>
               <div
-                class="mb-[8px] acardion_bg_active bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+                class="mb-[8px] acardion_bg_active bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[16px_40px_16px_40px]"
               >
                 <button
                   type="button"
-                  class="acardion_show acardion text-left font-jostMedium text-[18px] text-[#4C180B]"
+                  class="acardion_show acardion text-left font-jostMedium pc:text-[18px] mobile:text-[16px] text-[#4C180B]"
                 >
                   <span class="font-FahkwangMedium text-[16px]">/02</span
                   ><br />Завишу от мнения других
                 </button>
                 <div class="acardion__content acardion_content_active">
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#E3E3E3] leading-[120%] mt-[10px]"
+                    class="font-helveticaRegularpc:text-[14px] mobile:text-[13px] text-[#E3E3E3] leading-[120%] mt-[10px]"
                   >
                     Боюсь проявлять сексуальность, постоянно смотрю “что
                     скажут”.
@@ -290,18 +498,18 @@
                 </div>
               </div>
               <div
-                class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+                class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[16px_40px_16px_40px]"
               >
                 <button
                   type="button"
-                  class="acardion text-left font-jostMedium text-[18px] text-[#4C180B]"
+                  class="acardion text-left font-jostMedium pc:text-[18px] mobile:text-[16px] text-[#4C180B]"
                 >
                   <span class="font-FahkwangMedium text-[16px]">/03</span
                   ><br />Нет опоры
                 </button>
                 <div class="acardion__content">
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#E3E3E3] leading-[120%] mt-[10px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#E3E3E3] leading-[120%] mt-[10px]"
                   >
                     Боюсь проявлять сексуальность, постоянно смотрю “что
                     скажут”.
@@ -309,18 +517,18 @@
                 </div>
               </div>
               <div
-                class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+                class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[16px_40px_16px_40px]"
               >
                 <button
                   type="button"
-                  class="acardion text-left font-jostMedium text-[18px] text-[#4C180B]"
+                  class="acardion text-left font-jostMedium pc:text-[18px] mobile:text-[16px] text-[#4C180B]"
                 >
                   <span class="font-FahkwangMedium text-[16px]">/04</span
                   ><br />Тело ноет – спина, шея, поясница
                 </button>
                 <div class="acardion__content">
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#E3E3E3] leading-[120%] mt-[10px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#E3E3E3] leading-[120%] mt-[10px]"
                   >
                     Боюсь проявлять сексуальность, постоянно смотрю “что
                     скажут”.
@@ -328,18 +536,18 @@
                 </div>
               </div>
               <div
-                class="border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+                class="border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[16px_40px_16px_40px]"
               >
                 <button
                   type="button"
-                  class="acardion text-left font-jostMedium text-[18px] text-[#4C180B]"
+                  class="acardion text-left font-jostMedium pc:text-[18px] mobile:text-[16px] text-[#4C180B]"
                 >
                   <span class="font-FahkwangMedium text-[16px]">/05</span
                   ><br />Живу на пол-оборота
                 </button>
                 <div class="acardion__content">
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#E3E3E3] leading-[120%] mt-[10px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#E3E3E3] leading-[120%] mt-[10px]"
                   >
                     Боюсь проявлять сексуальность, постоянно смотрю “что
                     скажут”.
@@ -350,20 +558,20 @@
           </div>
         </div>
 
-        <div id="InSamaDance" class="max-w-[1280px] mx-auto mt-[107px]">
+        <div id="InSamaDance" class="pc:max-w-[1280px] mobile:max-w-[360px] mx-auto pc:mt-[107px] mobile:mt-[100px]">
           <div
-            class="grid grid-cols-[550px_163px] items-center justify-between"
+            class="grid pc:grid-cols-[550px_163px] mobile:grid-cols-[360px] items-center pc:justify-between"
           >
-            <div>
+            <div class="mobile:order-2 pc:order-1">
               <h2
-                class="font-jostMedium text-[24px] text-[#4C180B] leading-[110%]"
+                class="font-jostMedium pc:text-[24px] mobile:text-[20px] text-[#4C180B] leading-[110%]"
               >
-                Что внутри и какие результаты (онлайн формат)
+                Что внутри и какие результаты<br class="mobile:block pc:hidden"> (онлайн формат)
               </h2>
             </div>
-            <div>
+            <div class="mobile:order-1 pc:order-2">
               <div
-                class="w-[163px h-[40px] rounded-[12px] bg-[rgba(177,18,46,1)] text-center leading-[40px]"
+                class="w-[163px] h-[40px] mobile:mb-[16px] pc:mb-[0px] rounded-[12px] bg-[rgba(177,18,46,1)] text-center leading-[40px]"
               >
                 <p class="font-jostMedium text-[13px] text-[#fff]">
                   СТРАРТ 10 ОКТЯБРЯ
@@ -372,50 +580,50 @@
             </div>
           </div>
           <div
-            class="grid grid-cols-[418px_418px_418px] gap-x-[12px] mt-[24px]"
+            class="grid pc:grid-cols-[418px_418px_418px] mobile:grid-cols-[360px] pc:gap-x-[12px] mobile:gap-y-[10px] pc:gap-y-[0px] mt-[24px]"
           >
             <div
-              class="bg-[url('./images/image8.png')] bg-center h-[500px] rounded-[20px] pt-[60px] px-[32px]"
+              class="pc:bg-[url('./images/image8.png')] mobile:bg-[url('./images/mobile/image5.png')] bg-center pc:h-[500px] mobile:h-[360px] rounded-[20px] pc:pt-[60px] mobile:pt-[25px] pc:px-[32px] mobile:px-[24px]"
             >
-              <h2 class="font-jostMedium text-[18px] text-[#FFFCF9]">
+              <h2 class="font-jostMedium pc:text-[18px] mobile:text-[16px] text-[#FFFCF9]">
                 Что входит:
               </h2>
-              <ul class="mt-[31px]">
+              <ul class="pc:mt-[31px] mobile:mt-[20px]">
                 <li
-                  class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
+                  class="pc:mb-[20px] mobile:mb-[12px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     18 уроков – оживляет тело, техника и танец без “правильно”,
                     а ради кайфа.
                   </p>
                 </li>
                 <li
-                  class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
+                  class="pc:mb-[20px] mobile:mb-[12px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     4 медитации – глубокие практики, после которых тело
                     сбрасывает груз, появляется лёгкость и свобода.
                   </p>
                 </li>
                 <li
-                  class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
+                  class="pc:mb-[20px] mobile:mb-[12px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     Закрытые эфиры – сакральные встречи с секретной информацией,
                     которая меняет восприятие себя, сексуальности и отношений.
                   </p>
                 </li>
                 <li
-                  class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
+                  class="pc:mb-[20px] mobile:mb-[12px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     Поддержка кураторов, ценный чат – чтобы дойти до конца легко
                     и качественно.
@@ -424,37 +632,37 @@
               </ul>
             </div>
             <div
-              class="bg-[url('./images/image9.png')] bg-center h-[500px] rounded-[20px] pt-[60px] px-[32px]"
+              class="pc:bg-[url('./images/image9.png')] mobile:bg-[url('./images/mobile/image6.png')] bg-center pc:h-[500px] mobile:h-[360px] rounded-[20px] pc:pt-[60px] mobile:pt-[25px] pc:px-[32px] mobile:px-[24px]"
             >
-              <h2 class="font-jostMedium text-[18px] text-[#FFFCF9]">
+              <h2 class="font-jostMedium  pc:text-[18px] mobile:text-[16px] text-[#FFFCF9]">
                 Чему ты научишься
               </h2>
-              <ul class="mt-[31px]">
+              <ul class="pc:mt-[31px] mobile:mt-[20px]">
                 <li
-                  class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
+                  class="pc:mb-[20px] mobile:mb-[12px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     Освоишь все элементы: обучение красивое и качественное,
                     полезное для тела.
                   </p>
                 </li>
                 <li
-                  class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
+                  class="pc:mb-[20px] mobile:mb-[12px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     Руки, ноги, походка и даже момент, когда ты замираешь, будут
                     наполнены силой и чувственностью в танце.
                   </p>
                 </li>
                 <li
-                  class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
+                  class="pc:mb-[20px] mobile:mb-[12px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     Здоровье: дыхание, мышцы, поясница (грыжи, протрузии), стопы
                     и внешность, растяжка - то, за что обычно платят отдельно,
@@ -464,47 +672,47 @@
               </ul>
             </div>
             <div
-              class="bg-[url('./images/image10.png')] bg-center h-[500px] rounded-[20px] pt-[60px] px-[32px]"
+              class="pc:bg-[url('./images/image10.png')] mobile:bg-[url('./images/mobile/image7.png')] bg-center pc:h-[500px] mobile:h-[360px] rounded-[20px] pc:pt-[60px] mobile:pt-[25px] pc:px-[32px] mobile:px-[24px]"
             >
-              <h2 class="font-jostMedium text-[18px] text-[#FFFCF9]">
+              <h2 class="font-jostMedium  pc:text-[18px] mobile:text-[16px] text-[#FFFCF9]">
                 Что ты получишь в результате
               </h2>
-              <ul class="mt-[31px]">
+              <ul class="pc:mt-[31px] mobile:mt-[20px]">
                 <li
                   class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     Твое тело станет живым: походка, осанка, танец, движения
                     будут говорить за тебя.
                   </p>
                 </li>
                 <li
-                  class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
+                  class="pc:mb-[20px] mobile:mb-[12px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     Ты начнешь чувствовать сексуальность как силу, а не как
                     стыд.
                   </p>
                 </li>
                 <li
-                  class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
+                  class="pc:mb-[20px] mobile:mb-[12px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     Уйдут зажимы и хроническое напряжение, будет энергия и
                     легкость.
                   </p>
                 </li>
                 <li
-                  class="mb-[20px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
+                  class="pc:mb-[20px] mobile:mb-[12px] bg-[url('./images/icon-list.svg')] bg-left bg-no-repeat pl-[30px]"
                 >
                   <p
-                    class="font-helveticaRegular text-[14px] text-[#fff] leading-[20px]"
+                    class="font-helveticaRegular pc:text-[14px] mobile:text-[13px] text-[#fff] leading-[20px]"
                   >
                     Харизма и магнетизм: даже посторонние заметят твой
                     "до/после".
@@ -514,18 +722,18 @@
             </div>
           </div>
           <div
-            class="grid grid-cols-[216px_216px] justify-center mt-[40px] gap-x-[12px]"
+            class="grid pc:grid-cols-[216px_216px] mobile:grid-cols-[360px] justify-center mt-[40px] mobile:gap-y-[12px] pc:gap-y-[0px] gap-x-[12px]"
           >
             <div>
               <button
                 type="button"
-                class="h-[46px] w-[216px] rounded-[12px] bay-btn font-JostSemibold text-[15px] text-[#FFFCF9] transition-all duration-300 ease-in"
+                class="h-[46px] pc:w-[216px] mobile:w-[360px] rounded-[12px] bay-btn font-JostSemibold text-[15px] text-[#FFFCF9] transition-all duration-300 ease-in"
               >
                 <span class="block relative z-10">Купить с куратором</span>
               </button>
             </div>
             <div>
-              <button type="button" class="w-[216px] vip-btn h-[46px]">
+              <button type="button" class="pc:w-[216px] mobile:w-[360px] vip-btn h-[46px]">
                 VIP с Айгерим
               </button>
             </div>
@@ -534,7 +742,7 @@
         </div>
       </section>
       <section id="VideoStudents" class="bg-[#4A0003] video">
-        <div class="max-w-[1280px] mx-auto">
+        <div class="pc:max-w-[1280px] mobile:max-w-[360px] mx-auto">
           <h2 class="text-center">Видео “до и после” учениц</h2>
           <div class="swiper">
             <!-- Additional required wrapper -->
@@ -561,18 +769,18 @@
       <section id="CourseInSamaDance"
         class="before:content-[''] buy-course before:absolute before:bg-[url('./images/courses.png')] before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[100%] before:bg-[#ffe7d3]"
       >
-        <div class="max-w-[1280px] pt-[120px] pb-[120px] mx-auto">
+        <div class="pc:max-w-[1280px] mobile:max-w-[360px] pc:pt-[120px] mobile:pt-[100px] pc:pb-[120px] mobile:pb-[100px] mx-auto">
           <h2
-            class="mb-[5px] uppercase font-jostMedium text-[32px] text-[#4C180B] text-center leading-[110%]"
+            class="mb-[5px] uppercase font-jostMedium pc:text-[32px] mobile:text-[24px] text-[#4C180B] text-center leading-[110%]"
           >
-            Если тебе нужен мягкий вход — <br />начни с коротких курсов
+            Если тебе нужен<br class="mobile:block pc:hidden"> мягкий вход — <br class="mobile:hidden pc:block"/>начни <br class="mobile:block pc:hidden">с коротких курсов
           </h2>
-          <p class="font-inter text-[#4D413E] text-[15px] text-center">
-            Они проще по формату, но эффект ты всё равно получишь
+          <p class="font-inter text-[#4D413E] pc:text-[15px] mobile:text-[13px] text-center">
+            Они проще по формату, <br class="mobile:block pc:hidden">но эффект ты всё равно получишь
           </p>
-          <div class="grid mt-[40px] grid-cols-[415px_415px_415px] gap-[16px]">
+          <div class="grid mt-[40px] pc:grid-cols-[415px_415px_415px] mobile:grid-cols-[360px] gap-[16px]">
             <div
-              class="bg-[#FBF1E7] h-[560px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
+              class="bg-[#FBF1E7] pc:h-[560px] mobile:h-[534px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
             >
               <div class="flex">
                 <div
@@ -635,7 +843,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="flex mt-[80px] justify-between items-center">
+              <div class="flex pc:mt-[80px] mobile:mt-[50px] justify-between items-center">
                 <div>
                   <button
                     type="button"
@@ -645,7 +853,7 @@
                   </button>
                 </div>
                 <div>
-                  <p class="font-FahkwangMedium text-[24px] text-[#4C180B]">
+                  <p class="font-FahkwangMedium pc:text-[24px] mobile:text-[20px] text-[#4C180B]">
                     <data value="60000">60 000 ₸</data>
                   </p>
                 </div>
@@ -656,7 +864,7 @@
               >
             </div>
             <div
-              class="bg-[#FBF1E7] h-[560px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
+              class="bg-[#FBF1E7] pc:h-[560px] mobile:h-[534px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
             >
               <div class="flex">
                 <div
@@ -678,7 +886,7 @@
                 class="block font-helveticaRegular text-[13px] text-[#888888]"
                 >онлайн (уроки в записи)</span
               >
-              <div class="mt-[40px]">
+              <div class="pc:mt-[40px] mobile:mt-[32px]">
                 <h2
                   class="mb-[5px] font-HelveticaBold text-[13px] text-[#4C180B]"
                 >
@@ -729,7 +937,7 @@
                   </button>
                 </div>
                 <div>
-                  <p class="font-FahkwangMedium text-[24px] text-[#4C180B]">
+                  <p class="font-FahkwangMedium pc:text-[24px] mobile:text-[20px] text-[#4C180B]">
                     <data value="60000">60 000 ₸</data>
                   </p>
                 </div>
@@ -740,7 +948,7 @@
               >
             </div>
             <div
-              class="bg-[#FBF1E7] h-[560px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
+              class="bg-[#FBF1E7] pc:h-[560px] mobile:h-[534px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
             >
               <div class="flex">
                 <div
@@ -762,7 +970,7 @@
                 class="block font-helveticaRegular text-[13px] text-[#888888]"
                 >онлайн (уроки в записи)</span
               >
-              <div class="mt-[40px]">
+              <div class="pc:mt-[40px] mobile:mt-[32px]">
                 <h2
                   class="mb-[5px] font-HelveticaBold text-[13px] text-[#4C180B]"
                 >
@@ -813,7 +1021,7 @@
                   </button>
                 </div>
                 <div>
-                  <p class="font-FahkwangMedium text-[24px] text-[#4C180B]">
+                  <p class="font-FahkwangMedium pc:text-[24px] mobile:text-[20px] text-[#4C180B]">
                     <data value="60000">60 000 ₸</data>
                   </p>
                 </div>
@@ -824,7 +1032,7 @@
               >
             </div>
             <div
-              class="bg-[#FBF1E7] h-[560px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
+              class="bg-[#FBF1E7]pc:h-[560px] mobile:h-[534px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
             >
               <div class="flex">
                 <div
@@ -846,7 +1054,7 @@
                 class="block font-helveticaRegular text-[13px] text-[#888888]"
                 >онлайн (уроки в записи)</span
               >
-              <div class="mt-[40px]">
+              <div class="pc:mt-[40px] mobile:mt-[32px]">
                 <h2
                   class="mb-[5px] font-HelveticaBold text-[13px] text-[#4C180B]"
                 >
@@ -887,7 +1095,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="flex mt-[80px] justify-between items-center">
+              <div class="flex pc:mt-[80px] mobile:mt-[55px] justify-between items-center">
                 <div>
                   <button
                     type="button"
@@ -897,7 +1105,7 @@
                   </button>
                 </div>
                 <div>
-                  <p class="font-FahkwangMedium text-[24px] text-[#4C180B]">
+                  <p class="font-FahkwangMedium pc:text-[24px] mobile:text-[20px] text-[#4C180B]">
                     <data value="60000">60 000 ₸</data>
                   </p>
                 </div>
@@ -908,7 +1116,7 @@
               >
             </div>
             <div
-              class="bg-[#FBF1E7] h-[560px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
+              class="bg-[#FBF1E7] pc:h-[560px] mobile:h-[534px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
             >
               <div class="flex">
                 <div
@@ -932,7 +1140,7 @@
               >
               <div class="mt-[40px]">
                 <h2
-                  class="mb-[5px] font-HelveticaBold text-[13px] text-[#4C180B]"
+                  class="pc:mt-[40px] mobile:mt-[32px] font-HelveticaBold text-[13px] text-[#4C180B]"
                 >
                   Содержание:
                 </h2>
@@ -977,7 +1185,7 @@
                   </button>
                 </div>
                 <div>
-                  <p class="font-FahkwangMedium text-[24px] text-[#4C180B]">
+                  <p class="font-FahkwangMedium pc:text-[24px] mobile:text-[20px] text-[#4C180B]">
                     <data value="60000">60 000 ₸</data>
                   </p>
                 </div>
@@ -988,7 +1196,7 @@
               >
             </div>
             <div
-              class="bg-[#FBF1E7] h-[560px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
+              class="bg-[#FBF1E7] pc:h-[560px] mobile:h-[534px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
             >
               <div class="flex">
                 <div
@@ -1012,7 +1220,7 @@
               >
               <div class="mt-[40px]">
                 <h2
-                  class="mb-[5px] font-HelveticaBold text-[13px] text-[#4C180B]"
+                  class="pc:mt-[40px] mobile:mt-[32px] font-HelveticaBold text-[13px] text-[#4C180B]"
                 >
                   Содержание
                 </h2>
@@ -1046,7 +1254,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="flex mt-[100px] justify-between items-center">
+              <div class="flex pc:mt-[100px] mobile:mt-[80px] justify-between items-center">
                 <div>
                   <button
                     type="button"
@@ -1056,7 +1264,7 @@
                   </button>
                 </div>
                 <div>
-                  <p class="font-FahkwangMedium text-[24px] text-[#4C180B]">
+                  <p class="font-FahkwangMedium pc:text-[24px] mobile:text-[20px] text-[#4C180B]">
                     <data value="60000">60 000 ₸</data>
                   </p>
                 </div>
@@ -1069,25 +1277,25 @@
           </div>
           <button
             type="button"
-            class="mt-[40px] contact-manager font-JostSemibold text-[15px] w-[1280px] h-[46px] text-[#590004]"
+            class="mt-[40px] contact-manager font-JostSemibold pc:text-[15px] mobile:text-[14px] pc:w-[1280px] mobile:w-[360px] h-[46px] text-[#590004]"
           >
             Связаться с менеджером
           </button>
         </div>
       </section>
-      <section id="Reviews" class="bg-[#4A0003] py-[120px]">
+      <section id="Reviews" class="bg-[#4A0003] pc:py-[120px] mobile:py-[100px]">
         <div>
-          <h2 class="text-center font-jostMedium text-[42px] text-[#FFFCF9]">
+          <h2 class="text-center font-jostMedium pc:text-[42px] mobile:text-[32px] text-[#FFFCF9]">
             Отзывы учениц
           </h2>
           <div
-            class="grid grid-cols-[205px_219px] mt-[60px] mb-[60px] gap-x-[12px] justify-center tabs-reviews"
+            class="grid pc:grid-cols-[205px_219px] mobile:grid-cols-[169px_169px] pc:mt-[60px] mobile:mt-[40px] pc:mb-[60px] mobile:mb-[40px] gap-x-[12px] justify-center tabs-reviews"
           >
             <div>
               <button
                 type="button"
                 data-tab="#text-reviews"
-                class="active_tab tabs_nav text-[#fff] text-[15px] w-[205px] h-[46px] font-JostSemibold"
+                class="active_tab tabs_nav text-[#fff] pc:text-[15px] mobile:text-[14px] pc:w-[205px] mobile:w-[169px] h-[46px] font-JostSemibold"
               >
                 Текстовые отзывы
               </button>
@@ -1096,7 +1304,7 @@
               <button
                 type="button"
                 data-tab="#video-reviews"
-                class="text-[#fff] tabs_nav w-[219px] h-[46px] leading-[46px] text-[15px] font-JostSemibold"
+                class="text-[#fff] tabs_nav pc:w-[219px] mobile:w-[169px] h-[46px] leading-[46px] pc:text-[15px] mobile:text-[14px] font-JostSemibold"
               >
                 Видеоотзывы
               </button>
@@ -1104,7 +1312,7 @@
           </div>
         </div>
         <div
-          class="max-w-[1280px] mx-auto tabs_content active_tab"
+          class="pc:max-w-[1280px] mobile:max-w-[360px] mx-auto tabs_content active_tab"
           id="text-reviews"
         >
           <div class="swiper reviews">
@@ -1112,14 +1320,14 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide">
-                <div class="relative h-[644px] item-review">
+                <div class="relative pc:h-[644px] mobile:h-[500px] item-review">
                   <div>
-                    <div class="absolute z-100 w-full h-[644px]">
+                    <div class="absolute z-100 w-full pc:h-[644px] mobile:h-[500px]">
                       <div class="absolute w-full h-full">
-                        <img
+                        <img 
                           src="./images/reviews-mage4.png"
                           alt="Image"
-                          class="rounded-[24px]"
+                          class="rounded-[24px] mobile:w-[360px] mobile:h-[500px] pc:w-[416px] pc:h-[644px]"
                           loading="lazy"
                           width="416"
                           height="644"
@@ -1166,7 +1374,7 @@
                       </div>
                     </div>
                     <div
-                      class="absolute show-review-item w-[415px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
+                      class="absolute show-review-item pc:w-[415px] mobile:w-[360px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in pc:h-[644px] mobile:h-[500px]"
                     >
                       <div class="review-bg px-[32px]">
                         <div class="relative top-[32px] right-[10px]">
@@ -1217,14 +1425,14 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="relative h-[644px] item-review">
+                <div class="relative pc:h-[644px] mobile:h-[500px] item-review">
                   <div>
-                    <div class="absolute z-100 w-full h-[644px]">
+                    <div class="absolute z-100 w-full pc:h-[644px] mobile:h-[500px]">
                       <div class="absolute w-full h-full">
                         <img
                           src="./images/reviews-mage2.png"
                           alt="Image"
-                          class="rounded-[24px]"
+                          class="rounded-[24px] mobile:w-[360px] mobile:h-[500px] pc:w-[416px] pc:h-[644px]"
                           loading="lazy"
                           width="416"
                           height="644"
@@ -1271,7 +1479,7 @@
                       </div>
                     </div>
                     <div
-                      class="absolute show-review-item w-[415px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
+                      class="absolute show-review-item pc:w-[415px] mobile:w-[360px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
                     >
                       <div class="review-bg px-[32px]">
                         <div class="relative top-[32px] right-[10px]">
@@ -1322,14 +1530,14 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="relative h-[644px]">
+                <div class="relativepc:h-[644px] mobile:h-[500px]">
                   <div>
-                    <div class="absolute z-100 w-full h-[644px]">
+                    <div class="absolute z-100 w-full pc:h-[644px] mobile:h-[500px]">
                       <div class="absolute w-full h-full">
                         <img
                           src="./images/reviews-mage5.png"
                           alt="Image"
-                          class="rounded-[24px]"
+                          class="rounded-[24px] mobile:w-[360px] mobile:h-[500px] pc:w-[416px] pc:h-[644px]"
                           loading="lazy"
                           width="416"
                           height="644"
@@ -1376,7 +1584,7 @@
                       </div>
                     </div>
                     <div
-                      class="absolute show-review-item w-[415px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
+                      class="absolute show-review-item pc:w-[415px] mobile:w-[360px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
                     >
                       <div class="review-bg px-[32px]">
                         <div class="relative top-[32px] right-[10px]">
@@ -1427,14 +1635,14 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="relative h-[644px]">
+                <div class="relative pc:h-[644px] mobile:h-[500px]">
                   <div>
-                    <div class="absolute z-100 w-full h-[644px]">
+                    <div class="absolute z-100 w-full pc:h-[644px] mobile:h-[500px]">
                       <div class="absolute w-full h-full">
                         <img
                           src="./images/reviews-mage1.png"
                           alt="Image"
-                          class="rounded-[24px]"
+                          class="rounded-[24px] mobile:w-[360px] mobile:h-[500px] pc:w-[416px] pc:h-[644px]"
                           loading="lazy"
                           width="416"
                           height="644"
@@ -1481,7 +1689,7 @@
                       </div>
                     </div>
                     <div
-                      class="absolute show-review-item w-[415px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
+                      class="absolute show-review-item pc:w-[415px] mobile:w-[360px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
                     >
                       <div class="review-bg px-[32px]">
                         <div class="relative top-[32px] right-[10px]">
@@ -1532,14 +1740,14 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="relative h-[644px]">
+                <div class="relative pc:h-[644px] mobile:h-[500px]">
                   <div>
-                    <div class="absolute z-100 w-full h-[644px]">
+                    <div class="absolute z-100 w-full pc:h-[644px] mobile:h-[500px]">
                       <div class="absolute w-full h-full">
                         <img
                           src="./images/reviews-mage3.png"
                           alt="Image"
-                          class="rounded-[24px]"
+                          class="rounded-[24px] mobile:w-[360px] mobile:h-[500px] pc:w-[416px] pc:h-[644px]"
                           loading="lazy"
                           width="416"
                           height="644"
@@ -1586,7 +1794,7 @@
                       </div>
                     </div>
                     <div
-                      class="absolute show-review-item w-[415px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
+                      class="absolute show-review-item pc:w-[415px] mobile:w-[360px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
                     >
                       <div class="review-bg px-[32px]">
                         <div class="relative top-[32px] right-[10px]">
@@ -1637,14 +1845,14 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="relative h-[644px]">
+                <div class="relative pc:h-[644px] mobile:h-[500px]">
                   <div>
-                    <div class="absolute z-100 w-full h-[644px]">
+                    <div class="absolute z-100 w-full pc:h-[644px] mobile:h-[500px]">
                       <div class="absolute w-full h-full">
                         <img
                           src="./images/reviews-mage6.png"
                           alt="Image"
-                          class="rounded-[24px]"
+                          class="rounded-[24px] mobile:w-[360px] mobile:h-[500px] pc:w-[416px] pc:h-[644px]"
                           loading="lazy"
                           width="416"
                           height="644"
@@ -1691,7 +1899,7 @@
                       </div>
                     </div>
                     <div
-                      class="absolute show-review-item w-[415px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
+                      class="absolute show-review-item pc:w-[415px] mobile:w-[360px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
                     >
                       <div class="review-bg px-[32px]">
                         <div class="relative top-[32px] right-[10px]">
@@ -1742,14 +1950,14 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="relative h-[644px]">
+                <div class="relative pc:h-[644px] mobile:h-[500px]">
                   <div>
-                    <div class="absolute z-100 w-full h-[644px]">
+                    <div class="absolute z-100 w-full pc:h-[644px] mobile:h-[500px]">
                       <div class="absolute w-full h-full">
                         <img
                           src="./images/reviews-mage7.png"
                           alt="Image"
-                          class="rounded-[24px]"
+                          class="rounded-[24px] mobile:w-[360px] mobile:h-[500px] pc:w-[416px] pc:h-[644px]"
                           loading="lazy"
                           width="416"
                           height="644"
@@ -1796,7 +2004,7 @@
                       </div>
                     </div>
                     <div
-                      class="absolute show-review-item w-[415px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
+                      class="absolute show-review-item pc:w-[415px] mobile:w-[360px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
                     >
                       <div class="review-bg px-[32px]">
                         <div class="relative top-[32px] right-[10px]">
@@ -1847,14 +2055,14 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="relative h-[644px]">
+                <div class="relative pc:h-[644px] mobile:h-[500px]">
                   <div>
-                    <div class="absolute z-100 w-full h-[644px]">
+                    <div class="absolute z-100 w-full pc:h-[644px] mobile:h-[500px]">
                       <div class="absolute w-full h-full">
                         <img
                           src="./images/reviews-mage8.png"
                           alt="Image"
-                          class="rounded-[24px]"
+                          class="rounded-[24px] mobile:w-[360px] mobile:h-[500px] pc:w-[416px] pc:h-[644px]"
                           loading="lazy"
                           width="416"
                           height="644"
@@ -1902,7 +2110,7 @@
                     </div>
 
                     <div
-                      class="absolute show-review-item w-[415px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
+                      class="absolute show-review-item pc:w-[415px] mobile:w-[360px] opacity-0 overflow-hidden transition-opacity duration-300 ease-in h-[644px]"
                     >
                       <div class="review-bg px-[32px]">
                         <div class="relative top-[32px] right-[10px]">
@@ -1956,7 +2164,7 @@
           </div>
 
           <div
-            class="grid grid-cols-[36px_36px] gap-x-[10px] mt-[60px] justify-end"
+            class="grid grid-cols-[36px_36px] gap-x-[10px] pc:mt-[60px] mobile:mt-[40px] justify-end"
           >
             <div>
               <button type="button" class="swiperPrev"></button>
@@ -1970,7 +2178,7 @@
       <section id="questions"
         class="before:content-[''] faq-content buy-course before:absolute before:bg-[url('./images/bg-fag.png')] before:bg-cover before:bg-center before:w-[100%] before:h-[100%] before:z-[-1] relative before:opacity-[100%] before:bg-[#ffe7d3]"
       >
-        <div class="pt-[150px] pb-[110px] max-w-[960px] mx-auto">
+        <div class="pc:pt-[150px] mobile:pt-[100px] pb-[110px] pc:max-w-[960px] mobile:max-w-[360px] mx-auto">
           <h2
             class="mb-[5px] font-jostMedium text-[42px] text-[#4C180B] text-center"
           >
@@ -1983,13 +2191,13 @@
           </p>
           <div>
             <div
-              class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+              class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[20px_24px_20px_24px]"
             >
               <button
                 type="button"
-                class="acardion-faq text-left font-jostMedium text-[18px] text-[#4C180B]"
+                class="acardion-faq text-left font-jostMedium pc:text-[18px] mobile:text-[16px] leading-[110%] text-[#4C180B]"
               >
-                <span class="font-FahkwangMedium text-[16px]">/01</span
+                <span class="block font-FahkwangMedium text-[16px]">/01</span
                 ><br />Почему вы не отвечаете в Direct, и можно ли просто
                 спросить “подойдёт ли мне ĸурс”?
               </button>
@@ -2004,13 +2212,13 @@
               </div>
             </div>
             <div
-              class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+              class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[20px_24px_20px_24px]"
             >
               <button
                 type="button"
-                class="acardion-faq text-left font-jostMedium text-[18px] text-[#4C180B]"
+                class="acardion-faq text-left font-jostMedium pc:text-[18px] leading-[110%] mobile:text-[16px] text-[#4C180B]"
               >
-                <span class="font-FahkwangMedium text-[16px]">/02</span
+                <span class="block font-FahkwangMedium text-[16px]">/02</span
                 ><br />Каĸ устроено взаимодействие? Каĸие у вас отношения с
                 ученицами?
               </button>
@@ -2025,13 +2233,13 @@
               </div>
             </div>
             <div
-              class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+              class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[20px_24px_20px_24px]"
             >
               <button
                 type="button"
-                class="acardion-faq text-left font-jostMedium text-[18px] text-[#4C180B]"
+                class="acardion-faq text-left font-jostMedium pc:text-[18px] leading-[110%] mobile:text-[16px] text-[#4C180B]"
               >
-                <span class="font-FahkwangMedium text-[16px]">/03</span
+                <span class="block font-FahkwangMedium text-[16px]">/03</span
                 ><br />Чем InSama отличается от восточных танцев?
               </button>
               <div class="acardion__content-faq">
@@ -2045,13 +2253,13 @@
               </div>
             </div>
             <div
-              class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+              class="mb-[8px] bg_active_acardion border-solid border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[20px_24px_20px_24px]"
             >
               <button
                 type="button"
-                class="acardion-faq text-left font-jostMedium text-[18px] text-[#4C180B]"
+                class="acardion-faq text-left font-jostMedium pc:text-[18px] leading-[110%] mobile:text-[16px] text-[#4C180B]"
               >
-                <span class="font-FahkwangMedium text-[16px]">/04</span
+                <span class="block font-FahkwangMedium text-[16px]">/04</span
                 ><br />Мне 18 / 35 / 50 / 60. Подойдёт ли мне ĸурс?
               </button>
               <div class="acardion__content-faq">
@@ -2065,13 +2273,13 @@
               </div>
             </div>
             <div
-              class="mb-[8px] border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+              class="mb-[8px] border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[20px_24px_20px_24px]"
             >
               <button
                 type="button"
-                class="acardion-faq text-left font-jostMedium text-[18px] text-[#4C180B]"
+                class="acardion-faq text-left font-jostMedium pc:text-[18px] leading-[110%] mobile:text-[16px] text-[#4C180B]"
               >
-                <span class="font-FahkwangMedium text-[16px]">/05</span
+                <span class="block font-FahkwangMedium text-[16px]">/05</span
                 ><br />Почему ĸурс стоит 1000$, если есть оффлайн студии за 20
                 000 тенге?
               </button>
@@ -2086,13 +2294,13 @@
               </div>
             </div>
             <div
-              class="mb-[8px] border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+              class="mb-[8px] border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[20px_24px_20px_24px]"
             >
               <button
                 type="button"
-                class="acardion-faq text-left font-jostMedium text-[18px] text-[#4C180B]"
+                class="acardion-faq text-left font-jostMedium pc:text-[18px] leading-[110%] mobile:text-[16px] text-[#4C180B]"
               >
-                <span class="font-FahkwangMedium text-[16px]">/06</span><br />Я
+                <span class="block font-FahkwangMedium text-[16px]">/06</span><br />Я
                 боюсь, что не справлюсь / стесняюсь / я не гибĸая.
               </button>
               <div class="acardion__content-faq">
@@ -2106,13 +2314,13 @@
               </div>
             </div>
             <div
-              class="mb-[8px] acardion_bg_active border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+              class="mb-[8px] acardion_bg_active border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[20px_24px_20px_24px]"
             >
               <button
                 type="button"
-                class="acardion-faq acardion_show text-left font-jostMedium text-[18px] text-[#4C180B]"
+                class="acardion-faq acardion_show text-left font-jostMedium leading-[110%] pc:text-[18px] mobile:text-[16px] text-[#4C180B]"
               >
-                <span class="font-FahkwangMedium text-[16px]">/07</span
+                <span class="block font-FahkwangMedium text-[16px]">/07</span
                 ><br />Можно ли вернуть деньги?
               </button>
               <div class="acardion__content-faq acardion_content_active-faq">
@@ -2126,13 +2334,13 @@
               </div>
             </div>
             <div
-              class="mb-[8px] border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+              class="mb-[8px] border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[20px_24px_20px_24px]"
             >
               <button
                 type="button"
-                class="acardion-faq text-left font-jostMedium text-[18px] text-[#4C180B]"
+                class="acardion-faq text-left font-jostMedium pc:text-[18px] leading-[110%] mobile:text-[16px] text-[#4C180B]"
               >
-                <span class="font-FahkwangMedium text-[16px]">/08</span><br />А
+                <span class="block font-FahkwangMedium text-[16px]">/08</span><br />А
                 если я хочу просто ĸрасивые движения, без глубины?
               </button>
               <div class="acardion__content-faq">
@@ -2146,13 +2354,13 @@
               </div>
             </div>
             <div
-              class="mb-[8px] border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] p-[24px_40px_24px_40px]"
+              class="mb-[8px] border-solid bg_active_acardion border border-[#4D413E80] rounded-[20px] pc:p-[24px_40px_24px_40px] mobile:p-[20px_24px_20px_24px]"
             >
               <button
                 type="button"
-                class="acardion-faq text-left font-jostMedium text-[18px] text-[#4C180B]"
+                class="acardion-faq text-left font-jostMedium pc:text-[18px] leading-[110%] mobile:text-[16px] text-[#4C180B]"
               >
-                <span class="font-FahkwangMedium text-[16px]">/09</span
+                <span class="block font-FahkwangMedium text-[16px]">/09</span
                 ><br />Каĸ проходят ĸурсы? Записи или прямые эфиры?
               </button>
               <div class="acardion__content-faq">
@@ -2171,16 +2379,16 @@
     </main>
     <footer class="footer">
       <div class="footer-bg">
-        <div class="max-w-[1280px] mx-auto">
+        <div class="pc:max-w-[1280px] mobile:max-w-[360px] mx-auto">
           <h2 class="mb-[16px] font-jostMedium text-[14px] text-[#FFFCF9]">
             Навигация
           </h2>
           <div
-            class="bg-[rgba(255,255,255,0.12)] pb-[24px] pt-[20px] pl-[40px] rounded-[12px]"
+            class="bg-[rgba(255,255,255,0.12)] pb-[24px] mobile:h-[164px] pc:h-auto pc:pt-[20px] mobile:pt-[15px] pl-[40px] rounded-[12px]"
           >
             <nav>
               <ul>
-                <li class="mr-[32px] float-left">
+                <li class="mr-[32px] mobile:mb-[10px] pc:mb-[0px] float-left">
                   <a
                     href="#Aboutauthor"
                     class="font-helveticaRegular text-[13px] text-[#C7C7C7]"
@@ -2194,14 +2402,14 @@
                     >Что такое InSama Dance</a
                   >
                 </li>
-                <li class="mr-[32px] float-left">
+                <li class="mr-[32px] mobile:mb-[10px] pc:mb-[0px]  float-left">
                   <a
                     href="#CourseInSamaDance"
                     class="font-helveticaRegular text-[13px] text-[#C7C7C7]"
                     >Курс “InSama Dance – Наложница”</a
                   >
                 </li>
-                <li class="mr-[32px] float-left">
+                <li class="mr-[32px] mobile:mb-[10px] pc:mb-[0px]  float-left">
                   <a
                     href="#VideoStudents"
                     class="font-helveticaRegular text-[13px] text-[#C7C7C7]"
@@ -2222,6 +2430,8 @@
                     >Отзывы учениц</a
                   >
                 </li>
+                <br class="mobile:block pc:hidden">
+                <br class="mobile:block pc:hidden">
                 <li>
                   <a
                     href="#questions"
@@ -2232,13 +2442,13 @@
               </ul>
             </nav>
           </div>
-          <div class="flex justify-between mt-[60px] items-center footer-contact">
+          <div class="pc:flex mobile:block justify-between mt-[60px] items-center footer-contact">
             <div>
-              <div class="flex gap-x-[40px]">
-                <div>
+              <div class="pc:flex mobile:block gap-x-[40px]">
+                <div class="mobile:mb-[10px] pc:mb-[0px]">
                   <a href="mailto:example@mail.com" class="font-jostMedium text-[14px] text-[#FFFCF9]">example@mail.com</a>
                 </div>
-                <div>
+                <div class="mobile:mb-[15px] pc:mb-[0px]">
                   <a href="tel:+79112345555" class="font-jostMedium text-[14px] text-[#FFFCF9]">+7 (911) 234-55-55</a>
                 </div>
                 <div>
@@ -2291,7 +2501,7 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div class="mobile:mt-[24px] pc:mt-[0px]">
               <button type="button" class="footer-contact-btn font-JostSemibold text-[14px] text-[#FFFCF9]">
                <span class="relative z-10">
                  Связаться с менеджером
@@ -2299,7 +2509,7 @@
               </button>
             </div>
           </div>
-          <div class="flex justify-between mt-[60px]">
+          <div class="pc:flex mobile:block justify-between pc:mt-[60px] mobile:mt-[30px]">
             <div>
               <nav>
                 <ul>
@@ -2312,20 +2522,31 @@
                 </ul>
               </nav>
               <br>
+              <div class="mobile:block pc:hidden mt-[5px]">
+              <p class="font-helveticaRegular text-[12px] text-[#C7C7C7]">© 2025 InSamaDance</p>
+            </div>
               <p class="mt-[5px] font-helveticaRegular text-[13px] text-[#C7C7C7] opacity-40">Некоторые визуальные элементы стартового видео созданы с помощью технологий искусственного интеллекта. Данные сцены носят исключительно иллюстративный характер.</p>
             </div>
-            <div>
+            <div class="mobile:hidden pc:block">
               <p class="font-helveticaRegular text-[12px] text-[#C7C7C7]">© 2025 InSamaDance</p>
             </div>
           </div>
 
-          <div class="mt-[50px]">
-            <img
+          <div class="pc:mt-[50px] mobile:mt-[20px]">
+            <img class="mobile:hidden pc:block"
               src="./images/footer_img.png"
               alt="image"
               loading="lazy"
               width="1250"
               height="171"
+            />
+
+            <img class="mobile:block pc:hidden"
+              src="./images/mobile/footer-image.png"
+              alt="image"
+              loading="lazy"
+              width="360"
+              height="73"
             />
           </div>
         </div>

@@ -489,9 +489,70 @@ transition: opacity 0.5s ease-in;
 }
 
 @media screen and (max-width: 864px) {
-  /* .header-video-bg {
-    display: none;
-  } */
+  .tabs-reviews button:hover {
+  background-color: #FFFFFF;
+  width: 169px;
+  height: 46px;
+  border-radius: 12px;
+  color: #4A0003;
+}
+
+.tabs_nav.active_tab {
+  width: 169px;
+}
+
+.reviews {
+  height: 500px;
+}
+
+.review-bg {
+  height: 500px;
+}
+
+.acardion-faq {
+  width: 315px;
+}
+
+
+.acardion__content-faq {
+  width: 288px;
+}
+
+.footer {
+  background-image: url('../images/mobile/footer-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+   background-size: 100% 100%; 
+  height: 731px;
+  padding-top: 40px;
+}
+
+.footer-bg {
+ background: linear-gradient(180deg, rgba(26, 13, 13, 0.2) 0%, rgba(162, 55, 16, 0.2) 34.62%, rgba(23, 11, 6, 0.2) 100%);
+  height: 691px;
+}
+
+.acardion, .acardion-faq {
+  width: 300px;
+}
+}
+
+.inSama {
+  width: 100%;
+  height: 100%;
+  padding:  0 !important;
+}
+
+.inSama .swiper-slide {
+   margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  width: 100% !important;
+ 
+}
+
+.inSama .swiper-wrapper {
+  margin: 0;
+  padding: 0;
 }
 
 
