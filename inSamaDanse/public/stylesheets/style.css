@@ -544,7 +544,7 @@ transition: opacity 0.5s ease-in;
 }
 
 .inSama .swiper-slide {
-   margin-right: 0 !important;
+   margin-right: -1px !important;
   margin-bottom: 0 !important;
   width: 100% !important;
  

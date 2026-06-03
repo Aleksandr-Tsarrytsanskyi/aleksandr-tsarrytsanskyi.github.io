@@ -170,6 +170,7 @@ modalController({
 
      const inSama = new Swiper(".inSama", {
       // Optional parameters
+        
 
       loop: true,
       slidesPerView: "auto",
