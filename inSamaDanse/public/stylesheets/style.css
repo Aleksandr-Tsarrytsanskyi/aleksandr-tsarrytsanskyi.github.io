@@ -9,9 +9,9 @@ body {
   background: #ffe7d3;
 }
 
-html {
-  scroll-behavior: smooth; /* Включает плавную прокрутку по якорям */
-}
+/* html {
+  scroll-behavior: smooth; 
+} */
 
 a {
   text-decoration: none;

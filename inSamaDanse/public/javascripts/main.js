@@ -328,16 +328,16 @@ function madiaScreenVideo() {
 init();
 
 document.addEventListener("DOMContentLoaded", () => {
-   madiaScreenVideo();
   const video = document.querySelector(".header-video-bg");
-
+  
   video.addEventListener("canplay", () => {
     video.classList.add("is-loaded");
-     
+    
   });
-
+  
   // Если видео уже закешировано
   if (video.readyState >= 3) {
     video.classList.add("is-loaded");
   }
+  madiaScreenVideo();
 });
