@@ -348,7 +348,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("visibilitychange", function() {
     const video = document.querySelector(".header-video-bg");
     if (document.visibilityState === "visible" && video.paused) {
-      console.log("video");
       
       madiaScreenVideo();
         video.play().catch(error => console.log("Автозапуск заблокирован:", error));
