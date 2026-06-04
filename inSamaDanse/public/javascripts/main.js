@@ -286,22 +286,7 @@ modalController({
     
   }
 
-  function madiaScreenVideo() {
-    const mediaQuery = window.matchMedia('(max-width: 864px)');
-    
-    
-    if(mediaQuery.matches) {
-      const video = document.querySelector(".header-video-bg")
-      const videoSourse = document.querySelector(".header-video-bg source")
-      
-        videoSourse.src = './video/videoMobile.mp4';
-        video.load();
-
-        
-    }
-
-  }
- madiaScreenVideo();
+  
 
   
   anhorsLinks();
@@ -323,14 +308,32 @@ modalController({
   changeAcardion();
 }
 
+function madiaScreenVideo() {
+    const mediaQuery = window.matchMedia('(max-width: 864px)');
+    
+    
+    if(mediaQuery.matches) {
+      const video = document.querySelector(".header-video-bg")
+      const videoSourse = document.querySelector(".header-video-bg source")
+      
+        videoSourse.src = './video/videoMobile.mp4';
+        video.load();
+
+        
+    }
+
+  }
+
+
 init();
 
 document.addEventListener("DOMContentLoaded", () => {
-   
+   madiaScreenVideo();
   const video = document.querySelector(".header-video-bg");
 
   video.addEventListener("canplay", () => {
     video.classList.add("is-loaded");
+     
   });
 
   // Если видео уже закешировано
