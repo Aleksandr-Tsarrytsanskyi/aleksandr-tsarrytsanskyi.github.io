@@ -270,26 +270,26 @@ modalController({
     });
   }
 
-  function anhorsLinks() {
-    const links = document.querySelectorAll('.mobile-menu a')
-    const modalBurger = document.querySelector(".burger-dialog")
-    console.log(anhorsLinks);
+  // function anhorsLinks() {
+  //   const links = document.querySelectorAll('.mobile-menu a')
+  //   const modalBurger = document.querySelector(".burger-dialog")
+  //   console.log(anhorsLinks);
     
-    links.forEach(link => {
-      link.addEventListener("click", function(e) {
-      e.preventDefault();
+  //   links.forEach(link => {
+  //     link.addEventListener("click", function(e) {
+  //     e.preventDefault();
 
-      modalBurger.classList.remove("active")
-       document.body.style.overflow = 'visible';
-    })
-    })
+  //     modalBurger.classList.remove("active")
+  //      document.body.style.overflow = 'visible';
+  //   })
+  //   })
     
-  }
+  // }
 
   
 
   
-  anhorsLinks();
+  // anhorsLinks();
 
  
 
