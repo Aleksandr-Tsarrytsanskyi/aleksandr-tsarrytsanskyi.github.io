@@ -277,7 +277,7 @@ modalController({
     
     links.forEach(link => {
       link.addEventListener("click", function(e) {
-      
+      e.preventDefault();
 
       modalBurger.classList.remove("active")
        document.body.style.overflow = 'visible';
