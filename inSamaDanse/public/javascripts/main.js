@@ -289,7 +289,7 @@ modalController({
   
 
   
-  anhorsLinks();
+  // anhorsLinks();
 
  
 
