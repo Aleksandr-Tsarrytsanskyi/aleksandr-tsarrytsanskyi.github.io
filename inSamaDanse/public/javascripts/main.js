@@ -289,7 +289,7 @@ modalController({
   
 
   
-  // anhorsLinks();
+  anhorsLinks();
 
  
 
@@ -332,14 +332,16 @@ document.addEventListener("DOMContentLoaded", () => {
   
   video.addEventListener("canplay", () => {
     video.classList.add("is-loaded");
+     madiaScreenVideo();
     
   });
   
   // Если видео уже закешировано
   if (video.readyState >= 3) {
     video.classList.add("is-loaded");
+     madiaScreenVideo();
   }
-  madiaScreenVideo();
+ 
 });
 
 
@@ -348,6 +350,7 @@ document.addEventListener("visibilitychange", function() {
     if (document.visibilityState === "visible" && video.paused) {
       console.log("video");
       
+      madiaScreenVideo();
         video.play().catch(error => console.log("Автозапуск заблокирован:", error));
     }
 });
