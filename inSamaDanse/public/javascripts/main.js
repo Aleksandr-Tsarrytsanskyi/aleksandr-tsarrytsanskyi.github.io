@@ -277,7 +277,7 @@ modalController({
     
     links.forEach(link => {
       link.addEventListener("click", function(e) {
-     
+      e.preventDefault();
 
       modalBurger.classList.remove("active")
        document.body.style.overflow = 'visible';
@@ -308,41 +308,6 @@ modalController({
   changeAcardion();
 }
 
-
-init();
-
-
-
-
-document.addEventListener("visibilitychange", function() {
-    const video = document.querySelector(".header-video-bg");
-    if (document.visibilityState === "visible" && video.paused) {
-      
-      
-        video.play().catch(error => console.log("Автозапуск заблокирован:", error));
-    }
-});
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const video = document.querySelector(".header-video-bg");
-  
-  video.addEventListener("canplay", () => {
-    video.classList.add("is-loaded");
-   
-    
-  });
-  
-  // Если видео уже закешировано
-  if (video.readyState >= 3) {
-    video.classList.add("is-loaded");
-   
-  }
- 
-});
-
-
 function madiaScreenVideo() {
     const mediaQuery = window.matchMedia('(max-width: 864px)');
     
@@ -353,10 +318,40 @@ function madiaScreenVideo() {
       
         videoSourse.src = './video/videoMobile.mp4';
         video.load();
-
+      video.play();
         
     }
 
   }
-madiaScreenVideo();
 
+   madiaScreenVideo();
+
+
+init();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".header-video-bg");
+  
+  video.addEventListener("canplay", () => {
+    video.classList.add("is-loaded");
+    
+    
+  });
+  
+  // Если видео уже закешировано
+  if (video.readyState >= 3) {
+    video.classList.add("is-loaded");
+    
+  }
+ 
+});
+
+
+document.addEventListener("visibilitychange", function() {
+    const video = document.querySelector(".header-video-bg");
+    if (document.visibilityState === "visible" && video.paused) {
+      
+      
+        video.play().catch(error => console.log("Автозапуск заблокирован:", error));
+    }
+});
