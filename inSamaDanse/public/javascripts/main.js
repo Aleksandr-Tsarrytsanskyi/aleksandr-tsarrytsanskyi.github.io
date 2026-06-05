@@ -277,7 +277,7 @@ modalController({
     
     links.forEach(link => {
       link.addEventListener("click", function(e) {
-      e.preventDefault();
+     
 
       modalBurger.classList.remove("active")
        document.body.style.overflow = 'visible';
@@ -323,7 +323,7 @@ function madiaScreenVideo() {
     }
 
   }
-
+madiaScreenVideo();
 
 init();
 
@@ -332,14 +332,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
   video.addEventListener("canplay", () => {
     video.classList.add("is-loaded");
-     madiaScreenVideo();
+   
     
   });
   
   // Если видео уже закешировано
   if (video.readyState >= 3) {
     video.classList.add("is-loaded");
-     madiaScreenVideo();
+   
   }
  
 });
@@ -349,7 +349,7 @@ document.addEventListener("visibilitychange", function() {
     const video = document.querySelector(".header-video-bg");
     if (document.visibilityState === "visible" && video.paused) {
       
-      madiaScreenVideo();
+      
         video.play().catch(error => console.log("Автозапуск заблокирован:", error));
     }
 });
