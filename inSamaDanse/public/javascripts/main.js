@@ -137,6 +137,8 @@ modalController({
   function swiper() {
     const swiperPrev = document.querySelector(".swiperPrev");
     const swiperNext = document.querySelector(".swiperNext");
+     const swiperPrevInsama = document.querySelector(".swiperPrevInsama");
+    const swiperNextInsama = document.querySelector(".swiperNextInsama");
     const reviews = new Swiper(".reviews", {
       // Optional parameters
 
@@ -224,6 +226,14 @@ modalController({
 
     swiperNext.addEventListener("click", () => {
       reviews.slideNext();
+    });
+
+     swiperPrevInsama.addEventListener("click", () => {
+      inSama.slidePrev();
+    });
+
+    swiperNextInsama.addEventListener("click", () => {
+      inSama.slideNext();
     });
   }
 
