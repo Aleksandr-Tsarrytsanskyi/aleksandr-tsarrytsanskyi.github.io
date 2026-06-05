@@ -481,6 +481,11 @@ transition: opacity 0.5s ease-in;
   background: #ffe7d3;
 }
 
+
+.input_error {
+  border: 2px solid #972b0f !important;
+}
+
 .insama-btn-slide {
   position: absolute;
   width: 100%;
@@ -641,6 +646,8 @@ transition: opacity 0.5s ease-in;
   width: 100% !important;
  
 }
+
+
 
 .inSama .swiper-wrapper {
   margin: 0;

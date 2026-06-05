@@ -2753,17 +2753,17 @@
          </button>
          <div>
           <h2 class="font-jostMedium mobile:text-[20px] pc:text-[24px] text-[#4c180b] mobile:mb-[32px] pc:mb-[40px]">Заявка на оплату</h2>
-          <form action="https://robokassa.ru" method="POST" class="robokassa">
+          <form action="#" method="POST" class="robokassa">
     <!-- Идентификатор вашего магазина -->
 
              <div>
                <input type="text" name="name" class="robokassa_name" placeholder="Как вас зовут">
              </div>
              <div>
-               <input type="number" name="name" class="robokassa_phone" placeholder="Номер телефона">
+               <input type="number" name="phone" class="robokassa_phone" placeholder="Номер телефона">
              </div>
              <div>
-              <textarea name="message" class="robokassa-message" placeholder="Ваше сообщение"></textarea>
+              <textarea name="message" class="robokassa-message" name="message" placeholder="Ваше сообщение"></textarea>
              </div>
                 <input type="hidden" name="MerchantLogin" value="ваш_логин">
                 
@@ -2783,7 +2783,7 @@
                 <input type="hidden" name="SignatureValue" value="ваша_хэш_подпись">
                 
                 <!-- Валюта (рубли - RUR или RUB) -->
-                <input type="hidden" name="IncCurrLabel" value="RUB">
+                <input type="hidden" name="IncCurrLabel" value="KZT">
                 
                 <button type="submit" class="robokassa-send">
                   <span class="relative z-10">Оставить заявку</span>

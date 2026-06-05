@@ -1,6 +1,9 @@
-
+const conatctForm = document.querySelector(".robokassa");
+      const input = conatctForm.elements
+    let {name , phone ,message} = input
 
 function init() {
+const conatctForm = document.querySelector(".robokassa");
 
    function modalController({modal, btnOpen, btnClose, time = 300}) {
   const buttonElements = document.querySelectorAll(btnOpen);
@@ -304,21 +307,92 @@ modalController({
     
   }
 
+
+
+conatctForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+    
+      
+     let error =  validateFeddBack();
+
+     if(error === 0) {
+        this.action = 'https://robokassa.ru';
+         this.submit(); 
+     }
+     console.log(error);
+     
+  })
+
+
+  //  phone.addEventListener("input", (e) => {
+  //        let value = e.target.value.replace(/\D/g, '');
+
+  //          value = value.substring(0, 10);
+
+  //            if (value.length > 6) {
+  //       value = value.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '$1-$2-$3-$4');
+  //   } else if (value.length > 3) {
+  //       value = value.replace(/(\d{3})(\d{1,3})/, '$1-$2');
+  //   }
+
+  //    e.target.value = value;
+  //     })
+
+   function validateFeddBack() {
+    
+      let error = 0
+    
+        
+         let regExpphone = /^\d{3}-\d{3}-\d{2}-\d{2}$/
+        const regExpPhone = new RegExp(regExpphone);
+      if(name.value.length < 3) {
+        erorrInput(name, "input_error")
+        error++
+      }
+
+      else {  
+          removeErrorInput(name, "input_error")
+      }
+
+
+     
+
+      if(phone.value.length > 9 && phone.value.length < 20) {
+         removeErrorInput(phone, "input_error")
+            
+      }
+
+      else {
+        erorrInput(phone, "input_error")
+            error++
+      }
+
+      if(message.value.length < 10) {
+           erorrInput(message, "input_error")
+            error++
+      }
+
+      else {
+        removeErrorInput(message, "input_error")
+      }
+      
+      return error
+  }
   
 
+  function erorrInput(input, addclass) {
+    input.classList.add(addclass);
+    
+  }
+
+  function removeErrorInput(input, removeclass) {
+    input.classList.remove(removeclass);
+    
+  }
+  // Закрытие по клавише Escape обеспечивается самим тегом <dialog>, 
+  // но если вам нужно перехватить событие:
   
   anhorsLinks();
-
- 
-
-
-
-
-
-// Закрытие по клавише Escape обеспечивается самим тегом <dialog>, 
-// но если вам нужно перехватить событие:
-
-
   tabsProduct();
   addEventListener();
   swiper();
@@ -352,6 +426,8 @@ function madiaScreenVideo() {
 });
 
   }
+
+  
 
 
   document.addEventListener("DOMContentLoaded", () => {
