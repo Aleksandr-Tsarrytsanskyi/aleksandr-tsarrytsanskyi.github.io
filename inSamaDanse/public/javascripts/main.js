@@ -315,16 +315,22 @@ function madiaScreenVideo() {
     if(mediaQuery.matches) {
       const video = document.querySelector(".header-video-bg")
       const videoSourse = document.querySelector(".header-video-bg source")
-      
-        // videoSourse.src = './video/videoMobile.mp4';
-        // video.load();
-        // video.play();
+      video.pause();
+        videoSourse.src = './video/videoMobile.mp4';
+        video.load();
+        video.play();
         
     }
 
   }
 
-   madiaScreenVideo();
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+    madiaScreenVideo();
+
+  })
+
 
 
 init();
