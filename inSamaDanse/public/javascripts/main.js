@@ -318,8 +318,8 @@ modalController({
 
 function madiaScreenVideo() {
     const mediaQuery = window.matchMedia('(max-width: 864px)');
-    
-    
+    const button = document.getElementById('soundToggle');
+      const video = document.querySelector(".header-video-bg")
     if(mediaQuery.matches) {
       const video = document.querySelector(".header-video-bg")
       const videoSourse = document.querySelector(".header-video-bg source")
@@ -329,6 +329,17 @@ function madiaScreenVideo() {
         video.play();
         
     }
+
+
+    button.addEventListener('click', () => {
+  if (video.muted) {
+    video.muted = false;
+    button.textContent = 'Выключить звук';
+  } else {
+    video.muted = true;
+    button.textContent = 'Включить звук';
+  }
+});
 
   }
 

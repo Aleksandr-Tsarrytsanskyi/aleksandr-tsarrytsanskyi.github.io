@@ -319,7 +319,7 @@ figure {
 .bg-cover-pos img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .header-video-bg {
@@ -731,6 +731,15 @@ input[type=number] {
   font-family: "Jost SemiBold";
   color: #fffcf9;
   margin-top: 48px;
+}
+
+#soundToggle {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  z-index: 500;
+  color: #fff;
+  font-size: 18px;
 }
 
 
