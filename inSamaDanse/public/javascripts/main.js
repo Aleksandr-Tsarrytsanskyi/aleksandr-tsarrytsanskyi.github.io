@@ -316,9 +316,9 @@ function madiaScreenVideo() {
       const video = document.querySelector(".header-video-bg")
       const videoSourse = document.querySelector(".header-video-bg source")
       
-        videoSourse.src = './video/videoMobile.mp4';
-        video.load();
-        video.play();
+        // videoSourse.src = './video/videoMobile.mp4';
+        // video.load();
+        // video.play();
         
     }
 
