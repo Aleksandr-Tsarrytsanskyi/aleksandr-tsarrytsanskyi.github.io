@@ -506,6 +506,10 @@ transition: opacity 0.5s ease-in;
   color: #4A0003;
 }
 
+.mobile-image1 {
+  height: 469px;
+}
+
 .insama-btn-slide {
   top: 83%;
 }
