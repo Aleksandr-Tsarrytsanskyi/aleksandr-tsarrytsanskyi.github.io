@@ -318,7 +318,7 @@ function madiaScreenVideo() {
       
         videoSourse.src = './video/videoMobile.mp4';
         video.load();
-      video.play();
+        video.play();
         
     }
 
