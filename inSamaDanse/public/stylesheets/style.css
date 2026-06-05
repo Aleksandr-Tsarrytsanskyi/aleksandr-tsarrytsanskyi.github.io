@@ -506,6 +506,8 @@ transition: opacity 0.5s ease-in;
   color: #4A0003;
 }
 
+
+
 .mobile-image1 {
   height: 469px;
 }
@@ -579,8 +581,44 @@ transition: opacity 0.5s ease-in;
     width: 814px !important;
   }
 
+  .buy-course-body {
+    padding: 32px 24px !important;
+  }
+
+  .robokassa input, .robokassa-message {
+    width: 294px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .robokassa-send {
+    width: 294px !important;
+    font-size: 12px !important;
+    margin-top: 30px !important;
+  }
+
+  .label_policy {
+    grid-template-columns: 32px 277px !important;
+    margin-top: 20px !important;
+  }
+
+  .robokassa input::placeholder {
+ 
+    font-size: 12px;
+    opacity: 0.4;
+}
+
+
+.robokassa-message::placeholder {
+  opacity: 0.4;
+  font-size: 12px;
+}
+
   #IndependentCourses .acardion, .acardion-faq  {
     width: 315px;
+  }
+
+  .label_policy {
+    align-items: normal !important;
   }
 
   .review-bg {
@@ -617,7 +655,7 @@ transition: opacity 0.5s ease-in;
     z-index: 1000;
    background: rgba(0, 0, 0, 0.6);
     cursor: pointer;
-    padding: 20px;
+    /* padding: 20px; */
     overflow-y: auto;
     display: flex;
     visibility: hidden;
