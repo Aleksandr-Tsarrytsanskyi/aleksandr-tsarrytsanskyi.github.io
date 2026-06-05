@@ -434,7 +434,7 @@ figure {
     
 }
 
-.burger-dialog.active {
+.burger-dialog.active, .modal-buy-course.active {
   opacity: 1 !important;
   visibility: visible !important;
  
@@ -584,7 +584,56 @@ transition: opacity 0.5s ease-in;
 
 
 
+.modal-buy-course {
+      position: fixed;
+    inset: 0;
+    z-index: 1000;
+   background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: background 0.5s ease-in;
+}
 
+.buy-course-body {
+  margin: auto;
+    cursor: default;
+    background: #fbf1e7;
+    text-align: center;
+    padding: 40px 32px;
+    border-radius: 20px;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.modal-buy-course .close-btn {
+  top: 20px;
+  right: 20px;
+}
+
+.label_policy {
+  display: grid;
+  grid-template-columns: 32px 400px;
+  justify-items: center;
+  text-align: left;
+  align-items: center;
+  gap: 0px 5px;
+}
+
+
+.label_policy input {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  top: 7px;
+}
+
+.label_policy a:hover {
+  text-decoration: underline;
+}
 
 
 
@@ -604,6 +653,85 @@ transition: opacity 0.5s ease-in;
   
 }
 
+.robokassa input, .robokassa-message {
+    width: 351px;
+    background: #ffead6;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-radius: 12px;
+   
+}
+
+.robokassa input::placeholder {
+  color: #4d413e;
+   font-family: "Helvetica Refular";
+    font-size: 14px;
+}
+
+.robokassa-message::placeholder {
+  color: #4d413e;
+   font-family: "Helvetica Refular";
+    font-size: 14px;
+}
+
+.robokassa-message {
+  height: 117px;
+  padding-top: 15px;
+  outline: none;
+}
+
+
+
+.robokassa_name, .robokassa_phone {
+  height: 43px;
+}
+
+ {
+-webkit-appearance: none;
+}
+
+.robokassa_phone::-webkit-outer-spin-button,
+.robokassa_phone::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.robokassa-send::before {
+      content: "";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.3s ease;
+    background: linear-gradient(90deg, #4a0003 31.73%, #b40a13 100%);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+
+.robokassa-send:hover:before {
+  opacity: 1;
+}
+
+
+.robokassa-send {
+  position: relative;
+  background: linear-gradient(90deg, #4a0003 31.73%, #65060a 100%);
+  width: 351px;
+  height: 41px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: "Jost SemiBold";
+  color: #fffcf9;
+  margin-top: 48px;
+}
 
 
 

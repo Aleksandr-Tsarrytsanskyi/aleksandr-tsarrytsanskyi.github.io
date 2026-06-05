@@ -37,6 +37,14 @@ function init() {
 }
 
 modalController({
+  modal: ".modal-buy-course",
+  btnOpen: ".courses-btn",
+  btnClose: ".close-btn",
+  time: "300",
+});
+
+
+modalController({
   modal: ".burger-dialog",
   btnOpen: ".burger-btn",
   btnClose: ".close-btn",
