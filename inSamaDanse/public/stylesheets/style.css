@@ -494,6 +494,58 @@ transition: opacity 0.5s ease-in;
   z-index: 600;
 }
 
+
+.policy-input {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.label_policy {
+  position: relative;
+  cursor: pointer;
+}
+
+
+.custom-checkbox-view {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4a0003;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+
+.label_policy :hover .custom-checkbox-view {
+  border-color: #0056b3;
+}
+
+
+.custom-checkbox-view::before {
+content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #4A0003;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.policy-input:checked + .custom-checkbox-view::before {
+  opacity: 1;
+}
+
+
+.policy-input:focus-visible + .custom-checkbox-view {
+  outline: 2px solid rgba(82, 3, 3, 0.5);
+  outline-offset: 2px;
+}
+
 .insama-btn-slide {
   position: absolute;
   width: 100%;
@@ -502,6 +554,10 @@ transition: opacity 0.5s ease-in;
   right: 20%;
   z-index: 700;
 }
+
+
+
+
 
 .abouta-uthor-slot {
   background-image: url('../images/bg_who.png'),;
