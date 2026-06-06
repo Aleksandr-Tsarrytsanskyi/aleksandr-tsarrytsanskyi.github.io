@@ -486,6 +486,14 @@ transition: opacity 0.5s ease-in;
   border: 2px solid #972b0f !important;
 }
 
+.bg-inasama {
+  z-index: 600;
+}
+
+.bg-insama-pos {
+  z-index: 600;
+}
+
 .insama-btn-slide {
   position: absolute;
   width: 100%;
