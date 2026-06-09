@@ -438,26 +438,32 @@ modalController({
     let video = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild
     let source = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.firstElementChild 
     let videoPreviuw = document.querySelectorAll(".video-preview")
-  
+    const btn = document.querySelectorAll('.btn-video-preview')
     
-   
     e.target.classList.add("close-video")
-closeVideoPreview();
+    
+    
+    btn.forEach(el => {
+      el.textContent = "Видео превью"
+    })
+    e.target.textContent = 'Закрыть'
+
     videoPreviuw.forEach(container => {
       
       
        container.classList.remove("video-preview-show")
     })
-    videoContainer.classList.add("video-preview-show")
-
     
-   
+    videoContainer.classList.add("video-preview-show")
+    closeVideoPreview();
+    
+    
     
     // Находим source и меняем data-src на src
     // const sources = document.querySelectorAll('.video-container source');
     const videos = document.querySelectorAll('.lazy-preview-video');
-
-
+    
+    
  
 
   
@@ -511,9 +517,9 @@ closeVideoPreview();
            let videoContainer = e.target.parentElement.parentElement.parentElement.lastElementChild 
             let video = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild
             let source = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.firstElementChild 
-         
-
-       
+          e.target.classList.remove("close-video")
+          e.target.textContent = "Видео превью"
+          videoContainer.classList.remove("video-preview-show")
             source.src = "";
            video.load()
             video.controls = false;

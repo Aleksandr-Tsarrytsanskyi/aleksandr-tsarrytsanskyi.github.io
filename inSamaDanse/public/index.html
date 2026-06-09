@@ -855,8 +855,8 @@
         </div>
       </section>
       <section id="VideoStudents" class="bg-[#4A0003] video">
-        <div class="pc:max-w-[1280px] mobile:max-w-[360px] tablet:max-w-[864px] mx-auto pt-[120px]">
-          <h2 class="mb-[60px] font-jostMedium text-[42px] text-[#fffcf9] text-center">Видео “до и после” учениц</h2>
+        <div class="pc:max-w-[1280px] mobile:max-w-[360px] tablet:max-w-[864px] mx-auto tablet:pt-[120px] mobile:pt-[100px] tablet:pb-[120px] mobile:pb-[100px] ">
+          <h2 class="pc:mb-[60px] mobile:mb-[40px] font-jostMedium pc:text-[42px] mobile:text-[32px] text-[#fffcf9] text-center leading-[110%]">Видео<br class="mobile:block tablet:hidden "> “до и после” учениц</h2>
           <div class="swiper video-students">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -926,7 +926,7 @@
           </div>
 
           <div
-            class="grid grid-cols-[36px_36px] gap-x-[10px] mt-[60px] justify-end"
+            class="grid grid-cols-[36px_36px] gap-x-[10px] pc:mt-[60px] mobile:mt-[40px] justify-end"
           >
             <div>
               <button type="button" class="swiperPrevVideo"></button>
@@ -1120,9 +1120,9 @@
               >
             </div>
             <div
-              class="bg-[#FBF1E7] pc:h-[560px] mobile:h-[534px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
+              class="bg-[#FBF1E7] relative pc:h-[560px] mobile:h-[534px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
             >
-              <div class="flex">
+              <div class="flex justify-between">
                 <div
                   class="border border-solid pt-[6px] pr-[12px] pb-[8px] pl-[12px] border-[#fff] rounded-[40px] bg-[#F7EDE3]"
                 >
@@ -1131,6 +1131,9 @@
                   >
                     Stretch
                   </p>
+                </div>
+                <div>
+                  <button type="button" class="btn-video-preview text-[#4c180b] font-jostMedium text-[20px]">Видео превью</button>
                 </div>
               </div>
               <h2
@@ -1202,6 +1205,15 @@
                 class="mt-[10px] block font-helveticaRegular text-[12px] text-[#999999]"
                 >Доступно 3 месяца с момента покупки</span
               >
+              <div class="video-preview">
+                  <div class="video-preview-container">
+  <!-- Постер виден до клика, само видео не грузится -->
+                <video class="lazy-preview-video" preload="none"  muted playsinline>
+                  <source data-src="./video/butterflywingflap2Mobile.mp4" src="" type="video/mp4">
+                </video>
+                <!-- Кнопка-плейсхолдер -->
+              </div>
+              </div>
             </div>
             <div
               class="bg-[#FBF1E7] pc:h-[560px] relative mobile:h-[534px] border border-solid border-[#A29892] rounded-[20px] py-[40px] px-[32px]"
