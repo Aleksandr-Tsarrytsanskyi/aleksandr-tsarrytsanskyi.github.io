@@ -142,6 +142,9 @@ modalController({
     const swiperNext = document.querySelector(".swiperNext");
      const swiperPrevInsama = document.querySelector(".swiperPrevInsama");
     const swiperNextInsama = document.querySelector(".swiperNextInsama");
+
+    const swiperPrevVideo = document.querySelector(".swiperPrevVideo");
+    const swiperNextVideo = document.querySelector(".swiperNextVideo");
     const reviews = new Swiper(".reviews", {
       // Optional parameters
 
@@ -157,6 +160,52 @@ modalController({
     },
 
     864: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // Если ширина экрана >= 768px
+    
+  }
+
+      // If we need pagination
+      //   pagination: {
+      //     el: '.swiper-pagination',
+      //   },
+
+      //   // Navigation arrows
+      //   navigation: {
+      //     nextEl: '.swiper-button-next',
+      //     prevEl: '.swiper-button-prev',
+      //   },
+
+      //   // And if we need scrollbar
+      //   scrollbar: {
+      //     el: '.swiper-scrollbar',
+      //   },
+    });
+
+
+    const videostudents = new Swiper(".video-students", {
+      // Optional parameters
+
+      loop: true,
+     
+
+     a11y: false, 
+       breakpoints: {
+    // Если ширина экрана >= 480px
+    360: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+
+    864: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+
+
+     1280: {
       slidesPerView: 3,
       spaceBetween: 10
     },
@@ -223,6 +272,16 @@ modalController({
       //     el: '.swiper-scrollbar',
       //   },
     });
+
+    swiperPrevVideo.addEventListener("click", () => {
+      videostudents.slidePrev();
+    });
+
+    swiperNextVideo.addEventListener("click", () => {
+      videostudents.slideNext();
+    });
+
+////
     swiperPrev.addEventListener("click", () => {
       reviews.slidePrev();
     });
@@ -306,6 +365,165 @@ modalController({
     })
     
   }
+
+  function playVideoStudents() {
+    document.querySelectorAll('.video-container').forEach(container => {
+  const video = container.querySelector('.lazy-video');
+  const playBtn = container.querySelector('.play-btn');
+  const source = container.querySelector('.video-container source');
+
+  container.addEventListener('click', (e) => {
+    e.preventDefault();
+    // Находим source и меняем data-src на src
+    const sources = document.querySelectorAll('.video-container source');
+    const videos = document.querySelectorAll('.lazy-video');
+
+
+ 
+
+  
+    
+
+    if (source && source.dataset.src) {
+      
+        videos.forEach(v => {
+           if (v !== video) {
+  
+               v.firstElementChild.src = ""
+
+               v.load()
+                v.play()
+               v.controls = false;
+               v.nextElementSibling .style.display = 'block';
+           }
+
+          else {
+            
+            source.src = source.dataset.src;
+              video.load();
+              video.controls = true;
+              playBtn.style.display = 'none';
+            video.play();
+             
+          }
+
+           
+        
+    })
+    
+
+     
+      
+      
+      
+    
+    }
+    
+    // Прячем кнопку и запускаем видео
+    
+  });
+});
+  }
+
+
+   function playVideoPreview() {
+    document.querySelectorAll('.btn-video-preview').forEach(btn => {
+  // const video = container.querySelector('.lazy-video');
+  // const playBtn = container.querySelector('.play-btn');
+  // const source = container.querySelector('.video-container source');
+  
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let videoContainer = e.target.parentElement.parentElement.parentElement.lastElementChild 
+    let video = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild
+    let source = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.firstElementChild 
+    let videoPreviuw = document.querySelectorAll(".video-preview")
+  
+    
+   
+    e.target.classList.add("close-video")
+closeVideoPreview();
+    videoPreviuw.forEach(container => {
+      
+      
+       container.classList.remove("video-preview-show")
+    })
+    videoContainer.classList.add("video-preview-show")
+
+    
+   
+    
+    // Находим source и меняем data-src на src
+    // const sources = document.querySelectorAll('.video-container source');
+    const videos = document.querySelectorAll('.lazy-preview-video');
+
+
+ 
+
+  
+    
+
+    if (source && source.dataset.src) {
+          
+        videos.forEach(v => {
+           if (v !== video) {
+  
+               v.firstElementChild.src = ""
+
+               v.load()
+                v.play()
+               v.controls = false;
+              
+           }
+
+          else {
+            
+           source.src = source.dataset.src;
+           video.load()
+            video.controls = true;
+           video.play()
+             
+          }
+
+           
+        
+    })
+    
+
+     
+      
+      
+      
+    
+    }
+    
+    // Прячем кнопку и запускаем видео
+    
+  });
+});
+  }
+
+  function closeVideoPreview() {
+    const btnclosevideo = document.querySelectorAll(".close-video")
+
+    btnclosevideo.forEach(btn => {
+      btn.addEventListener("click", function(e) {
+           let videoContainer = e.target.parentElement.parentElement.parentElement.lastElementChild 
+            let video = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild
+            let source = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.firstElementChild 
+         
+
+       
+            source.src = "";
+           video.load()
+            video.controls = false;
+           video.play()
+          })
+    })
+  }
+
+playVideoPreview();
+  playVideoStudents();
 
 
 

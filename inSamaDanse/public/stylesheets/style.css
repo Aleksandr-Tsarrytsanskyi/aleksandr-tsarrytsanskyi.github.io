@@ -206,7 +206,7 @@ figure {
   z-index: 200;
 }
 
-.swiperPrev, .swiperPrevInsama {
+.swiperPrev, .swiperPrevInsama, .swiperPrevVideo {
   background-image: url("../images/slide_left.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -215,7 +215,7 @@ figure {
   
 }
 
-.swiperNext, .swiperNextInsama {
+.swiperNext, .swiperNextInsama, .swiperNextVideo {
   background-image: url("../images/slide_left.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -226,7 +226,7 @@ figure {
 }
 
 
-.swiperNext:hover, .swiperNextInsama:hover {
+.swiperNext:hover, .swiperNextInsama:hover, .swiperNextVideo:hover {
   background-image: url("../images/slide-active.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -235,7 +235,7 @@ figure {
   transform: rotate(0deg);
 }
 
-.swiperPrev:hover, .swiperPrevInsama:hover {
+.swiperPrev:hover, .swiperPrevInsama:hover, .swiperPrevVideo:hover {
   background-image: url("../images/slide-active.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -509,6 +509,45 @@ transition: opacity 0.5s ease-in;
   margin-top: 20px;
 }
 
+.video-students {
+  width: 100%;
+  height: 100%;
+}
+
+.video-container {
+  position: relative;
+  height: 644px;
+  
+}
+
+.video-container-none {
+  display: none !important;
+}
+
+.lazy-video {
+  border-radius: 24px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.play-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  top: 45%;
+  left: 85%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+
+.play-btn.active {
+  opacity: 0! !important;
+}
+
 
 .custom-checkbox-view {
   width: 20px;
@@ -650,6 +689,13 @@ content: '';
   #questions .acardion, .acardion-faq {
     width: 814px !important;
   }
+
+
+  .video-container {
+  position: relative;
+  height: 500px;
+  
+}
 
   .buy-course-body {
     padding: 32px 24px !important;
@@ -877,6 +923,37 @@ input[type=number] {
   z-index: 500;
   color: #fff;
   font-size: 18px;
+}
+
+.video-preview {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  display: none;
+}
+
+.video-preview-show {
+  display: block !important;
+}
+
+.close-video {
+  color: #4a0003 !important;
+}
+
+.lazy-preview-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.btn-video-preview {
+  position: relative;
+  z-index: 400;
 }
 
 
