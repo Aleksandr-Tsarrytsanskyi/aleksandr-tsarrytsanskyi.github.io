@@ -238,6 +238,10 @@ modalController({
       slidesPerView: "auto",
       spaceBetween: 0,
       centeredSlides: false,
+      autoplay: {
+    delay: 3000, // Задержка между слайдами в 3 секунды
+    disableOnInteraction: false, // Автопрокрутка продолжится после клика/свайпа
+  },
 
       on: {
     init: function () {
