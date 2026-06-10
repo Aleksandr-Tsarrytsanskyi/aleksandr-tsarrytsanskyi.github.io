@@ -355,10 +355,13 @@ modalController({
   }
 
   function anhorsLinks() {
+    const manegerLInks = document.querySelectorAll(".contact-manager-link")
     const links = document.querySelectorAll('.mobile-menu a')
     const modalBurger = document.querySelector(".burger-dialog")
     console.log(anhorsLinks);
     
+    
+
     links.forEach(link => {
       link.addEventListener("click", function(e) {
       
@@ -466,10 +469,10 @@ videosЬMobile.forEach(video => {
     e.target.classList.add("close-video")
     
     
-    btn.forEach(el => {
-      el.textContent = "Видео превью"
-    })
-    e.target.textContent = 'Закрыть'
+    // btn.forEach(el => {
+    //   el.textContent = "Видео превью"
+    // })
+    // e.target.textContent = 'Закрыть'
 
     videoPreviuw.forEach(container => {
       
@@ -541,7 +544,7 @@ videosЬMobile.forEach(video => {
             let video = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild
             let source = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.firstElementChild 
           e.target.classList.remove("close-video")
-          e.target.textContent = "Видео превью"
+          // e.target.textContent = "Видео превью"
           videoContainer.classList.remove("video-preview-show")
             source.src = "";
            video.load()

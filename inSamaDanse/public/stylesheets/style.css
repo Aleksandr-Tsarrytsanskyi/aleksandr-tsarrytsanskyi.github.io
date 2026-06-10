@@ -941,6 +941,14 @@ input[type=number] {
   padding-right: 5px;
 }
 
+.btn-video-preview {
+  background: url("../images/play-video.svg") no-repeat center;
+  height: 39px;
+  position: relative;
+ 
+  width: 39px;
+}
+
 
 .text-scroll::-webkit-scrollbar {
   width: 12px;
