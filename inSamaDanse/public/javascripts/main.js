@@ -145,6 +145,9 @@ modalController({
 
     const swiperPrevVideo = document.querySelector(".swiperPrevVideo");
     const swiperNextVideo = document.querySelector(".swiperNextVideo");
+
+     const swiperPrevClients = document.querySelector(".swiperPrevClients");
+    const swiperNextClients = document.querySelector(".swiperNextClients");
     const reviews = new Swiper(".reviews", {
       // Optional parameters
 
@@ -190,6 +193,52 @@ modalController({
 
       loop: true,
      
+
+     a11y: false, 
+       breakpoints: {
+    // Если ширина экрана >= 480px
+    360: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+
+    864: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+
+
+     1280: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // Если ширина экрана >= 768px
+    
+  }
+
+      // If we need pagination
+      //   pagination: {
+      //     el: '.swiper-pagination',
+      //   },
+
+      //   // Navigation arrows
+      //   navigation: {
+      //     nextEl: '.swiper-button-next',
+      //     prevEl: '.swiper-button-prev',
+      //   },
+
+      //   // And if we need scrollbar
+      //   scrollbar: {
+      //     el: '.swiper-scrollbar',
+      //   },
+    });
+
+
+      const videostudentsClints = new Swiper(".video-reviews-students", {
+      // Optional parameters
+
+      loop: true,
+     loopAddBlankSlides: true,
 
      a11y: false, 
        breakpoints: {
@@ -276,6 +325,15 @@ modalController({
       //     el: '.swiper-scrollbar',
       //   },
     });
+
+    swiperPrevClients.addEventListener("click", () => {
+      videostudentsClints.slidePrev();
+    });
+
+    swiperNextClients.addEventListener("click", () => {
+      videostudentsClints.slideNext();
+    });
+
 
     swiperPrevVideo.addEventListener("click", () => {
       videostudents.slidePrev();
@@ -442,6 +500,80 @@ videosЬMobile.forEach(video => {
   });
 });
   }
+
+
+  function playVideoClients() {
+    document.querySelectorAll('.video-container-clients').forEach(container => {
+  const video = container.querySelector('.lazy-video-clients');
+  const playBtn = container.querySelector('.play-btn-clients');
+  const source = container.querySelector('.video-container-clients source');
+const videosЬMobile = document.querySelectorAll('.lazy-video-clients');
+
+
+videosЬMobile.forEach(video => {
+ video.addEventListener('touchstart', function(event) {
+    event.preventDefault(); // Отменяет стандартное поведение браузера
+    // Ваша логика управления
+}, { passive: false })
+})
+
+
+
+  container.addEventListener('click', (e) => {
+    e.preventDefault();
+    // Находим source и меняем data-src на src
+    const sources = document.querySelectorAll('.video-container-clients source');
+    const videos = document.querySelectorAll('.lazy-video-clients');
+
+
+ 
+
+  
+    
+
+    if (source && source.dataset.src) {
+      
+        videos.forEach(v => {
+           if (v !== video) {
+  
+               v.firstElementChild.src = ""
+
+               v.load()
+                v.play()
+               v.controls = false;
+               v.nextElementSibling .style.display = 'block';
+           }
+
+          else {
+            
+            source.src = source.dataset.src;
+              video.load();
+              video.controls = true;
+              playBtn.style.display = 'none';
+            video.play();
+             
+          }
+
+           
+        
+    })
+    
+
+     
+      
+      
+      
+    
+    }
+    
+    // Прячем кнопку и запускаем видео
+    
+  });
+});
+  }
+
+
+  playVideoClients();
 
 
    function playVideoPreview() {

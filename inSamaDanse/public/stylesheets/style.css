@@ -206,7 +206,7 @@ figure {
   z-index: 200;
 }
 
-.swiperPrev, .swiperPrevInsama, .swiperPrevVideo {
+.swiperPrev, .swiperPrevInsama, .swiperPrevVideo, .swiperPrevClients {
   background-image: url("../images/slide_left.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -215,7 +215,7 @@ figure {
   
 }
 
-.swiperNext, .swiperNextInsama, .swiperNextVideo {
+.swiperNext, .swiperNextInsama, .swiperNextVideo, .swiperNextClients {
   background-image: url("../images/slide_left.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -226,7 +226,7 @@ figure {
 }
 
 
-.swiperNext:hover, .swiperNextInsama:hover, .swiperNextVideo:hover {
+.swiperNext:hover, .swiperNextInsama:hover, .swiperNextVideo:hover, .swiperNextClients:hover {
   background-image: url("../images/slide-active.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -235,7 +235,7 @@ figure {
   transform: rotate(0deg);
 }
 
-.swiperPrev:hover, .swiperPrevInsama:hover, .swiperPrevVideo:hover {
+.swiperPrev:hover, .swiperPrevInsama:hover, .swiperPrevVideo:hover, .swiperPrevClients:hover {
   background-image: url("../images/slide-active.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -514,7 +514,7 @@ transition: opacity 0.5s ease-in;
   height: 100%;
 }
 
-.video-container {
+.video-container, .video-container-clients {
   position: relative;
   height: 644px;
   
@@ -532,7 +532,7 @@ transition: opacity 0.5s ease-in;
   
 }
 
-.play-btn {
+.play-btn, .play-btn-clients {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -593,6 +593,22 @@ content: '';
   top: 65%;
   right: 20%;
   z-index: 700;
+}
+
+.video-reviews-students {
+  width: 100%;
+  height: 100%;
+}
+
+.lazy-video-clients {
+  border-radius: 20px;
+  height: 644px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video-container-clients {
+  border-radius: 20px;
 }
 
 
@@ -659,6 +675,11 @@ content: '';
   padding-top: 40px;
 }
 
+.play-btn-clients {
+    top: 42% !important;
+    left: 80%;
+  }
+
 .footer-bg {
  background: linear-gradient(180deg, rgba(26, 13, 13, 0.2) 0%, rgba(162, 55, 16, 0.2) 34.62%, rgba(23, 11, 6, 0.2) 100%);
   height: 691px;
@@ -690,8 +711,17 @@ content: '';
     width: 814px !important;
   }
 
+  .lazy-video-clients {
+    height: 500px;
+  }
 
-  .video-container {
+  .play-btn-clients {
+    top: 42%;
+    left: 80%;
+  }
+
+
+  .video-container, .video-container-clients {
   position: relative;
   height: 500px;
   
@@ -722,6 +752,8 @@ content: '';
     font-size: 12px;
     opacity: 0.4;
 }
+
+
 
 
 .robokassa-message::placeholder {
