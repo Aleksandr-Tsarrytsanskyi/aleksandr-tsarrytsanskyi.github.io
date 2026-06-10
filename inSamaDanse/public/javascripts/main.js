@@ -375,6 +375,17 @@ modalController({
   const video = container.querySelector('.lazy-video');
   const playBtn = container.querySelector('.play-btn');
   const source = container.querySelector('.video-container source');
+const videosЬMobile = document.querySelectorAll('.lazy-video');
+
+
+videosЬMobile.forEach(video => {
+ video.addEventListener('touchstart', function(event) {
+    event.preventDefault(); // Отменяет стандартное поведение браузера
+    // Ваша логика управления
+}, { passive: false })
+})
+
+
 
   container.addEventListener('click', (e) => {
     e.preventDefault();
