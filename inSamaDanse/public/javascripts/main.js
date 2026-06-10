@@ -445,8 +445,16 @@ videosЬMobile.forEach(video => {
     document.querySelectorAll('.btn-video-preview').forEach(btn => {
   // const video = container.querySelector('.lazy-video');
   // const playBtn = container.querySelector('.play-btn');
-  // const source = container.querySelector('.video-container source');
+  const videosЬMobile = document.querySelectorAll('.lazy-preview-video');
   
+      videosЬMobile.forEach(video => {
+ video.addEventListener('touchstart', function(event) {
+    event.preventDefault(); // Отменяет стандартное поведение браузера
+    // Ваша логика управления
+}, { passive: false })
+})
+
+
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     let videoContainer = e.target.parentElement.parentElement.parentElement.lastElementChild 
