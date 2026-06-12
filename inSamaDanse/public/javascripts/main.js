@@ -282,11 +282,16 @@ modalController({
      const inSama = new Swiper(".inSama", {
       // Optional parameters
         
-
+      direction: 'vertical',
       loop: true,
       slidesPerView: "auto",
       spaceBetween: 0,
       centeredSlides: false,
+      speed: 1000,
+      effect: 'fade', // Включаем эффект
+  fadeEffect: {
+    crossFade: true // Убирает мерцание текста во время смены
+  },
       autoplay: {
     delay: 3000, // Задержка между слайдами в 3 секунды
     disableOnInteraction: false, // Автопрокрутка продолжится после клика/свайпа
