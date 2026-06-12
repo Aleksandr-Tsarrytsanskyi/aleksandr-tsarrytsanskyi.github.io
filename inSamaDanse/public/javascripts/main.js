@@ -292,10 +292,10 @@ modalController({
   fadeEffect: {
     crossFade: true // Убирает мерцание текста во время смены
   },
-  //     autoplay: {
-  //   delay: 3000, // Задержка между слайдами в 3 секунды
-  //   disableOnInteraction: false, // Автопрокрутка продолжится после клика/свайпа
-  // },
+      autoplay: {
+    delay: 3000, // Задержка между слайдами в 3 секунды
+    disableOnInteraction: false, // Автопрокрутка продолжится после клика/свайпа
+  },
 
       on: {
     init: function () {
