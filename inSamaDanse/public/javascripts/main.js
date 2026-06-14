@@ -140,8 +140,8 @@ modalController({
   function swiper() {
     const swiperPrev = document.querySelector(".swiperPrev");
     const swiperNext = document.querySelector(".swiperNext");
-     const swiperPrevInsama = document.querySelector(".swiperPrevInsama");
-    const swiperNextInsama = document.querySelector(".swiperNextInsama");
+    //  const swiperPrevInsama = document.querySelector(".swiperPrevInsama");
+    // const swiperNextInsama = document.querySelector(".swiperNextInsama");
 
     const swiperPrevVideo = document.querySelector(".swiperPrevVideo");
     const swiperNextVideo = document.querySelector(".swiperNextVideo");
@@ -284,23 +284,63 @@ modalController({
         
       direction: 'vertical',
       loop: true,
-      slidesPerView: "auto",
+      slidesPerView: 1,
       spaceBetween: 0,
       centeredSlides: false,
-      speed: 1000,
-      effect: 'fade', // Включаем эффект
-  fadeEffect: {
-    crossFade: true // Убирает мерцание текста во время смены
-  },
-  //     autoplay: {
-  //   delay: 3000, // Задержка между слайдами в 3 секунды
-  //   disableOnInteraction: false, // Автопрокрутка продолжится после клика/свайпа
+      // speed: 1000,
+
+      
+
+
+
+  // effect: 'coverflow',
+  // grabCursor: true,
+  // centeredSlides: true,
+  // slidesPerView: 'auto',
+  // coverflowEffect: {
+  //   rotate: 50,
+  //   stretch: 0,
+  //   depth: 100,
+  //   modifier: 1,
+  //   slideShadows: true,
   // },
+
+
+  //     speed: 300,
+  //     effect: 'fade', // Включаем эффект
+  // fadeEffect: {
+  //   crossFade: true // Убирает мерцание текста во время смены
+  // },
+      autoplay: {
+    delay: 3000, // Задержка между слайдами в 3 секунды
+    disableOnInteraction: false, // Автопрокрутка продолжится после клика/свайпа
+  },
 
       on: {
     init: function () {
       this.update();
     },
+
+
+    slideChangeTransitionEnd: function () {
+      // Находим элементы внутри активного слайда
+      const activeSlide = this.slides[this.activeIndex];
+      const elementsToAnimate = activeSlide.querySelectorAll('.inSama h2');
+      
+      // Запускаем анимацию с помощью GSAP
+      gsap.to(elementsToAnimate, { 
+        opacity: 1, 
+        y: 0, 
+        duration: 0.8, 
+        stagger: 0.2 
+      });
+    },
+    slideChangeTransitionStart: function() {
+      // Сбрасываем элементы к исходному положению при начале свайпа
+      this.slides.forEach(slide => {
+        gsap.set(slide.querySelectorAll('.inSama h2'), { opacity: 0.5, y: 50 });
+      });
+    }
   },
 
   //      breakpoints: {
@@ -357,13 +397,13 @@ modalController({
       reviews.slideNext();
     });
 
-     swiperPrevInsama.addEventListener("click", () => {
-      inSama.slidePrev();
-    });
+    //  swiperPrevInsama.addEventListener("click", () => {
+    //   inSama.slidePrev();
+    // });
 
-    swiperNextInsama.addEventListener("click", () => {
-      inSama.slideNext();
-    });
+    // swiperNextInsama.addEventListener("click", () => {
+    //   inSama.slideNext();
+    // });
   }
 
   function addEventListener() {

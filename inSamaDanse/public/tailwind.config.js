@@ -14,7 +14,8 @@ tailwind.config = {
       screens: {
       'tablet': '864px',
       'mobile': '360px',
-      "pc": "1280px"
+      "pc": "1280px",
+      "dek": '1440px'
       
     },
      

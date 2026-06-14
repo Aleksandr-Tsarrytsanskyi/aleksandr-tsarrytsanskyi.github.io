@@ -612,6 +612,25 @@ content: '';
 }
 
 
+/* .swiper-slide {
+  opacity: 0.5; 
+  transition-property: opacity; 
+  transition: opacity 0.5s ease-in;
+}
+
+.swiper-slide-active  {
+  opacity: 1;
+transition: opacity 0.5s ease-in;
+z-index: 1;
+
+} 
+
+.swiper-slide-prev h2 {
+  opacity: 0.5;
+  transition: all 0.5s ease-in;
+} */
+
+
 
 
 
@@ -620,6 +639,20 @@ content: '';
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
+}
+
+
+@media screen and (min-width: 1440px)  {
+  .bg-cover-pos img {
+    object-fit: fill !important;
+  }
+}
+
+
+@media screen and (min-width: 2400px)  {
+  .bg-cover-pos img {
+    object-fit: cover !important;
+  }
 }
 
 @media screen and (max-width: 864px) {
@@ -687,6 +720,12 @@ content: '';
 
 #questions  .acardion-faq {
   width: 300px !important;
+}
+
+
+.inSama {
+  height: 483px !important;
+  margin-top: 270px !important;
 }
 
 #IndependentCourses .acardion, .acardion-faq {
@@ -779,9 +818,17 @@ content: '';
 }
 .inSama {
   width: 100%;
-  height: 100%;
+  height: 500px;
   padding:  0 !important;
+  margin-top: 130px;
 }
+
+.inSama .swiper-slide {
+   text-align: justify;
+    hyphens: auto;
+     word-break: break-all;
+}
+
 
 .inSama .swiper-slide {
    margin-right: -1px !important;
