@@ -718,6 +718,10 @@ z-index: 1;
   height: 691px;
 }
 
+.review-bg {
+  height: 500px !important;
+}
+
 #questions  .acardion-faq {
   width: 300px !important;
 }
@@ -809,7 +813,7 @@ z-index: 1;
   }
 
   .review-bg {
-    height: 500px;
+    height: 460px;
   }
 
   .reviews {
@@ -842,6 +846,10 @@ z-index: 1;
 .inSama .swiper-wrapper {
   margin: 0;
   padding: 0;
+}
+
+.reviews  .swiper-slide {
+  overflow: hidden;
 }
 
 
