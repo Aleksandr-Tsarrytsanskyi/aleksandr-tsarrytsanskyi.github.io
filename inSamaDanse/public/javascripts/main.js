@@ -1,3 +1,4 @@
+
 const conatctForm = document.querySelector(".robokassa");
       const input = conatctForm.elements
     let {name , phone ,message} = input
@@ -287,7 +288,7 @@ modalController({
       slidesPerView: 1,
       spaceBetween: 0,
       centeredSlides: false,
-      // speed: 1000,
+      speed: 800,
 
       
 
@@ -331,7 +332,7 @@ modalController({
       gsap.to(elementsToAnimate, { 
         opacity: 1, 
         y: 0, 
-        duration: 0.8, 
+        duration: 1, 
         stagger: 0.2 
       });
     },
