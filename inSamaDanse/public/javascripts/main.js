@@ -846,10 +846,10 @@ function madiaScreenVideo() {
     button.addEventListener('click', () => {
   if (video.muted) {
     video.muted = false;
-    button.textContent = 'Выключить звук';
+    button.classList.add('soundToggle-off')
   } else {
     video.muted = true;
-    button.textContent = 'Включить звук';
+    button.classList.remove('soundToggle-off')
   }
 });
 

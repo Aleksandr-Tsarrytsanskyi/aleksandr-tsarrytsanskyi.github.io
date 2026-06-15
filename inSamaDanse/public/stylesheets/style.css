@@ -653,6 +653,20 @@ content: '';
   width: 100%;
   object-fit: cover;
 }
+#soundToggle {
+  background: url('../images/sound.svg') no-repeat center;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+
+.soundToggle-off {
+   background: url('../images/off-sound.svg') no-repeat center !important;
+  width: 30px !important;
+  height: 30px !important;
+  border: none !important;
+}
 
 .video-container-clients {
   border-radius: 20px;
