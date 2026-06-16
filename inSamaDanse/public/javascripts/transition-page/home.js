@@ -1,7 +1,7 @@
 export const homeTexts = {
      text1: {
-        ru: "",
-        en: ""
+        ru: "танец святой и грешной",
+        en: "The Dance of the Holy and the Sinful"
     },
      text2: {
         ru: "",

@@ -29,13 +29,23 @@
   <body>
    
     <header class="relative header">
-        <button type="button" class="cursor-pointer burger-btn">
+        <div class="flex gap-x-[20px] items-center fixed z-50 right-[26px] top-[38px]">
+          <div>
+            <select name="lang" class="lang font-jostMedium">
+              <option  value="ru">RU</option>
+              <option value="en">EN</option>
+            </select>
+          </div>
+          <div>
+            <button type="button" class="cursor-pointer burger-btn">
             <svg class="cursor-pointer relative z-50" width="50" height="10" viewBox="0 0 50 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="50" height="1" fill="white"/>
                 <rect y="9" width="50" height="1" fill="white"/>
                 </svg>
 
            </button>
+          </div>
+        </div>
             <button id="soundToggle"></button>
       <div class="relative pc:h-[1080px] mobile:h-[790px] header-video-poster">
         <div class="video-placeholder">
@@ -61,7 +71,7 @@
             <h1 class="font-FahkwangRegular pc:text-[64px] tablet:text-[54px] mobile:text-[44px] text-[#FFE2C4]">
               InSama Dance
             </h1>
-            <p class="font-JostSemibold pc:text-[20px] pc:uppercase mobile:text-[16px] tablet:text-[16px] text-[#FFE2C4] text-center">
+            <p data-lang="text1" class="font-JostSemibold pc:text-[20px] pc:uppercase mobile:text-[16px] tablet:text-[16px] text-[#FFE2C4] text-center">
               танец святой и грешной
             </p>
           </div>

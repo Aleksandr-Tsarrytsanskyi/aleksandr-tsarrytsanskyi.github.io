@@ -1,4 +1,4 @@
-
+import {changesLanguage} from "./lang.js"
 const conatctForm = document.querySelector(".robokassa");
       const input = conatctForm.elements
     let {name , phone ,message} = input
@@ -95,6 +95,8 @@ modalController({
       });
     });
   }
+
+  changesLanguage();
 
   function changeAcardionFaq() {
     const acardion = document.querySelectorAll(".acardion-faq");

@@ -1,20 +1,23 @@
-import { homeTexts } from "../translation-pages/lang-home.js";
+import { homeTexts } from "./transition-page/home.js";
 
-export default function changesLanguage() {
+export  function changesLanguage() {
+  
   let currentLang = "ru";
   const currentPathName = window.location.pathname;
   let currentTexts = {};
-  const langSelect = document.querySelector(".select_lang");
+  const langSelect = document.querySelector(".lang");
 
   function checkPagePathName() {
     switch (currentPathName) {
-      case "../index.html":
+      case "/public/index.html":
         currentTexts = homeTexts;
+        console.log(currentTexts);
+        
         break;
-
-      default:
-        currentTexts = {};
-        break;
+      default: {
+          currentTexts = {}
+      }
+      
     }
   }
 
@@ -34,7 +37,7 @@ export default function changesLanguage() {
     
     langSelect.addEventListener("change", function (e) {
       currentLang = this.value;
-
+      
       changeLang();
     });
   }
