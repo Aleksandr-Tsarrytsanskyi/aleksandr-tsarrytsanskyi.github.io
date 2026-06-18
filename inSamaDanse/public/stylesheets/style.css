@@ -813,9 +813,13 @@ z-index: 1;
 
 
 .inSama {
-  height: 483px !important;
+  height: 290px !important;
   width: 295px !important;
-  margin-top: 300px !important;
+  margin-top: 450px !important;
+}
+
+.inSama .swiper-slide {
+  overflow: hidden;
 }
 
 #IndependentCourses .acardion, .acardion-faq {
