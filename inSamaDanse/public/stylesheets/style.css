@@ -837,6 +837,14 @@ z-index: 1;
 }
 
 
+select {
+  appearance: none; /* Убирает стрелки в Chrome, Safari, Firefox и на мобильных ОС */
+  -webkit-appearance: none; /* Обязательно для старых версий iOS и Android */
+  -moz-appearance: none;
+
+}
+
+
 .inSama {
   height: 300px !important;
   width: 295px !important;
