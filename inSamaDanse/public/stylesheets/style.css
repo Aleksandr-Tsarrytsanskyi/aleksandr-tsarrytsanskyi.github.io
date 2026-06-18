@@ -110,6 +110,12 @@ input {
    
 }
 
+
+.acardion__content {
+  width: 350px;
+}
+
+
 .acardion, .acardion-faq  {
   background-image: url("../images/acardion-icon.svg");
   background-repeat: no-repeat;
