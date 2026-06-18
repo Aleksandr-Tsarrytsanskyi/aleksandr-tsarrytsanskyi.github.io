@@ -9,7 +9,7 @@ export  function changesLanguage() {
 
   function checkPagePathName() {
     switch (currentPathName) {
-      case "/inSamaDanse/public/":
+      case "/inSamaDanse/public/index.html":
         currentTexts = homeTexts;
         console.log(currentTexts);
         
