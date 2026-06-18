@@ -697,6 +697,31 @@ content: '';
 }
 
 
+.change-lang-course2 {
+  margin-top: 42px !important;
+}
+
+.change-lang-course3 {
+  margin-top: 72px !important;
+}
+
+.change-lang-item {
+  margin-top: 5px !important;
+}
+
+.change-lang-course4 {
+  margin-top: 105px !important;
+}
+
+.mobile-lang-course3 {
+  margin-top: 50px !important;
+}
+
+
+.change-lang-course5 {
+  margin-top: 50px !important;
+}
+
 /* .swiper-slide {
   opacity: 0.5; 
   transition-property: opacity; 

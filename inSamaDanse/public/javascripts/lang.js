@@ -31,13 +31,45 @@ export  function changesLanguage() {
       }
     }
   }
-  changeLang();
+
 
   function changesAboutUs() {
-    
+    const course2 = document.querySelector(".lang-course2")
+          const course3 = document.querySelector(".lang-course3")
+          const course4 = document.querySelector(".lang-course4")
+          const langItem = document.querySelector(".lang-item")
+          const course5 = document.querySelector(".lang-course5")
+          course2.classList.remove("change-lang-course2")
+          course3.classList.remove("change-lang-course3")
+          course4.classList.remove("change-lang-course4")
+          langItem.classList.remove("change-lang-item")
+         course3.classList.remove("mobile-lang-course3")
+         course5.classList.remove("change-lang-course5")
     langSelect.addEventListener("change", function (e) {
       currentLang = this.value;
-      
+      if(this.value == "ru") {
+        location.reload()
+      }
+
+      if(innerWidth >= 1280) {
+        if(this.value == "en") {
+         
+
+          course2.classList.add("change-lang-course2")
+          course3.classList.add("change-lang-course3")
+          course4.classList.add("change-lang-course4")
+        }
+      }
+
+      if(innerWidth <= 864) {
+         if(this.value == "en") {
+           
+
+         langItem.classList.add("change-lang-item")
+         course3.classList.add("mobile-lang-course3")
+         course5.classList.add("change-lang-course5")
+         }
+      }
       changeLang();
     });
   }
