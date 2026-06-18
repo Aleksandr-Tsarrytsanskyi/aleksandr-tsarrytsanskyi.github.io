@@ -348,13 +348,21 @@ function init() {
         },
       },
 
-      //      breakpoints: {
-      //   // Если ширина экрана >= 480px
-      //   360: {
-      //     slidesPerView: 1,
-      //     spaceBetween: 0,
+           breakpoints: {
+        // Если ширина экрана >= 480px
+        360: {
+          slidesPerView: 1,
+          direction: "horizontal",
+          spaceBetween: 0,
 
-      //   },
+        },
+
+         864: {
+          direction: "vertical",
+
+        },
+
+      }
       //   // Если ширина экрана >= 768px
 
       // }

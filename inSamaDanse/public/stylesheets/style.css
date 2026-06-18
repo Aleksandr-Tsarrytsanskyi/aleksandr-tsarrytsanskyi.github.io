@@ -828,6 +828,10 @@ z-index: 1;
   height: 691px;
 }
 
+.inSama {
+  text-align: center;
+}
+
 .review-bg {
   height: 500px !important;
 }
@@ -848,7 +852,7 @@ select {
 .inSama {
   height: 300px !important;
   width: 295px !important;
-  margin-top: 450px !important;
+  margin-top: 380px !important;
 }
 
 .inSama .swiper-slide {
