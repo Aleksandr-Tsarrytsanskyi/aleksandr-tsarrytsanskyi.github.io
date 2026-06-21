@@ -199,6 +199,11 @@ input {
   opacity: 1;
 }
 
+.change-item1-res {
+  padding-top: 10px !important;
+  padding-right: 18px !important;
+}
+
 .vip-btn {
   border: 1px solid #590004 ;
   border-radius: 12px;
