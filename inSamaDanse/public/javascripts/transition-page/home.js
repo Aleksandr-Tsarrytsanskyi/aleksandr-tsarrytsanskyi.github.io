@@ -677,9 +677,59 @@ export const homeTexts = {
      text214: {
         en: "Some of the visual elements in the introductory video were created using artificial intelligence technology. These scenes are for illustrative purposes only."
     },
-     text305: {
-        en: ""
+     text215: {
+          en: 'About the Author'
     },
+
+    text216: {
+        en: 'What is InSama Dance?'
+    },
+    text217: {
+        en: '“InSama Dance – The Concubine” Course'
+    },
+    text218: {
+        en: '“Before and After” Videos of the Students'
+    },
+    text219: {
+        en: 'Self-Study Courses'
+    },
+    text220: {
+        en: 'Student Testimonials'
+    },
+    text221: {
+        en: 'Frequently Asked Questions'
+    },
+    text222: {
+        en: 'Payment Request'
+    },
+    text223: {
+        en: 'What is your name?'
+    },
+    text224: {
+        en: 'Phone number'
+    },
+    text225: {
+        en: 'Your message'
+    },
+    text226: {
+        en: 'Submit a request'
+    },
+    text227: {
+        en: 'You agree to the terms and conditions regarding the processing of personal data'
+    },
+    text228: {
+        en: 'Privacy Policy'
+    },
+    text229: {
+        en: ''
+    },
+    text230: {
+        en: ''
+    },
+    text231: {
+        en: ''
+    },
+    
 
 
 
