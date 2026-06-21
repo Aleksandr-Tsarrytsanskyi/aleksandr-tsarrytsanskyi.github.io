@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Jost Medium";
-  src: url("../fonts/Jost-Medium.ttf") format("truetype");
+  src: local('Jost Medium'), local('Jost-Medium'),
+   url("../fonts/Jost-Medium.woff2") format('woff2'),
+   url("../fonts/Jost-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -8,7 +10,9 @@
 
 @font-face {
   font-family: "Jost SemiBold";
-  src: url("../fonts/Jost-SemiBold.ttf") format("truetype");
+  src:  local('Jost SemiBold'), local('Jost-SemiBold'), 
+   url("../fonts/Jost-SemiBold.woff2") format('woff2'), 
+  url("../fonts/Jost-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -16,24 +20,33 @@
 
 
 @font-face {
-  font-family: "Helvetica Refular";
-  src: url("../fonts/Helvetica.ttf") format("truetype");
+  font-family: "Helvetica Regular";
+  src: local('helvetica Regular'), local('helvetica-Regular'),
+  url("../fonts/helvetica_regular.woff2") format('woff2')
+   url("../fonts/helvetica_regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
+
+
+
 @font-face {
   font-family: "Helvetica Bold";
-  src: url("../fonts/Helvetica-Bold.ttf") format("truetype");
+  src: local('Helvetica Bold'), local('Helvetica-Bold'), 
+  url("../fonts/helvetica_bold.woff2") format('woff2')
+  url("../fonts/helvetica_bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Fahkwang Refular";
-  src: url("../fonts/Fahkwang-Regular.ttf") format("truetype");
+  font-family: "Fahkwang Regular";
+  src: local('Fahkwang Regular'), local('Fahkwang-Regular'), 
+  url("../fonts/Fahkwang-Regular.woff2") format('woff2') 
+  url("../fonts/Fahkwang-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -41,16 +54,10 @@
 
 @font-face {
   font-family: "Fahkwang Medium";
-  src: url("../fonts/Fahkwang-Medium.ttf") format("truetype");
+  src: local('Fahkwang Medium'), local('Fahkwang-Medium'), 
+  url("../fonts/Fahkwang-Medium.woff2") format('woff2') 
+  url("../fonts/Fahkwang-Medium.ttf") format("truetype");
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter_18pt Regular";
-  src: url("../fonts/Inter_18pt-Regular.ttf") format("truetype");
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }

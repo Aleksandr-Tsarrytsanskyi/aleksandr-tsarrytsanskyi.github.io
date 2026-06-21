@@ -1,12 +1,10 @@
-/* body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-} */
+
 
 body {
   margin: 0;
   padding: 0;
   background: #ffe7d3;
+  font: "Lucida Grande", Helvetica, Arial, sans-serif
 }
 
 html {
@@ -106,14 +104,24 @@ input {
   font-display: swap;
 }
 
+
+
+
+
 @font-face {
-  font-family: "Inter_18pt Regular";
+  font-family: "Inter 18pt Regular";
   src: local('Inter Regular'), local('Inter-Regular'), 
   url("../fonts/Inter_18pt-Regular.woff2") format('woff2') 
    url("../fonts/Inter_18pt-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+
+.header-title {
+  font-family: "Inter 18pt Regular";
+  font-weight: 400;
 }
 
 .acardion__content, .acardion__content-faq {
