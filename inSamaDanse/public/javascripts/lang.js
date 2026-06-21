@@ -9,7 +9,7 @@ export  function changesLanguage() {
 
   function checkPagePathName() {
     switch (currentPathName) {
-      case "/inSamaDanse/public/":
+      case "/public/index.html":
         currentTexts = homeTexts;
         console.log(currentTexts);
         
@@ -40,6 +40,8 @@ export  function changesLanguage() {
           const langItem = document.querySelector(".lang-item")
           const course5 = document.querySelector(".lang-course5")
           const itemRes = document.querySelector(".item1-res")
+          const courseItems = document.querySelectorAll(".course-item")
+
           course2.classList.remove("change-lang-course2")
           course3.classList.remove("change-lang-course3")
           course4.classList.remove("change-lang-course4")
@@ -59,6 +61,9 @@ export  function changesLanguage() {
           course2.classList.add("change-lang-course2")
           course3.classList.add("change-lang-course3")
           course4.classList.add("change-lang-course4")
+          courseItems.forEach(item => {
+              item.classList.add("course-items-hide")
+          })
         }
 
 

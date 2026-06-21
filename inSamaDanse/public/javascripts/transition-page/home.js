@@ -1,130 +1,130 @@
 export const homeTexts = {
      text1: {
-        ru: "танец святой и грешной",
-        en: "The Dance of the Holy and the Sinful"
+       
+        en: "The dance of the holy and the sinful"
     },
      text2: {
-        ru: "",
-        en: "Who I Am"
+       
+        en: "ABOUT "
     },
 
      who: {
        
-        en: "Who I Am"
+        en: "ABOUT "
     },
      text3: {
        
-        en: "I’m Aigerim Uneskkz. My journey in dance has spanned 19 years: from my life in Saryagash to the stage of “Dances on TNT” and my master classes around the world. I know how to create dances that people fall in love with: my videos on TikTok and YouTube have racked up hundreds of millions of views and reached an audience of millions."
+        en: 'I am Aigerim Unesskz. My path in dance spans 19 years, from living in Saryagash to the stage of "Dances on TNT" and my work shops around the world.I know how to create a dance that people fall in love with. My videos on TikTok and YouTube have gained hundreds of millions of views and a multi-million audience.'
     },
      text4: {
      
-        en: "I've gone from focusing on perfect technique to realizing that dance isn't just a series of movements, but a way to find my place in life."
+        en: "I went from perfect technique to understanding that dance is not just a set of routines, but a way to take your place in life."
     },
      text5: {
        
-        en: "At some point, I began to feel constrained by the traditional rules of belly dance. I realized that while technique can be copied, your essence cannot be stolen. That’s how InSama came to be."
+        en: "At some point, I felt cramped within the traditional rules of oriental dance. I realized that technique can be copied, but your inner state cannot be stolen. That's how InSama was born."
     },
      text6: {
         
-        en: "Today, I help women not just learn the movements, but fill them with meaning. In my approach, you don’t have to be “perfect.” Here, you can be whoever you want to be: too gentle, bold, strong, or sensual."
+        en: 'Today I help women not just memorize movements, but fill them with meaning. In my movement, you dont need to be "right." Here you can be anything: too gentle, bold, strong, or sensual.'
     },
      text7: {
       
-        en: "Take up as much space in life as you truly want to."
+        en: "To take up as much space in life as you actually want."
     },
      text8: {
       
-        en: "I am Aigerim Unеsskz."
+        en: "I am Aigerim Unesskz."
     },
      text9: {
        
-        en: "For 19 years now, my life has been centered around dance."
+        en: "For 19 years now, my life has been connected with dance."
     },
      text10: {
       
-        en: "My journey began with my life in Saryagash and led me to the stage of “Dances on TNT,” to millions of views, performances, and master classes in various countries around the world."
+        en: 'My path started from life in Saryagash and brought me to the stage of "Dances on TNT" to millions of views, performances and work shops in different countries around the world.'
     },
      text11: {
      
-        en: "Over the years, I've studied a lot, taught, performed, and sought my own voice in dance, because the traditional format eventually began to feel too restrictive for me."
+        en: "Over these years, I studied a lot, taught, performed and looked for my own language in dance because the traditional format eventually became too cramped for me."
     },
      text12: {
        
-        en: "It was this search that led me to where I am today—to my own path."
+        en: "This search is what brought me to where I am today — to my own movement."
     },
      text13: {
        
-        en: "You'll understand why two people make the exact same movement, but one is mesmerizing while the other isn't."
+        en: "InSama Dance is a space to explore beauty alongside anger, shame, vulnerability, power, sexuality, pain, desire and freedom."
     },
      text14: {
        
-        en: "Here, you don't have to be just beautiful. Here, you can be all kinds of people: InSama teaches more than just "
+        en: "InSama teaches you to stop repeating memorized moves and start filling every motion with your true inner state. "
     },
      text15: {
       
-        en: "We work not only with the body, but also with our awareness: weight in the feet, breathing, the pelvis, the chest, and the gaze."
+        en: "The exact same hip drop can be bold, wounded, playful, free, or desperate. The technique is identical, but the meaning changes entirely."
     },
      text16: {
        
-        en: " InSama is the transition from “I’m trying to be right” to “I am.”"
+        en: " You will understand why two people can perform the exact same movement, yet one completely mesmerizes you while the other leaves you cold."
     },
      text17: {
         
-        en: "After InSama, the audience begins to FEEL your dance, rather than just seeing the technique."
+        en: "You don't have to just look pretty here. InSama teaches you to live through your movements rather than just perform them."
     },
      text18: {
        
-        en: "At InSama, movement becomes a way to express through the body what is difficult to put into words."
+        en: "We work with both the body and your awareness, focusing on your feet, breath, pelvis, chest, and gaze."
     },
      text19: {
      
-        en: " InSama Dance is a style of dance that allows you to explore not only beauty, but also anger, shame, vulnerability, power, sexuality, pain, desire, and freedom."
+        en: 'InSama is your shift from "trying to do it right" to simply "being."'
     },
      text20: {
        
-        en: "After InSama, you'll stop dancing with memorized moves and learn to infuse your movements with your own state of being."
+        en: "After InSama, the audience will actually feel your dance instead of just tracking your technique."
     },
      text21: {
         
-        en: "The same hip throw can be bold, wounded, playful, free, or desperate. The technique is the same—the meaning is different."
+        en: "In InSama, movement becomes a way to express things that are impossible to put into words."
     },
 
     text22: {
         
-        en: "InSama Dance's Most Intense Course – THE CONCUBINE"
+        en: "The most transformational InSama Dance course — INITIATION: Shadow & Power"
     },
     text23: {
         en: "If even one of these resonates with you, this course is for you:"
     },
     text24: {
-        en: "I can't feel my body."
+        en: "I don't feel my body."
     },
     text25: {
-        en: "I live in a state of constant dissatisfaction with how I look. Stiffness, constant swelling, the feeling that “I’m made of wood.” My body is one thing, and I am another."
+        en: "I’m trapped in constant frustration with my reflection, feeling stiff, chronically bloated, and totally disconnected from my own body."
     },
     text26: {
         en: "I hide my sexuality."
     },
     text27: {
-        en: "I'm afraid to stand out; even the slightest hint of seduction makes me feel ashamed or paralyzes me. I'm constantly looking over my shoulder, wondering, “What will people think?”"
+        en: "I’m afraid to stand out or express myself. The slightest hint of seduction makes me freeze with shame, always worrying about what others will think"
     },
     text28: {
-        en: "It seems that without a man, “I'm not whole.”"
+        en: "I feel incomplete without a man. I want to rely on myself."
     },
     text29: {
-        en: "A sense of underlying loneliness and the feeling that “without a man, I’m incomplete.” I wait for someone to come and save me, instead of relying on myself."
+        en: "Deep down, there’s a constant feeling of loneliness and the belief that I'm not whole without a partner. I keep waiting for a savior instead of building my own foundation."
     },
     text30: {
-        en: "The body is crying out for help."
+        en: "My body is screaming for help."
     },
     text31: {
-        en: "My back aches constantly, my neck feels tight, and my lower back feels stiff. I live inside a rigid shell of muscle tension, unable to hear my body’s signals."
+        en: "My back constantly aches, my neck is tense, and my lower back feels like stone. I’m trapped in a thick armor of chronic muscle tension, completely deaf to my body's signals."
     },
     text32: {
-        en: "Life-Saving Mode."
+        en: "Living on battery saver mode."
     },
     text33: {
-        en: "The fire inside me has gone out; I don't even have the energy for basic things. I'm putting my true self, my passion, and my desires “on hold.”"
+        en: "The inner fire is gone, leaving no energy even for basic tasks. I keep putting off my true self, my passion, and my desires for later."
     },
     text34: {
         en: "START OCTOBER 10"
@@ -133,62 +133,62 @@ export const homeTexts = {
         en: "What's Included and What Results to Expect (online format)"
     },
     text36: {
-        en: "What's included:"
+        en: "What’s included:"
     },
     text37: {
-        en: "18 lessons—revitalize your body, technique, and dance without worrying about what’s “right,” but just for the thrill of it."
+        en: '18 lessons: Revitalize your body through technique and dance designed for pure pleasure rather than just doing it "right."'
     },
     text38: {
-        en: "These four meditations are profound practices that allow the body to shed its burdens, giving rise to a sense of lightness and freedom."
+        en: "4 meditations: Deep practices to help your body shed its heavy burdens, leaving you feeling light and free."
     },
     text39: {
-        en: "Private broadcasts—sacred encounters with secret information that transforms one’s perception of oneself, sexuality, and relationships."
+        en: "Private live streams: Sacred sessions featuring exclusive insights to completely shift how you perceive yourself, your sexuality, and your relationships."
     },
     text40: {
-        en: "Support from mentors and a helpful chat feature—to help you complete the course easily and successfully."
+        en: "Mentor support & community chat: Dedicated guidance and a high-value group chat to help you reach the finish line smoothly and effectively"
     },
     text41: {
-        en: "What will you learn?"
+        en: "What you will learn:"
     },
     text42: {
-        en: "You'll master all the elements: the instruction is beautiful, high-quality, and good for your body."
+        en: "Master every element: Beautiful, premium instruction that feels incredible and actively supports your physical health."
     },
     text43: {
-        en: "Your arms, legs, gait, and even the moment when you freeze will be filled with power and sensuality in the dance."
+        en: "Total presence in motion: Your arms, legs, gait, and even the exact moment you freeze will be infused with power and sensuality."
     },
     text44: {
-        en: "Health: breathing, muscles, lower back (hernias, protrusions), feet, and appearance—stretching, which is usually charged for separately, is included in the course."
+        en: "Complete body wellness: Breathing, muscle release, lower back care (addressing hernias and protrusions), footwork, aesthetics, and flexibility.Everything people typically pay extra for is fully included in this course."
     },
     text45: {
-        en: "What will you get as a result?"
+        en: "Your results:"
     },
     text46: {
-        en: "Your body will come alive: your gait, your posture, your dance, and your movements will speak for you."
+        en: "A body that feels alive: Your gait, posture, dance, and everyday movements will completely speak for you."
     },
 
      text47: {
-        en: "You'll start to see your sexuality as a source of strength, not as something to be ashamed of."
+        en: "Sexuality as a superpower: You will finally stop viewing your sexuality through the lens of shame and start experiencing it as pure strength."
     },
      text48: {
-        en: "The tension and chronic stress will disappear, and you'll feel energized and light."
+        en: "Freedom from tension: Chronic physical blocks and stress will melt away, making room for vibrant energy and effortless lightness."
     },
      text49: {
-        en: "Charisma and magnetism: even strangers will notice the difference in you."
+        en: "Magnetism and charisma: You will radiate such intense energy that even complete strangers will notice your dramatic before-and-after transformation."
     },
      text50: {
-        en: "Buy with a curator"
+        en: "Enroll with a Mentor "
     },
      text51: {
         en: "VIP with Aigerim"
     },
      text52: {
-        en: "“Before and After” Videos of the Students"
+        en: "Student Transformation Videos"
     },
      text53: {
-        en: "If you want to ease into it, start with short courses"
+        en: "IF YOU NEED A GENTLE START, BEGIN WITH OUR SHORT COURSES"
     },
      text54: {
-        en: "They're simpler in format, but you'll still get the same effect"
+        en: "They feature a simpler format but still deliver powerful results."
     },
      text55: {
         en: "online (recorded lessons)"
@@ -197,23 +197,23 @@ export const homeTexts = {
         en: "Contents"
     },
      text57: {
-        en: "20 lessons, each lasting 15–20 minutes"
+        en: "Includes: 20 lessons (15–20 minutes each)"
     },
      text58: {
-        en: "What you'll get:"
+        en: "What you’ll get:"
     },
      text59: {
-        en: "Technique for performing all elements"
+        en: " Full breakdown of all core elements;"
     },
      text60: {
-        en: "A complete dance routine for 4 modern Egyptian dancers"
+        en: "A complete dance routine featuring 4 modern Egyptian tracks;"
     },
 
      text61: {
-        en: "My Signature Styles"
+        en: "My signature techniques and accents;"
     },
      text62: {
-        en: "Full-Body Stretching"
+        en: "Full-body stretching."
     },
      text63: {
         en: "Buy the course"
@@ -381,7 +381,7 @@ export const homeTexts = {
         en: "Contact a manager"
     },
     text118: {
-        en: "Student Testimonials"
+        en: "Reviews"
     },
     text119: {
         en: "Text Reviews"
@@ -414,28 +414,28 @@ export const homeTexts = {
         en: "Marina K."
     },
      text129: {
-        en: "This isn’t just dancing. It’s a journey of self-discovery through the body. The teacher sees, feels, and guides with care, yet with depth. After class, I feel grounded, confident, and as though I’m exactly where I’m meant to be. Thank you for creating a space where I can be my true self."
+        en: "After the stream, I started seeing the world differently. Female power stopped feeling dirty, and I finally accepted it without shame. It feels like I got my right to be myself back."
     },
      text130: {
-        en: "After the broadcast, I saw the world through different eyes. Feminine power no longer seemed “dirty,” and I felt comfortable embracing it without shame. It felt as if I had been given back the right to be myself."
+        en: "Aigerim, thank you so much for the video lessons! You radiate such warm energy and professionalism. I just watch and dance with absolute pleasure. "
     },
      text131: {
         en: "Aigerim, I’d like to express my special thanks to you for the format of your video lessons. They radiate such a warm, friendly energy and professionalism! I really enjoy watching them and dancing along"
     },
      text132: {
-        en: "I’m going through the second stream and want to move on to the third… I didn’t understand why I felt such a strong pull to stay in this space, even if I didn’t have time to complete the assignments… I realized it the other day… that course completely shatters dance stereotypes! It’s not just technique; it’s a painful—perhaps just for me—journey toward the Self! To my source, my essence, my Soul. It’s as if chains are breaking, and you’re being given freedom! Thank you, Aigerim"
+        en: " I’m on my second round and already want to sign up for the third. I couldn't understand why I was so drawn to this space, even when I didn't have time for the assignments. Now I get it - this course completely shatters dance stereotypes! It's not just technique; it's a profound, sometimes painful journey back to my true self, my roots, and my soul. It feels like breaking free from heavy chains. Thank you, Aigerim!"
     },
      text133: {
-        en: "During the Shame Practice, I felt for the first time how my shoulder blades literally “unstuck” and my chest softened—along with my tears, years of shame flowed out. After the session, I began to breathe and move more freely. I realized that this shame had been holding all the women in our family back, and for the first time, I let it go."
+        en: " During the Shame practice, I felt my shoulder blades unstick and my chest soften for the first time. Years of buried shame came pouring out with my tears. I can finally breathe and move freely now. I realized this shame had been weighing down all the women in my family, and I finally let it go."
     },
      text134: {
         en: "During the broadcast about shame, my body literally reacted—the back of my head was throbbing, and my palms were sweating. I had never heard this information anywhere before. Thanks to the course, I quit my job, made time for myself, and for the first time began to see the world in a different light."
     },
      text135: {
-        en: "All my life, I’ve been self-conscious about my body and face, and I never believed that my sexuality could truly blossom. But through my body, through Aigerim’s practices, it’s as if I’ve been given a tool that finally helps me purify myself and reboot from deep within. This is the first method that actually works for me."
+        en: "My body literally woke up during the shame stream - the back of my head was throbbing, and my palms were sweating. I’ve never heard these insights anywhere else. Thanks to this course, I actually quit my job, made time for myself, and started looking at life through a completely new lens."
     },
      text136: {
-        en: "During the “Humiliation” exercise, I broke down emotionally—it hit me that deeply. This isn’t just a lesson; it’s intense inner work that leaves you seeing the world differently."
+        en: " I’ve been self-conscious about my face and body my entire life, never believing my sexuality could unfold. But Aigerim’s somatic practices gave me a tool to deeply cleanse and reset from within. This is the first method that actually works for me."
     },
      
     text137: {
@@ -469,56 +469,56 @@ export const homeTexts = {
     },
 
      text146: {
-        en: "Why don't you reply on Direct, and is it okay to just ask, “Is this course right for me?”"
+        en: "Why don't you reply to DMs, and can I just message you to ask if the course is right for me?"
     },
     text147: {
-        en: "We don’t work via Direct messages and don’t give personal recommendations on whether something is “right for you.” InSama is a course for women who are ready to take responsibility and learn the material on their own. If, instead of reading the website, you write “tell me if this is right for me,” then InSama is most likely not for you."
+        en: "We don't manage sales in DMs or give personal consultations on whether the course fits you.InSama is designed for women who are ready to take full responsibility and review the materials independently. If you choose to DM us instead of reading the website, InSama is likely not a good fit for you."
     },
     text148: {
-        en: "Be sure to review the following before making a purchase:"
+        en: "Please review these essential details before purchasing:"
     },
     text149: {
-        en: "detailed description"
+        en: "The detailed description"
     },
     text150: {
-        en: "Course Structure and Modules"
+        en: "The course syllabus and modules"
     },
     text151: {
-        en: "Examples of Work"
+        en: " Examples of our work"
     },
     text152: {
-        en: "“Before and After” Photos/Videos"
+        en: "Before/after transformations"
     },
     text153: {
-        en: "InSama's philosophy"
+        en: "The InSama philosophy"
     },
     text154: {
-        en: "How does this interaction work? What is your relationship with your students like?"
+        en: "How is the course structured, and what is your relationship with students?"
     },
     text155: {
-        en: "Based on deep mutual respect."
+        en: "Our work is built on deep mutual respect"
     },
     text156: {
-        en: "You invest your money and your serious commitment—I give it my all:"
+        en: "You invest your financial resources and serious commitment, and I deliver my absolute maximum:"
     },
     text157: {
-        en: "High-quality lessons"
+        en: " Premium lessons"
     },
 
     text158: {
-        en: "deep practices"
+        en: "Deep somatic practices"
     },
     text159: {
-        en: "techniques and staging"
+        en: "Technique and choreography"
     },
     text160: {
-        en: "meditations"
+        en: "Guided meditations"
     },
     text161: {
-        en: "live broadcasts"
+        en: " Live streams"
     },
     text162: {
-        en: "feedback"
+        en: "Direct feedback"
     },
     text163: {
         en: "How is InSama different from Middle Eastern dance?"

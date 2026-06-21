@@ -741,6 +741,10 @@ content: '';
 }
 
 
+.course-items-hide {
+  display: none !important;
+}
+
 .change-lang-course5 {
   margin-top: 50px !important;
 }
@@ -965,6 +969,8 @@ select {
   #IndependentCourses .acardion, .acardion-faq  {
     width: 315px;
   }
+
+  
 
   .label_policy {
     align-items: normal !important;
