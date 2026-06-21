@@ -715,7 +715,7 @@ export const homeTexts = {
         en: 'Submit a request'
     },
     text227: {
-        en: 'You agree to the terms and conditions regarding the processing of personal data'
+        en: 'You agree to the terms and conditions regarding the processing of personal data <a href="./documents/ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ..pdf">Privacy Policy</a>'
     },
     text228: {
         en: 'Privacy Policy'
