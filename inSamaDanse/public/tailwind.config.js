@@ -29,9 +29,9 @@ tailwind.config = {
         fontFamily: {
         jostMedium : ['Jost Medium', 'sans-serif'], // Добавление Roboto как основного шрифта для класса font-sans
         JostSemibold : ['Jost SemiBold', 'sans-serif'], // Добавление Roboto как основного шрифта для класса font-sans
-        helveticaRegular : ['Helvetica Refular', 'sans-serif'], // Добавление Roboto как основного шрифта для класса font-sans
+        helveticaRegular : ['Helvetica Regular', 'sans-serif'], // Добавление Roboto как основного шрифта для класса font-sans
         HelveticaBold : ['Helvetica Bold', 'sans-serif'], // Добавление Roboto как основного шрифта для класса font-sans
-        FahkwangRegular: ['Fahkwang Refular', 'sans-serif'], // Добавление Roboto как основного шрифта для класса font-sans
+        FahkwangRegular: ['Fahkwang Regular', 'sans-serif'], // Добавление Roboto как основного шрифта для класса font-sans
         FahkwangMedium: ['Fahkwang Medium', 'sans-serif'], // Добавление Roboto как основного шрифта для класса font-sans
         inter: ['Inter_18pt Regular', 'sans-serif'], // Добавление Roboto как основного шрифта для класса font-sans
         // Добавление Roboto как основного шрифта для класса font-sans
