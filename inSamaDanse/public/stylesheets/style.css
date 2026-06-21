@@ -119,10 +119,6 @@ input {
 }
 
 
-.header-title {
-  font-family: "Inter 18pt Regular";
-  font-weight: 400;
-}
 
 .acardion__content, .acardion__content-faq {
     transition: all 0.3s ease-in-out;
