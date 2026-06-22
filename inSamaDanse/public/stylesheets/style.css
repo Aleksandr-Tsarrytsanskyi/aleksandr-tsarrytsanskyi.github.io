@@ -875,6 +875,10 @@ select {
 
 }
 
+.reviews {
+  height: 500px !important;
+}
+
 
 .inSama {
   height: 300px !important;
