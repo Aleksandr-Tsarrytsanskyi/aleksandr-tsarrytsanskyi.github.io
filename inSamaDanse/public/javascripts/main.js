@@ -783,13 +783,13 @@ function madiaScreenVideo() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+
   madiaScreenVideo();
-});
+
 
 init();
 
-document.addEventListener("DOMContentLoaded", () => {
+
   const video = document.querySelector(".header-video-bg");
 
   video.addEventListener("canplay", () => {
@@ -800,7 +800,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (video.readyState >= 3) {
     video.classList.add("is-loaded");
   }
-});
+
 
 // document.addEventListener("visibilitychange", function() {
 //     const video = document.querySelector(".header-video-bg");
