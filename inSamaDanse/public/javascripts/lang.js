@@ -38,6 +38,7 @@ export  function changesLanguage() {
           const course3 = document.querySelector(".lang-course3")
           const course4 = document.querySelector(".lang-course4")
           const course5 = document.querySelector(".lang-course5")
+          const footerNav = document.querySelector(".footer-nav")
           
           const courseItems = document.querySelectorAll(".course-item")
 
@@ -90,7 +91,7 @@ export  function changesLanguage() {
          if(this.value == "en") {
            
 
-        
+        footerNav.classList.add('footer-nav-lang')
        
          course3.classList.add("mobile-lang-course3")
          course5.classList.add("change-lang-course5")

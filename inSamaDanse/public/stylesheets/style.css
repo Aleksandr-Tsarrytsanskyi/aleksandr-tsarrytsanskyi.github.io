@@ -991,6 +991,12 @@ select {
   margin-top: 130px;
 }
 
+.footer-nav-lang {
+  padding-left: 30px !important;
+  padding-bottom: 60px !important;
+  height: 190px !important;
+}
+
 /* .inSama .swiper-slide {
    text-align: justify;
     hyphens: auto;
