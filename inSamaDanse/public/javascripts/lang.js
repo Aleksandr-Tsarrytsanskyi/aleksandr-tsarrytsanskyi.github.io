@@ -37,15 +37,14 @@ export  function changesLanguage() {
     const course2 = document.querySelector(".lang-course2")
           const course3 = document.querySelector(".lang-course3")
           const course4 = document.querySelector(".lang-course4")
-          const langItem = document.querySelector(".lang-item")
           const course5 = document.querySelector(".lang-course5")
-          const itemRes = document.querySelector(".item1-res")
+          
           const courseItems = document.querySelectorAll(".course-item")
 
           course2.classList.remove("change-lang-course2")
           course3.classList.remove("change-lang-course3")
           course4.classList.remove("change-lang-course4")
-          langItem.classList.remove("change-lang-item")
+         
          course3.classList.remove("mobile-lang-course3")
          course5.classList.remove("change-lang-course5")
     langSelect.addEventListener("change", function (e) {
@@ -56,25 +55,29 @@ export  function changesLanguage() {
 
       if(innerWidth >= 1280) {
         if(this.value == "en") {
-             langItem.classList.remove("change-lang-item")
+           
 
           course2.classList.add("change-lang-course2")
           course3.classList.add("change-lang-course3")
           course4.classList.add("change-lang-course4")
-          courseItems.forEach(item => {
-              item.classList.add("course-items-hide")
-          })
+          
         }
 
 
         
       }
 
+      if(this.value == "en") {
+          courseItems.forEach(item => {
+              item.classList.add("course-items-hide")
+          })
+      }
+
 
 
        if(innerWidth <= 1280) {
         if(this.value == "en") {
-          langItem.classList.add("change-lang-item")
+       
 
         
         }
@@ -87,8 +90,8 @@ export  function changesLanguage() {
          if(this.value == "en") {
            
 
-         langItem.classList.add("change-lang-item")
-         itemRes.classList.add("change-item1-res")
+        
+       
          course3.classList.add("mobile-lang-course3")
          course5.classList.add("change-lang-course5")
          }

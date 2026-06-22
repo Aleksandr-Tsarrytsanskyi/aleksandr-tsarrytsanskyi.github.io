@@ -423,7 +423,7 @@ export const homeTexts = {
         en: "Aigerim, I’d like to express my special thanks to you for the format of your video lessons. They radiate such a warm, friendly energy and professionalism! I really enjoy watching them and dancing along"
     },
      text132: {
-        en: " I’m on my second round and already want to sign up for the third. I couldn't understand why I was so drawn to this space, even when I didn't have time for the assignments. Now I get it - this course completely shatters dance stereotypes! It's not just technique; it's a profound, sometimes painful journey back to my true self, my roots, and my soul. It feels like breaking free from heavy chains. Thank you, Aigerim!"
+        en: "Every single practice is a powerful physical experience you just can't afford to miss. Since the course, I move easier, feel deeper, and see my life in a completely new light."
     },
      text133: {
         en: " During the Shame practice, I felt my shoulder blades unstick and my chest soften for the first time. Years of buried shame came pouring out with my tears. I can finally breathe and move freely now. I realized this shame had been weighing down all the women in my family, and I finally let it go."
@@ -521,158 +521,158 @@ export const homeTexts = {
         en: "Direct feedback"
     },
     text163: {
-        en: "How is InSama different from Middle Eastern dance?"
+        en: "How does InSama differ from traditional belly dance?"
     },
      text164: {
-        en: "InSama is neither a technique nor a “school of graceful movements.”"
+        en: "InSama is not about technique or learning how to move prettily"
     },
      text165: {
-        en: "It's a state of being in dance."
+        en: "It is an inner state expressed through dance"
     },
      text166: {
-        en: "Oriental dance teaches you how to move properly"
+        en: "Traditional belly dance teaches you how to move correctly"
     },
      text167: {
-        en: "InSama restores your right to be yourself—it removes masks, restraints, and the “I have to be good” mindset, and restores your natural strength, sexuality, voice, gaze, and grounding in your body. No other practice offers such depth in working with the body and feminine energy."
+        en: 'InSama gives you back your right to be yourself. It strips away masks, inhibitions, and the urge to be a "good girl," restoring your natural power, sexuality, voice, gaze, and physical grounding.No other practice offers this level of depth for the body and female energy.'
     },
      text168: {
-        en: "I'm 18 / 35 / 50 / 60. Is this course right for me?"
+        en: "I am 18 / 35 / 50 / 60 years old. Is this course right for me?"
     },
      text169: {
-        en: "Yes, the course is suitable for people of any age."
+        en: "Yes, the course fits women of any age."
     },
      text170: {
-        en: "18–25: You’ll avoid dozens of common mistakes and learn to listen to your body much sooner."
+        en: "18–25: You will bypass dozens of common mistakes and learn to listen to your body much earlier in life."
     },
      text171: {
-        en: "30–40: You’ll come back down to earth. You’ll feel alive and sexy."
+        en: "30–40: You will get out of your head and drop back into your body, feeling truly alive and radiant."
     },
      text172: {
-        en: "45–60: Your body will come alive, your energy will return, and your sexuality will once again become a natural state."
+        en: "45–60: Your body will revitalize, your energy will return, and sexuality will become your natural state again."
     },
      text173: {
-        en: "Why does the course cost $1,000 when there are offline studios for 20,000 tenge?"
+        en: "Why does the course cost $1000 when local studios cost 20,000 tenge?"
     },
      text174: {
-        en: "Because these aren't dance lessons or choreography"
+        en: "Because these are not standard dance classes or basic choreography."
     },
      text175: {
-        en: "This is a transformation:"
+        en: "This is a complete transformation of your:"
     },
      text176: {
-        en: "internal conditions"
+        en: "Inner state"
     },
      text177: {
-        en: "Sexiness"
+        en: "Sexuality"
     },
      text178: {
-        en: "hikes"
+        en: " Gait"
     },
      text179: {
-        en: "votes"
+        en: "Voice"
     },
      text180: {
-        en: "Men's Choices"
+        en: "Relationship choices"
     },
      text181: {
-        en: "standard of living"
+        en: "Quality of life"
     },
      text182: {
-        en: "I'm afraid I won't be able to do it / I'm shy / I'm not flexible."
+        en: "I’m worried I won't keep up, or that I'm too shy/inflexible."
     },
      text183: {
-        en: "It doesn't matter"
+        en: "None of that matters"
     },
      text184: {
-        en: "The only thing that matters is the willingness to be true to yourself."
+        en: "The only requirement is your readiness to be real"
     },
      text185: {
-        en: "InSama isn't about “I can move beautifully,” but about “I come alive.”"
+        en: " InSama isn't about moving flawlessly; it's about coming back to life"
     },
      text186: {
-        en: "Feeling constrained, afraid, or uptight—always having to be “right” or “perfect”—is exactly what we work on. Many students come to us precisely because of this"
+        en: "Shyness, fear, stiffness, and perfectionism are exactly what we are here to dismantle. Most of my students start exactly where you are right now."
     },
      text187: {
         en: "Can I get a refund?"
     },
      text188: {
-        en: "Refunds are not available."
+        en: "We do not offer refunds"
     },
      text189: {
-        en: "Access is granted immediately upon payment, and the process begins right away. This is standard legal practice."
+        en: "You receive full access to all materials immediately upon payment, meaning your transformational process starts instantly. This is standard legal practice for digital products."
     },
      text190: {
-        en: "What if I just want beautiful movements, without any depth?"
+        en: "What if I just want pretty movements without all the psychological depth?"
     },
      text191: {
-        en: "In that case, it’s best to choose courses from the “Self-paced Courses” section."
+        en: 'In that case, you should choose a program from our "Self-Study" catalog.'
     },
      text192: {
-        en: "“The Concubine” is a profound, transformative journey—not just a series of beautiful movements."
+        en: '"INITIATION: Shadow & Power: " is an intense, immersive transformational experience, not a basic choreography class.'
     },
      text193: {
-        en: "How are the courses conducted? Are they recorded or live?"
+        en: "How are the courses delivered? Are they pre-recorded or live?"
     },
      text194: {
-        en: "All materials are available in a private Telegram channel"
+        en: "All program materials are hosted in a private Telegram channel."
     },
      text195: {
         en: "Self-Study Courses:"
     },
      text196: {
-        en: "Access immediately after payment"
+        en: "Instant access upon payment"
     },
      text197: {
-        en: "All recorded lessons"
+        en: " Entirely pre-recorded lessons"
     },
      text198: {
-        en: "go at your own pace"
+        en: " Learn at your own pace"
     },
      text199: {
-        en: "fully standalone format"
+        en: "Fully independent format"
     },
      text200: {
-        en: "“The Concubine” (stream):"
+        en: '"INITIATION: Shadow & Power" (Live Cohort):'
     },
      text201: {
-        en: "Admission is only during the enrollment period"
+        en: " Enrollment is only open during specific registration windows"
     },
      text202: {
-        en: "Live streams + recordings"
+        en: "Live sessions combined with recorded material"
     },
      text203: {
-        en: "A complete cycle of practices, meditations, guided exercises, and in-depth guidance"
+        en: "Comprehensive curriculum featuring somatic practices, meditations, choreography, and deep mentorship"
     },
      text204: {
-        en: "Navigation"
+        en: "Navigation:"
     },
      text205: {
-        en: "About the Author"
+        en: "About"
     },
      text206: {
         en: "What is InSama Dance?"
     },
      text207: {
-        en: "“InSama Dance – The Concubine” Course"
+        en: "“INITIATION: Shadow & Power” Course Student Transformations"
     },
     text208: {
         en: "“Before and After” Videos of the Students"
     },
     text209: {
-        en: "Self-Study Courses"
+        en: " Self-Study Courses"
     },
 
     text210: {
-        en: "Student Testimonials"
+        en: "Student Transformations"
     },
     text211: {
-        en: "Contact a manager"
+        en: "Contact Support"
     },
     text212: {
         en: "Privacy Policy"
     },
      text213: {
-        en: "Public Offer"
+        en: " Public Offer"
     },
      text214: {
         en: "Some of the visual elements in the introductory video were created using artificial intelligence technology. These scenes are for illustrative purposes only."
