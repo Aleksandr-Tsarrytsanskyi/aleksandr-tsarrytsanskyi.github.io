@@ -1,4 +1,4 @@
-// import "../stylesheets/style.css"
+import "../stylesheets/style.css"
 import { changesLanguage } from "./lang.js";
 
 const conatctForm = document.querySelector(".robokassa");
