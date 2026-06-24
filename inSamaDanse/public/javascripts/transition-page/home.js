@@ -721,7 +721,7 @@ export const homeTexts = {
         en: 'Privacy Policy'
     },
     text229: {
-        en: ''
+        en: 'How are the courses delivered? Are they pre-recorded or live?'
     },
     text230: {
         en: ''

@@ -9,7 +9,7 @@ export  function changesLanguage() {
 
   function checkPagePathName() {
     switch (currentPathName) {
-      case "/inSamaDanse/public/":
+      case "/public/index.html":
         currentTexts = homeTexts;
         console.log(currentTexts);
         
@@ -79,7 +79,7 @@ export  function changesLanguage() {
 
        if(innerWidth <= 1280) {
         if(this.value == "en") {
-       
+            itemSetto.classList.add("change-item-setto")
 
         
         }
@@ -90,7 +90,7 @@ export  function changesLanguage() {
 
       if(innerWidth <= 864) {
          if(this.value == "en") {
-           itemSetto.classList.add("change-item-setto")
+         
 
         footerNav.classList.add('footer-nav-lang')
        
