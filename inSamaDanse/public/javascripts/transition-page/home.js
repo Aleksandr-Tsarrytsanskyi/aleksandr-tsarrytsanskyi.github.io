@@ -653,7 +653,7 @@ export const homeTexts = {
         en: "What is InSama Dance?"
     },
      text207: {
-        en: "“INITIATION: Shadow & Power” Course Student Transformations"
+        en: "“INITIATION” Course: Shadow and Power"
     },
     text208: {
         en: "“Before and After” Videos of the Students"
@@ -685,7 +685,7 @@ export const homeTexts = {
         en: 'What is InSama Dance?'
     },
     text217: {
-        en: '“InSama Dance – The Concubine” Course'
+        en: '“INITIATION” Course: Shadow and Power'
     },
     text218: {
         en: '“Before and After” Videos of the Students'
