@@ -749,6 +749,10 @@ content: '';
   margin-top: 50px !important;
 }
 
+.change-item-setto {
+  margin-top: 40px !important;
+}
+
 
 .course-items-hide {
   display: none !important;

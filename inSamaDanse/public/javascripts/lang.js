@@ -39,13 +39,14 @@ export  function changesLanguage() {
           const course4 = document.querySelector(".lang-course4")
           const course5 = document.querySelector(".lang-course5")
           const footerNav = document.querySelector(".footer-nav")
+          const itemSetto = document.querySelector(".item-setto")
           
           const courseItems = document.querySelectorAll(".course-item")
 
           course2.classList.remove("change-lang-course2")
           course3.classList.remove("change-lang-course3")
           course4.classList.remove("change-lang-course4")
-         
+            itemSetto.classList.remove("change-item-setto")
          course3.classList.remove("mobile-lang-course3")
          course5.classList.remove("change-lang-course5")
     langSelect.addEventListener("change", function (e) {
@@ -89,7 +90,7 @@ export  function changesLanguage() {
 
       if(innerWidth <= 864) {
          if(this.value == "en") {
-           
+           itemSetto.classList.add("change-item-setto")
 
         footerNav.classList.add('footer-nav-lang')
        
