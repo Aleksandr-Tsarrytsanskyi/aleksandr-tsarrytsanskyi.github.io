@@ -334,10 +334,19 @@ figure {
 }
 
 
-.buy-course ul li::marker {
-  content: '• '; /* Задаем свой символ */
-  color: #4D413E; /* Меняем цвет маркера */
-  font-size: 14px; /* Увеличиваем размер */
+.buy-course ul li {
+  position: relative;
+  padding: 5px 15px 0px 15px;
+}
+
+.buy-course ul li::before {
+  content: "•"; /* Ваш кастомный маркер */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4d413e; /* Цвет маркера */
+  font-size: 20px;
+
 }
 
 .bg-cover-pos {
