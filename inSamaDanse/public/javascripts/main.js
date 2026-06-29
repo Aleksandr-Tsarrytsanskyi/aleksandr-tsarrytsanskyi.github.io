@@ -767,7 +767,7 @@ function madiaScreenVideo() {
     const video = document.querySelector(".header-video-bg");
     const videoSourse = document.querySelector(".header-video-bg source");
     video.pause();
-    videoSourse.src = "./video/videoMobile.mp4";
+    videoSourse.src = "<?php echo get_template_directory_uri(); ?>/public/video/videoMobile.mp4";
     video.load();
     video.play();
   }

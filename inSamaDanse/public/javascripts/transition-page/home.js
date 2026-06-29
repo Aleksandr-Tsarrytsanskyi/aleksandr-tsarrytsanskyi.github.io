@@ -52,39 +52,39 @@ export const homeTexts = {
        
         en: "This search is what brought me to where I am today — to my own movement."
     },
-     text13: {
+     "1": {
        
         en: "InSama Dance is a space to explore beauty alongside anger, shame, vulnerability, power, sexuality, pain, desire and freedom."
     },
-     text14: {
+     "2": {
        
         en: "InSama teaches you to stop repeating memorized moves and start filling every motion with your true inner state. "
     },
-     text15: {
+      "2": {
       
         en: "The exact same hip drop can be bold, wounded, playful, free, or desperate. The technique is identical, but the meaning changes entirely."
     },
-     text16: {
+      "3": {
        
         en: " You will understand why two people can perform the exact same movement, yet one completely mesmerizes you while the other leaves you cold."
     },
-     text17: {
+      "4": {
         
         en: "You don't have to just look pretty here. InSama teaches you to live through your movements rather than just perform them."
     },
-     text18: {
+      "5": {
        
         en: "We work with both the body and your awareness, focusing on your feet, breath, pelvis, chest, and gaze."
     },
-     text19: {
+      "6": {
      
         en: 'InSama is your shift from "trying to do it right" to simply "being."'
     },
-     text20: {
+      "7": {
        
         en: "After InSama, the audience will actually feel your dance instead of just tracking your technique."
     },
-     text21: {
+      "8": {
         
         en: "In InSama, movement becomes a way to express things that are impossible to put into words."
     },
