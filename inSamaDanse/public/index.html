@@ -20,7 +20,8 @@
       src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
     ></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-    <script defer type="module" src="../dist/main.432914fb0b2767c83583.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script defer type="module" src="./javascripts/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
@@ -38,12 +39,13 @@
   <body>
    
     <header class="relative header">
-        <div class="flex gap-x-[20px] items-center fixed z-50 right-[26px] top-[38px]">
-          <div>
-            <select name="lang" class="lang font-jostMedium">
-              <option  value="ru">RU</option>
-              <option value="en">EN</option>
-            </select>
+        <div class="flex gap-x-[20px]  fixed z-50 right-[26px] top-[38px]">
+          <div class="custom-select-wrapper">
+            <button type="button" class="lang font-jostMedium font-medium text-[16px] custom-select-trigger">RU</button>
+          <div class="  flex flex-col bg-white w-[30px] items-center rounded-[10px] mx-auto custom-select">
+            <div data-value="ru" class="font-jostMedium custom-option text-[16px] font-medium">RU</div>
+            <div data-value="en" class="font-jostMedium custom-option text-[16px] font-medium">EN</div>
+          </div>
           </div>
           <div>
             <button type="button" class="cursor-pointer burger-btn">
@@ -54,6 +56,7 @@
 
            </button>
           </div>
+          
         </div>
             <button id="soundToggle"></button>
       <div class="relative pc:h-[1080px] mobile:h-[790px] header-video-poster">
@@ -66,7 +69,8 @@
           loop
           playsinline 
         >
-          <source src="./video/videoDekstop1.mp4" type="video/mp4" />
+          <source class="video-dekstop" data-dek="./video/videoDekstop1.mp4"  type="video/mp4" />
+          <source class="remove-mob-video" data-dek="./video/videoDekstop1.webm"  type="video/webm" />
           <!-- <source src="./video/videoDekstop.mov" type="video/quicktime" /> -->
           Ваш браузер не поддерживает видео теги.
         </video>
@@ -118,9 +122,9 @@
         <div
           class="pc:pt-[120px] mobile:pb-[100px] pc:pb-[0px] mobile:pt-[40px] grid pc:grid-cols-[606px_591px] tablet:grid-cols-[429px_335px] tablet:gap-x-[80px] mobile:grid-cols-[360px] pc:gap-x-[83px] justify-center"
         >
-          <div class="mobile:h-[560px] tablet:h-[597px] pc:h-auto">
+          <div class="mobile:h-[520px] tablet:h-[597px] pc:h-auto">
             <h2 data-lang="text2"
-                class="font-jostMedium font-medium mobile:block tablet:hidden pc:text-[42px] tablet:text-[36px] mobile:text-[42px]  text-[#4C180B] mb-[20px]"
+                class="font-jostMedium font-medium mobile:block tablet:hidden pc:text-[42px] tablet:text-[36px] mobile:text-[42px]  text-[#4C180B] mb-[30px]"
               >
                 Кто я
               </h2>
@@ -3148,7 +3152,7 @@
          </button>
          <div>
           <h2 data-lang="text222" class="font-jostMedium mobile:text-[20px] pc:text-[24px] text-[#4c180b] mobile:mb-[32px] pc:mb-[40px]">Заявка на оплату</h2>
-          <form action="#" method="POST" class="robokassa">
+          <form action="https://auth.robokassa.ru/Merchant/Index.aspx" method="POST" class="robokassa">
             
             <div>
               <input type="text" name="name" class="robokassa_name" placeholder="Как вас зовут">
@@ -3160,10 +3164,10 @@
               <textarea name="message" class="robokassa-message" placeholder="Ваше сообщение"></textarea>
             </div>
             <!-- Идентификатор вашего магазина -->
-                <input type="hidden" name="MerchantLogin" value="ваш_логин">
+                <input type="hidden" name="MerchantLogin" value="yjjidlo764">
                 
                 <!-- Сумма заказа -->
-                <input type="hidden" name="OutSum" value="60000.00">
+                <input type="hidden" name="OutSum" value="60000">
                 
                 <!-- Уникальный номер заказа -->
                 <input type="hidden" name="InvId" value="10012">
@@ -3172,10 +3176,10 @@
                 <input type="hidden" name="Description" value="Оплата курса / товара">
                 
                 <!-- Email пользователя (для отправки чека, если подключена онлайн-касса) -->
-                <input type="hidden" name="Email" value="unesss@mail.ru">
+                <!-- <input type="hidden" name="Email" value="insama.orders@gmail.com"> -->
                 
                 <!-- Подпись заказа (формируется на вашем сервере) -->
-                <input type="hidden" name="SignatureValue" value="ваша_хэш_подпись">
+                <input type="hidden" name="SignatureValue" value="IhGznIwLo7NQ825PW6Au">
                 
                 <!-- Валюта (рубли - RUR или RUB) -->
                 <input type="hidden" name="IncCurrLabel" value="KZT">

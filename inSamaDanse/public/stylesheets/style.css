@@ -894,9 +894,9 @@ select {
 
 
 .inSama {
-  height: 330px !important;
+  height: 350px !important;
   width: 320px !important;
-  margin-top: 380px !important;
+  margin-top: 360px !important;
 }
 
 .inSama .swiper-slide {
@@ -1277,6 +1277,36 @@ input[type=number] {
   position: relative;
   z-index: 400;
 }
+
+
+.custom-select {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+
+.custom-select-open {
+  opacity: 1 !important;
+}
+
+.custom-option {
+  cursor: pointer;
+  color: #000000;
+}
+
+.custom-checkbox-view-err {
+  border: 2px solid #c80910
+}
+
+.send-message-show {
+  color: green;
+  font-size: 14px;
+}
+
+
+
+
+
 
 
 

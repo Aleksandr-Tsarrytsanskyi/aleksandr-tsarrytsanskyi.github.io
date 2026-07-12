@@ -5,7 +5,7 @@ export  function changesLanguage() {
   let currentLang = "ru";
   const currentPathName = window.location.pathname;
   let currentTexts = {};
-  const langSelect = document.querySelector(".lang");
+
 
   function checkPagePathName() {
     switch (currentPathName) {
@@ -49,14 +49,28 @@ export  function changesLanguage() {
             itemSetto.classList.remove("change-item-setto")
          course3.classList.remove("mobile-lang-course3")
          course5.classList.remove("change-lang-course5")
-    langSelect.addEventListener("change", function (e) {
-      currentLang = this.value;
-      if(this.value == "ru") {
+
+    document.querySelector('.custom-select-trigger').addEventListener('click', function() {
+    this.parentElement.querySelector('.custom-select').classList.toggle('custom-select-open');
+});
+
+document.querySelectorAll('.custom-option').forEach(option => {
+    option.addEventListener('click', function() {
+        const value = this.getAttribute('data-value');
+        const trigger = this.closest('.custom-select-wrapper').querySelector('.custom-select-trigger');
+        console.log(currentTexts);
+        
+        trigger.textContent = this.textContent;
+       
+        this.parentElement.classList.remove('custom-select-open');
+
+        currentLang = value;
+      if(value == "ru") {
         location.reload()
       }
 
       if(innerWidth >= 1280) {
-        if(this.value == "en") {
+        if(value == "en") {
            
 
           course2.classList.add("change-lang-course2")
@@ -69,7 +83,7 @@ export  function changesLanguage() {
         
       }
 
-      if(this.value == "en") {
+      if(value == "en") {
           courseItems.forEach(item => {
               item.classList.add("course-items-hide")
           })
@@ -78,7 +92,7 @@ export  function changesLanguage() {
 
 
        if(innerWidth <= 1280) {
-        if(this.value == "en") {
+        if(value == "en") {
             itemSetto.classList.add("change-item-setto")
 
         
@@ -89,7 +103,7 @@ export  function changesLanguage() {
       }
 
       if(innerWidth <= 864) {
-         if(this.value == "en") {
+         if(value == "en") {
          
 
         footerNav.classList.add('footer-nav-lang')
@@ -99,7 +113,13 @@ export  function changesLanguage() {
          }
       }
       changeLang();
+   
+
     });
+});
+
+   
+      
   }
 
   //  langButtons.forEach(btn => {

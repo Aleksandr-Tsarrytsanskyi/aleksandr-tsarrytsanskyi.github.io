@@ -52,39 +52,39 @@ export const homeTexts = {
        
         en: "This search is what brought me to where I am today — to my own movement."
     },
-     "1": {
+     t1: {
        
         en: "InSama Dance is a space to explore beauty alongside anger, shame, vulnerability, power, sexuality, pain, desire and freedom."
     },
-     "2": {
+     t2: {
        
         en: "InSama teaches you to stop repeating memorized moves and start filling every motion with your true inner state. "
     },
-      "2": {
+      t3: {
       
         en: "The exact same hip drop can be bold, wounded, playful, free, or desperate. The technique is identical, but the meaning changes entirely."
     },
-      "3": {
+      t4: {
        
         en: " You will understand why two people can perform the exact same movement, yet one completely mesmerizes you while the other leaves you cold."
     },
-      "4": {
+      t5: {
         
         en: "You don't have to just look pretty here. InSama teaches you to live through your movements rather than just perform them."
     },
-      "5": {
+      t6: {
        
         en: "We work with both the body and your awareness, focusing on your feet, breath, pelvis, chest, and gaze."
     },
-      "6": {
+      t7: {
      
         en: 'InSama is your shift from "trying to do it right" to simply "being."'
     },
-      "7": {
+      t8: {
        
         en: "After InSama, the audience will actually feel your dance instead of just tracking your technique."
     },
-      "8": {
+      t9: {
         
         en: "In InSama, movement becomes a way to express things that are impossible to put into words."
     },
@@ -389,77 +389,77 @@ export const homeTexts = {
     text120: {
         en: "Video Reviews"
     },
-    text121: {
+    r1: {
         en: "Rushana Z."
     },
-    text122: {
+    r2: {
         en: "Aliya R."
     },
-    text123: {
+    r3: {
         en: "Aisulu, Sh."
     },
-    text124: {
+    r4: {
         en: "Anastasia K."
     },
-    text125: {
+    r5: {
         en: "Gulli, G."
     },
-     text126: {
+     r6: {
         en: "Elvira T."
     },
-     text127: {
+     r7: {
         en: "Galina V."
     },
-     text128: {
+     r8: {
         en: "Marina K."
     },
-     text129: {
+     n1: {
         en: "After the stream, I started seeing the world differently. Female power stopped feeling dirty, and I finally accepted it without shame. It feels like I got my right to be myself back."
     },
-     text130: {
+     n2: {
         en: "Aigerim, thank you so much for the video lessons! You radiate such warm energy and professionalism. I just watch and dance with absolute pleasure. "
     },
-     text131: {
+     n3: {
         en: "Aigerim, I’d like to express my special thanks to you for the format of your video lessons. They radiate such a warm, friendly energy and professionalism! I really enjoy watching them and dancing along"
     },
-     text132: {
+     n4: {
         en: "Every single practice is a powerful physical experience you just can't afford to miss. Since the course, I move easier, feel deeper, and see my life in a completely new light."
     },
-     text133: {
+     n5: {
         en: " During the Shame practice, I felt my shoulder blades unstick and my chest soften for the first time. Years of buried shame came pouring out with my tears. I can finally breathe and move freely now. I realized this shame had been weighing down all the women in my family, and I finally let it go."
     },
-     text134: {
+     n6: {
         en: "During the broadcast about shame, my body literally reacted—the back of my head was throbbing, and my palms were sweating. I had never heard this information anywhere before. Thanks to the course, I quit my job, made time for myself, and for the first time began to see the world in a different light."
     },
-     text135: {
+     n7: {
         en: "My body literally woke up during the shame stream - the back of my head was throbbing, and my palms were sweating. I’ve never heard these insights anywhere else. Thanks to this course, I actually quit my job, made time for myself, and started looking at life through a completely new lens."
     },
-     text136: {
+     n8: {
         en: " I’ve been self-conscious about my face and body my entire life, never believing my sexuality could unfold. But Aigerim’s somatic practices gave me a tool to deeply cleanse and reset from within. This is the first method that actually works for me."
     },
      
-    text137: {
+    m1: {
         en: "Rushana Z."
     },
-    text138: {
+    m2: {
         en: "Aliya R."
     },
-    text139: {
+    m3: {
         en: "Aisulu, Sh."
     },
-    text140: {
+    m4: {
         en: "Anastasia K."
     },
-    text141: {
+    m5: {
         en: "Gulli, G."
     },
-     text142: {
+     m6: {
         en: "Elvira T."
     },
-     text143: {
+     m7: {
         en: "Galina V."
     },
-     text144: {
+     m8: {
         en: "Marina K."
     },
     
@@ -653,7 +653,7 @@ export const homeTexts = {
         en: "What is InSama Dance?"
     },
      text207: {
-        en: "“INITIATION” Course: Shadow and Power"
+        en: "“INITIATION: Shadow & Power” Course"
     },
     text208: {
         en: "“Before and After” Videos of the Students"

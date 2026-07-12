@@ -3,7 +3,7 @@ import { changesLanguage } from "./lang.js";
 
 const conatctForm = document.querySelector(".robokassa");
 const input = conatctForm.elements;
-let { name, phone, message } = input;
+let { name, phone, message, policy } = input;
 
 function init() {
   const conatctForm = document.querySelector(".robokassa");
@@ -57,13 +57,13 @@ function init() {
   });
   function changeAcardion() {
     const acardion = document.querySelectorAll(".acardion");
-    console.log(acardion);
+    
 
     const contentActive = document.querySelector(".acardion_content_active");
     contentActive.style.maxHeight = contentActive.scrollHeight + "px";
     acardion.forEach((el) => {
       el.addEventListener("click", function (e) {
-        console.log(e.target);
+      
         acardion.forEach((btn) => {
           btn.classList.remove("acardion_show");
         });
@@ -508,7 +508,26 @@ function init() {
         // Находим source и меняем data-src на src
         const sources = document.querySelectorAll(".video-container source");
         const videos = document.querySelectorAll(".lazy-video");
+         const videosPriwiev = document.querySelectorAll(".lazy-preview-video");
+         const videosPriwievContainer = document.querySelectorAll(".video-preview");
+         const videosStudents = document.querySelectorAll(".lazy-video-clients");
+         
+         videosStudents.forEach(video => {
+              video.firstElementChild.src = ""
+              video.load();
+               video.controls = false;
+               video.nextElementSibling.style.display = "block" 
+         })
+         
+         videosPriwiev.forEach(video => {
+            video.firstElementChild.src = ""
+              video.load();
+            
+         })
 
+         videosPriwievContainer.forEach(el => {
+            el.classList.remove("video-preview-show")
+         })
         if (source && source.dataset.src) {
           videos.forEach((v) => {
             if (v !== video) {
@@ -562,6 +581,23 @@ function init() {
             ".video-container-clients source",
           );
           const videos = document.querySelectorAll(".lazy-video-clients");
+
+          const videosStudents = document.querySelectorAll(".lazy-video-clients");
+          const videosPrewiev = document.querySelectorAll(".lazy-preview-video");
+         
+          videosPrewiev.forEach(video => {
+              video.firstElementChild.src = ""
+              video.load();
+               video.controls = false;
+              
+         })
+
+         videosStudents.forEach(video => {
+              video.firstElementChild.src = ""
+              video.load();
+               video.controls = false;
+               video.nextElementSibling.style.display = "block" 
+         })
 
           if (source && source.dataset.src) {
             videos.forEach((v) => {
@@ -618,6 +654,26 @@ function init() {
             .firstElementChild.firstElementChild.firstElementChild;
         let videoPreviuw = document.querySelectorAll(".video-preview");
         const btn = document.querySelectorAll(".btn-video-preview");
+
+        const videosStudents = document.querySelectorAll(".lazy-video-clients");
+        const videosClients = document.querySelectorAll(".lazy-video");
+         
+
+         videosClients.forEach(video => {
+              video.firstElementChild.src = ""
+              video.load();
+               video.controls = false;
+               video.nextElementSibling.style.display = "block" 
+         })
+
+
+         videosStudents.forEach(video => {
+              video.firstElementChild.src = ""
+              video.load();
+               video.controls = false;
+               video.nextElementSibling.style.display = "block" 
+         })
+
 
         e.target.classList.add("close-video");
 
@@ -683,19 +739,89 @@ function init() {
     });
   }
 
+  function sendMessageForm() {
+    const message = document.querySelector(".send_message")
+    message.classList.add("send-message-show")
+    message.textContent = "Форма отправлена"
+
+    setTimeout(() => {
+      message.textContent = ""
+    }, 3000)
+
+  }
+
   playVideoPreview();
   playVideoStudents();
-
-  conatctForm.addEventListener("submit", function (e) {
+  const BOT_TOKEN = '8924831706:AAGlbsNhf9SdgnZG92a8-Nm_eNbRKSLxjNk';
+      const CHAT_ID = '-1004376455891';
+  conatctForm.addEventListener("submit", async function (e) {
     e.preventDefault();
-
+     let formData = new FormData(conatctForm)
     let error = validateFeddBack();
 
+    const name = formData.get('name'); // Замените на имя вашего поля
+    const phone = formData.get('phone'); // Замените на имя вашего поля
+    const messageInput = formData.get('message'); // Замените на имя вашего поля
+
+    
+    const message = `Новый клиент:\nИмя: ${name}\nТелефон: ${phone}\nСообщение: ${messageInput}`;
+    console.log(message);
+    
     if (error === 0) {
-      this.action = "https://robokassa.ru";
-      this.submit();
+      
+      let response = await fetch(user, {
+        method: 'POST',
+        body: formData
+    })
+
+    if(response.ok) {
+      console.log("Сообщение отправлено");
+      
     }
-    console.log(error);
+
+    else {
+       console.log("Ошибка");
+    }
+
+    //  try {
+    //    const emailPromise =  await fetch(user, {
+    //          method: 'POST',
+    //         body: formData
+    // });
+        
+
+
+    //     const telegrammPromise = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({
+    //             chat_id: CHAT_ID,
+    //             text: message,
+    //             parse_mode: 'HTML' // или Markdown
+    //         })
+    //     });
+
+    //     const [emailResponse, telegramResponse] = await Promise.all([emailPromise, telegrammPromise]);
+       
+
+    //     if (emailResponse.ok && telegramResponse.ok) {
+    //         alert('Сообщение успешно отправлено на почту и в Telegram!');
+          
+    //     } else {
+    //         alert('Произошли ошибки при отправке.');
+    //     }
+       
+    // } catch (error) {
+    //     console.error('Ошибка:', error);
+    // }
+
+       this.reset();
+       sendMessageForm();
+      //  this.submit();
+    }
+  
   });
 
   //  phone.addEventListener("input", (e) => {
@@ -712,9 +838,54 @@ function init() {
   //    e.target.value = value;
   //     })
 
+async function userApi(formData) {
+    let res =  await fetch(user, {
+             method: 'POST',
+            body: formData
+    })
+        if(res.ok) {
+          console.log("ok");
+          
+        }
+
+        else {
+          console.log("err");
+          
+        }
+}
+
+
+async function userApiTelegramm(message) {
+const BOT_TOKEN = '8924831706:AAGlbsNhf9SdgnZG92a8-Nm_eNbRKSLxjNk';
+const CHAT_ID = '-1004376455891';
+
+     try {
+        const response = await fetch(`https://telegram.org{BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: message,
+                parse_mode: 'HTML' // или Markdown
+            })
+        });
+
+        if (response.ok) {
+            alert('Сообщение успешно отправлено!');
+            
+        } else {
+            alert('Ошибка при отправке.');
+        }
+    } catch (error) {
+        console.error('Ошибка:', error);
+    }
+}
+
   function validateFeddBack() {
     let error = 0;
-
+    let checkBox = document.querySelector(".custom-checkbox-view")
     let regExpphone = /^\d{3}-\d{3}-\d{2}-\d{2}$/;
     const regExpPhone = new RegExp(regExpphone);
     if (name.value.length < 3) {
@@ -731,11 +902,14 @@ function init() {
       error++;
     }
 
-    if (message.value.length < 10) {
-      erorrInput(message, "input_error");
+    
+
+
+    if (!policy.checked) {
+     checkBox.classList.add("custom-checkbox-view-err")
       error++;
     } else {
-      removeErrorInput(message, "input_error");
+      checkBox.classList.remove("custom-checkbox-view-err")
     }
 
     return error;
@@ -759,17 +933,85 @@ function init() {
   changeAcardion();
 }
 
+
+ function scrollTrigger() {
+  gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.create({
+  trigger: "#IndependentCourses",
+  start: "top center", // Начало отсчета (когда верх блока доходит до центра экрана)
+  onEnter: () => {
+    // Ваш JS-код, который должен выполниться при достижении блока
+    console.log("Достигли блока!");
+    changeTheLogic(); // Пример вызова другой функции
+  },
+  onLeaveBack: () => {
+    // Сброс, если пользователь скроллит обратно вверх
+    const videoSourseWeb = document.querySelector(".remove-mob-video")
+
+
+   const videoSourse = document.querySelector(".video-dekstop")
+    const video = document.querySelector(".header-video-bg")
+    videoSourse.src = videoSourse.dataset.dek
+  
+
+    videoSourseWeb.src = videoSourseWeb.dataset.dek
+    video.load();
+    video.play();
+  }
+});
+
+function changeTheLogic() {
+  // Логика, которую нужно применить
+  const videoSourseWeb = document.querySelector(".remove-mob-video")
+
+
+  const videoSourse = document.querySelector(".video-dekstop")
+  const video = document.querySelector(".header-video-bg")
+  videoSourse.src = ""
+  videoSourseWeb.src = ""
+  video.pause();
+    video.load();
+
+
+     
+   
+   
+   
+}
+ }
+
+ scrollTrigger();
+
+
+function loadVideoSrc() {
+    const videosrc =document.querySelector(".video-dekstop")
+    const videoWebSrc =document.querySelector(".remove-mob-video")
+    const video = document.querySelector(".header-video-bg")
+
+    videosrc.src = videosrc.dataset.dek
+    videoWebSrc.src = videoWebSrc.dataset.dek
+    video.load();
+    video.play();
+}
+
+loadVideoSrc();
+
 function madiaScreenVideo() {
   const mediaQuery = window.matchMedia("(max-width: 864px)");
   const button = document.getElementById("soundToggle");
   const video = document.querySelector(".header-video-bg");
   if (mediaQuery.matches) {
     const video = document.querySelector(".header-video-bg");
-    const videoSourse = document.querySelector(".header-video-bg source");
+    const videoSourse = document.querySelector(".header-video-bg .video-dekstop");
+     const removeVideo = document.querySelector(".remove-mob-video")
+    removeVideo.remove();
     video.pause();
-    videoSourse.src = "<?php echo get_template_directory_uri(); ?>/public/video/videoMobile.mp4";
+    videoSourse.src = themeUrl;
     video.load();
     video.play();
+
+    
   }
 
   button.addEventListener("click", () => {
@@ -781,6 +1023,8 @@ function madiaScreenVideo() {
       button.classList.remove("soundToggle-off");
     }
   });
+
+  
 }
 
 
