@@ -8,6 +8,10 @@
   overflow: hidden;
 }
 
+body {
+  height: 2000px;
+}
+
 .video-foreground {
   position: absolute;
   top: 50%;
