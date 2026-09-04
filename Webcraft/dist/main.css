@@ -1271,6 +1271,9 @@
     .tablet\:w-\[calc\(100\%-20px\)\] {
       width: calc(100% - 20px);
     }
+    .tablet\:w-auto {
+      width: auto;
+    }
     .tablet\:w-full {
       width: 100%;
     }
