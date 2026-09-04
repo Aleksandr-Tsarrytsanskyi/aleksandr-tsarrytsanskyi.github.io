@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/main.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+      <script defer type="module" src="./javascripts/main.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-[#fbfbfe]">
+    <header class=" bg-white fixed top-0 left-0 z-50  w-full  shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
+        <div class="mx-auto w-[calc(100%-40px)] pc:max-w-300 pc:gap-x-[0px] tablet:gap-x-[20px] tablet:max-w-[768px] mt-5 mb-5 flex justify-between items-center">
+            <div>
+               <div class="flex tablet:gap-x-2.5 mobile:gap-x-1.5">
+                <div>
+                    <img src="./images/icons/logo.svg" alt="Логотип" class="tablet:w-10 tablet:h-10 mobile:w-[30px] mobile:h-[30px]">
+                </div>
+                <div>
+                    <a class="logo-gradient-text font-sans font-semibold text-lg" href="#">WebCarft</a>
+                    <p class="font-sans font-normal text-secondary tablet:text-base mobile:text-sm  leading-5 mobile:">Разработка сайта с нуля</p>
+                </div>
+               </div>
+            </div>
+            <div class="menu" id="mainMenu">
+                
+                <nav>
+                    <ul class="mobile:text-center pc:text-left">
+                        <li class="pc:float-left mobile:float-none mobile:mr-[0px] pc:mr-6.25 pc:mb-[0px] tablet:mb-[50px] mobile:mb-[40px]">
+                            <a href="#" class="font-sans font-semibold pc:text-secondary mobile:text-white mobile:text-lg  tablet:text-xs pc:text-base tablet:hover:text-blue tablet:hover:underline tablet:hover:underline pc:hover:text-primary transition-colors duration-300 ease-in">Главная</a>
+                        </li>
+                        <li class="pc:float-left mobile:float-none mobile:mr-[0px] pc:mr-6.25 pc:mb-[0px] tablet:mb-[50px] mobile:mb-[40px]">
+                            <a class="font-sans font-semibold pc:text-secondary mobile:text-white mobile:text-lg tablet:text-xs pc:text-base tablet:hover:text-blue tablet:hover:underline tablet:hover:underline pc:hover:text-primary transition-colors duration-300 ease-in" href="#">Услуги</a>
+                        </li>
+                        <li class="pc:float-left mobile:float-none mobile:mr-[0px] pc:mr-6.25 pc:mb-[0px] tablet:mb-[50px] mobile:mb-[40px]">
+                            <a class="font-sans font-semibold pc:text-secondary mobile:text-white mobile:text-lg tablet:text-xs pc:text-base tablet:hover:underline tablet:hover:text-blue pc:hover:text-primary transition-colors duration-300 ease-in" href="#">Процесс</a>
+                        </li>
+                        <li class="pc:float-left mobile:float-none mobile:mr-[0px] pc:mr-6.25 pc:mb-[0px] tablet:mb-[50px] mobile:mb-[40px]">
+                            <a class="font-sans font-semibold pc:text-secondary mobile:text-white mobile:text-lg tablet:text-xs pc:text-base tablet:hover:text-blue tablet:hover:underline pc:hover:text-primary transition-colors duration-300 ease-in" href="#">Преймущества</a>
+                        </li>
+                        <li class="pc:float-left mobile:float-none">
+                            <a class="font-sans font-semibold pc:text-secondary mobile:text-white mobile:text-lg tablet:text-xs pc:text-base tablet:hover:text-blue tablet:hover:underline pc:hover:text-primary transition-colors duration-300 ease-in" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button type="button" data-modal-open="orderModal" class="mobile:block tablet:hidden font-sans font-semibold text-base text-white bg-blue w-[185px] h-[35px] text-center rounded-[5px] border-solid border-2 cursor-pointer transition-colors duration-300 ease-in hover:border-[#585fde] hover:bg-[#585fde] border-[#484db1]">Обсудить проект</button>
+            </div>
+            <div class="tablet:flex-2 tablet:text-right pc:flex-0 pc:text-center mobile:hidden tablet:block">
+                <button type="button" data-modal-open="orderModal" class="font-sans font-semibold text-base text-white bg-blue w-[185px] h-[35px] text-center rounded-[5px] border-solid border-2 cursor-pointer transition-colors duration-300 ease-in hover:border-[#585fde] hover:bg-[#585fde] border-[#484db1]">Обсудить проект</button>
+            </div>
+            <div class="pc:hidden">
+                <button
+            class="burger"
+            type="button"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mainMenu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="pc:pt-[210px] mobile:pt-[120px] tablet:pt-[150px] tablet:pb-[80px] mobile:pb-[20px] bg-white ">
+            <div class="mx-auto pc:w-[calc(100%-40px)] tablet:w-[calc(100%-20px)] mobile:w-[calc(100%-10px)] pc:max-w-300 tablet:max-w-[786px] mobile:max-w-[375px]">
+                <div class="flex mobile:flex-col tablet:flex-row mobile:justify-center tablet:justify-between tablet:gap-x-[30px] pc:gap-x-[0px]">
+                    <div>
+                        <h1 class="mobile:text-center tablet:text-left mobile:text-xl font-sans font-bold leading-[110%] text-primary pc:text-[46px] tablet:text-[30px]">Веб-разработка<br> с нуля на чистом коде</h1>
+                        <h2 class="mobile:text-center tablet:text-left mt-[10px] mb-[10px] font-sans font-medium pc:text-[21px] tablet:text-lg mobile:text-lg leading-[140%] text-primary">Создаю быстрые, современные и индивидуальные<br class="pc:block mobile:hidden tablet:hidden"> сайты под ваш бизнес</h2>
+                        <p class="mobile:text-center tablet:text-left font-sans font-normal text-secondary pc:text-lg tablet:text-base mobile:text-base leading-[25px]">Не шаблонный сайт из конструктора, а полноценная разработка<br class="pc:block mobile:hidden tablet:hidden"> с нуля — с чистым кодом, адаптивной версткой и вниманием<br class="pc:block tablet:hidden mobile:hidden"> к каждой детали.</p>
+                        <div class="mobile:flex tablet:block">
+                            <button data-modal-open="orderModal" class="tablet:mt-[20px] mobile:mt-[15px] mobile:mb-[25px] tablet:mb-[0px] mobile:mx-auto tablet:mx-0 font-sans font-semibold text-base mobile:w-[165px] mobile:h-[40px] text-white bg-blue pc:w-[185px] pc:h-[45px] tablet:w-[175px] tablet:h-[35px] text-center rounded-[5px] border-solid border-2 cursor-pointer transition-colors duration-300 ease-in hover:border-[#585fde] hover:bg-[#585fde] border-[#484db1]"type="button">Обсудить проект</button>
+                        </div>
+                    </div>
+                    <div>
+                           
+
+                        <div class="relative pc:w-[540px] mobile:mx-auto tablet:mx-0 pc:h-[320px] tablet:w-[300px] tablet:h-[250px] mobile:w-[300px] mobile:h-[250px]">
+                         
+                           <figure>
+                             <img src="./images/header.webp" alt="Изображение" class="pc:max-w-[540px] pc:h-[320px] mobile:object-cover tablet:max-w-[300px] tablet:h-[250px]  mobile:max-w-[300px] mobile:h-[250px] w-full rounded-[20px] drop-shadow-[0_4px_6px_rgba(128,128,128,0.5)]">
+                           </figure>
+                            <div class="absolute top-[20px]">
+                        <div class="flex justify-center items-center mb-[1px] relative left-[-40px] rounded-[10px] bg-[#fbfbfe] w-12.5 h-12.5">
+                           <figure>
+                             <img src="./images/icons/icon-html.svg" alt="Html" class="w-10 h-10">
+                           </figure>
+                        </div>
+                        <div class="flex justify-center items-center relative left-[-30px] bg-[#fbfbfe] rounded-[10px] w-12.5 h-12.5">
+                           <figure>
+                             <img src="./images/icons/icon-css.svg" alt="Css" class="w-10 h-10">
+                           </figure>
+                        </div>
+                        <div class="flex justify-center items-center relative left-[-20px] bg-[#fbfbfe] rounded-[10px] w-12.5 h-12.5">
+                           <figure>
+                             <img src="./images/icons/icon-js.svg" alt="Js" class="w-10 h-10">
+                           </figure>
+                        </div>
+                        <div class="flex justify-center items-center relative left-[-10px] top-[-8px] bg-[#fbfbfe] rounded-[10px] w-12.5 h-12.5">
+                            <figure>
+                                <img src="./images/icons/icon-php.svg" alt="Php" class="w-10 h-10">
+                            </figure>
+                        </div>
+                        </div>
+                            <div class="bg-white flex justify-center rounded-[10px] items-center absolute pc:bottom-[20px] tablet:bottom-[10px] pl-[10px]  pc:right-[20px] tablet:right-[10px] mobile:right-[10px] mobile:bottom-[10px] w-[150px] h-[85px]">
+                               <div>
+                                 <p class="font-sans font-bold pc:text-xs tablet:text-lg text-primary">100%</p>
+                                <P class="font-sans font-normal text-base leading-[20px] text-secondary">Игдивидуальная разработка</P>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="mobile:flex mobile:mt-[20px] tablet:mt-[0px] tablet:block">
+                <ul class="pc:mt-[30px] tablet:mt-[20px] mobile:mx-auto mobile:w-[219px] tablet:mx-0 tablet:ml-[20px] pc:ml-[0px]">
+                    <li class=" relative before:content-[''] before:bg-[url('../public/images/icons/mark.svg')] before:absolute before:bg-no-repeat before:ml-[-25px] before:bg-[0px_-2px] before:w-full before:h-full float-left mr-[30px]">Чистый код</li>
+                    <li class="relative before:content-[''] before:bg-[url('../public/images/icons/mark.svg')] before:absolute before:bg-no-repeat before:ml-[-25px] before:bg-[0px_-2px] before:w-full before:h-full float-left tablet:mr-[30px]">Адаптивность</li>
+                    <li class="relative before:content-[''] before:bg-[url('../public/images/icons/mark.svg')] before:absolute before:bg-no-repeat before:ml-[-25px] before:bg-[0px_-2px] before:w-full before:h-full  float-left tablet:mr-[30px]">Высокая скорость</li>
+                    <li class="relative before:content-[''] before:bg-[url('../public/images/icons/mark.svg')] before:absolute before:bg-no-repeat before:ml-[-25px] before:bg-[0px_-2px] before:w-full before:h-full float-left tablet:mr-[30px]">Индивидуальный подход</li>
+                </ul>
+            </div>
+            </div>
+        </section>
+        <section class="mx-auto pc:w-[calc(100%-40px)] mobile:mb-[30px] tablet:mb-[0px] tablet:w-[calc(100%-20px)] mobile:w-[calc(100%-10px)] mobile:max-w-[375px] pc:max-w-300 tablet:max-w-[768px]">
+            <div>
+                <h2 class="pc:mt-[60px] mobile:mt-[30px] tablet:mt-[50px] mb-[30px] font-sans font-bold text-center text-primary pc:text-2xl tablet:text-xl mobile:text-xs">Вам нужен сайт, который<br class="mobild:block tablet:hidden"> работает на ваш бизнес?</h2>
+                <div class="flex justify-between mobile:gap-y-[10px] tablet:gap-y-[0px] mobile:flex-col tablet:flex-row pc:gap-x-[20px] tablet:gap-x-[5px]">
+                    <div class="bg-white mobile:pb-[10px] mobile:pl-[10px] mobile:pt-[10px] pc:pl-[20px] pc:pt-[20px] tablet:pl-[10px] tablet:pt-[10px] pc:w-[280px] tablet:w-[180px] pc:h-[230px] tablet:h-[320px] border-solid rounded-[10px] border-[#f4f4f9] border-2 flex-none ">
+                        <figure class="mobile:flex tablet:block mobile:gap-x-[0px] tablet:gap-x-[0px] mobile:items-center">
+                            <img src="./images/icons/icon-smartphone.svg" alt="Смартфон" class="pc:w-[70px] tablet:w-[50px] mobile:w-[40px] mobile:h-[40px] tablet:mx-auto pc:mx-0 tablet:h-[40px] pc:h-[50px]">
+                            <figcaption class="tablet:mt-[10px] font-sans font-bold pc:text-lg mobile:text-base text-primary leading-[120%]">Хорошо выглядеть<br> на любых устройствах</figcaption>
+                        </figure>
+                      <div class="mobile:w-[300px] tablet:w-full">
+                          <p class="tablet:mt-[10px] mobile:mt-[5px] font-sans font-normal text-secondary pc:text-base mobile:text-sm">Сайт корректно отображается<br class="pc:block tablet:hidden mobile:hidden"> на смартфонах,<br class="tablet:block pc:hidden mobile:hidden"> планшетах<br class="pc:block tablet:hidden mobile:hidden"> и компьютерах</p>
+                      </div>
+                    </div>
+                    <div class="bg-white mobile:pl-[10px] mobile:pb-[10px] mobile:pt-[10px]  pc:pl-[20px] pc:pt-[20px] tablet:pl-[10px]  tablet:pt-[10px] pc:w-[280px] tablet:w-[180px] pc:h-[230px] tablet:h-[320px] rounded-[10px] border-solid border-[#f4f4f9] border-2 flex-none">
+                         <figure class="mobile:flex mobile:gap-x-[0px] tablet:gap-x-[0px] tablet:block mobile:items-center">
+                            <img src="./images/icons/icon-zap.svg" alt="Разряд" class="pc:w-[70px] tablet:w-[50px] tablet:mx-auto pc:mx-0 mobile:w-[40px] mobile:h-[40px] tablet:h-[40px] pc:h-[50px]">
+                            <figcaption class="tablet:mt-[10px] font-sans font-bold pc:text-lg tablet:text-base text-primary leading-[120%]">Быстро<br class="tablet:block pc:hidden"> загружаться </figcaption>
+                        </figure>
+                        <div class="mobile:w-[300px] tablet:w-full">
+                            <p class="tablet:mt-[10px] mobile:mt-[5px] font-sans font-normal text-secondary pc:text-base mobile:text-sm">Оптимизированный<br class="tablet:block pc:hidden mobile:hidden"> код<br class="pc:block tablet:hidden mobile:hidden"> позволяет<br class="tablet:block pc:hidden mobile:hidden"> страницам быстрее<br class="pc:block tablet:hidden mobile:hidden"> загружаться и комфортно работать</p>
+                        </div>
+                    </div>
+                    <div class="bg-white mobile:pl-[10px] mobile:pb-[10px] mobile:pt-[10px] pc:pl-[20px] pc:pt-[20px] tablet:pl-[10px] tablet:pt-[10px] pc:w-[280px] tablet:w-[180px] pc:h-[230px] tablet:h-[320px] rounded-[10px] border-solid border-[#f4f4f9] border-2 flex-none">
+                         <figure class="mobile:flex mobile:gap-x-[5px] tablet:gap-x-[0px] tablet:block mobile:items-center">
+                            <img src="./images/icons/icon-target.svg" alt="Цель" class="pc:w-[70px] tablet:w-[50px] tablet:h-[40px] mobile:w-[40px] mobile:h-[40px] tablet:mx-auto pc:mx-0 pc:h-[50px]">
+                            <figcaption class="tablet:mt-[10px] font-sans font-bold pc:text-lg tablet:text-base text-primary leading-[120%]">Понятно  объясняет<br class="mobile:block tablet:hidden"> ваше предложение</figcaption>
+                        </figure>
+                        <div class="mobile:w-[300px] tablet:w-full">
+                            <p class="tablet:mt-[10px] mobile:mt-[5px] font-sans font-normal text-secondary pc:text-base mobile:text-sm">Продуманная<br class="tablet:block pc:hidden mobile:hidden"> структура сайта помогает посетителю быстро понять что вы предлагаете</p>
+                        </div>
+                    </div>
+                    <div class="bg-white mobile:pl-[10px] mobile:pb-[10px] mobile:pt-[10px] pc:pl-[20px] pc:pt-[20px] tablet:pl-[10px] tablet:pt-[10px] pc:w-[280px] tablet:w-[180px] pc:h-[230px] tablet:h-[320px] rounded-[10px] border-solid border-[#f4f4f9] border-2 flex-none ">
+                         <figure class="mobile:flex  mobile:gap-x-[5px] tablet:gap-x-[0px] tablet:block mobile:items-center">
+                            <img src="./images/icons/icon-shield-check.svg" alt="Проверка" class="pc:w-[70px] tablet:w-[50px] mobile:w-[40px] mobile:h-[40px] tablet:mx-auto pc:mx-0 tablet:h-[40px] pc:h-[50px]">
+                            <figcaption class="tablet:mt-[10px] font-sans font-bold pc:text-lg tablet:text-base text-primary leading-[120%]">Вызывает доверие<br> у клиентов</figcaption>
+                        </figure>
+                       <div class="mobile:w-[300px] tablet:w-full">
+                         <p class="tablet:mt-[10px] mobile:mt-[5px] font-sans font-normal text-secondary pc:text-base mobile:text-sm">Профессиональный дизайн и <br class="pc:block tablet:hidden mobile:hidden">  аккуратная подача информации<br class="pc:block tablet:hidden mobile:hidden"> укрепляет доверии компании</p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pc:mt-[100px] tablet:mt-[50px] bg-white tablet:pt-[60px] mobile:pt-[30px] tablet:pb-[60px] mobile:pb-[30px] border-solid border-t-2 border-[#f7f7fa]">
+            <div class="flex pc:gap-x-[60px] mobile:flex-col  tablet:gap-y-[20px] pc:gap-y-[0px]  tablet:flex-col pc:flex-row mx-auto pc:w-[calc(100%-40px)] mobile:w-[calc(100%-10px)] tablet:w-[calc(100%-20px)] pc:max-w-300 mobile:max-w-[375px] tablet:max-w-[768px]">
+                <div class="tablet:flex pc:block">
+                    <div>
+                        <h2 class="font-sans text-primary font-bold tablet:text-[22px] mobile:text-xs leading-[120%]">Разработка с нуля — без лишнего кода</h2>
+                    <p class="mt-[10px] mb-[15px] font-sans font-normal text-secondary text-base leading-[125%]">Каждый проект создаётся индивидуально.<br>Я не перегружаю сайт ненужными плагинами, элементами и функциями. Только то, что действительно необходимо для работы вашего проекта.</p>
+                    </div>
+                    <div>
+                        <div class="flex">
+                    <figure>
+                        <img src="./images/development-image1.webp" alt="Изображение" loading="lazy" class="w-[300px] h-[150px] tablet:object-cover rounded-[10px]">
+                    </figure>
+                    <figure>
+                        <img src="./images/development_image.webp" alt="Изображение" loading="lazy" class="w-[300px] h-[150px] tablet:object-cover rounded-[10px]">
+                    </figure>
+                    </div>
+                    </div>
+                </div>
+                <div>
+                   <div class="flex flex-wrap mobile:mt-[20px] tablet:mt-[0px] justify-between   gap-y-[30px]">
+                    <div class="tablet:w-1/3 mobile:w-1/2">
+                        <div class="flex gap-x-[5px]">
+                            <div>
+                                <figure>
+                                    <img src="./images/icons/icon-code.svg" alt="Код" leading="lazy" class="mobile:w-[70px] mobile:h-[30px] tablet:w-[40px] tablet:h-[40px]">
+                                </figure>
+                            </div>
+                            <div>
+                                <p class="mobile:mb-[5px] tablet:mb-[0px] font-sans font-bold text-primary mobile:text-base pc:text-lg tablet:text-base leading-[120%]">Чистый код</p>
+                                <p class="font-sans font-normal mobile:text-sm text-secondary pc:text-base tablet:text-sm leading-[125%]">Структурированный<br> и понятный код без<br class="mobile:hidden tablet:block"> лишнего мусора.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="tablet:w-1/3 mobile:w-1/2">
+                        <div class="flex gap-x-[5px] ">
+                            <div>
+                                <figure>
+                                    <img src="./images/icons/icon_adaptive.svg" alt="Адаптивная верстка" leading="lazy" class="mobile:w-[50px] mobile:h-[27px] tablet:w-[40px] tablet:h-[40px]">
+                                </figure>
+                            </div>
+                            <div>
+                                <p class="mobile:mb-[5px] tablet:mb-[0px] font-sans font-bold text-primary mobile:text-base pc:text-lg tablet:text-base leading-[120%]">Адаптивная верстка</p>
+                                <p class="font-sans font-normal mobile:text-sm text-secondary pc:text-base tablet:text-sm leading-[125%]">Сайт корректно<br class="mobile:hidden tablet:block"> отображается<br> на всех устройствах</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="tablet:w-1/3 mobile:w-1/2">
+                        <div class="flex gap-x-[10px] ">
+                            <div>
+                                <figure>
+                                    <img src="./images/icons/icon-design.svg" alt="Современный дизайн" leading="lazy" class="mobile:w-[100px] mobile:h-[30px] tablet:w-[40px] tablet:h-[40px]">
+                                </figure>
+                            </div>
+                            <div>
+                                <p class="mobile:mb-[5px] tablet:mb-[0px] font-sans font-bold text-primary mobile:text-base pc:text-lg tablet:text-base leading-[120%]">Современный дизайн</p>
+                                <p class="font-sans font-normal mobile:text-sm text-secondary pc:text-base tablet:text-sm leading-[125%]">Аккуратный внешний вид, продуманная структура<br class="mobile:hidden tablet:block"> и удобная навигация.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="tablet:w-1/3 mobile:w-1/2">
+                        <div class="flex gap-x-[10px] ">
+                            <div>
+                                <figure>
+                                    <img src="./images/icons/icon-speed.svg" alt="Высокая скорость" leading="lazy"  class="mobile:w-[110px] mobile:h-[30px] tablet:w-[40px] tablet:h-[40px]">
+                                </figure>
+                            </div>
+                            <div>
+                                <p class="mobile:mb-[5px] tablet:mb-[0px] font-sans font-bold text-primary mobile:text-base pc:text-lg tablet:text-base leading-[120%]">Высокая скорость</p>
+                                <p class="font-sans font-normal mobile:text-sm text-secondary pc:text-base tablet:text-sm leading-[125%]">Оптимизация сайта<br class="mobile:hidden tablet:block"> позволяет страницам<br class="mobile:hidden tablet:block"> быстро загружаться и комфортно работать.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="tablet:w-1/3 mobile:w-1/2">
+                        <div class="flex gap-x-[5px] ">
+                            <div>
+                                <figure>
+                                    <img src="./images/icons/icon-approach.svg" alt="Индивидуальный подход" leading="lazy" class="mobile:w-[110px] mobile:h-[30px] tablet:w-[40px] tablet:h-[40px]">
+                                </figure>
+                            </div>
+                            <div>
+                                <p class="font-sans font-bold text-primary mobile:text-base pc:text-lg tablet:text-base leading-[120%] leading-[120%] tablet:block mobile:hidden">Индивидуальный<br class="tablet:block pc:hidden"> подход</p>
+                                <p class="mobile:mb-[5px] tablet:mb-[0px] font-sans font-bold text-primary mobile:text-base pc:text-lg tablet:text-base leading-[120%] leading-[120%] tablet:hidden mobile:block">Уникальный<br> сайт</p>
+                                <p class="font-sans font-normal mobile:text-sm text-secondary pc:text-base tablet:text-sm leading-[125%]">Сайт создаётся под вашу компанию, аудиторию<br class="mobile:hidden tablet:block"> и задачи,<br class="mobile:block tablet:hidden"> а не подгоняется<br class="mobile:hidden tablet:block"> под готовый шаблон.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="tablet:w-1/3 mobile:w-1/2">
+                        <div class="flex gap-x-[10px] ">
+                            <div>
+                                <figure>
+                                    <img src="./images/icons/icon-development.svg" alt="Возможность развития" leading="lazy" class="mobile:w-[100px] mobile:h-[30px] tablet:w-[40px] tablet:h-[40px]">
+                                </figure>
+                            </div>
+                            <div>
+                                <p class="mobile:mb-[5px] tablet:mb-[0px] font-sans font-bold text-primary mobile:text-base pc:text-lg tablet:text-base leading-[120%]">Возможность развития</p>
+                                <p class="font-sans font-normal mobile:text-sm text-secondary pc:text-base tablet:text-sm leading-[125%]">В дальнейшем сайт можно расширять, добавляя новые страницы, функциию <br> и интеграции.</p>
+                            </div>
+                        </div>
+                    </div>
+                   </div> 
+                </div>
+            </div>
+        </section>
+        <section class="mx-auto pc:pt-[60px] mobile:pt-[30px] pc:pb-[60px] mobile:pb-[30px] pc:w-[calc(100%-40px)] tablet:w-[calc(100%-20px)] mobile:w-[calc(100%-10px)] pc:max-w-300 tablet:max-w-[768px] mobile:max-w-[375px]">
+            <h2 class="mb-[30px] font-sans font-bold text-center pc:text-2xl tablet:text-xl mobile:text-xs text-primary">Как проходит работа</h2>
+            <div class="flex mobile:flex-col tablet:flex-row mobile:gap-y-[30px] tablet:gap-y-[0px] justify-between gap-x-[30px]">
+               <div class="tablet:flex-2">
+                    
+                    <div class="flex justify-center">
+                        <figure class="relative">
+                      <div class=" pc:before:content-[''] mobile:before:content-none before:absolute before:w-[120px] before:h-full before:border-dashed before:border-[#1c3890] before:border-b-2 before:right-[-145px] before:top-[-55px] bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)]  flex justify-center items-center rounded-full w-[70px] h-[70px]">
+                          <img src="./images/icons/icon-tesk.svg" alt="Обсуждаем задачу" loading="lazy" class=" w-[40px] h-[40px]">
+                      </div>
+                        <figcaption class="mt-[5px] text-center font-sans font-normal text-secondary text-[14px]">01</figcaption>
+                    </figure>
+                    </div>
+                   
+                    <p class="mt-[5px] mb-[5px] text-center font-sans font-bold text-base text-primary leading-[120%]">Обсуждаем задачу</p>
+                    <p class="text-center font-sans font-normal text-secondary text-[14px] mobile:block tablet:hidden pc:block">Вы рассказываете о бизнесе, услуге или продукте, который хотите представить в интернете.</p>
+               </div>
+                <div class="tablet:flex-2">
+                    <div class="flex justify-center">
+                        <figure class="relative">
+                        <div class="pc:before:content-[''] mobile:before:content-none before:absolute before:w-[120px] before:h-full before:border-dashed before:border-[#1c3890] before:border-b-2 before:right-[-145px] before:top-[-55px] bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)]  flex justify-center items-center rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/icon-structure.svg" alt="Структура" loading="lazy" class="w-[40px] h-[40px]">
+                        </div>
+                        <figcaption class="mt-[5px] text-center font-sans font-normal text-secondary text-[14px]">02</figcaption>
+                    </figure>
+                    </div>
+                    <p class="mt-[5px] mb-[5px] text-center font-sans font-bold text-base  text-primary leading-[120%]">Продумываем структуру</p>
+                    <p class="text-center font-sans font-normal text-secondary text-[14px] mobile:block tablet:hidden pc:block">Определяем, какие блоки и информация нужны посетителю</p>
+                </div>
+                <div class="tablet:flex-2">
+                    <div class="flex justify-center">
+                        <figure class="relative">
+                         <div class="pc:before:content-[''] mobile:before:content-none before:absolute before:w-[120px] before:h-full before:border-dashed before:border-[#1c3890] before:border-b-2 before:right-[-145px] before:top-[-55px] bg-white  shadow-[0_6px_20px_rgba(0,0,0,0.08)] flex justify-center items-center rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/icon-site.svg" alt="Разрабатываем сайт" loading="lazy" class="w-[40px] h-[40px]">
+                        </div>
+                        <figcaption class="mt-[5px] text-center font-sans font-normal text-secondary text-[14px]">03</figcaption>
+                    </figure>
+                    </div>
+                    <p class="mt-[5px] mb-[5px] text-center font-sans font-bold  text-base text-primary leading-[120%]">Разрабатываем сайт</p>
+                    <p class="text-center font-sans font-normal text-secondary text-[14px] mobile:block tablet:hidden pc:block">Создаю дизайн и<br> реализую его с нуля с использованием современных технологий.</p>
+                </div>
+                <div class="tablet:flex-2">
+                    <div class="flex justify-center">
+                        <figure class="relative">
+                         <div class="pc:before:content-[''] mobile:before:content-none before:absolute before:w-[120px] before:h-full before:border-dashed before:border-[#1c3890] before:border-b-2 before:right-[-145px] before:top-[-55px] bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)] flex justify-center items-center rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/icon-monitor-smartphone.svg" alt="Адаптация" loading="lazy" class="w-[40px] h-[40px]">
+                        </div>    
+                            <figcaption class="mt-[5px] text-center font-sans font-normal text-secondary text-[14px]">04</figcaption>
+                    </figure>
+                    </div>
+                    <p class="mt-[5px] mb-[5px] mobile:text-center tablet:text-left pc:w-[225px] font-sans font-bold text-base pc:block tablet:hidden  text-primary leading-[120%]">Адаптируем под устройства</p>
+                    <p class="mt-[5px] mb-[5px] pc:text-left pc:w-[225px] font-sans font-bold text-base pc:hidden mobile:hidden tablet:block tablet:text-center text-primary leading-[120%]">адаптивный дизайн</p>
+                    <p class="text-center font-sans font-normal text-secondary text-[14px] mobile:block tablet:hidden pc:block">Проверяем отображение<br> сайта на разных разрешениях экрана.</p>
+                </div>
+                <div class="tablet:flex-2">
+                    <div class="flex justify-center">
+                        <figure class="relative">
+                        <div class=" bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)] flex justify-center items-center rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/icon-test.svg" alt="Тест" loading="lazy" class="w-[40px] h-[40px]">
+                        </div>    
+                        <figcaption class="mt-[5px] text-center font-sans font-normal text-secondary text-[14px]">05</figcaption>
+                    </figure>
+                    </div>
+                    <p class="mt-[5px] mb-[5px] text-center font-sans font-bold text-base text-primary leading-[120%]">Тестируем</p>
+                    <p class="text-center font-sans font-normal text-secondary text-[14px] mobile:block tablet:hidden pc:block">Проверяем корректность работы элементов, ссылок, форм и других функций.</p>
+                </div>
+                <!-- <div class="flex-2">
+                    <div class="flex justify-center">
+                        <figure class="">
+                        <div class=" bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)] flex justify-center items-center rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/icon-rocket.svg" alt="Запускаем" loading="lazy" class="w-[40px] h-[40px]">
+                        </div>
+                            <figcaption class="mt-[5px] text-center font-sans font-normal text-secondary text-[14px]">06</figcaption>
+                    </figure>
+                    </div>
+                    <p class="mt-[5px] mb-[5px] text-center font-sans font-bold text-base text-primary">Запускаем</p>
+                    <p class="text-left font-sans font-normal text-secondary text-[14px]">После согласования сайт размещается на вашем домене и становится доступен клиентам.</p>
+                </div> -->
+            </div>
+        </section>
+        <section class="pc:pt-[60px] mobile:pt-[30px] pc:pb-[60px] mobile:pb-[30px] bg-white">
+            <div class="mx-auto  pc:w-[calc(100%-40px)] tablet:w-[calc(100%-20px)] mobile:w-[calc(100%-10px)] pc:max-w-300 mobile:max-w-[375px] tablet:max-w-[768px]">
+                <h2 class="pc:mb-[30px] mobile:mb-[20px] font-sans font-bold pc:text-2xl tablet:text-xl mobile:text-xs text-primary text-center">Для кого подходит такая разработка?</h2>
+            <div class="flex justify-between mobile:flex-col tablet:flex-row pc:gap-x-[40px] tablet:gap-x-[10px] mobile:gap-y-[10px] tablet:gap-y-[0px]">
+                <div class="flex-1 bg-white border-solid px-[10px] pt-[10px] pb-[15px] border-[#f4f4f9] border-2 rounded-[10px]">
+                    <figure>
+                        <img src="./images/small-medium-businesses.webp" alt="Для малого и среднего бизнеса" loading="lazy" class=" rounded-[10px] object-cover tablet:w-[270px] tablet:h-[190px] mobile:w-[365px]">
+                        <figcaption class="mt-[10px]   mb-[5px] font-sans font-bold text-primary pc:text-lg mobile:text-base tablet:text-base leading-[120%]">Для малого и среднего бизнеса</figcaption>
+                    </figure>
+                    <p class=" font-sans font-normal text-secondary pc:text-base mobile:text-sm leading-[120%]">Представьте компанию профессионально и получите собственную площадку в интернете.</p>
+                </div>
+                <div class="flex-1  bg-white border-solid px-[10px] pt-[10px] pb-[15px] border-[#f4f4f9] border-2 rounded-[10px]">
+                    <figure>
+                        <img src="./images/Specialists-experts.webp" alt="Для специалистов и экспертов" loading="lazy" class="rounded-[10px] object-covertablet:w-[270px] tablet:h-[190px] mobile:w-[365px]">
+                        <figcaption class="mt-[10px] mb-[5px] font-sans font-bold text-primary mobile:text-base pc:text-lg tablet:text-base leading-[120%]">Для специалистов и экспертов</figcaption>
+                    </figure>
+                    <p class="font-sans font-normal text-secondary pc:text-base mobile:text-sm leading-[120%]">Покажите услуги, опыт, кейсы и контакты потенциальным клиентам.</p>
+                </div>
+                <div class="flex-1  bg-white border-solid px-[10px] pt-[10px] pb-[15px] border-[#f4f4f9] border-2 rounded-[10px]">
+                    <figure>
+                        <img src="./images/Startups.webp" alt="Для стартапов" loading="lazy" class="tablet:w-[270px] tablet:h-[190px] mobile:w-[365px] object-cover rounded-[10px]">
+                        <figcaption class="mt-[10px] mb-[5px] font-sans font-bold text-primary mobile:text-base pc:text-lg tablet:text-base leading-[120%]">Для стартапов</figcaption>
+                    </figure>
+                    <p class="font-sans font-normal text-secondary pc:text-base mobile:text-sm leading-[120%]">Создайте современный сайт под новый продукт или сервис без ограничений готового шаблона.</p>
+                </div>
+                <div class="flex-1  bg-white border-solid px-[10px] pt-[10px] pb-[15px] border-[#f4f4f9] border-2 rounded-[10px]">
+                    <figure>
+                        <img src="./images/website-company.webp" alt="Для компаний" loading="lazy" class="tablet:w-[270px] tablet:h-[190px] mobile:w-[365px] object-cover rounded-[10px]">
+                        <figcaption class="mt-[10px] mb-[5px] font-sans font-bold text-primary mobile:text-base pc:text-lg tablet:text-base leading-[120%]">Для компаний, которым нужен новый сайт</figcaption>
+                    </figure>
+                    <p class="font-sans font-normal text-secondary pc:text-base mobile:text-sm leading-[120%]">Если старый сайт выглядит устаревшим, работает медленно или плохо отображается на телефоне — разработаем новый.</p>
+                </div>
+            </div>
+            <div class="flex mt-[20px] justify-center">
+                 <a href="#"  class="border-solid border-[1px] py-[10px] px-[20px] rounded-[20px] border-blue hover:bg-blue transition-colors hover:text-white duration-300 ease-in cursor-pointer">Связаться с разработчиком</a>
+               </div>
+            </div>
+        </section>
+        <section class="mx-auto pc:pt-[60px] pc:pb-[60px] mobile:pt-[30px] mobile:pb-[30px] pc:w-[calc(100%-40px)] mobile:w-[calc(100%-10px)] tablet:w-[calc(100%-20px)] pc:max-w-300 mobile:max-w-[375px] tablet:max-w-[768px]">
+            <h2 class="pc:mb-[20px] tablet:mb-[0px] font-sans font-bold text-primary pc:text-2xl mobile:text-xs tablet:text-xl text-center">Почему не шаблон?</h2>
+            <p class="tablet:mb-[30px] mobile:mb-[20px] font-sans font-normal text-secondary pc:text-lg mobile:text-base text-center leading-[120%]">Шаблонные решения могут быть удобными,<br> но часто имеют ограничения.</p>
+            <div class="flex justify-center mobile:flex-col tablet:flex-row mobile:gap-y-[10px] tablet:gap-y-[0px] tablet:items-center pc:gap-x-[40px] tablet:gap-x-[10px]">
+                <div class="flex-1 bg-[#fef0f1] rounded-[10px] tablet:pt-[30px] mobile:pt-[20px] px-[40px] tablet:pb-[30px] mobile:pb-[20px]">
+                    <p class="mb-[10px] sample-title  font-sans font-bold pc:text-lg mobile:text-base">Шаблонный сайт</p>
+                    <ul>
+                        <li class="relative after:content-[''] after:absolute after:bg-[url('../public/images/icons/icon-cross.svg')] after:bg-no-repeat   after:w-[20px] after:h-full after:left-[-25px] after:top-[1px] mb-[5px] font-sans font-normal text-secondary pc:text-base mobile:text-sm">Готовая структура, которая не подходит для вашей задачи</li>
+                        <li class="relative after:content-[''] after:absolute after:bg-[url('../public/images/icons/icon-cross.svg')] after:bg-no-repeat   after:w-[20px] after:h-full after:left-[-25px] after:top-[1px] mb-[5px] mb-[5px] font-sans font-normal text-secondary pc:text-base mobile:text-sm">Лишние функции и код, за которые вы переплачиваете</li>
+                        <li class="relative after:content-[''] after:absolute after:bg-[url('../public/images/icons/icon-cross.svg')] after:bg-no-repeat   after:w-[20px] after:h-full after:left-[-25px] after:top-[1px] mb-[5px] mb-[5px] font-sans font-normal text-secondary pc:text-base mobile:text-sm">Ограничения в дизайне и возможностях</li>
+                        <li class="relative after:content-[''] after:absolute after:bg-[url('../public/images/icons/icon-cross.svg')] after:bg-no-repeat   after:w-[20px] after:h-full after:left-[-25px] after:top-[1px] mb-[5px] mb-[5px] font-sans font-normal text-secondary pc:text-base mobile:text-sm">Сложнее вносить изменения и развивать</li>
+                    </ul>
+                </div>
+                <div class="mobile:hidden tablet:block">
+                    <figure>
+                        <img src="./images/icons/icon-arrow.svg" alt="Стрелка" loading="lazy" class="pc:w-[200px] tablet:w-[120px] h-[120px]">
+                    </figure>
+                </div>
+                <div class="flex-1 bg-[#e8f2ed] rounded-[10px] tablet:pt-[30px] mobile:pt-[20px] px-[40px] tablet:pb-[30px] mobile:pb-[20px]">
+                    <p class="mb-[10px] development-title font-sans font-bold pc:text-lg mobile:text-base">Разработка с нуля</p>
+                    <ul>
+                        <li class="mb-[9px] relative after:content-[''] after:absolute after:bg-[url('../public/images/icons/icon-mark-greeb.svg')] after:bg-no-repeat   after:w-[20px] after:h-full after:left-[-25px] after:top-[1px] font-sans text-secondary pc:text-base mobile:text-sm">Структура под ваши задачи и бизнес</li>
+                        <li class="mb-[9px] relative after:content-[''] after:absolute after:bg-[url('../public/images/icons/icon-mark-greeb.svg')] after:bg-no-repeat   after:w-[20px] after:h-full after:left-[-25px] after:top-[1px] font-sans text-secondary pc:text-base mobile:text-sm">Только необходимые функции</li>
+                        <li class="mb-[9px] relative after:content-[''] after:absolute after:bg-[url('../public/images/icons/icon-mark-greeb.svg')] after:bg-no-repeat   after:w-[20px] after:h-full after:left-[-25px] after:top-[1px] font-sans text-secondary pc:text-base mobile:text-sm">Индивидуальный дизайн</li>
+                        <li class="mb-[9px] relative after:content-[''] after:absolute after:bg-[url('../public/images/icons/icon-mark-greeb.svg')] after:bg-no-repeat   after:w-[20px] after:h-full after:left-[-25px] after:top-[1px] font-sans text-secondary pc:text-base mobile:text-sm">Оптимизированный код</li>
+                        <li class="mb-[9px] relative after:content-[''] after:absolute after:bg-[url('../public/images/icons/icon-mark-greeb.svg')] after:bg-no-repeat   after:w-[20px] after:h-full after:left-[-25px] after:top-[1px] font-sans text-secondary pc:text-base mobile:text-sm">Простое развитие и масштабирование</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white pc:pt-[60px] mobile:pt-[30px] pc:pb-[60px] mobile:pb-[30px]">
+            <div class="mx-auto pc:w-[calc(100%-40px)] tablet:w-[calc(100%-20px)] mobile:w-[calc(100%-10px)] pc:max-w-300 mobile:max-w-[375px] tablet:max-w-[768px]">
+                <h2 class="mb-[20px] font-sans font-bold pc:text-2xl tablet:text-xl text-primary mobile:text-xs text-center">Что входит в разработку</h2>
+                <div class="pc:flex mobile:gap-y-[20px] mobile:flex mobile:flex-col pc:flex-row tablet:grid tablet:grid-cols-4 tablet:justify-between tablet:gap-y-[40px] tablet:flex-wrap  pc:gap-x-[20px]">
+                    <div class=" pc:flex-1">
+                        <figure class="mb-[10px] flex justify-center items-center mx-auto  bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)]  rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/icon-search.svg" alt="Анализ задачи" loading="lazy" class="w-[40px] h-[40px]">
+                        </figure>
+                        <p class="mb-[5px] font-sans font-bold text-center text-primary text-base"> Анализ задачи</p>
+                        <p class="font-sans  font-normal text-center text-secondary text-[14px] leading-[120%]">Изучаю бизнес, конкурентов и аудиторию</p>
+                    </div>
+                    <div class=" pc:flex-1">
+                        <figure class="mb-[10px] flex justify-center items-center mx-auto  bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)]  rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/development/icon-web1.svg" alt="структура страницы" loading="lazy" class="w-[40px] h-[40px]">
+                        </figure>
+                        <p class="mb-[5px] font-sans font-bold text-center pc:w-[165px] text-primary text-base">Структура страницы</p>
+                        <p class="font-sans  font-normal text-center text-secondary text-[14px] leading-[120%]">Придумываю логику, и расположения блоков</p>
+                    </div>
+                    <div class=" pc:flex-1">
+                        <figure class="mb-[10px] flex justify-center items-center mx-auto  bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)]  rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/icon_adaptive.svg" alt="Адаптивная верстка" loading="lazy" class="w-[35px] h-[35px]">
+                        </figure>
+                        <p class="mb-[5px] font-sans font-bold text-center pc:w-[180px] text-primary text-base">Адаптивная верстка</p>
+                        <p class="font-sans  font-normal text-center text-secondary text-[14px] leading-[120%]">Делаю сайт удобным на всех устройствах</p>
+                    </div>
+                    <div class=" pc:flex-1">
+                        <figure class="mb-[10px] flex justify-center items-center mx-auto  bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)]  rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/icon-site.svg" alt="Программирование" loading="lazy" class="w-[40px] h-[40px]">
+                        </figure>
+                        <p class="mb-[5px] font-sans font-bold text-center text-primary text-base">Программирование</p>
+                        <p class="font-sans  font-normal text-center text-secondary text-[14px] leading-[120%]">Реализую необходимый функционал</p>
+                    </div>
+                    <div class=" pc:flex-1">
+                        <figure class="mb-[10px] flex justify-center items-center mx-auto  bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)]  rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/development/icon-speed.svg" alt="Оптимизация" loading="lazy" class="w-[40px] h-[40px]">
+                        </figure>
+                        <p class="mb-[5px] font-sans font-bold text-center text-primary text-base">Оптимизация</p>
+                        <p class="font-sans  font-normal text-center text-secondary text-[14px] leading-[120%]">Ускоряю загрузку и работу сайта</p>
+                    </div>
+                    <div class=" pc:flex-1">
+                        <figure class="mb-[10px] flex justify-center items-center mx-auto  bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)]  rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/icon-shield-check.svg" alt="Тестирование" loading="lazy" class="w-[40px] h-[40px]">
+                        </figure>
+                        <p class="mb-[5px] font-sans font-bold text-center text-primary text-base">Тестирование</p>
+                        <p class="font-sans  font-normal text-center text-secondary text-[14px] leading-[120%]">Проверя сайт на ошибки и корректность работы</p>
+                    </div>
+                    <div class=" pc:flex-1">
+                        <figure class="mb-[10px] flex justify-center items-center mx-auto  bg-white shadow-[0_6px_20px_rgba(0,0,0,0.08)]  rounded-full w-[70px] h-[70px]">
+                            <img src="./images/icons/icon-rocket.svg" alt="Подготовка сайта" loading="lazy" class="w-[40px] h-[40px]">
+                        </figure>
+                        <p class="mb-[5px] font-sans font-bold text-center text-primary text-base">Подготовка сайта</p>
+                        <p class="font-sans  font-normal text-center text-secondary text-[14px] leading-[120%]">Размещаю сайт на вашем домене</p>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        <section class="mx-auto pc:pt-[60px] pc:pb-[60px] mobile:pt-[30px] mobile:pb-[30px] pc:w-[calc(100%-40px)] mobile:w-[calc(100%-10px)] mobile:max-w-[375px] tablet:w-[calc(100%-20px)] pc:max-w-300 tablet:max-w-[768px]">
+            <div class="flex gap-x-[40px] pc:flex-row mobile:flex-col  justify-between ">
+                <div class="pc:w-[500px] tablet:w-[750px] mobile:w-[375px]">
+                    <h2 class="mt-[10px] mb-[10px] font-sans font-bold text-xl text-primary leading-[120%] mobile:text-xs">Сайт — это инвестиция в первое впечатление</h2>
+                    <p class="mobile:mb-[5px] pc:mb-[5px] tablet:mb-[10px] font-sans font-normal text-secondary tablet:text-lg leading-[120%] mobile:text-base">Ваш сайт может быть первым знакомством клиента с компанией.</p>
+                    <p class="mobile:mb-[5px] pc:mb-[5px] tablet:mb-[10px] font-sans font-normal text-secondary tablet:text-lg leading-[120%] mobile:text-base">За несколько секунд человек решает, стоит ли ему остаться на странице или закрыть её.</p>
+                    <p class=" font-sans font-normal text-secondary tablet:text-lg leading-[120%] mobile:text-base">Поэтому хороший сайт должен не просто выглядеть красиво. Он должен быстро донести ценность вашего предложения и привести посетителя к действию.</p>
+                    <button type="button" data-modal-open="orderModal" class="pc:mt-[16px] mobile:mt-[10px] tablet:mt-[30px] font-sans font-semibold text-base text-white bg-blue pc:w-[185px] tablet:w-[175px] mobile:w-[165px] mobile:h-[35px] pc:h-[45px] tablet:h-[35px] text-center rounded-[5px] border-solid border-2 cursor-pointer transition-colors duration-300 ease-in hover:border-[#585fde] hover:bg-[#585fde] border-[#484db1]">Обсудить проект</button>
+                </div>
+                <div class="mobile:mt-[60px] tablet:mt-[0px]">
+                    <figure class="relative top-[-40px] ">
+                        <img src="./images/footer.webp" alt="Сайт — это инвестиция в первое впечатление" loading="lazy" class="float-right pc:w-[700px]  pc:h-[300px]  tablet:w-[500px] tablet:h-[250px]  rounded-[10px]">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#2b3173] tablet:mt-[60px] border-solid border-y-2 border-[#6b729d] pt-[20px] pb-[20px]">
+            <div class="mx-auto  pc:w-[calc(100%-40px)] tablet:w-[calc(100%-20px)] mobile:w-[calc(100%-10px)] mobile:max-w-[375px] pc:max-w-[890px] tablet:max-w-[768px]">
+                <div class="flex mobile:flex-col tablet:flex-row gap-x-[50px] justify-center ">
+                    <div>
+                        <h2 class="mb-[10px] font-sans font-bold text-white tablet:text-xl mobile:text-xs leading-[120%]">Хотите современный сайт без шаблонов?</h2>
+                        <p class="font-sans font-normal tablet:text-lg mobile:text-base text-white leading-[120%]">Расскажите о своём проекте. Опишите, чем занимается ваш бизнес, какой сайт вам нужен и какие задачи он должен решать. Я оценю проект и предложу оптимальный вариант разработки.</p>
+                    </div>
+                    <div>
+                        <button type="button" data-modal-open="estimateModal" class="mt-[10px] font-sans font-semibold text-base text-[#474281] bg-white tablet:w-[285px] tablet:h-[45px] mobile:w-[375px] mobile:h-[35px] text-center rounded-[5px] border-solid border-2 cursor-pointer transition-colors duration-300 ease-in hover:border-[#585fde] hover:bg-[#484db1] hover:text-white border-white">Получить оценку проекта</button>
+                        <p class="tablet:mt-[15px] mobile:mt-[10px] font-sans font-normal text-white tablet:text-base mobile:text-sm leading-[120%]">Ответьте на несколько вопросов - это бесплатно и не к чему не обязывает</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mx-auto pt-[60px] pb-[60px] pc:w-[calc(100%-40px)] tablet:w-[calc(100%-20px)] mobile:w-[calc(100%-10px)] pc:max-w-[900px] mobile:max-w-[375px] tablet:max-w-[786px]">
+            <h2 class="font-sans font-bold text-primary tablet:text-2xl mobile:text-xl text-center leading-[120%]">FAQ</h2>
+            <p class="font-sans font-normal text-secondary tablet:text-lg mobile:text-base text-center">Часто задаваемые вопросы</p>
+            <div class="mt-[20px]" data-accordion>
+                <div class="accordion__item mb-[20px] border-solid border-[1px] border-[#4D413E80] py-[20px] pl-[20px] rounded-[10px]">
+                    <button class="accordion__button mb-[10px] mobile:w-[340px] mobile:h-[30px] tablet:h-auto tablet:w-[700px] pc:w-[850px]" type="button"  aria-expanded="false" >
+                        <span class="font-sans text-lg text-primary font-bold t">01.</span>
+                        <span class="font-sans tablet:text-lg mobile:text-base text-primary font-bold ">Сколько стоит разработка сайта?</span>
+                       
+                    </button>
+                    <div class="accordion__content tablet:w-[700px] mobile:w-[330px]"  >
+                        <div class="accordion__inner">
+                            <p class="font-sans font-normal text-secondary text-base leading-[120%]">Стоимость зависит от типа сайта, количества страниц, сложности дизайна и необходимого функционала. После обсуждения задачи я могу назвать точную стоимость разработки.</p>
+                            <p class="mt-[10px] font-sans font-normal text-secondary text-base leading-[120%]">Примерно если в месте с дизайном: lending page $600-700, сайт визитка $700-800, интернет магазин $1000-1500</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion__item mb-[20px] border-solid border-[1px] border-[#4D413E80] py-[20px] pl-[20px] rounded-[10px]">
+                    <button class="accordion__button mb-[10px] mobile:w-[340px] mobile:h-[30px] tablet:h-auto tablet:w-[700px] pc:w-[850px]" type="button" aria-expanded="false" >
+                        <span class="font-sans text-lg text-primary font-bold">02.</span>
+                        <span class="font-sans tablet:text-lg mobile:text-base text-primary font-bold">Сколько времени занимает разработка?</span>
+                    </button>
+                    <div class="accordion__content w-[700px] mobile:w-[330px]"  >
+                        <div class="accordion__inner">
+                            <p class="font-sans font-normal text-secondary text-base leading-[120%]">В среднем лендинг занимает от нескольких дней до 1–2 недель. Срок зависит от объёма работы, сложности дизайна и скорости согласования.</p>
+                        </div>        
+                    </div>
+                </div>
+                <div class="accordion__item mb-[20px] border-solid border-[1px] border-[#4D413E80] py-[20px] pl-[20px] rounded-[10px]">
+                    <button class="accordion__button mb-[10px]  tablet:w-[700px] mobile:h-[30px] mobile:w-[340px] tablet:h-auto pc:w-[850px]" type="button" aria-expanded="false" >
+                        <span class="font-sans text-lg text-primary font-bold">03.</span>
+                        <span class="font-sans tablet:text-lg mobile:text-base text-primary font-bold">Вы разрабатываете сайт с нуля?</span>
+                    </button>
+                    <div class="accordion__content tablet:w-[700px] mobile:w-[330px]"  >
+                        <div class="accordion__inner">
+                            <p class="font-sans font-normal text-secondary text-base leading-[120%]">Да. Сайт создаётся индивидуально под ваш проект, без шаблонных конструкторов и ненужного кода.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item mb-[20px] border-solid border-[1px] border-[#4D413E80] py-[20px] pl-[20px] rounded-[10px]">
+                    <button class="accordion__button mb-[10px] mobile:w-[340px] mobile:h-[30px] tablet:h-auto tablet:w-[700px] pc:w-[850px]" type="button" aria-expanded="false" >
+                        <span class="font-sans text-lg text-primary font-bold">04.</span>
+                        <span class="font-sans tablet:text-lg mobile:text-base text-primary font-bold">Вы делаете дизайн?</span>
+                    </button>
+                    <div class="accordion__content w-[700px] mobile:w-[330px]"  >
+                        <div class="accordion__inner">
+                            <p class="font-sans font-normal text-secondary text-base leading-[120%]">Да, дизайн можно разработать с нуля под ваш бизнес. Также можно работать по уже готовому макету.</p>
+                        </div>    
+                    </div>
+                </div>
+                <div class="accordion__item mb-[20px] border-solid border-[1px] border-[#4D413E80] py-[20px] pl-[20px] rounded-[10px]">
+                    <button class="accordion__button mb-[10px] mobile:w-[340px] mobile:h-[30px] tablet:h-auto tablet:w-[700px] pc:w-[850px]" type="button" aria-expanded="false" >
+                        <span class="font-sans text-lg text-primary font-bold">05.</span>
+                        <span class="font-sans tablet:text-lg mobile:text-base text-primary font-bold">Будет ли сайт адаптирован под мобильные устройства?</span>
+                    </button>
+                    <div class="accordion__content tablet:w-[700px] mobile:w-[330px]"  >
+                        <div class="accordion__inner">
+                            <p class="font-sans font-normal text-secondary text-base leading-[120%]">Да. Сайт адаптируется под смартфоны, планшеты, ноутбуки и большие экраны.</p>
+                        </div>    
+                    </div>
+                </div>
+                <div class="accordion__item mb-[20px] border-solid border-[1px] border-[#4D413E80] py-[20px] pl-[20px] rounded-[10px]">
+                    <button class="accordion__button mb-[10px] mobile:w-[340px] mobile:h-[30px] tablet:h-auto tablet:w-[700px] pc:w-[850px]" type="button" aria-expanded="false" >
+                        <span class="font-sans text-lg text-primary font-bold">06.</span>
+                        <span class="font-sans tablet:text-lg mobile:text-base text-primary font-bold">Можно ли заказать вёрстку по готовому дизайну?</span>
+                    </button>
+                    <div class="accordion__content w-[700px] mobile:w-[330px]"  >
+                        <div class="accordion__inner">
+                            <p class="font-sans font-normal text-secondary text-base leading-[120%]">Да. Если у вас уже есть макет в Figma или другом формате, я могу выполнить адаптивную вёрстку и реализовать необходимые интерактивные элементы.</p>
+                        </div>    
+                    </div>
+                </div>
+                <div class="accordion__item mb-[20px] border-solid border-[1px] border-[#4D413E80] py-[20px] pl-[20px] rounded-[10px]">
+                    <button class="accordion__button mb-[10px] mobile:w-[340px] mobile:h-[30px] tablet:h-auto tablet:w-[700px] pc:w-[850px]" type="button" aria-expanded="false">
+                        <span class="font-sans text-lg text-primary font-bold">07.</span>
+                        <span class="font-sans tablet:text-lg mobile:text-base text-primary font-bold">Можно ли заказать сайт на WordPress?</span>
+                    </button>
+                    <div class="accordion__content tablet:w-[700px] mobile:w-[330px]"  >
+                        <div class="accordion__inner">
+                            <p class="font-sans font-normal text-secondary text-base leading-[120%]">Да. Сайт можно разработать на CMS WordPress. Это позволит самостоятельно управлять контентом сайта: редактировать тексты, изображения, страницы, статьи и другие материалы.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item mb-[20px] border-solid border-[1px] border-[#4D413E80] py-[20px] pl-[20px] rounded-[10px]">
+                    <button class="accordion__button mb-[10px] mobile:w-[340px] mobile:h-[30px] tablet:h-auto tablet:w-[700px] pc:w-[850px]" type="button" aria-expanded="false">
+                        <span class="font-sans text-lg text-primary font-bold">08.</span>
+                        <span class="font-sans tablet:text-lg mobile:text-base text-primary font-bold">Предоставляете ли вы поддержку после запуска?</span>
+                    </button>
+                    <div class="accordion__content w-[700px] mobile:w-[330px]"  >
+                        <div class="accordion__inner">
+                            <p class="font-sans font-normal text-secondary text-base leading-[120%]">Да. Можно договориться о дальнейшем сопровождении, исправлении ошибок и внесении изменений.</p>
+                        </div>    
+                    </div>
+                </div>
+                <div class="accordion__item mb-[20px] border-solid border-[1px] border-[#4D413E80] py-[20px] pl-[20px] rounded-[10px]">
+                    <button class="accordion__button mb-[10px] mobile:w-[340px] mobile:h-[30px] tablet:h-auto tablet:w-[700px] pc:w-[850px]" type="button" aria-expanded="false" >
+                        <span class="font-sans text-lg text-primary font-bold">09.</span>
+                        <span class="font-sans tablet:text-lg mobile:text-base text-primary font-bold">Поможете ли разместить сайт на хостинге?</span>
+                    </button>
+                    <div class="accordion__content tablet:w-[700px] mobile:w-[330px]"  >
+                        <div class="accordion__inner">
+                            <p class="font-sans font-normal text-secondary text-base leading-[120%]">Да. При необходимости помогу подготовить сайт к публикации и настроить его размещение на хостинге.</p>
+                        </div>    
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#101822] pt-[60px] pb-[20px] border-solid border-t-2 border-[#656885]">
+        <div class="mx-auto pc:w-[calc(100%-40px)] tablet:w-[calc(100%-20px)] mobile:w-[calc(100%-10px)] mobile:max-w-[375px] pc:max-w-[900px] tablet:max-w-[768px]">
+            <div class="flex items-start mobile:flex-col tablet:flex-row gap-x-[20px] justify-between ">
+            <div class="flex-1">
+                <div class=" flex items-start gap-x-[5px]">
+                    <div>
+                        <a href="#">
+                            <img src="./images/icons/logo.svg" alt="Футер Логотип" loading="lazy" class="mt-[-5px] w-[40px] h-[40px]">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="font-sans font-bold text-white text-lg">WebCraft</a>
+                        <!-- <p class="text-[#757b80] mt-[10px] text-left relative text-[12px] w left-[-35px]">Разработка сайта с нуля<br> на чистом коде</p> -->
+                    </div>
+                </div>
+                <div class="flex tablet:mt-[10px] ml-[10px] items-center gap-x-[10px]">
+                    <a href="https://t.me/DavidNavalnySHop">
+                    <img src="./images/icons/icon-telegramm.svg" alt="Telegram" loading="lazy" class="w-[25px] h-[25px]">
+                </a>
+                 <a href="mailto:davidnavalnyywebdevelopment@gmail.com">
+                    <img src="./images/icons/icon-gmail.svg" alt="Gmail" loading="lazy" class="w-[35px] h-[35px]">
+                </a>
+                </div>
+            </div>
+            <div class="flex-1 mobile:mt-[10px] tablet:mt-[0px]">
+                <h3 class="mb-[10px] font-sans font-bold text-white text-base">Навигация</h3>
+                <nav>
+                    <ul class="w-[140px]">
+                        <li class="mb-[5px]">
+                            <a href="#" class=" font-sans font-normal text-[#757b80] text-[14px] hover:underline">Главная</a>
+                        </li>
+                        <li class="mb-[5px]">
+                            <a href="#" class="font-sans font-normal text-[14px] text-[#757b80] hover:underline">Услуги</a>
+                        </li>
+                        <li class="mb-[5px]">
+                            <a href="#" class="font-sans font-normal text-[14px] text-[#757b80] hover:underline">Процесс</a>
+                        </li>
+                        <li class="mb-[5px]">
+                            <a href="#" class="font-sans font-normal text-[14px] text-[#757b80] hover:underline">Преимущества</a>
+                        </li>
+                        <li class="mb-[5px]">
+                            <a href="#" class="font-sans font-normal text-[14px] text-[#757b80] hover:underline">Портфолио</a>
+                        </li>
+                        <li class="mb-[5px]">
+                            <a href="#" class="font-sans font-normal text-[14px] text-[#757b80] hover:underline">Вопросы</a>
+                        </li>
+                        <li class="mb-[5px]">
+                            <a href="#" class="font-sans font-normal text-[14px] text-[#757b80] hover:underline">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex-1">
+                <h3 class="mb-[10px] font-sans font-bold text-white text-base">Услуги</h3>
+                <ul>
+                    <li class="mb-[5px] font-sans font-normal text-[#757b80] text-[14px]">Корпоративные сайты</li>
+                    <li class="mb-[5px] font-sans font-normal text-[#757b80] text-[14px]">Лендинги</li>
+                    <li class="mb-[5px] font-sans font-normal text-[#757b80] text-[14px]">Интернет магазины</li>
+                    <li class="mb-[5px] font-sans font-normal text-[#757b80] text-[14px]">Сайты визитки</li>
+                </ul>
+            </div>
+            <div class="flex-1">
+                <h3 class="mb-[10px] font-sans font-bold text-white text-base">Контакты</h3>
+                <p class="text-[14px] mb-[5px] font-sans font-normal text-[#757b80]">Email: <a href="mailto:davidnavalnyywebdevelopment@gmail.com" class="hover:underline">davidnavalnyywebdevelopment@gmail.com</a></p>
+                <p class="text-[14px] font-sans font-normal text-[#757b80]">Telegram: <br> <a href="https://t.me/DavidNavalnySHop" class="hover:underline">@DavidNavalnySHop</a></p>
+            </div>
+        </div>
+        <div class="flex mt-[20px] mobile:flex-col tablet:flex-row tablet:items-center tablet:justify-between">
+            <div>
+                <span class="font-normal text-[#757b80] text-[14px]">© 2015-2026 Все права защищены WebCraft</span>
+            </div>
+            <div>
+                <a href="#" class="font-normal text-[#757b80] text-[14px] hover:underline">Политика конфиденциальности</a>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <div role="dialog" aria-hidden="true"  aria-modal="true" id="orderModal" 
+        aria-labelledby="orderTitle" class=" modal opacity-0 invisible flex items-center justify-center fixed z-[200] inset-0 bg-[rgba(0,0,0,0.6)] transition-all duration-300 ease-in">
+       <div class="relative modal-body cursor-default bg-white text-center py-[40px] px-[32px] rounded-[20px] transition-all duration-300 ease-in">
+         <button type="button" class="close-modal absolute top-[20px] right-[20px] cursor-pointer" data-modal-close aria-label="Закрыть">
+            <svg 
+                xmlns="http://www.w3.org/2000/svg"  
+                class="w-[30px] h-[30px] stroke-primary hover:stroke-blue transition-colors duration-300 ease-in stroke-[2px] stroke-linecap-round stroke-linejoin-round" 
+                viewBox="0 0 32 32" 
+                preserveAspectRatio="xMidYMid meet"
+                >
+                <g id="ii-editor-114048-mtctcypw-4tqsaf-cross">
+                    <line x1="7" x2="25" y1="7" y2="25"></line>
+                    <line x1="7" x2="25" y1="25" y2="7"></line>
+                </g>
+                </svg>
+        </button>
+         <div>
+            <h2 class="mb-[20px] font-sans font-bold text-primary text-xl">Заказать проект</h2>
+            <form action="#" method="post" class=" flex flex-col justify-center " id="contact-form">
+                <div class="mb-[10px] flex-1">
+                    <input required type="text" class="border-2 border-solid border-secondary rounded-[10px] outline-blue-600 text-[14px] pl-[20px] w-[300px] h-[40px]" name="name" placeholder="Ваше имя">
+                </div>
+                <div class="mb-[10px] flex-1">
+                    <input required type="text" class="border-2 border-solid border-secondary rounded-[10px] outline-blue-600 text-[14px] pl-[20px] w-[300px] h-[40px]" name="email" placeholder="Ваша почта">
+                </div>
+                <div class="mb-[10px] flex-1"> 
+                    <input required type="text" class="border-2 border-solid border-secondary rounded-[10px] outline-blue-600 text-[14px] pl-[20px] w-[300px] h-[40px]" name="telegram" placeholder="Телеграмм">
+                </div>
+                <div class="mb-[10px] flex-1">
+                   <textarea name="message" class="border-2 border-solid border-secondary rounded-[10px] outline-blue-600 text-[14px] pl-[20px] w-[300px] h-[120px] pt-[10px]" placeholder="Сообщение"></textarea>
+                </div>
+                <div
+                    id="contactError"
+                    role="alert" class=" contactError w-[305px] text-center mx-auto"
+                ></div>
+                <div class="form__error flex-1 w-[300px] text-center" data-error-for="name"></div>
+                <div class="flex-1">
+                    <button type="submit" id="contactSubmit" class=" outline-blue-600 font-sans font-semibold text-base text-white bg-blue w-[300px] h-[35px] text-center rounded-[5px] border-solid border-2 cursor-pointer transition-colors duration-300 ease-in hover:border-[#585fde] hover:bg-[#585fde] border-[#484db1]">Отправить</button>
+                </div>
+                <div class="flex-1">
+                    <label class="mt-[10px] relative flex items-center justify-center gap-x-[5px] text-left">
+                        <input type="checkbox" class="input-checkbox absolute w-[0px] h-[0px] overflow-hidden [clip-path:inset(0px_0px_0px_0px)] outline-blue-600" name="privacy"   value="1">
+                        <span class="custom-checkbox-view before:content-[''] before:w-[10px] before:h-[10px] before:opacity-0 before:bg-blue before:rounded-[2px] before:transition-opacity before:duration-300 before:ease-in w-[20px] h-[20px] border-2 border-solid border-blue flex items-center justify-center transition-colors duration-300 ease-in rounded-[4px]"></span>
+                        <span class="text-[12px] leading-[120%]">
+                            Вы соглашаетесь с условиями обработки персональных данных<br> <a href="#">Политика конфиденциальности</a>
+                        </span>
+                    </label>
+                </div>
+            </form>
+
+            
+         </div>
+       </div>
+    </div>
+
+<div
+    class=" modal opacity-0 invisible flex items-center justify-center fixed z-[200] inset-0 bg-[rgba(0,0,0,0.6)] transition-all duration-300 ease-in"
+    id="estimateModal"
+    aria-hidden="true" role="dialog"
+>
+    
+
+    <div
+        class="modal__content estimate relative modal-body cursor-default bg-white text-center py-[40px] px-[32px] rounded-[20px] transition-all duration-300 ease-in"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="estimateTitle"
+    >
+
+        <!-- Close -->
+        <button
+            type="button"
+            class="modal__close"
+            data-modal-close
+            aria-label="Закрыть"
+        >
+            ×
+        </button>
+
+
+        <!-- Header -->
+        <div class="estimate__header">
+
+            <h2 id="estimateTitle" class="font-sans font-bold text-xl">
+                Получить оценку проекта
+            </h2>
+
+            <p class="font-sans font-normal text-lg leading-[120%]">
+                Ответьте на несколько вопросов —
+                я подготовлю предварительную оценку.
+            </p>
+
+        </div>
+
+
+        <!-- Progress -->
+        <div class="estimate__progress">
+
+            <div class="estimate__progress-top">
+                <span class="font-sans font-normal text-base">
+                    Шаг <span id="estimateStep">1</span> из 6
+                </span>
+
+                <span id="estimatePercent" class="font-sans font-normal text-base">
+                    17%
+                </span>
+            </div>
+
+            <div class="estimate__progress-bar">
+                <span id="estimateProgress"></span>
+            </div>
+
+        </div>
+
+
+        <!-- Form -->
+        <form
+            class="estimate__form"
+            id="estimateForm"
+            novalidate
+        >
+
+            <!-- =====================
+                 STEP 1
+            ====================== -->
+
+            <div
+                class="estimate__step is-active"
+                data-step="1"
+            >
+
+                <h3 class="font-sans font-bold text-primary text-lg">
+                    Какой сайт вам нужен?
+                </h3>
+
+                <p class="mt-[0px] mb-[15px] estimate__hint font-sans font-normal text-base text-secondary" >
+                    Выберите подходящий вариант.
+                </p>
+
+
+                <div class="estimate__options">
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="type"
+                            value="Landing Page"
+                            required
+                        >
+
+                        <span>
+                            Landing Page
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="type"
+                            value="Сайт-визитка"
+                        >
+
+                        <span>
+                            Сайт-визитка
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="type"
+                            value="Интернет-магазин"
+                        >
+
+                        <span>
+                            Интернет-магазин
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="type"
+                            value="Корпоративный сайт"
+                        >
+
+                        <span>
+                            Корпоративный сайт
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="type"
+                            value="Другое"
+                        >
+
+                        <span>
+                            Другое
+                        </span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 STEP 2
+            ====================== -->
+
+            <div
+                class="estimate__step"
+                data-step="2"
+            >
+
+                <h3 class="font-sans font-bold text-primary text-lg">
+                    У вас уже есть дизайн?
+                </h3>
+
+                <p class="estimate__hint mt-[0px] mb-[15px] estimate__hint font-sans font-normal text-base text-secondary" >
+                    Это поможет точнее определить объём работы.
+                </p>
+
+
+                <div class="estimate__options">
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="design"
+                            value="Есть готовый дизайн"
+                            required
+                        >
+
+                        <span>
+                            Есть готовый дизайн
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="design"
+                            value="Есть идея"
+                        >
+
+                        <span>
+                            Есть только идея
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="design"
+                            value="Нужен дизайн"
+                        >
+
+                        <span>
+                            Нужен дизайн с нуля
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="design"
+                            value="Не определился"
+                        >
+
+                        <span>
+                            Пока не знаю
+                        </span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 STEP 3
+            ====================== -->
+
+            <div
+                class="estimate__step"
+                data-step="3"
+            >
+
+                <h3 class="font-sans font-bold text-primary text-lg">
+                    Какие функции нужны?
+                </h3>
+
+                <p class="estimate__hint mt-[0px] mb-[15px] estimate__hint font-sans font-normal text-base text-secondary">
+                    Можно выбрать несколько вариантов.
+                </p>
+
+
+                <div class="estimate__options">
+
+                    <label class="estimate__option">
+                        <input
+                            type="checkbox"
+                            name="features[]"
+                            value="Форма обратной связи"
+                        >
+
+                        <span>
+                            Форма обратной связи
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="checkbox"
+                            name="features[]"
+                            value="Онлайн-оплата"
+                        >
+
+                        <span>
+                            Онлайн-оплата
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="checkbox"
+                            name="features[]"
+                            value="Личный кабинет"
+                        >
+
+                        <span>
+                            Личный кабинет
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="checkbox"
+                            name="features[]"
+                            value="CMS WordPress"
+                        >
+
+                        <span>
+                            CMS WordPress
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="checkbox"
+                            name="features[]"
+                            value="API интеграции"
+                        >
+
+                        <span>
+                            API интеграции
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="checkbox"
+                            name="features[]"
+                            value="Другое"
+                        >
+
+                        <span>
+                            Другое
+                        </span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 STEP 4
+            ====================== -->
+
+            <div
+                class="estimate__step"
+                data-step="4"
+            >
+
+                <h3 class="font-sans font-bold text-primary text-lg">
+                    Какой бюджет планируете?
+                </h3>
+
+                <p class="estimate__hint mt-[0px] mb-[15px] estimate__hint font-sans font-normal text-base text-secondary">
+                    Можно выбрать приблизительный диапазон.
+                </p>
+
+
+                <div class="estimate__options">
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="budget"
+                            value="До $300"
+                            required
+                        >
+
+                        <span>
+                            До $300
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="budget"
+                            value="$300–500"
+                        >
+
+                        <span>
+                            $300–500
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="budget"
+                            value="$500–1000"
+                        >
+
+                        <span>
+                            $500–1000
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="budget"
+                            value="$1000+"
+                        >
+
+                        <span>
+                            $1000+
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="budget"
+                            value="Не определился"
+                        >
+
+                        <span>
+                            Пока не определился
+                        </span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 STEP 5
+            ====================== -->
+
+            <div
+                class="estimate__step"
+                data-step="5"
+            >
+
+                <h3 class="font-sans font-bold text-primary text-lg">
+                    Когда нужен сайт?
+                </h3>
+
+                <p class="estimate__hint mt-[0px] mb-[15px] estimate__hint font-sans font-normal text-base text-secondary">
+                    Укажите желаемый срок.
+                </p>
+
+
+                <div class="estimate__options">
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="deadline"
+                            value="Как можно скорее"
+                            required
+                        >
+
+                        <span>
+                            Как можно скорее
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="deadline"
+                            value="1–2 недели"
+                        >
+
+                        <span>
+                            1–2 недели
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="deadline"
+                            value="2–4 недели"
+                        >
+
+                        <span>
+                            2–4 недели
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="deadline"
+                            value="Более месяца"
+                        >
+
+                        <span>
+                            Более месяца
+                        </span>
+                    </label>
+
+
+                    <label class="estimate__option">
+                        <input
+                            type="radio"
+                            name="deadline"
+                            value="Не определился"
+                        >
+
+                        <span>
+                            Пока не знаю
+                        </span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 STEP 6
+            ====================== -->
+
+            <div
+                class="estimate__step"
+                data-step="6"
+            >
+
+                <h3 class="font-sans font-bold text-primary text-lg">
+                    Как с вами связаться?
+                </h3>
+
+                <p class="estimate__hint mt-[0px] mb-[15px] estimate__hint font-sans font-normal text-base text-secondary">
+                    Оставьте контактные данные для связи.
+                </p>
+
+
+                <div class="estimate__fields">
+
+                    <div class="estimate__field">
+
+                        <label for="estimateName">
+                            Ваше имя
+                        </label>
+
+                        <input
+                            id="estimateName"
+                            type="text"
+                            name="name"
+                            placeholder="Введите имя"
+                            autocomplete="name"
+                            minlength="2"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="estimate__field">
+
+                        <label for="estimateContact">
+                            Email или Telegram
+                        </label>
+
+                        <input
+                            id="estimateContact"
+                            type="text"
+                            name="contact"
+                            placeholder="example@mail.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="estimate__field">
+
+                        <label for="estimateComment">
+                            Расскажите о проекте
+                        </label>
+
+                        <textarea
+                            id="estimateComment"
+                            name="comment"
+                            rows="4"
+                            placeholder="Кратко опишите задачу..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Error -->
+
+            <div
+                class="estimate__error"
+                id="estimateError"
+                role="alert"
+            ></div>
+
+
+            <!-- Navigation -->
+
+            <div class="estimate__navigation">
+
+                <button
+                    type="button"
+                    class="estimate__back"
+                    id="estimateBack"
+                >
+                    ← Назад
+                </button>
+
+
+                <button
+                    type="button"
+                    class="estimate__next"
+                    id="estimateNext"
+                >
+                    Далее →
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="estimate__submit"
+                    id="estimateSubmit"
+                >
+                    Получить оценку
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <!-- Success -->
+
+        <div
+            class="estimate__success"
+            id="estimateSuccess"
+        >
+
+            <div class="estimate__success-icon">
+                ✓
+            </div>
+
+            <h3 class="mb-[5px] font-sans font-bold text-lg text-primary">
+                Спасибо!
+            </h3>
+
+            <p class="mb-[10px] font-sans font-normal text-base text-secondary leading-[120%]">
+                Заявка успешно отправлена.
+                Я свяжусь с вами после изучения проекта.
+            </p>
+
+            <button
+                type="button"
+                data-modal-close
+            >
+                Закрыть
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div id="successMessage" class="modal opacity-0 invisible flex items-center justify-center fixed z-[200] inset-0 bg-[rgba(0,0,0,0.6)] transition-all duration-300 ease-in">
+    <div class="relative modal-body cursor-default bg-white text-center py-[40px] px-[32px] rounded-[20px] transition-all duration-300 ease-in">
+        <div class="bg-primary rounded-full w-[50px] h-[50px] text-white leading-[50px] text-lg mx-auto">✓</div>
+        <button aria-label="Закрыть" class="modal__close absolute top-[20px] right-[20px]" data-modal-close type="button">×</button>
+        <h2 class="mt-[5px] mb-[5px] font-sans font-bold text-primary text-xl">Спасибо</h2>
+        <p class="font-sans font-normal text-secondary text-lg leading-[120%]">Заявка успешно отправлена. Я свяжусь с вами в ближайщее время</p>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
