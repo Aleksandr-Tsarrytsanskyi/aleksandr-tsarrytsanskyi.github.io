@@ -89,6 +89,25 @@
 
 
 
+.link_icon, .link_span {
+     transition: all 0.3s ease-in;
+
+}
+
+.link {
+     transition: all 0.3s ease-in;
+}
+
+.link:hover .link_icon {
+    color: #2563eb;
+}
+
+.link:hover .link_span {
+    color: #2563eb;
+}
+
+
+
 @keyframes shine-text {
     0% {
         background-position: 0% 50%;
