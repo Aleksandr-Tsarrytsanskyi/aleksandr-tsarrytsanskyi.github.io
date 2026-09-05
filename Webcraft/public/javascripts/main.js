@@ -1,12 +1,19 @@
 
 // import "../stylesheets/style.css";
 import { burgerMenu } from "./burger-menu/burger.js";
+// import Swiper from 'swiper';
+// import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 
 /**
  * |--------------------------------------------------------------------------
  * | MODAL
  * |--------------------------------------------------------------------------
  */
+
 
 let activeModal = null;
 let previousFocus = null;
@@ -55,7 +62,9 @@ const successMessage =
  * |--------------------------------------------------------------------------
  */
 
-function openModal(id, trigger = null) {
+
+
+ export function openModal(id, trigger = null) {
 
     const modal =
         document.getElementById(id);
@@ -109,7 +118,7 @@ function openModal(id, trigger = null) {
  * |--------------------------------------------------------------------------
  */
 
-function closeModal() {
+export function closeModal() {
 
     if (!activeModal) return;
 
@@ -146,7 +155,8 @@ function closeModal() {
  * |--------------------------------------------------------------------------
  */
 
-document.addEventListener(
+export function ModalEvents() {
+    document.addEventListener(
     'click',
     (event) => {
 
@@ -347,6 +357,9 @@ document.addEventListener(
 
     }
 );
+}
+
+ModalEvents()
 
 
 /**

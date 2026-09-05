@@ -68,6 +68,24 @@
     --text-4xl: 48px;  */
 }
 
+.swiper-shops, .swiper-landing, .swiper-corporate {
+    width: 100%;
+    height: 332px;
+}
+
+
+
+
+
+
+
+/* .swiperPrev-shops path,
+.swiperNext-shops path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1;
+} */
+
 .logo-gradient-text {
     background: linear-gradient(
         90deg,
