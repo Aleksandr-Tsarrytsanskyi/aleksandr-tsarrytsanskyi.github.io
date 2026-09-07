@@ -1,6 +1,20 @@
 
-// import "../stylesheets/style.css";
+import "../stylesheets/style.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { burgerMenu } from "./burger-menu/burger.js";
+import { swiperMain } from "./swiper.js";
+
+
+
+AOS.init({
+  duration: 700,
+  easing: 'ease-out-cubic',
+  once: true,
+  offset: 80,
+  delay: 0,
+  anchorPlacement: 'top-bottom',
+});
 // import Swiper from 'swiper';
 // import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
@@ -64,7 +78,7 @@ const successMessage =
 
 
 
- export function openModal(id, trigger = null) {
+ function openModal(id, trigger = null) {
 
     const modal =
         document.getElementById(id);
@@ -118,7 +132,7 @@ const successMessage =
  * |--------------------------------------------------------------------------
  */
 
-export function closeModal() {
+ function closeModal() {
 
     if (!activeModal) return;
 
@@ -155,7 +169,7 @@ export function closeModal() {
  * |--------------------------------------------------------------------------
  */
 
-export function ModalEvents() {
+ function ModalEvents() {
     document.addEventListener(
     'click',
     (event) => {
@@ -361,7 +375,7 @@ document.addEventListener(
 
 ModalEvents()
 
-
+swiperMain();
 /**
  * |--------------------------------------------------------------------------
  * | ACCORDION

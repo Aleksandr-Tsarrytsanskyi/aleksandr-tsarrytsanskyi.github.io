@@ -73,6 +73,26 @@
     height: 332px;
 }
 
+.swiper-work {
+    width: 100%;
+    height: 220px;
+}
+
+
+.swiper-work {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-work .swiper-wrapper {
+    align-items: flex-start;
+}
+
+.swiper-work .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+}
+
 
 
 
@@ -714,6 +734,11 @@ body.modal-lock {
     cursor: pointer;
 }
 
+.swiper-development {
+    width: 100%;
+    height: 380px;
+}
+
 
 /* =========================
    MOBILE
@@ -787,13 +812,38 @@ body.modal-lock {
         background-position: right center;
         width: 340px !important;
     }
+
+    .swiper-work {
+    width: 100%;
+    height: 200px !important;
+}
+
+.swiper-development {
+    width: 100%;
+    height: 340px !important;
+}
+
+
+
 } 
 
-
+.swiper-process {
+    width: 100%;
+    height: 170px;
+}
 
 
 
 @media (max-width: 1200px) {
+
+    .swiper-work {
+        height: 150px;
+    }
+
+    .swiper-development {
+    width: 100%;
+    height: 400px;
+}
 
     .accordion__button.hide {
         background-position: right center;
