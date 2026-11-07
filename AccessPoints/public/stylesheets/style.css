@@ -1,16 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './fonts.css';
 
 /* Custom CSS */
 
 body {
-  padding: 50px;
+  padding: 0px;
   font: 34px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-h1 {
-  color: rgb(117, 114, 114);
-}
+
+
 
 
