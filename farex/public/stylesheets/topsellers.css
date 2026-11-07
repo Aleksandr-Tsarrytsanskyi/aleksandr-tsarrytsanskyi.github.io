@@ -1,0 +1,15 @@
+.footer_item {
+    bottom: 0 !important;
+}
+
+.filtr {
+    grid-template-columns: 169px 168px;
+}
+
+.card__body {
+    margin-bottom: 20px;
+}
+
+.breadcrumbing {
+    margin-bottom: 10px;
+}

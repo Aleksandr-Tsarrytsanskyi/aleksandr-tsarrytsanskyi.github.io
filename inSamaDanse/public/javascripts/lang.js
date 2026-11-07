@@ -1,0 +1,131 @@
+import { homeTexts } from "./transition-page/home.js";
+
+export  function changesLanguage() {
+  
+  let currentLang = "ru";
+  const currentPathName = window.location.pathname;
+  let currentTexts = {};
+
+
+  function checkPagePathName() {
+    switch (currentPathName) {
+      case "/":
+        currentTexts = homeTexts;
+        console.log(currentTexts);
+        
+        break;
+      default: {
+          currentTexts = {}
+      }
+      
+    }
+  }
+
+  checkPagePathName();
+
+  function changeLang() {
+    for (const key in currentTexts) {
+      let elem = document.querySelector(`[data-lang=${key}]`);
+      if (elem) {
+        elem.innerHTML = currentTexts[key][currentLang];
+      }
+    }
+  }
+
+
+  function changesAboutUs() {
+    const course2 = document.querySelector(".lang-course2")
+          const course3 = document.querySelector(".lang-course3")
+          const course4 = document.querySelector(".lang-course4")
+          const course5 = document.querySelector(".lang-course5")
+          const footerNav = document.querySelector(".footer-nav")
+          const itemSetto = document.querySelector(".item-setto")
+          
+          const courseItems = document.querySelectorAll(".course-item")
+
+          course2.classList.remove("change-lang-course2")
+          course3.classList.remove("change-lang-course3")
+          course4.classList.remove("change-lang-course4")
+            itemSetto.classList.remove("change-item-setto")
+         course3.classList.remove("mobile-lang-course3")
+         course5.classList.remove("change-lang-course5")
+
+    document.querySelector('.custom-select-trigger').addEventListener('click', function() {
+    this.parentElement.querySelector('.custom-select').classList.toggle('custom-select-open');
+});
+
+document.querySelectorAll('.custom-option').forEach(option => {
+    option.addEventListener('click', function() {
+        const value = this.getAttribute('data-value');
+        const trigger = this.closest('.custom-select-wrapper').querySelector('.custom-select-trigger');
+        console.log(currentTexts);
+        
+        trigger.textContent = this.textContent;
+       
+        this.parentElement.classList.remove('custom-select-open');
+
+        currentLang = value;
+      if(value == "ru") {
+        location.reload()
+      }
+
+      if(innerWidth >= 1280) {
+        if(value == "en") {
+           
+
+          course2.classList.add("change-lang-course2")
+          course3.classList.add("change-lang-course3")
+          course4.classList.add("change-lang-course4")
+          
+        }
+
+
+        
+      }
+
+      if(value == "en") {
+          courseItems.forEach(item => {
+              item.classList.add("course-items-hide")
+          })
+      }
+
+
+
+       if(innerWidth <= 1280) {
+        if(value == "en") {
+            itemSetto.classList.add("change-item-setto")
+
+        
+        }
+
+
+        
+      }
+
+      if(innerWidth <= 864) {
+         if(value == "en") {
+         
+
+        footerNav.classList.add('footer-nav-lang')
+       
+         course3.classList.add("mobile-lang-course3")
+         course5.classList.add("change-lang-course5")
+         }
+      }
+      changeLang();
+   
+
+    });
+});
+
+   
+      
+  }
+
+  //  langButtons.forEach(btn => {
+  //        btn.classList.remove('lang-switcher__item--active');
+  //     })
+  // event.target.classList.add('lang-switcher__item--active')
+  //   currentLang = event.target.dataset.btn;
+  changesAboutUs();
+}

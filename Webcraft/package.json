@@ -1,0 +1,34 @@
+{
+  "name": "webcarft",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "webpack",
+    "tailwind": "npx @tailwindcss/cli -i ./public/stylesheets/style.css -o ./dist/main.css --watch"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+    
+  },
+
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "css-loader": "^7.1.4",
+    "css-minimizer-webpack-plugin": "^8.0.0",
+    "html-webpack-plugin": "^5.6.7",
+    "mini-css-extract-plugin": "^2.10.2",
+    "postcss": "^8.5.26",
+    "postcss-loader": "^8.2.1",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^4.3.3",
+    "webpack": "^5.109.2",
+    "webpack-cli": "^7.2.2",
+    "@tailwindcss/cli": "^4.3.3"
+  }
+}
