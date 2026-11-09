@@ -1,14 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './fonts.css';
 
 /* Custom CSS */
 
 body {
   padding: 0px;
   font: 34px "Lucida Grande", Helvetica, Arial, sans-serif;
+<<<<<<< HEAD
   
 }
+=======
+}
+
+
+
+>>>>>>> 0a578daa81849a634b81c9ca2647f0815e9444be
 
 
 

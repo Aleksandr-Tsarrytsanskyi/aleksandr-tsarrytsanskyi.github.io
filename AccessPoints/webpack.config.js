@@ -29,8 +29,21 @@ module.exports = {
           "postcss-loader",
         ],
       },
+
+
+       {
+      test: /\.(woff2?|ttf|otf|eot)$/i,
+      type: 'asset/resource',
+      generator: {
+        filename: 'fonts/[name][ext]',
+      },
+    },
     ],
+
+
   },
+
+  
 
   plugins: [
     new HtmlWebpackPlugin({

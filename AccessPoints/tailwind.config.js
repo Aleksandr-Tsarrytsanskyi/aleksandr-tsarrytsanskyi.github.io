@@ -17,7 +17,12 @@ module.exports = {
       base: "16px",
       lg: "18px",
       xl: "30px",
-     }
+     },
+
+     fontFamily: {
+        sans: ['Inter', 'Arial', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
     },
   },
 
