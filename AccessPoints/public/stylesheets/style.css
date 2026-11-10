@@ -15,6 +15,7 @@
        -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 14px;
+    background: #f9f8f4;
   }
  *::before,
   *::after {
@@ -51,7 +52,7 @@
    content: '';
   position: absolute;
   left: 50%;
-  bottom: -30px;
+  bottom: -31px;
   width: 18px;
   height: 2px;
   background: #fc6203;
