@@ -3,13 +3,73 @@
 @tailwind utilities;
 @import './fonts.css';
 
-/* Custom CSS */
 
-body {
-  padding: 0px;
-  font: 34px "Lucida Grande", Helvetica, Arial, sans-serif;
+@layer base {
+   html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+      font-family: Inter, sans-serif;
+      margin: 0;
+       -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+  }
+ *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  button {
+    outline: none;
+    border: none;
+    background: none;
+     cursor: pointer;
+  }
+
+  input {
+    outline: none;
+  }
+:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+  }
+  
   
 }
+
+.menu a::after  {
+   content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  width: 18px;
+  height: 2px;
+  background: #fc6203;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu a {
+  position: relative;
+}
+
+.menu a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+
+
+
 
 
 

@@ -8,7 +8,16 @@ module.exports = {
   theme: {
     extend: {
      colors: {
-      black: "#201f1f"
+       50: "#effaf2",
+        100: "#d9f3df",
+        200: "#b8e8c4",
+        300: "#87d69c",
+        400: "#4cbd6c",
+          500: "#239c49",
+          600: "#187d39",
+          700: "#176332",
+          800: "#18502c",
+          900: "#154226"
      },
 
      fontSize: {
@@ -20,8 +29,8 @@ module.exports = {
      },
 
      fontFamily: {
-        sans: ['Inter', 'Arial', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+       inter: ['Inter', 'sans-serif'],
+        
       },
     },
   },
