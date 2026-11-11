@@ -717,6 +717,16 @@ input {
   margin-right: auto;
 }
 
+.my-\[26px\] {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+.my-\[22px\] {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
 .mb-\[10px\] {
   margin-bottom: 10px;
 }
@@ -793,6 +803,34 @@ input {
   margin-top: 60px;
 }
 
+.ml-\[15px\] {
+  margin-left: 15px;
+}
+
+.mr-\[20px\] {
+  margin-right: 20px;
+}
+
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+
+.mt-\[22px\] {
+  margin-top: 22px;
+}
+
+.mb-\[22px\] {
+  margin-bottom: 22px;
+}
+
+.mt-\[\] {
+  margin-top: ;
+}
+
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+
 .block {
   display: block;
 }
@@ -859,6 +897,10 @@ input {
 
 .h-full {
   height: 100%;
+}
+
+.h-px {
+  height: 1px;
 }
 
 .min-h-\[609px\] {
@@ -973,8 +1015,20 @@ input {
   min-width: 229px;
 }
 
+.min-w-\[239px\] {
+  min-width: 239px;
+}
+
 .max-w-\[1280px\] {
   max-width: 1280px;
+}
+
+.max-w-\[270px\] {
+  max-width: 270px;
+}
+
+.max-w-\[269px\] {
+  max-width: 269px;
 }
 
 .flex-1 {
@@ -1032,14 +1086,6 @@ input {
 
 .gap-\[30px\] {
   gap: 30px;
-}
-
-.gap-\[60px\] {
-  gap: 60px;
-}
-
-.gap-\[40px\] {
-  gap: 40px;
 }
 
 .gap-\[45px\] {
@@ -1130,6 +1176,10 @@ input {
   border-radius: 9999px;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1198,6 +1248,16 @@ input {
 
 .bg-white\/20 {
   background-color: rgb(255 255 255 / 0.2);
+}
+
+.bg-\[\#dededb\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 222 219 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#f9f8f4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 248 244 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[linear-gradient\(90deg\2c \#22802d_0\%\2c \#228d0e_100\%\)\] {
@@ -1316,6 +1376,26 @@ input {
   padding-top: 90px;
 }
 
+.pr-\[20px\] {
+  padding-right: 20px;
+}
+
+.pb-\[\] {
+  padding-bottom: ;
+}
+
+.pb-\[22px\] {
+  padding-bottom: 22px;
+}
+
+.pb-\[60px\] {
+  padding-bottom: 60px;
+}
+
+.pt-\[55px\] {
+  padding-top: 55px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1388,6 +1468,10 @@ input {
   font-size: 12px;
 }
 
+.text-base {
+  font-size: 16px;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -1456,6 +1540,10 @@ input {
   line-height: 1;
 }
 
+.leading-\[171\%\] {
+  line-height: 171%;
+}
+
 .tracking-\[0\.14em\] {
   letter-spacing: 0.14em;
 }
@@ -1522,6 +1610,15 @@ input {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\] {
+  color: ;
+}
+
+.text-\[\#202020\] {
+  --tw-text-opacity: 1;
+  color: rgb(32 32 32 / var(--tw-text-opacity, 1));
 }
 
 .backdrop-blur-md {
