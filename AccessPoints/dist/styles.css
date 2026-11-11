@@ -744,6 +744,10 @@ input {
   margin-bottom: 35px;
 }
 
+.mb-\[40px\] {
+  margin-bottom: 40px;
+}
+
 .mb-\[5px\] {
   margin-bottom: 5px;
 }
@@ -784,6 +788,10 @@ input {
   margin-top: 30px;
 }
 
+.mt-\[32px\] {
+  margin-top: 32px;
+}
+
 .mt-\[35px\] {
   margin-top: 35px;
 }
@@ -814,18 +822,6 @@ input {
 
 .mt-\[60px\] {
   margin-top: 60px;
-}
-
-.mb-\[50px\] {
-  margin-bottom: 50px;
-}
-
-.mt-\[32px\] {
-  margin-top: 32px;
-}
-
-.mb-\[40px\] {
-  margin-bottom: 40px;
 }
 
 .block {
@@ -880,6 +876,10 @@ input {
   height: 40px;
 }
 
+.h-\[505px\] {
+  height: 505px;
+}
+
 .h-\[54px\] {
   height: 54px;
 }
@@ -914,10 +914,6 @@ input {
 
 .h-px {
   height: 1px;
-}
-
-.h-\[505px\] {
-  height: 505px;
 }
 
 .min-h-\[609px\] {
@@ -1189,6 +1185,10 @@ input {
   border-radius: 14px;
 }
 
+.rounded-\[18px\] {
+  border-radius: 18px;
+}
+
 .rounded-\[22px\] {
   border-radius: 22px;
 }
@@ -1201,20 +1201,16 @@ input {
   border-radius: 30px;
 }
 
+.rounded-\[33px\] {
+  border-radius: 33px;
+}
+
 .rounded-\[8px\] {
   border-radius: 8px;
 }
 
 .rounded-full {
   border-radius: 9999px;
-}
-
-.rounded-\[18px\] {
-  border-radius: 18px;
-}
-
-.rounded-\[33px\] {
-  border-radius: 33px;
 }
 
 .border {
@@ -1373,29 +1369,9 @@ input {
   padding-right: 30px;
 }
 
-.px-\[85px\] {
-  padding-left: 85px;
-  padding-right: 85px;
-}
-
-.py-\[15px\] {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.py-\[23px\] {
-  padding-top: 23px;
-  padding-bottom: 23px;
-}
-
 .px-\[32px\] {
   padding-left: 32px;
   padding-right: 32px;
-}
-
-.px-\[65px\] {
-  padding-left: 65px;
-  padding-right: 65px;
 }
 
 .px-\[55px\] {
@@ -1403,8 +1379,13 @@ input {
   padding-right: 55px;
 }
 
-.pb-\[120px\] {
-  padding-bottom: 120px;
+.py-\[15px\] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.pb-\[0px\] {
+  padding-bottom: 0px;
 }
 
 .pb-\[15px\] {
@@ -1455,16 +1436,20 @@ input {
   padding-right: 80px;
 }
 
+.pt-\[115px\] {
+  padding-top: 115px;
+}
+
 .pt-\[12px\] {
   padding-top: 12px;
 }
 
-.pt-\[135px\] {
-  padding-top: 135px;
-}
-
 .pt-\[150px\] {
   padding-top: 150px;
+}
+
+.pt-\[17px\] {
+  padding-top: 17px;
 }
 
 .pt-\[20px\] {
@@ -1489,50 +1474,6 @@ input {
 
 .pt-\[90px\] {
   padding-top: 90px;
-}
-
-.pt-\[23px\] {
-  padding-top: 23px;
-}
-
-.pt-\[18px\] {
-  padding-top: 18px;
-}
-
-.pt-\[17px\] {
-  padding-top: 17px;
-}
-
-.pt-\[115px\] {
-  padding-top: 115px;
-}
-
-.pb-\[110px\] {
-  padding-bottom: 110px;
-}
-
-.pb-\[85px\] {
-  padding-bottom: 85px;
-}
-
-.pb-\[55px\] {
-  padding-bottom: 55px;
-}
-
-.pb-\[25px\] {
-  padding-bottom: 25px;
-}
-
-.pb-\[x\] {
-  padding-bottom: x;
-}
-
-.pb-\[0\] {
-  padding-bottom: 0;
-}
-
-.pb-\[0px\] {
-  padding-bottom: 0px;
 }
 
 .text-center {
@@ -1567,12 +1508,20 @@ input {
   font-size: 18px;
 }
 
+.text-\[25px\] {
+  font-size: 25px;
+}
+
 .text-\[26px\] {
   font-size: 26px;
 }
 
 .text-\[33px\] {
   font-size: 33px;
+}
+
+.text-\[36px\] {
+  font-size: 36px;
 }
 
 .text-\[37px\] {
@@ -1613,14 +1562,6 @@ input {
 
 .text-xs {
   font-size: 12px;
-}
-
-.text-\[25px\] {
-  font-size: 25px;
-}
-
-.text-\[36px\] {
-  font-size: 36px;
 }
 
 .font-black {
