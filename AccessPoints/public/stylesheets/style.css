@@ -41,9 +41,12 @@
     outline: none;
   }
 :focus-visible {
-    outline: 3px solid #f59e0b;
-    outline-offset: 3px;
-  }
+    outline: none;
+    outline-offset: 0px;
+    box-shadow: 0 0 0 4px rgba(34, 128, 45, 0.15),
+                0 0 12px rgba(34, 128, 45, 0.2);
+    border-radius: 12px;
+}
   
   
 }
@@ -68,7 +71,9 @@
   transform: translateX(-50%) scaleX(1);
 }
 
-
+.contact-title {
+  line-height: 35px;
+}
 
 
 

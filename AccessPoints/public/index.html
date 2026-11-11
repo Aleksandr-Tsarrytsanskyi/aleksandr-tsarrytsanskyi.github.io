@@ -2193,9 +2193,6 @@
 
 </ul>
 
-
-
-
   <div class="flex mt-[25px] items-center justify-between gap-[30px] rounded-[30px] bg-[#d9d9d9]/20 px-[20px] h-[92px]">
 
     <dl class="flex items-center gap-[45px]">
@@ -2411,13 +2408,41 @@
            <img src="./images/contact_image.png" loading="lazy" decoding="async" class="w-full  h-full object-cover object-center">
        </div>
          <div class=" absolute top-0 left-0 right-0 w-full h-full z-0 bg-black/50" aria-hidden="true"></div>
-         <div class="relative z-20 max-w-[1280px] w-[calp(100%-20px)] mt-[50px] mx-auto">
-          <p class="font-inter font-bold text-[42px] text-white">
+         <div class="relative flex z-20 max-w-[1280px] w-[calp(100%-20px)] mt-[50px] mx-auto">
+          <div>
+            <p class="font-inter font-bold text-[42px] text-white leading-[118%]">
             Получите точный 
           </p>
-          <h2 class=" bg-[linear-gradient(90deg,#fff_0%,#86e075_50%,#228d0e_100%)] bg-clip-text text-transparent font-inter font-black text-[37px]">расчёт На участок или<br>
+          <h2 class=" bg-[linear-gradient(90deg,#fff_0%,#86e075_50%,#228d0e_100%)] bg-clip-text text-transparent font-inter font-black text-[37px] contact-title">расчёт На участок или<br>
             площадки под авто</h2>
-         </div>
+            <p class="mt-[30px] font-inter font-normal text-[16px] text-white">Оставьте заявку — специалист уточнит особенности участка и<br> предложит оптимальное решение.</p>
+            <form action="#" method="post" class="mt-[30px] contact-form">
+              <div class="grid grid-cols-2 gap-[14px]">
+                  <div >
+                  <input type="text" name="name" placeholder="Ваше имя" class="w-[285px] h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                </div>
+                <div >
+                  <input type="text" name="name" placeholder="Ваша почта" class="w-[285px] h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                </div>
+                <div >
+                  <input type="text" name="name" placeholder="Город" class="w-[285px] h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                </div>
+                <div class="">
+                  <input type="text" name="name" placeholder="Район" class="w-[285px] h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                </div>
+                <div class="col-span-2">
+                <textarea name="message"  class="w-[584px] h-[126px] border border-solid border-black/20 rounded-[12px] pt-[20px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]" placeholder="Комментарий"></textarea>
+                </div>
+              </div>
+              
+              <button type="submit" name="send" class="mt-[18px] flex items-center justify-center gap-x-[15px] bg-[#22802d] w-[172px] h-[54px] rounded-[14px] transition-all duration-300 ease-in hover:bg-[#22802d]/70">
+                <img src="./images/contact_canculate.svg" loading="lazy" width="20" height="20">
+                <span class="font-inter font-semibold text-[15px] text-white">Рассчитать</span>
+              </button>
+            </form>
+          </div>
+          <div></div>
+          </div>
         </div>
       </section>
     </main>
