@@ -1314,6 +1314,19 @@ input {
   background-color: rgb(255 255 255 / 0.2);
 }
 
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[0a1017\] {
+  background-color: 0a1017;
+}
+
+.bg-\[\#0a1017\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 16 23 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[linear-gradient\(90deg\2c \#22802d_0\%\2c \#228d0e_100\%\)\] {
   background-image: linear-gradient(90deg,#22802d 0%,#228d0e 100%);
 }
@@ -1474,6 +1487,14 @@ input {
 
 .pt-\[90px\] {
   padding-top: 90px;
+}
+
+.pb-\[30px\] {
+  padding-bottom: 30px;
+}
+
+.pt-\[70px\] {
+  padding-top: 70px;
 }
 
 .text-center {
@@ -1711,6 +1732,16 @@ input {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#a2abbc\] {
+  --tw-text-opacity: 1;
+  color: rgb(162 171 188 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#dbdbdb\] {
+  --tw-text-opacity: 1;
+  color: rgb(219 219 219 / var(--tw-text-opacity, 1));
 }
 
 .backdrop-blur-md {
