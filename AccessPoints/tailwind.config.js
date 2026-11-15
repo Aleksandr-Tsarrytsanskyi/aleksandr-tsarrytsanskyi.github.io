@@ -6,6 +6,8 @@ module.exports = {
   ],
 
   theme: {
+    screens: { mobile: "375px", tablet: "768px", pc: "1280px" },
+
     extend: {
      colors: {
        50: "#effaf2",
