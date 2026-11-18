@@ -6,6 +6,7 @@ module.exports = {
   ],
 
   theme: {
+<<<<<<< HEAD
 
      screens: {
       mobile: "375px",   // Mobile landscape
@@ -13,6 +14,9 @@ module.exports = {
       pc: "1280px",  // Desktop
    
     },
+=======
+    screens: { mobile: "375px", tablet: "768px", pc: "1280px" },
+>>>>>>> 978ae9bec0569eb38a82e4e845dcbf30453b9138
 
     extend: {
      colors: {

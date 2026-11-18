@@ -7,29 +7,29 @@
     <script defer src="../dist/bundle.js"></script>
     <title>Document</title>
   </head>
-  <body>
+  <body class="min-w-[320px] bg-[#f9f8f4]">
     <header
-      class="fixed top-[27px] max-w-[1280px] w-[calc(100%-20px)] mx-auto left-0 right-0 z-50 rounded-[22px] bg-white h-[76px]"
+      class="fixed top-[27px] ] max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mx-auto left-0 right-0 z-50 rounded-[22px] bg-white h-[76px]"
     >
-      <div class="mt-[10px] w-[calc(100%-20px)] mx-auto">
-        <div class="flex items-center justify-between">
+      <div class="mt-[10px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mx-auto">
+        <div class="flex items-center justify-between min-w-0">
           <div>
             <a href="" class="flex items-center gap-x-[12px]">
               <img
                 src="./images/logo.svg"
                 alt="Логотип"
                 width="43"
-                height="43"
+                height="43" class="tablet:w-[43px] tablet:h-[43px] mobile:w-[30px] mobile:h-[30px]"
               />
-              <span class="font-inter font-black text-lg leading-[111%]">
+              <span class="font-inter font-black tablet:text-[15px] mobile:text-[14px] pc:text-lg leading-[111%]">
                 ЗАЕЗДЫ<br />
                 НА УЧАСТОК
               </span>
             </a>
           </div>
           <div>
-            <nav aria-label="Основная навигация">
-              <ul class="menu flex items-center gap-x-[35px]">
+            <nav aria-label="Основная навигация" class="hidden pc:block">
+              <ul class="menu flex items-center gap-x-[35px] hidden pc:flex">
                 <li>
                   <a
                     href="#services"
@@ -69,7 +69,7 @@
             </nav>
           </div>
           <div>
-            <div class="flex items-center gap-x-[21px]">
+            <div class="mobile:hidden pc:flex items-center gap-x-[16px]">
               <div class="">
                 <a
                   href="tel:+79001234567"
@@ -81,15 +81,15 @@
                     width="29"
                     height="29"
                   />
-                  <span class="font-inter font-black text-lg text-[#0a0e16]">
+                  <span class="font-inter font-black text-[14px] mobile:text-[15px] pc:text-lg text-[#0a0e16]">
                     +7 (900) 123-45-67
                   </span>
                 </a>
               </div>
               <div>
                 <a
-                  href="#"
-                  class="relative flex items-center justify-center gap-x-[15px] w-[172px] h-[54px] rounded-[14px] overflow-hidden bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(90deg,#20a12f_0%,#1a8306_100%)] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300 before:ease-in"
+                  href="#contact"
+                  class="relative flex items-center justify-center gap-x-[15px] w-[150px] pc:w-[172px] h-[54px] rounded-[14px] overflow-hidden bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(90deg,#20a12f_0%,#1a8306_100%)] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300 before:ease-in"
                 >
                   <img
                     src="./images/header_icon_canculate.svg"
@@ -101,14 +101,29 @@
                 </a>
               </div>
             </div>
+            <details class="relative pc:hidden mt-[8px] tablet:w-[300px] mobile:w-[150px] mb-[10px]">
+          <summary class="cursor-pointer rounded-[12px] bg-[#f9f8f4] px-[16px] py-[10px] font-inter font-semibold text-[#22802d]">Меню</summary>
+          <nav aria-label="Мобильная навигация" class="absolute top-full left-0right-0 tablet:w-[300px] mobile:w-[150px] mt-[8px] max-h-[65vh] overflow-y-auto rounded-[16px] bg-white mobile:p-[10px] tablet:p-[20px] shadow-xl">
+            <ul class="flex flex-col gap-[16px] font-inter text-[#0a0e16]">
+        <li><a class="block py-[4px]" href="#services">Услуги</a></li>
+        <li><a class="block py-[4px]" href="#works">Наши работы</a></li>
+        <li><a class="block py-[4px]" href="#technologies">Технология</a></li>
+        <li><a class="block py-[4px]" href="#company">О компании</a></li>
+        <li><a class="block py-[4px]" href="#reviews">Отзывы</a></li>
+        <li><a class="block py-[4px]" href="#contact">Рассчитать стоимость</a></li>
+        <li><a href="tel:+79001234567">+7 (900) 123-45-67</a></li></ul>
+          </nav>
+        </details>
           </div>
         </div>
-      </div>
+      
+        
+</div>
     </header>
 
     <main>
-      <section class="relative" aria-labelledby="hero-title">
-        <div class="absolute w-full h-[860px] inset-0 overflow-hidden">
+      <section class="relative scroll-mt-[110px]" aria-labelledby="hero-title">
+        <div class="absolute w-full h-full inset-0 overflow-hidden">
           <img
             src="./images/header_img.png"
             alt="Баннер"
@@ -123,45 +138,45 @@
         <div class="absolute w-full h-full inset-0 z-20" aria-hidden="true">
           <img src="./images/header_effect.png" alt="" decoding="async" />
         </div>
-        <div class="absolute w-full h-full inset-0" aria-hidden="true">
+        <div class="absolute w-full h-full tablet:inset-0 mobile:top-[200px]" aria-hidden="true">
           <img src="./images/header_effect_left.png" alt="" decoding="async" />
         </div>
 
-        <div class="relative z-20 w-full h-full pt-[150px]">
-          <div class="mx-auto m w-[calc(100%-20px)] max-w-[1280px]">
+        <div class="relative z-20 w-full h-full pt-[120px] tablet:pt-[140px] pc:pt-[150px] pb-[24px]">
+          <div class="mx-auto m w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] max-w-[1280px]">
             <p
-              class="mb-[20px] font-inter font-semibold text-xs text-[#5c6678] tracking-[0.14em]"
+              class="mb-[20px] font-inter font-semibold text-xs  text-[#5c6678] tablet:tracking-[0.14em]"
             >
               НАДЁЖНЫЕ ЗАЕЗДЫ ДЛЯ ЧАСТНЫХ ДОМОВ
             </p>
             <h1
-              class="font-inter font-bold text-[72px] leading-[94%] text-[#080b10]"
+              class="font-inter font-bold text-[38px] mobile:text-[28px] tablet:text-[36px] pc:text-[42px] tablet:text-[60px] pc:text-[72px] leading-[94%] text-[#080b10]"
               id="hero-title"
             >
-              Заезды <br />
-              на участок <br />
+              Заезды <br class="">
+              на участок <br class="">
               <span
-                class="block font-black font-inter uppercase bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] bg-clip-text text-transparent text-[66px] leading-[118%]"
-                >и площадки <br />под авто</span
+                class="block font-black font-inter uppercase bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] bg-clip-text text-transparent text-[34px] mobile:text-[38px] tablet:text-[54px] pc:text-[66px] leading-[118%]"
+                >и площадки <br class="">под авто</span
               >
             </h1>
             <p
-              class="mb-[10px] mt-[20px] font-inter font-semibold text-[#22802d] text-[26px]"
+              class="mb-[10px] mt-[20px] font-inter font-semibold text-[#22802d] text-[19px] tablet:text-[23px] pc:text-[26px]"
             >
               В Москве и Московской области
             </p>
             <p
-              class="font-inter font-normal text-[17px] text-[#5c6678] leading-[141%]"
+              class="font-inter font-normal text-[17px]  text-[#5c6678] leading-[141%]"
             >
-              Строим надёжные заезды для частных домов<br />
-              и дачных участков. Подбираем конструкцию <br />
-              под грунт, нагрузку и бюджет.
+              Строим надёжные заезды<br class="mobile:block tablet:hidden"> для частных домов<br class="hidden tablet:inline">
+              и дачных<br class="mobile:block tablet:hidden"> участков. Подбираем<br class="mobile:block tablet:hidden"> конструкцию <br class="hidden tablet:inline">
+              под грунт,<br class="mobile:block tablet:hidden"> нагрузку и бюджет.
             </p>
-            <div class="mt-[30px] flex items-center gap-x-[10px]">
+            <div class="mt-[30px] flex items-center gap-x-[10px] min-w-0">
               <div>
                 <a
-                  href="#"
-                  class="block relative text-center leading-[60px] overflow-hidden w-[254px] h-[60px] font-inter font-semibold text-[15px] text-white rounded-[14px] bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(90deg,#20a12f_0%,#228d0e_100%)] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300 before:ease-in"
+                  href="#contact"
+                  class="block relative text-center mobile:leading-[50px] tablet:leading-[60px] overflow-hidden w-full mobile:px-[10px] tablet:w-[254px] mobile:h-[50px] tablet:h-[60px] font-inter font-semibold mobile:text-[13px] tablet:text-[15px] text-white rounded-[14px] bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(90deg,#20a12f_0%,#228d0e_100%)] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300 before:ease-in"
                 >
                   <span class="relative z-10">Рассчитать стоимость</span>
                 </a>
@@ -169,23 +184,22 @@
               <div>
                 <a
                   href="#"
-                  class="block w-[220px] h-[60px] font-inter font-semibold text-[15px] text-[#0a0e16] text-center leading-[60px] rounded-[14px] bg-white transition-colors duration-300 ease-in hover:bg-[#e8e3e3]"
+                  class="block w-full mobile:px-[10px] tablet:w-[220px] mobile:h-[50px] tablet:h-[60px] font-inter font-semibold tab mobile:text-[13px] tablet:text-[15px] text-[#0a0e16] text-center mobile:leading-[50px] tablet:leading-[60px] rounded-[14px] bg-white transition-colors duration-300 ease-in hover:bg-[#e8e3e3]"
                   >Посмотреть работы</a
                 >
               </div>
             </div>
             <ul class="flex flex-wrap gap-[15px] mt-[35px]">
-              <li class="flex-1 min-w-[220px]">
+              <li class="flex-1 pc:min-w-[220px] mobile:min-w-full tablet:w-[220px] ">
                 <div
-                  class="flex items-center gap-[20px] p-[23px] rounded-[22px] bg-black/40 backdrop-blur-md"
+                  class="flex items-center gap-[20px] p-[23px] rounded-[22px] bg-black/40 backdrop-blur-md min-w-0"
                 >
                   <img
                     src="./images/header_icon_guarantee.svg"
                     alt="Гарантия"
                     width="32"
                     height="35"
-                    aria-hidden="true"
-                  />
+                    aria-hidden="true" class="shrink-0">
 
                   <div>
                     <p class="font-inter font-semibold text-[16px] text-white">
@@ -198,17 +212,16 @@
                 </div>
               </li>
 
-              <li class="flex-1 min-w-[220px]">
+              <li class="flex-1 pc:min-w-[220px] mobile:min-w-full tablet:w-[220px] ">
                 <div
-                  class="flex items-center gap-[20px] p-[23px] rounded-[22px] bg-black/40 backdrop-blur-md"
+                  class="flex items-center gap-[20px] p-[23px] rounded-[22px] bg-black/40 backdrop-blur-md min-w-0"
                 >
                   <img
                     src="./images/header_icon_fixed.svg"
                     alt=""
                     width="34"
                     height="34"
-                    aria-hidden="true"
-                  />
+                    aria-hidden="true" class="shrink-0">
 
                   <div>
                     <p class="font-inter font-semibold text-[16px] text-white">
@@ -220,17 +233,16 @@
                   </div>
                 </div>
               </li>
-              <li class="flex-1 min-w-[220px]">
+              <li class="flex-1 pc:min-w-[220px] mobile:min-w-full tablet:w-[220px] ">
                 <div
-                  class="flex items-center gap-[20px] p-[23px] rounded-[22px] bg-black/40 backdrop-blur-md"
+                  class="flex items-center gap-[20px] p-[23px] rounded-[22px] bg-black/40 backdrop-blur-md min-w-0"
                 >
                   <img
                     src="./images/header_icon_mkad.svg"
                     alt="МКАД"
                     width="32"
                     height="38"
-                    aria-hidden="true"
-                  />
+                    aria-hidden="true" class="shrink-0">
 
                   <div>
                     <p class="font-inter font-semibold text-[16px] text-white">
@@ -242,17 +254,16 @@
                   </div>
                 </div>
               </li>
-              <li class="flex-1 min-w-[220px]">
+              <li class="flex-1 pc:min-w-[220px] mobile:min-w-full tablet:w-[220px] ">
                 <div
-                  class="flex items-center gap-[20px] p-[23px] rounded-[22px] bg-black/40 backdrop-blur-md"
+                  class="flex items-center gap-[20px] p-[23px] rounded-[22px] bg-black/40 backdrop-blur-md min-w-0"
                 >
                   <img
                     src="./images/header_icon_technique.svg"
                     alt=""
                     width="40"
                     height="39"
-                    aria-hidden="true"
-                  />
+                    aria-hidden="true" class="shrink-0">
 
                   <div>
                     <p class="font-inter font-semibold text-[16px] text-white">
@@ -269,7 +280,7 @@
         </div>
       </section>
       <section id="services"
-        class="max-w-[1280px] w-[calc(100%-20px)] mt-[60px] mx-auto"
+        class="max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mt-[60px] mx-auto scroll-mt-[110px]"
         aria-labelledby="driveways-title"
       >
         <div
@@ -281,17 +292,17 @@
             ВАРИАНТЫ УСТРОЙСТВА
           </p>
         </div>
-        <h2 class="font-inter font-extrabold text-[44px] text-[#0a0e16]">
+        <h2 id="driveways-title" class="font-inter font-extrabold text-[28px] leading-[117%] tablet:text-[36px] pc:text-[44px] text-[#0a0e16]">
           Заезды на участок под любые задачи и бюджет
         </h2>
-        <p class="font-inter font-normal text-[17px] text-[#5c6678]">
+        <p class="font-inter mobile:mt-[10px] tablet:mt-[0px] font-normal text-[17px] leading-[117%] text-[#5c6678]">
           Готовые решения под разные задачи и бюджет. Все варианты включают
           качественные материалы и профессиональный монтаж.
         </p>
 
-        <ul class="flex flex-wrap gap-[20px] mt-[35px]">
+        <ul class="flex flex-wrap gap-[20px] mt-[35px] [&>li]:w-full tablet:[&>li]:w-[calc(50%_-_10px)] pc:[&>li]:w-[calc(25%_-_15px)] [&>li]:min-w-0">
           <li>
-            <div class="flex flex-col overflow-hidden bg-white rounded-[22px]">
+            <div class="flex flex-col overflow-hidden bg-white rounded-[22px] min-w-0">
               <div class="relative">
                 <img
                   src="./images/driveways_img1.png"
@@ -300,7 +311,7 @@
                   decoding="async"
                   width="305"
                   height="200"
-                  class=""
+                  class="block w-full h-auto object-cover aspect-[305/200]"
                 />
 
                 <span
@@ -315,40 +326,37 @@
                   class="absolute bottom-[10px] left-1/2 -translate-x-1/2 flex gap-x-[5px] justify-center"
                 >
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_width.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >до 6 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_length.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white">
                       до 3 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_area.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >20 м²</span
                     >
@@ -359,53 +367,49 @@
                 <p
                   class="mb-[25px] font-inter font-black text-[17px] text-[#0a0e16] leading-[118%]"
                 >
-                  Устройство<br />
+                  Устройство<br class="hidden tablet:inline">
                   заезда Эконом вариант
                 </p>
                 <ul class="flex flex-col gap-y-[10px]">
-                  <li class="flex gap-x-[5px] items-center">
+                  <li class="flex gap-x-[5px] items-center min-w-0">
                     <img
                       src="./images/driveways_mark.svg"
                       alt=""
                       width="15"
-                      height="15"
-                    />
+                      height="15" class="shrink-0">
                     <span
                       class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                       >Геотекстиль 300 -400 г. / кв. м.</span
                     >
                   </li>
-                  <li class="flex gap-x-[5px] items-center">
+                  <li class="flex gap-x-[5px] items-center min-w-0">
                     <img
                       src="./images/driveways_mark.svg"
                       alt=""
                       width="15"
-                      height="15"
-                    />
+                      height="15" class="shrink-0">
                     <span
                       class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                       >Песок 1 класса уплотненненный</span
                     >
                   </li>
-                  <li class="flex gap-x-[5px] items-center">
+                  <li class="flex gap-x-[5px] items-center min-w-0">
                     <img
                       src="./images/driveways_mark.svg"
                       alt=""
                       width="15"
-                      height="15"
-                    />
+                      height="15" class="shrink-0">
                     <span
                       class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                       >Щебень М800 от 20 см, уплотненный</span
                     >
                   </li>
-                  <li class="flex gap-x-[5px] items-center">
+                  <li class="flex gap-x-[5px] items-center min-w-0">
                     <img
                       src="./images/driveways_mark.svg"
                       alt=""
                       width="15"
-                      height="15"
-                    />
+                      height="15" class="shrink-0">
                     <span
                       class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                       >ПНД труба двуслойная</span
@@ -414,7 +418,7 @@
                 </ul>
 
                 <div
-                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px]"
+                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px] min-w-0 flex-wrap gap-[10px]"
                 >
                   <div>
                     <p class="font-inter font-extrabold text-lg text-[#0a0e16]">
@@ -448,7 +452,7 @@
             </div>
           </li>
           <li>
-            <div class="flex flex-col overflow-hidden bg-white rounded-[22px]">
+            <div class="flex flex-col overflow-hidden bg-white rounded-[22px] min-w-0">
               <div class="relative">
                 <img
                   src="./images/driveways_img2.png"
@@ -457,7 +461,7 @@
                   decoding="async"
                   width="305"
                   height="200"
-                  class=""
+                  class="block w-full h-auto object-cover aspect-[305/200]"
                 />
 
                 <span
@@ -469,40 +473,37 @@
                   class="absolute bottom-[10px] left-1/2 -translate-x-1/2 flex gap-x-[5px] justify-center"
                 >
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_width.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >до 6 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_length.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white">
                       до 3 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_area.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >20 м²</span
                     >
@@ -513,54 +514,50 @@
                 <p
                   class="mb-[25px] font-inter font-black text-[17px] text-[#0a0e16] leading-[118%]"
                 >
-                  Эконом<br />
+                  Эконом<br class="hidden tablet:inline">
                   вариант 2
                 </p>
-                <div class="flex gap-x-[30px]">
+                <div class="flex flex-wrap gap-[15px] pc:gap-x-[30px] min-w-0">
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Асфальт</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Щебень</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Геотекстиль</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Песок</span
@@ -568,13 +565,12 @@
                     </li>
                   </ul>
                   <ul>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >ПНД труба</span
@@ -584,7 +580,7 @@
                 </div>
 
                 <div
-                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px]"
+                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px] min-w-0 flex-wrap gap-[10px]"
                 >
                   <div>
                     <p class="font-inter font-extrabold text-lg text-[#0a0e16]">
@@ -618,7 +614,7 @@
             </div>
           </li>
           <li>
-            <div class="flex flex-col overflow-hidden bg-white rounded-[22px]">
+            <div class="flex flex-col overflow-hidden bg-white rounded-[22px] min-w-0">
               <div class="relative">
                 <img
                   src="./images/driveways_img3.png"
@@ -627,7 +623,7 @@
                   decoding="async"
                   width="305"
                   height="200"
-                  class=""
+                  class="block w-full h-auto object-cover aspect-[305/200]"
                 />
 
                 <span
@@ -642,40 +638,37 @@
                   class="absolute bottom-[10px] left-1/2 -translate-x-1/2 flex gap-x-[5px] justify-center"
                 >
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_width.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >до 6 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_length.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white">
                       до 3 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_area.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >20 м²</span
                     >
@@ -686,54 +679,50 @@
                 <p
                   class="mb-[25px] font-inter font-black text-[17px] text-[#0a0e16] leading-[118%]"
                 >
-                  Стандарт<br />
+                  Стандарт<br class="hidden tablet:inline">
                   с подпорными стенками
                 </p>
-                <div class="flex gap-x-[30px]">
+                <div class="flex flex-wrap gap-[15px] pc:gap-x-[30px] min-w-0">
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Асфальт</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Щебень</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Геотекстиль</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Песок</span
@@ -741,28 +730,26 @@
                     </li>
                   </ul>
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >ПНД труба</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
-                        >Упорные стенки<br />
+                        >Упорные стенки<br class="hidden tablet:inline">
                         из бетона.</span
                       >
                     </li>
@@ -770,7 +757,7 @@
                 </div>
 
                 <div
-                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px]"
+                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px] min-w-0 flex-wrap gap-[10px]"
                 >
                   <div>
                     <p class="font-inter font-extrabold text-lg text-[#0a0e16]">
@@ -804,7 +791,7 @@
             </div>
           </li>
           <li>
-            <div class="flex flex-col overflow-hidden bg-white rounded-[22px]">
+            <div class="flex flex-col overflow-hidden bg-white rounded-[22px] min-w-0">
               <div class="relative">
                 <img
                   src="./images/driveways_img4.png"
@@ -813,7 +800,7 @@
                   decoding="async"
                   width="305"
                   height="200"
-                  class=""
+                  class="block w-full h-auto object-cover aspect-[305/200]"
                 />
 
                 <span
@@ -825,40 +812,37 @@
                   class="absolute bottom-[10px] left-1/2 -translate-x-1/2 flex gap-x-[5px] justify-center"
                 >
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_width.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >до 6 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_length.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white">
                       до 3 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_area.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >20 м²</span
                     >
@@ -869,53 +853,49 @@
                 <p
                   class="mb-[25px] font-inter font-black text-[17px] text-[#0a0e16] leading-[118%]"
                 >
-                  Стандарт, асфальтовое <br />покрытие
+                  Стандарт, асфальтовое <br class="hidden tablet:inline">покрытие
                 </p>
-                <div class="flex gap-x-[30px]">
+                <div class="flex flex-wrap gap-[15px] pc:gap-x-[30px] min-w-0">
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Асфальт</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Щебень</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Геотекстиль</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Песок</span
@@ -923,29 +903,27 @@
                     </li>
                   </ul>
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >ПНД труба</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
-                        >Бетонные<br />
-                        подпорные<br />
+                        >Бетонные<br class="hidden tablet:inline">
+                        подпорные<br class="hidden tablet:inline">
                         стенки.</span
                       >
                     </li>
@@ -953,7 +931,7 @@
                 </div>
 
                 <div
-                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px]"
+                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px] min-w-0 flex-wrap gap-[10px]"
                 >
                   <div>
                     <p class="font-inter font-extrabold text-lg text-[#0a0e16]">
@@ -987,7 +965,7 @@
             </div>
           </li>
           <li>
-            <div class="flex flex-col overflow-hidden bg-white rounded-[22px]">
+            <div class="flex flex-col overflow-hidden bg-white rounded-[22px] min-w-0">
               <div class="relative">
                 <img
                   src="./images/driveways_img5.png"
@@ -996,7 +974,7 @@
                   decoding="async"
                   width="305"
                   height="200"
-                  class=""
+                  class="block w-full h-auto object-cover aspect-[305/200]"
                 />
 
                 <span
@@ -1008,40 +986,37 @@
                   class="absolute bottom-[10px] left-1/2 -translate-x-1/2 flex gap-x-[5px] justify-center"
                 >
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_width.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >до 6 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_length.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white">
                       до 3 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_area.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >20 м²</span
                     >
@@ -1054,51 +1029,47 @@
                 >
                   Стандарт +
                 </p>
-                <div class="flex gap-x-[30px]">
+                <div class="flex flex-wrap gap-[15px] pc:gap-x-[30px] min-w-0">
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Геотекстиль</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Бетонная труба</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Песок</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Щебень</span
@@ -1106,29 +1077,27 @@
                     </li>
                   </ul>
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Асфальт</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
-                        >Бетонные<br />
-                        подпорные<br />
+                        >Бетонные<br class="hidden tablet:inline">
+                        подпорные<br class="hidden tablet:inline">
                         стенки.</span
                       >
                     </li>
@@ -1136,7 +1105,7 @@
                 </div>
 
                 <div
-                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px]"
+                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px] min-w-0 flex-wrap gap-[10px]"
                 >
                   <div>
                     <p class="font-inter font-extrabold text-lg text-[#0a0e16]">
@@ -1170,7 +1139,7 @@
             </div>
           </li>
           <li>
-            <div class="flex flex-col overflow-hidden bg-white rounded-[22px]">
+            <div class="flex flex-col overflow-hidden bg-white rounded-[22px] min-w-0">
               <div class="relative">
                 <img
                   src="./images/driveways_img6.png"
@@ -1179,7 +1148,7 @@
                   decoding="async"
                   width="305"
                   height="200"
-                  class=""
+                  class="block w-full h-auto object-cover aspect-[305/200]"
                 />
 
                 <span
@@ -1194,40 +1163,37 @@
                   class="absolute bottom-[10px] left-1/2 -translate-x-1/2 flex gap-x-[5px] justify-center"
                 >
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_width.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >до 6 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_length.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white">
                       до 3 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_area.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >20 м²</span
                     >
@@ -1238,54 +1204,50 @@
                 <p
                   class="mb-[25px] font-inter font-black text-[17px] text-[#0a0e16] leading-[118%]"
                 >
-                  Бетонные<br />
+                  Бетонные<br class="hidden tablet:inline">
                   заезды
                 </p>
-                <div class="flex gap-x-[30px]">
+                <div class="flex flex-wrap gap-[15px] pc:gap-x-[30px] min-w-0">
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Геотекстиль</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Бетонная труба</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Песок</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Щебень</span
@@ -1293,30 +1255,28 @@
                     </li>
                   </ul>
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
-                        >Бетонное<br />
+                        >Бетонное<br class="hidden tablet:inline">
                         покрытие</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
-                        >Бетонные<br />
-                        подпорные<br />
+                        >Бетонные<br class="hidden tablet:inline">
+                        подпорные<br class="hidden tablet:inline">
                         стенки</span
                       >
                     </li>
@@ -1324,7 +1284,7 @@
                 </div>
 
                 <div
-                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px]"
+                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px] min-w-0 flex-wrap gap-[10px]"
                 >
                   <div>
                     <p class="font-inter font-extrabold text-lg text-[#0a0e16]">
@@ -1358,7 +1318,7 @@
             </div>
           </li>
           <li>
-            <div class="flex flex-col overflow-hidden bg-white rounded-[22px]">
+            <div class="flex flex-col overflow-hidden bg-white rounded-[22px] min-w-0">
               <div class="relative">
                 <img
                   src="./images/driveways_img7.png"
@@ -1367,7 +1327,7 @@
                   decoding="async"
                   width="305"
                   height="200"
-                  class=""
+                  class="block w-full h-auto object-cover aspect-[305/200]"
                 />
 
                 <span
@@ -1379,40 +1339,37 @@
                   class="absolute bottom-[10px] left-1/2 -translate-x-1/2 flex gap-x-[5px] justify-center"
                 >
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_width.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >до 6 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_length.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white">
                       до 3 м</span
                     >
                   </li>
                   <li
-                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm"
+                    class="bg-black/40 flex flex-col justify-center items-center rounded-[10px] w-[65px] pt-[7px] pb-[5px] backdrop-blur-sm min-w-0"
                   >
                     <img
                       src="./images/icon_area.svg"
                       alt=""
                       width="14"
-                      height="14"
-                    />
+                      height="14" class="shrink-0">
                     <span class="font-inter font-bold text-xs text-white"
                       >20 м²</span
                     >
@@ -1425,51 +1382,47 @@
                 >
                   Заезд по вашим пожеланиям
                 </p>
-                <div class="flex gap-x-[30px]">
+                <div class="flex flex-wrap gap-[15px] pc:gap-x-[30px] min-w-0">
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Геотекстиль</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >ПНД труба</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Песок</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Щебень</span
@@ -1477,42 +1430,39 @@
                     </li>
                   </ul>
                   <ul class="flex flex-col gap-y-[10px]">
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
                         >Асфальт</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
-                        >Бетонное<br />
+                        >Бетонное<br class="hidden tablet:inline">
                         покрытие</span
                       >
                     </li>
-                    <li class="flex gap-x-[5px] items-center">
+                    <li class="flex gap-x-[5px] items-center min-w-0">
                       <img
                         src="./images/driveways_mark.svg"
                         alt=""
                         width="15"
-                        height="15"
-                      />
+                        height="15" class="shrink-0">
                       <span
                         class="font-inter font-normal text-[13px] text-[#5c6678] leading-[115%]"
-                        >Бетонные<br />
-                        подпорные<br />
+                        >Бетонные<br class="hidden tablet:inline">
+                        подпорные<br class="hidden tablet:inline">
                         стенки</span
                       >
                     </li>
@@ -1520,7 +1470,7 @@
                 </div>
 
                 <div
-                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px]"
+                  class="flex items-center justify-between border-t border-solid border-black/10 mt-[20px] pt-[12px] min-w-0 flex-wrap gap-[10px]"
                 >
                   <div>
                     <p class="font-inter font-extrabold text-lg text-[#0a0e16]">
@@ -1556,7 +1506,7 @@
         </ul>
       </section>
       <section id="company"
-        class="relative min-h-[792px] overflow-hidden mt-[45px]"
+        class="relative pc:min-h-[792px] overflow-hidden mt-[45px] scroll-mt-[110px]"
         aria-labelledby="reliable-title"
       >
         <div class="absolute w-full inset-0 -z-0" aria-hidden="true">
@@ -1577,6 +1527,15 @@
             class=""
           />
         </div>
+        <div class="mobile:block tablet:hidden absolute w-full top-0 left-[166px] " aria-hidden="true">
+          <img
+            src="./images/reliable_effect.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            class=""
+          />
+        </div>
         <div class="absolute w-full bottom-0" aria-hidden="true">
           <img
             src="./images/reliable_effect_bottom.png"
@@ -1586,40 +1545,41 @@
             class=""
           />
         </div>
+         <div class="mobile:block pc:hidden absolute w-full h-full bg-black/50 inset-0" aria-hidden="true"></div>
         <div
-          class="relative max-w-[1280px] w-[calc(100%-20px)] mt-[60px] mx-auto"
+          class="relative max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mobile:mt-[20px] tablet:mt-[60px] mx-auto"
         >
           <div>
             <div
               class="mb-[10px] bg-[rgba(34,128,45,0.11)] rounded-[8px] w-[217px] h-[33px] text-center leading-[33px]"
             >
               <p
-                class="font-inter font-semibold text-xs text-[#22802d] tracking-[0.14em]"
+                class="font-inter font-semibold text-xs mobile:text-white pc:text-[#22802d] tracking-[0.14em]"
               >
                 ПОЧЕМУ ВЫБИРАЮТ НАС
               </p>
             </div>
-            <h2
-              class="font-inter font-extrabold text-[44px] text-[#0a0e16] leading-[118%]"
+            <h2 id="reliable-title"
+              class="font-inter font-extrabold text-[28px] tablet:text-[36px] pc:text-[44px] mobile:text-white pc:text-[#0a0e16] leading-[118%]"
             >
-              Надёжные заезды<br />
-              и площадки под авто для<br />
+              Надёжные заезды<br class="hidden tablet:inline">
+              и площадки под авто для<br class="hidden tablet:inline">
               <span
-                class="bg-gradient-to-r from-[#22802d] to-[#228d0e] bg-clip-text text-transparent font-black text-[55px]"
+                class="bg-gradient-to-r mobile:from-[#2cb83c] mobile:to-[#24ac0c] pc:from-[#22802d] pc:to-[#228d0e] bg-clip-text text-transparent font-black text-[30px] tablet:text-[28px] tablet:text-[36px] pc:text-[42px] pc:text-[55px]"
                 >комфортной жизни</span
               >
             </h2>
             <p
-              class="mt-[5px] font-inter font-normal text-[17px] text-[#5c6678]"
+              class="mt-[5px] font-inter pc:font-normal mobile:font-bold text-[17px] mobile:text-white pc:text-[#5c6678]"
             >
               Мы берём на себя все этапы работ - от проектирования до
-              финальной<br />
-              отделки. Гарантируем качество, соблюдение сроков и прозрачную<br />
+              финальной<br class="hidden tablet:inline">
+              отделки. Гарантируем качество, соблюдение сроков и прозрачную<br class="hidden tablet:inline">
               стоимость.
             </p>
-            <ul class="flex gap-x-[15px] mt-[30px]">
+            <ul class="flex flex-wrap gap-[15px] mt-[30px]">
               <li
-                class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] pl-[30px] w-[222px] h-[191px]"
+                class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] px-[20px] pc:pl-[30px] w-full tablet:w-[calc(50%_-_7.5px)] pc:w-[222px] min-h-[191px] pb-[20px] min-w-0"
               >
                 <span class="font-inter font-bold text-[33px] text-[#22802d]"
                   >01</span
@@ -1627,16 +1587,16 @@
                 <p
                   class="font-inter font-semibold text-[15px] text-[#0a0e16] leading-[118%]"
                 >
-                  Соблюдаем<br />
+                  Соблюдаем<br class="hidden tablet:inline">
                   сроки
                 </p>
                 <p class="font-inter font-normal text-[13px] text-[#5c6678]">
-                  Чёткий график и контроль<br />
+                  Чёткий график и контроль<br class="hidden tablet:inline">
                   на каждом этапе
                 </p>
               </li>
               <li
-                class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] pl-[30px] w-[222px] h-[191px]"
+                class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] px-[20px] pc:pl-[30px] w-full tablet:w-[calc(50%_-_7.5px)] pc:w-[222px] min-h-[191px] pb-[20px] min-w-0"
               >
                 <span class="font-inter font-bold text-[33px] text-[#22802d]"
                   >02</span
@@ -1644,16 +1604,16 @@
                 <p
                   class="font-inter font-semibold text-[15px] text-[#0a0e16] leading-[118%]"
                 >
-                  Фиксированная<br />
+                  Фиксированная<br class="hidden tablet:inline">
                   стоимость
                 </p>
                 <p>
-                  Цена прописана в<br />
+                  Цена прописана в<br class="hidden tablet:inline">
                   договоре и не меняется
                 </p>
               </li>
               <li
-                class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] pl-[30px] w-[222px] h-[191px]"
+                class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] px-[20px] pc:pl-[30px] w-full tablet:w-[calc(50%_-_7.5px)] pc:w-[222px] min-h-[191px] pb-[20px] min-w-0"
               >
                 <span class="font-inter font-bold text-[33px] text-[#22802d]"
                   >03</span
@@ -1661,16 +1621,16 @@
                 <p
                   class="font-inter font-semibold text-[15px] text-[#0a0e16] leading-[118%]"
                 >
-                  Качественные<br />
+                  Качественные<br class="hidden tablet:inline">
                   материалы
                 </p>
                 <p class="font-inter font-normal text-[13px] text-[#5c6678]">
-                  Проверенные поставщики<br />
+                  Проверенные поставщики<br class="hidden tablet:inline">
                   и надёжные решения
                 </p>
               </li>
               <li
-                class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] pt-[25px] pl-[30px] w-[222px] h-[191px] rounded-[22px]"
+                class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] pt-[25px] px-[20px] pc:pl-[30px] w-full tablet:w-[calc(50%_-_7.5px)] pc:w-[222px] min-h-[191px] pb-[20px] rounded-[22px] min-w-0"
               >
                 <span class="font-inter font-bold text-[33px] text-[#22802d]"
                   >04</span
@@ -1678,11 +1638,11 @@
                 <p
                   class="font-inter font-semibold text-[15px] text-[#0a0e16] leading-[118%]"
                 >
-                  Гарантия<br />
+                  Гарантия<br class="hidden tablet:inline">
                   на работы
                 </p>
                 <p class="font-inter font-normal text-[13px] text-[#5c6678]">
-                  Уверены в качестве <br />и даём гарантию
+                  Уверены в качестве <br class="hidden tablet:inline">и даём гарантию
                 </p>
               </li>
             </ul>
@@ -1690,15 +1650,15 @@
           <div></div>
         </div>
         <div
-          class="relative flex items-center h-[200px] mt-[55px] bg-[rgba(0,0,0,0.88)]"
+          class="relative flex items-center min-h-[200px] py-[30px] mt-[55px] bg-[rgba(0,0,0,0.88)] min-w-0"
         >
-          <div class="max-w-[1280px] w-[calc(100%-20px)] mx-auto">
-            <ul class="flex items-center">
+          <div class="max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mx-auto">
+            <ul class="flex flex-wrap items-start gap-[24px] [&>li]:w-full tablet:[&>li]:w-[calc(50%_-_12px)] pc:[&>li]:w-[calc(25%_-_18px)]">
               <li
-                class="flex flex-col border-r border-solid pr-[80px] mr-[50px] border-white/10"
+                class="flex flex-col pc:border-r border-solid pc:pr-[20px] border-white/10 min-w-0"
               >
                 <span
-                  class="block font-inter font-extrabold text-[45px] text-[#f9f8f4]"
+                  class="block font-inter font-extrabold text-[32px] tablet:text-[40px] pc:text-[45px] text-[#f9f8f4]"
                   >10+</span
                 >
                 <p
@@ -1706,16 +1666,16 @@
                 >
                   Лет опыта
                 </p>
-                <p class="font-inter font-normal text-[15px text-[#cfcfcf]">
-                  Строим заезды для<br />
+                <p class="font-inter font-normal text-[15px] text-[#cfcfcf]">
+                  Строим заезды для<br class="hidden tablet:inline">
                   частных домов и дачных
                 </p>
               </li>
               <li
-                class="flex flex-col border-r border-solid pr-[80px] mr-[50px] border-white/10"
+                class="flex flex-col pc:border-r border-solid pc:pr-[20px] border-white/10 min-w-0"
               >
                 <span
-                  class="block font-inter font-extrabold text-[45px] text-[#f9f8f4]"
+                  class="block font-inter font-extrabold text-[32px] tablet:text-[40px] pc:text-[45px] text-[#f9f8f4]"
                   >500+</span
                 >
                 <p
@@ -1723,16 +1683,16 @@
                 >
                   Реализованных проектов
                 </p>
-                <p class="font-inter font-normal text-[15px text-[#cfcfcf]">
-                  От небольших участков до<br />
+                <p class="font-inter font-normal text-[15px] text-[#cfcfcf]">
+                  От небольших участков до<br class="hidden tablet:inline">
                   премиальных объектов
                 </p>
               </li>
               <li
-                class="flex flex-col border-r border-solid pr-[80px] mr-[50px] border-white/10"
+                class="flex flex-col pc:border-r border-solid pc:pr-[20px] border-white/10 min-w-0"
               >
                 <span
-                  class="block font-inter font-extrabold text-[45px] text-[#f9f8f4]"
+                  class="block font-inter font-extrabold text-[32px] tablet:text-[40px] pc:text-[45px] text-[#f9f8f4]"
                   >98%</span
                 >
                 <p
@@ -1740,14 +1700,14 @@
                 >
                   Довольных клиентов
                 </p>
-                <p class="font-inter font-normal text-[15px text-[#cfcfcf]">
-                  Нас рекомендуют друзьям<br />
+                <p class="font-inter font-normal text-[15px] text-[#cfcfcf]">
+                  Нас рекомендуют друзьям<br class="hidden tablet:inline">
                   и соседям
                 </p>
               </li>
-              <li flex flex-col>
+              <li class="flex flex-col min-w-0">
                 <span
-                  class="block font-inter font-extrabold text-[45px] text-[#f9f8f4]"
+                  class="block font-inter font-extrabold text-[32px] tablet:text-[40px] pc:text-[45px] text-[#f9f8f4]"
                   >5 лет</span
                 >
                 <p
@@ -1755,8 +1715,8 @@
                 >
                   Гарантия на работы
                 </p>
-                <p class="font-inter font-normal text-[15px text-[#cfcfcf]">
-                  Мы уверены в качестве наших решений
+                <p class="font-inter font-normal text-[15px] text-[#cfcfcf]">
+                  Мы уверены в качестве<br> наших решений
                 </p>
               </li>
             </ul>
@@ -1764,7 +1724,7 @@
         </div>
       </section>
       <section id="technologies"
-        class="relative min-h-[609px] overflow-hidden"
+        class="relative pc:min-h-[609px] pb-[40px] overflow-hidden scroll-mt-[110px]"
         aria-labelledby="technologies-title"
       >
         <div class="absolute w-full inset-0 -z-0" aria-hidden="true">
@@ -1794,188 +1754,189 @@
             class=""
           />
         </div>
+         <div class="absolute mobile:block tablet:hidden w-full h-full bg-black/50 inset-0" aria-hidden="true"></div>
         <div
-          class="relative flex justify-between pt-[90px] max-w-[1280px] w-[calc(100%-20px)] mx-auto"
+          class="relative flex flex-col justify-between pc:flex-row gap-[30px] pt-[40px] pc:pt-[90px] max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mx-auto min-w-0"
         >
           <div>
             <div
             class="mb-[10px] bg-[rgba(34,128,45,0.11)] rounded-[8px] w-[217px] h-[33px] text-center leading-[33px]"
           >
             <p
-              class="font-inter font-semibold text-xs text-[#22802d] tracking-[0.14em]"
+              class="font-inter font-semibold text-xs mobile:text-white tablet:text-[#22802d] tracking-[0.14em]"
             >
               ТЕХНОЛОГИЯ
             </p>
           </div>
-          <h2
-            class="font-inter font-extrabold text-[44px] text-[#0a0e16] leading-[118%]"
+          <h2 id="technologies-title"
+            class="font-inter font-extrabold text-[28px] tablet:text-[36px] pc:text-[44px] mobile:text-white tablet:text-[#0a0e16] leading-[118%]"
           >
-            Как мы делаем<br />
+            Как мы делаем<br class="hidden tablet:inline">
             <span
-              class="bg-gradient-to-r from-[#22802d] to-[#228d0e] bg-clip-text text-transparent font-black text-[55px]"
+              class="bg-gradient-to-r mobile:from-[#2cb83c] mobile:to-[#24ac0c] pc:from-[#22802d] pc:to-[#228d0e] bg-clip-text text-transparent font-black text-[30px] tablet:text-[28px] tablet:text-[36px] pc:text-[42px] pc:text-[55px]"
               >заезд на участок</span
             >
           </h2>
           <p
-            class="mt-[5px] font-inter font-normal text-[17px] text-[#5c6678] leading-[153%]"
+            class="mt-[5px] font-inter font-normal text-[17px] mobile:text-white tablet:text-[#5c6678] leading-[153%]"
           >
-            Используем проверенные материалы и современную<br />
-            технологию, чтобы заезд был прочным, долговечным и<br />
+            Используем проверенные материалы и современную<br class="hidden tablet:inline">
+            технологию, чтобы заезд был прочным, долговечным и<br class="hidden tablet:inline">
             подходил под условия вашего участка.
           </p>
-          <ul class="flex gap-x-[15px] mt-[42px]">
+          <ul class="flex flex-wrap gap-[15px] mt-[42px]">
             <li
-              class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] pl-[30px] w-[222px] h-[161px]"
+              class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] px-[20px] pc:pl-[30px] w-full tablet:w-[calc(50%_-_7.5px)] pc:w-[222px] min-h-[161px] pb-[20px] min-w-0"
             >
               <p
                 class="font-inter font-semibold text-[18px] text-[#0a0e16] leading-[118%]"
               >
-                Надёжная<br />
+                Надёжная<br class="hidden tablet:inline">
                 конструкция
               </p>
               <p class="font-inter font-normal text-[13px] text-[#5c6678]">
-                Выдерживает большие<br />
+                Выдерживает большие<br class="hidden tablet:inline">
                 нагрузки
               </p>
             </li>
             <li
-              class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] pl-[30px] w-[222px] h-[161px]"
+              class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] px-[20px] pc:pl-[30px] w-full tablet:w-[calc(50%_-_7.5px)] pc:w-[222px] min-h-[161px] pb-[20px] min-w-0"
             >
               <p
                 class="font-inter font-semibold text-[18px] text-[#0a0e16] leading-[118%]"
               >
-                Долговечные<br />
+                Долговечные<br class="hidden tablet:inline">
                 материалы
               </p>
               <p class="font-inter font-normal text-[13px] text-[#5c6678]">
-                Срок службы <br />от 20 лет
+                Срок службы <br class="hidden tablet:inline">от 20 лет
               </p>
             </li>
             <li
-              class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] pl-[30px] w-[222px] h-[161px]"
+              class="flex gap-y-[5px] flex-col bg-[rgba(255,255,255,0.88)] rounded-[22px] pt-[25px] px-[20px] pc:pl-[30px] w-full tablet:w-[calc(50%_-_7.5px)] pc:w-[222px] min-h-[161px] pb-[20px] min-w-0"
             >
               <p
                 class="font-inter font-semibold text-[18px] text-[#0a0e16] leading-[118%]"
               >
-                Подход<br />
+                Подход<br class="hidden tablet:inline">
                 под ваш участок
               </p>
               <p class="font-inter font-normal text-[13px] text-[#5c6678]">
-                Подбираем решение под<br />
+                Подбираем решение под<br class="hidden tablet:inline">
                 грунт и бюджет
               </p>
             </li>
           </ul>
           </div>
           <div>
-           <ul class="flex flex-col gap-y-[5px] mt-[-60px]">
-            <li class="w-[235px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
+           <ul class="flex flex-col gap-y-[5px] mt-0 pc:mt-[-60px]">
+            <li class="w-full pc:w-[235px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
               <p class="font-inter font-bold text-lg text-[#f9f8f4]">Асфальт / бетон</p>
               <p class="font-inter font-normal text-[13px] text-[#e2e2e2]">Прочное и ровное покрытие</p>
             </li>
-            <li class="w-[210px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
+            <li class="w-full pc:w-[210px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
               <p class="font-inter font-bold text-lg text-[#f9f8f4]">Щебень</p>
-              <p class="font-inter font-normal text-[13px] text-[#e2e2e2] leading-[118%]">Надежное основание для<br> покрытия</p>
+              <p class="font-inter font-normal text-[13px] text-[#e2e2e2] leading-[118%]">Надежное основание для<br class="hidden tablet:inline"> покрытия</p>
             </li>
-            <li class="w-[240px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
+            <li class="w-full pc:w-[240px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
               <p class="font-inter font-bold text-lg text-[#f9f8f4]">Геотекстиль</p>
-              <p class="font-inter font-normal text-[13px] text-[#e2e2e2] leading-[118%]">Разграничение слоев, <br>защита от проседания</p>
+              <p class="font-inter font-normal text-[13px] text-[#e2e2e2] leading-[118%]">Разграничение слоев, <br class="hidden tablet:inline">защита от проседания</p>
             </li>
-            <li class="w-[246px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
+            <li class="w-full pc:w-[246px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
               <p class="font-inter font-bold text-lg text-[#f9f8f4]">ПНД / бетонная труба</p>
               <p class="font-inter font-normal text-[13px] text-[#e2e2e2]">Надёжный водоотвод</p>
             </li>
-            <li class="w-[228px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
+            <li class="w-full pc:w-[228px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
               <p class="font-inter font-bold text-lg text-[#f9f8f4]">Бетонные стенки</p>
-              <p class="font-inter font-normal text-[13px] text-[#e2e2e2] leading-[118%]">Надежный упор для защиты<br> от осыпания</p>
+              <p class="font-inter font-normal text-[13px] text-[#e2e2e2] leading-[118%]">Надежный упор для защиты<br class="hidden tablet:inline"> от осыпания</p>
             </li>
-            <li class="w-[270px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
+            <li class="w-full pc:w-[270px] bg-[linear-gradient(90deg,rgba(34,128,45,0.88)_0%,rgba(34,141,14,0.88)_100%)] py-[15px] pl-[20px] rounded-[12px]">
               <p class="font-inter font-bold text-lg text-[#f9f8f4]">Уплотнённое основание</p>
-              <p class="font-inter font-normal text-[13px] text-[#e2e2e2] leading-[118%]">Защита от просадок <br>и неравномерных нагрузок <br>на трубу</p>
+              <p class="font-inter font-normal text-[13px] text-[#e2e2e2] leading-[118%]">Защита от просадок <br class="hidden tablet:inline">и неравномерных нагрузок <br class="hidden tablet:inline">на трубу</p>
             </li>
            </ul>
           </div>
         </div>
       </section>
-      <section  aria-labelledby="Stages-title" class="bg-white pt-[40px] pb-[40px]">
-        <div class="flex items-center  max-w-[1280px] w-[calp(100%-20px)]  mx-auto">
-          <div class="border-r border-solid border-black/10 pr-[60px] mr-[45px]">
-            <h2 class="bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] bg-clip-text text-transparent font-inter font-black text-[55px] leading-[40px]">Этапы<br>
-              <span class="leading-[118%] font-extrabold text-[#0a0e16] text-[44px]">устройства заезда</span>
+      <section  aria-labelledby="Stages-title" class="bg-white pt-[40px] pb-[40px] scroll-mt-[110px]">
+        <div class="flex flex-col items-start gap-[20px] pc:flex-row pc:items-center  max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)]  mx-auto min-w-0">
+          <div class="border-b pc:border-b-0 pc:border-r border-solid border-black/10 pb-[20px] pc:pb-0 pc:pr-[60px] pc:mr-[45px]">
+            <h2 id="Stages-title" class="bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] bg-clip-text text-transparent font-inter font-black text-[30px] tablet:text-[28px] tablet:text-[36px] pc:text-[42px] pc:text-[55px] mobile:leading-[117%] tablet:leading-[40px]">Этапы<br class="hidden tablet:inline">
+              <span class="leading-[118%] font-extrabold text-[#0a0e16] text-[28px] tablet:text-[36px] pc:text-[44px]">устройства заезда</span>
             </h2>
             
           </div>
           <div>
-            <p class="font-inter font-normal text-[13px] text-[#5c6678]">Контролируем каждый этал, используем качественные материалы и соблюдаем технологию,<br> что бы вы получили надежный и удобный заезд.</p>
+            <p class="font-inter font-normal text-[13px] text-[#5c6678]">Контролируем каждый этал, используем качественные материалы и соблюдаем технологию,<br class="hidden tablet:inline"> что бы вы получили надежный и удобный заезд.</p>
           </div>
         </div>
-        <div class="max-w-[1280px] w-[calp(100%-20px)] mt-[55px] mx-auto">
-          <ul class="flex gap-x-[15px]">
+        <div class="max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mt-[55px] mx-auto">
+          <ul class="flex flex-wrap gap-[15px] [&>li]:w-full tablet:[&>li]:w-[calc(50%_-_7.5px)] pc:[&>li]:w-[calc(20%_-_12px)] [&>li]:min-w-0">
           <li>
             <div class="relative">
-              <img src="./images/Stages_img1.png" alt="Планировка и подготовка" loading="lazy" width="244" height="172" decoding="async">
+              <img src="./images/Stages_img1.png" alt="Планировка и подготовка" loading="lazy" width="244" height="172" decoding="async" class="block w-full h-auto object-cover aspect-[244/172]">
               <span class="bg-[rgba(0,0,0,0.44)] absolute top-[15px] left-[15px] w-[40px] h-[40px] rounded-full font-inter font-bold text-[17px] text-white text-center leading-[40px]">01</span>
             </div>
-            <p  class="mb-[10px] mt-[20px] font-inter font-bold text-lg text-[#0a0e16] leading-[118%]">Планировка <br>и подготовка</p>
-            <p>Оцениваем участок, делаем<br> замеры и подбираем<br> оптимальное решение.</p>
+            <p  class="mb-[10px] mt-[20px] font-inter font-bold text-lg text-[#0a0e16] leading-[118%]">Планировка <br class="mobile:hidden pc:block ">и подготовка</p>
+            <p>Оцениваем участок, делаем<br class="mobile:hidden pc:block "> замеры и подбираем<br class="mobile:hidden pc:block "> оптимальное решение.</p>
           </li>
           <li>
             <div class="relative">
-              <img src="./images/Stages_img2.png" alt="Планировка и подготовка" loading="lazy" width="244" height="172" decoding="async">
+              <img src="./images/Stages_img2.png" alt="Планировка и подготовка" loading="lazy" width="244" height="172" decoding="async" class="block w-full h-auto object-cover aspect-[244/172]">
               <span class="bg-[rgba(0,0,0,0.44)] absolute top-[15px] left-[15px] w-[40px] h-[40px] rounded-full font-inter font-bold text-[17px] text-white text-center leading-[40px]">02</span>
             </div>
-            <p class="mb-[10px] mt-[20px] font-inter font-bold text-lg text-[#0a0e16] leading-[118%]">Подготовка <br>основания</p>
-            <p>Разрабатываем грунт,<br> устанавливаем трубу и формируем<br> основание.</p>
+            <p class="mb-[10px] mt-[20px] font-inter font-bold text-lg text-[#0a0e16] leading-[118%]">Подготовка <br class="mobile:hidden pc:block ">основания</p>
+            <p>Разрабатываем грунт,<br class="mobile:hidden pc:block "> устанавливаем трубу и формируем<br class="mobile:hidden pc:block "> основание.</p>
           </li>
           <li>
             <div class="relative">
-              <img src="./images/Stages_img3.png" alt="Планировка и подготовка" loading="lazy" width="244" height="172" decoding="async">
+              <img src="./images/Stages_img3.png" alt="Планировка и подготовка" loading="lazy" width="244" height="172" decoding="async" class="block w-full h-auto object-cover aspect-[244/172]">
               <span class="bg-[rgba(0,0,0,0.44)] absolute top-[15px] left-[15px] w-[40px] h-[40px] rounded-full font-inter font-bold text-[17px] text-white text-center leading-[40px]">03</span>
             </div>
-            <p class="mb-[10px] mt-[20px] font-inter font-bold text-lg text-[#0a0e16] leading-[118%]">Устройство <br>слоёв</p>
-            <p>Укладка трубы и слоев сыпучих<br> материалов с многоратным<br> уплотнением.</p>
+            <p class="mb-[10px] mt-[20px] font-inter font-bold text-lg text-[#0a0e16] leading-[118%]">Устройство <br class="mobile:hidden pc:block ">слоёв</p>
+            <p>Укладка трубы и слоев сыпучих<br class="mobile:hidden pc:block "> материалов с многоратным<br class="mobile:hidden pc:block "> уплотнением.</p>
           </li>
           <li>
             <div class="relative">
-              <img src="./images/Stages_img4.png" alt="Планировка и подготовка" loading="lazy" width="244" height="172" decoding="async">
+              <img src="./images/Stages_img4.png" alt="Планировка и подготовка" loading="lazy" width="244" height="172" decoding="async" class="block w-full h-auto object-cover aspect-[244/172]">
               <span class="bg-[rgba(0,0,0,0.44)] absolute top-[15px] left-[15px] w-[40px] h-[40px] rounded-full font-inter font-bold text-[17px] text-white text-center leading-[40px]">04</span>
             </div>
-            <p class="mb-[10px] mt-[20px] font-inter font-bold text-lg text-[#0a0e16] leading-[118%]">Монтаж <br>покрытия</p>
-            <p>Асфальт, бетон или другое<br> покрытие с соблюдением<br> технологии.</p>
+            <p class="mb-[10px] mt-[20px] font-inter font-bold text-lg text-[#0a0e16] leading-[118%]">Монтаж <br class=" mobile:hidden pc:block">покрытия</p>
+            <p>Асфальт, бетон или другое<br class="mobile:hidden pc:block "> покрытие с соблюдением<br class="hidden mobile:hidden pc:block"> технологии.</p>
           </li>
           <li>
             <div class="relative">
-              <img src="./images/Stages_img5.png" alt="Планировка и подготовка" loading="lazy" width="244" height="172" decoding="async">
+              <img src="./images/Stages_img5.png" alt="Планировка и подготовка" loading="lazy" width="244" height="172" decoding="async" class="block w-full h-auto object-cover aspect-[244/172]">
               <span class="bg-[rgba(0,0,0,0.44)] absolute top-[15px] left-[15px] w-[40px] h-[40px] rounded-full font-inter font-bold text-[17px] text-white text-center leading-[40px]">05</span>
             </div>
-            <p class="mb-[10px] mt-[20px] font-inter font-bold text-lg text-[#0a0e16] leading-[118%]">Проверка <br>качества и сдача</p>
-            <p>Контролируем все деталии<br> сдаем готовый заезд под<br> ключ</p>
+            <p class="mb-[10px] mt-[20px] font-inter font-bold text-lg text-[#0a0e16] leading-[118%]">Проверка <br class="mobile:hidden pc:block ">качества и сдача</p>
+            <p>Контролируем все деталии<br class="mobile:hidden pc:block "> сдаем готовый заезд под<br class="mobile:hidden pc:block "> ключ</p>
           </li>
         </ul>
         </Div>
       </section>
-      <section id="works" class=" max-w-[1280px] w-[calp(100%-20px)] mt-[50px] mx-auto" aria-labelledby="works-title">
-        <div class="flex items-center">
-          <div class="border-r border-solid border-black/10 pr-[60px] mr-[45px]">
-            <h2 class="leading-[118%] font-extrabold text-[#0a0e16] text-[44px]">
-              Примеры<br>
-              <span class="bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] bg-clip-text text-transparent font-inter font-black text-[55px] leading-[40px]">
+      <section id="works" class="max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mobile:mt-[30px] tablet:mt-[50px] mx-auto scroll-mt-[110px]" aria-labelledby="works-title">
+        <div class="flex mobile:flex-wrap items-center mobile:gap-y-[20px] tablet:gpa-y-[0px] tablet:gap-x-[30px] tablet:justify-start min-w-0">
+          <div class="border-b pc:border-b-0 pc:border-r border-solid border-black/10 pb-[20px] pc:pb-0 pc:pr-[60px] pc:mr-[45px]">
+            <h2 id="works-title" class="leading-[118%] font-extrabold text-[#0a0e16] text-[28px] tablet:text-[36px] pc:text-[44px]">
+              Примеры<br class="hidden tablet:inline">
+              <span class="bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] bg-clip-text text-transparent font-inter font-black text-[30px] tablet:text-[28px] tablet:text-[36px] pc:text-[42px] pc:text-[55px] leading-[40px]">
                 наших работ
               </span>
             </h2>
           </div>
           <div>
-            <p class="font-inter font-normal text-[13px] text-[#5c6678] leading-[118%]">Более 500 реализованных заездов в Москве и области.<br>
+            <p class="font-inter font-normal text-[13px] text-[#5c6678] leading-[118%]">Более 500 реализованных заездов в Москве и области.<br class="hidden tablet:inline">
             Показываем реальные объекты: от частных домов до крупных участков</p>
           </div>
         </div>
         
 
-<ul class="flex flex-nowrap mt-[42px] items-stretch gap-[15px]">
+<ul class="flex flex-wrap pc:flex-nowrap mt-[42px] items-stretch gap-[15px]">
 
   <!-- Карточка 1 -->
-  <li class="w-[31%] shrink-0">
-    <div class="relative h-[385px] overflow-hidden rounded-[24px]">
+  <li class="w-full tablet:w-[calc(50%_-_7.5px)] pc:w-[31%] shrink-0">
+    <div class="relative h-[280px] tablet:h-[385px] overflow-hidden rounded-[24px]">
 
       <img
         src="./images/works_img1.png"
@@ -1991,7 +1952,7 @@
 
       <div class="absolute bottom-[31px] left-[31px] right-[60px]">
         <h3 class="font-inter font-bold text-lg text-white leading-[118%]">
-          Заезд из тротуарной <br>плитки
+          Заезд из тротуарной <br class="hidden tablet:inline">плитки
         </h3>
         <p class="mt-[5px] font-inter font-normal text-[13px] text-[#ccd1d8]">
           Частный дом, Истра
@@ -1999,7 +1960,7 @@
       </div>
 
       <a href="#"  aria-label="Подробнее о проекте: заезд из тротуарной плитки"
-         class="absolute right-[14px] bottom-[14px] flex items-center justify-center w-[40px] h-[40px] rounded-full border hover:bg-[#5c6678] hover:bg-blur-sm transition-colors duration-300 border-white/30">
+         class="absolute right-[14px] bottom-[14px] flex items-center justify-center w-[40px] h-[40px] rounded-full border hover:bg-[#5c6678] hover:backdrop-blur-sm transition-colors duration-300 border-white/30">
         <svg class="" width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
           <path d="M9.84016 3.62638L6.22881 0.153545C6.12572 0.0544132 5.98832 0 5.84182 0C5.69516 0 5.55784 0.0544914 5.45475 0.153545L5.12687 0.468923C5.02386 0.567899 4.96711 0.700102 4.96711 0.84106C4.96711 0.98194 5.02386 1.1186 5.12687 1.21757L7.23368 3.24799H0.540239C0.238453 3.24799 0 3.47518 0 3.76546V4.21132C0 4.5016 0.238453 4.7517 0.540239 4.7517H7.25758L5.12695 6.79345C5.02394 6.89258 4.96719 7.02119 4.96719 7.16215C4.96719 7.30295 5.02394 7.43343 5.12695 7.53248L5.45483 7.84685C5.55792 7.94598 5.69524 8 5.8419 8C5.98841 8 6.1258 7.94527 6.22889 7.84614L9.84024 4.37339C9.94358 4.27394 10.0004 4.14119 10 4.00008C10.0003 3.85849 9.94358 3.72567 9.84016 3.62638Z" fill="white"/>
         </svg>
@@ -2009,8 +1970,8 @@
   </li>
 
   <!-- Карточка 2 -->
-  <li class="w-[24%] shrink-0">
-    <div class="relative h-[385px] overflow-hidden rounded-[24px]">
+  <li class="w-full tablet:w-[calc(50%_-_7.5px)] pc:w-[24%] shrink-0">
+    <div class="relative h-[280px] tablet:h-[385px] overflow-hidden rounded-[24px]">
 
       <img
         src="./images/works_img2.png"
@@ -2026,7 +1987,7 @@
 
       <div class="absolute bottom-[31px] left-[31px] right-[60px]">
         <h3 class="font-inter font-bold text-lg text-white leading-[118%]">
-          Заезд <br>из щебня
+          Заезд <br class="hidden tablet:inline">из щебня
         </h3>
         <p class="mt-[5px] font-inter font-normal text-[13px] text-[#ccd1d8]">
           Участок, Солнечногорск
@@ -2034,7 +1995,7 @@
       </div>
 
       <a href="#" aria-label="Подробнее о проекте: заезд из щебня"
-         class="absolute right-[14px] bottom-[14px] flex items-center justify-center w-[40px] h-[40px] rounded-full border border-white/30 hover:bg-[#5c6678] hover:bg-blur-sm transition-colors duration-300">
+         class="absolute right-[14px] bottom-[14px] flex items-center justify-center w-[40px] h-[40px] rounded-full border border-white/30 hover:bg-[#5c6678] hover:backdrop-blur-sm transition-colors duration-300">
         <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
           <path d="M9.84016 3.62638L6.22881 0.153545C6.12572 0.0544132 5.98832 0 5.84182 0C5.69516 0 5.55784 0.0544914 5.45475 0.153545L5.12687 0.468923C5.02386 0.567899 4.96711 0.700102 4.96711 0.84106C4.96711 0.98194 5.02386 1.1186 5.12687 1.21757L7.23368 3.24799H0.540239C0.238453 3.24799 0 3.47518 0 3.76546V4.21132C0 4.5016 0.238453 4.7517 0.540239 4.7517H7.25758L5.12695 6.79345C5.02394 6.89258 4.96719 7.02119 4.96719 7.16215C4.96719 7.30295 5.02394 7.43343 5.12695 7.53248L5.45483 7.84685C5.55792 7.94598 5.69524 8 5.8419 8C5.98841 8 6.1258 7.94527 6.22889 7.84614L9.84024 4.37339C9.94358 4.27394 10.0004 4.14119 10 4.00008C10.0003 3.85849 9.94358 3.72567 9.84016 3.62638Z" fill="white"/>
         </svg>
@@ -2044,13 +2005,13 @@
   </li>
 
   <!-- Правая группа: 4 карточки в два ряда -->
-  <li class="flex-1 min-w-0">
+  <li class="w-full pc:flex-1 min-w-0">
 
     <ul class="flex flex-wrap gap-[15px]">
 
       <!-- Карточка 3 -->
-      <li class="w-[calc(50%-7.5px)]">
-        <div class="relative h-[185px] overflow-hidden rounded-[24px]">
+      <li class="w-full tablet:w-[calc(50%_-_7.5px)]">
+        <div class="relative h-[240px] pc:h-[185px] overflow-hidden rounded-[24px]">
 
           <img
             src="./images/works_img3.png"
@@ -2066,7 +2027,7 @@
 
           <div class="absolute bottom-[31px] left-[31px] right-[50px]">
             <h3 class="font-inter font-bold text-lg text-white leading-[118%]">
-              Бетонный<br> заезд
+              Бетонный<br class="hidden tablet:inline"> заезд
             </h3>
             <p class="mt-[5px] font-inter text-[13px] text-[#ccd1d8]">
               Коттедж, Химки
@@ -2074,7 +2035,7 @@
           </div>
 
           <a href="#" aria-label="Подробнее о бетонном заезде"
-             class="absolute right-[14px] bottom-[24px] flex items-center justify-center w-[40px] h-[40px] rounded-full border border-white/30 hover:bg-[#5c6678] hover:bg-blur-sm transition-colors duration-300">
+             class="absolute right-[14px] bottom-[24px] flex items-center justify-center w-[40px] h-[40px] rounded-full border border-white/30 hover:bg-[#5c6678] hover:backdrop-blur-sm transition-colors duration-300">
             <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.84016 3.62638L6.22881 0.153545C6.12572 0.0544132 5.98832 0 5.84182 0C5.69516 0 5.55784 0.0544914 5.45475 0.153545L5.12687 0.468923C5.02386 0.567899 4.96711 0.700102 4.96711 0.84106C4.96711 0.98194 5.02386 1.1186 5.12687 1.21757L7.23368 3.24799H0.540239C0.238453 3.24799 0 3.47518 0 3.76546V4.21132C0 4.5016 0.238453 4.7517 0.540239 4.7517H7.25758L5.12695 6.79345C5.02394 6.89258 4.96719 7.02119 4.96719 7.16215C4.96719 7.30295 5.02394 7.43343 5.12695 7.53248L5.45483 7.84685C5.55792 7.94598 5.69524 8 5.8419 8C5.98841 8 6.1258 7.94527 6.22889 7.84614L9.84024 4.37339C9.94358 4.27394 10.0004 4.14119 10 4.00008C10.0003 3.85849 9.94358 3.72567 9.84016 3.62638Z" fill="white"/>
             </svg>
@@ -2084,8 +2045,8 @@
       </li>
 
       <!-- Карточка 4 -->
-      <li class="w-[calc(50%-7.5px)]">
-        <div class="relative h-[185px] overflow-hidden rounded-[24px]">
+      <li class="w-full tablet:w-[calc(50%_-_7.5px)]">
+        <div class="relative h-[240px] pc:h-[185px] overflow-hidden rounded-[24px]">
 
           <img
             src="./images/works_img4.png"
@@ -2101,7 +2062,7 @@
 
           <div class="absolute bottom-[31px] left-[31px] right-[50px]">
             <h3 class="font-inter font-bold text-lg text-white leading-[118%]">
-              Асфальтовый<br> заезд
+              Асфальтовый<br class="hidden tablet:inline"> заезд
             </h3>
             <p class="mt-[5px] font-inter text-[13px] text-[#ccd1d8]">
               Частный дом, Одинцово
@@ -2109,7 +2070,7 @@
           </div>
 
           <a href="#" aria-label="Подробнее об асфальтовом заезде"
-             class="absolute right-[14px] bottom-[24px] flex items-center justify-center w-[40px] h-[40px] rounded-full border border-white/30 hover:bg-[#5c6678] hover:bg-blur-sm transition-colors duration-300">
+             class="absolute right-[14px] bottom-[24px] flex items-center justify-center w-[40px] h-[40px] rounded-full border border-white/30 hover:bg-[#5c6678] hover:backdrop-blur-sm transition-colors duration-300">
             <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.84016 3.62638L6.22881 0.153545C6.12572 0.0544132 5.98832 0 5.84182 0C5.69516 0 5.55784 0.0544914 5.45475 0.153545L5.12687 0.468923C5.02386 0.567899 4.96711 0.700102 4.96711 0.84106C4.96711 0.98194 5.02386 1.1186 5.12687 1.21757L7.23368 3.24799H0.540239C0.238453 3.24799 0 3.47518 0 3.76546V4.21132C0 4.5016 0.238453 4.7517 0.540239 4.7517H7.25758L5.12695 6.79345C5.02394 6.89258 4.96719 7.02119 4.96711 7.16215C4.96711 7.30295 5.02394 7.43343 5.12695 7.53248L5.45483 7.84685C5.55792 7.94598 5.69524 8 5.8419 8C5.98841 8 6.1258 7.94527 6.22889 7.84614L9.84024 4.37339C9.94358 4.27394 10.0004 4.14119 10 4.00008C10.0003 3.85849 9.94358 3.72567 9.84016 3.62638Z" fill="white"/>
             </svg>
@@ -2119,8 +2080,8 @@
       </li>
 
       <!-- Карточка 5 -->
-      <li class="w-[calc(50%-7.5px)]">
-        <div class="relative h-[185px] overflow-hidden rounded-[24px]">
+      <li class="w-full tablet:w-[calc(50%_-_7.5px)]">
+        <div class="relative h-[240px] pc:h-[185px] overflow-hidden rounded-[24px]">
 
           <img
             src="./images/works_img5.png"
@@ -2144,7 +2105,7 @@
           </div>
 
           <a href="#" aria-label="Подробнее о заезде с геотекстилем"
-             class="absolute right-[14px] bottom-[24px] flex items-center justify-center w-[40px] h-[40px] rounded-full border border-white/30 hover:bg-[#5c6678] hover:bg-blur-sm transition-colors duration-300">
+             class="absolute right-[14px] bottom-[24px] flex items-center justify-center w-[40px] h-[40px] rounded-full border border-white/30 hover:bg-[#5c6678] hover:backdrop-blur-sm transition-colors duration-300">
             <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.84016 3.62638L6.22881 0.153545C6.12572 0.0544132 5.98832 0 5.84182 0C5.69516 0 5.55784 0.0544914 5.45475 0.153545L5.12687 0.468923C5.02386 0.567899 4.96711 0.700102 4.96711 0.84106C4.96711 0.98194 5.02386 1.1186 5.12687 1.21757L7.23368 3.24799H0.540239C0.238453 3.24799 0 3.47518 0 3.76546V4.21132C0 4.5016 0.238453 4.7517 0.540239 4.7517H7.25758L5.12695 6.79345C5.02394 6.89258 4.96719 7.02119 4.96719 7.16215C4.96719 7.30295 5.02394 7.43343 5.12695 7.53248L5.45483 7.84685C5.55792 7.94598 5.69524 8 5.8419 8C5.98841 8 6.1258 7.94527 6.22889 7.84614L9.84024 4.37339C9.94358 4.27394 10.0004 4.14119 10 4.00008C10.0003 3.85849 9.94358 3.72567 9.84016 3.62638Z" fill="white"/>
             </svg>
@@ -2154,8 +2115,8 @@
       </li>
 
       <!-- Карточка 6 -->
-      <li class="w-[calc(50%-7.5px)]">
-        <div class="relative h-[185px] overflow-hidden rounded-[24px]">
+      <li class="w-full tablet:w-[calc(50%_-_7.5px)]">
+        <div class="relative h-[240px] pc:h-[185px] overflow-hidden rounded-[24px]">
 
           <img
             src="./images/works_img6.png"
@@ -2179,7 +2140,7 @@
           </div>
 
           <a href="#" aria-label="Подробнее о заезде с водоотводом"
-             class="absolute right-[14px] bottom-[24px] flex items-center justify-center w-[40px] h-[40px] rounded-full border border-white/30 hover:bg-[#5c6678] hover:bg-blur-sm transition-colors duration-300">
+             class="absolute right-[14px] bottom-[24px] flex items-center justify-center w-[40px] h-[40px] rounded-full border border-white/30 hover:bg-[#5c6678] hover:backdrop-blur-sm transition-colors duration-300">
             <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.84016 3.62638L6.22881 0.153545C6.12572 0.0544132 5.98832 0 5.84182 0C5.69516 0 5.55784 0.0544914 5.45475 0.153545L5.12687 0.468923C5.02386 0.567899 4.96711 0.700102 4.96711 0.84106C4.96711 0.98194 5.02386 1.1186 5.12687 1.21757L7.23368 3.24799H0.540239C0.238453 3.24799 0 3.47518 0 3.76546V4.21132C0 4.5016 0.238453 4.7517 0.540239 4.7517H7.25758L5.12695 7.53248L5.45483 7.84685C5.55792 7.94598 5.69524 8 5.8419 8C5.98841 8 6.1258 7.94527 6.22889 7.84614L9.84024 4.37339C9.94358 4.27394 10.0004 4.14119 10 4.00008C10.0003 3.85849 9.94358 3.72567 9.84016 3.62638Z" fill="white"/>
             </svg>
@@ -2193,63 +2154,111 @@
 
 </ul>
 
-  <div class="flex mt-[25px] items-center justify-between gap-[30px] rounded-[30px] bg-[#d9d9d9]/20 px-[20px] h-[92px]">
-
-    <dl class="flex items-center gap-[45px]">
-
-      <!-- Реализованные проекты -->
-      <div class="flex items-center gap-[25px]">
-        <dt class="bg-gradient-to-r from-[#22802d] to-[#228d0e] bg-clip-text text-transparent font-inter text-[44px] font-extrabold leading-none text-[#22802d]">
-          500+
-        </dt>
-
-        <dd class="font-inter text-[13px] font-normal leading-[118%] text-[#5c6678]">
-          реализованных <br>
-          проектов
-        </dd>
-      </div>
-
-      <!-- Разделитель -->
-      <div class="h-[30px] w-px shrink-0 bg-[#d9d9d9]" aria-hidden="true"></div>
-
-      <!-- Опыт -->
-      <div class="flex items-center gap-[20px]">
-        <dt class="bg-gradient-to-r from-[#22802d] to-[#228d0e] bg-clip-text text-transparent font-inter text-[44px] font-extrabold leading-none text-[#22802d]">
-          8
-        </dt>
-
-        <dd class="font-inter text-[13px] font-normal leading-[118%] text-[#5c6678]">
-          Лет <br>
-          опыта
-        </dd>
-      </div>
-
-      <!-- Разделитель -->
-      <div class="h-[30px] w-px shrink-0 bg-[#d9d9d9]" aria-hidden="true"></div>
-
-      <!-- Гарантия -->
-      <div class="flex items-center gap-[20px]">
-        <dt class="bg-gradient-to-r from-[#22802d] to-[#228d0e] bg-clip-text text-transparent font-inter text-[44px] font-extrabold leading-none text-[#22802d]">
-          100%
-        </dt>
-
-        <dd class="font-inter text-[13px] font-normal leading-[118%] text-[#5c6678]">
-          Гарантия <br>
-          на все работы
-        </dd>
-      </div>
-
-    </dl>
-
-    <!-- Кнопка -->
-    <a
-      href="#s"
-      class="flex h-[60px] min-w-[229px] shrink-0 items-center justify-center rounded-[12px] bg-gradient-to-r from-[#22802d] to-[#228d0e] px-[30px] font-inter text-[15px] font-semibold text-white transition-opacity duration-300 hover:opacity-90"
+  <div
+  class="flex min-w-0 flex-col items-center justify-between
+         mt-[25px] gap-[30px] rounded-[30px] bg-[#d9d9d9]/20
+         px-[20px] py-[20px] pc:flex-row pc:h-[92px]"
+>
+  <dl
+    class="flex w-full flex-col gap-[20px]
+           tablet:flex-row tablet:items-center tablet:justify-between
+           tablet:gap-[25px]
+           pc:w-auto pc:justify-start pc:gap-[45px]"
+  >
+    <!-- Реализованные проекты -->
+    <div
+      class="flex min-w-0 items-center gap-[15px]
+             tablet:gap-[20px] pc:gap-[25px]"
     >
-      Смотреть все проекты
-    </a>
+      <dt
+        class="bg-gradient-to-r from-[#22802d] to-[#228d0e]
+               bg-clip-text text-transparent font-inter
+               text-[28px] tablet:text-[36px] pc:text-[44px]
+               font-extrabold leading-none shrink-0"
+      >
+        500+
+      </dt>
 
-  </div>
+      <dd
+        class="font-inter text-[13px] font-normal
+               leading-[118%] text-[#5c6678]"
+      >
+        реализованных <br class="hidden tablet:inline">
+        проектов
+      </dd>
+    </div>
+
+    <!-- Разделитель -->
+    <div
+      class="hidden pc:block h-[30px] w-px shrink-0 bg-[#d9d9d9]"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Опыт -->
+    <div
+      class="flex min-w-0 items-center gap-[15px]
+             tablet:gap-[20px]"
+    >
+      <dt
+        class="bg-gradient-to-r from-[#22802d] to-[#228d0e]
+               bg-clip-text text-transparent font-inter
+               text-[28px] tablet:text-[36px] pc:text-[44px]
+               font-extrabold leading-none shrink-0"
+      >
+        8
+      </dt>
+
+      <dd
+        class="font-inter text-[13px] font-normal
+               leading-[118%] text-[#5c6678]"
+      >
+        Лет <br class="hidden tablet:inline">
+        опыта
+      </dd>
+    </div>
+
+    <!-- Разделитель -->
+    <div
+      class="hidden pc:block h-[30px] w-px shrink-0 bg-[#d9d9d9]"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Гарантия -->
+    <div
+      class="flex min-w-0 items-center gap-[15px]
+             tablet:gap-[20px]"
+    >
+      <dt
+        class="bg-gradient-to-r from-[#22802d] to-[#228d0e]
+               bg-clip-text text-transparent font-inter
+               text-[28px] tablet:text-[36px] pc:text-[44px]
+               font-extrabold leading-none shrink-0"
+      >
+        100%
+      </dt>
+
+      <dd
+        class="font-inter text-[13px] font-normal
+               leading-[118%] text-[#5c6678]"
+      >
+        Гарантия <br class="hidden tablet:inline">
+        на все работы
+      </dd>
+    </div>
+  </dl>
+
+  <!-- Кнопка -->
+  <a
+    href="#s"
+    class="flex h-[60px] mobile:w-[220px] pc:w-[240px] shrink-0 items-center justify-center
+           rounded-[12px] bg-gradient-to-r from-[#22802d] to-[#228d0e]
+           px-[20px] font-inter text-[15px] font-semibold text-white
+           text-center transition-opacity duration-300 hover:opacity-90
+           tablet:w-auto tablet:min-w-[229px] tablet:px-[30px]"
+  >
+    Смотреть все проекты
+  </a>
+</div>
 
 
 
@@ -2257,34 +2266,34 @@
 
         
       </section>
-      <section id="reviews" aria-labelledby="reviews-title" class="bg-white pt-[55px] pb-[60px]">
-        <div class="max-w-[1280px] w-[calp(100%-20px)] mt-[50px] mx-auto">
+      <section id="reviews" aria-labelledby="reviews-title" class="bg-white pt-[15px] mt-[40px] pb-[60px] scroll-mt-[110px]">
+        <div class="max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mobile:mt-[30px] tablet:mt-[50px] mx-auto">
           <div class="mb-[5px] bg-[rgba(34,128,45,0.11)] rounded-[8px] w-[217px] h-[33px] text-center leading-[33px]">
           <p class="font-inter font-semibold text-xs text-[#22802d] tracking-[0.14em]">ОТЗЫВЫ КЛИЕНТОВ</p>
         </div>
         <div>
-          <div class="flex justify-between items-center">
+          <div class="flex flex-col items-start gap-[20px] pc:flex-row pc:justify-between pc:items-center min-w-0">
             <div>
-              <h2 class="font-inter font-extrabold text-[44px] text-[#0a0e16]">Нам доверяют</h2>
-              <p class="font-inter font-normal text-[17px] text-[#5c6678] leading-[118%]">Более 500 реализованных заездов. Клиенты ценят качество,<br> соблюдение сроков и прозрачные цены.</p>
+              <h2 id="reviews-title" class="font-inter font-extrabold text-[28px] tablet:text-[36px] pc:text-[44px] text-[#0a0e16]">Нам доверяют</h2>
+              <p class="mt-[5px]  font-inter font-normal text-[17px] text-[#5c6678] leading-[118%]">Более 500 реализованных заездов. Клиенты ценят качество,<br class="hidden tablet:inline"> соблюдение сроков и прозрачные цены.</p>
             </div>
             <div>
-              <a href="#" class="flex h-[60px] min-w-[239px] shrink-0 items-center justify-center rounded-[12px] bg-gradient-to-r from-[#22802d] to-[#228d0e] px-[30px] font-inter text-[15px] font-semibold text-white transition-opacity duration-300 hover:opacity-90">Посмотреть все отзывы</a>
+              <a href="#" class="flex h-[60px] mobile:min-w-[220px] tablet:min-w-[239px] shrink-0 items-center justify-center rounded-[12px] bg-gradient-to-r from-[#22802d] to-[#228d0e] px-[30px] font-inter text-[15px] font-semibold text-white transition-opacity duration-300 hover:opacity-90">Посмотреть все отзывы</a>
             </div>
           </div>
         </div>
-        <div class="flex mt-[40px] gap-x-[15px]">
-          <article class=" flex flex-col overflow-hidden bg-[#f9f8f4] rounded-[22px]">
+        <div class="flex flex-wrap mt-[30px] gap-[20px] [&>article]:w-full tablet:[&>article]:w-[calc(50%_-_10px)] pc:[&>article]:w-[calc(25%_-_15px)]">
+          <article class="flex flex-col overflow-hidden bg-[#f9f8f4] rounded-[22px] min-w-0">
             <figure>
-              <img src="./images/reviews_img.png" loading="lazy" decoding="async" width="305" height="200">
+              <img src="./images/reviews_img.png" loading="lazy" decoding="async" width="305" height="200" class="block w-full h-auto object-cover aspect-[305/200]">
             </figure>
             <div class=" pl-[15px] pr-[20px] pb-[22px]">
               
-            <div class="mt-[20px] flex items-center gap-x-[5px]">
-              <img src="./images/reviews_time.png" loading="lazy" decoding="async" width="14" height="15"  aria-hidden="true">
+            <div class="mt-[20px] flex items-center gap-x-[5px] min-w-0">
+              <img src="./images/reviews_time.png" loading="lazy" decoding="async" width="14" height="15"  aria-hidden="true" class="shrink-0">
               <time datetime="2026-09-12" class="font-inter font-normal text-[13px] text-[#5c6678]">12 сентября 2026</time>
             </div>
-            <blockquote class="max-w-[269px]">
+            <blockquote class="max-w-full">
               <p class="mt-[15px] font-inter font-normal text-sm text-[#5c6678] leading-[171%]">
                 «Очень довольны результатом!
                 Сделали красивый и аккуратный заезд, все как договаривались.
@@ -2295,7 +2304,7 @@
             <footer>
               <p class="font-inter font-bold text-[16px] text-[#202020]">Алексей</p>
               <p class="font-inter font-normal text-sm text-[#5c6678]">Истра, Московская область</p>
-              <div class="mt-[5px] flex items-center gap-x-[5px]"   aria-label="Оценка: 5 из 5">
+              <div class="mt-[5px] flex items-center gap-x-[5px] min-w-0"   aria-label="Оценка: 5 из 5">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
@@ -2305,17 +2314,17 @@
             </footer>
             </div>
           </article>
-          <article class=" flex flex-col overflow-hidden bg-[#f9f8f4] rounded-[22px]">
+          <article class="flex flex-col overflow-hidden bg-[#f9f8f4] rounded-[22px] min-w-0">
             <figure>
-              <img src="./images/reviews_img.png" loading="lazy" decoding="async" width="305" height="200">
+              <img src="./images/reviews_img.png" loading="lazy" decoding="async" width="305" height="200" class="block w-full h-auto object-cover aspect-[305/200]">
             </figure>
             <div class=" pl-[15px] pr-[20px] pb-[22px]">
               
-            <div class="mt-[20px] flex items-center gap-x-[5px]">
-              <img src="./images/reviews_time.png" loading="lazy" decoding="async" width="14" height="15"  aria-hidden="true">
+            <div class="mt-[20px] flex items-center gap-x-[5px] min-w-0">
+              <img src="./images/reviews_time.png" loading="lazy" decoding="async" width="14" height="15"  aria-hidden="true" class="shrink-0">
               <time datetime="2026-09-12" class="font-inter font-normal text-[13px] text-[#5c6678]">12 сентября 2026</time>
             </div>
-            <blockquote class="max-w-[269px]">
+            <blockquote class="max-w-full">
               <p class="mt-[15px] font-inter font-normal text-sm text-[#5c6678] leading-[171%]">
                 «Очень довольны результатом!
                 Сделали красивый и аккуратный заезд, все как договаривались.
@@ -2326,7 +2335,7 @@
             <footer>
               <p class="font-inter font-bold text-[16px] text-[#202020]">Алексей</p>
               <p class="font-inter font-normal text-sm text-[#5c6678]">Истра, Московская область</p>
-              <div class="mt-[5px] flex items-center gap-x-[5px]"   aria-label="Оценка: 5 из 5">
+              <div class="mt-[5px] flex items-center gap-x-[5px] min-w-0"   aria-label="Оценка: 5 из 5">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
@@ -2336,17 +2345,17 @@
             </footer>
             </div>
           </article>
-          <article class=" flex flex-col overflow-hidden bg-[#f9f8f4] rounded-[22px]">
+          <article class="flex flex-col overflow-hidden bg-[#f9f8f4] rounded-[22px] min-w-0">
             <figure>
-              <img src="./images/reviews_img.png" loading="lazy" decoding="async" width="305" height="200">
+              <img src="./images/reviews_img.png" loading="lazy" decoding="async" width="305" height="200" class="block w-full h-auto object-cover aspect-[305/200]">
             </figure>
             <div class=" pl-[15px] pr-[20px] pb-[22px]">
               
-            <div class="mt-[20px] flex items-center gap-x-[5px]">
-              <img src="./images/reviews_time.png" loading="lazy" decoding="async" width="14" height="15"  aria-hidden="true">
+            <div class="mt-[20px] flex items-center gap-x-[5px] min-w-0">
+              <img src="./images/reviews_time.png" loading="lazy" decoding="async" width="14" height="15"  aria-hidden="true" class="shrink-0">
               <time datetime="2026-09-12" class="font-inter font-normal text-[13px] text-[#5c6678]">12 сентября 2026</time>
             </div>
-            <blockquote class="max-w-[269px]">
+            <blockquote class="max-w-full">
               <p class="mt-[15px] font-inter font-normal text-sm text-[#5c6678] leading-[171%]">
                 «Очень довольны результатом!
                 Сделали красивый и аккуратный заезд, все как договаривались.
@@ -2357,7 +2366,7 @@
             <footer>
               <p class="font-inter font-bold text-[16px] text-[#202020]">Алексей</p>
               <p class="font-inter font-normal text-sm text-[#5c6678]">Истра, Московская область</p>
-              <div class="mt-[5px] flex items-center gap-x-[5px]"   aria-label="Оценка: 5 из 5">
+              <div class="mt-[5px] flex items-center gap-x-[5px] min-w-0"   aria-label="Оценка: 5 из 5">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
@@ -2367,17 +2376,17 @@
             </footer>
             </div>
           </article>
-          <article class=" flex flex-col overflow-hidden bg-[#f9f8f4] rounded-[22px]">
+          <article class="flex flex-col overflow-hidden bg-[#f9f8f4] rounded-[22px] min-w-0">
             <figure>
-              <img src="./images/reviews_img.png" loading="lazy" decoding="async" width="305" height="200">
+              <img src="./images/reviews_img.png" loading="lazy" decoding="async" width="305" height="200" class="block w-full h-auto object-cover aspect-[305/200]">
             </figure>
             <div class=" pl-[15px] pr-[20px] pb-[22px]">
               
-            <div class="mt-[20px] flex items-center gap-x-[5px]">
-              <img src="./images/reviews_time.png" loading="lazy" decoding="async" width="14" height="15"  aria-hidden="true">
+            <div class="mt-[20px] flex items-center gap-x-[5px] min-w-0">
+              <img src="./images/reviews_time.png" loading="lazy" decoding="async" width="14" height="15"  aria-hidden="true" class="shrink-0">
               <time datetime="2026-09-12" class="font-inter font-normal text-[13px] text-[#5c6678]">12 сентября 2026</time>
             </div>
-            <blockquote class="max-w-[269px]">
+            <blockquote class="max-w-full">
               <p class="mt-[15px] font-inter font-normal text-sm text-[#5c6678] leading-[171%]">
                 «Очень довольны результатом!
                 Сделали красивый и аккуратный заезд, все как договаривались.
@@ -2388,7 +2397,7 @@
             <footer>
               <p class="font-inter font-bold text-[16px] text-[#202020]">Алексей</p>
               <p class="font-inter font-normal text-sm text-[#5c6678]">Истра, Московская область</p>
-              <div class="mt-[5px] flex items-center gap-x-[5px]"   aria-label="Оценка: 5 из 5">
+              <div class="mt-[5px] flex items-center gap-x-[5px] min-w-0"   aria-label="Оценка: 5 из 5">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18">
@@ -2402,36 +2411,36 @@
         </div>
         </div>
       </section>
-      <section  aria-labelledby="contact-title" class="relative h-[670px] overflow-hidden">
+      <section  id="contact" aria-labelledby="contact-title" class="relative pc:h-[670px] overflow-hidden scroll-mt-[110px]">
        
-       <div class="absolute top-0 left-0 right-0">
+       <div class="absolute inset-0" aria-hidden="true">
            <img src="./images/contact_image.png" loading="lazy" decoding="async" class="w-full  h-full object-cover object-center">
        </div>
-         <div class=" absolute top-0 left-0 right-0 w-full h-full z-0 bg-black/50" aria-hidden="true"></div>
-         <div class="relative flex justify-between z-20 max-w-[1280px] w-[calp(100%-20px)] mt-[50px] mx-auto">
+         <div class=" absolute top-0 left-0  right-0 w-full h-full z-0 bg-black/50" aria-hidden="true"></div>
+         <div class="relative tablet:mt-[50px]  flex flex-col pc:flex-row gap-[30px] z-20 max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mobile:mt-[30px] pc:mt-[50px] mx-auto min-w-0 [&>div]:w-full pc:[&>div]:w-[calc(50%_-_15px)]">
           <div>
-            <p class="font-inter font-bold text-[42px] text-white leading-[118%]">
+            <p class="font-inter font-bold text-[28px] tablet:text-[23px] mobile:text-[26px] tablet:text-[32px] pc:text-[36px] pc:text-[42px] text-white leading-[118%]">
             Получите точный 
           </p>
-          <h2 class=" bg-[linear-gradient(90deg,#fff_0%,#86e075_50%,#228d0e_100%)] bg-clip-text text-transparent font-inter font-black text-[37px] contact-title">расчёт На участок или<br>
+          <h2 id="contact-title" class="bg-[linear-gradient(90deg,#fff_0%,#86e075_50%,#228d0e_100%)] bg-clip-text text-transparent font-inter font-black  leading-[117%]   mobile:text-[32px] pc:text-[37px] contact-title">расчёт На участок или<br class="hidden tablet:inline">
             площадки под авто</h2>
-            <p class="mt-[30px] font-inter font-normal text-[16px] text-white">Оставьте заявку — специалист уточнит особенности участка и<br> предложит оптимальное решение.</p>
+            <p class="mt-[30px] font-inter font-normal text-[16px] text-white">Оставьте заявку — специалист уточнит особенности участка и<br class="hidden tablet:inline"> предложит оптимальное решение.</p>
             <form action="#" method="post" class="mt-[30px] contact-form">
-              <div class="grid grid-cols-2 gap-[14px]">
+              <div class="grid grid-cols-1 tablet:grid-cols-2 gap-[14px]">
                   <div >
-                  <input type="text" name="name" placeholder="Ваше имя" class="w-[285px] h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                  <input type="text" name="name" aria-label="Ваше имя" placeholder="Ваше имя" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
                 </div>
                 <div >
-                  <input type="text" name="name" placeholder="Ваша почта" class="w-[285px] h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                  <input type="email" name="email" aria-label="Ваша почта" placeholder="Ваша почта" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
                 </div>
                 <div >
-                  <input type="text" name="name" placeholder="Город" class="w-[285px] h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                  <input type="text" name="city" aria-label="Город" placeholder="Город" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
                 </div>
                 <div class="">
-                  <input type="text" name="name" placeholder="Район" class="w-[285px] h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                  <input type="text" name="district" aria-label="Район" placeholder="Район" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
                 </div>
-                <div class="col-span-2">
-                <textarea name="message"  class="w-[584px] h-[126px] border border-solid border-black/20 rounded-[12px] pt-[20px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]" placeholder="Комментарий"></textarea>
+                <div class="tablet:col-span-2">
+                <textarea aria-label="Комментарий" name="message"  class="w-full resize-y h-[126px] border border-solid border-black/20 rounded-[12px] pt-[20px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]" placeholder="Комментарий"></textarea>
                 </div>
               </div>
               
@@ -2441,39 +2450,38 @@
               </button>
             </form>
           </div>
-          <div class="bg-[rgba(0,0,0,0.33)] px-[55px] pt-[115px] pb-[0px] h-[505px] mt-[30px] rounded-[33px]">
-            <p class="text-center font-inter font-bold text-[25px] text-white leading-[118%]">Для заказа и конкультации<br> звоните</p>
+          <div class="bg-[rgba(0,0,0,0.33)] px-[20px] tablet:px-[35px] pc:px-[40px] py-[35px] pc:pt-[100px] pc:pb-[30px] pc:min-h-[505px] pc:mt-[30px] rounded-[33px]">
+            <p class="text-center font-inter font-bold text-[25px] text-white leading-[118%]">Для заказа и конкультации<br class="hidden tablet:inline"> звоните</p>
             <a href="tel:79250000000" class="flex items-center justify-center gap-x-[10px] mt-[32px] mb-[40px] hover:underline text-white">
               <img src="./images/contact_phone.svg" loading="lazy" width="" height="">
-              <span class="font-inter font-bold text-[36px] text-white">+7 925 000-00-00</span>
+              <span class="font-inter font-bold text-[23px] mobile:text-[26px] tablet:text-[32px] pc:text-[36px] text-white">+7 925 000-00-00</span>
             </a>
-            <div class="flex gap-x-[10px]">
+            <div class="flex flex-col tablet:flex-row gap-[10px] [&>div]:flex-1 [&_a]:justify-center">
               <div>
-                <a href="https://t.me/+79250000000" class="flex items-start gap-x-[15px] text-white hover:underline border border-solid border-white/40 rounded-[18px] pt-[17px] pb-[15px] px-[32px]">
-                  <img src="./images/contact_tg.svg" loading="lazy" width="32" height="26" class="mt-[5px]">
-                  <span class="font-inter font-medium text-lg text-white leading-[118%]">Написать <br>в Telegram</span>
+                <a href="https://t.me/+79250000000" class="flex mobile:items-center tablet:items-start gap-x-[15px] text-white hover:underline border border-solid border-white/40 rounded-[18px] pt-[17px] pb-[15px] px-[16px]">
+                  <img src="./images/contact_tg.svg" loading="lazy" width="32" height="26" class="tablet:mt-[5px] shrink-0">
+                  <span class="font-inter font-medium text-lg text-white leading-[118%]">Написать <br class="hidden tablet:inline">в Telegram</span>
                 </a>
               </div>
               <div>
-                <a href="https://wa.me/79250000000" class="flex items-start gap-x-[15px] text-white hover:underline border border-solid border-white/40 rounded-[18px] pt-[17px] pb-[15px] px-[32px]">
-                  <img src="./images/cotact-whatSap.svg" loading="lazy" width="32" height="32" class="mt-[5px]">
-                  <span class="font-inter font-medium text-lg text-white leading-[118%]">Написать <br>в Telegram</span>
+                <a href="https://wa.me/79250000000" class="flex mobile:items-center tablet:items-start gap-x-[15px] text-white hover:underline border border-solid border-white/40 rounded-[18px] pt-[17px] pb-[15px] px-[16px]">
+                  <img src="./images/cotact-whatSap.svg" loading="lazy" width="32" height="32" class="tablet:mt-[5px] shrink-0">
+                  <span class="font-inter font-medium text-lg text-white leading-[118%]">Написать <br class="hidden tablet:inline">в Telegram</span>
                 </a>
               </div>
             </div>
           </div>
           </div>
-        </div>
       </section>
     </main>
 
-    <footer class="bg-[#0a1017] pt-[70px] pb-[30px]">
-      <div class="flex  justify-between max-w-[1280px] w-[calc(100%-20px)] mx-auto">
+    <footer class="bg-[#0a1017] mobile:pt-[50px] tablet:pt-[70px] pb-[30px]">
+      <div class="flex flex-wrap gap-[30px] justify-between max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mx-auto min-w-0 [&>div]:w-full tablet:[&>div]:w-[calc(50%_-_15px)] pc:[&>div]:w-auto">
         <div>
           <a href="/" class=" font-inter font-bold text-lg text-white">
             ЗАЕЗДЫ НА УЧАСТОК
           </a>
-          <p class="mt-[20px] font-inter font-normal text-sm text-white leading-[171%]">Надёжные заезды для частных<br> домов и дачных участков.</p>
+          <p class="tablet:mt-[20px] mobile:mt-[10px] font-inter font-normal text-sm text-white leading-[171%]">Надёжные заезды для частных<br class="hidden tablet:inline"> домов и дачных участков.</p>
         </div>
         <div>
           <h2 class="mb-[20px] font-inter font-bold text-lg text-white">Услуги</h2>
@@ -2486,13 +2494,13 @@
             </li>
              <li class="mb-[10px]">
              <a href="#" class="flex items-center gap-x-[10px]">
-                <img src="./images/footer_mark.svg" alt="" idth="8" height="6"  loading="lazy">
+                <img src="./images/footer_mark.svg" alt="" width="8" height="6"  loading="lazy">
                 <span class="font-inter font-normal text-sm text-[#a2abbc]">Стандарт</span>
               </a>
             </li>
              <li class="mb-[10px]">
               <a href="#" class="flex items-center gap-x-[10px]">
-                <img src="./images/footer_mark.svg" alt="" idth="8" height="6"  loading="lazy">
+                <img src="./images/footer_mark.svg" alt="" width="8" height="6"  loading="lazy">
                 <span class="font-inter font-normal text-sm text-[#a2abbc]">Бетонный заезд</span>
               </a>
             </li>
@@ -2543,15 +2551,15 @@
           <h2 class="mb-[20px] font-inter font-bold text-lg text-white">Контакты</h2>
           <address class="not-italic">
             <ul>
-              <li class="mb-[25px] flex items-center gap-x-[10px]">
+              <li class="mb-[25px] flex items-center gap-x-[10px] min-w-0">
                 <img src="./images/footer_phone.svg" alt="Телефон" width="19" height="19" loading="lazy">
                 <a href="tel:79001234567" class="font-inter font-extrabold text-sm text-[#dbdbdb] hover:underline">+7 (900) 123-45-67</a>
               </li>
-              <li class="mb-[25px] flex items-center gap-x-[10px]">
+              <li class="mb-[25px] flex items-center gap-x-[10px] min-w-0">
                 <img src="./images/footer_location.svg" width="16" height="22" loading="lazy">
                 <span class="font-inter font-extrabold text-sm text-[#dbdbdb]">Москва и Московская область</span>
               </li>
-              <li class="flex items-center gap-x-[10px]">
+              <li class="flex items-center gap-x-[10px] min-w-0">
                 <img src="./images/footer_time.svg" width="20" height="20" loading="lazy">
                 <span class="font-inter font-extrabold text-sm text-[#dbdbdb]">
                     Ежедневно
