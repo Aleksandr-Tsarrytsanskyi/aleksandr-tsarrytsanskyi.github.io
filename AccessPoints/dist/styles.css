@@ -727,10 +727,6 @@ input {
   z-index: 50;
 }
 
-.m-0 {
-  margin: 0px;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -806,10 +802,6 @@ input {
 
 .mt-\[45px\] {
   margin-top: 45px;
-}
-
-.mt-\[50px\] {
-  margin-top: 50px;
 }
 
 .mt-\[55px\] {
@@ -924,10 +916,6 @@ input {
   min-height: 200px;
 }
 
-.min-h-\[60px\] {
-  min-height: 60px;
-}
-
 .w-\[104px\] {
   width: 104px;
 }
@@ -972,24 +960,8 @@ input {
   width: 1px;
 }
 
-.w-\[\] {
-  width: ;
-}
-
-.w-\[240px\] {
-  width: 240px;
-}
-
 .min-w-0 {
   min-width: 0px;
-}
-
-.min-w-\[229px\] {
-  min-width: 229px;
-}
-
-.min-w-\[239px\] {
-  min-width: 239px;
 }
 
 .min-w-\[320px\] {
@@ -1085,16 +1057,8 @@ input {
   gap: 24px;
 }
 
-.gap-\[25px\] {
-  gap: 25px;
-}
-
 .gap-\[30px\] {
   gap: 30px;
-}
-
-.gap-\[45px\] {
-  gap: 45px;
 }
 
 .gap-x-\[10px\] {
@@ -1339,10 +1303,6 @@ input {
   padding: 23px;
 }
 
-.p-\[20px\] {
-  padding: 20px;
-}
-
 .px-\[16px\] {
   padding-left: 16px;
   padding-right: 16px;
@@ -1386,11 +1346,6 @@ input {
 .py-\[4px\] {
   padding-top: 4px;
   padding-bottom: 4px;
-}
-
-.py-\[12px\] {
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .pb-\[15px\] {
@@ -1467,10 +1422,6 @@ input {
 
 .pt-\[40px\] {
   padding-top: 40px;
-}
-
-.pt-\[70px\] {
-  padding-top: 70px;
 }
 
 .pt-\[7px\] {
@@ -1730,6 +1681,15 @@ input {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .backdrop-blur-md {
   --tw-backdrop-blur: blur(12px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -1794,6 +1754,46 @@ input {
 
 .contact-title {
   line-height: 35px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+}
+
+/* Invalid */
+
+.form-group .is-invalid {
+  border-color: #dc2626;
+}
+
+.form-group .is-invalid:focus {
+  box-shadow: 0 0 0 3px rgb(220 38 38 / 10%);
+}
+
+/* Valid */
+
+.form-group .is-valid {
+  border-color: #16a34a;
+}
+
+/* Error message */
+
+.error {
+  display: block;
+  /* margin-top: 5px; */
+  color: #dc2626;
+  font-size: 14px;
+  font-family: 'Inter';
+}
+
+.error:empty {
+  display: none;
+}
+
+.form-response {
+  color: #dc2626;
+  font-family: 'Inter';
 }
 
 .before\:absolute::before {
@@ -1922,24 +1922,20 @@ input {
     width: 150px;
   }
 
-  .mobile\:w-\[30px\] {
-    width: 30px;
-  }
-
-  .mobile\:w-\[200px\] {
-    width: 200px;
-  }
-
   .mobile\:w-\[220px\] {
     width: 220px;
   }
 
-  .mobile\:min-w-full {
-    min-width: 100%;
+  .mobile\:w-\[30px\] {
+    width: 30px;
   }
 
   .mobile\:min-w-\[220px\] {
     min-width: 220px;
+  }
+
+  .mobile\:min-w-full {
+    min-width: 100%;
   }
 
   .mobile\:flex-wrap {
@@ -1973,10 +1969,6 @@ input {
     padding-right: 10px;
   }
 
-  .mobile\:pt-\[\] {
-    padding-top: ;
-  }
-
   .mobile\:pt-\[50px\] {
     padding-top: 50px;
   }
@@ -2001,12 +1993,12 @@ input {
     font-size: 28px;
   }
 
-  .mobile\:text-\[38px\] {
-    font-size: 38px;
-  }
-
   .mobile\:text-\[32px\] {
     font-size: 32px;
+  }
+
+  .mobile\:text-\[38px\] {
+    font-size: 38px;
   }
 
   .mobile\:font-bold {
@@ -2040,20 +2032,20 @@ input {
     margin-top: 0px;
   }
 
-  .tablet\:mt-\[50px\] {
-    margin-top: 50px;
+  .tablet\:mt-\[20px\] {
+    margin-top: 20px;
   }
 
-  .tablet\:mt-\[60px\] {
-    margin-top: 60px;
+  .tablet\:mt-\[50px\] {
+    margin-top: 50px;
   }
 
   .tablet\:mt-\[5px\] {
     margin-top: 5px;
   }
 
-  .tablet\:mt-\[20px\] {
-    margin-top: 20px;
+  .tablet\:mt-\[60px\] {
+    margin-top: 60px;
   }
 
   .tablet\:inline {
@@ -2112,10 +2104,6 @@ input {
     min-width: 239px;
   }
 
-  .tablet\:flex-1 {
-    flex: 1 1 0%;
-  }
-
   .tablet\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2157,14 +2145,14 @@ input {
     padding: 20px;
   }
 
-  .tablet\:px-\[35px\] {
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-
   .tablet\:px-\[30px\] {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .tablet\:px-\[35px\] {
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   .tablet\:pt-\[140px\] {
@@ -2344,10 +2332,6 @@ input {
     flex: 1 1 0%;
   }
 
-  .pc\:flex-none {
-    flex: none;
-  }
-
   .pc\:flex-row {
     flex-direction: row;
   }
@@ -2370,10 +2354,6 @@ input {
 
   .pc\:gap-\[25px\] {
     gap: 25px;
-  }
-
-  .pc\:gap-\[30px\] {
-    gap: 30px;
   }
 
   .pc\:gap-\[45px\] {
@@ -2498,48 +2478,6 @@ input {
     --tw-text-opacity: 1;
     color: rgb(92 102 120 / var(--tw-text-opacity, 1));
   }
-
-  .pc\:before\:absolute::before {
-    content: var(--tw-content);
-    position: absolute;
-  }
-
-  .pc\:before\:left-\[-23px\]::before {
-    content: var(--tw-content);
-    left: -23px;
-  }
-
-  .pc\:before\:top-1\/2::before {
-    content: var(--tw-content);
-    top: 50%;
-  }
-
-  .pc\:before\:h-\[30px\]::before {
-    content: var(--tw-content);
-    height: 30px;
-  }
-
-  .pc\:before\:w-px::before {
-    content: var(--tw-content);
-    width: 1px;
-  }
-
-  .pc\:before\:-translate-y-1\/2::before {
-    content: var(--tw-content);
-    --tw-translate-y: -50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .pc\:before\:bg-\[\#d9d9d9\]::before {
-    content: var(--tw-content);
-    --tw-bg-opacity: 1;
-    background-color: rgb(217 217 217 / var(--tw-bg-opacity, 1));
-  }
-
-  .pc\:before\:content-\[\'\'\]::before {
-    --tw-content: '';
-    content: var(--tw-content);
-  }
 }
 
 .\[\&\>article\]\:w-full>article {
@@ -2621,6 +2559,9 @@ input {
 .\[\&_a\]\:justify-center a {
   justify-content: center;
 }
+
+
+
 
 
 
