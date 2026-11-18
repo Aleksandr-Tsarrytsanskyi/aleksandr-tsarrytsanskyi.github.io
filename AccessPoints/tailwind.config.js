@@ -6,6 +6,14 @@ module.exports = {
   ],
 
   theme: {
+
+     screens: {
+      mobile: "375px",   // Mobile landscape
+      tablet: "768px",   // Tablet // Laptop
+      pc: "1280px",  // Desktop
+   
+    },
+
     extend: {
      colors: {
        50: "#effaf2",
