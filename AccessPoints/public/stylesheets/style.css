@@ -80,3 +80,57 @@
 
 
 
+
+
+
+
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+
+/* Invalid */
+
+.form-group .is-invalid {
+    border-color: #dc2626;
+}
+
+.form-group .is-invalid:focus {
+    box-shadow: 0 0 0 3px rgb(220 38 38 / 10%);
+}
+
+/* Valid */
+
+.form-group .is-valid {
+    border-color: #16a34a;
+}
+
+/* Error message */
+
+.error {
+    display: block;
+    /* margin-top: 5px; */
+    color: #dc2626;
+    font-size: 14px;
+    font-family: 'Inter';
+}
+
+.error:empty {
+    display: none;
+}
+
+.form-response {
+  color: #dc2626;
+  font-family: 'Inter';
+}
+
+
+
+
+
+
+
+
+

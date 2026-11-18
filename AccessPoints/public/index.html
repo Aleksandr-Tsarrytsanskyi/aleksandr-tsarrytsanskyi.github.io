@@ -2425,25 +2425,34 @@
           <h2 id="contact-title" class="bg-[linear-gradient(90deg,#fff_0%,#86e075_50%,#228d0e_100%)] bg-clip-text text-transparent font-inter font-black  leading-[117%]   mobile:text-[32px] pc:text-[37px] contact-title">расчёт На участок или<br class="hidden tablet:inline">
             площадки под авто</h2>
             <p class="mt-[30px] font-inter font-normal text-[16px] text-white">Оставьте заявку — специалист уточнит особенности участка и<br class="hidden tablet:inline"> предложит оптимальное решение.</p>
-            <form action="#" method="post" class="mt-[30px] contact-form">
+            <form action="#" method="post" class="mt-[30px] form "  id="contactForm" novalidate>
               <div class="grid grid-cols-1 tablet:grid-cols-2 gap-[14px]">
-                  <div >
-                  <input type="text" name="name" aria-label="Ваше имя" placeholder="Ваше имя" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
-                </div>
-                <div >
-                  <input type="email" name="email" aria-label="Ваша почта" placeholder="Ваша почта" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
-                </div>
-                <div >
-                  <input type="text" name="city" aria-label="Город" placeholder="Город" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
-                </div>
-                <div class="">
-                  <input type="text" name="district" aria-label="Район" placeholder="Район" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
-                </div>
-                <div class="tablet:col-span-2">
-                <textarea aria-label="Комментарий" name="message"  class="w-full resize-y h-[126px] border border-solid border-black/20 rounded-[12px] pt-[20px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]" placeholder="Комментарий"></textarea>
-                </div>
+                  <div class="form-group">
+                  <input type="text" id="name" name="name" 
+                    data-rules="required|min:2|max:50" aria-label="Ваше имя" placeholder="Ваше имя" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                   <span class="error"></span>  
               </div>
-              
+                <div class="form-group">
+                  <input type="email" name="email" id="email"
+            data-rules="required|email" aria-label="Ваша почта" placeholder="Ваша почта" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+               <span class="error"></span>  
+              </div>
+                <div class="form-group">
+                  <input type="text"   name="message" id="message"
+            data-rules="required|min:3|max:500" aria-label="Город" placeholder="Город" class=" w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                   <span class="error"></span>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="district" aria-label="Район" placeholder="Район" class="w-full min-w-0 h-[55px] bg-[#f9f8f4] border border-solid border-black/20 rounded-[12px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]">
+                   <span class="error"></span>
+                </div>
+                <div class="tablet:col-span-2 form-group">
+                <textarea aria-label="Комментарий" 
+             class="w-full resize-y h-[126px] border border-solid border-black/20 rounded-[12px] pt-[20px] pl-[20px] font-inter font-normal text-[13px] text-[#5c6678]" placeholder="Комментарий"></textarea>
+               <span class="error"></span>  
+              </div>
+              </div>
+               <div class="form-response" aria-live="polite"></div>
               <button type="submit" name="send" class="mt-[18px] flex items-center justify-center gap-x-[15px] bg-[#22802d] w-[172px] h-[54px] rounded-[14px] transition-all duration-300 ease-in hover:bg-[#22802d]/70">
                 <img src="./images/contact_canculate.svg" loading="lazy" width="20" height="20">
                 <span class="font-inter font-semibold text-[15px] text-white">Рассчитать</span>
