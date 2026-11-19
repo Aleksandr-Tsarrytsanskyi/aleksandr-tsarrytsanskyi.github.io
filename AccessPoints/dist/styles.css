@@ -599,6 +599,10 @@ input {
   border-radius: 12px;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .fixed {
   position: fixed;
 }
@@ -709,6 +713,34 @@ input {
 
 .top-\[4px\] {
   top: 4px;
+}
+
+.bottom-1\/2 {
+  bottom: 50%;
+}
+
+.right-full {
+  right: 100%;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.top-\[\] {
+  top: ;
+}
+
+.top-\[20px\] {
+  top: 20px;
+}
+
+.bottom-\[40px\] {
+  bottom: 40px;
+}
+
+.bottom-\[70px\] {
+  bottom: 70px;
 }
 
 .-z-0 {
@@ -928,6 +960,26 @@ input {
   height: 46px;
 }
 
+.h-\[35px\] {
+  height: 35px;
+}
+
+.h-\[42px\] {
+  height: 42px;
+}
+
+.h-\[65px\] {
+  height: 65px;
+}
+
+.h-\[90px\] {
+  height: 90px;
+}
+
+.h-\[52px\] {
+  height: 52px;
+}
+
 .max-h-\[65vh\] {
   max-height: 65vh;
 }
@@ -1010,6 +1062,50 @@ input {
 
 .w-\[46px\] {
   width: 46px;
+}
+
+.w-\[130px\] {
+  width: 130px;
+}
+
+.w-\[140px\] {
+  width: 140px;
+}
+
+.w-\[175px\] {
+  width: 175px;
+}
+
+.w-\[185px\] {
+  width: 185px;
+}
+
+.w-\[190px\] {
+  width: 190px;
+}
+
+.w-\[95px\] {
+  width: 95px;
+}
+
+.w-\[145px\] {
+  width: 145px;
+}
+
+.w-\[110px\] {
+  width: 110px;
+}
+
+.w-\[155px\] {
+  width: 155px;
+}
+
+.w-\[135px\] {
+  width: 135px;
+}
+
+.w-\[115px\] {
+  width: 115px;
 }
 
 .min-w-0 {
