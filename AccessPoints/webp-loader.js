@@ -5,8 +5,8 @@ module.exports = function webpLoader(source) {
 
   sharp(source)
     .autoOrient()
-    // .webp({ quality: 82 })
-    .webp({ lossless: true })
+    .webp({ quality: 82 })
+    // .webp({ lossless: true })
     .toBuffer()
     .then(
       (buffer) => done(null, buffer),
