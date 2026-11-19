@@ -30,118 +30,218 @@
 </script>
   </head>
   <body class="min-w-[320px] bg-[#f9f8f4]">
-    <header
-      class="fixed top-[27px] ] max-w-[1280px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mx-auto left-0 right-0 z-50 rounded-[22px] bg-white h-[76px]"
-    >
-      <div class="mt-[10px] w-[calc(100%_-_32px)] tablet:w-[calc(100%_-_48px)] pc:w-[calc(100%_-_40px)] mx-auto">
-        <div class="flex items-center justify-between min-w-0">
-          <div>
-            <a href="" class="flex items-center gap-x-[12px]">
-              <img
-                src="./images/logo.svg"
-                alt="Логотип"
-                width="43"
-                height="43" class="tablet:w-[43px] tablet:h-[43px] mobile:w-[30px] mobile:h-[30px]"
-              />
-              <span class="font-inter font-black tablet:text-[15px] mobile:text-[14px] pc:text-lg leading-[111%]">
-                ЗАЕЗДЫ<br />
-                НА УЧАСТОК
-              </span>
-            </a>
-          </div>
-          <div>
-            <nav aria-label="Основная навигация" class="hidden pc:block">
-              <ul class="menu flex items-center gap-x-[35px] hidden pc:flex">
-                <li>
-                  <a
-                    href="#services"
-                    class="font-inter font-normal text-[#707784] text-[13px] hover:text-[#0a0e16] transition-all ease-in duration-300"
-                    >Услуги</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#works"
-                    class="font-inter font-normal text-[#707784] text-[13px] hover:text-[#0a0e16] transition-all ease-in duration-300"
-                    >Наши работы</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#technologies"
-                    class="font-inter font-normal text-[#707784] text-[13px] hover:text-[#0a0e16] transition-all ease-in duration-300"
-                    >Технология</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#company"
-                    class="font-inter font-normal text-[#707784] text-[13px] hover:text-[#0a0e16] transition-all ease-in duration-300"
-                    >О компании</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#reviews"
-                    class="font-inter font-normal text-[#707784] text-[13px] hover:text-[#0a0e16] transition-all ease-in duration-300"
-                    >Отзывы</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div>
-            <div class="mobile:hidden pc:flex items-center gap-x-[16px]">
-              <div class="">
-                <a
-                  href="tel:+79001234567"
-                  class="flex items-center gap-x-[10px] hover:underline"
-                >
-                  <img
-                    src="./images/header_phone.svg"
-                    alt=""
-                    width="29"
-                    height="29"
-                  />
-                  <span class="font-inter font-black text-[14px] mobile:text-[15px] pc:text-lg text-[#0a0e16]">
-                    +7 (900) 123-45-67
-                  </span>
-                </a>
-              </div>
-              <div>
-                <a
-                  href="#contact"
-                  class="relative flex items-center justify-center gap-x-[15px] w-[150px] pc:w-[172px] h-[54px] rounded-[14px] overflow-hidden bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(90deg,#20a12f_0%,#1a8306_100%)] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300 before:ease-in"
-                >
-                  <img
-                    src="./images/header_icon_canculate.svg"
-                    alt="Рассчитать"
-                    class="relative z-10"
-                  />
+   <header
+  class="fixed left-0 right-0 top-[15px] z-50 mx-auto
+         w-[calc(100%_-_32px)] max-w-[1280px]
+         rounded-[22px] bg-white
+         pc:top-[27px] pc:h-[76px] pc:w-[calc(100%_-_20px)]"
+>
+  <div class="relative px-[14px] py-[14px] tablet:px-[20px] pc:p-[10px]">
 
-                  <span class="relative z-10 text-white"> Рассчитать </span>
-                </a>
-              </div>
-            </div>
-            <details class="relative pc:hidden mt-[8px] tablet:w-[300px] mobile:w-[150px] mb-[10px]">
-          <summary class="cursor-pointer rounded-[12px] bg-[#f9f8f4] px-[16px] py-[10px] font-inter font-semibold text-[#22802d]">Меню</summary>
-          <nav aria-label="Мобильная навигация" class="absolute top-full left-0right-0 tablet:w-[300px] mobile:w-[150px] mt-[8px] max-h-[65vh] overflow-y-auto rounded-[16px] bg-white mobile:p-[10px] tablet:p-[20px] shadow-xl">
-            <ul class="flex flex-col gap-[16px] font-inter text-[#0a0e16]">
-        <li><a class="block py-[4px]" href="#services">Услуги</a></li>
-        <li><a class="block py-[4px]" href="#works">Наши работы</a></li>
-        <li><a class="block py-[4px]" href="#technologies">Технология</a></li>
-        <li><a class="block py-[4px]" href="#company">О компании</a></li>
-        <li><a class="block py-[4px]" href="#reviews">Отзывы</a></li>
-        <li><a class="block py-[4px]" href="#contact">Рассчитать стоимость</a></li>
-        <li><a href="tel:+79001234567">+7 (900) 123-45-67</a></li></ul>
-          </nav>
-        </details>
-          </div>
-        </div>
-      
-        
-</div>
-    </header>
+    <div class="flex min-w-0 items-center justify-between gap-[12px]">
+
+      <!-- Логотип -->
+      <a
+        href="/"
+        aria-label="Заезды на участок — главная"
+        class="flex min-w-0 items-center gap-[9px] pc:gap-[12px]"
+      >
+        <img
+          src="./images/logo.svg"
+          alt=""
+          width="43"
+          height="43"
+          class="h-[36px] w-[36px] shrink-0
+                 mobile:h-[40px] mobile:w-[40px]
+                 pc:h-[43px] pc:w-[43px]"
+        />
+
+        <span
+          class="font-inter text-[13px] font-black leading-[111%]
+                 text-[#0a0e16] mobile:text-[14px]
+                 tablet:text-[16px] pc:text-lg"
+        >
+          ЗАЕЗДЫ<br />
+          НА УЧАСТОК
+        </span>
+      </a>
+
+      <!-- Навигация на ПК -->
+      <nav aria-label="Основная навигация" class="hidden pc:block">
+        <ul class="menu flex items-center gap-x-[35px]">
+          <li>
+            <a href="#services" class="font-inter text-[13px] text-[#707784] transition-colors hover:text-[#0a0e16]">
+              Услуги
+            </a>
+          </li>
+          <li>
+            <a href="#works" class="font-inter text-[13px] text-[#707784] transition-colors hover:text-[#0a0e16]">
+              Наши работы
+            </a>
+          </li>
+          <li>
+            <a href="#technologies" class="font-inter text-[13px] text-[#707784] transition-colors hover:text-[#0a0e16]">
+              Технология
+            </a>
+          </li>
+          <li>
+            <a href="#company" class="font-inter text-[13px] text-[#707784] transition-colors hover:text-[#0a0e16]">
+              О компании
+            </a>
+          </li>
+          <li>
+            <a href="#reviews" class="font-inter text-[13px] text-[#707784] transition-colors hover:text-[#0a0e16]">
+              Отзывы
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Телефон и расчёт на ПК -->
+      <div class="hidden items-center gap-x-[21px] pc:flex">
+        <a
+          href="tel:+79001234567"
+          class="flex items-center gap-x-[10px] hover:underline"
+        >
+          <img
+            src="./images/header_phone.svg"
+            alt=""
+            width="29"
+            height="29"
+          />
+          <span class="font-inter text-lg font-black text-[#0a0e16]">
+            +7 (900) 123-45-67
+          </span>
+        </a>
+
+        <a
+          href="#contact"
+          class="relative flex h-[54px] w-[172px] items-center
+                 justify-center gap-x-[15px] overflow-hidden rounded-[14px]
+                 bg-[linear-gradient(90deg,#22802d_0%,#228d0e_100%)]
+                 before:absolute before:inset-0
+                 before:bg-[linear-gradient(90deg,#20a12f_0%,#1a8306_100%)]
+                 before:opacity-0 before:transition-opacity
+                 before:duration-300 before:content-['']
+                 hover:before:opacity-100"
+        >
+          <img
+            src="./images/header_icon_canculate.svg"
+            alt=""
+            class="relative z-10"
+          />
+          <span class="relative z-10 text-white">Рассчитать</span>
+        </a>
+      </div>
+
+      <!-- Кнопки на мобильных и планшетах -->
+      <div class="flex shrink-0 items-center gap-[10px] mobile:gap-[14px] pc:hidden">
+
+        <a
+          href="tel:+79001234567"
+          aria-label="Позвонить: +7 (900) 123-45-67"
+          class="flex h-[34px] w-[34px] shrink-0 items-center
+                 justify-center rounded-full bg-[#22802d]
+                 transition-colors hover:bg-[#1a6b24]
+                 focus-visible:outline focus-visible:outline-2
+                 focus-visible:outline-offset-4 focus-visible:outline-[#22802d]"
+        >
+          <svg
+            width="21"
+            height="21"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="text-white"
+            aria-hidden="true"
+          >
+            <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z" />
+          </svg>
+        </a>
+
+        <button
+          type="button"
+          id="burger-button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="group flex h-[46px] w-[46px] shrink-0
+                 items-center justify-center rounded-[15px]
+                 bg-[#f3f4ed] transition-colors hover:bg-[#e8ebdf]
+                 focus-visible:outline focus-visible:outline-2
+                 focus-visible:outline-offset-4 focus-visible:outline-[#22802d]"
+        >
+          <span class="relative block h-[20px] w-[25px]" aria-hidden="true">
+            <span
+              class="absolute left-0 top-[4px] h-[2px] w-full
+                     bg-[#0a1017] transition-transform duration-200
+                     group-aria-expanded:translate-y-[5px]
+                     group-aria-expanded:rotate-45
+                     motion-reduce:transition-none"
+            ></span>
+            <span
+              class="absolute bottom-[4px] left-0 h-[2px] w-full
+                     bg-[#0a1017] transition-transform duration-200
+                     group-aria-expanded:-translate-y-[5px]
+                     group-aria-expanded:-rotate-45
+                     motion-reduce:transition-none"
+            ></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Выпадающее мобильное меню -->
+    <nav
+      id="mobile-menu"
+      aria-label="Мобильная навигация"
+      hidden
+      class="absolute left-0 right-0 top-full mt-[10px]
+             max-h-[calc(100dvh_-_120px)] overflow-y-auto
+             overscroll-contain rounded-[22px] bg-white
+             p-[20px] shadow-xl pc:hidden"
+    >
+      <ul class="flex flex-col gap-[4px]">
+        <li>
+          <a href="#services" class="block rounded-[10px] px-[12px] py-[13px] font-inter text-[16px] text-[#0a0e16] hover:bg-[#f3f4ed]">
+            Услуги
+          </a>
+        </li>
+        <li>
+          <a href="#works" class="block rounded-[10px] px-[12px] py-[13px] font-inter text-[16px] text-[#0a0e16] hover:bg-[#f3f4ed]">
+            Наши работы
+          </a>
+        </li>
+        <li>
+          <a href="#technologies" class="block rounded-[10px] px-[12px] py-[13px] font-inter text-[16px] text-[#0a0e16] hover:bg-[#f3f4ed]">
+            Технология
+          </a>
+        </li>
+        <li>
+          <a href="#company" class="block rounded-[10px] px-[12px] py-[13px] font-inter text-[16px] text-[#0a0e16] hover:bg-[#f3f4ed]">
+            О компании
+          </a>
+        </li>
+        <li>
+          <a href="#reviews" class="block rounded-[10px] px-[12px] py-[13px] font-inter text-[16px] text-[#0a0e16] hover:bg-[#f3f4ed]">
+            Отзывы
+          </a>
+        </li>
+      </ul>
+
+      <a
+        href="#contact"
+        class="mt-[14px] flex min-h-[50px] items-center
+               justify-center rounded-[14px] bg-[#22802d]
+               px-[16px] py-[12px] text-center font-inter
+               text-[15px] font-semibold text-white
+               transition-colors hover:bg-[#1a6b24]"
+      >
+        Рассчитать стоимость
+      </a>
+    </nav>
+
+  </div>
+</header>
 
     <main>
       <section class="relative scroll-mt-[110px]" aria-labelledby="hero-title">

@@ -2,6 +2,80 @@ import "../stylesheets/style.css";
 
 
 
+function initBurgerMenu() {
+  const button = document.getElementById("burger-button");
+  const menu = document.getElementById("mobile-menu");
+
+  if (!button || !menu) return;
+
+  const desktop = window.matchMedia("(min-width: 1280px)");
+
+  function setOpen(open, restoreFocus = false) {
+    button.setAttribute("aria-expanded", String(open));
+    button.setAttribute(
+      "aria-label",
+      open ? "Закрыть меню" : "Открыть меню"
+    );
+
+    menu.hidden = !open;
+
+    if (!open && restoreFocus) {
+      button.focus();
+    }
+  }
+
+  button.addEventListener("click", () => {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    setOpen(!isOpen);
+  });
+
+  menu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      setOpen(false);
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      !menu.hidden &&
+      !menu.contains(event.target) &&
+      !button.contains(event.target)
+    ) {
+      setOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !menu.hidden) {
+      setOpen(false, true);
+    }
+  });
+
+  // Закрываем меню, когда фокус с клавиатуры выходит за его пределы.
+  document.addEventListener("focusin", (event) => {
+    if (
+      !menu.hidden &&
+      !menu.contains(event.target) &&
+      !button.contains(event.target)
+    ) {
+      setOpen(false);
+    }
+  });
+
+  desktop.addEventListener("change", (event) => {
+    if (event.matches) {
+      setOpen(false);
+    }
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initBurgerMenu, { once: true });
+} else {
+  initBurgerMenu();
+}
+
+
 'use strict';
 
 const FormValidator = (() => {
