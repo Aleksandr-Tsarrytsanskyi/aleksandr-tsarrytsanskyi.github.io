@@ -1,0 +1,23 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Заезды на участок",
+    "identifier": "pesok-sochi.ru",
+    "documentationUrl": "https://pesok-sochi.ru/",
+    "logoUrl": "https://pesok-sochi.ru/images/logo.svg"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:pesok-sochi.ru:website-information",
+      "displayName": "Информация о сайте «Заезды на участок»",
+      "type": "text/plain",
+      "url": "https://pesok-sochi.ru/llms.txt",
+      "description": "Описание услуг по строительству заездов на участки и площадок для автомобилей в Москве и Московской области, ссылки на разделы сайта.",
+      "tags": [
+        "website-information",
+        "ru",
+        "driveways"
+      ]
+    }
+  ]
+}
