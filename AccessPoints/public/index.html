@@ -2391,7 +2391,7 @@
 
 </ul>
 
-  <div
+ <div
   class="flex min-w-0 flex-col items-center justify-between
          mt-[25px] gap-[30px] rounded-[30px] bg-[#d9d9d9]/20
          px-[20px] py-[20px] pc:flex-row pc:h-[92px]"
@@ -2404,8 +2404,14 @@
   >
     <!-- Реализованные проекты -->
     <div
-      class="flex min-w-0 items-center gap-[15px]
-             tablet:gap-[20px] pc:gap-[25px]"
+      class="relative flex min-w-0 items-center gap-[15px]
+             tablet:gap-[20px] pc:gap-[25px]
+             pc:mr-[46px]
+             pc:after:content-[''] pc:after:absolute
+             pc:after:top-1/2 pc:after:-translate-y-1/2
+             pc:after:right-[-46px]
+             pc:after:h-[30px] pc:after:w-px
+             pc:after:bg-[#d9d9d9]"
     >
       <dt
         class="bg-gradient-to-r from-[#22802d] to-[#228d0e]
@@ -2420,21 +2426,21 @@
         class="font-inter text-[13px] font-normal
                leading-[118%] text-[#5c6678]"
       >
-        реализованных <br class="hidden tablet:inline">
+        реализованных <br class="hidden tablet:inline" />
         проектов
       </dd>
     </div>
 
-    <!-- Разделитель -->
-    <div
-      class="hidden pc:block h-[30px] w-px shrink-0 bg-[#d9d9d9]"
-      aria-hidden="true"
-    ></div>
-
     <!-- Опыт -->
     <div
-      class="flex min-w-0 items-center gap-[15px]
-             tablet:gap-[20px]"
+      class="relative flex min-w-0 items-center gap-[15px]
+             tablet:gap-[20px]
+             pc:mr-[46px]
+             pc:after:content-[''] pc:after:absolute
+             pc:after:top-1/2 pc:after:-translate-y-1/2
+             pc:after:right-[-46px]
+             pc:after:h-[30px] pc:after:w-px
+             pc:after:bg-[#d9d9d9]"
     >
       <dt
         class="bg-gradient-to-r from-[#22802d] to-[#228d0e]
@@ -2449,16 +2455,10 @@
         class="font-inter text-[13px] font-normal
                leading-[118%] text-[#5c6678]"
       >
-        Лет <br class="hidden tablet:inline">
+        Лет <br class="hidden tablet:inline" />
         опыта
       </dd>
     </div>
-
-    <!-- Разделитель -->
-    <div
-      class="hidden pc:block h-[30px] w-px shrink-0 bg-[#d9d9d9]"
-      aria-hidden="true"
-    ></div>
 
     <!-- Гарантия -->
     <div
@@ -2478,7 +2478,7 @@
         class="font-inter text-[13px] font-normal
                leading-[118%] text-[#5c6678]"
       >
-        Гарантия <br class="hidden tablet:inline">
+        Гарантия <br class="hidden tablet:inline" />
         на все работы
       </dd>
     </div>
@@ -2486,8 +2486,9 @@
 
   <!-- Кнопка -->
   <a
-    href="#s"
-    class="flex h-[60px] mobile:w-[220px] pc:w-[240px] shrink-0 items-center justify-center
+    href="#works"
+    class="flex h-[60px]  mobile:w-[220px] pc:w-[240px]
+           shrink-0 items-center justify-center
            rounded-[12px] bg-gradient-to-r from-[#22802d] to-[#228d0e]
            px-[20px] font-inter text-[15px] font-semibold text-white
            text-center transition-opacity duration-300 hover:opacity-90
@@ -2539,7 +2540,7 @@
             </blockquote>
             <div class="mt-[25px] mb-[20px] h-px bg-[#dededb]" aria-hidden="true"></div>
             <footer>
-              <p class="font-inter font-bold text-[16px] text-[#202020]" id="review-author-1">Алексей</p>
+              <h3 class="font-inter font-bold text-[16px] text-[#202020]" id="review-author-1">Алексей</h3>
               <p class="font-inter font-normal text-sm text-[#5c6678]">Истра, Московская область</p>
               <div class="mt-[5px] flex items-center gap-x-[5px] min-w-0"   aria-label="Оценка: 5 из 5" role="img">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18" alt="" aria-hidden="true">
@@ -2570,7 +2571,7 @@
             </blockquote>
             <div class="mt-[25px] mb-[20px] h-px bg-[#dededb]" aria-hidden="true"></div>
             <footer>
-              <p class="font-inter font-bold text-[16px] text-[#202020]" id="review-author-2">Алексей</p>
+              <h3 class="font-inter font-bold text-[16px] text-[#202020]" id="review-author-2">Алексей</h3>
               <p class="font-inter font-normal text-sm text-[#5c6678]">Истра, Московская область</p>
               <div class="mt-[5px] flex items-center gap-x-[5px] min-w-0"   aria-label="Оценка: 5 из 5" role="img">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18" alt="" aria-hidden="true">
@@ -2601,7 +2602,7 @@
             </blockquote>
             <div class="mt-[25px] mb-[20px] h-px bg-[#dededb]" aria-hidden="true"></div>
             <footer>
-              <p class="font-inter font-bold text-[16px] text-[#202020]" id="review-author-3">Алексей</p>
+              <h3 class="font-inter font-bold text-[16px] text-[#202020]" id="review-author-3">Алексей</h3>
               <p class="font-inter font-normal text-sm text-[#5c6678]">Истра, Московская область</p>
               <div class="mt-[5px] flex items-center gap-x-[5px] min-w-0"   aria-label="Оценка: 5 из 5" role="img">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18" alt="" aria-hidden="true">
@@ -2632,7 +2633,7 @@
             </blockquote>
             <div class="mt-[25px] mb-[20px] h-px bg-[#dededb]" aria-hidden="true"></div>
             <footer>
-              <p class="font-inter font-bold text-[16px] text-[#202020]" id="review-author-4">Алексей</p>
+              <h3 class="font-inter font-bold text-[16px] text-[#202020]" id="review-author-4">Алексей</h3>
               <p class="font-inter font-normal text-sm text-[#5c6678]">Истра, Московская область</p>
               <div class="mt-[5px] flex items-center gap-x-[5px] min-w-0"   aria-label="Оценка: 5 из 5" role="img">
                 <img src="./images/reviews_rating.svg" loading="lazy" decoding="async" width="20" height="18" alt="" aria-hidden="true">
@@ -2696,7 +2697,7 @@
               </button>
             </form>
           </div>
-          <div class="bg-[rgba(0,0,0,0.33)] px-[20px] tablet:px-[35px] pc:px-[40px] py-[35px] pc:pt-[100px] pc:pb-[30px] pc:min-h-[505px] pc:mt-[30px] rounded-[33px]">
+          <div class="bg-[rgba(0,0,0,0.33)] mobile:mb-[20px] pc:mb-[0px] px-[20px] tablet:px-[35px] pc:px-[40px] py-[35px] pc:pt-[100px] pc:pb-[30px] pc:min-h-[505px] pc:mt-[30px] rounded-[33px]">
             <p class="text-center font-inter font-bold text-[25px] text-white leading-[118%]">Для заказа и конкультации<br class="hidden tablet:inline"> звоните</p>
             <a class="flex items-center justify-center gap-x-[10px] mt-[32px] mb-[40px] hover:underline text-white" href="tel:+79250000000">
               <img src="./images/contact_phone.svg" loading="lazy" alt="" aria-hidden="true">

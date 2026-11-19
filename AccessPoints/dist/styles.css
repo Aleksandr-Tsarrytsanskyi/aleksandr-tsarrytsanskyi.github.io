@@ -884,10 +884,6 @@ input {
   height: 2px;
 }
 
-.h-\[30px\] {
-  height: 30px;
-}
-
 .h-\[33px\] {
   height: 33px;
 }
@@ -1042,10 +1038,6 @@ input {
 
 .w-full {
   width: 100%;
-}
-
-.w-px {
-  width: 1px;
 }
 
 .min-w-0 {
@@ -1291,11 +1283,6 @@ input {
 .bg-\[\#22802d\] {
   --tw-bg-opacity: 1;
   background-color: rgb(34 128 45 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#d9d9d9\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(217 217 217 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#d9d9d9\]\/20 {
@@ -2078,6 +2065,10 @@ input {
     margin-top: 30px;
   }
 
+  .mobile\:mb-\[20px\] {
+    margin-bottom: 20px;
+  }
+
   .mobile\:block {
     display: block;
   }
@@ -2401,6 +2392,10 @@ input {
     margin-right: 45px;
   }
 
+  .pc\:mr-\[46px\] {
+    margin-right: 46px;
+  }
+
   .pc\:mt-\[-60px\] {
     margin-top: -60px;
   }
@@ -2411,6 +2406,14 @@ input {
 
   .pc\:mt-\[50px\] {
     margin-top: 50px;
+  }
+
+  .pc\:mb-\[\] {
+    margin-bottom: ;
+  }
+
+  .pc\:mb-\[0px\] {
+    margin-bottom: 0px;
   }
 
   .pc\:block {
@@ -2670,6 +2673,48 @@ input {
   .pc\:text-\[\#5c6678\] {
     --tw-text-opacity: 1;
     color: rgb(92 102 120 / var(--tw-text-opacity, 1));
+  }
+
+  .pc\:after\:absolute::after {
+    content: var(--tw-content);
+    position: absolute;
+  }
+
+  .pc\:after\:right-\[-46px\]::after {
+    content: var(--tw-content);
+    right: -46px;
+  }
+
+  .pc\:after\:top-1\/2::after {
+    content: var(--tw-content);
+    top: 50%;
+  }
+
+  .pc\:after\:h-\[30px\]::after {
+    content: var(--tw-content);
+    height: 30px;
+  }
+
+  .pc\:after\:w-px::after {
+    content: var(--tw-content);
+    width: 1px;
+  }
+
+  .pc\:after\:-translate-y-1\/2::after {
+    content: var(--tw-content);
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .pc\:after\:bg-\[\#d9d9d9\]::after {
+    content: var(--tw-content);
+    --tw-bg-opacity: 1;
+    background-color: rgb(217 217 217 / var(--tw-bg-opacity, 1));
+  }
+
+  .pc\:after\:content-\[\'\'\]::after {
+    --tw-content: '';
+    content: var(--tw-content);
   }
 }
 
