@@ -1,4 +1,3 @@
-
 <?php
 
 declare(strict_types=1);
@@ -29,8 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 // Get data
 $name = trim($_POST['name'] ?? '');
 $email = trim($_POST['email'] ?? '');
-// $phone = trim($_POST['phone'] ?? '');
+$city = trim($_POST['city'] ?? '');
 $message = trim($_POST['message'] ?? '');
+$district = trim($_POST['district'] ?? '');
 
 $errors = [];
 
@@ -65,13 +65,13 @@ if ($email === '') {
 // }
 
 // Message validation
-if ($message === '') {
+if ($city === '') {
     $errors['message'] = 'Введите сообщение';
 
-} elseif (mb_strlen($message) < 10) {
-    $errors['message'] = 'Минимум 10 символов';
+} elseif (mb_strlen($city) < 3) {
+    $errors['message'] = 'Минимум 3 символов';
 
-} elseif (mb_strlen($message) > 2000) {
+} elseif (mb_strlen($city) > 2000) {
     $errors['message'] = 'Максимум 2000 символов';
 }
 
@@ -86,5 +86,5 @@ if (!empty($errors)) {
 // All data is valid
 response(200, [
     'success' => true,
-    'message' => 'Форма успешно проверена'
+    'message' => ''
 ]);
