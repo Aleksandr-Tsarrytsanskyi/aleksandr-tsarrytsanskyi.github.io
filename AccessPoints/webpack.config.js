@@ -73,10 +73,10 @@ module.exports = {
       scriptLoading: "defer",
       minify: true,
     }),
-    new HtmlWebpackPlugin({
-      template: "./public/platforms.html",
-      scriptLoading: "defer",
-      minify: true,
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: "./public/platforms.html",
+    //   scriptLoading: "defer",
+    //   minify: true,
+    // }),
   ],
 };
