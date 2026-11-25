@@ -752,6 +752,10 @@ input {
   margin-bottom: 10px;
 }
 
+.mb-\[15px\] {
+  margin-bottom: 15px;
+}
+
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
@@ -778,6 +782,10 @@ input {
 
 .mt-\[14px\] {
   margin-top: 14px;
+}
+
+.mt-\[150px\] {
+  margin-top: 150px;
 }
 
 .mt-\[15px\] {
@@ -830,26 +838,6 @@ input {
 
 .mt-\[60px\] {
   margin-top: 60px;
-}
-
-.mt-\[140px\] {
-  margin-top: 140px;
-}
-
-.mt-\[240px\] {
-  margin-top: 240px;
-}
-
-.mt-\[80px\] {
-  margin-top: 80px;
-}
-
-.mt-\[180px\] {
-  margin-top: 180px;
-}
-
-.mt-\[150px\] {
-  margin-top: 150px;
 }
 
 .block {
@@ -1195,12 +1183,12 @@ input {
   row-gap: 10px;
 }
 
-.gap-y-\[5px\] {
-  row-gap: 5px;
-}
-
 .gap-y-\[15px\] {
   row-gap: 15px;
+}
+
+.gap-y-\[5px\] {
+  row-gap: 5px;
 }
 
 .overflow-hidden {
