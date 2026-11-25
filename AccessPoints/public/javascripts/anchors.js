@@ -1,4 +1,4 @@
-
+// import "../stylesheets/style.css";
   const navigation = performance.getEntriesByType("navigation")[0];
 
   if (

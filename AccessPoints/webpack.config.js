@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { platform } = require("os");
 
 module.exports = {
   mode: "development",
@@ -9,11 +10,16 @@ module.exports = {
   optimization: {
     minimize: true,
   },
-
-  entry: "./public/javascripts/main.js",
+  // entry: {
+  //   index: './public/javascripts/main.js',
+  //   platforms: './public/javascripts/anchors.js',
+  // },
+  entry: {
+  main: './public/javascripts/main.js',
+},
 
   output: {
-    filename: "bundle.js",
+   filename: "javascripts/[name].[contenthash:8].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -67,16 +73,21 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "styles.css",
+      // filename: "styles/[name].[contenthash:8].css",
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       scriptLoading: "defer",
+      filename: 'index.html',
+      // chunks: ['index'],
       minify: true,
     }),
-    // new HtmlWebpackPlugin({
-    //   template: "./public/platforms.html",
-    //   scriptLoading: "defer",
-    //   minify: true,
-    // }),
+    new HtmlWebpackPlugin({
+      template: "./public/platforms.html",
+      scriptLoading: "defer",
+      filename: 'platforms.html',
+        // chunks: ['platforms'],
+      minify: true,
+    }),
   ],
 };
