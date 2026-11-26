@@ -8,15 +8,9 @@ module.exports = {
   theme: {
 
 
-     screens: {
-      mobile: "375px",   // Mobile landscape
-      tablet: "768px",   // Tablet // Laptop
-      pc: "1280px",  // Desktop,
-      xl: "1500px"
-   
-    },
+    
 
-    screens: { mobile: "375px", tablet: "768px", pc: "1280px" },
+    screens: { mobile: "375px", tablet: "768px", pc: "1280px", xl: "1500px" },
 
 
     extend: {
